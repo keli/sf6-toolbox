@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SF6 偷帧计算器</title>
+<title>SF6 工具箱</title>
 <style>
+  /* === Reset === */
   * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* === Base / Shared === */
   body { font-family: monospace; background: #f5f5f5; color: #222; padding: 16px; }
-  h1 { font-size: 1.2em; margin-bottom: 16px; color: #111; }
-  .controls { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; align-items: flex-end; }
-  .control-group { display: flex; flex-direction: column; gap: 4px; }
   label { font-size: 0.75em; color: #666; }
   select, input[type=number] {
     background: #fff; border: 1px solid #ccc; color: #222;
@@ -18,16 +18,40 @@
   button {
     background: #b8860b; border: none; color: #fff; padding: 6px 16px;
     border-radius: 3px; font-family: monospace; font-size: 0.9em; cursor: pointer;
-    font-weight: bold; align-self: flex-end;
+    font-weight: bold;
   }
   button:hover { background: #a07008; }
   button:disabled { background: #bbb; color: #fff; cursor: default; }
-  .checkboxes { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
-  .checkboxes label { display: flex; gap: 4px; align-items: center; font-size: 0.85em; color: #444; cursor: pointer; }
-  .checkboxes input[type=checkbox] { cursor: pointer; }
+
+  /* === Tab Navigation === */
+  .tab-bar {
+    display: flex; gap: 0; margin-bottom: 20px;
+    border-bottom: 2px solid #b8860b;
+  }
+  .tab {
+    background: transparent; color: #888; border: none;
+    border-bottom: 2px solid transparent; margin-bottom: -2px;
+    padding: 7px 18px; cursor: pointer; font-family: monospace;
+    font-size: 0.9em; font-weight: bold; align-self: auto; width: auto;
+  }
+  .tab:hover { color: #b8860b; background: transparent; }
+  .tab.active { color: #b8860b; border-bottom: 2px solid #b8860b; }
+
+  /* === Tab Panels === */
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* ============================================================
+     MEATY CALCULATOR
+  ============================================================ */
+  #tab-meaty .controls { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; align-items: flex-end; }
+  #tab-meaty .control-group { display: flex; flex-direction: column; gap: 4px; }
+  #tab-meaty .checkboxes { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  #tab-meaty .checkboxes label { display: flex; gap: 4px; align-items: center; font-size: 0.85em; color: #444; cursor: pointer; }
+  #tab-meaty .checkboxes input[type=checkbox] { cursor: pointer; }
+  #tab-meaty button { align-self: flex-end; }
 
   #status { font-size: 0.85em; color: #888; margin-bottom: 12px; min-height: 1.2em; }
-  #results { }
 
   .kd-group { margin-bottom: 4px; }
   .kd-header {
@@ -56,12 +80,96 @@
   .safe-zero { color: #666; }
   .stolen { color: #1565c0; }
   .total-adv { color: #2e7d32; }
-
   .no-results { color: #999; padding: 12px 0; font-size: 0.9em; }
+
+  /* ============================================================
+     ELO CALCULATOR
+  ============================================================ */
+  .elo-content { max-width: 560px; }
+  .elo-subtitle { font-size: 0.8em; color: #888; margin-bottom: 20px; }
+
+  .elo-player-section {
+    background: #eee; padding: 16px; border-radius: 3px;
+    margin-bottom: 16px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  }
+  .elo-player-group { display: flex; flex-direction: column; }
+  .elo-player-title {
+    color: #b8860b; font-size: 0.9em; margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .elo-input-group { display: flex; flex-direction: column; gap: 4px; margin-bottom: 14px; }
+  .elo-input-group label { font-size: 0.75em; color: #666; }
+  .elo-input-group input { width: 100%; }
+
+  #tab-elo button { width: 100%; padding: 8px 16px; align-self: auto; margin-bottom: 16px; }
+
+  .elo-results { display: none; margin-bottom: 16px; }
+  .elo-results.show { display: block; }
+  .elo-result-section { margin-bottom: 14px; }
+  .elo-result-header {
+    font-size: 0.75em; color: #666; margin-bottom: 6px;
+    border-left: 3px solid #b8860b; padding-left: 8px;
+    font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .elo-result-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .elo-result-item {
+    padding: 10px 12px; background: #fff; border-radius: 3px;
+    border: 1px solid #ddd;
+  }
+  .elo-result-item.player-a { border-left: 3px solid #b8860b; }
+  .elo-result-item.player-b { border-left: 3px solid #888; }
+  .elo-result-label { color: #888; font-size: 0.75em; margin-bottom: 4px; }
+  .elo-result-value { color: #222; font-size: 1.2em; font-weight: bold; }
+
+  .elo-info-box {
+    background: #fff8e1; padding: 10px 12px; border-radius: 3px;
+    border-left: 3px solid #b8860b; font-size: 0.8em; color: #666; line-height: 1.6;
+  }
+
+  /* ============================================================
+     MOBILE
+  ============================================================ */
+  @media (max-width: 600px) {
+    .tab { padding: 6px 12px; font-size: 0.82em; }
+
+    /* Meaty: each control takes full width */
+    #tab-meaty .controls { gap: 8px; }
+    #tab-meaty .control-group { width: 100%; }
+    #tab-meaty .control-group select,
+    #tab-meaty .control-group input[type=number] { width: 100%; }
+    /* Checkbox labels: bigger touch target */
+    #tab-meaty .checkboxes { gap: 6px; }
+    #tab-meaty .checkboxes label { font-size: 0.9em; padding: 4px 0; }
+    /* Calc button full width */
+    #tab-meaty button#calcBtn { width: 100%; }
+    /* Table: horizontal scroll */
+    #meaty-results { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    table { font-size: 0.78em; min-width: 520px; }
+
+    /* ELO: stack columns */
+    .elo-player-section { grid-template-columns: 1fr; }
+    .elo-result-row { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 400px) {
+    body { padding: 10px; }
+    .tab { padding: 5px 8px; }
+    th, td { padding: 2px 5px; }
+  }
 </style>
 </head>
 <body>
-<h1>SF6 偷帧计算器</h1>
+
+<nav class="tab-bar">
+  <button class="tab active" data-tab="meaty">偷帧计算器</button>
+  <button class="tab" data-tab="elo">ELO 胜率计算器</button>
+</nav>
+
+<!-- ============================================================
+     MEATY CALCULATOR
+============================================================ -->
+<div id="tab-meaty" class="tab-panel active">
 
 <div class="controls">
   <div class="control-group">
@@ -110,11 +218,96 @@
 </div>
 
 <div id="status">正在加载数据…</div>
-<div id="results"></div>
+<div id="meaty-results"></div>
+
+</div><!-- #tab-meaty -->
+
+<!-- ============================================================
+     ELO CALCULATOR
+============================================================ -->
+<div id="tab-elo" class="tab-panel">
+<div class="elo-content">
+
+  <p class="elo-subtitle">基于 ELO 算法计算对战胜率</p>
+
+  <div class="elo-player-section">
+    <div class="elo-player-group">
+      <div class="elo-player-title">玩家 A</div>
+      <div class="elo-input-group">
+        <label for="ratingA">大师分 (MR)</label>
+        <input type="number" id="ratingA" value="1500" min="0" step="100" autocomplete="off">
+      </div>
+    </div>
+    <div class="elo-player-group">
+      <div class="elo-player-title">玩家 B</div>
+      <div class="elo-input-group">
+        <label for="ratingB">大师分 (MR)</label>
+        <input type="number" id="ratingB" value="1500" min="0" step="100" autocomplete="off">
+      </div>
+    </div>
+  </div>
+
+  <div class="elo-input-group">
+    <label for="matchType">比赛类型 (Best of)</label>
+    <input type="number" id="matchType" value="3" min="1" max="99" step="1" autocomplete="off" style="width:100px">
+  </div>
+
+  <button onclick="eloCalculate()">计算胜率</button>
+
+  <div id="elo-results" class="elo-results">
+    <div class="elo-result-section">
+      <div class="elo-result-header">单局胜率</div>
+      <div class="elo-result-row">
+        <div class="elo-result-item player-a">
+          <div class="elo-result-label">玩家 A</div>
+          <div class="elo-result-value" id="singleWinRateA">-</div>
+        </div>
+        <div class="elo-result-item player-b">
+          <div class="elo-result-label">玩家 B</div>
+          <div class="elo-result-value" id="singleWinRateB">-</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="elo-result-section">
+      <div class="elo-result-header">单场胜率（街霸6每场 BO3）</div>
+      <div class="elo-result-row">
+        <div class="elo-result-item player-a">
+          <div class="elo-result-label">玩家 A</div>
+          <div class="elo-result-value" id="setWinRateA">-</div>
+        </div>
+        <div class="elo-result-item player-b">
+          <div class="elo-result-label">玩家 B</div>
+          <div class="elo-result-value" id="setWinRateB">-</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="elo-result-section">
+      <div class="elo-result-header" id="matchHeader">比赛胜率 (BO3)</div>
+      <div class="elo-result-row">
+        <div class="elo-result-item player-a">
+          <div class="elo-result-label">玩家 A</div>
+          <div class="elo-result-value" id="matchWinRateA">-</div>
+        </div>
+        <div class="elo-result-item player-b">
+          <div class="elo-result-label">玩家 B</div>
+          <div class="elo-result-value" id="matchWinRateB">-</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="elo-info-box">
+    <strong>说明：</strong>街霸6每一场都是三局两胜制。此计算器先根据 ELO 分数计算单局胜率，然后计算在 BO3/BO5 中赢得整场比赛的概率。
+  </div>
+
+</div>
+</div><!-- #tab-elo -->
 
 <script>
 // ---------------------------------------------------------------------------
-// Parsing helpers
+// Meaty Calculator
 // ---------------------------------------------------------------------------
 function parseInt1(val) {
   if (val == null) return null;
@@ -139,9 +332,6 @@ function parseKDField(val, hitType) {
   return results;
 }
 
-// ---------------------------------------------------------------------------
-// Extract moves from character data
-// ---------------------------------------------------------------------------
 function extractMoves(charData) {
   const moves = [];
   for (const [catName, catMoves] of Object.entries(charData.moves || {})) {
@@ -177,7 +367,6 @@ function extractMoves(charData) {
       });
     }
   }
-  // Add forward dash from stats
   const fDash = parseInt1(charData.stats?.fDash);
   if (fDash) {
     moves.push({
@@ -190,9 +379,6 @@ function extractMoves(charData) {
   return moves;
 }
 
-// ---------------------------------------------------------------------------
-// Meaty calculation
-// ---------------------------------------------------------------------------
 function calcMeatys(moves, opts) {
   const { hitTypeFilter, kdTypeFilter, maxPrefix, safeOnly, firstAny, minAdv, perfectOnly } = opts;
 
@@ -216,7 +402,6 @@ function calcMeatys(moves, opts) {
       const Kbase = kdInfo.advantage;
       if (Kbase <= 0) continue;
 
-      // prefix length 1
       for (const first of firstPool) {
         const cost1 = first.total;
         const K1 = Kbase - cost1;
@@ -269,9 +454,6 @@ function tryMeaty(kdMove, kdInfo, prefix, K, meaty, results, minAdv, perfectOnly
   }
 }
 
-// ---------------------------------------------------------------------------
-// Rendering
-// ---------------------------------------------------------------------------
 const HIT_TYPE_LABEL = { normal: '普通命中', pc: '惩罚反击 (PC)', cc: '反击 (CC)' };
 const HIT_TYPE_CLASS = { normal: 'kd-type-normal', pc: 'kd-type-pc', cc: 'kd-type-cc' };
 
@@ -286,25 +468,22 @@ function fmtBlock(ob) {
 }
 
 function renderResults(results) {
-  const el = document.getElementById('results');
+  const el = document.getElementById('meaty-results');
   if (!results.length) {
     el.innerHTML = '<div class="no-results">没有找到符合条件的偷帧方案。</div>';
     return;
   }
 
-  // Group by kdType + advantage only (same frame advantage = same meaty options)
   const groups = new Map();
   for (const r of results) {
     const key = `${r.kdInfo.kdType}|${r.kdInfo.advantage}`;
     if (!groups.has(key)) groups.set(key, { kdInfo: r.kdInfo, sources: new Map(), rows: [] });
     const g = groups.get(key);
-    // Track unique KD sources: "MoveName (cmd) [hitType]"
     const srcKey = `${r.kdMove.name}|${r.kdMove.cmd}|${r.kdInfo.hitType}`;
     if (!g.sources.has(srcKey)) g.sources.set(srcKey, { move: r.kdMove, hitType: r.kdInfo.hitType });
     g.rows.push(r);
   }
 
-  // Deduplicate rows with identical sequence within each group
   for (const g of groups.values()) {
     const seen = new Set();
     g.rows = g.rows.filter(r => {
@@ -315,7 +494,6 @@ function renderResults(results) {
     });
   }
 
-  // Sort: few sequences first, then more sources, then advantage desc
   const sorted = [...groups.values()].sort((a, b) =>
     (a.rows.length > 10) - (b.rows.length > 10) ||
     (b.sources.size - a.sources.size) ||
@@ -324,7 +502,6 @@ function renderResults(results) {
 
   let html = '';
   for (const { kdInfo, sources, rows } of sorted) {
-    // Build source list: group by move, collect hitTypes per move
     const moveMap = new Map();
     for (const { move, hitType } of sources.values()) {
       const k = `${move.name}|${move.cmd}`;
@@ -375,9 +552,6 @@ function renderResults(results) {
   el.innerHTML = html;
 }
 
-// ---------------------------------------------------------------------------
-// Main
-// ---------------------------------------------------------------------------
 let allData = null;
 
 async function loadData() {
@@ -387,7 +561,6 @@ async function loadData() {
     const chars = Object.keys(allData);
     const sel = document.getElementById('charSelect');
     sel.innerHTML = chars.map(c => `<option value="${c}">${c}</option>`).join('');
-    // Default to Ryu if available
     const ryuIdx = chars.indexOf('Ryu');
     if (ryuIdx >= 0) sel.selectedIndex = ryuIdx;
     document.getElementById('calcBtn').disabled = false;
@@ -416,7 +589,6 @@ function calculate() {
   };
 
   document.getElementById('status').textContent = '计算中…';
-  // Use setTimeout to let the UI update before blocking computation
   setTimeout(() => {
     const results = calcMeatys(moves, opts);
     document.getElementById('status').textContent =
@@ -429,6 +601,78 @@ document.getElementById('calcBtn').addEventListener('click', calculate);
 document.getElementById('charSelect').addEventListener('change', calculate);
 
 loadData().then(() => calculate());
+
+// ---------------------------------------------------------------------------
+// ELO Calculator
+// ---------------------------------------------------------------------------
+function calculateEloWinProbability(ratingA, ratingB) {
+  return 1 / (1 + Math.pow(10, (ratingB - ratingA) / 400));
+}
+
+function binomialCoefficient(n, k) {
+  if (k < 0 || k > n) return 0;
+  if (k === 0 || k === n) return 1;
+  let result = 1;
+  for (let i = 1; i <= k; i++) {
+    result *= (n - i + 1) / i;
+  }
+  return result;
+}
+
+function calculateBestOfWinProbability(gameWinProb, bestOf) {
+  const winsNeeded = Math.ceil(bestOf / 2);
+  let totalProb = 0;
+  for (let losses = 0; losses < winsNeeded; losses++) {
+    const wins = winsNeeded;
+    const totalGames = wins + losses;
+    const combinations = binomialCoefficient(totalGames - 1, wins - 1);
+    const probability = combinations *
+                        Math.pow(gameWinProb, wins) *
+                        Math.pow(1 - gameWinProb, losses);
+    totalProb += probability;
+  }
+  return totalProb;
+}
+
+function eloCalculate() {
+  const ratingA = parseFloat(document.getElementById('ratingA').value);
+  const ratingB = parseFloat(document.getElementById('ratingB').value);
+  const matchType = parseInt(document.getElementById('matchType').value);
+
+  const gameWinProbA = calculateEloWinProbability(ratingA, ratingB);
+  const gameWinProbB = 1 - gameWinProbA;
+
+  const setWinProbA = calculateBestOfWinProbability(gameWinProbA, 3);
+  const setWinProbB = 1 - setWinProbA;
+
+  const matchWinProbA = calculateBestOfWinProbability(setWinProbA, matchType);
+  const matchWinProbB = 1 - matchWinProbA;
+
+  document.getElementById('matchHeader').textContent = `比赛胜率 (BO${matchType})`;
+
+  document.getElementById('singleWinRateA').textContent = (gameWinProbA * 100).toFixed(2) + '%';
+  document.getElementById('singleWinRateB').textContent = (gameWinProbB * 100).toFixed(2) + '%';
+  document.getElementById('setWinRateA').textContent = (setWinProbA * 100).toFixed(2) + '%';
+  document.getElementById('setWinRateB').textContent = (setWinProbB * 100).toFixed(2) + '%';
+  document.getElementById('matchWinRateA').textContent = (matchWinProbA * 100).toFixed(2) + '%';
+  document.getElementById('matchWinRateB').textContent = (matchWinProbB * 100).toFixed(2) + '%';
+
+  document.getElementById('elo-results').classList.add('show');
+}
+
+document.getElementById('ratingA').addEventListener('keypress', e => { if (e.key === 'Enter') eloCalculate(); });
+document.getElementById('ratingB').addEventListener('keypress', e => { if (e.key === 'Enter') eloCalculate(); });
+
+// ---------------------------------------------------------------------------
+// Tab switching
+// ---------------------------------------------------------------------------
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab, .tab-panel').forEach(el => el.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+  });
+});
 </script>
 </body>
 </html>
