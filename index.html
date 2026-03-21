@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SF6 偷帧计算器</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: monospace; background: #f5f5f5; color: #222; padding: 16px; }
+  h1 { font-size: 1.2em; margin-bottom: 16px; color: #111; }
+  .controls { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; align-items: flex-end; }
+  .control-group { display: flex; flex-direction: column; gap: 4px; }
+  label { font-size: 0.75em; color: #666; }
+  select, input[type=number] {
+    background: #fff; border: 1px solid #ccc; color: #222;
+    padding: 5px 8px; border-radius: 3px; font-family: monospace; font-size: 0.9em;
+  }
+  button {
+    background: #b8860b; border: none; color: #fff; padding: 6px 16px;
+    border-radius: 3px; font-family: monospace; font-size: 0.9em; cursor: pointer;
+    font-weight: bold; align-self: flex-end;
+  }
+  button:hover { background: #a07008; }
+  button:disabled { background: #bbb; color: #fff; cursor: default; }
+  .checkboxes { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .checkboxes label { display: flex; gap: 4px; align-items: center; font-size: 0.85em; color: #444; cursor: pointer; }
+  .checkboxes input[type=checkbox] { cursor: pointer; }
+
+  #status { font-size: 0.85em; color: #888; margin-bottom: 12px; min-height: 1.2em; }
+  #results { }
+
+  .kd-group { margin-bottom: 4px; }
+  .kd-header {
+    background: #eee; border-left: 3px solid #b8860b;
+    padding: 6px 10px; font-size: 0.9em;
+    cursor: pointer; user-select: none;
+  }
+  .kd-header:hover { background: #e4e4e4; }
+  .kd-header::before { content: '▾ '; color: #b8860b; font-size: 0.85em; }
+  .kd-group.collapsed .kd-header::before { content: '▸ '; }
+  .kd-body { margin-bottom: 16px; }
+  .kd-group.collapsed .kd-body { display: none; }
+  .kd-header .kd-type-normal { color: #666; }
+  .kd-header .kd-type-pc { color: #c05000; }
+  .kd-header .kd-type-cc { color: #c00000; }
+  .kd-header .kd-adv { color: #b8860b; font-weight: bold; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 0.82em; }
+  th { background: #e8e8e8; color: #555; text-align: left; padding: 3px 8px; border-bottom: 1px solid #ccc; white-space: nowrap; }
+  td { padding: 3px 8px; border-bottom: 1px solid #e8e8e8; white-space: nowrap; }
+  tr:hover td { background: #f0f0f0; }
+  .perfect { color: #b8860b; font-weight: bold; }
+  .kd-adv-cell { color: #888; font-style: italic; }
+  .safe-plus { color: #2e7d32; }
+  .safe-minus { color: #c62828; }
+  .safe-zero { color: #666; }
+  .stolen { color: #1565c0; }
+  .total-adv { color: #2e7d32; }
+
+  .no-results { color: #999; padding: 12px 0; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<h1>SF6 偷帧计算器</h1>
+
+<div class="controls">
+  <div class="control-group">
+    <label>角色</label>
+    <select id="charSelect"><option>加载中…</option></select>
+  </div>
+  <div class="control-group">
+    <label>击倒来源</label>
+    <select id="hitType">
+      <option value="both">全部</option>
+      <option value="normal" selected>普通命中</option>
+      <option value="pc">惩罚反击 (PC)</option>
+      <option value="cc">反击 (CC)</option>
+    </select>
+  </div>
+  <div class="control-group">
+    <label>击倒类型</label>
+    <select id="kdType">
+      <option value="both">全部</option>
+      <option value="KD">普通击倒</option>
+      <option value="HKD">硬击倒</option>
+    </select>
+  </div>
+  <div class="control-group">
+    <label>前置动作上限</label>
+    <select id="maxPrefix">
+      <option value="1">1</option>
+      <option value="2" selected>2</option>
+      <option value="3">3</option>
+    </select>
+  </div>
+  <div class="control-group">
+    <label>最小帧优势（命中后）</label>
+    <input type="number" id="minAdv" value="4" min="-99" max="99" style="width:70px">
+  </div>
+  <div class="control-group">
+    <div class="checkboxes">
+      <label><input type="checkbox" id="safeOnly" checked> 仅限安全动作（防御≥-3）</label>
+      <label><input type="checkbox" id="cancelOnly" checked> 仅可 cancel 动作</label>
+      <label><input type="checkbox" id="noSpKd" checked> 过滤可 cancel 的击倒来源</label>
+      <label><input type="checkbox" id="perfectOnly"> 仅完美 meaty ★</label>
+      <label><input type="checkbox" id="firstAny"> 前置动作不限移动</label>
+    </div>
+  </div>
+  <button id="calcBtn" disabled>计算</button>
+</div>
+
+<div id="status">正在加载数据…</div>
+<div id="results"></div>
+
+<script>
+// ---------------------------------------------------------------------------
+// Parsing helpers
+// ---------------------------------------------------------------------------
+function parseInt1(val) {
+  if (val == null) return null;
+  if (typeof val === 'number') return val;
+  const m = String(val).match(/-?\d+/);
+  return m ? parseInt(m[0]) : null;
+}
+
+function parseIntWorst(val) {
+  if (val == null) return null;
+  if (typeof val === 'number') return val;
+  const nums = [...String(val).matchAll(/-?\d+/g)].map(m => parseInt(m[0]));
+  return nums.length ? Math.min(...nums) : null;
+}
+
+function parseKDField(val, hitType) {
+  if (!val || typeof val !== 'string') return [];
+  const results = [];
+  for (const m of val.matchAll(/(H?KD)\s*\+(\d+)/g)) {
+    results.push({ hitType, kdType: m[1], advantage: parseInt(m[2]) });
+  }
+  return results;
+}
+
+// ---------------------------------------------------------------------------
+// Extract moves from character data
+// ---------------------------------------------------------------------------
+function extractMoves(charData) {
+  const moves = [];
+  for (const [catName, catMoves] of Object.entries(charData.moves || {})) {
+    if (typeof catMoves !== 'object') continue;
+    for (const [moveKey, mv] of Object.entries(catMoves)) {
+      if (typeof mv !== 'object') continue;
+      const startup = parseInt1(mv.startup);
+      const active = parseInt1(mv.active);
+      const recovery = parseInt1(mv.recovery);
+      if (startup == null || active == null || active <= 0) continue;
+      let total = parseInt1(mv.total);
+      if (total == null) total = startup + active + (recovery || 0) - 1;
+
+      const knockdowns = [
+        ...parseKDField(mv.onHit, 'normal'),
+        ...parseKDField(mv.onPC, 'pc'),
+        ...parseKDField(mv.onCC, 'cc'),
+      ];
+      const cmd = mv.numCmd || mv.plnCmd || moveKey;
+      moves.push({
+        name: mv.moveName || moveKey,
+        cmd,
+        startup,
+        active,
+        recovery: recovery || 0,
+        total,
+        onBlock: parseIntWorst(mv.onBlock),
+        onHit: parseInt1(mv.onHit),
+        moveType: catName,
+        isAttack: mv.atkLvl != null,
+        cancelTypes: mv.xx || [],
+        knockdowns,
+      });
+    }
+  }
+  // Add forward dash from stats
+  const fDash = parseInt1(charData.stats?.fDash);
+  if (fDash) {
+    moves.push({
+      name: '前冲', cmd: '66',
+      startup: fDash, active: 0, recovery: 0, total: fDash,
+      onBlock: null, onHit: null, moveType: 'dash', isAttack: false,
+      knockdowns: [],
+    });
+  }
+  return moves;
+}
+
+// ---------------------------------------------------------------------------
+// Meaty calculation
+// ---------------------------------------------------------------------------
+function calcMeatys(moves, opts) {
+  const { hitTypeFilter, kdTypeFilter, maxPrefix, safeOnly, firstAny, minAdv, perfectOnly } = opts;
+
+  const meatyCandidates = moves.filter(m =>
+    m.isAttack
+    && !m.cmd.startsWith('8')
+    && (!safeOnly || m.onBlock == null || m.onBlock >= -3)
+    && (!opts.cancelOnly || m.cancelTypes.length > 0)
+  );
+  const prefixPool = moves.filter(m => !m.cmd.startsWith('8'));
+  const firstPool = firstAny ? prefixPool : prefixPool.filter(m => !m.isAttack);
+
+  const results = [];
+
+  for (const kdMove of moves) {
+    for (const kdInfo of kdMove.knockdowns) {
+      if (hitTypeFilter !== 'both' && kdInfo.hitType !== hitTypeFilter) continue;
+      if (kdTypeFilter !== 'both' && kdInfo.kdType !== kdTypeFilter) continue;
+      if (opts.noSpKd && kdMove.cancelTypes.includes('sp')) continue;
+
+      const Kbase = kdInfo.advantage;
+      if (Kbase <= 0) continue;
+
+      // prefix length 1
+      for (const first of firstPool) {
+        const cost1 = first.total;
+        const K1 = Kbase - cost1;
+        if (K1 <= 0) continue;
+
+        for (const meaty of meatyCandidates) {
+          tryMeaty(kdMove, kdInfo, [first], K1, meaty, results, minAdv, perfectOnly);
+        }
+
+        if (maxPrefix >= 2) {
+          for (const second of prefixPool) {
+            const K2 = K1 - second.total;
+            if (K2 <= 0) continue;
+            for (const meaty of meatyCandidates) {
+              tryMeaty(kdMove, kdInfo, [first, second], K2, meaty, results, minAdv, perfectOnly);
+            }
+
+            if (maxPrefix >= 3) {
+              for (const third of prefixPool) {
+                const K3 = K2 - third.total;
+                if (K3 <= 0) continue;
+                for (const meaty of meatyCandidates) {
+                  tryMeaty(kdMove, kdInfo, [first, second, third], K3, meaty, results, minAdv, perfectOnly);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  return results;
+}
+
+function tryMeaty(kdMove, kdInfo, prefix, K, meaty, results, minAdv, perfectOnly) {
+  const S = meaty.startup, A = meaty.active;
+  if (S <= K && K <= S + A - 1) {
+    const activeFrameHit = K - S + 1;
+    const stolen = activeFrameHit - 1;
+    const isPerfect = activeFrameHit === A;
+    if (perfectOnly && !isPerfect) return;
+    let totalAdv = null;
+    if (!meaty.knockdowns.length && meaty.onHit != null) {
+      totalAdv = meaty.onHit + stolen;
+    }
+    if (stolen === 0) return;
+    if (totalAdv != null && totalAdv < minAdv) return;
+    results.push({ kdMove, kdInfo, prefix, meaty, K, activeFrameHit, isPerfect, totalAdv });
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Rendering
+// ---------------------------------------------------------------------------
+const HIT_TYPE_LABEL = { normal: '普通命中', pc: '惩罚反击 (PC)', cc: '反击 (CC)' };
+const HIT_TYPE_CLASS = { normal: 'kd-type-normal', pc: 'kd-type-pc', cc: 'kd-type-cc' };
+
+function fmtSeq(prefix, meaty) {
+  return [...prefix.map(m => m.cmd), meaty.cmd].join(' → ');
+}
+
+function fmtBlock(ob) {
+  if (ob == null) return '<span class="safe-zero">?</span>';
+  const cls = ob > 0 ? 'safe-plus' : ob < 0 ? 'safe-minus' : 'safe-zero';
+  return `<span class="${cls}">${ob >= 0 ? '+' : ''}${ob}</span>`;
+}
+
+function renderResults(results) {
+  const el = document.getElementById('results');
+  if (!results.length) {
+    el.innerHTML = '<div class="no-results">没有找到符合条件的偷帧方案。</div>';
+    return;
+  }
+
+  // Group by kdType + advantage only (same frame advantage = same meaty options)
+  const groups = new Map();
+  for (const r of results) {
+    const key = `${r.kdInfo.kdType}|${r.kdInfo.advantage}`;
+    if (!groups.has(key)) groups.set(key, { kdInfo: r.kdInfo, sources: new Map(), rows: [] });
+    const g = groups.get(key);
+    // Track unique KD sources: "MoveName (cmd) [hitType]"
+    const srcKey = `${r.kdMove.name}|${r.kdMove.cmd}|${r.kdInfo.hitType}`;
+    if (!g.sources.has(srcKey)) g.sources.set(srcKey, { move: r.kdMove, hitType: r.kdInfo.hitType });
+    g.rows.push(r);
+  }
+
+  // Deduplicate rows with identical sequence within each group
+  for (const g of groups.values()) {
+    const seen = new Set();
+    g.rows = g.rows.filter(r => {
+      const k = `${fmtSeq(r.prefix, r.meaty)}|${r.K}`;
+      if (seen.has(k)) return false;
+      seen.add(k);
+      return true;
+    });
+  }
+
+  // Sort: few sequences first, then more sources, then advantage desc
+  const sorted = [...groups.values()].sort((a, b) =>
+    (a.rows.length > 10) - (b.rows.length > 10) ||
+    (b.sources.size - a.sources.size) ||
+    (b.kdInfo.advantage - a.kdInfo.advantage)
+  );
+
+  let html = '';
+  for (const { kdInfo, sources, rows } of sorted) {
+    // Build source list: group by move, collect hitTypes per move
+    const moveMap = new Map();
+    for (const { move, hitType } of sources.values()) {
+      const k = `${move.name}|${move.cmd}`;
+      if (!moveMap.has(k)) moveMap.set(k, { move, hitTypes: [] });
+      moveMap.get(k).hitTypes.push(hitType);
+    }
+    const srcHtml = [...moveMap.values()].map(({ move, hitTypes }) => {
+      const tags = hitTypes.map(ht =>
+        `<span class="${HIT_TYPE_CLASS[ht] || ''}">[${HIT_TYPE_LABEL[ht] || ht}]</span>`
+      ).join('');
+      return `${move.name} <span style="color:#666">(${move.cmd})</span> ${tags}`;
+    }).join('<span style="color:#555"> / </span>');
+
+    const collapsed = rows.length > 10 ? ' collapsed' : '';
+    html += `<div class="kd-group${collapsed}">`;
+    html += `<div class="kd-header" onclick="this.parentElement.classList.toggle('collapsed')">`;
+    html += `${srcHtml} `;
+    html += `<span class="kd-adv">${kdInfo.kdType} +${kdInfo.advantage}</span>`;
+    html += `</div>`;
+    html += `<div class="kd-body"><table><thead><tr>`;
+    html += `<th>序列</th><th>K'</th><th>前摇</th><th>持续</th><th>命中帧</th><th>偷帧</th><th>命中优势</th><th>防御优势</th><th>完美</th>`;
+    html += `</tr></thead><tbody>`;
+
+    const sortedRows = rows.sort((a, b) =>
+      (b.isPerfect - a.isPerfect) || (b.activeFrameHit - a.activeFrameHit) || (a.prefix.length - b.prefix.length)
+    );
+    for (const r of sortedRows) {
+      const stolen = r.activeFrameHit - 1;
+      const totalStr = r.meaty.knockdowns.length
+        ? '<span class="kd-adv-cell">KD</span>'
+        : r.totalAdv != null
+          ? `<span class="total-adv">+${r.totalAdv}</span>`
+          : '?';
+      html += `<tr>`;
+      html += `<td>${fmtSeq(r.prefix, r.meaty)}</td>`;
+      html += `<td>${r.K}</td>`;
+      html += `<td>${r.meaty.startup}</td>`;
+      html += `<td>${r.meaty.active}</td>`;
+      html += `<td>${r.activeFrameHit}/${r.meaty.active}</td>`;
+      html += `<td><span class="stolen">+${stolen}</span></td>`;
+      html += `<td>${totalStr}</td>`;
+      html += `<td>${fmtBlock(r.meaty.onBlock)}</td>`;
+      html += `<td>${r.isPerfect ? '<span class="perfect">★</span>' : ''}</td>`;
+      html += `</tr>`;
+    }
+    html += `</tbody></table></div></div>`;
+  }
+  el.innerHTML = html;
+}
+
+// ---------------------------------------------------------------------------
+// Main
+// ---------------------------------------------------------------------------
+let allData = null;
+
+async function loadData() {
+  try {
+    const resp = await fetch('data/sf6framedata.json');
+    allData = await resp.json();
+    const chars = Object.keys(allData);
+    const sel = document.getElementById('charSelect');
+    sel.innerHTML = chars.map(c => `<option value="${c}">${c}</option>`).join('');
+    // Default to Ryu if available
+    const ryuIdx = chars.indexOf('Ryu');
+    if (ryuIdx >= 0) sel.selectedIndex = ryuIdx;
+    document.getElementById('calcBtn').disabled = false;
+    document.getElementById('status').textContent = `已加载 ${chars.length} 名角色。`;
+  } catch (e) {
+    document.getElementById('status').textContent = '数据加载失败：' + e.message;
+  }
+}
+
+function calculate() {
+  const charName = document.getElementById('charSelect').value;
+  const charData = allData[charName];
+  if (!charData) return;
+
+  const moves = extractMoves(charData);
+  const opts = {
+    hitTypeFilter: document.getElementById('hitType').value,
+    kdTypeFilter: document.getElementById('kdType').value,
+    maxPrefix: parseInt(document.getElementById('maxPrefix').value),
+    safeOnly: document.getElementById('safeOnly').checked,
+    cancelOnly: document.getElementById('cancelOnly').checked,
+    noSpKd: document.getElementById('noSpKd').checked,
+    firstAny: document.getElementById('firstAny').checked,
+    minAdv: parseInt(document.getElementById('minAdv').value) || -99,
+    perfectOnly: document.getElementById('perfectOnly').checked,
+  };
+
+  document.getElementById('status').textContent = '计算中…';
+  // Use setTimeout to let the UI update before blocking computation
+  setTimeout(() => {
+    const results = calcMeatys(moves, opts);
+    document.getElementById('status').textContent =
+      `${charName}：找到 ${results.length} 个方案（★完美：${results.filter(r => r.isPerfect).length}）`;
+    renderResults(results);
+  }, 10);
+}
+
+document.getElementById('calcBtn').addEventListener('click', calculate);
+document.getElementById('charSelect').addEventListener('change', calculate);
+
+loadData().then(() => calculate());
+</script>
+</body>
+</html>

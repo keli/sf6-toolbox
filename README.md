@@ -18,88 +18,56 @@ meaty 条件：S <= K <= S+A-1
 完美 meaty：K = S+A-1（最后一帧命中，偷帧 A-1 帧）
 ```
 
-序列结构：默认**第一个动作必须是移动动作**（Drive Rush 或前冲 66），中间可以插入任意动作消耗帧数，**最后一个动作必须是打击动作**。可以用 `--first any` 放开第一个动作的限制。
-
-## 安装
-
-无依赖，仅需 Python 3.10+。
+序列结构：默认**第一个动作必须是移动动作**（Drive Rush 或前冲 66），中间可以插入任意动作消耗帧数，**最后一个动作必须是打击动作**。
 
 ## 使用
 
-### 第一步：获取角色数据
+用浏览器打开 `index.html`（需要本地服务器，因为要加载 JSON 数据）：
 
 ```bash
-# 查看所有可用角色
-python fetch_data.py --list
-
-# 获取指定角色数据（缓存到 data/ 目录）
-python fetch_data.py Ryu
-python fetch_data.py "Chun-Li"
-
-# 强制重新下载（更新数据）
-python fetch_data.py Ryu --update
+python3 -m http.server
+# 然后访问 http://localhost:8000
 ```
 
-### 第二步：计算 meaty 方案
+### 过滤选项
 
-```bash
-# 列出所有 meaty 组合
-python calc_meaty.py Ryu
+- **击倒来源**：普通命中 / 惩罚反击 (PC) / 反击 (CC) / 全部
+- **击倒类型**：普通击倒 / 硬击倒（对手无法后滚）/ 全部
+- **前置动作上限**：序列中前置动作数量上限（默认 2）
+- **最小帧优势**：命中后的最低帧优势要求（默认 4）
+- **仅限安全动作**：过滤防御时 ≤ -4 的收尾动作（默认开启）
+- **仅可 cancel 动作**：收尾动作必须可以 cancel 接连招（默认开启）
+- **仅完美 meaty ★**：只显示最后一个持续帧命中的方案
+- **前置动作不限移动**：放开第一个前置动作必须是移动的限制
 
-# 只显示完美 meaty（最后一帧命中，标记 ★）
-python calc_meaty.py Ryu --perfect-only
+### 结果说明
 
-# 指定击倒来源（默认 both）
-python calc_meaty.py Ryu --hit-type normal   # 普通命中击倒
-python calc_meaty.py Ryu --hit-type pc       # 惩罚反击（Punish Counter）击倒
-
-# 指定击倒类型（默认 both）
-python calc_meaty.py Ryu --kd-type kd        # 普通击倒
-python calc_meaty.py Ryu --kd-type hkd       # 硬击倒（对手无法后滚）
-
-# 序列中前置动作数量上限（默认 2）
-python calc_meaty.py Ryu --max-prefix 1
-
-# 第一个动作的限制（默认 move：只能是 Drive Rush 或前冲 66）
-python calc_meaty.py Ryu --first any    # 放开限制，允许任意动作开头
-
-# 安全过滤（默认开启，去掉 on block <= -4 的收尾动作）
-python calc_meaty.py Ryu --no-safe
-
-# 额外前冲帧数（在序列之外额外计入，一般不需要）
-python calc_meaty.py Ryu --dash 22
-```
-
-### 输出示例
-
-```
-KD Move : Shoulder Throw (LPLK)  [NORMAL] KD +17
-  Sequence                                 K'    S    A    Hit frame    Stolen   Total adv  On block   Perfect?
-  ---------------------------------------- ----- ---- ---- ------------ -------- ---------- ---------- --------
-  MPMK → 8HK                               17    10   8    8/8          +7       +13        -2         ★
-  MPMK → 214LP                             17    12   6    6/6          +5       +10        +2         ★
-```
+结果按击倒优势分组，帧数相同的击倒技合并显示。
 
 - **K'**：经过前置动作后剩余的击倒优势帧数
-- **S**：最后动作的前摇帧数
-- **A**：最后动作的持续帧数
-- **Hit frame**：命中发生在第几个持续帧（`n/A`）
-- **Stolen**：实际偷取的帧数（`N-1`），★ 表示完美 meaty
-- **Total adv**：meaty 命中后的实际帧优势（`onHit + Stolen`）；若该动作本身会击倒对手则显示 `KD`
-- **On block**：该动作被防住时的帧优势（负数表示不利）
+- **前摇 / 持续**：收尾动作的前摇帧数 S 和持续帧数 A
+- **命中帧**：命中发生在第几个持续帧（`n/A`）
+- **偷帧**：实际偷取的帧数（`N-1`），★ 表示完美 meaty
+- **命中优势**：meaty 命中后的实际帧优势（`onHit + 偷帧`）；若收尾动作本身会击倒则显示 `KD`
+- **防御优势**：收尾动作被防住时的帧优势（负数表示不利）
 
-## 角色列表（29名）
+## 更新数据
 
-A.K.I. / Akuma / Alex / Blanka / C.Viper / Cammy / Chun-Li / Dee Jay / Dhalsim / E.Honda / Ed / Elena / Guile / Jamie / JP / Juri / Ken / Kimberly / Lily / Luke / M.Bison / Mai / Manon / Marisa / Rashid / Ryu / Sagat / Terry / Zangief
+```bash
+python3 fetch_data.py --update
+```
 
 ## 文件结构
 
 ```
 meaty-calc/
-├── fetch_data.py   # 获取并缓存角色帧数据
-├── calc_meaty.py   # 计算 meaty 方案
-├── data/           # 缓存的角色数据（自动生成）
-│   ├── sf6framedata.json   # 完整数据源
-│   └── ryu.json, chun-li.json, ...
+├── fetch_data.py       # 获取并更新帧数据
+├── index.html          # 网页计算器
+├── data/
+│   └── sf6framedata.json   # 完整数据源
 └── README.md
 ```
+
+## 角色列表（29名）
+
+A.K.I. / Akuma / Alex / Blanka / C.Viper / Cammy / Chun-Li / Dee Jay / Dhalsim / E.Honda / Ed / Elena / Guile / Jamie / JP / Juri / Ken / Kimberly / Lily / Luke / M.Bison / Mai / Manon / Marisa / Rashid / Ryu / Sagat / Terry / Zangief
