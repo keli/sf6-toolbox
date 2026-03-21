@@ -23,6 +23,19 @@
   button:hover { background: #a07008; }
   button:disabled { background: #bbb; color: #fff; cursor: default; }
 
+  /* === Language Switch === */
+  .lang-bar {
+    display: flex; justify-content: flex-end; margin-bottom: 8px;
+  }
+  .lang-btn {
+    background: transparent; border: 1px solid #ccc; color: #888;
+    padding: 2px 8px; border-radius: 3px; font-family: monospace;
+    font-size: 0.78em; cursor: pointer; font-weight: normal;
+    margin-left: 4px;
+  }
+  .lang-btn:hover { border-color: #b8860b; color: #b8860b; background: transparent; }
+  .lang-btn.active { border-color: #b8860b; color: #b8860b; background: transparent; font-weight: bold; }
+
   /* === Tab Navigation === */
   .tab-bar {
     display: flex; gap: 0; margin-bottom: 20px;
@@ -161,9 +174,14 @@
 </head>
 <body>
 
+<div class="lang-bar">
+  <button class="lang-btn active" onclick="setLang('en')">EN</button>
+  <button class="lang-btn" onclick="setLang('zh')">中文</button>
+</div>
+
 <nav class="tab-bar">
-  <button class="tab active" data-tab="meaty">Meaty Calculator</button>
-  <button class="tab" data-tab="elo">ELO Win Rate</button>
+  <button class="tab active" data-tab="meaty" data-i18n="tab_meaty">Meaty Calculator</button>
+  <button class="tab" data-tab="elo" data-i18n="tab_elo">ELO Win Rate</button>
 </nav>
 
 <!-- ============================================================
@@ -173,28 +191,28 @@
 
 <div class="controls">
   <div class="control-group">
-    <label>Character</label>
-    <select id="charSelect"><option>Loading…</option></select>
+    <label data-i18n="lbl_character">Character</label>
+    <select id="charSelect"><option data-i18n="loading">Loading…</option></select>
   </div>
   <div class="control-group">
-    <label>Hit type</label>
+    <label data-i18n="lbl_hit_type">Hit type</label>
     <select id="hitType">
-      <option value="both">All</option>
-      <option value="normal" selected>Normal hit</option>
-      <option value="pc">Punish counter (PC)</option>
-      <option value="cc">Counter hit (CC)</option>
+      <option value="both" data-i18n="hit_all">All</option>
+      <option value="normal" selected data-i18n="hit_normal">Normal hit</option>
+      <option value="pc" data-i18n="hit_pc">Punish counter (PC)</option>
+      <option value="cc" data-i18n="hit_cc">Counter hit (CC)</option>
     </select>
   </div>
   <div class="control-group">
-    <label>Knockdown type</label>
+    <label data-i18n="lbl_kd_type">Knockdown type</label>
     <select id="kdType">
-      <option value="both">All</option>
+      <option value="both" data-i18n="hit_all">All</option>
       <option value="KD">KD</option>
       <option value="HKD">HKD</option>
     </select>
   </div>
   <div class="control-group">
-    <label>Max prefix moves</label>
+    <label data-i18n="lbl_max_prefix">Max prefix moves</label>
     <select id="maxPrefix">
       <option value="1">1</option>
       <option value="2" selected>2</option>
@@ -202,22 +220,22 @@
     </select>
   </div>
   <div class="control-group">
-    <label>Min advantage (on hit)</label>
+    <label data-i18n="lbl_min_adv">Min advantage (on hit)</label>
     <input type="number" id="minAdv" value="4" min="-99" max="99" style="width:70px">
   </div>
   <div class="control-group">
     <div class="checkboxes">
-      <label><input type="checkbox" id="safeOnly" checked> Safe only (on block ≥ −3)</label>
-      <label><input type="checkbox" id="cancelOnly" checked> Cancelable only</label>
-      <label><input type="checkbox" id="noSpKd" checked> Exclude cancelable KD sources</label>
-      <label><input type="checkbox" id="perfectOnly"> Perfect meaty only ★</label>
-      <label><input type="checkbox" id="firstAny"> Allow attacks as prefix</label>
+      <label><input type="checkbox" id="safeOnly" checked> <span data-i18n="chk_safe_only">Safe only (on block ≥ −3)</span></label>
+      <label><input type="checkbox" id="cancelOnly" checked> <span data-i18n="chk_cancel_only">Cancelable only</span></label>
+      <label><input type="checkbox" id="noSpKd" checked> <span data-i18n="chk_no_sp_kd">Exclude cancelable KD sources</span></label>
+      <label><input type="checkbox" id="perfectOnly"> <span data-i18n="chk_perfect_only">Perfect meaty only ★</span></label>
+      <label><input type="checkbox" id="firstAny"> <span data-i18n="chk_first_any">Allow attacks as prefix</span></label>
     </div>
   </div>
-  <button id="calcBtn" disabled>Calculate</button>
+  <button id="calcBtn" disabled data-i18n="btn_calculate">Calculate</button>
 </div>
 
-<div id="status">Loading data…</div>
+<div id="status" data-i18n="status_loading">Loading data…</div>
 <div id="meaty-results"></div>
 
 </div><!-- #tab-meaty -->
@@ -228,77 +246,77 @@
 <div id="tab-elo" class="tab-panel">
 <div class="elo-content">
 
-  <p class="elo-subtitle">Win probability calculator based on ELO ratings</p>
+  <p class="elo-subtitle" data-i18n="elo_subtitle">Win probability calculator based on ELO ratings</p>
 
   <div class="elo-player-section">
     <div class="elo-player-group">
-      <div class="elo-player-title">Player A</div>
+      <div class="elo-player-title" data-i18n="player_a">Player A</div>
       <div class="elo-input-group">
-        <label for="ratingA">Master Rating (MR)</label>
+        <label for="ratingA" data-i18n="lbl_mr">Master Rating (MR)</label>
         <input type="number" id="ratingA" value="1500" min="0" step="100" autocomplete="off">
       </div>
     </div>
     <div class="elo-player-group">
-      <div class="elo-player-title">Player B</div>
+      <div class="elo-player-title" data-i18n="player_b">Player B</div>
       <div class="elo-input-group">
-        <label for="ratingB">Master Rating (MR)</label>
+        <label for="ratingB" data-i18n="lbl_mr">Master Rating (MR)</label>
         <input type="number" id="ratingB" value="1500" min="0" step="100" autocomplete="off">
       </div>
     </div>
   </div>
 
   <div class="elo-input-group">
-    <label for="matchType">Match format (Best of)</label>
+    <label for="matchType" data-i18n="lbl_match_format">Match format (Best of)</label>
     <input type="number" id="matchType" value="3" min="1" max="99" step="1" autocomplete="off" style="width:100px">
   </div>
 
-  <button onclick="eloCalculate()">Calculate</button>
+  <button onclick="eloCalculate()" data-i18n="btn_calculate">Calculate</button>
 
   <div id="elo-results" class="elo-results">
     <div class="elo-result-section">
-      <div class="elo-result-header">Win rate per round</div>
+      <div class="elo-result-header" data-i18n="elo_round_winrate">Win rate per round</div>
       <div class="elo-result-row">
         <div class="elo-result-item player-a">
-          <div class="elo-result-label">Player A</div>
+          <div class="elo-result-label" data-i18n="player_a">Player A</div>
           <div class="elo-result-value" id="singleWinRateA">-</div>
         </div>
         <div class="elo-result-item player-b">
-          <div class="elo-result-label">Player B</div>
+          <div class="elo-result-label" data-i18n="player_b">Player B</div>
           <div class="elo-result-value" id="singleWinRateB">-</div>
         </div>
       </div>
     </div>
 
     <div class="elo-result-section">
-      <div class="elo-result-header">Win rate per set (SF6 BO3)</div>
+      <div class="elo-result-header" data-i18n="elo_set_winrate">Win rate per set (SF6 BO3)</div>
       <div class="elo-result-row">
         <div class="elo-result-item player-a">
-          <div class="elo-result-label">Player A</div>
+          <div class="elo-result-label" data-i18n="player_a">Player A</div>
           <div class="elo-result-value" id="setWinRateA">-</div>
         </div>
         <div class="elo-result-item player-b">
-          <div class="elo-result-label">Player B</div>
+          <div class="elo-result-label" data-i18n="player_b">Player B</div>
           <div class="elo-result-value" id="setWinRateB">-</div>
         </div>
       </div>
     </div>
 
     <div class="elo-result-section">
-      <div class="elo-result-header" id="matchHeader">Match win rate (BO3)</div>
+      <div class="elo-result-header" id="matchHeader" data-i18n="elo_match_winrate">Match win rate (BO3)</div>
       <div class="elo-result-row">
         <div class="elo-result-item player-a">
-          <div class="elo-result-label">Player A</div>
+          <div class="elo-result-label" data-i18n="player_a">Player A</div>
           <div class="elo-result-value" id="matchWinRateA">-</div>
         </div>
         <div class="elo-result-item player-b">
-          <div class="elo-result-label">Player B</div>
+          <div class="elo-result-label" data-i18n="player_b">Player B</div>
           <div class="elo-result-value" id="matchWinRateB">-</div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="elo-info-box">
+  <div class="elo-info-box" data-i18n-html="elo_info_html">
     <strong>Note:</strong> In SF6, each set is best-of-3 rounds. This calculator uses ELO ratings to compute per-round win probability, then derives per-set and per-match probabilities.
   </div>
 
@@ -306,6 +324,195 @@
 </div><!-- #tab-elo -->
 
 <script>
+// ---------------------------------------------------------------------------
+// i18n
+// ---------------------------------------------------------------------------
+const STRINGS = {
+  en: {
+    tab_meaty: 'Meaty Calculator',
+    tab_elo: 'ELO Win Rate',
+    lbl_character: 'Character',
+    lbl_hit_type: 'Hit type',
+    lbl_kd_type: 'Knockdown type',
+    lbl_max_prefix: 'Max prefix moves',
+    lbl_min_adv: 'Min advantage (on hit)',
+    chk_safe_only: 'Safe only (on block ≥ −3)',
+    chk_cancel_only: 'Cancelable only',
+    chk_no_sp_kd: 'Exclude cancelable KD sources',
+    chk_perfect_only: 'Perfect meaty only ★',
+    chk_first_any: 'Allow attacks as prefix',
+    btn_calculate: 'Calculate',
+    loading: 'Loading…',
+    status_loading: 'Loading data…',
+    status_loaded: (n) => `Loaded ${n} characters.`,
+    status_failed: (msg) => `Failed to load data: ${msg}`,
+    status_calculating: 'Calculating…',
+    status_result: (char, n, p) => `${char}: ${n} setups found (★ perfect: ${p})`,
+    no_results: 'No setups found for the current filters.',
+    th_sequence: 'Sequence',
+    th_startup: 'Startup',
+    th_active: 'Active',
+    th_hit_frame: 'Hit frame',
+    th_stolen: 'Stolen',
+    th_on_hit: 'On hit',
+    th_on_block: 'On block',
+    th_perfect: 'Perfect',
+    kd_label: 'KD',
+    hkd_label: 'HKD',
+    hit_type_normal: 'Normal',
+    hit_type_pc: 'PC',
+    hit_type_cc: 'CC',
+    hit_all: 'All',
+    hit_normal: 'Normal hit',
+    hit_pc: 'Punish counter (PC)',
+    hit_cc: 'Counter hit (CC)',
+    elo_subtitle: 'Win probability calculator based on ELO ratings',
+    player_a: 'Player A',
+    player_b: 'Player B',
+    lbl_mr: 'Master Rating (MR)',
+    lbl_match_format: 'Match format (Best of)',
+    elo_round_winrate: 'Win rate per round',
+    elo_set_winrate: 'Win rate per set (SF6 BO3)',
+    elo_match_winrate: (n) => `Match win rate (BO${n})`,
+    elo_info_html: '<strong>Note:</strong> In SF6, each set is best-of-3 rounds. This calculator uses ELO ratings to compute per-round win probability, then derives per-set and per-match probabilities.',
+  },
+  zh: {
+    tab_meaty: '偷帧计算器',
+    tab_elo: 'ELO 胜率',
+    lbl_character: '角色',
+    lbl_hit_type: '命中类型',
+    lbl_kd_type: '击倒类型',
+    lbl_max_prefix: '前置技最多数量',
+    lbl_min_adv: '最低优劣势（命中时）',
+    chk_safe_only: '仅安全技（防御后 ≥ −3）',
+    chk_cancel_only: '仅可取消技',
+    chk_no_sp_kd: '排除可取消击倒源',
+    chk_perfect_only: '仅完美偷帧 ★',
+    chk_first_any: '允许攻击技作为前置',
+    btn_calculate: '计算',
+    loading: '加载中…',
+    status_loading: '正在加载数据…',
+    status_loaded: (n) => `已加载 ${n} 个角色。`,
+    status_failed: (msg) => `数据加载失败：${msg}`,
+    status_calculating: '计算中…',
+    status_result: (char, n, p) => `${char}：找到 ${n} 个偷帧方案（★ 完美：${p}）`,
+    no_results: '当前过滤条件下未找到任何方案。',
+    th_sequence: '连段',
+    th_startup: '发生',
+    th_active: '持续',
+    th_hit_frame: '命中帧',
+    th_stolen: '偷帧数',
+    th_on_hit: '命中',
+    th_on_block: '防御',
+    th_perfect: '完美',
+    kd_label: '倒地',
+    hkd_label: '硬倒地',
+    hit_type_normal: '普通',
+    hit_type_pc: '确反康',
+    hit_type_cc: '打康',
+    hit_all: '全部',
+    hit_normal: '普通命中',
+    hit_pc: '确反康 (PC)',
+    hit_cc: '打康 (CC)',
+    elo_subtitle: '基于 ELO 评分的胜率计算器',
+    player_a: '玩家 A',
+    player_b: '玩家 B',
+    lbl_mr: 'Master Rating (MR)',
+    lbl_match_format: '赛制（BO）',
+    elo_round_winrate: '单局胜率',
+    elo_set_winrate: '单 Set 胜率（SF6 BO3）',
+    elo_match_winrate: (n) => `比赛胜率（BO${n}）`,
+    elo_info_html: '<strong>说明：</strong>SF6 中每个 Set 为 3 局 2 胜制。本计算器利用 ELO 评分计算单局胜率，再推导出 Set 胜率与比赛胜率。',
+  },
+};
+
+let currentLang = 'en';
+
+// Loaded from data/i18n-<lang>.json: { charNames: {}, moveNames: {} }
+const dataTranslations = {};
+
+function t(key, ...args) {
+  const val = STRINGS[currentLang][key];
+  if (typeof val === 'function') return val(...args);
+  return val ?? key;
+}
+
+function tChar(name) {
+  if (currentLang === 'en') return name;
+  return dataTranslations[currentLang]?.charNames?.[name] || name;
+}
+
+const MOVE_PREFIX_ZH = [
+  ['Drive Impact: ',   '斗气迸放：'],
+  ['Drive Reversal: ', '斗气反击：'],
+];
+
+function tMove(name) {
+  if (currentLang === 'en') return name;
+  const zh = dataTranslations[currentLang]?.moveNames?.[name];
+  if (zh) return zh;
+  for (const [en, zhPrefix] of MOVE_PREFIX_ZH) {
+    if (name.startsWith(en)) return zhPrefix + name.slice(en.length);
+  }
+  return name;
+}
+
+async function loadDataTranslations(lang) {
+  if (lang === 'en' || dataTranslations[lang]) return;
+  try {
+    const resp = await fetch(`data/i18n-${lang}.json`);
+    dataTranslations[lang] = await resp.json();
+  } catch (e) {
+    dataTranslations[lang] = {};
+  }
+}
+
+function applyLang() {
+  document.documentElement.lang = currentLang;
+
+  // Static text nodes
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const val = STRINGS[currentLang][key];
+    if (typeof val === 'string') el.textContent = val;
+  });
+
+  // HTML content nodes
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n-html');
+    const val = STRINGS[currentLang][key];
+    if (typeof val === 'string') el.innerHTML = val;
+  });
+
+  // Language toggle buttons
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.trim() === (currentLang === 'en' ? 'EN' : '中文'));
+  });
+
+  // Re-render dynamic parts if data is loaded
+  if (allData) {
+    renderCharSelect();
+    const charName = document.getElementById('charSelect').value;
+    const statusEl = document.getElementById('status');
+    // Only refresh status if it's showing a result (not loading/error)
+    if (statusEl.dataset.state === 'result') {
+      const lastResults = _lastResults;
+      if (lastResults) {
+        statusEl.textContent = t('status_result', charName, lastResults.total, lastResults.perfect);
+      }
+    } else if (statusEl.dataset.state === 'loaded') {
+      statusEl.textContent = t('status_loaded', Object.keys(allData).length);
+    }
+    if (_lastResults) renderResults(_lastResults.list);
+  }
+}
+
+async function setLang(lang) {
+  await loadDataTranslations(lang);
+  currentLang = lang;
+  applyLang();
+}
+
 // ---------------------------------------------------------------------------
 // Meaty Calculator
 // ---------------------------------------------------------------------------
@@ -454,7 +661,6 @@ function tryMeaty(kdMove, kdInfo, prefix, K, meaty, results, minAdv, perfectOnly
   }
 }
 
-const HIT_TYPE_LABEL = { normal: 'Normal', pc: 'PC', cc: 'CC' };
 const HIT_TYPE_CLASS = { normal: 'kd-type-normal', pc: 'kd-type-pc', cc: 'kd-type-cc' };
 
 function fmtSeq(prefix, meaty) {
@@ -462,8 +668,12 @@ function fmtSeq(prefix, meaty) {
 }
 
 function fmtSeqWithFrames(prefix, meaty) {
-  const parts = prefix.map(m => `${m.cmd}<span style="color:#999;font-size:0.85em">[${m.total}f]</span>`);
-  parts.push(meaty.cmd);
+  const parts = prefix.map(m => {
+    const label = tMove(m.name) !== m.name ? `${tMove(m.name)} (${m.cmd})` : m.cmd;
+    return `${label}<span style="color:#999;font-size:0.85em">[${m.total}f]</span>`;
+  });
+  const meatyLabel = tMove(meaty.name) !== meaty.name ? `${tMove(meaty.name)} (${meaty.cmd})` : meaty.cmd;
+  parts.push(meatyLabel);
   return parts.join(' → ');
 }
 
@@ -473,10 +683,12 @@ function fmtBlock(ob) {
   return `<span class="${cls}">${ob >= 0 ? '+' : ''}${ob}</span>`;
 }
 
+let _lastResults = null;
+
 function renderResults(results) {
   const el = document.getElementById('meaty-results');
   if (!results.length) {
-    el.innerHTML = '<div class="no-results">No setups found for the current filters.</div>';
+    el.innerHTML = `<div class="no-results">${t('no_results')}</div>`;
     return;
   }
 
@@ -516,9 +728,10 @@ function renderResults(results) {
     }
     const srcHtml = [...moveMap.values()].map(({ move, hitTypes }) => {
       const tags = hitTypes.map(ht =>
-        `<span class="${HIT_TYPE_CLASS[ht] || ''}">[${HIT_TYPE_LABEL[ht] || ht}]</span>`
+        `<span class="${HIT_TYPE_CLASS[ht] || ''}">[${t('hit_type_' + ht) || ht}]</span>`
       ).join('');
-      return `${move.name} <span style="color:#666">(${move.cmd})</span> ${tags}`;
+      const moveName = tMove(move.name);
+      return `${moveName} <span style="color:#666">(${move.cmd})</span> ${tags}`;
     }).join('<span style="color:#555"> / </span>');
 
     const collapsed = rows.length > 10 ? ' collapsed' : '';
@@ -528,7 +741,7 @@ function renderResults(results) {
     html += `<span class="kd-adv">${kdInfo.kdType} +${kdInfo.advantage}</span>`;
     html += `</div>`;
     html += `<div class="kd-body"><table><thead><tr>`;
-    html += `<th>Sequence</th><th>Startup</th><th>Active</th><th>Hit frame</th><th>Stolen</th><th>On hit</th><th>On block</th><th>Perfect</th>`;
+    html += `<th>${t('th_sequence')}</th><th>${t('th_startup')}</th><th>${t('th_active')}</th><th>${t('th_hit_frame')}</th><th>${t('th_stolen')}</th><th>${t('th_on_hit')}</th><th>${t('th_on_block')}</th><th>${t('th_perfect')}</th>`;
     html += `</tr></thead><tbody>`;
 
     function seqPriority(r) {
@@ -546,7 +759,7 @@ function renderResults(results) {
     for (const r of sortedRows) {
       const stolen = r.activeFrameHit - 1;
       const totalStr = r.meaty.knockdowns.length
-        ? '<span class="kd-adv-cell">KD</span>'
+        ? `<span class="kd-adv-cell">${t(r.kdInfo.kdType === 'HKD' ? 'hkd_label' : 'kd_label')}</span>`
         : r.totalAdv != null
           ? `<span class="total-adv">+${r.totalAdv}</span>`
           : '?';
@@ -568,19 +781,35 @@ function renderResults(results) {
 
 let allData = null;
 
+function renderCharSelect() {
+  if (!allData) return;
+  const chars = Object.keys(allData);
+  const sel = document.getElementById('charSelect');
+  const current = sel.value;
+  sel.innerHTML = chars.map(c => `<option value="${c}">${tChar(c)}</option>`).join('');
+  // Restore selection by value (value is always the English key)
+  if (current && chars.includes(current)) {
+    sel.value = current;
+  }
+}
+
 async function loadData() {
   try {
     const resp = await fetch('data/sf6framedata.json');
     allData = await resp.json();
     const chars = Object.keys(allData);
+    renderCharSelect();
     const sel = document.getElementById('charSelect');
-    sel.innerHTML = chars.map(c => `<option value="${c}">${c}</option>`).join('');
     const ryuIdx = chars.indexOf('Ryu');
     if (ryuIdx >= 0) sel.selectedIndex = ryuIdx;
     document.getElementById('calcBtn').disabled = false;
-    document.getElementById('status').textContent = `Loaded ${chars.length} characters.`;
+    const statusEl = document.getElementById('status');
+    statusEl.textContent = t('status_loaded', chars.length);
+    statusEl.dataset.state = 'loaded';
   } catch (e) {
-    document.getElementById('status').textContent = 'Failed to load data: ' + e.message;
+    const statusEl = document.getElementById('status');
+    statusEl.textContent = t('status_failed', e.message);
+    statusEl.dataset.state = 'error';
   }
 }
 
@@ -602,11 +831,15 @@ function calculate() {
     perfectOnly: document.getElementById('perfectOnly').checked,
   };
 
-  document.getElementById('status').textContent = 'Calculating…';
+  const statusEl = document.getElementById('status');
+  statusEl.textContent = t('status_calculating');
+  statusEl.dataset.state = 'calculating';
   setTimeout(() => {
     const results = calcMeatys(moves, opts);
-    document.getElementById('status').textContent =
-      `${charName}: ${results.length} setups found (★ perfect: ${results.filter(r => r.isPerfect).length})`;
+    const perfectCount = results.filter(r => r.isPerfect).length;
+    _lastResults = { list: results, total: results.length, perfect: perfectCount };
+    statusEl.textContent = t('status_result', charName, results.length, perfectCount);
+    statusEl.dataset.state = 'result';
     renderResults(results);
   }, 10);
 }
@@ -662,7 +895,7 @@ function eloCalculate() {
   const matchWinProbA = calculateBestOfWinProbability(setWinProbA, matchType);
   const matchWinProbB = 1 - matchWinProbA;
 
-  document.getElementById('matchHeader').textContent = `Match win rate (BO${matchType})`;
+  document.getElementById('matchHeader').textContent = t('elo_match_winrate', matchType);
 
   document.getElementById('singleWinRateA').textContent = (gameWinProbA * 100).toFixed(2) + '%';
   document.getElementById('singleWinRateB').textContent = (gameWinProbB * 100).toFixed(2) + '%';
