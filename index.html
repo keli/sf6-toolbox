@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SF6 工具箱</title>
+<title>SF6 Toolbox</title>
 <style>
   /* === Reset === */
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -162,8 +162,8 @@
 <body>
 
 <nav class="tab-bar">
-  <button class="tab active" data-tab="meaty">偷帧计算器</button>
-  <button class="tab" data-tab="elo">ELO 胜率计算器</button>
+  <button class="tab active" data-tab="meaty">Meaty Calculator</button>
+  <button class="tab" data-tab="elo">ELO Win Rate</button>
 </nav>
 
 <!-- ============================================================
@@ -173,28 +173,28 @@
 
 <div class="controls">
   <div class="control-group">
-    <label>角色</label>
-    <select id="charSelect"><option>加载中…</option></select>
+    <label>Character</label>
+    <select id="charSelect"><option>Loading…</option></select>
   </div>
   <div class="control-group">
-    <label>击倒来源</label>
+    <label>Hit type</label>
     <select id="hitType">
-      <option value="both">全部</option>
-      <option value="normal" selected>普通命中</option>
-      <option value="pc">惩罚反击 (PC)</option>
-      <option value="cc">反击 (CC)</option>
+      <option value="both">All</option>
+      <option value="normal" selected>Normal hit</option>
+      <option value="pc">Punish counter (PC)</option>
+      <option value="cc">Counter hit (CC)</option>
     </select>
   </div>
   <div class="control-group">
-    <label>击倒类型</label>
+    <label>Knockdown type</label>
     <select id="kdType">
-      <option value="both">全部</option>
-      <option value="KD">普通击倒</option>
-      <option value="HKD">硬击倒</option>
+      <option value="both">All</option>
+      <option value="KD">KD</option>
+      <option value="HKD">HKD</option>
     </select>
   </div>
   <div class="control-group">
-    <label>前置动作上限</label>
+    <label>Max prefix moves</label>
     <select id="maxPrefix">
       <option value="1">1</option>
       <option value="2" selected>2</option>
@@ -202,22 +202,22 @@
     </select>
   </div>
   <div class="control-group">
-    <label>最小帧优势（命中后）</label>
+    <label>Min advantage (on hit)</label>
     <input type="number" id="minAdv" value="4" min="-99" max="99" style="width:70px">
   </div>
   <div class="control-group">
     <div class="checkboxes">
-      <label><input type="checkbox" id="safeOnly" checked> 仅限安全动作（防御≥-3）</label>
-      <label><input type="checkbox" id="cancelOnly" checked> 仅可 cancel 动作</label>
-      <label><input type="checkbox" id="noSpKd" checked> 过滤可 cancel 的击倒来源</label>
-      <label><input type="checkbox" id="perfectOnly"> 仅完美 meaty ★</label>
-      <label><input type="checkbox" id="firstAny"> 前置动作不限移动</label>
+      <label><input type="checkbox" id="safeOnly" checked> Safe only (on block ≥ −3)</label>
+      <label><input type="checkbox" id="cancelOnly" checked> Cancelable only</label>
+      <label><input type="checkbox" id="noSpKd" checked> Exclude cancelable KD sources</label>
+      <label><input type="checkbox" id="perfectOnly"> Perfect meaty only ★</label>
+      <label><input type="checkbox" id="firstAny"> Allow attacks as prefix</label>
     </div>
   </div>
-  <button id="calcBtn" disabled>计算</button>
+  <button id="calcBtn" disabled>Calculate</button>
 </div>
 
-<div id="status">正在加载数据…</div>
+<div id="status">Loading data…</div>
 <div id="meaty-results"></div>
 
 </div><!-- #tab-meaty -->
@@ -228,70 +228,70 @@
 <div id="tab-elo" class="tab-panel">
 <div class="elo-content">
 
-  <p class="elo-subtitle">基于 ELO 算法计算对战胜率</p>
+  <p class="elo-subtitle">Win probability calculator based on ELO ratings</p>
 
   <div class="elo-player-section">
     <div class="elo-player-group">
-      <div class="elo-player-title">玩家 A</div>
+      <div class="elo-player-title">Player A</div>
       <div class="elo-input-group">
-        <label for="ratingA">大师分 (MR)</label>
+        <label for="ratingA">Master Rating (MR)</label>
         <input type="number" id="ratingA" value="1500" min="0" step="100" autocomplete="off">
       </div>
     </div>
     <div class="elo-player-group">
-      <div class="elo-player-title">玩家 B</div>
+      <div class="elo-player-title">Player B</div>
       <div class="elo-input-group">
-        <label for="ratingB">大师分 (MR)</label>
+        <label for="ratingB">Master Rating (MR)</label>
         <input type="number" id="ratingB" value="1500" min="0" step="100" autocomplete="off">
       </div>
     </div>
   </div>
 
   <div class="elo-input-group">
-    <label for="matchType">比赛类型 (Best of)</label>
+    <label for="matchType">Match format (Best of)</label>
     <input type="number" id="matchType" value="3" min="1" max="99" step="1" autocomplete="off" style="width:100px">
   </div>
 
-  <button onclick="eloCalculate()">计算胜率</button>
+  <button onclick="eloCalculate()">Calculate</button>
 
   <div id="elo-results" class="elo-results">
     <div class="elo-result-section">
-      <div class="elo-result-header">单局胜率</div>
+      <div class="elo-result-header">Win rate per round</div>
       <div class="elo-result-row">
         <div class="elo-result-item player-a">
-          <div class="elo-result-label">玩家 A</div>
+          <div class="elo-result-label">Player A</div>
           <div class="elo-result-value" id="singleWinRateA">-</div>
         </div>
         <div class="elo-result-item player-b">
-          <div class="elo-result-label">玩家 B</div>
+          <div class="elo-result-label">Player B</div>
           <div class="elo-result-value" id="singleWinRateB">-</div>
         </div>
       </div>
     </div>
 
     <div class="elo-result-section">
-      <div class="elo-result-header">单场胜率（街霸6每场 BO3）</div>
+      <div class="elo-result-header">Win rate per set (SF6 BO3)</div>
       <div class="elo-result-row">
         <div class="elo-result-item player-a">
-          <div class="elo-result-label">玩家 A</div>
+          <div class="elo-result-label">Player A</div>
           <div class="elo-result-value" id="setWinRateA">-</div>
         </div>
         <div class="elo-result-item player-b">
-          <div class="elo-result-label">玩家 B</div>
+          <div class="elo-result-label">Player B</div>
           <div class="elo-result-value" id="setWinRateB">-</div>
         </div>
       </div>
     </div>
 
     <div class="elo-result-section">
-      <div class="elo-result-header" id="matchHeader">比赛胜率 (BO3)</div>
+      <div class="elo-result-header" id="matchHeader">Match win rate (BO3)</div>
       <div class="elo-result-row">
         <div class="elo-result-item player-a">
-          <div class="elo-result-label">玩家 A</div>
+          <div class="elo-result-label">Player A</div>
           <div class="elo-result-value" id="matchWinRateA">-</div>
         </div>
         <div class="elo-result-item player-b">
-          <div class="elo-result-label">玩家 B</div>
+          <div class="elo-result-label">Player B</div>
           <div class="elo-result-value" id="matchWinRateB">-</div>
         </div>
       </div>
@@ -299,7 +299,7 @@
   </div>
 
   <div class="elo-info-box">
-    <strong>说明：</strong>街霸6每一场都是三局两胜制。此计算器先根据 ELO 分数计算单局胜率，然后计算在 BO3/BO5 中赢得整场比赛的概率。
+    <strong>Note:</strong> In SF6, each set is best-of-3 rounds. This calculator uses ELO ratings to compute per-round win probability, then derives per-set and per-match probabilities.
   </div>
 
 </div>
@@ -370,7 +370,7 @@ function extractMoves(charData) {
   const fDash = parseInt1(charData.stats?.fDash);
   if (fDash) {
     moves.push({
-      name: '前冲', cmd: '66',
+      name: 'Dash', cmd: '66',
       startup: fDash, active: 0, recovery: 0, total: fDash,
       onBlock: null, onHit: null, moveType: 'dash', isAttack: false,
       knockdowns: [],
@@ -454,11 +454,17 @@ function tryMeaty(kdMove, kdInfo, prefix, K, meaty, results, minAdv, perfectOnly
   }
 }
 
-const HIT_TYPE_LABEL = { normal: '普通命中', pc: '惩罚反击 (PC)', cc: '反击 (CC)' };
+const HIT_TYPE_LABEL = { normal: 'Normal', pc: 'PC', cc: 'CC' };
 const HIT_TYPE_CLASS = { normal: 'kd-type-normal', pc: 'kd-type-pc', cc: 'kd-type-cc' };
 
 function fmtSeq(prefix, meaty) {
   return [...prefix.map(m => m.cmd), meaty.cmd].join(' → ');
+}
+
+function fmtSeqWithFrames(prefix, meaty) {
+  const parts = prefix.map(m => `${m.cmd}<span style="color:#999;font-size:0.85em">[${m.total}f]</span>`);
+  parts.push(meaty.cmd);
+  return parts.join(' → ');
 }
 
 function fmtBlock(ob) {
@@ -470,7 +476,7 @@ function fmtBlock(ob) {
 function renderResults(results) {
   const el = document.getElementById('meaty-results');
   if (!results.length) {
-    el.innerHTML = '<div class="no-results">没有找到符合条件的偷帧方案。</div>';
+    el.innerHTML = '<div class="no-results">No setups found for the current filters.</div>';
     return;
   }
 
@@ -522,11 +528,20 @@ function renderResults(results) {
     html += `<span class="kd-adv">${kdInfo.kdType} +${kdInfo.advantage}</span>`;
     html += `</div>`;
     html += `<div class="kd-body"><table><thead><tr>`;
-    html += `<th>序列</th><th>K'</th><th>前摇</th><th>持续</th><th>命中帧</th><th>偷帧</th><th>命中优势</th><th>防御优势</th><th>完美</th>`;
+    html += `<th>Sequence</th><th>Startup</th><th>Active</th><th>Hit frame</th><th>Stolen</th><th>On hit</th><th>On block</th><th>Perfect</th>`;
     html += `</tr></thead><tbody>`;
 
+    function seqPriority(r) {
+      const cmd = r.meaty.cmd;
+      if (/^\d(HP|HK)$/.test(cmd)) return 0;
+      if (/^\d(MP|MK)$/.test(cmd)) return 1;
+      if (/^\d(LP|LK)$/.test(cmd)) return 2;
+      return 3;
+    }
     const sortedRows = rows.sort((a, b) =>
-      (b.isPerfect - a.isPerfect) || (b.activeFrameHit - a.activeFrameHit) || (a.prefix.length - b.prefix.length)
+      (seqPriority(a) - seqPriority(b)) ||
+      (b.isPerfect - a.isPerfect) || (b.activeFrameHit - a.activeFrameHit) ||
+      (a.prefix.length - b.prefix.length)
     );
     for (const r of sortedRows) {
       const stolen = r.activeFrameHit - 1;
@@ -536,8 +551,7 @@ function renderResults(results) {
           ? `<span class="total-adv">+${r.totalAdv}</span>`
           : '?';
       html += `<tr>`;
-      html += `<td>${fmtSeq(r.prefix, r.meaty)}</td>`;
-      html += `<td>${r.K}</td>`;
+      html += `<td>${fmtSeqWithFrames(r.prefix, r.meaty)}</td>`;
       html += `<td>${r.meaty.startup}</td>`;
       html += `<td>${r.meaty.active}</td>`;
       html += `<td>${r.activeFrameHit}/${r.meaty.active}</td>`;
@@ -564,9 +578,9 @@ async function loadData() {
     const ryuIdx = chars.indexOf('Ryu');
     if (ryuIdx >= 0) sel.selectedIndex = ryuIdx;
     document.getElementById('calcBtn').disabled = false;
-    document.getElementById('status').textContent = `已加载 ${chars.length} 名角色。`;
+    document.getElementById('status').textContent = `Loaded ${chars.length} characters.`;
   } catch (e) {
-    document.getElementById('status').textContent = '数据加载失败：' + e.message;
+    document.getElementById('status').textContent = 'Failed to load data: ' + e.message;
   }
 }
 
@@ -588,11 +602,11 @@ function calculate() {
     perfectOnly: document.getElementById('perfectOnly').checked,
   };
 
-  document.getElementById('status').textContent = '计算中…';
+  document.getElementById('status').textContent = 'Calculating…';
   setTimeout(() => {
     const results = calcMeatys(moves, opts);
     document.getElementById('status').textContent =
-      `${charName}：找到 ${results.length} 个方案（★完美：${results.filter(r => r.isPerfect).length}）`;
+      `${charName}: ${results.length} setups found (★ perfect: ${results.filter(r => r.isPerfect).length})`;
     renderResults(results);
   }, 10);
 }
@@ -648,7 +662,7 @@ function eloCalculate() {
   const matchWinProbA = calculateBestOfWinProbability(setWinProbA, matchType);
   const matchWinProbB = 1 - matchWinProbA;
 
-  document.getElementById('matchHeader').textContent = `比赛胜率 (BO${matchType})`;
+  document.getElementById('matchHeader').textContent = `Match win rate (BO${matchType})`;
 
   document.getElementById('singleWinRateA').textContent = (gameWinProbA * 100).toFixed(2) + '%';
   document.getElementById('singleWinRateB').textContent = (gameWinProbB * 100).toFixed(2) + '%';
