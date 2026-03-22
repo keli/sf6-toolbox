@@ -658,8 +658,9 @@ function calcMeatys(moves, opts) {
 
 function tryMeaty(kdMove, kdInfo, prefix, K, meaty, results, minAdv, perfectOnly) {
   const S = meaty.startup, A = meaty.active;
-  if (S <= K && K <= S + A - 1) {
-    const activeFrameHit = K - S + 1;
+  // startup 的最后一帧即为第 1 持续帧，故 meaty 窗口从 S-1 开始
+  if (S - 1 <= K && K <= S + A - 2) {
+    const activeFrameHit = K - S + 2;
     const stolen = activeFrameHit - 1;
     const isPerfect = activeFrameHit === A;
     if (perfectOnly && !isPerfect) return;
@@ -667,9 +668,10 @@ function tryMeaty(kdMove, kdInfo, prefix, K, meaty, results, minAdv, perfectOnly
     if (!meaty.knockdowns.length && meaty.onHit != null) {
       totalAdv = meaty.onHit + stolen;
     }
+    const totalBlock = meaty.onBlock != null ? meaty.onBlock + stolen : null;
     if (stolen === 0) return;
     if (totalAdv != null && totalAdv < minAdv) return;
-    results.push({ kdMove, kdInfo, prefix, meaty, K, activeFrameHit, isPerfect, totalAdv });
+    results.push({ kdMove, kdInfo, prefix, meaty, K, activeFrameHit, isPerfect, totalAdv, totalBlock });
   }
 }
 
@@ -782,7 +784,7 @@ function renderResults(results) {
       html += `<td>${r.activeFrameHit}/${r.meaty.active}</td>`;
       html += `<td><span class="stolen">+${stolen}</span></td>`;
       html += `<td>${totalStr}</td>`;
-      html += `<td>${fmtBlock(r.meaty.onBlock)}</td>`;
+      html += `<td>${fmtBlock(r.totalBlock)}</td>`;
       html += `<td>${r.isPerfect ? '<span class="perfect">★</span>' : ''}</td>`;
       html += `</tr>`;
     }
