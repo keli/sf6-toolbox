@@ -700,10 +700,12 @@ function fmtSeqWithFrames(prefix, meaty) {
   return parts.join(' → ');
 }
 
-function fmtBlock(ob) {
+function fmtBlock(ob, rawOb) {
   if (ob == null) return '<span class="safe-zero">?</span>';
   const cls = ob > 0 ? 'safe-plus' : ob < 0 ? 'safe-minus' : 'safe-zero';
-  return `<span class="${cls}">${ob >= 0 ? '+' : ''}${ob}</span>`;
+  const flipped = rawOb != null && rawOb <= 0 && ob > 0;
+  const tag = flipped ? ' <span title="Originally negative on block" style="color:#f90;font-size:0.85em">↑</span>' : '';
+  return `<span class="${cls}">${ob >= 0 ? '+' : ''}${ob}</span>${tag}`;
 }
 
 let _lastResults = null;
@@ -794,7 +796,7 @@ function renderResults(results) {
       html += `<td>${r.activeFrameHit}/${r.meaty.active}</td>`;
       html += `<td><span class="stolen">+${stolen}</span></td>`;
       html += `<td>${totalStr}</td>`;
-      html += `<td>${fmtBlock(r.totalBlock)}</td>`;
+      html += `<td>${fmtBlock(r.totalBlock, r.meaty.onBlock)}</td>`;
       html += `<td>${r.isPerfect ? '<span class="perfect">★</span>' : ''}</td>`;
       html += `</tr>`;
     }
