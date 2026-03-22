@@ -433,7 +433,10 @@ const STRINGS = {
   },
 };
 
-let currentLang = 'en';
+const savedLang = localStorage.getItem('lang');
+const browserLang = navigator.language || '';
+const defaultLang = savedLang || (browserLang.startsWith('zh') ? 'zh' : 'en');
+let currentLang = defaultLang;
 
 // Loaded from data/i18n-<lang>.json: { charNames: {}, moveNames: {} }
 const dataTranslations = {};
@@ -517,6 +520,7 @@ function applyLang() {
 async function setLang(lang) {
   await loadDataTranslations(lang);
   currentLang = lang;
+  localStorage.setItem('lang', lang);
   applyLang();
 }
 
@@ -855,7 +859,7 @@ function calculate() {
 document.getElementById('calcBtn').addEventListener('click', calculate);
 document.getElementById('charSelect').addEventListener('change', calculate);
 
-loadData().then(() => calculate());
+loadDataTranslations(currentLang).then(() => { applyLang(); loadData().then(() => calculate()); });
 
 // ---------------------------------------------------------------------------
 // ELO Calculator
