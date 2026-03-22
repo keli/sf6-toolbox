@@ -235,6 +235,10 @@
     <input type="number" id="minAdv" value="4" min="-99" max="99" style="width:70px">
   </div>
   <div class="control-group">
+    <label data-i18n="lbl_max_delay">Max delay (frames)</label>
+    <input type="number" id="maxDelay" value="0" min="0" max="99" style="width:70px">
+  </div>
+  <div class="control-group">
     <div class="checkboxes">
       <label><input type="checkbox" id="safeOnly" checked> <span data-i18n="chk_safe_only">Safe only (on block ≥ −3)</span></label>
       <label><input type="checkbox" id="cancelOnly" checked> <span data-i18n="chk_cancel_only">Cancelable only</span></label>
@@ -347,6 +351,7 @@ const STRINGS = {
     lbl_kd_type: 'Knockdown type',
     lbl_max_prefix: 'Max prefix moves',
     lbl_min_adv: 'Min advantage (on hit)',
+    lbl_max_delay: 'Max delay (frames)',
     chk_safe_only: 'Safe only (on block ≥ −3)',
     chk_cancel_only: 'Cancelable only',
     chk_no_sp_kd: 'Exclude cancelable KD sources',
@@ -393,6 +398,7 @@ const STRINGS = {
     lbl_kd_type: '击倒类型',
     lbl_max_prefix: '前置技最多数量',
     lbl_min_adv: '最低帧数优势（命中时）',
+    lbl_max_delay: '最大放帧数',
     chk_safe_only: '仅安全技（防御后 ≥ −3）',
     chk_cancel_only: '仅可取消技',
     chk_no_sp_kd: '排除可取消击倒源',
@@ -598,7 +604,7 @@ function extractMoves(charData) {
 }
 
 function calcMeatys(moves, opts) {
-  const { hitTypeFilter, kdTypeFilter, maxPrefix, safeOnly, firstAny, minAdv, perfectOnly } = opts;
+  const { hitTypeFilter, kdTypeFilter, maxPrefix, safeOnly, firstAny, minAdv, maxDelay, perfectOnly } = opts;
 
   const meatyCandidates = moves.filter(m =>
     m.isAttack
@@ -627,7 +633,8 @@ function calcMeatys(moves, opts) {
         if (K1 <= 0) continue;
 
         for (const meaty of meatyCandidates) {
-          tryMeaty(kdMove, kdInfo, [first], K1, meaty, results, minAdv, perfectOnly);
+          for (let d = 0; d <= maxDelay; d++)
+            tryMeaty(kdMove, kdInfo, [first], K1 - d, d, meaty, results, minAdv, perfectOnly);
         }
 
         if (maxPrefix >= 2) {
@@ -635,7 +642,8 @@ function calcMeatys(moves, opts) {
             const K2 = K1 - second.total;
             if (K2 <= 0) continue;
             for (const meaty of meatyCandidates) {
-              tryMeaty(kdMove, kdInfo, [first, second], K2, meaty, results, minAdv, perfectOnly);
+              for (let d = 0; d <= maxDelay; d++)
+                tryMeaty(kdMove, kdInfo, [first, second], K2 - d, d, meaty, results, minAdv, perfectOnly);
             }
 
             if (maxPrefix >= 3) {
@@ -643,7 +651,8 @@ function calcMeatys(moves, opts) {
                 const K3 = K2 - third.total;
                 if (K3 <= 0) continue;
                 for (const meaty of meatyCandidates) {
-                  tryMeaty(kdMove, kdInfo, [first, second, third], K3, meaty, results, minAdv, perfectOnly);
+                  for (let d = 0; d <= maxDelay; d++)
+                    tryMeaty(kdMove, kdInfo, [first, second, third], K3 - d, d, meaty, results, minAdv, perfectOnly);
                 }
               }
             }
@@ -656,7 +665,7 @@ function calcMeatys(moves, opts) {
   return results;
 }
 
-function tryMeaty(kdMove, kdInfo, prefix, K, meaty, results, minAdv, perfectOnly) {
+function tryMeaty(kdMove, kdInfo, prefix, K, delay, meaty, results, minAdv, perfectOnly) {
   const S = meaty.startup, A = meaty.active;
   // startup 的最后一帧即为第 1 持续帧，故 meaty 窗口从 S-1 开始
   if (S - 1 <= K && K <= S + A - 2) {
@@ -671,7 +680,7 @@ function tryMeaty(kdMove, kdInfo, prefix, K, meaty, results, minAdv, perfectOnly
     const totalBlock = meaty.onBlock != null ? meaty.onBlock + stolen : null;
     if (stolen === 0) return;
     if (totalAdv != null && totalAdv < minAdv) return;
-    results.push({ kdMove, kdInfo, prefix, meaty, K, activeFrameHit, isPerfect, totalAdv, totalBlock });
+    results.push({ kdMove, kdInfo, prefix, meaty, K, delay, activeFrameHit, isPerfect, totalAdv, totalBlock });
   }
 }
 
@@ -719,7 +728,7 @@ function renderResults(results) {
   for (const g of groups.values()) {
     const seen = new Set();
     g.rows = g.rows.filter(r => {
-      const k = `${fmtSeq(r.prefix, r.meaty)}|${r.K}`;
+      const k = `${fmtSeq(r.prefix, r.meaty)}|${r.K}|${r.delay}`;
       if (seen.has(k)) return false;
       seen.add(k);
       return true;
@@ -778,7 +787,8 @@ function renderResults(results) {
           ? `<span class="total-adv">+${r.totalAdv}</span>`
           : '?';
       html += `<tr>`;
-      html += `<td>${fmtSeqWithFrames(r.prefix, r.meaty)}</td>`;
+      const delayStr = r.delay > 0 ? ` <span style="color:#f90;font-size:0.85em">~${r.delay}f</span>` : '';
+      html += `<td>${fmtSeqWithFrames(r.prefix, r.meaty)}${delayStr}</td>`;
       html += `<td>${r.meaty.startup}</td>`;
       html += `<td>${r.meaty.active}</td>`;
       html += `<td>${r.activeFrameHit}/${r.meaty.active}</td>`;
@@ -842,6 +852,7 @@ function calculate() {
     noSpKd: document.getElementById('noSpKd').checked,
     firstAny: document.getElementById('firstAny').checked,
     minAdv: parseInt(document.getElementById('minAdv').value) || -99,
+    maxDelay: parseInt(document.getElementById('maxDelay').value) || 0,
     perfectOnly: document.getElementById('perfectOnly').checked,
   };
 
