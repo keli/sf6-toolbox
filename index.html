@@ -212,16 +212,16 @@
   <div class="control-group">
     <label data-i18n="lbl_hit_type">Hit type</label>
     <select id="hitType">
-      <option value="both" data-i18n="hit_all">All</option>
-      <option value="normal" selected data-i18n="hit_normal">Normal hit</option>
+      <option value="both" selected data-i18n="hit_all">All</option>
+      <option value="normal" data-i18n="hit_normal">Normal hit</option>
       <option value="pc" data-i18n="hit_pc">Punish counter (PC)</option>
     </select>
   </div>
   <div class="control-group">
     <label data-i18n="lbl_max_prefix">Max prefix moves</label>
     <select id="maxPrefix">
-      <option value="1" selected>1</option>
-      <option value="2">2</option>
+      <option value="1">1</option>
+      <option value="2" selected>2</option>
       <option value="3">3</option>
     </select>
   </div>
@@ -619,7 +619,7 @@ function calcMeatys(moves, opts) {
 
   // Non-light normal attacks with startup info, for on-hit flip detection
   const nonLightMoves = moves
-    .filter(m => /^\d(MP|MK|HP|HK)$/.test(m.cmd) && m.startup != null);
+    .filter(m => /^\d(MP|MK|HP|HK)$/.test(m.cmd) && !m.cmd.startsWith('8') && m.startup != null);
 
   for (const kdMove of moves) {
     if (kdMoveFilter && kdMove.cmd !== kdMoveFilter) continue;
