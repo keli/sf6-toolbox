@@ -239,6 +239,7 @@
       <label><input type="checkbox" id="cancelOnly" checked> <span data-i18n="chk_cancel_only">Cancelable only</span></label>
       <label><input type="checkbox" id="noSpKd" checked> <span data-i18n="chk_no_sp_kd">Exclude cancelable KD sources</span></label>
       <label><input type="checkbox" id="firstAny"> <span data-i18n="chk_first_any">Allow attacks as prefix</span></label>
+      <label><input type="checkbox" id="effectiveOnly" checked> <span data-i18n="chk_effective_only">Effective meaty only</span></label>
     </div>
   </div>
   <button id="calcBtn" disabled data-i18n="btn_calculate">Calculate</button>
@@ -351,6 +352,7 @@ const STRINGS = {
     chk_cancel_only: 'Cancelable only',
     chk_no_sp_kd: 'Exclude cancelable KD sources',
     chk_first_any: 'Allow attacks as prefix',
+    chk_effective_only: 'Effective meaty only',
     btn_calculate: 'Calculate',
     loading: 'Loading…',
     status_loading: 'Loading data…',
@@ -397,6 +399,7 @@ const STRINGS = {
     chk_cancel_only: '仅可取消技',
     chk_no_sp_kd: '排除可取消击倒源',
     chk_first_any: '允许攻击技作为前置',
+    chk_effective_only: '有效偷帧',
     btn_calculate: '计算',
     loading: '加载中…',
     status_loading: '正在加载数据…',
@@ -614,6 +617,10 @@ function calcMeatys(moves, opts) {
 
   const results = [];
 
+  // Non-light normal attacks with startup info, for on-hit flip detection
+  const nonLightMoves = moves
+    .filter(m => /^\d(MP|MK|HP|HK)$/.test(m.cmd) && m.startup != null);
+
   for (const kdMove of moves) {
     if (kdMoveFilter && kdMove.cmd !== kdMoveFilter) continue;
     for (const kdInfo of kdMove.knockdowns) {
@@ -630,7 +637,7 @@ function calcMeatys(moves, opts) {
 
         for (const meaty of meatyCandidates) {
           for (let d = 0; d <= maxDelay; d++)
-            tryMeaty(kdMove, kdInfo, [first], K1 - d, d, meaty, results, minAdv);
+            tryMeaty(kdMove, kdInfo, [first], K1 - d, d, meaty, results, minAdv, nonLightMoves);
         }
 
         if (maxPrefix >= 2) {
@@ -639,7 +646,7 @@ function calcMeatys(moves, opts) {
             if (K2 <= 0) continue;
             for (const meaty of meatyCandidates) {
               for (let d = 0; d <= maxDelay; d++)
-                tryMeaty(kdMove, kdInfo, [first, second], K2 - d, d, meaty, results, minAdv);
+                tryMeaty(kdMove, kdInfo, [first, second], K2 - d, d, meaty, results, minAdv, nonLightMoves);
             }
 
             if (maxPrefix >= 3) {
@@ -648,7 +655,7 @@ function calcMeatys(moves, opts) {
                 if (K3 <= 0) continue;
                 for (const meaty of meatyCandidates) {
                   for (let d = 0; d <= maxDelay; d++)
-                    tryMeaty(kdMove, kdInfo, [first, second, third], K3 - d, d, meaty, results, minAdv);
+                    tryMeaty(kdMove, kdInfo, [first, second, third], K3 - d, d, meaty, results, minAdv, nonLightMoves);
                 }
               }
             }
@@ -661,7 +668,7 @@ function calcMeatys(moves, opts) {
   return results;
 }
 
-function tryMeaty(kdMove, kdInfo, prefix, K, delay, meaty, results, minAdv) {
+function tryMeaty(kdMove, kdInfo, prefix, K, delay, meaty, results, minAdv, nonLightMoves) {
   const S = meaty.startup, A = meaty.active;
   // startup 的最后一帧即为第 1 持续帧，故 meaty 窗口从 S-1 开始
   if (S - 1 <= K && K <= S + A - 2) {
@@ -674,7 +681,12 @@ function tryMeaty(kdMove, kdInfo, prefix, K, delay, meaty, results, minAdv) {
     const totalBlock = meaty.onBlock != null ? meaty.onBlock + stolen : null;
     if (stolen === 0) return;
     if (totalAdv != null && totalAdv < minAdv) return;
-    results.push({ kdMove, kdInfo, prefix, meaty, K, delay, activeFrameHit, totalAdv, totalBlock });
+    // on-hit flip: find mid/heavy normal moves whose startup falls in (meaty.onHit, totalAdv]
+    const unlockedMoves = (totalAdv != null && meaty.onHit != null)
+      ? nonLightMoves.filter(m => meaty.onHit < m.startup && totalAdv >= m.startup)
+      : [];
+    const onHitFlipped = unlockedMoves.length > 0;
+    results.push({ kdMove, kdInfo, prefix, meaty, K, delay, activeFrameHit, totalAdv, totalBlock, onHitFlipped, unlockedMoves });
   }
 }
 
@@ -706,6 +718,9 @@ let _lastResults = null;
 
 function renderResults(results) {
   const el = document.getElementById('meaty-results');
+  const effectiveOnly = document.getElementById('effectiveOnly').checked;
+  const onBlockFlipped = r => r.meaty.onBlock != null && r.meaty.onBlock <= 0 && r.totalBlock > 0;
+  if (effectiveOnly) results = results.filter(r => r.onHitFlipped || onBlockFlipped(r));
   if (!results.length) {
     el.innerHTML = `<div class="no-results">${t('no_results')}</div>`;
     return;
@@ -777,10 +792,15 @@ function renderResults(results) {
     );
     for (const r of sortedRows) {
       const stolen = r.activeFrameHit - 1;
+      let flipTag = '';
+      if (r.onHitFlipped) {
+        const labels = r.unlockedMoves.map(m => m.cmd).join(', ');
+        flipTag = ` <span title="${labels}" style="color:#f90;font-size:0.85em;cursor:default">↑</span>`;
+      }
       const totalStr = r.meaty.knockdowns.length
         ? `<span class="kd-adv-cell">${t(r.kdInfo.kdType === 'HKD' ? 'hkd_label' : 'kd_label')}</span>`
         : r.totalAdv != null
-          ? `<span class="total-adv">+${r.totalAdv}</span>`
+          ? `<span class="total-adv">+${r.totalAdv}</span>${flipTag}`
           : '?';
       html += `<tr>`;
       const delayStr = r.delay > 0 ? ` <span style="color:#f90;font-size:0.85em">~${r.delay}f</span>` : '';
@@ -878,6 +898,9 @@ function calculate() {
 }
 
 document.getElementById('calcBtn').addEventListener('click', calculate);
+document.getElementById('effectiveOnly').addEventListener('change', () => {
+  if (_lastResults) renderResults(_lastResults.list);
+});
 document.getElementById('charSelect').addEventListener('change', () => {
   renderKdMoveSelect(document.getElementById('charSelect').value);
   calculate();
