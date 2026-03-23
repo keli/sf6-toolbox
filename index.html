@@ -722,6 +722,11 @@ function renderResults(results) {
   const effectiveOnly = document.getElementById('effectiveOnly').checked;
   const onBlockFlipped = r => r.meaty.onBlock != null && r.meaty.onBlock <= 0 && r.totalBlock > 0;
   if (effectiveOnly) results = results.filter(r => r.onHitFlipped || onBlockFlipped(r));
+  const statusEl = document.getElementById('status');
+  if (statusEl.dataset.state === 'result' && _lastResults) {
+    const charName = document.getElementById('charSelect').value;
+    statusEl.textContent = t('status_result', charName, results.length);
+  }
   if (!results.length) {
     el.innerHTML = `<div class="no-results">${t('no_results')}</div>`;
     return;
