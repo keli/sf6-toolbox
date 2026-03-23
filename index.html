@@ -95,7 +95,6 @@
   th { background: #e8e8e8; color: #555; text-align: left; padding: 3px 8px; border-bottom: 1px solid #ccc; white-space: nowrap; }
   td { padding: 3px 8px; border-bottom: 1px solid #e8e8e8; white-space: nowrap; }
   tr:hover td { background: #f0f0f0; }
-  .perfect { color: #b8860b; font-weight: bold; }
   .kd-adv-cell { color: #888; font-style: italic; }
   .safe-plus { color: #2e7d32; }
   .safe-minus { color: #c62828; }
@@ -207,6 +206,10 @@
     <select id="charSelect"><option data-i18n="loading">Loading…</option></select>
   </div>
   <div class="control-group">
+    <label data-i18n="lbl_kd_move">Knockdown move</label>
+    <select id="kdMoveSelect"></select>
+  </div>
+  <div class="control-group">
     <label data-i18n="lbl_hit_type">Hit type</label>
     <select id="hitType">
       <option value="both" data-i18n="hit_all">All</option>
@@ -225,8 +228,8 @@
   <div class="control-group">
     <label data-i18n="lbl_max_prefix">Max prefix moves</label>
     <select id="maxPrefix">
-      <option value="1">1</option>
-      <option value="2" selected>2</option>
+      <option value="1" selected>1</option>
+      <option value="2">2</option>
       <option value="3">3</option>
     </select>
   </div>
@@ -243,7 +246,6 @@
       <label><input type="checkbox" id="safeOnly" checked> <span data-i18n="chk_safe_only">Safe only (on block ≥ −3)</span></label>
       <label><input type="checkbox" id="cancelOnly" checked> <span data-i18n="chk_cancel_only">Cancelable only</span></label>
       <label><input type="checkbox" id="noSpKd" checked> <span data-i18n="chk_no_sp_kd">Exclude cancelable KD sources</span></label>
-      <label><input type="checkbox" id="perfectOnly"> <span data-i18n="chk_perfect_only">Perfect meaty only ★</span></label>
       <label><input type="checkbox" id="firstAny"> <span data-i18n="chk_first_any">Allow attacks as prefix</span></label>
     </div>
   </div>
@@ -347,6 +349,8 @@ const STRINGS = {
     tab_meaty: 'Meaty Calculator',
     tab_elo: 'ELO Win Rate',
     lbl_character: 'Character',
+    lbl_kd_move: 'Knockdown move',
+    kd_move_all: 'All',
     lbl_hit_type: 'Hit type',
     lbl_kd_type: 'Knockdown type',
     lbl_max_prefix: 'Max prefix moves',
@@ -355,7 +359,6 @@ const STRINGS = {
     chk_safe_only: 'Safe only (on block ≥ −3)',
     chk_cancel_only: 'Cancelable only',
     chk_no_sp_kd: 'Exclude cancelable KD sources',
-    chk_perfect_only: 'Perfect meaty only ★',
     chk_first_any: 'Allow attacks as prefix',
     btn_calculate: 'Calculate',
     loading: 'Loading…',
@@ -363,7 +366,7 @@ const STRINGS = {
     status_loaded: (n) => `Loaded ${n} characters.`,
     status_failed: (msg) => `Failed to load data: ${msg}`,
     status_calculating: 'Calculating…',
-    status_result: (char, n, p) => `${char}: ${n} setups found (★ perfect: ${p})`,
+    status_result: (char, n) => `${char}: ${n} setups found`,
     no_results: 'No setups found for the current filters.',
     th_sequence: 'Sequence',
     th_startup: 'Startup',
@@ -372,7 +375,6 @@ const STRINGS = {
     th_stolen: 'Late',
     th_on_hit: 'On hit',
     th_on_block: 'On block',
-    th_perfect: 'Perfect',
     kd_label: 'KD',
     hkd_label: 'HKD',
     hit_type_normal: 'Normal',
@@ -394,6 +396,8 @@ const STRINGS = {
     tab_meaty: '偷帧计算器',
     tab_elo: 'ELO 胜率',
     lbl_character: '角色',
+    lbl_kd_move: '击倒技',
+    kd_move_all: '全部',
     lbl_hit_type: '命中类型',
     lbl_kd_type: '击倒类型',
     lbl_max_prefix: '前置技最多数量',
@@ -402,7 +406,6 @@ const STRINGS = {
     chk_safe_only: '仅安全技（防御后 ≥ −3）',
     chk_cancel_only: '仅可取消技',
     chk_no_sp_kd: '排除可取消击倒源',
-    chk_perfect_only: '仅完美偷帧 ★',
     chk_first_any: '允许攻击技作为前置',
     btn_calculate: '计算',
     loading: '加载中…',
@@ -410,7 +413,7 @@ const STRINGS = {
     status_loaded: (n) => `已加载 ${n} 个角色。`,
     status_failed: (msg) => `数据加载失败：${msg}`,
     status_calculating: '计算中…',
-    status_result: (char, n, p) => `${char}：找到 ${n} 个偷帧方案（★ 完美：${p}）`,
+    status_result: (char, n) => `${char}：找到 ${n} 个偷帧方案`,
     no_results: '当前过滤条件下未找到任何方案。',
     th_sequence: '连段',
     th_startup: '发生',
@@ -419,7 +422,6 @@ const STRINGS = {
     th_stolen: '偷帧数',
     th_on_hit: '命中',
     th_on_block: '防御',
-    th_perfect: '完美',
     kd_label: '倒地',
     hkd_label: '硬倒地',
     hit_type_normal: '普通',
@@ -514,7 +516,7 @@ function applyLang() {
     if (statusEl.dataset.state === 'result') {
       const lastResults = _lastResults;
       if (lastResults) {
-        statusEl.textContent = t('status_result', charName, lastResults.total, lastResults.perfect);
+        statusEl.textContent = t('status_result', charName, lastResults.total);
       }
     } else if (statusEl.dataset.state === 'loaded') {
       statusEl.textContent = t('status_loaded', Object.keys(allData).length);
@@ -562,6 +564,10 @@ function extractMoves(charData) {
     if (typeof catMoves !== 'object') continue;
     for (const [moveKey, mv] of Object.entries(catMoves)) {
       if (typeof mv !== 'object') continue;
+      // Exclude Drive Parry and Drive Rush - variable frame cost, not reliable as prefix
+      const moveName = mv.moveName || mv.cmnName || '';
+      if (catName === 'drive' && mv.nonHittingMove) continue;
+      if (moveName === 'Drive Rush') continue;
       const startup = parseInt1(mv.startup);
       const active = parseInt1(mv.active);
       const recovery = parseInt1(mv.recovery);
@@ -604,7 +610,7 @@ function extractMoves(charData) {
 }
 
 function calcMeatys(moves, opts) {
-  const { hitTypeFilter, kdTypeFilter, maxPrefix, safeOnly, firstAny, minAdv, maxDelay, perfectOnly } = opts;
+  const { kdMoveFilter, hitTypeFilter, kdTypeFilter, maxPrefix, safeOnly, firstAny, minAdv, maxDelay } = opts;
 
   const meatyCandidates = moves.filter(m =>
     m.isAttack
@@ -613,12 +619,13 @@ function calcMeatys(moves, opts) {
     && (!opts.cancelOnly || m.cancelTypes.length > 0)
     && !m.name.startsWith('OD ')
   );
-  const prefixPool = moves.filter(m => !m.cmd.startsWith('8'));
+  const prefixPool = moves.filter(m => m.moveType === 'dash' || (firstAny && m.isAttack && !m.cmd.startsWith('8')));
   const firstPool = firstAny ? prefixPool : prefixPool.filter(m => !m.isAttack);
 
   const results = [];
 
   for (const kdMove of moves) {
+    if (kdMoveFilter && kdMove.cmd !== kdMoveFilter) continue;
     for (const kdInfo of kdMove.knockdowns) {
       if (hitTypeFilter !== 'both' && kdInfo.hitType !== hitTypeFilter) continue;
       if (kdTypeFilter !== 'both' && kdInfo.kdType !== kdTypeFilter) continue;
@@ -634,7 +641,7 @@ function calcMeatys(moves, opts) {
 
         for (const meaty of meatyCandidates) {
           for (let d = 0; d <= maxDelay; d++)
-            tryMeaty(kdMove, kdInfo, [first], K1 - d, d, meaty, results, minAdv, perfectOnly);
+            tryMeaty(kdMove, kdInfo, [first], K1 - d, d, meaty, results, minAdv);
         }
 
         if (maxPrefix >= 2) {
@@ -643,7 +650,7 @@ function calcMeatys(moves, opts) {
             if (K2 <= 0) continue;
             for (const meaty of meatyCandidates) {
               for (let d = 0; d <= maxDelay; d++)
-                tryMeaty(kdMove, kdInfo, [first, second], K2 - d, d, meaty, results, minAdv, perfectOnly);
+                tryMeaty(kdMove, kdInfo, [first, second], K2 - d, d, meaty, results, minAdv);
             }
 
             if (maxPrefix >= 3) {
@@ -652,7 +659,7 @@ function calcMeatys(moves, opts) {
                 if (K3 <= 0) continue;
                 for (const meaty of meatyCandidates) {
                   for (let d = 0; d <= maxDelay; d++)
-                    tryMeaty(kdMove, kdInfo, [first, second, third], K3 - d, d, meaty, results, minAdv, perfectOnly);
+                    tryMeaty(kdMove, kdInfo, [first, second, third], K3 - d, d, meaty, results, minAdv);
                 }
               }
             }
@@ -665,14 +672,12 @@ function calcMeatys(moves, opts) {
   return results;
 }
 
-function tryMeaty(kdMove, kdInfo, prefix, K, delay, meaty, results, minAdv, perfectOnly) {
+function tryMeaty(kdMove, kdInfo, prefix, K, delay, meaty, results, minAdv) {
   const S = meaty.startup, A = meaty.active;
   // startup 的最后一帧即为第 1 持续帧，故 meaty 窗口从 S-1 开始
   if (S - 1 <= K && K <= S + A - 2) {
     const activeFrameHit = K - S + 2;
     const stolen = activeFrameHit - 1;
-    const isPerfect = activeFrameHit === A;
-    if (perfectOnly && !isPerfect) return;
     let totalAdv = null;
     if (!meaty.knockdowns.length && meaty.onHit != null) {
       totalAdv = meaty.onHit + stolen;
@@ -680,7 +685,7 @@ function tryMeaty(kdMove, kdInfo, prefix, K, delay, meaty, results, minAdv, perf
     const totalBlock = meaty.onBlock != null ? meaty.onBlock + stolen : null;
     if (stolen === 0) return;
     if (totalAdv != null && totalAdv < minAdv) return;
-    results.push({ kdMove, kdInfo, prefix, meaty, K, delay, activeFrameHit, isPerfect, totalAdv, totalBlock });
+    results.push({ kdMove, kdInfo, prefix, meaty, K, delay, activeFrameHit, totalAdv, totalBlock });
   }
 }
 
@@ -766,7 +771,7 @@ function renderResults(results) {
     html += `<span class="kd-adv">${kdInfo.kdType} +${kdInfo.advantage}</span>`;
     html += `</div>`;
     html += `<div class="kd-body"><table><thead><tr>`;
-    html += `<th>${t('th_sequence')}</th><th>${t('th_startup')}</th><th>${t('th_active')}</th><th>${t('th_hit_frame')}</th><th>${t('th_stolen')}</th><th>${t('th_on_hit')}</th><th>${t('th_on_block')}</th><th>${t('th_perfect')}</th>`;
+    html += `<th>${t('th_sequence')}</th><th>${t('th_startup')}</th><th>${t('th_active')}</th><th>${t('th_hit_frame')}</th><th>${t('th_stolen')}</th><th>${t('th_on_hit')}</th><th>${t('th_on_block')}</th>`;
     html += `</tr></thead><tbody>`;
 
     function seqPriority(r) {
@@ -778,7 +783,7 @@ function renderResults(results) {
     }
     const sortedRows = rows.sort((a, b) =>
       (seqPriority(a) - seqPriority(b)) ||
-      (b.isPerfect - a.isPerfect) || (b.activeFrameHit - a.activeFrameHit) ||
+      (b.activeFrameHit - a.activeFrameHit) ||
       (a.prefix.length - b.prefix.length)
     );
     for (const r of sortedRows) {
@@ -797,7 +802,6 @@ function renderResults(results) {
       html += `<td><span class="stolen">+${stolen}</span></td>`;
       html += `<td>${totalStr}</td>`;
       html += `<td>${fmtBlock(r.totalBlock, r.meaty.onBlock)}</td>`;
-      html += `<td>${r.isPerfect ? '<span class="perfect">★</span>' : ''}</td>`;
       html += `</tr>`;
     }
     html += `</tbody></table></div></div>`;
@@ -806,6 +810,20 @@ function renderResults(results) {
 }
 
 let allData = null;
+
+function renderKdMoveSelect(charName) {
+  const sel = document.getElementById('kdMoveSelect');
+  const prev = sel.value;
+  if (!allData || !charName) { sel.innerHTML = ''; return; }
+  const moves = extractMoves(allData[charName]);
+  const kdMoves = moves.filter(m => m.knockdowns.length > 0);
+  sel.innerHTML = `<option value="">${t('kd_move_all')}</option>` +
+    kdMoves.map(m => {
+      const label = `${tMove(m.name)} (${m.cmd})`;
+      return `<option value="${m.cmd}">${label}</option>`;
+    }).join('');
+  if (prev && [...sel.options].some(o => o.value === prev)) sel.value = prev;
+}
 
 function renderCharSelect() {
   if (!allData) return;
@@ -828,6 +846,7 @@ async function loadData() {
     const sel = document.getElementById('charSelect');
     const ryuIdx = chars.indexOf('Ryu');
     if (ryuIdx >= 0) sel.selectedIndex = ryuIdx;
+    renderKdMoveSelect(sel.value);
     document.getElementById('calcBtn').disabled = false;
     const statusEl = document.getElementById('status');
     statusEl.textContent = t('status_loaded', chars.length);
@@ -846,6 +865,7 @@ function calculate() {
 
   const moves = extractMoves(charData);
   const opts = {
+    kdMoveFilter: document.getElementById('kdMoveSelect').value || null,
     hitTypeFilter: document.getElementById('hitType').value,
     kdTypeFilter: document.getElementById('kdType').value,
     maxPrefix: parseInt(document.getElementById('maxPrefix').value),
@@ -855,7 +875,6 @@ function calculate() {
     firstAny: document.getElementById('firstAny').checked,
     minAdv: parseInt(document.getElementById('minAdv').value) || -99,
     maxDelay: parseInt(document.getElementById('maxDelay').value) || 0,
-    perfectOnly: document.getElementById('perfectOnly').checked,
   };
 
   const statusEl = document.getElementById('status');
@@ -863,16 +882,18 @@ function calculate() {
   statusEl.dataset.state = 'calculating';
   setTimeout(() => {
     const results = calcMeatys(moves, opts);
-    const perfectCount = results.filter(r => r.isPerfect).length;
-    _lastResults = { list: results, total: results.length, perfect: perfectCount };
-    statusEl.textContent = t('status_result', charName, results.length, perfectCount);
+    _lastResults = { list: results, total: results.length };
+    statusEl.textContent = t('status_result', charName, results.length);
     statusEl.dataset.state = 'result';
     renderResults(results);
   }, 10);
 }
 
 document.getElementById('calcBtn').addEventListener('click', calculate);
-document.getElementById('charSelect').addEventListener('change', calculate);
+document.getElementById('charSelect').addEventListener('change', () => {
+  renderKdMoveSelect(document.getElementById('charSelect').value);
+  calculate();
+});
 
 loadDataTranslations(currentLang).then(() => { applyLang(); loadData().then(() => calculate()); });
 
