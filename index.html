@@ -504,6 +504,7 @@ function applyLang() {
   if (allData) {
     renderCharSelect();
     const charName = document.getElementById('charSelect').value;
+    renderKdMoveSelect(charName);
     const statusEl = document.getElementById('status');
     // Only refresh status if it's showing a result (not loading/error)
     if (statusEl.dataset.state === 'result') {

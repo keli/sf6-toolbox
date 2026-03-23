@@ -49,7 +49,8 @@
     "Jump LK": "跳轻脚",
     "Jump MK": "跳中脚",
     "Jump HK": "跳重脚",
-    "Dash": "冲刺",
+    "Dash": "前滑步",
+    "Backward Dash": "后滑步",
     "Drive Rush": "斗气冲锋"
   }
 }
