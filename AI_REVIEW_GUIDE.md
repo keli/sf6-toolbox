@@ -78,9 +78,35 @@ If overrides intentionally preserve FAT-style ranges/variants, use non-strict ap
 3. Optional strict lint run (only if your overrides intentionally avoid FAT-style range forms):
    - `python3 apply_character_overrides.py --apply-base fat --strict`
 
+## KD Value Format Rules
+
+The meaty calculator parses every `KD +N` / `HKD +N` token it finds in `onHit`/`onPC` strings. Each match becomes a separate knockdown entry. Write these values carefully:
+
+### Tumble air-state vs ground wakeup
+
+Some moves knock the opponent into a "Tumble" (mid-air tumbling) state before they land. The advantage during the air state is **not** a wakeup timing and must **not** be prefixed with `KD`/`HKD`.
+
+| Situation | Correct format | Wrong format |
+|---|---|---|
+| Tumble air advantage + landing KD | `Tumble +66 (KD +44~50)` | `KD +66 Tumble (KD +44~50)` ← generates two entries |
+| Tumble only, no separate landing KD | `KD +96~102 Tumble` | — |
+
+Rule: if evidence shows a `Tumble +N` value alongside a separate landing `KD +M`, only the landing value should carry the `KD` prefix.
+
+### Two KD entries that are both valid
+
+When a move has genuinely different wakeup timings by location (open area vs corner/wall splat), **both** entries should be kept with their KD prefix. Two entries in the calculator is correct behavior here.
+
+Example — both are intentional:
+```
+"KD +60 Tumble (HKD +128 Wallsplat)"   → open-area KD +60 and corner HKD +128
+"KD +70 Tumble (HKD +138 Wall Splat)"  → same structure
+```
+
 ## Review Checklist For AI-Generated Overrides
 
 1. Every override entry is traceable to a row in `data/<Character>.conflicts.csv`.
 2. Fields are limited to: `startup`, `active`, `recovery`, `onHit`, `onBlock`, `onPC`.
 3. Range/KD semantics from evidence are not collapsed accidentally.
-4. After regenerate+apply, inspect target `data/<Character>.json` `normalized` values (especially `kd.advantageMin/advantageMax`).
+4. KD prefix is only on ground-wakeup values, not air/Tumble-state advantages (see KD Value Format Rules above).
+5. After regenerate+apply, inspect target `data/<Character>.json` `normalized` values (especially `kd.advantageMin/advantageMax`).

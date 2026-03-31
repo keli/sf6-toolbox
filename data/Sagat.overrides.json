@@ -80,9 +80,9 @@
       "set": {
         "active": "3(4)6,5",
         "recovery": "2+16 land",
-        "onHit": "KD +66 Tumble (KD +44~50)",
+        "onHit": "Tumble +66 (KD +44~50)",
         "onBlock": "-2(+2)",
-        "onPC": "KD +66 Tumble (KD +44~50)"
+        "onPC": "Tumble +66 (KD +44~50)"
       }
     },
     {

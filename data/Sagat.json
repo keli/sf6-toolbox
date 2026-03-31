@@ -4675,12 +4675,6 @@
             "first": 66,
             "kd": [
               {
-                "advantage": 66,
-                "advantageMax": 66,
-                "advantageMin": 66,
-                "type": "KD"
-              },
-              {
                 "advantage": 44,
                 "advantageMax": 50,
                 "advantageMin": 44,
@@ -4694,23 +4688,17 @@
               44,
               50
             ],
-            "raw": "KD +66 Tumble (KD +44~50)",
+            "raw": "Tumble +66 (KD +44~50)",
             "tags": [
               "tumble"
             ],
-            "text": "KD +66 Tumble (KD +44~50)",
+            "text": "Tumble +66 (KD +44~50)",
             "uncertain": true
           },
           "onPC": {
             "first": 66,
             "kd": [
               {
-                "advantage": 66,
-                "advantageMax": 66,
-                "advantageMin": 66,
-                "type": "KD"
-              },
-              {
                 "advantage": 44,
                 "advantageMax": 50,
                 "advantageMin": 44,
@@ -4724,11 +4712,11 @@
               44,
               50
             ],
-            "raw": "KD +66 Tumble (KD +44~50)",
+            "raw": "Tumble +66 (KD +44~50)",
             "tags": [
               "tumble"
             ],
-            "text": "KD +66 Tumble (KD +44~50)",
+            "text": "Tumble +66 (KD +44~50)",
             "uncertain": true
           },
           "recovery": {
@@ -4757,8 +4745,8 @@
         },
         "numCmd": "236KK",
         "onBlock": "-2(+2)",
-        "onHit": "KD +66 Tumble (KD +44~50)",
-        "onPC": "KD +66 Tumble (KD +44~50)",
+        "onHit": "Tumble +66 (KD +44~50)",
+        "onPC": "Tumble +66 (KD +44~50)",
         "onPP": "-23(-17)",
         "plnCmd": "qcf+KK",
         "recovery": "2+16 land",
