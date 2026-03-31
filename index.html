@@ -1092,6 +1092,16 @@
                 return results;
             }
 
+            function isTumblePrimary(normField) {
+                if (!normField || typeof normField !== "object") return false;
+                const tags = normField.tags || [];
+                if (!tags.includes("tumble")) return false;
+                const kd = normField.kd || [];
+                if (!kd.length) return false;
+                const minKD = Math.min(...kd.map((k) => k.advantageMin ?? k.advantage));
+                return normField.first > minKD;
+            }
+
             function extractMoves(charData) {
                 const moves = [];
                 for (const [catName, catMoves] of Object.entries(
@@ -1117,8 +1127,8 @@
                             total = startup + active + (recovery || 0) - 1;
 
                         const knockdowns = [
-                            ...parseKDField(norm.onHit ?? mv.onHit, "normal"),
-                            ...parseKDField(norm.onPC ?? mv.onPC, "pc"),
+                            ...(isTumblePrimary(norm.onHit) ? [] : parseKDField(norm.onHit ?? mv.onHit, "normal")),
+                            ...(isTumblePrimary(norm.onPC) ? [] : parseKDField(norm.onPC ?? mv.onPC, "pc")),
                             ...parseKDField(mv.onCC, "cc"),
                         ];
                         const cmd = mv.numCmd || mv.plnCmd || moveKey;
