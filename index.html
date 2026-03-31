@@ -1197,6 +1197,7 @@
 
                 for (const kdMove of moves) {
                     if (kdMoveFilter && kdMove.cmd !== kdMoveFilter) continue;
+                    if (kdMove.name.includes("Drive Impact")) continue;
                     for (const kdInfo of kdMove.knockdowns) {
                         if (
                             hitTypeFilter !== "both" &&
@@ -1552,7 +1553,7 @@
                     return;
                 }
                 const moves = extractMoves(currentCharData);
-                const kdMoves = moves.filter((m) => m.knockdowns.length > 0);
+                const kdMoves = moves.filter((m) => m.knockdowns.length > 0 && !m.name.includes("Drive Impact"));
                 sel.innerHTML =
                     `<option value="">${t("kd_move_all")}</option>` +
                     kdMoves
