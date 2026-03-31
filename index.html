@@ -1,999 +1,1729 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SF6 Toolbox</title>
-<style>
-  /* === Reset === */
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SF6 Toolbox</title>
+        <style>
+            /* === Reset === */
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
 
-  /* === Base / Shared === */
-  body { font-family: monospace; background: #f5f5f5; color: #222; padding: 16px; }
-  label { font-size: 0.75em; color: #666; }
-  select, input[type=number] {
-    background: #fff; border: 1px solid #ccc; color: #222;
-    padding: 5px 8px; border-radius: 3px; font-family: monospace; font-size: 0.9em;
-  }
-  button {
-    background: #b8860b; border: none; color: #fff; padding: 6px 16px;
-    border-radius: 3px; font-family: monospace; font-size: 0.9em; cursor: pointer;
-    font-weight: bold;
-  }
-  button:hover { background: #a07008; }
-  button:disabled { background: #bbb; color: #fff; cursor: default; }
+            /* === Base / Shared === */
+            body {
+                font-family: monospace;
+                background: #f5f5f5;
+                color: #222;
+                padding: 16px;
+            }
+            label {
+                font-size: 0.75em;
+                color: #666;
+            }
+            select,
+            input[type="number"] {
+                background: #fff;
+                border: 1px solid #ccc;
+                color: #222;
+                padding: 5px 8px;
+                border-radius: 3px;
+                font-family: monospace;
+                font-size: 0.9em;
+            }
+            button {
+                background: #b8860b;
+                border: none;
+                color: #fff;
+                padding: 6px 16px;
+                border-radius: 3px;
+                font-family: monospace;
+                font-size: 0.9em;
+                cursor: pointer;
+                font-weight: bold;
+            }
+            button:hover {
+                background: #a07008;
+            }
+            button:disabled {
+                background: #bbb;
+                color: #fff;
+                cursor: default;
+            }
 
-  /* === Header === */
-  .site-header {
-    display: flex; justify-content: space-between; align-items: center;
-    border-bottom: 2px solid #b8860b; padding-bottom: 10px; margin-bottom: 16px;
-  }
-  .site-header h1 {
-    font-family: monospace; font-size: 1.2em; color: #b8860b; letter-spacing: 0.05em;
-  }
+            /* === Header === */
+            .site-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 2px solid #b8860b;
+                padding-bottom: 10px;
+                margin-bottom: 16px;
+            }
+            .site-header h1 {
+                font-family: monospace;
+                font-size: 1.2em;
+                color: #b8860b;
+                letter-spacing: 0.05em;
+            }
 
-  /* === Language Switch === */
-  .lang-bar {
-    display: flex; justify-content: flex-end;
-  }
-  .lang-btn {
-    background: transparent; border: 1px solid #ccc; color: #888;
-    padding: 2px 8px; border-radius: 3px; font-family: monospace;
-    font-size: 0.78em; cursor: pointer; font-weight: normal;
-    margin-left: 4px;
-  }
-  .lang-btn:hover { border-color: #b8860b; color: #b8860b; background: transparent; }
-  .lang-btn.active { border-color: #b8860b; color: #b8860b; background: transparent; font-weight: bold; }
+            /* === Language Switch === */
+            .lang-bar {
+                display: flex;
+                justify-content: flex-end;
+            }
+            .lang-btn {
+                background: transparent;
+                border: 1px solid #ccc;
+                color: #888;
+                padding: 2px 8px;
+                border-radius: 3px;
+                font-family: monospace;
+                font-size: 0.78em;
+                cursor: pointer;
+                font-weight: normal;
+                margin-left: 4px;
+            }
+            .lang-btn:hover {
+                border-color: #b8860b;
+                color: #b8860b;
+                background: transparent;
+            }
+            .lang-btn.active {
+                border-color: #b8860b;
+                color: #b8860b;
+                background: transparent;
+                font-weight: bold;
+            }
 
-  /* === Tab Navigation === */
-  .tab-bar {
-    display: flex; gap: 0; margin-bottom: 20px;
-    border-bottom: 2px solid #b8860b;
-  }
-  .tab {
-    background: transparent; color: #888; border: none;
-    border-bottom: 2px solid transparent; margin-bottom: -2px;
-    padding: 7px 18px; cursor: pointer; font-family: monospace;
-    font-size: 0.9em; font-weight: bold; align-self: auto; width: auto;
-  }
-  .tab:hover { color: #b8860b; background: transparent; }
-  .tab.active { color: #b8860b; border-bottom: 2px solid #b8860b; }
+            /* === Tab Navigation === */
+            .tab-bar {
+                display: flex;
+                gap: 0;
+                margin-bottom: 20px;
+                border-bottom: 2px solid #b8860b;
+            }
+            .tab {
+                background: transparent;
+                color: #888;
+                border: none;
+                border-bottom: 2px solid transparent;
+                margin-bottom: -2px;
+                padding: 7px 18px;
+                cursor: pointer;
+                font-family: monospace;
+                font-size: 0.9em;
+                font-weight: bold;
+                align-self: auto;
+                width: auto;
+            }
+            .tab:hover {
+                color: #b8860b;
+                background: transparent;
+            }
+            .tab.active {
+                color: #b8860b;
+                border-bottom: 2px solid #b8860b;
+            }
 
-  /* === Tab Panels === */
-  .tab-panel { display: none; }
-  .tab-panel.active { display: block; }
+            /* === Tab Panels === */
+            .tab-panel {
+                display: none;
+            }
+            .tab-panel.active {
+                display: block;
+            }
 
-  /* ============================================================
+            /* ============================================================
      MEATY CALCULATOR
   ============================================================ */
-  #tab-meaty .controls { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; align-items: flex-end; }
-  #tab-meaty .control-group { display: flex; flex-direction: column; gap: 4px; }
-  #tab-meaty .checkboxes { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
-  #tab-meaty .checkboxes label { display: flex; gap: 4px; align-items: center; font-size: 0.85em; color: #444; cursor: pointer; }
-  #tab-meaty .checkboxes input[type=checkbox] { cursor: pointer; }
-  #tab-meaty button { align-self: flex-end; }
+            #tab-meaty .controls {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-bottom: 16px;
+                align-items: flex-end;
+            }
+            #tab-meaty .control-group {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+            }
+            #tab-meaty .checkboxes {
+                display: flex;
+                gap: 12px;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            #tab-meaty .checkboxes label {
+                display: flex;
+                gap: 4px;
+                align-items: center;
+                font-size: 0.85em;
+                color: #444;
+                cursor: pointer;
+            }
+            #tab-meaty .checkboxes input[type="checkbox"] {
+                cursor: pointer;
+            }
+            #tab-meaty button {
+                align-self: flex-end;
+            }
 
-  #status { font-size: 0.85em; color: #888; margin-bottom: 12px; min-height: 1.2em; }
+            #status {
+                font-size: 0.85em;
+                color: #888;
+                margin-bottom: 12px;
+                min-height: 1.2em;
+            }
 
-  .kd-group { margin-bottom: 4px; }
-  .kd-header {
-    background: #eee; border-left: 3px solid #b8860b;
-    padding: 6px 10px; font-size: 0.9em;
-    cursor: pointer; user-select: none;
-  }
-  .kd-header:hover { background: #e4e4e4; }
-  .kd-header::before { content: '▾ '; color: #b8860b; font-size: 0.85em; }
-  .kd-group.collapsed .kd-header::before { content: '▸ '; }
-  .kd-body { margin-bottom: 16px; }
-  .kd-group.collapsed .kd-body { display: none; }
-  .kd-header .kd-type-normal { color: #666; }
-  .kd-header .kd-type-pc { color: #c05000; }
-  .kd-header .kd-type-cc { color: #c00000; }
-  .kd-header .kd-adv { color: #b8860b; font-weight: bold; }
+            .kd-group {
+                margin-bottom: 4px;
+            }
+            .kd-header {
+                background: #eee;
+                border-left: 3px solid #b8860b;
+                padding: 6px 10px;
+                font-size: 0.9em;
+                cursor: pointer;
+                user-select: none;
+            }
+            .kd-header:hover {
+                background: #e4e4e4;
+            }
+            .kd-header::before {
+                content: "▾ ";
+                color: #b8860b;
+                font-size: 0.85em;
+            }
+            .kd-group.collapsed .kd-header::before {
+                content: "▸ ";
+            }
+            .kd-body {
+                margin-bottom: 16px;
+            }
+            .kd-group.collapsed .kd-body {
+                display: none;
+            }
+            .kd-header .kd-type-normal {
+                color: #666;
+            }
+            .kd-header .kd-type-pc {
+                color: #c05000;
+            }
+            .kd-header .kd-type-cc {
+                color: #c00000;
+            }
+            .kd-header .kd-adv {
+                color: #b8860b;
+                font-weight: bold;
+            }
 
-  table { width: 100%; border-collapse: collapse; font-size: 0.82em; }
-  th { background: #e8e8e8; color: #555; text-align: left; padding: 3px 8px; border-bottom: 1px solid #ccc; white-space: nowrap; }
-  td { padding: 3px 8px; border-bottom: 1px solid #e8e8e8; white-space: nowrap; }
-  tr:hover td { background: #f0f0f0; }
-  .kd-adv-cell { color: #888; font-style: italic; }
-  .safe-plus { color: #2e7d32; }
-  .safe-minus { color: #c62828; }
-  .safe-zero { color: #666; }
-  .stolen { color: #1565c0; }
-  .total-adv { color: #2e7d32; }
-  .no-results { color: #999; padding: 12px 0; font-size: 0.9em; }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 0.82em;
+            }
+            th {
+                background: #e8e8e8;
+                color: #555;
+                text-align: left;
+                padding: 3px 8px;
+                border-bottom: 1px solid #ccc;
+                white-space: nowrap;
+            }
+            td {
+                padding: 3px 8px;
+                border-bottom: 1px solid #e8e8e8;
+                white-space: nowrap;
+            }
+            tr:hover td {
+                background: #f0f0f0;
+            }
+            .kd-adv-cell {
+                color: #888;
+                font-style: italic;
+            }
+            .safe-plus {
+                color: #2e7d32;
+            }
+            .safe-minus {
+                color: #c62828;
+            }
+            .safe-zero {
+                color: #666;
+            }
+            .stolen {
+                color: #1565c0;
+            }
+            .total-adv {
+                color: #2e7d32;
+            }
+            .no-results {
+                color: #999;
+                padding: 12px 0;
+                font-size: 0.9em;
+            }
 
-  /* ============================================================
+            /* ============================================================
      ELO CALCULATOR
   ============================================================ */
-  .elo-content { max-width: 560px; }
-  .elo-subtitle { font-size: 0.8em; color: #888; margin-bottom: 20px; }
+            .elo-content {
+                max-width: 560px;
+            }
+            .elo-subtitle {
+                font-size: 0.8em;
+                color: #888;
+                margin-bottom: 20px;
+            }
 
-  .elo-player-section {
-    background: #eee; padding: 16px; border-radius: 3px;
-    margin-bottom: 16px;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
-  }
-  .elo-player-group { display: flex; flex-direction: column; }
-  .elo-player-title {
-    color: #b8860b; font-size: 0.9em; margin-bottom: 10px;
-    font-weight: bold;
-  }
-  .elo-input-group { display: flex; flex-direction: column; gap: 4px; margin-bottom: 14px; }
-  .elo-input-group label { font-size: 0.75em; color: #666; }
-  .elo-input-group input { width: 100%; }
+            .elo-player-section {
+                background: #eee;
+                padding: 16px;
+                border-radius: 3px;
+                margin-bottom: 16px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+            }
+            .elo-player-group {
+                display: flex;
+                flex-direction: column;
+            }
+            .elo-player-title {
+                color: #b8860b;
+                font-size: 0.9em;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+            .elo-input-group {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                margin-bottom: 14px;
+            }
+            .elo-input-group label {
+                font-size: 0.75em;
+                color: #666;
+            }
+            .elo-input-group input {
+                width: 100%;
+            }
 
-  #tab-elo button { width: 100%; padding: 8px 16px; align-self: auto; margin-bottom: 16px; }
+            #tab-elo button {
+                width: 100%;
+                padding: 8px 16px;
+                align-self: auto;
+                margin-bottom: 16px;
+            }
 
-  .elo-results { display: none; margin-bottom: 16px; }
-  .elo-results.show { display: block; }
-  .elo-result-section { margin-bottom: 14px; }
-  .elo-result-header {
-    font-size: 0.75em; color: #666; margin-bottom: 6px;
-    border-left: 3px solid #b8860b; padding-left: 8px;
-    font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em;
-  }
-  .elo-result-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .elo-result-item {
-    padding: 10px 12px; background: #fff; border-radius: 3px;
-    border: 1px solid #ddd;
-  }
-  .elo-result-item.player-a { border-left: 3px solid #b8860b; }
-  .elo-result-item.player-b { border-left: 3px solid #888; }
-  .elo-result-label { color: #888; font-size: 0.75em; margin-bottom: 4px; }
-  .elo-result-value { color: #222; font-size: 1.2em; font-weight: bold; }
+            .elo-results {
+                display: none;
+                margin-bottom: 16px;
+            }
+            .elo-results.show {
+                display: block;
+            }
+            .elo-result-section {
+                margin-bottom: 14px;
+            }
+            .elo-result-header {
+                font-size: 0.75em;
+                color: #666;
+                margin-bottom: 6px;
+                border-left: 3px solid #b8860b;
+                padding-left: 8px;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+            .elo-result-row {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+            .elo-result-item {
+                padding: 10px 12px;
+                background: #fff;
+                border-radius: 3px;
+                border: 1px solid #ddd;
+            }
+            .elo-result-item.player-a {
+                border-left: 3px solid #b8860b;
+            }
+            .elo-result-item.player-b {
+                border-left: 3px solid #888;
+            }
+            .elo-result-label {
+                color: #888;
+                font-size: 0.75em;
+                margin-bottom: 4px;
+            }
+            .elo-result-value {
+                color: #222;
+                font-size: 1.2em;
+                font-weight: bold;
+            }
 
-  .elo-info-box {
-    background: #fff8e1; padding: 10px 12px; border-radius: 3px;
-    border-left: 3px solid #b8860b; font-size: 0.8em; color: #666; line-height: 1.6;
-  }
+            .elo-info-box {
+                background: #fff8e1;
+                padding: 10px 12px;
+                border-radius: 3px;
+                border-left: 3px solid #b8860b;
+                font-size: 0.8em;
+                color: #666;
+                line-height: 1.6;
+            }
 
-  /* ============================================================
+            /* ============================================================
      MOBILE
   ============================================================ */
-  @media (max-width: 600px) {
-    .tab { padding: 6px 12px; font-size: 0.82em; }
+            @media (max-width: 600px) {
+                .tab {
+                    padding: 6px 12px;
+                    font-size: 0.82em;
+                }
 
-    /* Meaty: each control takes full width */
-    #tab-meaty .controls { gap: 8px; }
-    #tab-meaty .control-group { width: 100%; }
-    #tab-meaty .control-group select,
-    #tab-meaty .control-group input[type=number] { width: 100%; }
-    /* Checkbox labels: bigger touch target */
-    #tab-meaty .checkboxes { gap: 6px; }
-    #tab-meaty .checkboxes label { font-size: 0.9em; padding: 4px 0; }
-    /* Calc button full width */
-    #tab-meaty button#calcBtn { width: 100%; }
-    /* Table: horizontal scroll */
-    #meaty-results { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    table { font-size: 0.78em; min-width: 520px; }
+                /* Meaty: each control takes full width */
+                #tab-meaty .controls {
+                    gap: 8px;
+                }
+                #tab-meaty .control-group {
+                    width: 100%;
+                }
+                #tab-meaty .control-group select,
+                #tab-meaty .control-group input[type="number"] {
+                    width: 100%;
+                }
+                /* Checkbox labels: bigger touch target */
+                #tab-meaty .checkboxes {
+                    gap: 6px;
+                }
+                #tab-meaty .checkboxes label {
+                    font-size: 0.9em;
+                    padding: 4px 0;
+                }
+                /* Calc button full width */
+                #tab-meaty button#calcBtn {
+                    width: 100%;
+                }
+                /* Table: horizontal scroll */
+                #meaty-results {
+                    overflow-x: auto;
+                    -webkit-overflow-scrolling: touch;
+                }
+                table {
+                    font-size: 0.78em;
+                    min-width: 520px;
+                }
 
-    /* ELO: stack columns */
-    .elo-player-section { grid-template-columns: 1fr; }
-    .elo-result-row { grid-template-columns: 1fr; }
-  }
+                /* ELO: stack columns */
+                .elo-player-section {
+                    grid-template-columns: 1fr;
+                }
+                .elo-result-row {
+                    grid-template-columns: 1fr;
+                }
+            }
 
-  @media (max-width: 400px) {
-    body { padding: 10px; }
-    .tab { padding: 5px 8px; }
-    th, td { padding: 2px 5px; }
-  }
-</style>
-</head>
-<body>
+            @media (max-width: 400px) {
+                body {
+                    padding: 10px;
+                }
+                .tab {
+                    padding: 5px 8px;
+                }
+                th,
+                td {
+                    padding: 2px 5px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="site-header">
+            <h1>SF6 Toolbox</h1>
+            <div class="lang-bar">
+                <button class="lang-btn active" onclick="setLang('en')">
+                    EN
+                </button>
+                <button class="lang-btn" onclick="setLang('zh')">中文</button>
+            </div>
+        </header>
 
-<header class="site-header">
-  <h1>SF6 Toolbox</h1>
-  <div class="lang-bar">
-    <button class="lang-btn active" onclick="setLang('en')">EN</button>
-    <button class="lang-btn" onclick="setLang('zh')">中文</button>
-  </div>
-</header>
+        <nav class="tab-bar">
+            <button class="tab active" data-tab="meaty" data-i18n="tab_meaty">
+                Meaty Calculator
+            </button>
+            <button class="tab" data-tab="elo" data-i18n="tab_elo">
+                ELO Win Rate
+            </button>
+        </nav>
 
-<nav class="tab-bar">
-  <button class="tab active" data-tab="meaty" data-i18n="tab_meaty">Meaty Calculator</button>
-  <button class="tab" data-tab="elo" data-i18n="tab_elo">ELO Win Rate</button>
-</nav>
-
-<!-- ============================================================
+        <!-- ============================================================
      MEATY CALCULATOR
 ============================================================ -->
-<div id="tab-meaty" class="tab-panel active">
+        <div id="tab-meaty" class="tab-panel active">
+            <div class="controls">
+                <div class="control-group">
+                    <label data-i18n="lbl_character">Character</label>
+                    <select id="charSelect">
+                        <option data-i18n="loading">Loading…</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label data-i18n="lbl_kd_move">Knockdown move</label>
+                    <select id="kdMoveSelect"></select>
+                </div>
+                <div class="control-group">
+                    <label data-i18n="lbl_hit_type">Hit type</label>
+                    <select id="hitType">
+                        <option value="both" selected data-i18n="hit_all">
+                            All
+                        </option>
+                        <option value="normal" data-i18n="hit_normal">
+                            Normal hit
+                        </option>
+                        <option value="pc" data-i18n="hit_pc">
+                            Punish counter (PC)
+                        </option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label data-i18n="lbl_max_prefix">Max prefix moves</label>
+                    <select id="maxPrefix">
+                        <option value="1">1</option>
+                        <option value="2" selected>2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label data-i18n="lbl_min_adv"
+                        >Min advantage (on hit)</label
+                    >
+                    <input
+                        type="number"
+                        id="minAdv"
+                        value="4"
+                        min="-99"
+                        max="99"
+                        style="width: 70px"
+                    />
+                </div>
+                <div class="control-group">
+                    <label data-i18n="lbl_max_delay">Max delay (frames)</label>
+                    <input
+                        type="number"
+                        id="maxDelay"
+                        value="0"
+                        min="0"
+                        max="99"
+                        style="width: 70px"
+                    />
+                </div>
+                <div class="control-group">
+                    <div class="checkboxes">
+                        <label
+                            ><input type="checkbox" id="safeOnly" checked />
+                            <span data-i18n="chk_safe_only"
+                                >Safe only (on block ≥ −3)</span
+                            ></label
+                        >
+                        <label
+                            ><input type="checkbox" id="cancelOnly" checked />
+                            <span data-i18n="chk_cancel_only"
+                                >Cancelable only</span
+                            ></label
+                        >
+                        <label
+                            ><input type="checkbox" id="noSpKd" checked />
+                            <span data-i18n="chk_no_sp_kd"
+                                >Exclude cancelable KD sources</span
+                            ></label
+                        >
+                        <label
+                            ><input type="checkbox" id="firstAny" />
+                            <span data-i18n="chk_first_any"
+                                >Allow attacks as prefix</span
+                            ></label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="effectiveOnly"
+                                checked
+                            />
+                            <span data-i18n="chk_effective_only"
+                                >Effective meaty only</span
+                            ></label
+                        >
+                    </div>
+                </div>
+                <button id="calcBtn" disabled data-i18n="btn_calculate">
+                    Calculate
+                </button>
+            </div>
 
-<div class="controls">
-  <div class="control-group">
-    <label data-i18n="lbl_character">Character</label>
-    <select id="charSelect"><option data-i18n="loading">Loading…</option></select>
-  </div>
-  <div class="control-group">
-    <label data-i18n="lbl_kd_move">Knockdown move</label>
-    <select id="kdMoveSelect"></select>
-  </div>
-  <div class="control-group">
-    <label data-i18n="lbl_hit_type">Hit type</label>
-    <select id="hitType">
-      <option value="both" selected data-i18n="hit_all">All</option>
-      <option value="normal" data-i18n="hit_normal">Normal hit</option>
-      <option value="pc" data-i18n="hit_pc">Punish counter (PC)</option>
-    </select>
-  </div>
-  <div class="control-group">
-    <label data-i18n="lbl_max_prefix">Max prefix moves</label>
-    <select id="maxPrefix">
-      <option value="1">1</option>
-      <option value="2" selected>2</option>
-      <option value="3">3</option>
-    </select>
-  </div>
-  <div class="control-group">
-    <label data-i18n="lbl_min_adv">Min advantage (on hit)</label>
-    <input type="number" id="minAdv" value="4" min="-99" max="99" style="width:70px">
-  </div>
-  <div class="control-group">
-    <label data-i18n="lbl_max_delay">Max delay (frames)</label>
-    <input type="number" id="maxDelay" value="0" min="0" max="99" style="width:70px">
-  </div>
-  <div class="control-group">
-    <div class="checkboxes">
-      <label><input type="checkbox" id="safeOnly" checked> <span data-i18n="chk_safe_only">Safe only (on block ≥ −3)</span></label>
-      <label><input type="checkbox" id="cancelOnly" checked> <span data-i18n="chk_cancel_only">Cancelable only</span></label>
-      <label><input type="checkbox" id="noSpKd" checked> <span data-i18n="chk_no_sp_kd">Exclude cancelable KD sources</span></label>
-      <label><input type="checkbox" id="firstAny"> <span data-i18n="chk_first_any">Allow attacks as prefix</span></label>
-      <label><input type="checkbox" id="effectiveOnly" checked> <span data-i18n="chk_effective_only">Effective meaty only</span></label>
-    </div>
-  </div>
-  <button id="calcBtn" disabled data-i18n="btn_calculate">Calculate</button>
-</div>
+            <div id="status" data-i18n="status_loading">Loading data…</div>
+            <div
+                data-i18n="note_delay"
+                style="color: #888; font-size: 0.8em; margin: 2px 0"
+            ></div>
+            <div id="meaty-results"></div>
+        </div>
+        <!-- #tab-meaty -->
 
-<div id="status" data-i18n="status_loading">Loading data…</div>
-<div data-i18n="note_delay" style="color:#888;font-size:0.8em;margin:2px 0"></div>
-<div id="meaty-results"></div>
-
-</div><!-- #tab-meaty -->
-
-<!-- ============================================================
+        <!-- ============================================================
      ELO CALCULATOR
 ============================================================ -->
-<div id="tab-elo" class="tab-panel">
-<div class="elo-content">
+        <div id="tab-elo" class="tab-panel">
+            <div class="elo-content">
+                <p class="elo-subtitle" data-i18n="elo_subtitle">
+                    Win probability calculator based on ELO ratings
+                </p>
 
-  <p class="elo-subtitle" data-i18n="elo_subtitle">Win probability calculator based on ELO ratings</p>
+                <div class="elo-player-section">
+                    <div class="elo-player-group">
+                        <div class="elo-player-title" data-i18n="player_a">
+                            Player A
+                        </div>
+                        <div class="elo-input-group">
+                            <label for="ratingA" data-i18n="lbl_mr"
+                                >Master Rating (MR)</label
+                            >
+                            <input
+                                type="number"
+                                id="ratingA"
+                                value="1500"
+                                min="0"
+                                step="100"
+                                autocomplete="off"
+                            />
+                        </div>
+                    </div>
+                    <div class="elo-player-group">
+                        <div class="elo-player-title" data-i18n="player_b">
+                            Player B
+                        </div>
+                        <div class="elo-input-group">
+                            <label for="ratingB" data-i18n="lbl_mr"
+                                >Master Rating (MR)</label
+                            >
+                            <input
+                                type="number"
+                                id="ratingB"
+                                value="1500"
+                                min="0"
+                                step="100"
+                                autocomplete="off"
+                            />
+                        </div>
+                    </div>
+                </div>
 
-  <div class="elo-player-section">
-    <div class="elo-player-group">
-      <div class="elo-player-title" data-i18n="player_a">Player A</div>
-      <div class="elo-input-group">
-        <label for="ratingA" data-i18n="lbl_mr">Master Rating (MR)</label>
-        <input type="number" id="ratingA" value="1500" min="0" step="100" autocomplete="off">
-      </div>
-    </div>
-    <div class="elo-player-group">
-      <div class="elo-player-title" data-i18n="player_b">Player B</div>
-      <div class="elo-input-group">
-        <label for="ratingB" data-i18n="lbl_mr">Master Rating (MR)</label>
-        <input type="number" id="ratingB" value="1500" min="0" step="100" autocomplete="off">
-      </div>
-    </div>
-  </div>
+                <div class="elo-input-group">
+                    <label for="matchType" data-i18n="lbl_match_format"
+                        >Match format (Best of)</label
+                    >
+                    <input
+                        type="number"
+                        id="matchType"
+                        value="3"
+                        min="1"
+                        max="99"
+                        step="1"
+                        autocomplete="off"
+                        style="width: 100px"
+                    />
+                </div>
 
-  <div class="elo-input-group">
-    <label for="matchType" data-i18n="lbl_match_format">Match format (Best of)</label>
-    <input type="number" id="matchType" value="3" min="1" max="99" step="1" autocomplete="off" style="width:100px">
-  </div>
+                <button onclick="eloCalculate()" data-i18n="btn_calculate">
+                    Calculate
+                </button>
 
-  <button onclick="eloCalculate()" data-i18n="btn_calculate">Calculate</button>
+                <div id="elo-results" class="elo-results">
+                    <div class="elo-result-section">
+                        <div
+                            class="elo-result-header"
+                            data-i18n="elo_round_winrate"
+                        >
+                            Win rate per round
+                        </div>
+                        <div class="elo-result-row">
+                            <div class="elo-result-item player-a">
+                                <div
+                                    class="elo-result-label"
+                                    data-i18n="player_a"
+                                >
+                                    Player A
+                                </div>
+                                <div
+                                    class="elo-result-value"
+                                    id="singleWinRateA"
+                                >
+                                    -
+                                </div>
+                            </div>
+                            <div class="elo-result-item player-b">
+                                <div
+                                    class="elo-result-label"
+                                    data-i18n="player_b"
+                                >
+                                    Player B
+                                </div>
+                                <div
+                                    class="elo-result-value"
+                                    id="singleWinRateB"
+                                >
+                                    -
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-  <div id="elo-results" class="elo-results">
-    <div class="elo-result-section">
-      <div class="elo-result-header" data-i18n="elo_round_winrate">Win rate per round</div>
-      <div class="elo-result-row">
-        <div class="elo-result-item player-a">
-          <div class="elo-result-label" data-i18n="player_a">Player A</div>
-          <div class="elo-result-value" id="singleWinRateA">-</div>
+                    <div class="elo-result-section">
+                        <div
+                            class="elo-result-header"
+                            data-i18n="elo_set_winrate"
+                        >
+                            Win rate per set (SF6 BO3)
+                        </div>
+                        <div class="elo-result-row">
+                            <div class="elo-result-item player-a">
+                                <div
+                                    class="elo-result-label"
+                                    data-i18n="player_a"
+                                >
+                                    Player A
+                                </div>
+                                <div class="elo-result-value" id="setWinRateA">
+                                    -
+                                </div>
+                            </div>
+                            <div class="elo-result-item player-b">
+                                <div
+                                    class="elo-result-label"
+                                    data-i18n="player_b"
+                                >
+                                    Player B
+                                </div>
+                                <div class="elo-result-value" id="setWinRateB">
+                                    -
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="elo-result-section">
+                        <div
+                            class="elo-result-header"
+                            id="matchHeader"
+                            data-i18n="elo_match_winrate"
+                        >
+                            Match win rate (BO3)
+                        </div>
+                        <div class="elo-result-row">
+                            <div class="elo-result-item player-a">
+                                <div
+                                    class="elo-result-label"
+                                    data-i18n="player_a"
+                                >
+                                    Player A
+                                </div>
+                                <div
+                                    class="elo-result-value"
+                                    id="matchWinRateA"
+                                >
+                                    -
+                                </div>
+                            </div>
+                            <div class="elo-result-item player-b">
+                                <div
+                                    class="elo-result-label"
+                                    data-i18n="player_b"
+                                >
+                                    Player B
+                                </div>
+                                <div
+                                    class="elo-result-value"
+                                    id="matchWinRateB"
+                                >
+                                    -
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="elo-info-box" data-i18n-html="elo_info_html">
+                    <strong>Note:</strong> In SF6, each set is best-of-3 rounds.
+                    This calculator uses ELO ratings to compute per-round win
+                    probability, then derives per-set and per-match
+                    probabilities.
+                </div>
+            </div>
         </div>
-        <div class="elo-result-item player-b">
-          <div class="elo-result-label" data-i18n="player_b">Player B</div>
-          <div class="elo-result-value" id="singleWinRateB">-</div>
-        </div>
-      </div>
-    </div>
+        <!-- #tab-elo -->
 
-    <div class="elo-result-section">
-      <div class="elo-result-header" data-i18n="elo_set_winrate">Win rate per set (SF6 BO3)</div>
-      <div class="elo-result-row">
-        <div class="elo-result-item player-a">
-          <div class="elo-result-label" data-i18n="player_a">Player A</div>
-          <div class="elo-result-value" id="setWinRateA">-</div>
-        </div>
-        <div class="elo-result-item player-b">
-          <div class="elo-result-label" data-i18n="player_b">Player B</div>
-          <div class="elo-result-value" id="setWinRateB">-</div>
-        </div>
-      </div>
-    </div>
+        <script>
+            // ---------------------------------------------------------------------------
+            // i18n
+            // ---------------------------------------------------------------------------
+            const STRINGS = {
+                en: {
+                    tab_meaty: "Meaty Calculator",
+                    tab_elo: "ELO Win Rate",
+                    lbl_character: "Character",
+                    lbl_kd_move: "Knockdown move",
+                    kd_move_all: "All",
+                    lbl_hit_type: "Hit type",
+                    lbl_max_prefix: "Max prefix moves",
+                    lbl_min_adv: "Min advantage (on hit)",
+                    lbl_max_delay: "Max delay (frames) ⚠",
+                    note_delay:
+                        "⚠ Delayed setups are theoretical values only.",
+                    chk_safe_only: "Safe only (on block ≥ −3)",
+                    chk_cancel_only: "Cancelable only",
+                    chk_no_sp_kd: "Exclude cancelable KD sources",
+                    chk_first_any: "Allow attacks as prefix",
+                    chk_effective_only: "Effective meaty only",
+                    btn_calculate: "Calculate",
+                    loading: "Loading…",
+                    status_loading: "Loading data…",
+                    status_loaded: (n) => `Loaded ${n} characters.`,
+                    status_failed: (msg) => `Failed to load data: ${msg}`,
+                    status_calculating: "Calculating…",
+                    status_result: (char, n) => `${char}: ${n} setups found`,
+                    no_results: "No setups found for the current filters.",
+                    th_sequence: "Sequence",
+                    th_startup: "Startup",
+                    th_active: "Active",
+                    th_hit_frame: "Hit frame",
+                    th_stolen: "Late",
+                    th_on_hit: "On hit",
+                    th_on_block: "On block",
+                    tip_block_flip: "Originally negative on block",
+                    tip_can_delay: (n) =>
+                        `Delay ${n}f — may or may not result in optimal hit frame (some moves have fewer active frames when not done ASAP)`,
+                    kd_label: "KD",
+                    hkd_label: "HKD",
+                    hit_type_normal: "Normal",
+                    hit_type_pc: "PC",
+                    hit_all: "All",
+                    hit_normal: "Normal hit",
+                    hit_pc: "Punish counter (PC)",
+                    elo_subtitle:
+                        "Win probability calculator based on ELO ratings",
+                    player_a: "Player A",
+                    player_b: "Player B",
+                    lbl_mr: "Master Rating (MR)",
+                    lbl_match_format: "Match format (Best of)",
+                    elo_round_winrate: "Win rate per round",
+                    elo_set_winrate: "Win rate per set (SF6 BO3)",
+                    elo_match_winrate: (n) => `Match win rate (BO${n})`,
+                    elo_info_html:
+                        "<strong>Note:</strong> In SF6, each set is best-of-3 rounds. This calculator uses ELO ratings to compute per-round win probability, then derives per-set and per-match probabilities.",
+                },
+                zh: {
+                    tab_meaty: "偷帧计算器",
+                    tab_elo: "ELO 胜率",
+                    lbl_character: "角色",
+                    lbl_kd_move: "击倒技",
+                    kd_move_all: "全部",
+                    lbl_hit_type: "命中类型",
+                    lbl_max_prefix: "前置技最多数量",
+                    lbl_min_adv: "最低帧数优势（命中时）",
+                    lbl_max_delay: "最大放帧数 ⚠",
+                    note_delay: "⚠ 放帧方案为理论数值。",
+                    chk_safe_only: "仅安全技（防御后 ≥ −3）",
+                    chk_cancel_only: "仅可取消技",
+                    chk_no_sp_kd: "排除可取消击倒源",
+                    chk_first_any: "允许攻击技作为前置",
+                    chk_effective_only: "有效偷帧",
+                    btn_calculate: "计算",
+                    loading: "加载中…",
+                    status_loading: "正在加载数据…",
+                    status_loaded: (n) => `已加载 ${n} 个角色。`,
+                    status_failed: (msg) => `数据加载失败：${msg}`,
+                    status_calculating: "计算中…",
+                    status_result: (char, n) => `${char}：找到 ${n} 个偷帧方案`,
+                    no_results: "当前过滤条件下未找到任何方案。",
+                    th_sequence: "连段",
+                    th_startup: "发生",
+                    th_active: "持续",
+                    th_hit_frame: "命中帧",
+                    th_stolen: "偷帧数",
+                    th_on_hit: "命中",
+                    th_on_block: "防御",
+                    tip_block_flip: "原本防御后为负",
+                    tip_can_delay: (n) =>
+                        `放 ${n} 帧可能达到最优命中（部分招式非最速时持续帧会缩短，实际帧数可能更差）`,
+                    kd_label: "倒地",
+                    hkd_label: "硬倒地",
+                    hit_type_normal: "普通",
+                    hit_type_pc: "确反康",
+                    hit_all: "全部",
+                    hit_normal: "普通命中",
+                    hit_pc: "确反康 (PC)",
+                    elo_subtitle: "基于 ELO 评分的胜率计算器",
+                    player_a: "玩家 A",
+                    player_b: "玩家 B",
+                    lbl_mr: "Master Rating (MR)",
+                    lbl_match_format: "赛制（BO）",
+                    elo_round_winrate: "单局胜率",
+                    elo_set_winrate: "单 Set 胜率（SF6 BO3）",
+                    elo_match_winrate: (n) => `比赛胜率（BO${n}）`,
+                    elo_info_html:
+                        "<strong>说明：</strong>SF6 中每个 Set 为 3 局 2 胜制。本计算器利用 ELO 评分计算单局胜率，再推导出 Set 胜率与比赛胜率。",
+                },
+            };
 
-    <div class="elo-result-section">
-      <div class="elo-result-header" id="matchHeader" data-i18n="elo_match_winrate">Match win rate (BO3)</div>
-      <div class="elo-result-row">
-        <div class="elo-result-item player-a">
-          <div class="elo-result-label" data-i18n="player_a">Player A</div>
-          <div class="elo-result-value" id="matchWinRateA">-</div>
-        </div>
-        <div class="elo-result-item player-b">
-          <div class="elo-result-label" data-i18n="player_b">Player B</div>
-          <div class="elo-result-value" id="matchWinRateB">-</div>
-        </div>
-      </div>
-    </div>
-  </div>
+            const savedLang = localStorage.getItem("lang");
+            const browserLang = navigator.language || "";
+            const defaultLang =
+                savedLang || (browserLang.startsWith("zh") ? "zh" : "en");
+            let currentLang = defaultLang;
 
-  <div class="elo-info-box" data-i18n-html="elo_info_html">
-    <strong>Note:</strong> In SF6, each set is best-of-3 rounds. This calculator uses ELO ratings to compute per-round win probability, then derives per-set and per-match probabilities.
-  </div>
+            // Loaded from data/i18n-<lang>.json: { charNames: {}, moveNames: {} }
+            const dataTranslations = {};
 
-</div>
-</div><!-- #tab-elo -->
-
-<script>
-// ---------------------------------------------------------------------------
-// i18n
-// ---------------------------------------------------------------------------
-const STRINGS = {
-  en: {
-    tab_meaty: 'Meaty Calculator',
-    tab_elo: 'ELO Win Rate',
-    lbl_character: 'Character',
-    lbl_kd_move: 'Knockdown move',
-    kd_move_all: 'All',
-    lbl_hit_type: 'Hit type',
-    lbl_max_prefix: 'Max prefix moves',
-    lbl_min_adv: 'Min advantage (on hit)',
-    lbl_max_delay: 'Max delay (frames) ⚠',
-    note_delay: '⚠ Delayed setups are theoretical values only.',
-    chk_safe_only: 'Safe only (on block ≥ −3)',
-    chk_cancel_only: 'Cancelable only',
-    chk_no_sp_kd: 'Exclude cancelable KD sources',
-    chk_first_any: 'Allow attacks as prefix',
-    chk_effective_only: 'Effective meaty only',
-    btn_calculate: 'Calculate',
-    loading: 'Loading…',
-    status_loading: 'Loading data…',
-    status_loaded: (n) => `Loaded ${n} characters.`,
-    status_failed: (msg) => `Failed to load data: ${msg}`,
-    status_calculating: 'Calculating…',
-    status_result: (char, n) => `${char}: ${n} setups found`,
-    no_results: 'No setups found for the current filters.',
-    th_sequence: 'Sequence',
-    th_startup: 'Startup',
-    th_active: 'Active',
-    th_hit_frame: 'Hit frame',
-    th_stolen: 'Late',
-    th_on_hit: 'On hit',
-    th_on_block: 'On block',
-    tip_block_flip: 'Originally negative on block',
-    tip_can_delay: (n) => `Delay ${n}f — may or may not result in optimal hit frame (some moves have fewer active frames when not done ASAP)`,
-    kd_label: 'KD',
-    hkd_label: 'HKD',
-    hit_type_normal: 'Normal',
-    hit_type_pc: 'PC',
-    hit_all: 'All',
-    hit_normal: 'Normal hit',
-    hit_pc: 'Punish counter (PC)',
-    elo_subtitle: 'Win probability calculator based on ELO ratings',
-    player_a: 'Player A',
-    player_b: 'Player B',
-    lbl_mr: 'Master Rating (MR)',
-    lbl_match_format: 'Match format (Best of)',
-    elo_round_winrate: 'Win rate per round',
-    elo_set_winrate: 'Win rate per set (SF6 BO3)',
-    elo_match_winrate: (n) => `Match win rate (BO${n})`,
-    elo_info_html: '<strong>Note:</strong> In SF6, each set is best-of-3 rounds. This calculator uses ELO ratings to compute per-round win probability, then derives per-set and per-match probabilities.',
-  },
-  zh: {
-    tab_meaty: '偷帧计算器',
-    tab_elo: 'ELO 胜率',
-    lbl_character: '角色',
-    lbl_kd_move: '击倒技',
-    kd_move_all: '全部',
-    lbl_hit_type: '命中类型',
-    lbl_max_prefix: '前置技最多数量',
-    lbl_min_adv: '最低帧数优势（命中时）',
-    lbl_max_delay: '最大放帧数 ⚠',
-    note_delay: '⚠ 放帧方案为理论数值。',
-    chk_safe_only: '仅安全技（防御后 ≥ −3）',
-    chk_cancel_only: '仅可取消技',
-    chk_no_sp_kd: '排除可取消击倒源',
-    chk_first_any: '允许攻击技作为前置',
-    chk_effective_only: '有效偷帧',
-    btn_calculate: '计算',
-    loading: '加载中…',
-    status_loading: '正在加载数据…',
-    status_loaded: (n) => `已加载 ${n} 个角色。`,
-    status_failed: (msg) => `数据加载失败：${msg}`,
-    status_calculating: '计算中…',
-    status_result: (char, n) => `${char}：找到 ${n} 个偷帧方案`,
-    no_results: '当前过滤条件下未找到任何方案。',
-    th_sequence: '连段',
-    th_startup: '发生',
-    th_active: '持续',
-    th_hit_frame: '命中帧',
-    th_stolen: '偷帧数',
-    th_on_hit: '命中',
-    th_on_block: '防御',
-    tip_block_flip: '原本防御后为负',
-    tip_can_delay: (n) => `放 ${n} 帧可能达到最优命中（部分招式非最速时持续帧会缩短，实际帧数可能更差）`,
-    kd_label: '倒地',
-    hkd_label: '硬倒地',
-    hit_type_normal: '普通',
-    hit_type_pc: '确反康',
-    hit_all: '全部',
-    hit_normal: '普通命中',
-    hit_pc: '确反康 (PC)',
-    elo_subtitle: '基于 ELO 评分的胜率计算器',
-    player_a: '玩家 A',
-    player_b: '玩家 B',
-    lbl_mr: 'Master Rating (MR)',
-    lbl_match_format: '赛制（BO）',
-    elo_round_winrate: '单局胜率',
-    elo_set_winrate: '单 Set 胜率（SF6 BO3）',
-    elo_match_winrate: (n) => `比赛胜率（BO${n}）`,
-    elo_info_html: '<strong>说明：</strong>SF6 中每个 Set 为 3 局 2 胜制。本计算器利用 ELO 评分计算单局胜率，再推导出 Set 胜率与比赛胜率。',
-  },
-};
-
-const savedLang = localStorage.getItem('lang');
-const browserLang = navigator.language || '';
-const defaultLang = savedLang || (browserLang.startsWith('zh') ? 'zh' : 'en');
-let currentLang = defaultLang;
-
-// Loaded from data/i18n-<lang>.json: { charNames: {}, moveNames: {} }
-const dataTranslations = {};
-
-function t(key, ...args) {
-  const val = STRINGS[currentLang][key];
-  if (typeof val === 'function') return val(...args);
-  return val ?? key;
-}
-
-function tChar(name) {
-  if (currentLang === 'en') return name;
-  return dataTranslations[currentLang]?.charNames?.[name] || name;
-}
-
-const MOVE_PREFIX_ZH = [
-  ['Drive Impact: ',   '斗气迸放：'],
-  ['Drive Reversal: ', '斗气反击：'],
-];
-
-function tMove(name) {
-  if (currentLang === 'en') return name;
-  const zh = dataTranslations[currentLang]?.moveNames?.[name];
-  if (zh) return zh;
-  for (const [en, zhPrefix] of MOVE_PREFIX_ZH) {
-    if (name.startsWith(en)) return zhPrefix + name.slice(en.length);
-  }
-  return name;
-}
-
-async function loadDataTranslations(lang) {
-  if (lang === 'en' || dataTranslations[lang]) return;
-  try {
-    const resp = await fetch(`data/i18n-${lang}.json`);
-    dataTranslations[lang] = await resp.json();
-  } catch (e) {
-    dataTranslations[lang] = {};
-  }
-}
-
-function applyLang() {
-  document.documentElement.lang = currentLang;
-
-  // Static text nodes
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    const val = STRINGS[currentLang][key];
-    if (typeof val === 'string') el.textContent = val;
-  });
-
-  // HTML content nodes
-  document.querySelectorAll('[data-i18n-html]').forEach(el => {
-    const key = el.getAttribute('data-i18n-html');
-    const val = STRINGS[currentLang][key];
-    if (typeof val === 'string') el.innerHTML = val;
-  });
-
-  // Language toggle buttons
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.textContent.trim() === (currentLang === 'en' ? 'EN' : '中文'));
-  });
-
-  // Re-render dynamic parts if data is loaded
-  if (allData) {
-    renderCharSelect();
-    const charName = document.getElementById('charSelect').value;
-    renderKdMoveSelect(charName);
-    const statusEl = document.getElementById('status');
-    // Only refresh status if it's showing a result (not loading/error)
-    if (statusEl.dataset.state === 'result') {
-      const lastResults = _lastResults;
-      if (lastResults) {
-        statusEl.textContent = t('status_result', charName, lastResults.total);
-      }
-    } else if (statusEl.dataset.state === 'loaded') {
-      statusEl.textContent = t('status_loaded', Object.keys(allData).length);
-    }
-    if (_lastResults) renderResults(_lastResults.list);
-  }
-}
-
-async function setLang(lang) {
-  await loadDataTranslations(lang);
-  currentLang = lang;
-  localStorage.setItem('lang', lang);
-  applyLang();
-}
-
-// ---------------------------------------------------------------------------
-// Meaty Calculator
-// ---------------------------------------------------------------------------
-function parseInt1(val) {
-  if (val == null) return null;
-  if (typeof val === 'number') return val;
-  const m = String(val).match(/-?\d+/);
-  return m ? parseInt(m[0]) : null;
-}
-
-function parseIntWorst(val) {
-  if (val == null) return null;
-  if (typeof val === 'number') return val;
-  const nums = [...String(val).matchAll(/-?\d+/g)].map(m => parseInt(m[0]));
-  return nums.length ? Math.min(...nums) : null;
-}
-
-function parseKDField(val, hitType) {
-  if (!val || typeof val !== 'string') return [];
-  const results = [];
-  for (const m of val.matchAll(/(H?KD)\s*\+(\d+)/g)) {
-    results.push({ hitType, kdType: m[1], advantage: parseInt(m[2]) });
-  }
-  return results;
-}
-
-function extractMoves(charData) {
-  const moves = [];
-  for (const [catName, catMoves] of Object.entries(charData.moves || {})) {
-    if (typeof catMoves !== 'object') continue;
-    for (const [moveKey, mv] of Object.entries(catMoves)) {
-      if (typeof mv !== 'object') continue;
-      // Exclude Drive Parry and Drive Rush - variable frame cost, not reliable as prefix
-      const moveName = mv.moveName || mv.cmnName || '';
-      if (catName === 'drive' && mv.nonHittingMove) continue;
-      if (moveName === 'Drive Rush') continue;
-      const startup = parseInt1(mv.startup);
-      const active = parseInt1(mv.active);
-      const recovery = parseInt1(mv.recovery);
-      if (startup == null || active == null || active <= 0) continue;
-      let total = parseInt1(mv.total);
-      if (total == null) total = startup + active + (recovery || 0) - 1;
-
-      const knockdowns = [
-        ...parseKDField(mv.onHit, 'normal'),
-        ...parseKDField(mv.onPC, 'pc'),
-        ...parseKDField(mv.onCC, 'cc'),
-      ];
-      const cmd = mv.numCmd || mv.plnCmd || moveKey;
-      moves.push({
-        name: mv.moveName || moveKey,
-        cmd,
-        startup,
-        active,
-        recovery: recovery || 0,
-        total,
-        onBlock: parseIntWorst(mv.onBlock),
-        onHit: parseInt1(mv.onHit),
-        moveType: catName,
-        isAttack: mv.atkLvl != null,
-        cancelTypes: mv.xx || [],
-        knockdowns,
-      });
-    }
-  }
-  const fDash = parseInt1(charData.stats?.fDash);
-  if (fDash) {
-    moves.push({
-      name: 'Dash', cmd: '66',
-      startup: fDash, active: 0, recovery: 0, total: fDash,
-      onBlock: null, onHit: null, moveType: 'dash', isAttack: false,
-      knockdowns: [],
-    });
-  }
-  return moves;
-}
-
-function calcMeatys(moves, opts) {
-  const { kdMoveFilter, hitTypeFilter, maxPrefix, safeOnly, firstAny, minAdv, maxDelay } = opts;
-
-  const meatyCandidates = moves.filter(m =>
-    m.isAttack
-    && !m.cmd.startsWith('8')
-    && (!safeOnly || m.onBlock == null || m.onBlock >= -3)
-    && (!opts.cancelOnly || m.cancelTypes.length > 0)
-    && !m.name.startsWith('OD ')
-  );
-  const prefixPool = moves.filter(m => m.moveType === 'dash' || (firstAny && m.isAttack && !m.cmd.startsWith('8')));
-  const firstPool = firstAny ? prefixPool : prefixPool.filter(m => !m.isAttack);
-
-  const results = [];
-
-  // Non-light normal attacks with startup info, for on-hit flip detection
-  const nonLightMoves = moves
-    .filter(m => /^\d(MP|MK|HP|HK)$/.test(m.cmd) && !m.cmd.startsWith('8') && m.startup != null);
-
-  for (const kdMove of moves) {
-    if (kdMoveFilter && kdMove.cmd !== kdMoveFilter) continue;
-    for (const kdInfo of kdMove.knockdowns) {
-      if (hitTypeFilter !== 'both' && kdInfo.hitType !== hitTypeFilter) continue;
-      if (opts.noSpKd && kdMove.cancelTypes.includes('sp')) continue;
-
-      const Kbase = kdInfo.advantage;
-      if (Kbase <= 0) continue;
-
-      for (const first of firstPool) {
-        const cost1 = first.total;
-        const K1 = Kbase - cost1;
-        if (K1 <= 0) continue;
-
-        for (const meaty of meatyCandidates) {
-          for (let d = 0; d <= maxDelay; d++)
-            tryMeaty(kdMove, kdInfo, [first], K1 + d, d, meaty, results, minAdv, nonLightMoves);
-        }
-
-        if (maxPrefix >= 2) {
-          for (const second of prefixPool) {
-            const K2 = K1 - second.total;
-            if (K2 <= 0) continue;
-            for (const meaty of meatyCandidates) {
-              for (let d = 0; d <= maxDelay; d++)
-                tryMeaty(kdMove, kdInfo, [first, second], K2 + d, d, meaty, results, minAdv, nonLightMoves);
+            function t(key, ...args) {
+                const val = STRINGS[currentLang][key];
+                if (typeof val === "function") return val(...args);
+                return val ?? key;
             }
 
-            if (maxPrefix >= 3) {
-              for (const third of prefixPool) {
-                const K3 = K2 - third.total;
-                if (K3 <= 0) continue;
-                for (const meaty of meatyCandidates) {
-                  for (let d = 0; d <= maxDelay; d++)
-                    tryMeaty(kdMove, kdInfo, [first, second, third], K3 + d, d, meaty, results, minAdv, nonLightMoves);
+            function tChar(name) {
+                if (currentLang === "en") return name;
+                return dataTranslations[currentLang]?.charNames?.[name] || name;
+            }
+
+            const MOVE_PREFIX_ZH = [
+                ["Drive Impact: ", "斗气迸放："],
+                ["Drive Reversal: ", "斗气反击："],
+            ];
+
+            function tMove(name) {
+                if (currentLang === "en") return name;
+                const zh = dataTranslations[currentLang]?.moveNames?.[name];
+                if (zh) return zh;
+                for (const [en, zhPrefix] of MOVE_PREFIX_ZH) {
+                    if (name.startsWith(en))
+                        return zhPrefix + name.slice(en.length);
                 }
-              }
+                return name;
             }
-          }
-        }
-      }
-    }
-  }
 
-  return results;
-}
+            async function loadDataTranslations(lang) {
+                if (lang === "en" || dataTranslations[lang]) return;
+                try {
+                    const resp = await fetch(`data/i18n-${lang}.json`);
+                    dataTranslations[lang] = await resp.json();
+                } catch (e) {
+                    dataTranslations[lang] = {};
+                }
+            }
 
-function tryMeaty(kdMove, kdInfo, prefix, K, delay, meaty, results, minAdv, nonLightMoves) {
-  const S = meaty.startup, A = meaty.active;
-  // startup 的最后一帧即为第 1 持续帧，故 meaty 窗口从 S-1 开始
-  if (S - 1 <= K && K <= S + A - 2) {
-    const activeFrameHit = K - S + 2;
-    const stolen = activeFrameHit - 1;
-    let totalAdv = null;
-    if (!meaty.knockdowns.length && meaty.onHit != null) {
-      totalAdv = meaty.onHit + stolen;
-    }
-    const totalBlock = meaty.onBlock != null ? meaty.onBlock + stolen : null;
-    if (stolen === 0) return;
-    if (totalAdv != null && totalAdv < minAdv) return;
-    // on-hit flip: find mid/heavy normal moves whose startup falls in (meaty.onHit, totalAdv]
-    const unlockedMoves = (totalAdv != null && meaty.onHit != null)
-      ? nonLightMoves.filter(m => meaty.onHit < m.startup && totalAdv >= m.startup)
-      : [];
-    const onHitFlipped = unlockedMoves.length > 0;
-    results.push({ kdMove, kdInfo, prefix, meaty, K, delay, activeFrameHit, totalAdv, totalBlock, onHitFlipped, unlockedMoves });
-  }
-}
+            function applyLang() {
+                document.documentElement.lang = currentLang;
 
-const HIT_TYPE_CLASS = { normal: 'kd-type-normal', pc: 'kd-type-pc', cc: 'kd-type-cc' };
+                // Static text nodes
+                document.querySelectorAll("[data-i18n]").forEach((el) => {
+                    const key = el.getAttribute("data-i18n");
+                    const val = STRINGS[currentLang][key];
+                    if (typeof val === "string") el.textContent = val;
+                });
 
-function fmtSeq(prefix, meaty) {
-  return [...prefix.map(m => m.cmd), meaty.cmd].join(' → ');
-}
+                // HTML content nodes
+                document.querySelectorAll("[data-i18n-html]").forEach((el) => {
+                    const key = el.getAttribute("data-i18n-html");
+                    const val = STRINGS[currentLang][key];
+                    if (typeof val === "string") el.innerHTML = val;
+                });
 
-function fmtSeqWithFrames(prefix, meaty) {
-  const parts = prefix.map(m => {
-    const label = tMove(m.name) !== m.name ? `${tMove(m.name)} (${m.cmd})` : m.cmd;
-    return `${label}<span style="color:#999;font-size:0.85em">[${m.total}f]</span>`;
-  });
-  const meatyLabel = tMove(meaty.name) !== meaty.name ? `${tMove(meaty.name)} (${meaty.cmd})` : meaty.cmd;
-  parts.push(meatyLabel);
-  return parts.join(' → ');
-}
+                // Language toggle buttons
+                document.querySelectorAll(".lang-btn").forEach((btn) => {
+                    btn.classList.toggle(
+                        "active",
+                        btn.textContent.trim() ===
+                            (currentLang === "en" ? "EN" : "中文"),
+                    );
+                });
 
-function fmtBlock(ob, rawOb) {
-  if (ob == null) return '<span class="safe-zero">?</span>';
-  const cls = ob > 0 ? 'safe-plus' : ob < 0 ? 'safe-minus' : 'safe-zero';
-  const flipped = rawOb != null && rawOb <= 0 && ob > 0;
-  const tag = flipped ? ` <span title="${t('tip_block_flip')}" style="color:#f90;font-size:0.85em">↑</span>` : '';
-  return `<span class="${cls}">${ob >= 0 ? '+' : ''}${ob}</span>${tag}`;
-}
+                // Re-render dynamic parts if data is loaded
+                if (charList.length) {
+                    renderCharSelect();
+                    const charName =
+                        document.getElementById("charSelect").value;
+                    renderKdMoveSelect(charName);
+                    const statusEl = document.getElementById("status");
+                    // Only refresh status if it's showing a result (not loading/error)
+                    if (statusEl.dataset.state === "result") {
+                        const lastResults = _lastResults;
+                        if (lastResults) {
+                            statusEl.textContent = t(
+                                "status_result",
+                                charName,
+                                lastResults.total,
+                            );
+                        }
+                    } else if (statusEl.dataset.state === "loaded") {
+                        statusEl.textContent = t(
+                            "status_loaded",
+                            charList.length,
+                        );
+                    }
+                    if (_lastResults) renderResults(_lastResults.list);
+                }
+            }
 
-let _lastResults = null;
+            async function setLang(lang) {
+                await loadDataTranslations(lang);
+                currentLang = lang;
+                localStorage.setItem("lang", lang);
+                applyLang();
+            }
 
-function renderResults(results) {
-  const el = document.getElementById('meaty-results');
-  const effectiveOnly = document.getElementById('effectiveOnly').checked;
-  const onBlockFlipped = r => r.meaty.onBlock != null && r.meaty.onBlock <= 0 && r.totalBlock > 0;
-  if (effectiveOnly) results = results.filter(r => r.onHitFlipped || onBlockFlipped(r));
-  const statusEl = document.getElementById('status');
-  if (statusEl.dataset.state === 'result' && _lastResults) {
-    const charName = document.getElementById('charSelect').value;
-    statusEl.textContent = t('status_result', charName, results.length);
-  }
-  if (!results.length) {
-    el.innerHTML = `<div class="no-results">${t('no_results')}</div>`;
-    return;
-  }
+            // ---------------------------------------------------------------------------
+            // Meaty Calculator
+            // ---------------------------------------------------------------------------
+            function parseInt1(val) {
+                if (val == null) return null;
+                if (typeof val === "number") return val;
+                const m = String(val).match(/-?\d+/);
+                return m ? parseInt(m[0]) : null;
+            }
 
-  const groups = new Map();
-  for (const r of results) {
-    const key = `${r.kdInfo.kdType}|${r.kdInfo.advantage}`;
-    if (!groups.has(key)) groups.set(key, { kdInfo: r.kdInfo, sources: new Map(), rows: [] });
-    const g = groups.get(key);
-    const srcKey = `${r.kdMove.name}|${r.kdMove.cmd}|${r.kdInfo.hitType}`;
-    if (!g.sources.has(srcKey)) g.sources.set(srcKey, { move: r.kdMove, hitType: r.kdInfo.hitType });
-    g.rows.push(r);
-  }
+            function parseIntWorst(val) {
+                if (val == null) return null;
+                if (typeof val === "number") return val;
+                const nums = [...String(val).matchAll(/-?\d+/g)].map((m) =>
+                    parseInt(m[0]),
+                );
+                return nums.length ? Math.min(...nums) : null;
+            }
 
-  for (const g of groups.values()) {
-    const seen = new Set();
-    g.rows = g.rows.filter(r => {
-      const k = `${fmtSeq(r.prefix, r.meaty)}|${r.K}|${r.delay}`;
-      if (seen.has(k)) return false;
-      seen.add(k);
-      return true;
-    });
-  }
+            function parseKDField(val, hitType) {
+                if (!val || typeof val !== "string") return [];
+                const results = [];
+                for (const m of val.matchAll(/(H?KD)\s*\+(\d+)/g)) {
+                    results.push({
+                        hitType,
+                        kdType: m[1],
+                        advantage: parseInt(m[2]),
+                    });
+                }
+                return results;
+            }
 
-  const sorted = [...groups.values()].sort((a, b) =>
-    (a.rows.length > 10) - (b.rows.length > 10) ||
-    (b.sources.size - a.sources.size) ||
-    (b.kdInfo.advantage - a.kdInfo.advantage)
-  );
+            function extractMoves(charData) {
+                const moves = [];
+                for (const [catName, catMoves] of Object.entries(
+                    charData.moves || {},
+                )) {
+                    if (typeof catMoves !== "object") continue;
+                    for (const [moveKey, mv] of Object.entries(catMoves)) {
+                        if (typeof mv !== "object") continue;
+                        // Exclude Drive Parry and Drive Rush - variable frame cost, not reliable as prefix
+                        const moveName = mv.moveName || mv.cmnName || "";
+                        if (catName === "drive" && mv.nonHittingMove) continue;
+                        if (moveName === "Drive Rush") continue;
+                        const startup = parseInt1(mv.startup);
+                        const active = parseInt1(mv.active);
+                        const recovery = parseInt1(mv.recovery);
+                        if (startup == null || active == null || active <= 0)
+                            continue;
+                        let total = parseInt1(mv.total);
+                        if (total == null)
+                            total = startup + active + (recovery || 0) - 1;
 
-  let html = '';
-  for (const { kdInfo, sources, rows } of sorted) {
-    const moveMap = new Map();
-    for (const { move, hitType } of sources.values()) {
-      const k = `${move.name}|${move.cmd}`;
-      if (!moveMap.has(k)) moveMap.set(k, { move, hitTypes: [] });
-      moveMap.get(k).hitTypes.push(hitType);
-    }
-    const srcHtml = [...moveMap.values()].map(({ move, hitTypes }) => {
-      const tags = hitTypes.map(ht =>
-        `<span class="${HIT_TYPE_CLASS[ht] || ''}">[${t('hit_type_' + ht) || ht}]</span>`
-      ).join('');
-      const moveName = tMove(move.name);
-      return `${moveName} <span style="color:#666">(${move.cmd})</span> ${tags}`;
-    }).join('<span style="color:#555"> / </span>');
+                        const knockdowns = [
+                            ...parseKDField(mv.onHit, "normal"),
+                            ...parseKDField(mv.onPC, "pc"),
+                            ...parseKDField(mv.onCC, "cc"),
+                        ];
+                        const cmd = mv.numCmd || mv.plnCmd || moveKey;
+                        moves.push({
+                            name: mv.moveName || moveKey,
+                            cmd,
+                            startup,
+                            active,
+                            recovery: recovery || 0,
+                            total,
+                            onBlock: parseIntWorst(mv.onBlock),
+                            onHit: parseInt1(mv.onHit),
+                            moveType: catName,
+                            isAttack: mv.atkLvl != null,
+                            cancelTypes: mv.xx || [],
+                            knockdowns,
+                        });
+                    }
+                }
+                const fDash = parseInt1(charData.stats?.fDash);
+                if (fDash) {
+                    moves.push({
+                        name: "Dash",
+                        cmd: "66",
+                        startup: fDash,
+                        active: 0,
+                        recovery: 0,
+                        total: fDash,
+                        onBlock: null,
+                        onHit: null,
+                        moveType: "dash",
+                        isAttack: false,
+                        knockdowns: [],
+                    });
+                }
+                return moves;
+            }
 
-    const collapsed = rows.length > 10 ? ' collapsed' : '';
-    html += `<div class="kd-group${collapsed}">`;
-    html += `<div class="kd-header" onclick="this.parentElement.classList.toggle('collapsed')">`;
-    html += `${srcHtml} `;
-    html += `<span class="kd-adv">${kdInfo.kdType} +${kdInfo.advantage}</span>`;
-    html += `</div>`;
-    html += `<div class="kd-body"><table><thead><tr>`;
-    html += `<th>${t('th_sequence')}</th><th>${t('th_startup')}</th><th>${t('th_active')}</th><th>${t('th_hit_frame')}</th><th>${t('th_stolen')}</th><th>${t('th_on_hit')}</th><th>${t('th_on_block')}</th>`;
-    html += `</tr></thead><tbody>`;
+            function calcMeatys(moves, opts) {
+                const {
+                    kdMoveFilter,
+                    hitTypeFilter,
+                    maxPrefix,
+                    safeOnly,
+                    firstAny,
+                    minAdv,
+                    maxDelay,
+                } = opts;
 
-    function seqPriority(r) {
-      const cmd = r.meaty.cmd;
-      if (/^\d(HP|HK)$/.test(cmd)) return 0;
-      if (/^\d(MP|MK)$/.test(cmd)) return 1;
-      if (/^\d(LP|LK)$/.test(cmd)) return 2;
-      return 3;
-    }
-    const sortedRows = rows.sort((a, b) =>
-      (seqPriority(a) - seqPriority(b)) ||
-      (b.activeFrameHit - a.activeFrameHit) ||
-      (a.prefix.length - b.prefix.length)
-    );
-    for (const r of sortedRows) {
-      const stolen = r.activeFrameHit - 1;
-      let flipTag = '';
-      if (r.onHitFlipped) {
-        const labels = r.unlockedMoves.map(m => m.cmd).join(', ');
-        flipTag = ` <span title="${labels}" style="color:#f90;font-size:0.85em;cursor:default">↑</span>`;
-      }
-      const totalStr = r.meaty.knockdowns.length
-        ? `<span class="kd-adv-cell">${t(r.kdInfo.kdType === 'HKD' ? 'hkd_label' : 'kd_label')}</span>`
-        : r.totalAdv != null
-          ? `<span class="total-adv">+${r.totalAdv}</span>${flipTag}`
-          : '?';
-      html += `<tr>`;
-      const delayStr = r.delay > 0 ? ` <span style="color:#f90;font-size:0.85em">~${r.delay}f</span>` : '';
-      html += `<td>${fmtSeqWithFrames(r.prefix, r.meaty)}${delayStr}</td>`;
-      html += `<td>${r.meaty.startup}</td>`;
-      html += `<td>${r.meaty.active}</td>`;
-      const canDelay = r.meaty.active - r.activeFrameHit;
-      const canDelayStr = canDelay > 0 ? ` <span title="${t('tip_can_delay', canDelay)}" style="color:#888;font-size:0.85em;cursor:default">↓${canDelay}f</span>` : '';
-      html += `<td>${r.activeFrameHit}/${r.meaty.active}${canDelayStr}</td>`;
-      html += `<td><span class="stolen">+${stolen}</span></td>`;
-      html += `<td>${totalStr}</td>`;
-      html += `<td>${fmtBlock(r.totalBlock, r.meaty.onBlock)}</td>`;
-      html += `</tr>`;
-    }
-    html += `</tbody></table></div></div>`;
-  }
-  el.innerHTML = html;
-}
+                const meatyCandidates = moves.filter(
+                    (m) =>
+                        m.isAttack &&
+                        !m.cmd.startsWith("8") &&
+                        (!safeOnly || m.onBlock == null || m.onBlock >= -3) &&
+                        (!opts.cancelOnly || m.cancelTypes.length > 0) &&
+                        !m.name.startsWith("OD "),
+                );
+                const prefixPool = moves.filter(
+                    (m) =>
+                        m.moveType === "dash" ||
+                        (firstAny && m.isAttack && !m.cmd.startsWith("8")),
+                );
+                const firstPool = firstAny
+                    ? prefixPool
+                    : prefixPool.filter((m) => !m.isAttack);
 
-let allData = null;
+                const results = [];
 
-function renderKdMoveSelect(charName) {
-  const sel = document.getElementById('kdMoveSelect');
-  const prev = sel.value;
-  if (!allData || !charName) { sel.innerHTML = ''; return; }
-  const moves = extractMoves(allData[charName]);
-  const kdMoves = moves.filter(m => m.knockdowns.length > 0);
-  sel.innerHTML = `<option value="">${t('kd_move_all')}</option>` +
-    kdMoves.map(m => {
-      const label = `${tMove(m.name)} (${m.cmd})`;
-      return `<option value="${m.cmd}">${label}</option>`;
-    }).join('');
-  if (prev && [...sel.options].some(o => o.value === prev)) sel.value = prev;
-}
+                // Non-light normal attacks with startup info, for on-hit flip detection
+                const nonLightMoves = moves.filter(
+                    (m) =>
+                        /^\d(MP|MK|HP|HK)$/.test(m.cmd) &&
+                        !m.cmd.startsWith("8") &&
+                        m.startup != null,
+                );
 
-function renderCharSelect() {
-  if (!allData) return;
-  const chars = Object.keys(allData);
-  const sel = document.getElementById('charSelect');
-  const current = sel.value;
-  sel.innerHTML = chars.map(c => `<option value="${c}">${tChar(c)}</option>`).join('');
-  // Restore selection by value (value is always the English key)
-  if (current && chars.includes(current)) {
-    sel.value = current;
-  }
-}
+                for (const kdMove of moves) {
+                    if (kdMoveFilter && kdMove.cmd !== kdMoveFilter) continue;
+                    for (const kdInfo of kdMove.knockdowns) {
+                        if (
+                            hitTypeFilter !== "both" &&
+                            kdInfo.hitType !== hitTypeFilter
+                        )
+                            continue;
+                        if (opts.noSpKd && kdMove.cancelTypes.includes("sp"))
+                            continue;
 
-async function loadData() {
-  try {
-    const resp = await fetch('data/sf6framedata.json');
-    allData = await resp.json();
-    const chars = Object.keys(allData);
-    renderCharSelect();
-    const sel = document.getElementById('charSelect');
-    const ryuIdx = chars.indexOf('Ryu');
-    if (ryuIdx >= 0) sel.selectedIndex = ryuIdx;
-    renderKdMoveSelect(sel.value);
-    document.getElementById('calcBtn').disabled = false;
-    const statusEl = document.getElementById('status');
-    statusEl.textContent = t('status_loaded', chars.length);
-    statusEl.dataset.state = 'loaded';
-  } catch (e) {
-    const statusEl = document.getElementById('status');
-    statusEl.textContent = t('status_failed', e.message);
-    statusEl.dataset.state = 'error';
-  }
-}
+                        const Kbase = kdInfo.advantage;
+                        if (Kbase <= 0) continue;
 
-function calculate() {
-  const charName = document.getElementById('charSelect').value;
-  const charData = allData[charName];
-  if (!charData) return;
+                        for (const first of firstPool) {
+                            const cost1 = first.total;
+                            const K1 = Kbase - cost1;
+                            if (K1 <= 0) continue;
 
-  const moves = extractMoves(charData);
-  const opts = {
-    kdMoveFilter: document.getElementById('kdMoveSelect').value || null,
-    hitTypeFilter: document.getElementById('hitType').value,
-    maxPrefix: parseInt(document.getElementById('maxPrefix').value),
-    safeOnly: document.getElementById('safeOnly').checked,
-    cancelOnly: document.getElementById('cancelOnly').checked,
-    noSpKd: document.getElementById('noSpKd').checked,
-    firstAny: document.getElementById('firstAny').checked,
-    minAdv: parseInt(document.getElementById('minAdv').value) || -99,
-    maxDelay: parseInt(document.getElementById('maxDelay').value) || 0,
-  };
+                            for (const meaty of meatyCandidates) {
+                                for (let d = 0; d <= maxDelay; d++)
+                                    tryMeaty(
+                                        kdMove,
+                                        kdInfo,
+                                        [first],
+                                        K1 + d,
+                                        d,
+                                        meaty,
+                                        results,
+                                        minAdv,
+                                        nonLightMoves,
+                                    );
+                            }
 
-  const statusEl = document.getElementById('status');
-  statusEl.textContent = t('status_calculating');
-  statusEl.dataset.state = 'calculating';
-  setTimeout(() => {
-    const results = calcMeatys(moves, opts);
-    _lastResults = { list: results, total: results.length };
-    statusEl.textContent = t('status_result', charName, results.length);
-    statusEl.dataset.state = 'result';
-    renderResults(results);
-  }, 10);
-}
+                            if (maxPrefix >= 2) {
+                                for (const second of prefixPool) {
+                                    const K2 = K1 - second.total;
+                                    if (K2 <= 0) continue;
+                                    for (const meaty of meatyCandidates) {
+                                        for (let d = 0; d <= maxDelay; d++)
+                                            tryMeaty(
+                                                kdMove,
+                                                kdInfo,
+                                                [first, second],
+                                                K2 + d,
+                                                d,
+                                                meaty,
+                                                results,
+                                                minAdv,
+                                                nonLightMoves,
+                                            );
+                                    }
 
-document.getElementById('calcBtn').addEventListener('click', calculate);
-document.getElementById('effectiveOnly').addEventListener('change', () => {
-  if (_lastResults) renderResults(_lastResults.list);
-});
-document.getElementById('charSelect').addEventListener('change', () => {
-  renderKdMoveSelect(document.getElementById('charSelect').value);
-  calculate();
-});
+                                    if (maxPrefix >= 3) {
+                                        for (const third of prefixPool) {
+                                            const K3 = K2 - third.total;
+                                            if (K3 <= 0) continue;
+                                            for (const meaty of meatyCandidates) {
+                                                for (
+                                                    let d = 0;
+                                                    d <= maxDelay;
+                                                    d++
+                                                )
+                                                    tryMeaty(
+                                                        kdMove,
+                                                        kdInfo,
+                                                        [first, second, third],
+                                                        K3 + d,
+                                                        d,
+                                                        meaty,
+                                                        results,
+                                                        minAdv,
+                                                        nonLightMoves,
+                                                    );
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
 
-loadDataTranslations(currentLang).then(() => { applyLang(); loadData().then(() => calculate()); });
+                return results;
+            }
 
-// ---------------------------------------------------------------------------
-// ELO Calculator
-// ---------------------------------------------------------------------------
-function calculateEloWinProbability(ratingA, ratingB) {
-  return 1 / (1 + Math.pow(10, (ratingB - ratingA) / 400));
-}
+            function tryMeaty(
+                kdMove,
+                kdInfo,
+                prefix,
+                K,
+                delay,
+                meaty,
+                results,
+                minAdv,
+                nonLightMoves,
+            ) {
+                const S = meaty.startup,
+                    A = meaty.active;
+                // startup 的最后一帧即为第 1 持续帧，故 meaty 窗口从 S-1 开始
+                if (S - 1 <= K && K <= S + A - 2) {
+                    const activeFrameHit = K - S + 2;
+                    const stolen = activeFrameHit - 1;
+                    let totalAdv = null;
+                    if (!meaty.knockdowns.length && meaty.onHit != null) {
+                        totalAdv = meaty.onHit + stolen;
+                    }
+                    const totalBlock =
+                        meaty.onBlock != null ? meaty.onBlock + stolen : null;
+                    if (stolen === 0) return;
+                    if (totalAdv != null && totalAdv < minAdv) return;
+                    // on-hit flip: find mid/heavy normal moves whose startup falls in (meaty.onHit, totalAdv]
+                    const unlockedMoves =
+                        totalAdv != null && meaty.onHit != null
+                            ? nonLightMoves.filter(
+                                  (m) =>
+                                      meaty.onHit < m.startup &&
+                                      totalAdv >= m.startup,
+                              )
+                            : [];
+                    const onHitFlipped = unlockedMoves.length > 0;
+                    results.push({
+                        kdMove,
+                        kdInfo,
+                        prefix,
+                        meaty,
+                        K,
+                        delay,
+                        activeFrameHit,
+                        totalAdv,
+                        totalBlock,
+                        onHitFlipped,
+                        unlockedMoves,
+                    });
+                }
+            }
 
-function binomialCoefficient(n, k) {
-  if (k < 0 || k > n) return 0;
-  if (k === 0 || k === n) return 1;
-  let result = 1;
-  for (let i = 1; i <= k; i++) {
-    result *= (n - i + 1) / i;
-  }
-  return result;
-}
+            const HIT_TYPE_CLASS = {
+                normal: "kd-type-normal",
+                pc: "kd-type-pc",
+                cc: "kd-type-cc",
+            };
 
-function calculateBestOfWinProbability(gameWinProb, bestOf) {
-  const winsNeeded = Math.ceil(bestOf / 2);
-  let totalProb = 0;
-  for (let losses = 0; losses < winsNeeded; losses++) {
-    const wins = winsNeeded;
-    const totalGames = wins + losses;
-    const combinations = binomialCoefficient(totalGames - 1, wins - 1);
-    const probability = combinations *
+            function fmtSeq(prefix, meaty) {
+                return [...prefix.map((m) => m.cmd), meaty.cmd].join(" → ");
+            }
+
+            function fmtSeqWithFrames(prefix, meaty) {
+                const parts = prefix.map((m) => {
+                    const label =
+                        tMove(m.name) !== m.name
+                            ? `${tMove(m.name)} (${m.cmd})`
+                            : m.cmd;
+                    return `${label}<span style="color:#999;font-size:0.85em">[${m.total}f]</span>`;
+                });
+                const meatyLabel =
+                    tMove(meaty.name) !== meaty.name
+                        ? `${tMove(meaty.name)} (${meaty.cmd})`
+                        : meaty.cmd;
+                parts.push(meatyLabel);
+                return parts.join(" → ");
+            }
+
+            function fmtBlock(ob, rawOb) {
+                if (ob == null) return '<span class="safe-zero">?</span>';
+                const cls =
+                    ob > 0 ? "safe-plus" : ob < 0 ? "safe-minus" : "safe-zero";
+                const flipped = rawOb != null && rawOb <= 0 && ob > 0;
+                const tag = flipped
+                    ? ` <span title="${t("tip_block_flip")}" style="color:#f90;font-size:0.85em">↑</span>`
+                    : "";
+                return `<span class="${cls}">${ob >= 0 ? "+" : ""}${ob}</span>${tag}`;
+            }
+
+            let _lastResults = null;
+
+            function renderResults(results) {
+                const el = document.getElementById("meaty-results");
+                const effectiveOnly =
+                    document.getElementById("effectiveOnly").checked;
+                const onBlockFlipped = (r) =>
+                    r.meaty.onBlock != null &&
+                    r.meaty.onBlock <= 0 &&
+                    r.totalBlock > 0;
+                if (effectiveOnly)
+                    results = results.filter(
+                        (r) => r.onHitFlipped || onBlockFlipped(r),
+                    );
+                const statusEl = document.getElementById("status");
+                if (statusEl.dataset.state === "result" && _lastResults) {
+                    const charName =
+                        document.getElementById("charSelect").value;
+                    statusEl.textContent = t(
+                        "status_result",
+                        charName,
+                        results.length,
+                    );
+                }
+                if (!results.length) {
+                    el.innerHTML = `<div class="no-results">${t("no_results")}</div>`;
+                    return;
+                }
+
+                const groups = new Map();
+                for (const r of results) {
+                    const key = `${r.kdInfo.kdType}|${r.kdInfo.advantage}`;
+                    if (!groups.has(key))
+                        groups.set(key, {
+                            kdInfo: r.kdInfo,
+                            sources: new Map(),
+                            rows: [],
+                        });
+                    const g = groups.get(key);
+                    const srcKey = `${r.kdMove.name}|${r.kdMove.cmd}|${r.kdInfo.hitType}`;
+                    if (!g.sources.has(srcKey))
+                        g.sources.set(srcKey, {
+                            move: r.kdMove,
+                            hitType: r.kdInfo.hitType,
+                        });
+                    g.rows.push(r);
+                }
+
+                for (const g of groups.values()) {
+                    const seen = new Set();
+                    g.rows = g.rows.filter((r) => {
+                        const k = `${fmtSeq(r.prefix, r.meaty)}|${r.K}|${r.delay}`;
+                        if (seen.has(k)) return false;
+                        seen.add(k);
+                        return true;
+                    });
+                }
+
+                const sorted = [...groups.values()].sort(
+                    (a, b) =>
+                        (a.rows.length > 10) - (b.rows.length > 10) ||
+                        b.sources.size - a.sources.size ||
+                        b.kdInfo.advantage - a.kdInfo.advantage,
+                );
+
+                let html = "";
+                for (const { kdInfo, sources, rows } of sorted) {
+                    const moveMap = new Map();
+                    for (const { move, hitType } of sources.values()) {
+                        const k = `${move.name}|${move.cmd}`;
+                        if (!moveMap.has(k))
+                            moveMap.set(k, { move, hitTypes: [] });
+                        moveMap.get(k).hitTypes.push(hitType);
+                    }
+                    const srcHtml = [...moveMap.values()]
+                        .map(({ move, hitTypes }) => {
+                            const tags = hitTypes
+                                .map(
+                                    (ht) =>
+                                        `<span class="${HIT_TYPE_CLASS[ht] || ""}">[${t("hit_type_" + ht) || ht}]</span>`,
+                                )
+                                .join("");
+                            const moveName = tMove(move.name);
+                            return `${moveName} <span style="color:#666">(${move.cmd})</span> ${tags}`;
+                        })
+                        .join('<span style="color:#555"> / </span>');
+
+                    const collapsed = rows.length > 10 ? " collapsed" : "";
+                    html += `<div class="kd-group${collapsed}">`;
+                    html += `<div class="kd-header" onclick="this.parentElement.classList.toggle('collapsed')">`;
+                    html += `${srcHtml} `;
+                    html += `<span class="kd-adv">${kdInfo.kdType} +${kdInfo.advantage}</span>`;
+                    html += `</div>`;
+                    html += `<div class="kd-body"><table><thead><tr>`;
+                    html += `<th>${t("th_sequence")}</th><th>${t("th_startup")}</th><th>${t("th_active")}</th><th>${t("th_hit_frame")}</th><th>${t("th_stolen")}</th><th>${t("th_on_hit")}</th><th>${t("th_on_block")}</th>`;
+                    html += `</tr></thead><tbody>`;
+
+                    function seqPriority(r) {
+                        const cmd = r.meaty.cmd;
+                        if (/^\d(HP|HK)$/.test(cmd)) return 0;
+                        if (/^\d(MP|MK)$/.test(cmd)) return 1;
+                        if (/^\d(LP|LK)$/.test(cmd)) return 2;
+                        return 3;
+                    }
+                    const sortedRows = rows.sort(
+                        (a, b) =>
+                            seqPriority(a) - seqPriority(b) ||
+                            b.activeFrameHit - a.activeFrameHit ||
+                            a.prefix.length - b.prefix.length,
+                    );
+                    for (const r of sortedRows) {
+                        const stolen = r.activeFrameHit - 1;
+                        let flipTag = "";
+                        if (r.onHitFlipped) {
+                            const labels = r.unlockedMoves
+                                .map((m) => m.cmd)
+                                .join(", ");
+                            flipTag = ` <span title="${labels}" style="color:#f90;font-size:0.85em;cursor:default">↑</span>`;
+                        }
+                        const totalStr = r.meaty.knockdowns.length
+                            ? `<span class="kd-adv-cell">${t(r.kdInfo.kdType === "HKD" ? "hkd_label" : "kd_label")}</span>`
+                            : r.totalAdv != null
+                              ? `<span class="total-adv">+${r.totalAdv}</span>${flipTag}`
+                              : "?";
+                        html += `<tr>`;
+                        const delayStr =
+                            r.delay > 0
+                                ? ` <span style="color:#f90;font-size:0.85em">~${r.delay}f</span>`
+                                : "";
+                        html += `<td>${fmtSeqWithFrames(r.prefix, r.meaty)}${delayStr}</td>`;
+                        html += `<td>${r.meaty.startup}</td>`;
+                        html += `<td>${r.meaty.active}</td>`;
+                        const canDelay = r.meaty.active - r.activeFrameHit;
+                        const canDelayStr =
+                            canDelay > 0
+                                ? ` <span title="${t("tip_can_delay", canDelay)}" style="color:#888;font-size:0.85em;cursor:default">↓${canDelay}f</span>`
+                                : "";
+                        html += `<td>${r.activeFrameHit}/${r.meaty.active}${canDelayStr}</td>`;
+                        html += `<td><span class="stolen">+${stolen}</span></td>`;
+                        html += `<td>${totalStr}</td>`;
+                        html += `<td>${fmtBlock(r.totalBlock, r.meaty.onBlock)}</td>`;
+                        html += `</tr>`;
+                    }
+                    html += `</tbody></table></div></div>`;
+                }
+                el.innerHTML = html;
+            }
+
+            let charList = [];
+            const charFileMap = new Map();
+            const charDataCache = new Map();
+            let currentCharData = null;
+
+            function getCharDataUrl(charName) {
+                const file = charFileMap.get(charName) || `${charName}.json`;
+                return `data/${encodeURIComponent(file)}`;
+            }
+
+            async function ensureCharData(charName) {
+                if (!charName) return null;
+                if (charDataCache.has(charName))
+                    return charDataCache.get(charName);
+                const resp = await fetch(getCharDataUrl(charName));
+                if (!resp.ok)
+                    throw new Error(`${charName}: HTTP ${resp.status}`);
+                const data = await resp.json();
+                charDataCache.set(charName, data);
+                return data;
+            }
+
+            function renderKdMoveSelect(charName) {
+                const sel = document.getElementById("kdMoveSelect");
+                const prev = sel.value;
+                if (!currentCharData || !charName) {
+                    sel.innerHTML = `<option value="">${t("kd_move_all")}</option>`;
+                    return;
+                }
+                const moves = extractMoves(currentCharData);
+                const kdMoves = moves.filter((m) => m.knockdowns.length > 0);
+                sel.innerHTML =
+                    `<option value="">${t("kd_move_all")}</option>` +
+                    kdMoves
+                        .map((m) => {
+                            const label = `${tMove(m.name)} (${m.cmd})`;
+                            return `<option value="${m.cmd}">${label}</option>`;
+                        })
+                        .join("");
+                if (prev && [...sel.options].some((o) => o.value === prev))
+                    sel.value = prev;
+            }
+
+            function renderCharSelect() {
+                if (!charList.length) return;
+                const sel = document.getElementById("charSelect");
+                const current = sel.value;
+                sel.innerHTML = charList
+                    .map((c) => `<option value="${c}">${tChar(c)}</option>`)
+                    .join("");
+                // Restore selection by value (value is always the English key)
+                if (current && charList.includes(current)) {
+                    sel.value = current;
+                }
+            }
+
+            async function loadCharIndex() {
+                const resp = await fetch("data/characters.index.json");
+                if (!resp.ok)
+                    throw new Error(
+                        `characters.index.json HTTP ${resp.status}`,
+                    );
+                const payload = await resp.json();
+                if (Array.isArray(payload)) {
+                    return payload.map((name) => ({
+                        name: String(name),
+                        file: `${name}.json`,
+                    }));
+                }
+                return (payload.characters || [])
+                    .map((x) => ({
+                        name: String(x.name || ""),
+                        file: String(x.file || ""),
+                    }))
+                    .filter((x) => x.name);
+            }
+
+            async function loadData() {
+                try {
+                    const indexItems = await loadCharIndex();
+                    charList = indexItems.map((x) => x.name);
+                    charFileMap.clear();
+                    for (const x of indexItems) {
+                        charFileMap.set(x.name, x.file || `${x.name}.json`);
+                    }
+                    if (!charList.length)
+                        throw new Error("No characters in index");
+                    renderCharSelect();
+                    const sel = document.getElementById("charSelect");
+                    const ryuIdx = charList.indexOf("Ryu");
+                    if (ryuIdx >= 0) sel.selectedIndex = ryuIdx;
+                    const selected = sel.value || charList[0];
+                    currentCharData = await ensureCharData(selected);
+                    renderKdMoveSelect(selected);
+                    document.getElementById("calcBtn").disabled = false;
+                    const statusEl = document.getElementById("status");
+                    statusEl.textContent = t("status_loaded", charList.length);
+                    statusEl.dataset.state = "loaded";
+                } catch (e) {
+                    const statusEl = document.getElementById("status");
+                    statusEl.textContent = t("status_failed", e.message);
+                    statusEl.dataset.state = "error";
+                }
+            }
+
+            async function calculate() {
+                const charName = document.getElementById("charSelect").value;
+                const charData = await ensureCharData(charName);
+                currentCharData = charData;
+                if (!charData) return;
+
+                const moves = extractMoves(charData);
+                const opts = {
+                    kdMoveFilter:
+                        document.getElementById("kdMoveSelect").value || null,
+                    hitTypeFilter: document.getElementById("hitType").value,
+                    maxPrefix: parseInt(
+                        document.getElementById("maxPrefix").value,
+                    ),
+                    safeOnly: document.getElementById("safeOnly").checked,
+                    cancelOnly: document.getElementById("cancelOnly").checked,
+                    noSpKd: document.getElementById("noSpKd").checked,
+                    firstAny: document.getElementById("firstAny").checked,
+                    minAdv:
+                        parseInt(document.getElementById("minAdv").value) ||
+                        -99,
+                    maxDelay:
+                        parseInt(document.getElementById("maxDelay").value) ||
+                        0,
+                };
+
+                const statusEl = document.getElementById("status");
+                statusEl.textContent = t("status_calculating");
+                statusEl.dataset.state = "calculating";
+                setTimeout(() => {
+                    const results = calcMeatys(moves, opts);
+                    _lastResults = { list: results, total: results.length };
+                    statusEl.textContent = t(
+                        "status_result",
+                        charName,
+                        results.length,
+                    );
+                    statusEl.dataset.state = "result";
+                    renderResults(results);
+                }, 10);
+            }
+
+            document
+                .getElementById("calcBtn")
+                .addEventListener("click", calculate);
+            document
+                .getElementById("effectiveOnly")
+                .addEventListener("change", () => {
+                    if (_lastResults) renderResults(_lastResults.list);
+                });
+            document
+                .getElementById("charSelect")
+                .addEventListener("change", async () => {
+                    _lastResults = null;
+                    currentCharData = await ensureCharData(
+                        document.getElementById("charSelect").value,
+                    );
+                    renderKdMoveSelect(
+                        document.getElementById("charSelect").value,
+                    );
+                    await calculate();
+                });
+
+            loadDataTranslations(currentLang).then(() => {
+                applyLang();
+                loadData().then(() => calculate());
+            });
+
+            // ---------------------------------------------------------------------------
+            // ELO Calculator
+            // ---------------------------------------------------------------------------
+            function calculateEloWinProbability(ratingA, ratingB) {
+                return 1 / (1 + Math.pow(10, (ratingB - ratingA) / 400));
+            }
+
+            function binomialCoefficient(n, k) {
+                if (k < 0 || k > n) return 0;
+                if (k === 0 || k === n) return 1;
+                let result = 1;
+                for (let i = 1; i <= k; i++) {
+                    result *= (n - i + 1) / i;
+                }
+                return result;
+            }
+
+            function calculateBestOfWinProbability(gameWinProb, bestOf) {
+                const winsNeeded = Math.ceil(bestOf / 2);
+                let totalProb = 0;
+                for (let losses = 0; losses < winsNeeded; losses++) {
+                    const wins = winsNeeded;
+                    const totalGames = wins + losses;
+                    const combinations = binomialCoefficient(
+                        totalGames - 1,
+                        wins - 1,
+                    );
+                    const probability =
+                        combinations *
                         Math.pow(gameWinProb, wins) *
                         Math.pow(1 - gameWinProb, losses);
-    totalProb += probability;
-  }
-  return totalProb;
-}
+                    totalProb += probability;
+                }
+                return totalProb;
+            }
 
-function eloCalculate() {
-  const ratingA = parseFloat(document.getElementById('ratingA').value);
-  const ratingB = parseFloat(document.getElementById('ratingB').value);
-  const matchType = parseInt(document.getElementById('matchType').value);
+            function eloCalculate() {
+                const ratingA = parseFloat(
+                    document.getElementById("ratingA").value,
+                );
+                const ratingB = parseFloat(
+                    document.getElementById("ratingB").value,
+                );
+                const matchType = parseInt(
+                    document.getElementById("matchType").value,
+                );
 
-  const gameWinProbA = calculateEloWinProbability(ratingA, ratingB);
-  const gameWinProbB = 1 - gameWinProbA;
+                const gameWinProbA = calculateEloWinProbability(
+                    ratingA,
+                    ratingB,
+                );
+                const gameWinProbB = 1 - gameWinProbA;
 
-  const setWinProbA = calculateBestOfWinProbability(gameWinProbA, 3);
-  const setWinProbB = 1 - setWinProbA;
+                const setWinProbA = calculateBestOfWinProbability(
+                    gameWinProbA,
+                    3,
+                );
+                const setWinProbB = 1 - setWinProbA;
 
-  const matchWinProbA = calculateBestOfWinProbability(setWinProbA, matchType);
-  const matchWinProbB = 1 - matchWinProbA;
+                const matchWinProbA = calculateBestOfWinProbability(
+                    setWinProbA,
+                    matchType,
+                );
+                const matchWinProbB = 1 - matchWinProbA;
 
-  document.getElementById('matchHeader').textContent = t('elo_match_winrate', matchType);
+                document.getElementById("matchHeader").textContent = t(
+                    "elo_match_winrate",
+                    matchType,
+                );
 
-  document.getElementById('singleWinRateA').textContent = (gameWinProbA * 100).toFixed(2) + '%';
-  document.getElementById('singleWinRateB').textContent = (gameWinProbB * 100).toFixed(2) + '%';
-  document.getElementById('setWinRateA').textContent = (setWinProbA * 100).toFixed(2) + '%';
-  document.getElementById('setWinRateB').textContent = (setWinProbB * 100).toFixed(2) + '%';
-  document.getElementById('matchWinRateA').textContent = (matchWinProbA * 100).toFixed(2) + '%';
-  document.getElementById('matchWinRateB').textContent = (matchWinProbB * 100).toFixed(2) + '%';
+                document.getElementById("singleWinRateA").textContent =
+                    (gameWinProbA * 100).toFixed(2) + "%";
+                document.getElementById("singleWinRateB").textContent =
+                    (gameWinProbB * 100).toFixed(2) + "%";
+                document.getElementById("setWinRateA").textContent =
+                    (setWinProbA * 100).toFixed(2) + "%";
+                document.getElementById("setWinRateB").textContent =
+                    (setWinProbB * 100).toFixed(2) + "%";
+                document.getElementById("matchWinRateA").textContent =
+                    (matchWinProbA * 100).toFixed(2) + "%";
+                document.getElementById("matchWinRateB").textContent =
+                    (matchWinProbB * 100).toFixed(2) + "%";
 
-  document.getElementById('elo-results').classList.add('show');
-}
+                document.getElementById("elo-results").classList.add("show");
+            }
 
-document.getElementById('ratingA').addEventListener('keypress', e => { if (e.key === 'Enter') eloCalculate(); });
-document.getElementById('ratingB').addEventListener('keypress', e => { if (e.key === 'Enter') eloCalculate(); });
+            document
+                .getElementById("ratingA")
+                .addEventListener("keypress", (e) => {
+                    if (e.key === "Enter") eloCalculate();
+                });
+            document
+                .getElementById("ratingB")
+                .addEventListener("keypress", (e) => {
+                    if (e.key === "Enter") eloCalculate();
+                });
 
-// ---------------------------------------------------------------------------
-// Tab switching
-// ---------------------------------------------------------------------------
-document.querySelectorAll('.tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.tab, .tab-panel').forEach(el => el.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
-  });
-});
-</script>
-</body>
+            // ---------------------------------------------------------------------------
+            // Tab switching
+            // ---------------------------------------------------------------------------
+            document.querySelectorAll(".tab").forEach((tab) => {
+                tab.addEventListener("click", () => {
+                    document
+                        .querySelectorAll(".tab, .tab-panel")
+                        .forEach((el) => el.classList.remove("active"));
+                    tab.classList.add("active");
+                    document
+                        .getElementById("tab-" + tab.dataset.tab)
+                        .classList.add("active");
+                });
+            });
+        </script>
+    </body>
 </html>

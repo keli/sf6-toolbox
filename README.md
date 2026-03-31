@@ -15,6 +15,11 @@ python3 -m http.server
 
 支持中英文切换。
 
+数据加载方式（Meaty 计算器）：
+- 先读取 `data/characters.index.json` 角色索引
+- 再按角色按需读取 `data/<角色名>.json`
+- FAT 原始版本对应 `data/<角色名>.fat.json`
+
 ---
 
 ## Meaty 计算器
@@ -69,19 +74,50 @@ meaty 条件：S <= K <= S+A-1
 
 ## 更新数据
 
-```bash
-curl -L "https://raw.githubusercontent.com/D4RKONION/FAT/master/src/js/constants/framedata/SF6FrameData.json" -o data/sf6framedata.json
+当前流程分两步：
 
-# 或者
-wget -O data/sf6framedata.json "https://raw.githubusercontent.com/D4RKONION/FAT/master/src/js/constants/framedata/SF6FrameData.json"
+```bash
+python3 build_character_data.py fetch
 ```
+
+- `fetch` 会：
+  - 读取完整 FAT 基线（默认 `data/sf6framedata.json`）
+  - 抓取每个角色的 SuperCombo 页面并解析
+  - 生成每角色源文件到 `data/`：
+    - `角色名.fat.json`
+    - `角色名.supercombo.json`
+  - 更新 `data/characters.index.json`（前端角色索引）
+
+如果要先在线下载最新 FAT 基线，再执行上面的流程：
+
+```bash
+python3 build_character_data.py fetch --download-base
+```
+
+对比审阅时执行：
+
+```bash
+python3 build_character_data.py review
+```
+
+- `review` 会：
+  - 直接读取 `data/角色名.supercombo.json`（不依赖聚合 supercombo 文件）
+  - 对 FAT 与 SuperCombo 做字段对比
+  - 生成每角色冲突文件 `角色名.conflicts.csv`
+  - 生成总表 `data/sf6framedata.conflicts.csv`
 
 ## 文件结构
 
 ```
 sf6-toolbox/
+├── build_character_data.py  # 抓取 SuperCombo 并生成按角色源数据/冲突清单
 ├── index.html              # 网页工具集
 ├── data/
-│   └── sf6framedata.json   # 完整数据源
+│   ├── sf6framedata.json           # FAT 基线数据（完整）
+│   ├── characters.index.json       # 角色索引（前端先读取）
+│   ├── 角色名.json                  # 正式使用数据（你人工/AI校对后维护）
+│   ├── 角色名.fat.json              # FAT 来源数据
+│   ├── 角色名.supercombo.json       # SuperCombo 来源数据
+│   └── 角色名.conflicts.csv         # 该角色冲突清单
 └── README.md
 ```

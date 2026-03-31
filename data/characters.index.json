@@ -1,0 +1,237 @@
+{
+  "characters": [
+    {
+      "conflictsFile": "A.K.I.conflicts.csv",
+      "fatFile": "A.K.I.fat.json",
+      "file": "A.K.I.json",
+      "hasSupercombo": true,
+      "name": "A.K.I.",
+      "supercomboFile": "A.K.I.supercombo.json"
+    },
+    {
+      "conflictsFile": "Akuma.conflicts.csv",
+      "fatFile": "Akuma.fat.json",
+      "file": "Akuma.json",
+      "hasSupercombo": true,
+      "name": "Akuma",
+      "supercomboFile": "Akuma.supercombo.json"
+    },
+    {
+      "conflictsFile": "Alex.conflicts.csv",
+      "fatFile": "Alex.fat.json",
+      "file": "Alex.json",
+      "hasSupercombo": true,
+      "name": "Alex",
+      "supercomboFile": "Alex.supercombo.json"
+    },
+    {
+      "conflictsFile": "Blanka.conflicts.csv",
+      "fatFile": "Blanka.fat.json",
+      "file": "Blanka.json",
+      "hasSupercombo": true,
+      "name": "Blanka",
+      "supercomboFile": "Blanka.supercombo.json"
+    },
+    {
+      "conflictsFile": "C.Viper.conflicts.csv",
+      "fatFile": "C.Viper.fat.json",
+      "file": "C.Viper.json",
+      "hasSupercombo": true,
+      "name": "C.Viper",
+      "supercomboFile": "C.Viper.supercombo.json"
+    },
+    {
+      "conflictsFile": "Cammy.conflicts.csv",
+      "fatFile": "Cammy.fat.json",
+      "file": "Cammy.json",
+      "hasSupercombo": true,
+      "name": "Cammy",
+      "supercomboFile": "Cammy.supercombo.json"
+    },
+    {
+      "conflictsFile": "Chun-Li.conflicts.csv",
+      "fatFile": "Chun-Li.fat.json",
+      "file": "Chun-Li.json",
+      "hasSupercombo": true,
+      "name": "Chun-Li",
+      "supercomboFile": "Chun-Li.supercombo.json"
+    },
+    {
+      "conflictsFile": "Dee Jay.conflicts.csv",
+      "fatFile": "Dee Jay.fat.json",
+      "file": "Dee Jay.json",
+      "hasSupercombo": true,
+      "name": "Dee Jay",
+      "supercomboFile": "Dee Jay.supercombo.json"
+    },
+    {
+      "conflictsFile": "Dhalsim.conflicts.csv",
+      "fatFile": "Dhalsim.fat.json",
+      "file": "Dhalsim.json",
+      "hasSupercombo": true,
+      "name": "Dhalsim",
+      "supercomboFile": "Dhalsim.supercombo.json"
+    },
+    {
+      "conflictsFile": "E.Honda.conflicts.csv",
+      "fatFile": "E.Honda.fat.json",
+      "file": "E.Honda.json",
+      "hasSupercombo": true,
+      "name": "E.Honda",
+      "supercomboFile": "E.Honda.supercombo.json"
+    },
+    {
+      "conflictsFile": "Ed.conflicts.csv",
+      "fatFile": "Ed.fat.json",
+      "file": "Ed.json",
+      "hasSupercombo": true,
+      "name": "Ed",
+      "supercomboFile": "Ed.supercombo.json"
+    },
+    {
+      "conflictsFile": "Elena.conflicts.csv",
+      "fatFile": "Elena.fat.json",
+      "file": "Elena.json",
+      "hasSupercombo": true,
+      "name": "Elena",
+      "supercomboFile": "Elena.supercombo.json"
+    },
+    {
+      "conflictsFile": "Guile.conflicts.csv",
+      "fatFile": "Guile.fat.json",
+      "file": "Guile.json",
+      "hasSupercombo": true,
+      "name": "Guile",
+      "supercomboFile": "Guile.supercombo.json"
+    },
+    {
+      "conflictsFile": "JP.conflicts.csv",
+      "fatFile": "JP.fat.json",
+      "file": "JP.json",
+      "hasSupercombo": true,
+      "name": "JP",
+      "supercomboFile": "JP.supercombo.json"
+    },
+    {
+      "conflictsFile": "Jamie.conflicts.csv",
+      "fatFile": "Jamie.fat.json",
+      "file": "Jamie.json",
+      "hasSupercombo": true,
+      "name": "Jamie",
+      "supercomboFile": "Jamie.supercombo.json"
+    },
+    {
+      "conflictsFile": "Juri.conflicts.csv",
+      "fatFile": "Juri.fat.json",
+      "file": "Juri.json",
+      "hasSupercombo": true,
+      "name": "Juri",
+      "supercomboFile": "Juri.supercombo.json"
+    },
+    {
+      "conflictsFile": "Ken.conflicts.csv",
+      "fatFile": "Ken.fat.json",
+      "file": "Ken.json",
+      "hasSupercombo": true,
+      "name": "Ken",
+      "supercomboFile": "Ken.supercombo.json"
+    },
+    {
+      "conflictsFile": "Kimberly.conflicts.csv",
+      "fatFile": "Kimberly.fat.json",
+      "file": "Kimberly.json",
+      "hasSupercombo": true,
+      "name": "Kimberly",
+      "supercomboFile": "Kimberly.supercombo.json"
+    },
+    {
+      "conflictsFile": "Lily.conflicts.csv",
+      "fatFile": "Lily.fat.json",
+      "file": "Lily.json",
+      "hasSupercombo": true,
+      "name": "Lily",
+      "supercomboFile": "Lily.supercombo.json"
+    },
+    {
+      "conflictsFile": "Luke.conflicts.csv",
+      "fatFile": "Luke.fat.json",
+      "file": "Luke.json",
+      "hasSupercombo": true,
+      "name": "Luke",
+      "supercomboFile": "Luke.supercombo.json"
+    },
+    {
+      "conflictsFile": "M.Bison.conflicts.csv",
+      "fatFile": "M.Bison.fat.json",
+      "file": "M.Bison.json",
+      "hasSupercombo": true,
+      "name": "M.Bison",
+      "supercomboFile": "M.Bison.supercombo.json"
+    },
+    {
+      "conflictsFile": "Mai.conflicts.csv",
+      "fatFile": "Mai.fat.json",
+      "file": "Mai.json",
+      "hasSupercombo": true,
+      "name": "Mai",
+      "supercomboFile": "Mai.supercombo.json"
+    },
+    {
+      "conflictsFile": "Manon.conflicts.csv",
+      "fatFile": "Manon.fat.json",
+      "file": "Manon.json",
+      "hasSupercombo": true,
+      "name": "Manon",
+      "supercomboFile": "Manon.supercombo.json"
+    },
+    {
+      "conflictsFile": "Marisa.conflicts.csv",
+      "fatFile": "Marisa.fat.json",
+      "file": "Marisa.json",
+      "hasSupercombo": true,
+      "name": "Marisa",
+      "supercomboFile": "Marisa.supercombo.json"
+    },
+    {
+      "conflictsFile": "Rashid.conflicts.csv",
+      "fatFile": "Rashid.fat.json",
+      "file": "Rashid.json",
+      "hasSupercombo": true,
+      "name": "Rashid",
+      "supercomboFile": "Rashid.supercombo.json"
+    },
+    {
+      "conflictsFile": "Ryu.conflicts.csv",
+      "fatFile": "Ryu.fat.json",
+      "file": "Ryu.json",
+      "hasSupercombo": true,
+      "name": "Ryu",
+      "supercomboFile": "Ryu.supercombo.json"
+    },
+    {
+      "conflictsFile": "Sagat.conflicts.csv",
+      "fatFile": "Sagat.fat.json",
+      "file": "Sagat.json",
+      "hasSupercombo": true,
+      "name": "Sagat",
+      "supercomboFile": "Sagat.supercombo.json"
+    },
+    {
+      "conflictsFile": "Terry.conflicts.csv",
+      "fatFile": "Terry.fat.json",
+      "file": "Terry.json",
+      "hasSupercombo": true,
+      "name": "Terry",
+      "supercomboFile": "Terry.supercombo.json"
+    },
+    {
+      "conflictsFile": "Zangief.conflicts.csv",
+      "fatFile": "Zangief.fat.json",
+      "file": "Zangief.json",
+      "hasSupercombo": true,
+      "name": "Zangief",
+      "supercomboFile": "Zangief.supercombo.json"
+    }
+  ],
+  "generatedAt": "2026-03-31T03:54:55.330405+00:00"
+}
