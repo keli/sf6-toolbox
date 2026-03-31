@@ -4,25 +4,92 @@
   "notes": [
     "Manually reviewed Juri.conflicts.csv line by line.",
     "Applied stable overrides for normal category in this pass.",
-    "Only index-friendly and semantically clear values are applied."
+    "Preserved SuperCombo/FAT-style range and variant semantics where present."
   ],
   "entries": [
-    {"category": "normal", "move": "Stand MK", "set": {"startup": "5"}},
-    {"category": "normal", "move": "Stand HK", "set": {"onHit": "2", "onPC": "KD +42"}},
-    {"category": "normal", "move": "Neutral Jump HK", "set": {"onHit": "11", "onBlock": "7", "onPC": "15"}},
-    {"category": "normal", "move": "Renko Kicks", "set": {"startup": "15"}},
-    {"category": "normal", "move": "Korenzan", "set": {"startup": "10"}},
-    {"category": "normal", "move": "Shadow Kick Throw", "set": {"onPC": "HKD +18"}},
-    {"category": "normal", "move": "Drive Impact: Sekkan Kick", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
-    {"category": "normal", "move": "Drive Reversal: Kaita Raid", "set": {"startup": "18"}},
-    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
-    {"category": "normal", "move": "Ankensatsu", "set": {"onBlock": "-8"}},
-    {"category": "normal", "move": "OD Ankensatsu", "set": {"onBlock": "-8"}},
-    {"category": "normal", "move": "Go Ohsatsu", "set": {"onHit": "KD +37", "onBlock": "-12", "onPC": "KD +37"}},
-    {"category": "normal", "move": "MP Tenserin", "set": {"recovery": "24"}},
-    {"category": "normal", "move": "HP Tenserin", "set": {"recovery": "24"}},
-    {"category": "normal", "move": "OD Tenserin", "set": {"recovery": "32"}},
-    {"category": "normal", "move": "Sakkai Fuhazan (0 stock)", "set": {"recovery": "201", "onHit": "KD +26", "onPC": "KD +26"}},
-    {"category": "normal", "move": "Kaisen Dankai Raku", "set": {"onHit": "HKD +20", "onPC": "HKD +20"}}
+    { "category": "normal", "move": "Ankensatsu", "set": { "onBlock": "-8" } },
+    {
+      "category": "normal",
+      "move": "Drive Impact: Sekkan Kick",
+      "set": {
+        "onHit": "KD +35 / Wall Splat KD +65",
+        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Parry",
+      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Kaita Raid",
+      "set": { "startup": "18" }
+    },
+    {
+      "category": "normal",
+      "move": "Go Ohsatsu",
+      "set": { "onHit": "KD +37", "onBlock": "-12", "onPC": "KD +37" }
+    },
+    {
+      "category": "normal",
+      "move": "HP Tenserin",
+      "set": { "recovery": "24+14 land" }
+    },
+    {
+      "category": "normal",
+      "move": "Kaisen Dankai Raku",
+      "set": { "onHit": "HKD +20", "onPC": "HKD +20" }
+    },
+    {
+      "category": "normal",
+      "move": "Korenzan",
+      "set": { "startup": "10(19)" }
+    },
+    {
+      "category": "normal",
+      "move": "MP Tenserin",
+      "set": { "recovery": "24+14 land" }
+    },
+    {
+      "category": "normal",
+      "move": "Neutral Jump HK",
+      "set": { "onHit": "11(+15)", "onBlock": "7(+11)", "onPC": "15(+19)" }
+    },
+    {
+      "category": "normal",
+      "move": "OD Ankensatsu",
+      "set": { "onBlock": "-8" }
+    },
+    {
+      "category": "normal",
+      "move": "OD Tenserin",
+      "set": { "recovery": "32+19 land" }
+    },
+    {
+      "category": "normal",
+      "move": "Renko Kicks",
+      "set": { "startup": "15(23)" }
+    },
+    {
+      "category": "normal",
+      "move": "Sakkai Fuhazan (0 stock)",
+      "set": {
+        "recovery": "201 total",
+        "onHit": "KD +26(+49)",
+        "onPC": "KD +26(+49)"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Shadow Kick Throw",
+      "set": { "onPC": "HKD +18" }
+    },
+    {
+      "category": "normal",
+      "move": "Stand HK",
+      "set": { "onHit": "+2(+5)", "onPC": "KD +42(+45) Launch" }
+    },
+    { "category": "normal", "move": "Stand MK", "set": { "startup": "5(8)" } }
   ]
 }

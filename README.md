@@ -112,18 +112,36 @@ python3 build_character_data.py review
 python3 build_character_data.py review --review-base final
 ```
 
+## 人工/AI 校对与覆盖
+
+生成冲突文件后，根据 `AI_REVIEW_GUIDE.md` 的说明，逐角色审阅 `角色名.conflicts.csv`，将需要修正的值写入 `data/角色名.overrides.json`。
+
+写好覆盖文件后，执行 apply 脚本生成最终 `角色名.json`：
+
+```bash
+python3 apply_character_overrides.py
+```
+
+选项：
+- `--apply-base fat`（默认）：从 `角色名.fat.json` 开始应用覆盖
+- `--apply-base final`：从现有 `角色名.json` 开始应用覆盖（追加修正）
+- `--strict`：启用值格式校验
+
 ## 文件结构
 
 ```
 sf6-toolbox/
-├── build_character_data.py  # 抓取 SuperCombo 并生成按角色源数据/冲突清单
-├── index.html              # 网页工具集
+├── build_character_data.py         # 抓取 SuperCombo 并生成按角色源数据/冲突清单
+├── apply_character_overrides.py    # 将 overrides.json 应用到 fat.json 生成最终数据
+├── AI_REVIEW_GUIDE.md              # AI 校对工作流说明
+├── index.html                      # 网页工具集
 ├── data/
 │   ├── sf6framedata.json           # FAT 基线数据（完整）
 │   ├── characters.index.json       # 角色索引（前端先读取）
-│   ├── 角色名.json                  # 正式使用数据（你人工/AI校对后维护）
+│   ├── 角色名.json                  # 正式使用数据（apply 脚本生成）
 │   ├── 角色名.fat.json              # FAT 来源数据
 │   ├── 角色名.supercombo.json       # SuperCombo 来源数据
-│   └── 角色名.conflicts.csv         # 该角色冲突清单
+│   ├── 角色名.conflicts.csv         # 该角色冲突清单
+│   └── 角色名.overrides.json        # 人工/AI 校对后的覆盖值
 └── README.md
 ```

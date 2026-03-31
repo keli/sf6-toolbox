@@ -3,33 +3,154 @@
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
     "Manually reviewed Elena.conflicts.csv line by line.",
-    "Only index-friendly and semantically clear values are applied."
+    "Preserved SuperCombo/FAT-style range and variant semantics where present."
   ],
   "entries": [
-    {"category": "normal", "move": "Stand MP", "set": {"onHit": "3", "onPC": "7"}},
-    {"category": "normal", "move": "Slide", "set": {"onHit": "HKD +31", "onPC": "HKD +46"}},
-    {"category": "normal", "move": "Drive Impact: Giraffe Neck", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
-    {"category": "normal", "move": "Drive Reversal: Boar Charge", "set": {"startup": "18"}},
-    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
-    {"category": "normal", "move": "Taunt", "set": {"startup": "685"}},
-    {"category": "normal", "move": "LK Rhino Horn", "set": {"recovery": "3", "onHit": "KD +39", "onPC": "KD +39"}},
-    {"category": "normal", "move": "MK Rhino Horn", "set": {"recovery": "3", "onHit": "KD +39", "onPC": "KD +39"}},
-    {"category": "normal", "move": "HK Rhino Horn", "set": {"recovery": "3", "onHit": "KD +40", "onPC": "KD +40"}},
-    {"category": "normal", "move": "OD Rhino Horn", "set": {"active": "7", "recovery": "3", "onHit": "KD +43", "onBlock": "-9", "onPC": "KD +43"}},
-    {"category": "normal", "move": "LK Scratch Wheel", "set": {"recovery": "25"}},
-    {"category": "normal", "move": "MK Scratch Wheel", "set": {"active": "3", "recovery": "30"}},
-    {"category": "normal", "move": "HK Scratch Wheel", "set": {"active": "2", "recovery": "34"}},
-    {"category": "normal", "move": "OD Scratch Wheel", "set": {"active": "4", "recovery": "24"}},
-    {"category": "normal", "move": "LP Lynx Song", "set": {"startup": "13"}},
-    {"category": "normal", "move": "MP Lynx Song", "set": {"startup": "13"}},
-    {"category": "normal", "move": "HP Lynx Song", "set": {"startup": "16"}},
-    {"category": "normal", "move": "OD Lynx Song (Lynx Whirl)", "set": {"startup": "15"}},
-    {"category": "normal", "move": "LK Spin Scythe", "set": {"active": "4"}},
-    {"category": "normal", "move": "MK Spin Scythe", "set": {"active": "4"}},
-    {"category": "normal", "move": "HK Spin Scythe", "set": {"active": "4"}},
-    {"category": "normal", "move": "OD Spin Scythe", "set": {"active": "4"}},
-    {"category": "normal", "move": "Meteor Volley", "set": {"recovery": "24", "onHit": "KD +44", "onPC": "KD +44"}},
-    {"category": "normal", "move": "Revival Dance", "set": {"onHit": "HKD +25", "onPC": "HKD +25"}},
-    {"category": "normal", "move": "Song of the Grasslands", "set": {"onHit": "HKD +29", "onPC": "HKD +29"}}
+    {
+      "category": "normal",
+      "move": "Drive Impact: Giraffe Neck",
+      "set": {
+        "onHit": "KD +35 / Wall Splat KD +65",
+        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Parry",
+      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Boar Charge",
+      "set": { "startup": "18" }
+    },
+    {
+      "category": "normal",
+      "move": "HK Rhino Horn",
+      "set": {
+        "recovery": "3+13(17) land",
+        "onHit": "KD +40~45",
+        "onPC": "KD +40~45"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HK Scratch Wheel",
+      "set": { "active": "2,2,2", "recovery": "34+14 land" }
+    },
+    {
+      "category": "normal",
+      "move": "HK Spin Scythe",
+      "set": { "active": "4(17)3(22)5(2)2" }
+    },
+    {
+      "category": "normal",
+      "move": "HP Lynx Song",
+      "set": { "startup": "16(19)~" }
+    },
+    {
+      "category": "normal",
+      "move": "LK Rhino Horn",
+      "set": {
+        "recovery": "3+13(16) land",
+        "onHit": "KD +39~44",
+        "onPC": "KD +39~44"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "LK Scratch Wheel",
+      "set": { "recovery": "25+14 land" }
+    },
+    {
+      "category": "normal",
+      "move": "LK Spin Scythe",
+      "set": { "active": "4(14)3(24)2(3)3" }
+    },
+    {
+      "category": "normal",
+      "move": "LP Lynx Song",
+      "set": { "startup": "13(16)~" }
+    },
+    {
+      "category": "normal",
+      "move": "MK Rhino Horn",
+      "set": {
+        "recovery": "3+13(17) land",
+        "onHit": "KD +39~44",
+        "onPC": "KD +39~44"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MK Scratch Wheel",
+      "set": { "active": "3,3", "recovery": "30+14 land" }
+    },
+    {
+      "category": "normal",
+      "move": "MK Spin Scythe",
+      "set": { "active": "4(19)3(22)5(2)2" }
+    },
+    {
+      "category": "normal",
+      "move": "MP Lynx Song",
+      "set": { "startup": "13(18)~" }
+    },
+    {
+      "category": "normal",
+      "move": "Meteor Volley",
+      "set": { "recovery": "24+31 land", "onHit": "KD +44", "onPC": "KD +44" }
+    },
+    {
+      "category": "normal",
+      "move": "OD Lynx Song (Lynx Whirl)",
+      "set": { "startup": "15(18)~" }
+    },
+    {
+      "category": "normal",
+      "move": "OD Rhino Horn",
+      "set": {
+        "active": "7(7)4,7",
+        "recovery": "3+10(16) land",
+        "onHit": "KD +43~49",
+        "onBlock": "-9(-4)",
+        "onPC": "KD +43~49"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Scratch Wheel",
+      "set": { "active": "4,2(12)2(1)2", "recovery": "24+20 land" }
+    },
+    {
+      "category": "normal",
+      "move": "OD Spin Scythe",
+      "set": { "active": "4(12)3(24)2(3)3" }
+    },
+    {
+      "category": "normal",
+      "move": "Revival Dance",
+      "set": { "onHit": "HKD +25", "onPC": "HKD +25" }
+    },
+    {
+      "category": "normal",
+      "move": "Slide",
+      "set": { "onHit": "HKD +31(+39)", "onPC": "HKD +46(+54)" }
+    },
+    {
+      "category": "normal",
+      "move": "Song of the Grasslands",
+      "set": { "onHit": "HKD +29", "onPC": "HKD +29" }
+    },
+    {
+      "category": "normal",
+      "move": "Stand MP",
+      "set": { "onHit": "+3(+5)", "onPC": "+7(+9)" }
+    },
+    {
+      "category": "normal",
+      "move": "Taunt",
+      "set": { "startup": "685 (total)" }
+    }
   ]
 }

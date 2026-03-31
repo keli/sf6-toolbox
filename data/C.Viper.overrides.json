@@ -3,24 +3,92 @@
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
     "Manually reviewed C.Viper.conflicts.csv line by line.",
-    "Only index-friendly and semantically clear values are applied."
+    "Preserved SuperCombo/FAT-style range and variant semantics where present."
   ],
   "entries": [
-    {"category": "normal", "move": "Stand HP", "set": {"onBlock": "-2"}},
-    {"category": "normal", "move": "Crouch MP", "set": {"active": "4", "recovery": "16"}},
-    {"category": "normal", "move": "Neutral Jump HK", "set": {"onHit": "11", "onBlock": "6", "onPC": "15"}},
-    {"category": "normal", "move": "Drive Impact: Viper Cannon", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
-    {"category": "normal", "move": "Drive Reversal: Counter Spark", "set": {"startup": "18"}},
-    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
-    {"category": "normal", "move": "LP Thunder Dash", "set": {"startup": "17", "onHit": "1", "onPC": "5"}},
-    {"category": "normal", "move": "MP Thunder Dash", "set": {"startup": "16", "onHit": "1", "onPC": "5"}},
-    {"category": "normal", "move": "HP Thunder Dash", "set": {"startup": "7", "recovery": "15", "onHit": "KD +21", "onPC": "KD +21"}},
-    {"category": "normal", "move": "LK Burning Kick", "set": {"recovery": "7", "onBlock": "-2"}},
-    {"category": "normal", "move": "MK Burning Kick", "set": {"recovery": "7", "onBlock": "-2"}},
-    {"category": "normal", "move": "HK Burning Kick", "set": {"recovery": "7", "onBlock": "-2"}},
-    {"category": "normal", "move": "OD Burning Kick", "set": {"recovery": "8"}},
-    {"category": "normal", "move": "Seismic Hammer", "set": {"startup": "24"}},
-    {"category": "normal", "move": "Limit Decoupler", "set": {"recovery": "22"}},
-    {"category": "normal", "move": "Hard Luck Rejector", "set": {"onHit": "HKD +23", "onPC": "HKD +23"}}
+    {
+      "category": "normal",
+      "move": "Crouch MP",
+      "set": { "active": "4", "recovery": "16" }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Impact: Viper Cannon",
+      "set": {
+        "onHit": "KD +35 / Wall Splat KD +65",
+        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Parry",
+      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Counter Spark",
+      "set": { "startup": "18" }
+    },
+    {
+      "category": "normal",
+      "move": "HK Burning Kick",
+      "set": { "recovery": "7+13 land", "onBlock": "-2(+2)" }
+    },
+    {
+      "category": "normal",
+      "move": "HP Thunder Dash",
+      "set": {
+        "startup": "7",
+        "recovery": "15+22 land",
+        "onHit": "KD +21 (KD +18~35)",
+        "onPC": "KD +21 (KD +18~35)"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Hard Luck Rejector",
+      "set": { "onHit": "HKD +23", "onPC": "HKD +23" }
+    },
+    {
+      "category": "normal",
+      "move": "LK Burning Kick",
+      "set": { "recovery": "7+13 land", "onBlock": "-2(+2)" }
+    },
+    {
+      "category": "normal",
+      "move": "LP Thunder Dash",
+      "set": { "startup": "17", "onHit": "+1(+4)", "onPC": "+5(8)" }
+    },
+    {
+      "category": "normal",
+      "move": "Limit Decoupler",
+      "set": { "recovery": "22+31 land" }
+    },
+    {
+      "category": "normal",
+      "move": "MK Burning Kick",
+      "set": { "recovery": "7+13 land", "onBlock": "-2(+2)" }
+    },
+    {
+      "category": "normal",
+      "move": "MP Thunder Dash",
+      "set": { "startup": "16", "onHit": "+1(+4)", "onPC": "+5(+8)" }
+    },
+    {
+      "category": "normal",
+      "move": "Neutral Jump HK",
+      "set": { "onHit": "11(+16)", "onBlock": "6(+11)", "onPC": "15(+20)" }
+    },
+    {
+      "category": "normal",
+      "move": "OD Burning Kick",
+      "set": { "recovery": "8+13 land" }
+    },
+    {
+      "category": "normal",
+      "move": "Seismic Hammer",
+      "set": { "startup": "24" }
+    },
+    { "category": "normal", "move": "Stand HP", "set": { "onBlock": "-2" } }
   ]
 }

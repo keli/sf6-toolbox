@@ -1035,21 +1035,58 @@
                             (k) =>
                                 k &&
                                 typeof k.type === "string" &&
-                                typeof k.advantage === "number",
+                                (typeof k.advantageMin === "number" ||
+                                    typeof k.advantage === "number"),
                         )
-                        .map((k) => ({
-                            hitType,
-                            kdType: k.type,
-                            advantage: k.advantage,
-                        }));
+                        .map((k) => {
+                            const min =
+                                typeof k.advantageMin === "number"
+                                    ? k.advantageMin
+                                    : k.advantage;
+                            const max =
+                                typeof k.advantageMax === "number"
+                                    ? k.advantageMax
+                                    : min;
+                            return {
+                                hitType,
+                                kdType: k.type,
+                                advantage: min,
+                                advantageMin: min,
+                                advantageMax: max,
+                            };
+                        });
                 }
                 if (typeof val !== "string") return [];
                 const results = [];
-                for (const m of val.matchAll(/(H?KD)\s*\+(\d+)/g)) {
+                for (const m of val.matchAll(
+                    /(H?KD)\s*\+(-?\d+)(?:(?:\s*[~〜-]\s*(-?\d+))|(?:\s*\(\s*\+?\s*(-?\d+)\s*\)))?/g,
+                )) {
+                    const a = parseInt(m[2]);
+                    const b =
+                        m[3] != null
+                            ? parseInt(m[3])
+                            : m[4] != null
+                              ? parseInt(m[4])
+                              : a;
                     results.push({
                         hitType,
                         kdType: m[1],
-                        advantage: parseInt(m[2]),
+                        advantage: Math.min(a, b),
+                        advantageMin: Math.min(a, b),
+                        advantageMax: Math.max(a, b),
+                    });
+                }
+                for (const m of val.matchAll(
+                    /(-?\d+)(?:\s*[~〜-]\s*(-?\d+))?\s*\(\s*(H?KD)\s*\)/g,
+                )) {
+                    const a = parseInt(m[1]);
+                    const b = m[2] != null ? parseInt(m[2]) : a;
+                    results.push({
+                        hitType,
+                        kdType: m[3],
+                        advantage: Math.min(a, b),
+                        advantageMin: Math.min(a, b),
+                        advantageMax: Math.max(a, b),
                     });
                 }
                 return results;
@@ -1363,7 +1400,7 @@
 
                 const groups = new Map();
                 for (const r of results) {
-                    const key = `${r.kdInfo.kdType}|${r.kdInfo.advantage}`;
+                    const key = `${r.kdInfo.kdType}|${r.kdInfo.advantageMin}|${r.kdInfo.advantageMax}`;
                     if (!groups.has(key))
                         groups.set(key, {
                             kdInfo: r.kdInfo,
@@ -1423,7 +1460,12 @@
                     html += `<div class="kd-group${collapsed}">`;
                     html += `<div class="kd-header" onclick="this.parentElement.classList.toggle('collapsed')">`;
                     html += `${srcHtml} `;
-                    html += `<span class="kd-adv">${kdInfo.kdType} +${kdInfo.advantage}</span>`;
+                    const kdAdvText =
+                        typeof kdInfo.advantageMax === "number" &&
+                        kdInfo.advantageMax !== kdInfo.advantageMin
+                            ? `${kdInfo.kdType} +${kdInfo.advantageMin}~${kdInfo.advantageMax}`
+                            : `${kdInfo.kdType} +${kdInfo.advantageMin ?? kdInfo.advantage}`;
+                    html += `<span class="kd-adv">${kdAdvText}</span>`;
                     html += `</div>`;
                     html += `<div class="kd-body"><table><thead><tr>`;
                     html += `<th>${t("th_sequence")}</th><th>${t("th_startup")}</th><th>${t("th_active")}</th><th>${t("th_hit_frame")}</th><th>${t("th_stolen")}</th><th>${t("th_on_hit")}</th><th>${t("th_on_block")}</th>`;

@@ -4,25 +4,103 @@
   "notes": [
     "Manually reviewed Jamie.conflicts.csv line by line.",
     "Applied stable overrides for normal category to avoid drink-state ambiguity in this pass.",
-    "Only index-friendly and semantically clear values are applied."
+    "Preserved SuperCombo/FAT-style range and variant semantics where present."
   ],
   "entries": [
-    {"category": "normal", "move": "Stand LP", "set": {"active": "3", "recovery": "9", "onHit": "2", "onBlock": "-3", "onPC": "6"}},
-    {"category": "normal", "move": "Stand MK", "set": {"onPC": "5"}},
-    {"category": "normal", "move": "Crouch HK", "set": {"active": "2"}},
-    {"category": "normal", "move": "Hermit's Elbow", "set": {"recovery": "21"}},
-    {"category": "normal", "move": "Senei Kick", "set": {"active": "4", "recovery": "19"}},
-    {"category": "normal", "move": "Back Shaver", "set": {"onHit": "KD +23", "onPC": "HKD +23"}},
-    {"category": "normal", "move": "Drive Impact: Vainglory Strike", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
-    {"category": "normal", "move": "Drive Reversal: Leg Sweep", "set": {"startup": "18"}},
-    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
-    {"category": "normal", "move": "The Devil Inside (2 drinks)", "set": {"startup": "188"}},
-    {"category": "normal", "move": "LP Freeflow Strikes", "set": {"recovery": "19", "onHit": "1", "onBlock": "-3", "onPC": "5"}},
-    {"category": "normal", "move": "MP Freeflow Strikes", "set": {"recovery": "19", "onHit": "1", "onBlock": "-3", "onPC": "5"}},
-    {"category": "normal", "move": "HP Freeflow Strikes", "set": {"recovery": "19", "onHit": "1", "onBlock": "-3", "onPC": "5"}},
-    {"category": "normal", "move": "OD Freeflow Strikes", "set": {"recovery": "19", "onHit": "3", "onPC": "7"}},
-    {"category": "normal", "move": "OD Swagger Step", "set": {"onHit": "KD +73", "onPC": "KD +87"}},
-    {"category": "normal", "move": "Breakin'", "set": {"active": "2", "recovery": "74", "onHit": "KD +12", "onBlock": "-60", "onPC": "KD +12"}},
-    {"category": "normal", "move": "Getsuga Saiho", "set": {"onHit": "HKD +18", "onPC": "HKD +18"}}
+    {
+      "category": "normal",
+      "move": "Back Shaver",
+      "set": { "onHit": "KD +23", "onPC": "HKD +23" }
+    },
+    {
+      "category": "normal",
+      "move": "Breakin'",
+      "set": {
+        "active": "2,7(6)5(6)2(7)2(7)2(6)2(6)2(6)2(29)2(9)2(6)2(5)2",
+        "recovery": "74",
+        "onHit": "KD +12",
+        "onBlock": "-60",
+        "onPC": "KD +12"
+      }
+    },
+    { "category": "normal", "move": "Crouch HK", "set": { "active": "2(2)3" } },
+    {
+      "category": "normal",
+      "move": "Drive Impact: Vainglory Strike",
+      "set": {
+        "onHit": "KD +35 / Wall Splat KD +65",
+        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Parry",
+      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Leg Sweep",
+      "set": { "startup": "18" }
+    },
+    {
+      "category": "normal",
+      "move": "Getsuga Saiho",
+      "set": { "onHit": "HKD +18 (KD +14)", "onPC": "HKD +18 (KD +14)" }
+    },
+    {
+      "category": "normal",
+      "move": "HP Freeflow Strikes",
+      "set": { "recovery": "19", "onHit": "+1", "onBlock": "-3", "onPC": "+5" }
+    },
+    {
+      "category": "normal",
+      "move": "Hermit's Elbow",
+      "set": { "recovery": "21(19)" }
+    },
+    {
+      "category": "normal",
+      "move": "LP Freeflow Strikes",
+      "set": { "recovery": "19", "onHit": "+1", "onBlock": "-3", "onPC": "+5" }
+    },
+    {
+      "category": "normal",
+      "move": "MP Freeflow Strikes",
+      "set": { "recovery": "19", "onHit": "+1", "onBlock": "-3", "onPC": "+5" }
+    },
+    {
+      "category": "normal",
+      "move": "OD Freeflow Strikes",
+      "set": { "recovery": "19", "onHit": "+3", "onPC": "+7" }
+    },
+    {
+      "category": "normal",
+      "move": "OD Swagger Step",
+      "set": {
+        "onHit": "KD +73(+81) Tumble",
+        "onPC": "KD +87(+95) Tumble / +155 Wall Splat"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Senei Kick",
+      "set": { "active": "4", "recovery": "19" }
+    },
+    {
+      "category": "normal",
+      "move": "Stand LP",
+      "set": {
+        "active": "3",
+        "recovery": "9",
+        "onHit": "+2",
+        "onBlock": "-3",
+        "onPC": "+6"
+      }
+    },
+    { "category": "normal", "move": "Stand MK", "set": { "onPC": "+5" } },
+    {
+      "category": "normal",
+      "move": "The Devil Inside (2 drinks)",
+      "set": { "startup": "188" }
+    }
   ]
 }

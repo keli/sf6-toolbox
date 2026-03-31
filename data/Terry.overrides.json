@@ -3,31 +3,134 @@
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
     "Manually reviewed Terry.conflicts.csv line by line.",
-    "Only index-friendly and semantically clear values are applied."
+    "Preserved SuperCombo/FAT-style range and variant semantics where present."
   ],
   "entries": [
-    {"category": "normal", "move": "Stand HP", "set": {"active": "1"}},
-    {"category": "normal", "move": "Crouch MP", "set": {"recovery": "13"}},
-    {"category": "normal", "move": "Crouch HP", "set": {"active": "6", "recovery": "22", "onBlock": "-4"}},
-    {"category": "normal", "move": "Hammer Punch", "set": {"onBlock": "-3"}},
-    {"category": "normal", "move": "Drive Impact: Back Spin Kick", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
-    {"category": "normal", "move": "Drive Reversal: Back Knuckle", "set": {"startup": "18"}},
-    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
-    {"category": "normal", "move": "MP Burning Knuckle", "set": {"onHit": "KD +30", "onBlock": "-6", "onPC": "KD +30"}},
-    {"category": "normal", "move": "HP Burning Knuckle", "set": {"onHit": "KD +28", "onBlock": "-8", "onPC": "KD +28"}},
-    {"category": "normal", "move": "OD Burning Knuckle", "set": {"onHit": "KD +60", "onBlock": "-8", "onPC": "KD +70"}},
-    {"category": "normal", "move": "LK Crack Shoot", "set": {"active": "4", "recovery": "4"}},
-    {"category": "normal", "move": "MK Crack Shoot", "set": {"active": "4", "recovery": "2"}},
-    {"category": "normal", "move": "HK Crack Shoot", "set": {"active": "3", "recovery": "1"}},
-    {"category": "normal", "move": "OD Crack Shoot", "set": {"active": "4", "recovery": "2"}},
-    {"category": "normal", "move": "LP Rising Tackle", "set": {"recovery": "21"}},
-    {"category": "normal", "move": "MP Rising Tackle", "set": {"active": "4", "recovery": "28"}},
-    {"category": "normal", "move": "HP Rising Tackle", "set": {"active": "2", "recovery": "27"}},
-    {"category": "normal", "move": "OD Rising Tackle", "set": {"active": "2", "recovery": "34"}},
-    {"category": "normal", "move": "LK Power Charge", "set": {"onHit": "3", "onPC": "7"}},
-    {"category": "normal", "move": "MK Power Charge", "set": {"onHit": "KD +42", "onPC": "KD +42"}},
-    {"category": "normal", "move": "HK Power Charge", "set": {"onHit": "KD +37", "onPC": "KD +37"}},
-    {"category": "normal", "move": "OD Power Charge", "set": {"onHit": "KD +55", "onPC": "KD +55"}},
-    {"category": "normal", "move": "Rising Fang", "set": {"startup": "8", "recovery": "29", "onHit": "HKD +37", "onPC": "HKD +37"}}
+    {
+      "category": "normal",
+      "move": "Crouch HP",
+      "set": { "active": "6(4)", "recovery": "22(20)", "onBlock": "-4" }
+    },
+    {
+      "category": "normal",
+      "move": "Crouch MP",
+      "set": { "recovery": "13(14/15)" }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Impact: Back Spin Kick",
+      "set": {
+        "onHit": "KD +35 / Wall Splat KD +65",
+        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Parry",
+      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Back Knuckle",
+      "set": { "startup": "18" }
+    },
+    {
+      "category": "normal",
+      "move": "HK Crack Shoot",
+      "set": { "active": "3,3,2,3", "recovery": "1+18 land" }
+    },
+    {
+      "category": "normal",
+      "move": "HK Power Charge",
+      "set": { "onHit": "KD +37~45", "onPC": "KD +37~45" }
+    },
+    {
+      "category": "normal",
+      "move": "HP Burning Knuckle",
+      "set": { "onHit": "KD +28~41", "onBlock": "-8(+5)", "onPC": "KD +28~41" }
+    },
+    {
+      "category": "normal",
+      "move": "HP Rising Tackle",
+      "set": { "active": "2,4,14", "recovery": "27+15 land" }
+    },
+    {
+      "category": "normal",
+      "move": "Hammer Punch",
+      "set": { "onBlock": "-3" }
+    },
+    {
+      "category": "normal",
+      "move": "LK Crack Shoot",
+      "set": { "active": "4", "recovery": "4+14 land" }
+    },
+    {
+      "category": "normal",
+      "move": "LK Power Charge",
+      "set": { "onHit": "+3(+7)", "onPC": "+7(+11)" }
+    },
+    {
+      "category": "normal",
+      "move": "LP Rising Tackle",
+      "set": { "recovery": "21+12 land" }
+    },
+    {
+      "category": "normal",
+      "move": "MK Crack Shoot",
+      "set": { "active": "4,3", "recovery": "2+16 land" }
+    },
+    {
+      "category": "normal",
+      "move": "MK Power Charge",
+      "set": { "onHit": "KD +42~47", "onPC": "KD +42~47" }
+    },
+    {
+      "category": "normal",
+      "move": "MP Burning Knuckle",
+      "set": { "onHit": "KD +30~42", "onBlock": "-6(+2)", "onPC": "KD +30~42" }
+    },
+    {
+      "category": "normal",
+      "move": "MP Rising Tackle",
+      "set": { "active": "4,6", "recovery": "28+12 land" }
+    },
+    {
+      "category": "normal",
+      "move": "OD Burning Knuckle",
+      "set": {
+        "onHit": "KD +60~73",
+        "onBlock": "-8(+5)",
+        "onPC": "KD +70~83 (+138~151) Tumble"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Crack Shoot",
+      "set": { "active": "4", "recovery": "2+17 land" }
+    },
+    {
+      "category": "normal",
+      "move": "OD Power Charge",
+      "set": {
+        "onHit": "KD +55~76 Wall Bounce",
+        "onPC": "KD +55~76 Wall Bounce"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Rising Tackle",
+      "set": { "active": "2,3,2,2,3,3", "recovery": "34+15 land" }
+    },
+    {
+      "category": "normal",
+      "move": "Rising Fang",
+      "set": {
+        "startup": "8(2)",
+        "recovery": "29+28 land",
+        "onHit": "HKD +37 (KD +29~31)",
+        "onPC": "HKD +37 (KD +29~31)"
+      }
+    },
+    { "category": "normal", "move": "Stand HP", "set": { "active": "1,3" } }
   ]
 }

@@ -3,89 +3,66 @@
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
     "Manually reviewed Alex.conflicts.csv line by line.",
-    "Only index-friendly and semantically clear values are applied."
+    "Preserved SuperCombo/FAT-style range and variant semantics where present."
   ],
   "entries": [
     {
       "category": "normal",
-      "move": "Stand HK",
-      "set": {
-        "onPC": "KD +62"
-      }
-    },
-    {
-      "category": "normal",
       "move": "Drive Impact: Lariat Kick",
       "set": {
-        "onHit": "KD +35",
-        "onPC": "HKD +104"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Headbutt",
-      "set": {
-        "startup": "18"
+        "onHit": "KD +35 / Wall Splat KD +65",
+        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": {
-        "active": "12",
-        "recovery": "33"
-      }
+      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
     },
     {
       "category": "normal",
-      "move": "HP Flash Chop",
-      "set": {
-        "onHit": "5",
-        "onPC": "9"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "OD Flash Chop",
-      "set": {
-        "active": "2"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "LK Aerial Knee Smash",
-      "set": {
-        "recovery": "19"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "MK Aerial Knee Smash",
-      "set": {
-        "recovery": "18"
-      }
+      "move": "Drive Reversal: Headbutt",
+      "set": { "startup": "18" }
     },
     {
       "category": "normal",
       "move": "HK Aerial Knee Smash",
-      "set": {
-        "recovery": "21"
-      }
+      "set": { "recovery": "21+28 land" }
+    },
+    {
+      "category": "normal",
+      "move": "HP Flash Chop",
+      "set": { "onHit": "+5 (Backturn)", "onPC": "+9 (Backturn)" }
+    },
+    {
+      "category": "normal",
+      "move": "LK Aerial Knee Smash",
+      "set": { "recovery": "19+24 land" }
+    },
+    {
+      "category": "normal",
+      "move": "MK Aerial Knee Smash",
+      "set": { "recovery": "18+24 land" }
     },
     {
       "category": "normal",
       "move": "OD Aerial Knee Smash",
-      "set": {
-        "recovery": "21"
-      }
+      "set": { "recovery": "21+32 land" }
+    },
+    {
+      "category": "normal",
+      "move": "OD Flash Chop",
+      "set": { "active": "2,2" }
+    },
+    {
+      "category": "normal",
+      "move": "Stand HK",
+      "set": { "onPC": "KD +62 Crumple" }
     },
     {
       "category": "normal",
       "move": "The Final Prison",
-      "set": {
-        "onHit": "HKD +25",
-        "onPC": "HKD +25"
-      }
+      "set": { "onHit": "HKD +25", "onPC": "HKD +25" }
     }
   ]
 }

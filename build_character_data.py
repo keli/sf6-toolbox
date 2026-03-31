@@ -196,8 +196,16 @@ def write_character_conflicts(
         "fat_value",
         "supercombo_parsed",
         "supercombo_raw",
-        "fat_normalized",
-        "supercombo_raw_normalized",
+        "fat_first",
+        "fat_min",
+        "fat_max",
+        "fat_kd_min",
+        "fat_kd_max",
+        "sc_first",
+        "sc_min",
+        "sc_max",
+        "sc_kd_min",
+        "sc_kd_max",
         "supercombo_input",
         "supercombo_move_id",
     ]
@@ -327,10 +335,57 @@ def normalize_adv_field(value: Any) -> dict[str, Any] | None:
     for m in re.finditer(r"(H?KD)\s*\+?\s*(-?\d+)?", text, flags=re.IGNORECASE):
         kd_type = m.group(1).upper()
         adv_raw = m.group(2)
+        advantage: int | None = None
+        advantage_min: int | None = None
+        advantage_max: int | None = None
+
+        if adv_raw is not None:
+            # Prefix form: KD +43, KD +43~45, KD +43(+45)
+            right = text[m.end() :]
+            rm = re.match(r"\s*[~〜-]\s*(-?\d+)", right)
+            pm = re.match(r"\s*\(\s*\+?\s*(-?\d+)\s*\)", right)
+            if rm:
+                a = int(adv_raw)
+                b = int(rm.group(1))
+                advantage_min = min(a, b)
+                advantage_max = max(a, b)
+            elif pm:
+                a = int(adv_raw)
+                b = int(pm.group(1))
+                advantage_min = min(a, b)
+                advantage_max = max(a, b)
+            else:
+                n = int(adv_raw)
+                advantage_min = n
+                advantage_max = n
+        else:
+            # Suffix form: 11 (KD), 13~19 (KD)
+            left = text[: m.start()]
+            lm = re.search(r"(-?\d+)\s*([~〜-])\s*(-?\d+)\s*\(?\s*$", left)
+            if lm:
+                a = int(lm.group(1))
+                b = int(lm.group(3))
+                advantage_min = min(a, b)
+                advantage_max = max(a, b)
+            else:
+                prefix_nums = _parse_all_ints(left)
+                if prefix_nums:
+                    n = prefix_nums[-1]
+                    advantage_min = n
+                    advantage_max = n
+                elif isinstance(base.get("first"), int):
+                    n = base["first"]
+                    advantage_min = n
+                    advantage_max = n
+
+        if advantage_min is not None:
+            advantage = advantage_min
         kd.append(
             {
                 "type": kd_type,
-                "advantage": int(adv_raw) if adv_raw is not None else None,
+                "advantage": advantage,
+                "advantageMin": advantage_min,
+                "advantageMax": advantage_max,
             }
         )
 
@@ -492,6 +547,39 @@ def build_conflicts(
     rows: list[dict[str, Any]] = []
     sc_chars = supplement.get("characters", {})
 
+    def norm_summary(field: str, value: Any) -> dict[str, Any]:
+        norm = (
+            normalize_adv_field(value)
+            if field in {"onHit", "onBlock", "onPC"}
+            else normalize_numeric_field(value)
+        )
+        if not isinstance(norm, dict):
+            return {
+                "first": None,
+                "min": None,
+                "max": None,
+                "kd_min": None,
+                "kd_max": None,
+            }
+
+        kd_vals: list[int] = []
+        for item in norm.get("kd", []):
+            if not isinstance(item, dict):
+                continue
+            for key in ("advantageMin", "advantage", "advantageMax"):
+                v = item.get(key)
+                if isinstance(v, int):
+                    kd_vals.append(v)
+                    break
+
+        return {
+            "first": norm.get("first"),
+            "min": norm.get("min"),
+            "max": norm.get("max"),
+            "kd_min": min(kd_vals) if kd_vals else None,
+            "kd_max": max(kd_vals) if kd_vals else None,
+        }
+
     for char_name, char_data in base_data.items():
         sc_char = sc_chars.get(char_name, {})
         sc_by_input = {
@@ -522,6 +610,9 @@ def build_conflicts(
                     sc_raw_norm = normalize_wiki_text(sc_raw)
                     if fat_norm and sc_raw_norm and fat_norm == sc_raw_norm:
                         continue
+                    fat_s = norm_summary(f, fat_v)
+                    sc_basis = sc_raw if sc_raw is not None else sc_v
+                    sc_s = norm_summary(f, sc_basis)
                     rows.append(
                         {
                             "character": char_name,
@@ -532,8 +623,16 @@ def build_conflicts(
                             "fat_value": normalize_spaces(fat_v),
                             "supercombo_parsed": normalize_spaces(sc_v),
                             "supercombo_raw": normalize_spaces(sc_raw),
-                            "fat_normalized": fat_norm,
-                            "supercombo_raw_normalized": sc_raw_norm,
+                            "fat_first": fat_s["first"],
+                            "fat_min": fat_s["min"],
+                            "fat_max": fat_s["max"],
+                            "fat_kd_min": fat_s["kd_min"],
+                            "fat_kd_max": fat_s["kd_max"],
+                            "sc_first": sc_s["first"],
+                            "sc_min": sc_s["min"],
+                            "sc_max": sc_s["max"],
+                            "sc_kd_min": sc_s["kd_min"],
+                            "sc_kd_max": sc_s["kd_max"],
                             "supercombo_input": normalize_spaces(sc_move.get("input")),
                             "supercombo_move_id": normalize_spaces(
                                 sc_move.get("moveId")

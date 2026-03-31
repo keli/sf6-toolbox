@@ -3,20 +3,71 @@
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
     "Manually reviewed Zangief.conflicts.csv line by line.",
-    "Only index-friendly and semantically clear values are applied."
+    "Preserved SuperCombo/FAT-style range and variant semantics where present."
   ],
   "entries": [
-    {"category": "normal", "move": "Stand HP", "set": {"startup": "6"}},
-    {"category": "normal", "move": "Knee Hammer", "set": {"onHit": "1", "onBlock": "-4", "onPC": "5"}},
-    {"category": "normal", "move": "Cyclone Wheel Kick", "set": {"onHit": "KD +28", "onPC": "KD +42"}},
-    {"category": "normal", "move": "Smetana Dropkick", "set": {"onPC": "KD +60"}},
-    {"category": "normal", "move": "Bodyslam", "set": {"onHit": "KD +22", "onPC": "HKD +22"}},
-    {"category": "normal", "move": "Drive Impact: Double Russian Chop", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
-    {"category": "normal", "move": "Drive Reversal: Reverse Russian Kick", "set": {"startup": "18"}},
-    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
-    {"category": "normal", "move": "Double Lariat", "set": {"onHit": "KD +27", "onPC": "KD +27"}},
-    {"category": "normal", "move": "OD Double Lariat", "set": {"onHit": "KD +38", "onPC": "KD +38"}},
-    {"category": "normal", "move": "Aerial Russian Slam", "set": {"recovery": "13"}},
-    {"category": "normal", "move": "Cyclone Lariat", "set": {"active": "102", "onHit": "HKD +5", "onPC": "HKD +5"}}
+    {
+      "category": "normal",
+      "move": "Aerial Russian Slam",
+      "set": { "recovery": "13+47 land" }
+    },
+    {
+      "category": "normal",
+      "move": "Bodyslam",
+      "set": { "onHit": "KD +22(+0)", "onPC": "HKD +22(+0)" }
+    },
+    {
+      "category": "normal",
+      "move": "Cyclone Lariat",
+      "set": { "active": "102", "onHit": "HKD +5(+1)", "onPC": "HKD +5(+1)" }
+    },
+    {
+      "category": "normal",
+      "move": "Cyclone Wheel Kick",
+      "set": { "onHit": "KD +28(+30)", "onPC": "KD +42(44) OTG" }
+    },
+    {
+      "category": "normal",
+      "move": "Double Lariat",
+      "set": { "onHit": "KD +27(+56)", "onPC": "KD +27(+56)" }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Impact: Double Russian Chop",
+      "set": {
+        "onHit": "KD +35 / Wall Splat KD +65",
+        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Parry",
+      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Reverse Russian Kick",
+      "set": { "startup": "18" }
+    },
+    {
+      "category": "normal",
+      "move": "Knee Hammer",
+      "set": { "onHit": "+1(+7)", "onBlock": "-4(+2)", "onPC": "+5(+11)" }
+    },
+    {
+      "category": "normal",
+      "move": "OD Double Lariat",
+      "set": { "onHit": "KD +38(+57)", "onPC": "KD +38(+57)" }
+    },
+    {
+      "category": "normal",
+      "move": "Smetana Dropkick",
+      "set": { "onPC": "KD +60 Tumble (HKD +128 Wallsplat)" }
+    },
+    {
+      "category": "normal",
+      "move": "Stand HP",
+      "set": { "startup": "(6~22)+10" }
+    }
   ]
 }

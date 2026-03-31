@@ -3,28 +3,125 @@
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
     "Manually reviewed Ken.conflicts.csv line by line.",
-    "Only index-friendly and semantically clear values are applied."
+    "Preserved SuperCombo/FAT-style range and variant semantics where present."
   ],
   "entries": [
-    {"category": "normal", "move": "Crouch HP", "set": {"onBlock": "-7"}},
-    {"category": "normal", "move": "Neutral Jump HK", "set": {"onHit": "13", "onBlock": "9", "onPC": "17"}},
-    {"category": "normal", "move": "Drive Impact: Flame Strike", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
-    {"category": "normal", "move": "Drive Reversal: Lightning Crack", "set": {"startup": "18"}},
-    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
-    {"category": "normal", "move": "LP Shoryuken", "set": {"recovery": "21"}},
-    {"category": "normal", "move": "MP Shoryuken", "set": {"recovery": "28"}},
-    {"category": "normal", "move": "HP Shoryuken", "set": {"recovery": "35"}},
-    {"category": "normal", "move": "OD Shoryuken", "set": {"recovery": "35"}},
-    {"category": "normal", "move": "LK Tatsumaki Senpukyaku", "set": {"recovery": "14", "onHit": "KD +46", "onPC": "KD +46"}},
-    {"category": "normal", "move": "MK Tatsumaki Senpukyaku", "set": {"recovery": "11", "onHit": "KD +44", "onPC": "KD +44"}},
-    {"category": "normal", "move": "HK Tatsumaki Senpukyaku", "set": {"recovery": "14", "onHit": "-38", "onBlock": "-12", "onPC": "-34"}},
-    {"category": "normal", "move": "OD Tatsumaki Senpukyaku", "set": {"recovery": "21"}},
-    {"category": "normal", "move": "LK Dragonlash Kick", "set": {"recovery": "4"}},
-    {"category": "normal", "move": "MK Dragonlash Kick", "set": {"recovery": "5", "onHit": "3", "onPC": "7"}},
-    {"category": "normal", "move": "HK Dragonlash Kick", "set": {"recovery": "5", "onHit": "3", "onBlock": "1", "onPC": "7"}},
-    {"category": "normal", "move": "OD Dragonlash Kick", "set": {"recovery": "3", "onHit": "1", "onPC": "5"}},
-    {"category": "normal", "move": "OD Jinrai Kick", "set": {"active": "2"}},
-    {"category": "normal", "move": "Dragonlash Flame", "set": {"onHit": "KD +9", "onPC": "KD +9"}},
-    {"category": "normal", "move": "Shinryu Reppa", "set": {"recovery": "30", "onHit": "HKD +21", "onPC": "HKD +21"}}
+    { "category": "normal", "move": "Crouch HP", "set": { "onBlock": "-7" } },
+    {
+      "category": "normal",
+      "move": "Dragonlash Flame",
+      "set": { "onHit": "KD +9", "onPC": "KD +9" }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Impact: Flame Strike",
+      "set": {
+        "onHit": "KD +35 / Wall Splat KD +65",
+        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Parry",
+      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Lightning Crack",
+      "set": { "startup": "18" }
+    },
+    {
+      "category": "normal",
+      "move": "HK Dragonlash Kick",
+      "set": {
+        "recovery": "5+16 land",
+        "onHit": "+3(+4)",
+        "onBlock": "+1(+2)",
+        "onPC": "+7(+8)"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HK Tatsumaki Senpukyaku",
+      "set": {
+        "recovery": "14+17 land",
+        "onHit": "KD +36 (-38 cr)",
+        "onBlock": "-12 (-42 cr)",
+        "onPC": "KD +36 (-34 cr)"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HP Shoryuken",
+      "set": { "recovery": "35+15 land" }
+    },
+    {
+      "category": "normal",
+      "move": "LK Dragonlash Kick",
+      "set": { "recovery": "4+17 land" }
+    },
+    {
+      "category": "normal",
+      "move": "LK Tatsumaki Senpukyaku",
+      "set": {
+        "recovery": "14+18 land",
+        "onHit": "KD +46(+38)",
+        "onPC": "KD +46(+38)"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "LP Shoryuken",
+      "set": { "recovery": "21+12 land" }
+    },
+    {
+      "category": "normal",
+      "move": "MK Dragonlash Kick",
+      "set": { "recovery": "5+20 land", "onHit": "+3(+4)", "onPC": "+7(+8)" }
+    },
+    {
+      "category": "normal",
+      "move": "MK Tatsumaki Senpukyaku",
+      "set": {
+        "recovery": "11+20 land",
+        "onHit": "KD +44(+32)",
+        "onPC": "KD +44(+32)"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MP Shoryuken",
+      "set": { "recovery": "28+12 land" }
+    },
+    {
+      "category": "normal",
+      "move": "Neutral Jump HK",
+      "set": { "onHit": "13(+15)", "onBlock": "9(+11)", "onPC": "17(+19)" }
+    },
+    {
+      "category": "normal",
+      "move": "OD Dragonlash Kick",
+      "set": { "recovery": "3+21 land", "onHit": "+1(+4)", "onPC": "+5(+8)" }
+    },
+    {
+      "category": "normal",
+      "move": "OD Jinrai Kick",
+      "set": { "active": "2" }
+    },
+    {
+      "category": "normal",
+      "move": "OD Shoryuken",
+      "set": { "recovery": "35+15 land" }
+    },
+    {
+      "category": "normal",
+      "move": "OD Tatsumaki Senpukyaku",
+      "set": { "recovery": "21+13 land" }
+    },
+    {
+      "category": "normal",
+      "move": "Shinryu Reppa",
+      "set": { "recovery": "30+25 land", "onHit": "HKD +21", "onPC": "HKD +21" }
+    }
   ]
 }

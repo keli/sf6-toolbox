@@ -3,71 +3,57 @@
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
     "Manually reviewed A.K.I.conflicts.csv line by line.",
-    "Only index-friendly and semantically clear values are applied."
+    "Preserved SuperCombo/FAT-style range and variant semantics where present."
   ],
   "entries": [
     {
       "category": "normal",
-      "move": "Drive Impact: Zao Chi",
-      "set": {
-        "onHit": "KD +35",
-        "onPC": "HKD +104"
-      }
+      "move": "Claws of Ya Zi",
+      "set": { "onHit": "HKD +21", "onPC": "HKD +21" }
     },
     {
       "category": "normal",
-      "move": "Drive Reversal: Feng Shi",
+      "move": "Drive Impact: Zao Chi",
       "set": {
-        "startup": "18"
+        "onHit": "KD +35 / Wall Splat KD +65",
+        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": {
-        "active": "12",
-        "recovery": "33"
-      }
+      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
     },
     {
       "category": "normal",
-      "move": "Sinister Slide",
-      "set": {
-        "recovery": "20"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Toxic Wreath",
-      "set": {
-        "onBlock": "-4"
-      }
+      "move": "Drive Reversal: Feng Shi",
+      "set": { "startup": "18" }
     },
     {
       "category": "normal",
       "move": "LP Serpent Lash",
-      "set": {
-        "onHit": "1",
-        "onPC": "KD +55"
-      }
+      "set": { "onHit": "1(+3) [KD +44(+46)]", "onPC": "KD +55(+61) Crumple" }
+    },
+    {
+      "category": "normal",
+      "move": "OD Cruel Fate",
+      "set": { "onHit": "HKD +42 (+2~3)", "onPC": "HKD +42 (+6~7)" }
+    },
+    {
+      "category": "normal",
+      "move": "Sinister Slide",
+      "set": { "recovery": "20" }
     },
     {
       "category": "normal",
       "move": "Tainted Talons",
       "set": {
         "startup": "7",
-        "active": "53",
+        "active": "53(28)12",
         "recovery": "54",
-        "onBlock": "-19"
+        "onBlock": "-19~"
       }
     },
-    {
-      "category": "normal",
-      "move": "Claws of Ya Zi",
-      "set": {
-        "onHit": "HKD +21",
-        "onPC": "HKD +21"
-      }
-    }
+    { "category": "normal", "move": "Toxic Wreath", "set": { "onBlock": "-4" } }
   ]
 }

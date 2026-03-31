@@ -64,6 +64,8 @@
             "kd": [
               {
                 "advantage": 14,
+                "advantageMax": 14,
+                "advantageMin": 14,
                 "type": "KD"
               }
             ],
@@ -82,6 +84,8 @@
             "kd": [
               {
                 "advantage": 14,
+                "advantageMax": 14,
+                "advantageMin": 14,
                 "type": "KD"
               }
             ],
@@ -186,6 +190,8 @@
             "kd": [
               {
                 "advantage": 40,
+                "advantageMax": 40,
+                "advantageMin": 40,
                 "type": "KD"
               }
             ],
@@ -204,6 +210,8 @@
             "kd": [
               {
                 "advantage": 48,
+                "advantageMax": 48,
+                "advantageMin": 48,
                 "type": "HKD"
               }
             ],
@@ -940,6 +948,8 @@
             "kd": [
               {
                 "advantage": null,
+                "advantageMax": null,
+                "advantageMin": null,
                 "type": "KD"
               }
             ],
@@ -1143,6 +1153,8 @@
             "kd": [
               {
                 "advantage": 23,
+                "advantageMax": 23,
+                "advantageMin": 23,
                 "type": "KD"
               }
             ],
@@ -1161,6 +1173,8 @@
             "kd": [
               {
                 "advantage": 23,
+                "advantageMax": 23,
+                "advantageMin": 23,
                 "type": "KD"
               }
             ],
@@ -1846,6 +1860,8 @@
             "kd": [
               {
                 "advantage": 50,
+                "advantageMax": 50,
+                "advantageMin": 50,
                 "type": "KD"
               }
             ],
@@ -1864,6 +1880,8 @@
             "kd": [
               {
                 "advantage": 50,
+                "advantageMax": 50,
+                "advantageMin": 50,
                 "type": "KD"
               }
             ],
@@ -1986,6 +2004,8 @@
             "kd": [
               {
                 "advantage": 33,
+                "advantageMax": 33,
+                "advantageMin": 33,
                 "type": "KD"
               }
             ],
@@ -2004,6 +2024,8 @@
             "kd": [
               {
                 "advantage": 33,
+                "advantageMax": 33,
+                "advantageMin": 33,
                 "type": "KD"
               }
             ],
@@ -2118,6 +2140,8 @@
             "kd": [
               {
                 "advantage": 37,
+                "advantageMax": 37,
+                "advantageMin": 37,
                 "type": "KD"
               }
             ],
@@ -2136,6 +2160,8 @@
             "kd": [
               {
                 "advantage": 37,
+                "advantageMax": 37,
+                "advantageMin": 37,
                 "type": "KD"
               }
             ],
@@ -2523,6 +2549,8 @@
             "kd": [
               {
                 "advantage": 29,
+                "advantageMax": 29,
+                "advantageMin": 29,
                 "type": "KD"
               }
             ],
@@ -2541,6 +2569,8 @@
             "kd": [
               {
                 "advantage": 29,
+                "advantageMax": 29,
+                "advantageMin": 29,
                 "type": "KD"
               }
             ],
@@ -2749,7 +2779,9 @@
             "first": 12,
             "kd": [
               {
-                "advantage": null,
+                "advantage": 12,
+                "advantageMax": 16,
+                "advantageMin": 12,
                 "type": "KD"
               }
             ],
@@ -2768,7 +2800,9 @@
             "first": 16,
             "kd": [
               {
-                "advantage": null,
+                "advantage": 16,
+                "advantageMax": 20,
+                "advantageMin": 16,
                 "type": "KD"
               }
             ],
@@ -3164,7 +3198,9 @@
             "first": 7,
             "kd": [
               {
-                "advantage": null,
+                "advantage": 7,
+                "advantageMax": 13,
+                "advantageMin": 7,
                 "type": "KD"
               }
             ],
@@ -3183,7 +3219,9 @@
             "first": 11,
             "kd": [
               {
-                "advantage": null,
+                "advantage": 11,
+                "advantageMax": 17,
+                "advantageMin": 11,
                 "type": "KD"
               }
             ],
@@ -3284,6 +3322,8 @@
             "kd": [
               {
                 "advantage": 22,
+                "advantageMax": 22,
+                "advantageMin": 22,
                 "type": "KD"
               }
             ],
@@ -3302,6 +3342,8 @@
             "kd": [
               {
                 "advantage": 22,
+                "advantageMax": 22,
+                "advantageMin": 22,
                 "type": "KD"
               }
             ],
@@ -3388,6 +3430,8 @@
             "kd": [
               {
                 "advantage": 11,
+                "advantageMax": 11,
+                "advantageMin": 11,
                 "type": "KD"
               }
             ],
@@ -3406,6 +3450,8 @@
             "kd": [
               {
                 "advantage": 11,
+                "advantageMax": 11,
+                "advantageMin": 11,
                 "type": "HKD"
               }
             ],
@@ -3785,6 +3831,8 @@
             "kd": [
               {
                 "advantage": 44,
+                "advantageMax": 44,
+                "advantageMin": 44,
                 "type": "KD"
               }
             ],
@@ -3900,6 +3948,8 @@
             "kd": [
               {
                 "advantage": 33,
+                "advantageMax": 33,
+                "advantageMin": 33,
                 "type": "KD"
               }
             ],
@@ -3918,6 +3968,8 @@
             "kd": [
               {
                 "advantage": 33,
+                "advantageMax": 33,
+                "advantageMin": 33,
                 "type": "KD"
               }
             ],
@@ -4029,6 +4081,8 @@
             "kd": [
               {
                 "advantage": 29,
+                "advantageMax": 29,
+                "advantageMin": 29,
                 "type": "KD"
               }
             ],
@@ -4047,6 +4101,8 @@
             "kd": [
               {
                 "advantage": 29,
+                "advantageMax": 29,
+                "advantageMin": 29,
                 "type": "KD"
               }
             ],
@@ -4285,6 +4341,8 @@
             "kd": [
               {
                 "advantage": 29,
+                "advantageMax": 29,
+                "advantageMin": 29,
                 "type": "KD"
               }
             ],
@@ -4303,6 +4361,8 @@
             "kd": [
               {
                 "advantage": 29,
+                "advantageMax": 29,
+                "advantageMin": 29,
                 "type": "KD"
               }
             ],
@@ -4920,6 +4980,8 @@
             "kd": [
               {
                 "advantage": 34,
+                "advantageMax": 34,
+                "advantageMin": 34,
                 "type": "KD"
               }
             ],
@@ -4938,6 +5000,8 @@
             "kd": [
               {
                 "advantage": 34,
+                "advantageMax": 34,
+                "advantageMin": 34,
                 "type": "KD"
               }
             ],
@@ -5048,6 +5112,8 @@
             "kd": [
               {
                 "advantage": 25,
+                "advantageMax": 25,
+                "advantageMin": 25,
                 "type": "KD"
               }
             ],
@@ -5066,6 +5132,8 @@
             "kd": [
               {
                 "advantage": 25,
+                "advantageMax": 25,
+                "advantageMin": 25,
                 "type": "KD"
               }
             ],
@@ -5419,6 +5487,8 @@
             "kd": [
               {
                 "advantage": 47,
+                "advantageMax": 47,
+                "advantageMin": 47,
                 "type": "KD"
               }
             ],
@@ -5437,6 +5507,8 @@
             "kd": [
               {
                 "advantage": 47,
+                "advantageMax": 47,
+                "advantageMin": 47,
                 "type": "KD"
               }
             ],
@@ -5549,6 +5621,8 @@
             "kd": [
               {
                 "advantage": 52,
+                "advantageMax": 52,
+                "advantageMin": 52,
                 "type": "KD"
               }
             ],
@@ -5569,6 +5643,8 @@
             "kd": [
               {
                 "advantage": 52,
+                "advantageMax": 52,
+                "advantageMin": 52,
                 "type": "KD"
               }
             ],
@@ -5944,6 +6020,8 @@
             "kd": [
               {
                 "advantage": 55,
+                "advantageMax": 55,
+                "advantageMin": 55,
                 "type": "KD"
               }
             ],
@@ -5962,6 +6040,8 @@
             "kd": [
               {
                 "advantage": 55,
+                "advantageMax": 55,
+                "advantageMin": 55,
                 "type": "KD"
               }
             ],
@@ -6072,6 +6152,8 @@
             "kd": [
               {
                 "advantage": 30,
+                "advantageMax": 30,
+                "advantageMin": 30,
                 "type": "KD"
               }
             ],
@@ -6090,6 +6172,8 @@
             "kd": [
               {
                 "advantage": 30,
+                "advantageMax": 30,
+                "advantageMin": 30,
                 "type": "KD"
               }
             ],
@@ -6305,6 +6389,8 @@
             "kd": [
               {
                 "advantage": 10,
+                "advantageMax": 10,
+                "advantageMin": 10,
                 "type": "KD"
               }
             ],
@@ -6323,6 +6409,8 @@
             "kd": [
               {
                 "advantage": 10,
+                "advantageMax": 10,
+                "advantageMin": 10,
                 "type": "HKD"
               }
             ],
@@ -6606,7 +6694,9 @@
             "first": 34,
             "kd": [
               {
-                "advantage": 34,
+                "advantage": 21,
+                "advantageMax": 34,
+                "advantageMin": 21,
                 "type": "KD"
               }
             ],
@@ -6625,7 +6715,9 @@
             "first": 34,
             "kd": [
               {
-                "advantage": 34,
+                "advantage": 21,
+                "advantageMax": 34,
+                "advantageMin": 21,
                 "type": "KD"
               }
             ],
@@ -6738,7 +6830,9 @@
             "first": 17,
             "kd": [
               {
-                "advantage": null,
+                "advantage": 17,
+                "advantageMax": 20,
+                "advantageMin": 17,
                 "type": "KD"
               }
             ],
@@ -6757,7 +6851,9 @@
             "first": 21,
             "kd": [
               {
-                "advantage": null,
+                "advantage": 21,
+                "advantageMax": 24,
+                "advantageMin": 21,
                 "type": "KD"
               }
             ],
@@ -6856,6 +6952,8 @@
             "kd": [
               {
                 "advantage": 6,
+                "advantageMax": 6,
+                "advantageMin": 6,
                 "type": "HKD"
               }
             ],
@@ -6874,6 +6972,8 @@
             "kd": [
               {
                 "advantage": 6,
+                "advantageMax": 6,
+                "advantageMin": 6,
                 "type": "HKD"
               }
             ],
@@ -6985,6 +7085,8 @@
             "kd": [
               {
                 "advantage": 18,
+                "advantageMax": 18,
+                "advantageMin": 18,
                 "type": "HKD"
               }
             ],
@@ -7003,6 +7105,8 @@
             "kd": [
               {
                 "advantage": 18,
+                "advantageMax": 18,
+                "advantageMin": 18,
                 "type": "HKD"
               }
             ],
@@ -7928,6 +8032,8 @@
             "kd": [
               {
                 "advantage": 13,
+                "advantageMax": 13,
+                "advantageMin": 13,
                 "type": "KD"
               }
             ],
@@ -7946,6 +8052,8 @@
             "kd": [
               {
                 "advantage": 13,
+                "advantageMax": 13,
+                "advantageMin": 13,
                 "type": "HKD"
               }
             ],
@@ -8059,6 +8167,8 @@
             "kd": [
               {
                 "advantage": 35,
+                "advantageMax": 35,
+                "advantageMin": 35,
                 "type": "KD"
               }
             ],
@@ -8167,6 +8277,8 @@
             "kd": [
               {
                 "advantage": 41,
+                "advantageMax": 41,
+                "advantageMin": 41,
                 "type": "KD"
               }
             ],
@@ -8185,6 +8297,8 @@
             "kd": [
               {
                 "advantage": 41,
+                "advantageMax": 41,
+                "advantageMin": 41,
                 "type": "KD"
               }
             ],
@@ -8455,6 +8569,8 @@
             "kd": [
               {
                 "advantage": 72,
+                "advantageMax": 72,
+                "advantageMin": 72,
                 "type": "KD"
               }
             ],
@@ -8562,6 +8678,8 @@
             "kd": [
               {
                 "advantage": null,
+                "advantageMax": null,
+                "advantageMin": null,
                 "type": "KD"
               }
             ],
@@ -8578,6 +8696,8 @@
             "kd": [
               {
                 "advantage": null,
+                "advantageMax": null,
+                "advantageMin": null,
                 "type": "KD"
               }
             ],

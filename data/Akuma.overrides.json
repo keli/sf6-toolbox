@@ -3,137 +3,115 @@
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
     "Manually reviewed Akuma.conflicts.csv line by line.",
-    "Only index-friendly and semantically clear values are applied."
+    "Preserved SuperCombo/FAT-style range and variant semantics where present."
   ],
   "entries": [
     {
       "category": "normal",
-      "move": "Stand HK",
-      "set": {
-        "onBlock": "3"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Resso Snap Kick",
-      "set": {
-        "recovery": "15"
-      }
+      "move": "Ashura Senku (forward)",
+      "set": { "startup": "23" }
     },
     {
       "category": "normal",
       "move": "Drive Impact: Oni Goroshi",
       "set": {
-        "onHit": "KD +35",
-        "onPC": "HKD +104"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Souha Double Palm",
-      "set": {
-        "startup": "18"
+        "onHit": "KD +35 / Wall Splat KD +65",
+        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": {
-        "active": "12",
-        "recovery": "33"
-      }
+      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
     },
     {
       "category": "normal",
-      "move": "Forward Taunt",
-      "set": {
-        "startup": "570"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "LP Gou Shoryuken",
-      "set": {
-        "recovery": "21"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "MP Gou Shoryuken",
-      "set": {
-        "active": "2",
-        "recovery": "30"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "HP Gou Shoryuken",
-      "set": {
-        "active": "2",
-        "recovery": "35"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "OD Gou Shoryuken",
-      "set": {
-        "active": "2",
-        "recovery": "37"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "OD Adamant Flame",
-      "set": {
-        "onPC": "KD +78"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "LK Tatsumaki Zanku-kyaku",
-      "set": {
-        "recovery": "14"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "MK Tatsumaki Zanku-kyaku",
-      "set": {
-        "active": "2",
-        "recovery": "10",
-        "onHit": "KD +41",
-        "onPC": "KD +41"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "HK Tatsumaki Zanku-kyaku",
-      "set": {
-        "recovery": "21"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "OD Tatsumaki Zanku-kyaku",
-      "set": {
-        "recovery": "7"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Ashura Senku (forward)",
-      "set": {
-        "startup": "23"
-      }
+      "move": "Drive Reversal: Souha Double Palm",
+      "set": { "startup": "18" }
     },
     {
       "category": "normal",
       "move": "Empyrean's End",
       "set": {
         "startup": "9",
-        "onHit": "HKD +29",
-        "onPC": "HKD +29"
+        "onHit": "HKD +29 (HKD +97 Wallsplat)",
+        "onPC": "HKD +29 (HKD +97 Wallsplat)"
       }
+    },
+    {
+      "category": "normal",
+      "move": "Forward Taunt",
+      "set": { "startup": "570(514) (total)" }
+    },
+    {
+      "category": "normal",
+      "move": "Goshoha",
+      "set": { "onHit": "KD +28", "onPC": "HKD +28" }
+    },
+    {
+      "category": "normal",
+      "move": "HK Tatsumaki Zanku-kyaku",
+      "set": { "recovery": "21+14(20) land" }
+    },
+    {
+      "category": "normal",
+      "move": "HP Gou Shoryuken",
+      "set": { "active": "2,3,6", "recovery": "35+15 land" }
+    },
+    {
+      "category": "normal",
+      "move": "LK Tatsumaki Zanku-kyaku",
+      "set": { "recovery": "14+7(13) land" }
+    },
+    {
+      "category": "normal",
+      "move": "LP Gou Shoryuken",
+      "set": { "recovery": "21+12 land" }
+    },
+    {
+      "category": "normal",
+      "move": "MK Tatsumaki Zanku-kyaku",
+      "set": {
+        "active": "2(13)3",
+        "recovery": "10+20 land",
+        "onHit": "KD +41(38)",
+        "onPC": "KD +41(38)"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MP Gou Shoryuken",
+      "set": { "active": "2,8", "recovery": "30+12 land" }
+    },
+    {
+      "category": "normal",
+      "move": "OD Adamant Flame",
+      "set": { "onPC": "KD +78 Crumple" }
+    },
+    {
+      "category": "normal",
+      "move": "OD Gou Shoryuken",
+      "set": { "active": "2,2,7", "recovery": "37+15 land" }
+    },
+    {
+      "category": "normal",
+      "move": "OD Tatsumaki Zanku-kyaku",
+      "set": { "recovery": "7+19 land" }
+    },
+    {
+      "category": "normal",
+      "move": "Resso Snap Kick",
+      "set": { "recovery": "15(18/19)" }
+    },
+    {
+      "category": "normal",
+      "move": "Shuretto",
+      "set": { "onHit": "KD +14", "onPC": "HKD +14" }
+    },
+    {
+      "category": "normal",
+      "move": "Stand HK",
+      "set": { "onBlock": "+3(-13)" }
     }
   ]
 }

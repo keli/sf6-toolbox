@@ -3,20 +3,74 @@
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
     "Manually reviewed Marisa.conflicts.csv line by line.",
-    "Only index-friendly and semantically clear values are applied."
+    "Preserved SuperCombo/FAT-style range and variant semantics where present."
   ],
   "entries": [
-    {"category": "normal", "move": "Crouch MK", "set": {"recovery": "17", "onHit": "5", "onPC": "9"}},
-    {"category": "normal", "move": "Novacula", "set": {"startup": "9"}},
-    {"category": "normal", "move": "Drive Impact: Secutor", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
-    {"category": "normal", "move": "Drive Reversal: Love Tap", "set": {"startup": "18"}},
-    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
-    {"category": "normal", "move": "LP Phalanx", "set": {"onBlock": "3"}},
-    {"category": "normal", "move": "MP Phalanx", "set": {"onBlock": "3"}},
-    {"category": "normal", "move": "HP Phalanx", "set": {"onBlock": "3"}},
-    {"category": "normal", "move": "OD Phalanx", "set": {"onHit": "KD +70", "onBlock": "4", "onPC": "HKD +76"}},
-    {"category": "normal", "move": "OD Quadriga", "set": {"onHit": "KD +50", "onPC": "KD +50"}},
-    {"category": "normal", "move": "Scutum", "set": {"startup": "7", "active": "4", "recovery": "20"}},
-    {"category": "normal", "move": "OD Scutum", "set": {"startup": "7", "active": "4", "recovery": "20"}}
+    {
+      "category": "normal",
+      "move": "Crouch MK",
+      "set": { "recovery": "17(18)", "onHit": "+5", "onPC": "+9" }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Impact: Secutor",
+      "set": {
+        "onHit": "KD +35 / Wall Splat KD +65",
+        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Parry",
+      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Love Tap",
+      "set": { "startup": "18" }
+    },
+    {
+      "category": "normal",
+      "move": "HP Phalanx",
+      "set": { "onBlock": "+3(+4)" }
+    },
+    {
+      "category": "normal",
+      "move": "LP Phalanx",
+      "set": { "onBlock": "+3(+4)" }
+    },
+    {
+      "category": "normal",
+      "move": "MP Phalanx",
+      "set": { "onBlock": "+3(+4)" }
+    },
+    { "category": "normal", "move": "Novacula", "set": { "startup": "9" } },
+    {
+      "category": "normal",
+      "move": "OD Phalanx",
+      "set": {
+        "onHit": "KD +70 Tumble (HKD +138 Wall Splat)",
+        "onBlock": "+4(5)",
+        "onPC": "HKD +76 Tumble (HKD +144 Wall Splat)"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Quadriga",
+      "set": {
+        "onHit": "KD +50(68) Wall Splat",
+        "onPC": "KD +50(68) Wall Splat"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Scutum",
+      "set": { "startup": "7", "active": "4", "recovery": "20" }
+    },
+    {
+      "category": "normal",
+      "move": "Scutum",
+      "set": { "startup": "7", "active": "4", "recovery": "20" }
+    }
   ]
 }

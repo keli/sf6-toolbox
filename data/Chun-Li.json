@@ -64,6 +64,8 @@
             "kd": [
               {
                 "advantage": 14,
+                "advantageMax": 14,
+                "advantageMin": 14,
                 "type": "KD"
               }
             ],
@@ -82,6 +84,8 @@
             "kd": [
               {
                 "advantage": 14,
+                "advantageMax": 14,
+                "advantageMin": 14,
                 "type": "KD"
               }
             ],
@@ -186,6 +190,8 @@
             "kd": [
               {
                 "advantage": 40,
+                "advantageMax": 40,
+                "advantageMin": 40,
                 "type": "KD"
               }
             ],
@@ -204,6 +210,8 @@
             "kd": [
               {
                 "advantage": 48,
+                "advantageMax": 48,
+                "advantageMin": 48,
                 "type": "HKD"
               }
             ],
@@ -940,35 +948,52 @@
             "kd": [
               {
                 "advantage": 35,
+                "advantageMax": 35,
+                "advantageMin": 35,
+                "type": "KD"
+              },
+              {
+                "advantage": 65,
+                "advantageMax": 65,
+                "advantageMin": 65,
                 "type": "KD"
               }
             ],
-            "max": 35,
+            "max": 65,
             "min": 35,
             "numbers": [
-              35
+              35,
+              65
             ],
-            "raw": "KD +35",
-            "tags": [],
-            "text": "KD +35",
+            "raw": "KD +35 / Wall Splat KD +65",
+            "tags": [
+              "wall splat"
+            ],
+            "text": "KD +35 / Wall Splat KD +65",
             "uncertain": false
           },
           "onPC": {
-            "first": 104,
+            "first": 21,
             "kd": [
               {
                 "advantage": 104,
+                "advantageMax": 104,
+                "advantageMin": 104,
                 "type": "HKD"
               }
             ],
             "max": 104,
-            "min": 104,
+            "min": 21,
             "numbers": [
+              21,
+              46,
               104
             ],
-            "raw": "HKD +104",
-            "tags": [],
-            "text": "HKD +104",
+            "raw": "Crumple (Standing +21, Juggle +46, HKD +104)",
+            "tags": [
+              "crumple"
+            ],
+            "text": "Crumple (Standing +21, Juggle +46, HKD +104)",
             "uncertain": false
           },
           "recovery": {
@@ -996,8 +1021,8 @@
         },
         "numCmd": "HPHK",
         "onBlock": -3,
-        "onHit": "KD +35",
-        "onPC": "HKD +104",
+        "onHit": "KD +35 / Wall Splat KD +65",
+        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)",
         "onPP": -35,
         "plnCmd": "HP+HK",
         "range": 2.506,
@@ -1007,7 +1032,7 @@
       },
       "Drive Parry": {
         "DGain": "-5000*250~",
-        "active": "12",
+        "active": "12 or until released",
         "cmnName": "Drive Parry",
         "dmgScaling": "50% Multiplier (Perfect)",
         "extraInfo": [
@@ -1052,9 +1077,9 @@
             "numbers": [
               12
             ],
-            "raw": "12",
-            "text": "12",
-            "uncertain": false
+            "raw": "12 or until released",
+            "text": "12 or until released",
+            "uncertain": true
           },
           "onBlock": null,
           "onHit": null,
@@ -1062,12 +1087,14 @@
           "recovery": {
             "first": 33,
             "max": 33,
-            "min": 33,
+            "min": 1,
             "numbers": [
-              33
+              33,
+              1,
+              11
             ],
-            "raw": "33",
-            "text": "33",
+            "raw": "33(1)(11)",
+            "text": "33(1)(11)",
             "uncertain": false
           },
           "startup": {
@@ -1084,7 +1111,7 @@
         },
         "numCmd": "MPMK",
         "plnCmd": "MP+MK",
-        "recovery": "33",
+        "recovery": "33(1)(11)",
         "startup": 1,
         "total": "45(3)"
       },
@@ -1146,6 +1173,8 @@
             "kd": [
               {
                 "advantage": 23,
+                "advantageMax": 23,
+                "advantageMin": 23,
                 "type": "KD"
               }
             ],
@@ -1164,6 +1193,8 @@
             "kd": [
               {
                 "advantage": 23,
+                "advantageMax": 23,
+                "advantageMin": 23,
                 "type": "KD"
               }
             ],
@@ -1331,9 +1362,9 @@
             "numbers": [
               3
             ],
-            "raw": "3",
+            "raw": "+3",
             "tags": [],
-            "text": "3",
+            "text": "+3",
             "uncertain": false
           },
           "onHit": {
@@ -1344,9 +1375,9 @@
             "numbers": [
               7
             ],
-            "raw": "7",
+            "raw": "+7",
             "tags": [],
-            "text": "7",
+            "text": "+7",
             "uncertain": false
           },
           "onPC": {
@@ -1357,9 +1388,9 @@
             "numbers": [
               11
             ],
-            "raw": "11",
+            "raw": "+11",
             "tags": [],
-            "text": "11",
+            "text": "+11",
             "uncertain": false
           },
           "recovery": {
@@ -1386,9 +1417,9 @@
           }
         },
         "numCmd": "3HK",
-        "onBlock": "3",
-        "onHit": "7",
-        "onPC": "11",
+        "onBlock": "+3",
+        "onHit": "+7",
+        "onPC": "+11",
         "onPP": "-13(-12)",
         "plnCmd": "df+HK",
         "range": "?",
@@ -1786,7 +1817,7 @@
         "OppSoH": "560 (112x5)",
         "SelfSoB": "400 (80x5)",
         "SelfSoH": "800 (160x5)",
-        "active": "2",
+        "active": "2(3)2(2)2(4)2(6)2",
         "atkLvl": "H",
         "blockstun": "37 total",
         "chp": "250 (50x5)",
@@ -1810,13 +1841,21 @@
         "normalized": {
           "active": {
             "first": 2,
-            "max": 2,
+            "max": 6,
             "min": 2,
             "numbers": [
+              2,
+              3,
+              2,
+              2,
+              2,
+              4,
+              2,
+              6,
               2
             ],
-            "raw": "2",
-            "text": "2",
+            "raw": "2(3)2(2)2(4)2(6)2",
+            "text": "2(3)2(2)2(4)2(6)2",
             "uncertain": false
           },
           "onBlock": {
@@ -1837,6 +1876,8 @@
             "kd": [
               {
                 "advantage": 50,
+                "advantageMax": 50,
+                "advantageMin": 50,
                 "type": "KD"
               }
             ],
@@ -1855,6 +1896,8 @@
             "kd": [
               {
                 "advantage": 50,
+                "advantageMax": 50,
+                "advantageMin": 50,
                 "type": "KD"
               }
             ],
@@ -1977,6 +2020,8 @@
             "kd": [
               {
                 "advantage": 33,
+                "advantageMax": 33,
+                "advantageMin": 33,
                 "type": "KD"
               }
             ],
@@ -1995,6 +2040,8 @@
             "kd": [
               {
                 "advantage": 33,
+                "advantageMax": 33,
+                "advantageMin": 33,
                 "type": "KD"
               }
             ],
@@ -2109,6 +2156,8 @@
             "kd": [
               {
                 "advantage": 37,
+                "advantageMax": 37,
+                "advantageMin": 37,
                 "type": "KD"
               }
             ],
@@ -2127,6 +2176,8 @@
             "kd": [
               {
                 "advantage": 37,
+                "advantageMax": 37,
+                "advantageMin": 37,
                 "type": "KD"
               }
             ],
@@ -2143,12 +2194,13 @@
           "recovery": {
             "first": 26,
             "max": 26,
-            "min": 26,
+            "min": 12,
             "numbers": [
-              26
+              26,
+              12
             ],
-            "raw": "26",
-            "text": "26",
+            "raw": "26+12 land",
+            "text": "26+12 land",
             "uncertain": false
           },
           "startup": {
@@ -2170,7 +2222,7 @@
         "onPP": -71,
         "plnCmd": "d,d+HK",
         "range": "1.128 (1st)",
-        "recovery": "26",
+        "recovery": "26+12 land",
         "startup": 9,
         "total": 81
       },
@@ -2424,7 +2476,7 @@
         "DDoH": 10000,
         "SelfSoB": -20000,
         "SelfSoH": -20000,
-        "active": "2",
+        "active": "[2(1)x3],2(2), [2(1)x3],2(11), [2(2)x6],2(23)3",
         "atkLvl": "H",
         "blockstun": "76(7)20",
         "chp": "750 (30x7*150*30x6*160*50)",
@@ -2456,13 +2508,28 @@
         "normalized": {
           "active": {
             "first": 2,
-            "max": 2,
-            "min": 2,
+            "max": 23,
+            "min": 1,
             "numbers": [
-              2
+              2,
+              1,
+              3,
+              2,
+              2,
+              2,
+              1,
+              3,
+              2,
+              11,
+              2,
+              2,
+              6,
+              2,
+              23,
+              3
             ],
-            "raw": "2",
-            "text": "2",
+            "raw": "[2(1)x3],2(2), [2(1)x3],2(11), [2(2)x6],2(23)3",
+            "text": "[2(1)x3],2(2), [2(1)x3],2(11), [2(2)x6],2(23)3",
             "uncertain": false
           },
           "onBlock": {
@@ -2483,6 +2550,8 @@
             "kd": [
               {
                 "advantage": 29,
+                "advantageMax": 29,
+                "advantageMin": 29,
                 "type": "KD"
               }
             ],
@@ -2501,6 +2570,8 @@
             "kd": [
               {
                 "advantage": 29,
+                "advantageMax": 29,
+                "advantageMin": 29,
                 "type": "KD"
               }
             ],
@@ -2709,7 +2780,9 @@
             "first": 12,
             "kd": [
               {
-                "advantage": null,
+                "advantage": 12,
+                "advantageMax": 16,
+                "advantageMin": 12,
                 "type": "KD"
               }
             ],
@@ -2728,7 +2801,9 @@
             "first": 16,
             "kd": [
               {
-                "advantage": null,
+                "advantage": 16,
+                "advantageMax": 20,
+                "advantageMin": 16,
                 "type": "KD"
               }
             ],
@@ -3124,7 +3199,9 @@
             "first": 7,
             "kd": [
               {
-                "advantage": null,
+                "advantage": 7,
+                "advantageMax": 13,
+                "advantageMin": 7,
                 "type": "KD"
               }
             ],
@@ -3143,7 +3220,9 @@
             "first": 11,
             "kd": [
               {
-                "advantage": null,
+                "advantage": 11,
+                "advantageMax": 17,
+                "advantageMin": 11,
                 "type": "KD"
               }
             ],
@@ -3244,6 +3323,8 @@
             "kd": [
               {
                 "advantage": 22,
+                "advantageMax": 22,
+                "advantageMin": 22,
                 "type": "KD"
               }
             ],
@@ -3262,6 +3343,8 @@
             "kd": [
               {
                 "advantage": 22,
+                "advantageMax": 22,
+                "advantageMin": 22,
                 "type": "KD"
               }
             ],
@@ -3348,6 +3431,8 @@
             "kd": [
               {
                 "advantage": 11,
+                "advantageMax": 11,
+                "advantageMin": 11,
                 "type": "KD"
               }
             ],
@@ -3366,6 +3451,8 @@
             "kd": [
               {
                 "advantage": 11,
+                "advantageMax": 11,
+                "advantageMin": 11,
                 "type": "HKD"
               }
             ],
@@ -3605,6 +3692,8 @@
             "kd": [
               {
                 "advantage": 21,
+                "advantageMax": 21,
+                "advantageMin": 21,
                 "type": "KD"
               }
             ],
@@ -3623,6 +3712,8 @@
             "kd": [
               {
                 "advantage": 21,
+                "advantageMax": 21,
+                "advantageMin": 21,
                 "type": "KD"
               }
             ],
@@ -3755,6 +3846,8 @@
             "kd": [
               {
                 "advantage": 44,
+                "advantageMax": 44,
+                "advantageMin": 44,
                 "type": "KD"
               }
             ],
@@ -3870,6 +3963,8 @@
             "kd": [
               {
                 "advantage": 33,
+                "advantageMax": 33,
+                "advantageMin": 33,
                 "type": "KD"
               }
             ],
@@ -3888,6 +3983,8 @@
             "kd": [
               {
                 "advantage": 33,
+                "advantageMax": 33,
+                "advantageMin": 33,
                 "type": "KD"
               }
             ],
@@ -3999,6 +4096,8 @@
             "kd": [
               {
                 "advantage": 29,
+                "advantageMax": 29,
+                "advantageMin": 29,
                 "type": "KD"
               }
             ],
@@ -4017,6 +4116,8 @@
             "kd": [
               {
                 "advantage": 29,
+                "advantageMax": 29,
+                "advantageMin": 29,
                 "type": "KD"
               }
             ],
@@ -4033,12 +4134,13 @@
           "recovery": {
             "first": 27,
             "max": 27,
-            "min": 27,
+            "min": 12,
             "numbers": [
-              27
+              27,
+              12
             ],
-            "raw": "27",
-            "text": "27",
+            "raw": "27+12 land",
+            "text": "27+12 land",
             "uncertain": false
           },
           "startup": {
@@ -4060,7 +4162,7 @@
         "onPP": -51,
         "plnCmd": "d,d+LK",
         "range": "0.898 (1st)",
-        "recovery": "27",
+        "recovery": "27+12 land",
         "startup": 5,
         "total": 57
       },
@@ -4254,6 +4356,8 @@
             "kd": [
               {
                 "advantage": 29,
+                "advantageMax": 29,
+                "advantageMin": 29,
                 "type": "KD"
               }
             ],
@@ -4272,6 +4376,8 @@
             "kd": [
               {
                 "advantage": 29,
+                "advantageMax": 29,
+                "advantageMin": 29,
                 "type": "KD"
               }
             ],
@@ -4889,6 +4995,8 @@
             "kd": [
               {
                 "advantage": 34,
+                "advantageMax": 34,
+                "advantageMin": 34,
                 "type": "KD"
               }
             ],
@@ -4907,6 +5015,8 @@
             "kd": [
               {
                 "advantage": 34,
+                "advantageMax": 34,
+                "advantageMin": 34,
                 "type": "KD"
               }
             ],
@@ -5017,6 +5127,8 @@
             "kd": [
               {
                 "advantage": 25,
+                "advantageMax": 25,
+                "advantageMin": 25,
                 "type": "KD"
               }
             ],
@@ -5035,6 +5147,8 @@
             "kd": [
               {
                 "advantage": 25,
+                "advantageMax": 25,
+                "advantageMin": 25,
                 "type": "KD"
               }
             ],
@@ -5051,12 +5165,13 @@
           "recovery": {
             "first": 31,
             "max": 31,
-            "min": 31,
+            "min": 12,
             "numbers": [
-              31
+              31,
+              12
             ],
-            "raw": "31",
-            "text": "31",
+            "raw": "31+12 land",
+            "text": "31+12 land",
             "uncertain": false
           },
           "startup": {
@@ -5078,7 +5193,7 @@
         "onPP": -55,
         "plnCmd": "d,d+MK",
         "range": "1.038 (1st)",
-        "recovery": "31",
+        "recovery": "31+12 land",
         "startup": 7,
         "total": 63
       },
@@ -5251,40 +5366,43 @@
           "onBlock": {
             "first": 6,
             "kd": [],
-            "max": 6,
+            "max": 11,
             "min": 6,
             "numbers": [
-              6
+              6,
+              11
             ],
-            "raw": "6",
+            "raw": "6(+11)",
             "tags": [],
-            "text": "6",
+            "text": "6(+11)",
             "uncertain": false
           },
           "onHit": {
             "first": 11,
             "kd": [],
-            "max": 11,
+            "max": 16,
             "min": 11,
             "numbers": [
-              11
+              11,
+              16
             ],
-            "raw": "11",
+            "raw": "11(+16)",
             "tags": [],
-            "text": "11",
+            "text": "11(+16)",
             "uncertain": false
           },
           "onPC": {
             "first": 15,
             "kd": [],
-            "max": 15,
+            "max": 20,
             "min": 15,
             "numbers": [
-              15
+              15,
+              20
             ],
-            "raw": "15",
+            "raw": "15(+20)",
             "tags": [],
-            "text": "15",
+            "text": "15(+20)",
             "uncertain": false
           },
           "recovery": null,
@@ -5301,9 +5419,9 @@
           }
         },
         "numCmd": "8HK",
-        "onBlock": "6",
-        "onHit": "11",
-        "onPC": "15",
+        "onBlock": "6(+11)",
+        "onHit": "11(+16)",
+        "onPC": "15(+20)",
         "plnCmd": "u+HK",
         "range": 0.96,
         "startup": 8
@@ -5384,6 +5502,8 @@
             "kd": [
               {
                 "advantage": 47,
+                "advantageMax": 47,
+                "advantageMin": 47,
                 "type": "KD"
               }
             ],
@@ -5402,6 +5522,8 @@
             "kd": [
               {
                 "advantage": 47,
+                "advantageMax": 47,
+                "advantageMin": 47,
                 "type": "KD"
               }
             ],
@@ -5514,6 +5636,8 @@
             "kd": [
               {
                 "advantage": 52,
+                "advantageMax": 52,
+                "advantageMin": 52,
                 "type": "KD"
               }
             ],
@@ -5522,9 +5646,11 @@
             "numbers": [
               52
             ],
-            "raw": "KD +52",
-            "tags": [],
-            "text": "KD +52",
+            "raw": "KD +52 OTG",
+            "tags": [
+              "otg"
+            ],
+            "text": "KD +52 OTG",
             "uncertain": false
           },
           "onPC": {
@@ -5532,6 +5658,8 @@
             "kd": [
               {
                 "advantage": 52,
+                "advantageMax": 52,
+                "advantageMin": 52,
                 "type": "KD"
               }
             ],
@@ -5540,9 +5668,11 @@
             "numbers": [
               52
             ],
-            "raw": "KD +52",
-            "tags": [],
-            "text": "KD +52",
+            "raw": "KD +52 OTG",
+            "tags": [
+              "otg"
+            ],
+            "text": "KD +52 OTG",
             "uncertain": false
           },
           "recovery": {
@@ -5570,8 +5700,8 @@
         },
         "numCmd": "214KK",
         "onBlock": -5,
-        "onHit": "KD +52",
-        "onPC": "KD +52",
+        "onHit": "KD +52 OTG",
+        "onPC": "KD +52 OTG",
         "onPP": -17,
         "plnCmd": "qcb+KK",
         "range": 3.09,
@@ -5591,7 +5721,7 @@
         "OppSoH": "560 (112x5)",
         "SelfSoB": "400 (80x5)",
         "SelfSoH": "800 (160x5)",
-        "active": "2",
+        "active": "2(4)2(4)2(4)2(4)2",
         "atkLvl": "H",
         "blockstun": "44 total",
         "chp": "250 (50x5)",
@@ -5620,13 +5750,21 @@
         "normalized": {
           "active": {
             "first": 2,
-            "max": 2,
+            "max": 4,
             "min": 2,
             "numbers": [
+              2,
+              4,
+              2,
+              4,
+              2,
+              4,
+              2,
+              4,
               2
             ],
-            "raw": "2",
-            "text": "2",
+            "raw": "2(4)2(4)2(4)2(4)2",
+            "text": "2(4)2(4)2(4)2(4)2",
             "uncertain": false
           },
           "onBlock": {
@@ -5660,6 +5798,8 @@
             "kd": [
               {
                 "advantage": 73,
+                "advantageMax": 73,
+                "advantageMin": 73,
                 "type": "KD"
               }
             ],
@@ -5668,9 +5808,11 @@
             "numbers": [
               73
             ],
-            "raw": "KD +73",
-            "tags": [],
-            "text": "KD +73",
+            "raw": "KD +73 Crumple",
+            "tags": [
+              "crumple"
+            ],
+            "text": "KD +73 Crumple",
             "uncertain": false
           },
           "recovery": {
@@ -5699,7 +5841,7 @@
         "numCmd": "236KK",
         "onBlock": -3,
         "onHit": 3,
-        "onPC": "KD +73",
+        "onPC": "KD +73 Crumple",
         "onPP": -20,
         "plnCmd": "qcf+KK",
         "range": 1.635,
@@ -5900,6 +6042,8 @@
             "kd": [
               {
                 "advantage": 55,
+                "advantageMax": 55,
+                "advantageMin": 55,
                 "type": "KD"
               }
             ],
@@ -5918,6 +6062,8 @@
             "kd": [
               {
                 "advantage": 55,
+                "advantageMax": 55,
+                "advantageMin": 55,
                 "type": "KD"
               }
             ],
@@ -6028,6 +6174,8 @@
             "kd": [
               {
                 "advantage": 30,
+                "advantageMax": 30,
+                "advantageMin": 30,
                 "type": "KD"
               }
             ],
@@ -6046,6 +6194,8 @@
             "kd": [
               {
                 "advantage": 30,
+                "advantageMax": 30,
+                "advantageMin": 30,
                 "type": "KD"
               }
             ],
@@ -6061,13 +6211,14 @@
           },
           "recovery": {
             "first": 16,
-            "max": 16,
+            "max": 25,
             "min": 16,
             "numbers": [
-              16
+              16,
+              25
             ],
-            "raw": "16",
-            "text": "16",
+            "raw": "16+25 land",
+            "text": "16+25 land",
             "uncertain": false
           },
           "startup": {
@@ -6089,7 +6240,7 @@
         "onPP": -50,
         "plnCmd": "d,d+KK",
         "range": "1.025 (1st)",
-        "recovery": "16",
+        "recovery": "16+25 land",
         "startup": 6,
         "total": 57
       },
@@ -6260,6 +6411,8 @@
             "kd": [
               {
                 "advantage": 10,
+                "advantageMax": 10,
+                "advantageMin": 10,
                 "type": "KD"
               }
             ],
@@ -6278,6 +6431,8 @@
             "kd": [
               {
                 "advantage": 10,
+                "advantageMax": 10,
+                "advantageMin": 10,
                 "type": "HKD"
               }
             ],
@@ -6561,7 +6716,9 @@
             "first": 34,
             "kd": [
               {
-                "advantage": 34,
+                "advantage": 21,
+                "advantageMax": 34,
+                "advantageMin": 21,
                 "type": "KD"
               }
             ],
@@ -6580,7 +6737,9 @@
             "first": 34,
             "kd": [
               {
-                "advantage": 34,
+                "advantage": 21,
+                "advantageMax": 34,
+                "advantageMin": 21,
                 "type": "KD"
               }
             ],
@@ -6693,7 +6852,9 @@
             "first": 17,
             "kd": [
               {
-                "advantage": null,
+                "advantage": 17,
+                "advantageMax": 20,
+                "advantageMin": 17,
                 "type": "KD"
               }
             ],
@@ -6712,7 +6873,9 @@
             "first": 21,
             "kd": [
               {
-                "advantage": null,
+                "advantage": 21,
+                "advantageMax": 24,
+                "advantageMin": 21,
                 "type": "KD"
               }
             ],
@@ -6811,6 +6974,8 @@
             "kd": [
               {
                 "advantage": 18,
+                "advantageMax": 18,
+                "advantageMin": 18,
                 "type": "HKD"
               }
             ],
@@ -6829,6 +6994,8 @@
             "kd": [
               {
                 "advantage": 18,
+                "advantageMax": 18,
+                "advantageMin": 18,
                 "type": "HKD"
               }
             ],
@@ -6940,6 +7107,8 @@
             "kd": [
               {
                 "advantage": 18,
+                "advantageMax": 18,
+                "advantageMin": 18,
                 "type": "HKD"
               }
             ],
@@ -6958,6 +7127,8 @@
             "kd": [
               {
                 "advantage": 18,
+                "advantageMax": 18,
+                "advantageMin": 18,
                 "type": "HKD"
               }
             ],
@@ -7883,6 +8054,8 @@
             "kd": [
               {
                 "advantage": 13,
+                "advantageMax": 13,
+                "advantageMin": 13,
                 "type": "KD"
               }
             ],
@@ -7901,6 +8074,8 @@
             "kd": [
               {
                 "advantage": 13,
+                "advantageMax": 13,
+                "advantageMin": 13,
                 "type": "HKD"
               }
             ],
@@ -8014,6 +8189,8 @@
             "kd": [
               {
                 "advantage": 35,
+                "advantageMax": 35,
+                "advantageMin": 35,
                 "type": "KD"
               }
             ],
@@ -8122,6 +8299,8 @@
             "kd": [
               {
                 "advantage": 41,
+                "advantageMax": 41,
+                "advantageMin": 41,
                 "type": "KD"
               }
             ],
@@ -8140,6 +8319,8 @@
             "kd": [
               {
                 "advantage": 41,
+                "advantageMax": 41,
+                "advantageMin": 41,
                 "type": "KD"
               }
             ],
@@ -8410,6 +8591,8 @@
             "kd": [
               {
                 "advantage": 72,
+                "advantageMax": 72,
+                "advantageMin": 72,
                 "type": "KD"
               }
             ],
@@ -8517,6 +8700,8 @@
             "kd": [
               {
                 "advantage": null,
+                "advantageMax": null,
+                "advantageMin": null,
                 "type": "KD"
               }
             ],
@@ -8533,6 +8718,8 @@
             "kd": [
               {
                 "advantage": null,
+                "advantageMax": null,
+                "advantageMin": null,
                 "type": "KD"
               }
             ],

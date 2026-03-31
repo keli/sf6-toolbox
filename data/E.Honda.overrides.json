@@ -3,22 +3,97 @@
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
     "Manually reviewed E.Honda.conflicts.csv line by line.",
-    "Only index-friendly and semantically clear values are applied."
+    "Preserved SuperCombo/FAT-style range and variant semantics where present."
   ],
   "entries": [
-    {"category": "normal", "move": "Stand HP", "set": {"onHit": "1", "onPC": "KD +77"}},
-    {"category": "normal", "move": "Crouch MK", "set": {"onPC": "10"}},
-    {"category": "normal", "move": "Crouch HK", "set": {"onHit": "KD +30", "onPC": "HKD +45"}},
-    {"category": "normal", "move": "Neutral Jump HP", "set": {"onHit": "12", "onBlock": "8", "onPC": "16"}},
-    {"category": "normal", "move": "Drive Impact: Sumo Crunch", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
-    {"category": "normal", "move": "Drive Reversal: Raiden-ho", "set": {"startup": "18"}},
-    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
-    {"category": "normal", "move": "Neko Damashi", "set": {"onHit": "3", "onBlock": "-3", "onPC": "7"}},
-    {"category": "normal", "move": "LP Hundred Hand Slap", "set": {"active": "2", "onHit": "2", "onPC": "6"}},
-    {"category": "normal", "move": "MP Hundred Hand Slap", "set": {"startup": "16", "active": "2", "recovery": "17", "onHit": "2", "onPC": "6"}},
-    {"category": "normal", "move": "HP Hundred Hand Slap", "set": {"startup": "19", "active": "2", "recovery": "17", "onHit": "2", "onPC": "6"}},
-    {"category": "normal", "move": "OD Hundred Hand Slap", "set": {"active": "4", "onHit": "4", "onPC": "8"}},
-    {"category": "normal", "move": "Show of Force", "set": {"onHit": "KD +13", "onPC": "KD +13"}},
-    {"category": "normal", "move": "The Final Bout", "set": {"onHit": "HKD +34", "onPC": "HKD +34"}}
+    {
+      "category": "normal",
+      "move": "Crouch HK",
+      "set": { "onHit": "KD +30(+39)", "onPC": "HKD +45(+54)" }
+    },
+    { "category": "normal", "move": "Crouch MK", "set": { "onPC": "+10" } },
+    {
+      "category": "normal",
+      "move": "Drive Impact: Sumo Crunch",
+      "set": {
+        "onHit": "KD +35 / Wall Splat KD +65",
+        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Parry",
+      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Raiden-ho",
+      "set": { "startup": "18" }
+    },
+    {
+      "category": "normal",
+      "move": "HP Hundred Hand Slap",
+      "set": {
+        "startup": "19",
+        "active": "2(4)2(3)1(3)1(3)1(3)1(3)1(3)1(2)1(2)1(2)1(1)2 [2(4)2(3)1(3)1(3)1(3)1(3)1(3)1(1)1(1)1(14)2]",
+        "recovery": "17[14]",
+        "onHit": "+2[+4]",
+        "onPC": "+6[+8]"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "LP Hundred Hand Slap",
+      "set": {
+        "active": "2(4)2(2)1(2)2(1)1(1)2 [2(4)2(2)1(1)2(1)1(10)2]",
+        "onHit": "+2[+4]",
+        "onPC": "+6[+8]"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MP Hundred Hand Slap",
+      "set": {
+        "startup": "16",
+        "active": "2(4)2(1)1(3)1(2)1(3)1(3)1(2)1(2)2 [2(4)2(2)1(3)1(2)1(4)1(1)1(14)2]",
+        "recovery": "17[14]",
+        "onHit": "+2[+4]",
+        "onPC": "+6[+8]"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Neko Damashi",
+      "set": { "onHit": "+3(+7)", "onBlock": "-3(+1)", "onPC": "+7(+11)" }
+    },
+    {
+      "category": "normal",
+      "move": "Neutral Jump HP",
+      "set": { "onHit": "12(+15)", "onBlock": "8(+11)", "onPC": "16(+19)" }
+    },
+    {
+      "category": "normal",
+      "move": "OD Hundred Hand Slap",
+      "set": {
+        "active": "4(6)2(3)2(3)2(4)2(2)2(2)2(2)2(1)2 [4(6)2(3)2(3)2(4)2(1)2(1)1(1)1(10)2]",
+        "onHit": "+4[+6]",
+        "onPC": "+8[+10]"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Show of Force",
+      "set": { "onHit": "KD +13(+38)", "onPC": "KD +13(+38)" }
+    },
+    {
+      "category": "normal",
+      "move": "Stand HP",
+      "set": { "onHit": "+1(+4)", "onPC": "KD +77(+80) Crumple" }
+    },
+    {
+      "category": "normal",
+      "move": "The Final Bout",
+      "set": { "onHit": "HKD +34 (KD +19)", "onPC": "HKD +34 (KD +19)" }
+    }
   ]
 }

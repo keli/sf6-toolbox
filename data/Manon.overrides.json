@@ -3,15 +3,42 @@
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
     "Manually reviewed Manon.conflicts.csv line by line.",
-    "Only index-friendly and semantically clear values are applied."
+    "Preserved SuperCombo/FAT-style range and variant semantics where present."
   ],
   "entries": [
-    {"category": "normal", "move": "Stand HK", "set": {"recovery": "23"}},
-    {"category": "normal", "move": "Drive Impact: Glissade", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
-    {"category": "normal", "move": "Drive Reversal: Écarté", "set": {"startup": "18"}},
-    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
-    {"category": "normal", "move": "HK Dégagé", "set": {"active": "3"}},
-    {"category": "normal", "move": "OD Dégagé", "set": {"onHit": "6", "onPC": "10"}},
-    {"category": "normal", "move": "Étoile", "set": {"recovery": "38"}}
+    {
+      "category": "normal",
+      "move": "Drive Impact: Glissade",
+      "set": {
+        "onHit": "KD +35 / Wall Splat KD +65",
+        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Parry",
+      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Écarté",
+      "set": { "startup": "18" }
+    },
+    { "category": "normal", "move": "HK Dégagé", "set": { "active": "3" } },
+    {
+      "category": "normal",
+      "move": "OD Dégagé",
+      "set": { "onHit": "+6(+7)", "onPC": "+10(+11)" }
+    },
+    {
+      "category": "normal",
+      "move": "Stand HK",
+      "set": { "recovery": "23(26)" }
+    },
+    {
+      "category": "normal",
+      "move": "Étoile",
+      "set": { "recovery": "38+34 land" }
+    }
   ]
 }

@@ -3,17 +3,61 @@
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
     "Manually reviewed Dhalsim.conflicts.csv line by line.",
-    "Only index-friendly and semantically clear values are applied."
+    "Preserved SuperCombo/FAT-style range and variant semantics where present."
   ],
   "entries": [
-    {"category": "normal", "move": "Crouch LK", "set": {"onHit": "-5", "onPC": "-1"}},
-    {"category": "normal", "move": "Crouch MK", "set": {"onHit": "-3", "onBlock": "-10", "onPC": "1"}},
-    {"category": "normal", "move": "Crouch HK", "set": {"onHit": "HKD +22", "onPC": "HKD +37"}},
-    {"category": "normal", "move": "Drive Impact: Yoga Rise", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
-    {"category": "normal", "move": "Drive Reversal: Yoga Illusion", "set": {"startup": "18"}},
-    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
-    {"category": "normal", "move": "HP Yoga Flame", "set": {"onHit": "KD +45", "onPC": "KD +45"}},
-    {"category": "normal", "move": "OD Yoga Flame", "set": {"active": "5", "recovery": "19", "onHit": "KD +51", "onPC": "KD +51"}},
-    {"category": "normal", "move": "Yoga Sunburst", "set": {"active": "142"}}
+    {
+      "category": "normal",
+      "move": "Crouch HK",
+      "set": { "onHit": "HKD +22(+37)", "onPC": "HKD +37(+52)" }
+    },
+    {
+      "category": "normal",
+      "move": "Crouch LK",
+      "set": { "onHit": "-5(+1)", "onPC": "-1(+5)" }
+    },
+    {
+      "category": "normal",
+      "move": "Crouch MK",
+      "set": { "onHit": "-3(+9)", "onBlock": "-10(+2)", "onPC": "+1(+13)" }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Impact: Yoga Rise",
+      "set": {
+        "onHit": "KD +35 / Wall Splat KD +65",
+        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Parry",
+      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Yoga Illusion",
+      "set": { "startup": "18" }
+    },
+    {
+      "category": "normal",
+      "move": "HP Yoga Flame",
+      "set": { "onHit": "KD +45(+47)", "onPC": "KD +45(+47)" }
+    },
+    {
+      "category": "normal",
+      "move": "OD Yoga Flame",
+      "set": {
+        "active": "5,5,5,5,5",
+        "recovery": "19(24)",
+        "onHit": "KD +51",
+        "onPC": "KD +51"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Yoga Sunburst",
+      "set": { "active": "[142+20]" }
+    }
   ]
 }
