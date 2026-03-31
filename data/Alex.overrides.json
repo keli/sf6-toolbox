@@ -2,9 +2,17 @@
   "character": "Alex",
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
-    "Selected index-friendly values from Alex.conflicts.csv."
+    "Manually reviewed Alex.conflicts.csv line by line.",
+    "Only index-friendly and semantically clear values are applied."
   ],
   "entries": [
+    {
+      "category": "normal",
+      "move": "Stand HK",
+      "set": {
+        "onPC": "KD +62"
+      }
+    },
     {
       "category": "normal",
       "move": "Drive Impact: Lariat Kick",
@@ -26,6 +34,57 @@
       "set": {
         "active": "12",
         "recovery": "33"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HP Flash Chop",
+      "set": {
+        "onHit": "5",
+        "onPC": "9"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Flash Chop",
+      "set": {
+        "active": "2"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "LK Aerial Knee Smash",
+      "set": {
+        "recovery": "19"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MK Aerial Knee Smash",
+      "set": {
+        "recovery": "18"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HK Aerial Knee Smash",
+      "set": {
+        "recovery": "21"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Aerial Knee Smash",
+      "set": {
+        "recovery": "21"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "The Final Prison",
+      "set": {
+        "onHit": "HKD +25",
+        "onPC": "HKD +25"
       }
     }
   ]

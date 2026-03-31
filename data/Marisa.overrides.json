@@ -2,31 +2,21 @@
   "character": "Marisa",
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
-    "Selected index-friendly values from Marisa.conflicts.csv."
+    "Manually reviewed Marisa.conflicts.csv line by line.",
+    "Only index-friendly and semantically clear values are applied."
   ],
   "entries": [
-    {
-      "category": "normal",
-      "move": "Drive Impact: Secutor",
-      "set": {
-        "onHit": "KD +35",
-        "onPC": "HKD +104"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Love Tap",
-      "set": {
-        "startup": "18"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Parry",
-      "set": {
-        "active": "12",
-        "recovery": "33"
-      }
-    }
+    {"category": "normal", "move": "Crouch MK", "set": {"recovery": "17", "onHit": "5", "onPC": "9"}},
+    {"category": "normal", "move": "Novacula", "set": {"startup": "9"}},
+    {"category": "normal", "move": "Drive Impact: Secutor", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
+    {"category": "normal", "move": "Drive Reversal: Love Tap", "set": {"startup": "18"}},
+    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
+    {"category": "normal", "move": "LP Phalanx", "set": {"onBlock": "3"}},
+    {"category": "normal", "move": "MP Phalanx", "set": {"onBlock": "3"}},
+    {"category": "normal", "move": "HP Phalanx", "set": {"onBlock": "3"}},
+    {"category": "normal", "move": "OD Phalanx", "set": {"onHit": "KD +70", "onBlock": "4", "onPC": "HKD +76"}},
+    {"category": "normal", "move": "OD Quadriga", "set": {"onHit": "KD +50", "onPC": "KD +50"}},
+    {"category": "normal", "move": "Scutum", "set": {"startup": "7", "active": "4", "recovery": "20"}},
+    {"category": "normal", "move": "OD Scutum", "set": {"startup": "7", "active": "4", "recovery": "20"}}
   ]
 }

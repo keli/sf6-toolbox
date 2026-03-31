@@ -2,9 +2,57 @@
   "character": "Blanka",
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
-    "Selected index-friendly values from Blanka.conflicts.csv."
+    "Manually reviewed Blanka.conflicts.csv line by line.",
+    "Only index-friendly and semantically clear values are applied."
   ],
   "entries": [
+    {
+      "category": "normal",
+      "move": "Stand MK",
+      "set": {
+        "onHit": "5",
+        "onPC": "9"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Neutral Jump HP",
+      "set": {
+        "onHit": "10",
+        "onBlock": "6",
+        "onPC": "14"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Rock Crusher",
+      "set": {
+        "active": "2"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Wild Nail",
+      "set": {
+        "onHit": "KD +27",
+        "onPC": "HKD +76"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Amazon River Run",
+      "set": {
+        "onHit": "KD +29",
+        "onPC": "HKD +29"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Coward Crouch",
+      "set": {
+        "active": "1"
+      }
+    },
     {
       "category": "normal",
       "move": "Drive Impact: Wild Scratch",
@@ -26,6 +74,14 @@
       "set": {
         "active": "12",
         "recovery": "33"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Ground Shave Cannonball",
+      "set": {
+        "onHit": "HKD +14",
+        "onPC": "HKD +14"
       }
     }
   ]

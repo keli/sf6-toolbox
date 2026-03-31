@@ -2,31 +2,18 @@
   "character": "Dhalsim",
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
-    "Selected index-friendly values from Dhalsim.conflicts.csv."
+    "Manually reviewed Dhalsim.conflicts.csv line by line.",
+    "Only index-friendly and semantically clear values are applied."
   ],
   "entries": [
-    {
-      "category": "normal",
-      "move": "Drive Impact: Yoga Rise",
-      "set": {
-        "onHit": "KD +35",
-        "onPC": "HKD +104"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Yoga Illusion",
-      "set": {
-        "startup": "18"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Parry",
-      "set": {
-        "active": "12",
-        "recovery": "33"
-      }
-    }
+    {"category": "normal", "move": "Crouch LK", "set": {"onHit": "-5", "onPC": "-1"}},
+    {"category": "normal", "move": "Crouch MK", "set": {"onHit": "-3", "onBlock": "-10", "onPC": "1"}},
+    {"category": "normal", "move": "Crouch HK", "set": {"onHit": "HKD +22", "onPC": "HKD +37"}},
+    {"category": "normal", "move": "Drive Impact: Yoga Rise", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
+    {"category": "normal", "move": "Drive Reversal: Yoga Illusion", "set": {"startup": "18"}},
+    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
+    {"category": "normal", "move": "HP Yoga Flame", "set": {"onHit": "KD +45", "onPC": "KD +45"}},
+    {"category": "normal", "move": "OD Yoga Flame", "set": {"active": "5", "recovery": "19", "onHit": "KD +51", "onPC": "KD +51"}},
+    {"category": "normal", "move": "Yoga Sunburst", "set": {"active": "142"}}
   ]
 }

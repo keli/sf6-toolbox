@@ -2,31 +2,22 @@
   "character": "Luke",
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
-    "Selected index-friendly values from Luke.conflicts.csv."
+    "Manually reviewed Luke.conflicts.csv line by line.",
+    "Only index-friendly and semantically clear values are applied."
   ],
   "entries": [
-    {
-      "category": "normal",
-      "move": "Drive Impact: Muzzle Flash",
-      "set": {
-        "onHit": "KD +35",
-        "onPC": "HKD +104"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Battering Ram",
-      "set": {
-        "startup": "18"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Parry",
-      "set": {
-        "active": "12",
-        "recovery": "33"
-      }
-    }
+    {"category": "normal", "move": "Stand HP", "set": {"onBlock": "-5"}},
+    {"category": "normal", "move": "Stand HK", "set": {"onHit": "2", "onBlock": "-5", "onPC": "KD +49"}},
+    {"category": "normal", "move": "Drive Impact: Muzzle Flash", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
+    {"category": "normal", "move": "Drive Reversal: Battering Ram", "set": {"startup": "18"}},
+    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
+    {"category": "normal", "move": "LP Rising Uppercut", "set": {"recovery": "22"}},
+    {"category": "normal", "move": "MP Rising Uppercut", "set": {"recovery": "24"}},
+    {"category": "normal", "move": "HP Rising Uppercut", "set": {"recovery": "25"}},
+    {"category": "normal", "move": "OD Rising Uppercut", "set": {"active": "3", "recovery": "35"}},
+    {"category": "normal", "move": "LP Flash Knuckle", "set": {"recovery": "27", "onHit": "KD +36", "onBlock": "-12", "onPC": "KD +36"}},
+    {"category": "normal", "move": "OD Avenger", "set": {"startup": "11"}},
+    {"category": "normal", "move": "Vulcan Blast", "set": {"onHit": "KD +17", "onPC": "KD +17"}},
+    {"category": "normal", "move": "Pale Rider", "set": {"recovery": "66"}}
   ]
 }

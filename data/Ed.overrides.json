@@ -2,31 +2,25 @@
   "character": "Ed",
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
-    "Selected index-friendly values from Ed.conflicts.csv."
+    "Manually reviewed Ed.conflicts.csv line by line.",
+    "Only index-friendly and semantically clear values are applied."
   ],
   "entries": [
-    {
-      "category": "normal",
-      "move": "Drive Impact: Turn Punch",
-      "set": {
-        "onHit": "KD +35",
-        "onPC": "HKD +104"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Hammer Blow",
-      "set": {
-        "startup": "18"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Parry",
-      "set": {
-        "active": "12",
-        "recovery": "33"
-      }
-    }
+    {"category": "normal", "move": "Stand HP", "set": {"startup": "10"}},
+    {"category": "normal", "move": "Crouch MK", "set": {"recovery": "16"}},
+    {"category": "normal", "move": "Crouch HK", "set": {"recovery": "19", "onHit": "-1", "onBlock": "-6", "onPC": "3"}},
+    {"category": "normal", "move": "Face Buster", "set": {"onHit": "KD +24", "onPC": "HKD +24"}},
+    {"category": "normal", "move": "Drive Impact: Turn Punch", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
+    {"category": "normal", "move": "Drive Reversal: Hammer Blow", "set": {"startup": "18"}},
+    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
+    {"category": "normal", "move": "Psycho Spark", "set": {"onHit": "3", "onBlock": "-5", "onPC": "7"}},
+    {"category": "normal", "move": "OD Psycho Spark", "set": {"onBlock": "-2"}},
+    {"category": "normal", "move": "LP Psycho Uppercut", "set": {"recovery": "23"}},
+    {"category": "normal", "move": "OD Psycho Blitz", "set": {"active": "1"}},
+    {"category": "normal", "move": "LK Psycho Flicker", "set": {"onPC": "KD +60"}},
+    {"category": "normal", "move": "MK Psycho Flicker", "set": {"onPC": "KD +62"}},
+    {"category": "normal", "move": "HK Psycho Flicker", "set": {"onHit": "KD +51", "onPC": "KD +51"}},
+    {"category": "normal", "move": "Psycho Storm", "set": {"active": "2"}},
+    {"category": "normal", "move": "Psycho Cannon", "set": {"onBlock": "65"}}
   ]
 }

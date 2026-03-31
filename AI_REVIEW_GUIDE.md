@@ -1,14 +1,14 @@
 # AI Review Guide
 
-This guide defines the AI workflow for applying manual overrides to character data.
+This guide defines the AI workflow for deciding and applying manual overrides to character data, based on conflicts files. In conflicts files Supercombo's data is more up-to-date but were manually editted by human so hard to parse by code, your job is to understand them and decide which items should be used to override existing values.
 
 ## Workflow Contract
 
-1. Do not edit `*.fat.json` directly.
-2. Write manual corrections into `data/<Character>.overrides.json`.
-3. Use `data/<Character>.conflicts.csv` as evidence when selecting values.
+1. Use `data/<Character>.conflicts.csv` as evidence when selecting values. 
+2. Do not batch process these files. Manually go through each items, one file at a time.
 4. Keep override values index-friendly when possible.
-5. Run `apply_character_overrides.py` to apply overrides and write `data/<Character>.json`.
+5. Write manual corrections into `data/<Character>.overrides.json`. 
+6. Run `apply_character_overrides.py` to apply overrides and write `data/<Character>.json`.
 
 ## Apply Script Modes
 

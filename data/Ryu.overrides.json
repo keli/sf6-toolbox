@@ -2,31 +2,32 @@
   "character": "Ryu",
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
-    "Selected index-friendly values from Ryu.conflicts.csv."
+    "Manually reviewed Ryu.conflicts.csv line by line.",
+    "Only index-friendly and semantically clear values are applied."
   ],
   "entries": [
-    {
-      "category": "normal",
-      "move": "Drive Impact: Shingeki",
-      "set": {
-        "onHit": "KD +35",
-        "onPC": "HKD +104"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Chest Strike",
-      "set": {
-        "startup": "18"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Parry",
-      "set": {
-        "active": "12",
-        "recovery": "33"
-      }
-    }
+    {"category": "normal", "move": "Stand HK", "set": {"onPC": "KD +84"}},
+    {"category": "normal", "move": "Collarbone Breaker", "set": {"active": "1"}},
+    {"category": "normal", "move": "Solar Plexus Strike", "set": {"active": "2"}},
+    {"category": "normal", "move": "Axe Kick", "set": {"startup": "10", "onHit": "0"}},
+    {"category": "normal", "move": "Drive Impact: Shingeki", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
+    {"category": "normal", "move": "Drive Reversal: Chest Strike", "set": {"startup": "18"}},
+    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
+    {"category": "normal", "move": "HP Hadoken", "set": {"recovery": "28", "onHit": "KD +54", "onBlock": "-1", "onPC": "KD +54"}},
+    {"category": "normal", "move": "OD Hadoken", "set": {"recovery": "26", "onHit": "KD +57", "onBlock": "2", "onPC": "KD +57"}},
+    {"category": "normal", "move": "LP Shoryuken", "set": {"recovery": "21"}},
+    {"category": "normal", "move": "MP Shoryuken", "set": {"recovery": "30"}},
+    {"category": "normal", "move": "HP Shoryuken", "set": {"recovery": "34"}},
+    {"category": "normal", "move": "OD Shoryuken", "set": {"active": "2", "recovery": "37"}},
+    {"category": "normal", "move": "LK Tatsumaki Senpukyaku", "set": {"recovery": "14"}},
+    {"category": "normal", "move": "MK Tatsumaki Senpukyaku", "set": {"recovery": "11", "onHit": "KD +23", "onPC": "KD +23"}},
+    {"category": "normal", "move": "HK Tatsumaki Senpukyaku", "set": {"recovery": "14", "onHit": "KD +20", "onPC": "KD +20"}},
+    {"category": "normal", "move": "OD Tatsumaki Senpukyaku", "set": {"recovery": "10"}},
+    {"category": "normal", "move": "HK High Blade Kick", "set": {"onPC": "KD +96"}},
+    {"category": "normal", "move": "HP Hashogeki", "set": {"startup": "20", "onHit": "KD +62", "onBlock": "3", "onPC": "KD +62"}},
+    {"category": "normal", "move": "OD Hashogeki", "set": {"recovery": "19", "onHit": "KD +87", "onBlock": "4", "onPC": "KD +91"}},
+    {"category": "normal", "move": "Shinku Hadoken", "set": {"recovery": "82", "onHit": "KD +27", "onPC": "KD +27"}},
+    {"category": "normal", "move": "Shin Hashogeki", "set": {"startup": "12", "onHit": "KD +20", "onPC": "KD +20"}},
+    {"category": "normal", "move": "Shin Shoryuken", "set": {"recovery": "32"}}
   ]
 }

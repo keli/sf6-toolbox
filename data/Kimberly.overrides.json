@@ -2,31 +2,24 @@
   "character": "Kimberly",
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
-    "Selected index-friendly values from Kimberly.conflicts.csv (normal category)."
+    "Manually reviewed Kimberly.conflicts.csv line by line.",
+    "Applied stable overrides for normal category in this pass.",
+    "Only index-friendly and semantically clear values are applied."
   ],
   "entries": [
-    {
-      "category": "normal",
-      "move": "Drive Impact: Steadfast Strike",
-      "set": {
-        "onHit": "KD +35",
-        "onPC": "HKD +104"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Shapeless State",
-      "set": {
-        "startup": "18"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Parry",
-      "set": {
-        "active": "12",
-        "recovery": "33"
-      }
-    }
+    {"category": "normal", "move": "Water Slicer Slide", "set": {"onHit": "1", "onPC": "5"}},
+    {"category": "normal", "move": "Hisen Kick", "set": {"recovery": "3", "onHit": "1", "onPC": "5"}},
+    {"category": "normal", "move": "Drive Impact: Steadfast Strike", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
+    {"category": "normal", "move": "Drive Reversal: Shapeless State", "set": {"startup": "18"}},
+    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
+    {"category": "normal", "move": "LK Bushin Senpukyaku", "set": {"recovery": "6"}},
+    {"category": "normal", "move": "MK Bushin Senpukyaku", "set": {"recovery": "8"}},
+    {"category": "normal", "move": "HK Bushin Senpukyaku", "set": {"recovery": "11"}},
+    {"category": "normal", "move": "OD Bushin Senpukyaku", "set": {"recovery": "12"}},
+    {"category": "normal", "move": "LP Vagabond Edge", "set": {"onHit": "3", "onPC": "7"}},
+    {"category": "normal", "move": "OD Sprint", "set": {"startup": "8"}},
+    {"category": "normal", "move": "OD Hidden Variable", "set": {"recovery": "16"}},
+    {"category": "normal", "move": "Shuriken Bomb", "set": {"startup": "18"}},
+    {"category": "normal", "move": "Shuriken Bomb Spread", "set": {"startup": "18"}}
   ]
 }

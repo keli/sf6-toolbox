@@ -2551,7 +2551,7 @@
             "first": 51,
             "kd": [
               {
-                "advantage": null,
+                "advantage": 51,
                 "type": "KD"
               }
             ],
@@ -2560,9 +2560,9 @@
             "numbers": [
               51
             ],
-            "raw": "KD Spin +51",
+            "raw": "KD +51",
             "tags": [],
-            "text": "KD Spin +51",
+            "text": "KD +51",
             "uncertain": false
           },
           "recovery": {
@@ -2591,7 +2591,7 @@
         "numCmd": "3HK",
         "onBlock": -9,
         "onHit": 0,
-        "onPC": "KD Spin +51",
+        "onPC": "KD +51",
         "onPP": -24,
         "plnCmd": "df+HK",
         "range": 1.559,
@@ -3740,29 +3740,27 @@
           "onHit": {
             "first": 0,
             "kd": [],
-            "max": 4,
+            "max": 0,
             "min": 0,
             "numbers": [
-              0,
-              4
+              0
             ],
-            "raw": "0(4)",
+            "raw": "0",
             "tags": [],
-            "text": "0(4)",
+            "text": "0",
             "uncertain": false
           },
           "onPC": {
             "first": 4,
             "kd": [],
-            "max": 8,
+            "max": 4,
             "min": 4,
             "numbers": [
-              4,
-              8
+              4
             ],
-            "raw": "4(8)",
+            "raw": "4",
             "tags": [],
-            "text": "4(8)",
+            "text": "4",
             "uncertain": false
           },
           "recovery": {
@@ -3790,8 +3788,8 @@
         },
         "numCmd": "4LK",
         "onBlock": "-4(0)",
-        "onHit": "0(4)",
-        "onPC": "4(8)",
+        "onHit": "0",
+        "onPC": "4",
         "onPP": -18,
         "plnCmd": "b+LK",
         "range": "1.323~1.587",
@@ -5464,21 +5462,15 @@
           },
           "onHit": {
             "first": -1,
-            "kd": [
-              {
-                "advantage": 29,
-                "type": "KD"
-              }
-            ],
-            "max": 29,
+            "kd": [],
+            "max": -1,
             "min": -1,
             "numbers": [
-              -1,
-              29
+              -1
             ],
-            "raw": "-1 (KD +29)",
+            "raw": "-1",
             "tags": [],
-            "text": "-1 (KD +29)",
+            "text": "-1",
             "uncertain": false
           },
           "onPC": {
@@ -5524,7 +5516,7 @@
         },
         "numCmd": "6HK",
         "onBlock": -8,
-        "onHit": "-1 (KD +29)",
+        "onHit": "-1",
         "onPC": "KD +55",
         "onPP": -27,
         "plnCmd": "f+HK",

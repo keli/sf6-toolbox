@@ -2,31 +2,28 @@
   "character": "Rashid",
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
-    "Selected index-friendly values from Rashid.conflicts.csv."
+    "Manually reviewed Rashid.conflicts.csv line by line.",
+    "Only index-friendly and semantically clear values are applied."
   ],
   "entries": [
-    {
-      "category": "normal",
-      "move": "Drive Impact: Eagle Edge",
-      "set": {
-        "onHit": "KD +35",
-        "onPC": "HKD +104"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Eagle Slash",
-      "set": {
-        "startup": "18"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Parry",
-      "set": {
-        "active": "12",
-        "recovery": "33"
-      }
-    }
+    {"category": "normal", "move": "Flapping Spin", "set": {"startup": "8"}},
+    {"category": "normal", "move": "Crescent Kick", "set": {"onHit": "2", "onPC": "6"}},
+    {"category": "normal", "move": "Drive Impact: Eagle Edge", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
+    {"category": "normal", "move": "Drive Reversal: Eagle Slash", "set": {"startup": "18"}},
+    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
+    {"category": "normal", "move": "MP Spinning Mixer", "set": {"active": "1", "recovery": "34"}},
+    {"category": "normal", "move": "HP Spinning Mixer", "set": {"active": "2", "recovery": "24"}},
+    {"category": "normal", "move": "OD Spinning Mixer", "set": {"active": "1", "recovery": "38"}},
+    {"category": "normal", "move": "LK Eagle Spike", "set": {"recovery": "11", "onHit": "KD +30", "onPC": "KD +30"}},
+    {"category": "normal", "move": "MK Eagle Spike", "set": {"recovery": "5", "onHit": "KD +52", "onPC": "KD +52"}},
+    {"category": "normal", "move": "HK Eagle Spike", "set": {"recovery": "6", "onHit": "KD +56", "onPC": "KD +56"}},
+    {"category": "normal", "move": "OD Eagle Spike", "set": {"recovery": "7", "onHit": "KD +53", "onPC": "KD +53"}},
+    {"category": "normal", "move": "Whirlwind Shot", "set": {"startup": "11"}},
+    {"category": "normal", "move": "LP Arabian Cyclone", "set": {"onHit": "2", "onBlock": "-6", "onPC": "6"}},
+    {"category": "normal", "move": "MP Arabian Cyclone", "set": {"onHit": "4", "onBlock": "-4", "onPC": "8"}},
+    {"category": "normal", "move": "HP Arabian Cyclone", "set": {"onBlock": "-2"}},
+    {"category": "normal", "move": "Super Rashid Kick", "set": {"recovery": "20"}},
+    {"category": "normal", "move": "Ysaar", "set": {"active": "349"}},
+    {"category": "normal", "move": "Altair", "set": {"onHit": "HKD +18", "onPC": "HKD +18"}}
   ]
 }

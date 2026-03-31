@@ -2,31 +2,24 @@
   "character": "Sagat",
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
-    "Selected index-friendly values from Sagat.conflicts.csv."
+    "Manually reviewed Sagat.conflicts.csv line by line.",
+    "Only index-friendly and semantically clear values are applied."
   ],
   "entries": [
-    {
-      "category": "normal",
-      "move": "Drive Impact: Tiger Punishment",
-      "set": {
-        "onHit": "KD +35",
-        "onPC": "HKD +104"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Tiger Twin Babel",
-      "set": {
-        "startup": "18"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Parry",
-      "set": {
-        "active": "12",
-        "recovery": "33"
-      }
-    }
+    {"category": "normal", "move": "Stand HK", "set": {"startup": "10", "active": "2"}},
+    {"category": "normal", "move": "Crouch MP", "set": {"recovery": "16"}},
+    {"category": "normal", "move": "Tiger Monolith", "set": {"active": "3", "onPC": "KD +41"}},
+    {"category": "normal", "move": "Drive Impact: Tiger Punishment", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
+    {"category": "normal", "move": "Drive Reversal: Tiger Twin Babel", "set": {"startup": "18"}},
+    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
+    {"category": "normal", "move": "LP Tiger Uppercut", "set": {"recovery": "35"}},
+    {"category": "normal", "move": "MP Tiger Uppercut", "set": {"recovery": "40"}},
+    {"category": "normal", "move": "HP Tiger Uppercut", "set": {"recovery": "40"}},
+    {"category": "normal", "move": "OD Tiger Uppercut", "set": {"recovery": "38"}},
+    {"category": "normal", "move": "LK Tiger Knee Crush", "set": {"recovery": "3", "onHit": "KD +36", "onBlock": "-8", "onPC": "KD +36"}},
+    {"category": "normal", "move": "MK Tiger Knee Crush", "set": {"recovery": "3", "onHit": "KD +39", "onBlock": "-7", "onPC": "KD +39"}},
+    {"category": "normal", "move": "HK Tiger Knee Crush", "set": {"recovery": "3", "onHit": "KD +40", "onBlock": "-5", "onPC": "KD +40"}},
+    {"category": "normal", "move": "OD Tiger Knee Crush", "set": {"active": "3", "recovery": "2", "onHit": "KD +66", "onBlock": "-2", "onPC": "KD +66"}},
+    {"category": "normal", "move": "Tiger Vanquisher", "set": {"startup": "12"}}
   ]
 }

@@ -2,9 +2,24 @@
   "character": "Akuma",
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
-    "Selected index-friendly values from Akuma.conflicts.csv."
+    "Manually reviewed Akuma.conflicts.csv line by line.",
+    "Only index-friendly and semantically clear values are applied."
   ],
   "entries": [
+    {
+      "category": "normal",
+      "move": "Stand HK",
+      "set": {
+        "onBlock": "3"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Resso Snap Kick",
+      "set": {
+        "recovery": "15"
+      }
+    },
     {
       "category": "normal",
       "move": "Drive Impact: Oni Goroshi",
@@ -26,6 +41,98 @@
       "set": {
         "active": "12",
         "recovery": "33"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Forward Taunt",
+      "set": {
+        "startup": "570"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "LP Gou Shoryuken",
+      "set": {
+        "recovery": "21"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MP Gou Shoryuken",
+      "set": {
+        "active": "2",
+        "recovery": "30"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HP Gou Shoryuken",
+      "set": {
+        "active": "2",
+        "recovery": "35"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Gou Shoryuken",
+      "set": {
+        "active": "2",
+        "recovery": "37"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Adamant Flame",
+      "set": {
+        "onPC": "KD +78"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "LK Tatsumaki Zanku-kyaku",
+      "set": {
+        "recovery": "14"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MK Tatsumaki Zanku-kyaku",
+      "set": {
+        "active": "2",
+        "recovery": "10",
+        "onHit": "KD +41",
+        "onPC": "KD +41"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HK Tatsumaki Zanku-kyaku",
+      "set": {
+        "recovery": "21"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Tatsumaki Zanku-kyaku",
+      "set": {
+        "recovery": "7"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Ashura Senku (forward)",
+      "set": {
+        "startup": "23"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Empyrean's End",
+      "set": {
+        "startup": "9",
+        "onHit": "HKD +29",
+        "onPC": "HKD +29"
       }
     }
   ]

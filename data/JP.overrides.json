@@ -2,31 +2,29 @@
   "character": "JP",
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
-    "Selected index-friendly values from JP.conflicts.csv."
+    "Manually reviewed JP.conflicts.csv line by line.",
+    "Only index-friendly and semantically clear values are applied."
   ],
   "entries": [
-    {
-      "category": "normal",
-      "move": "Drive Impact: Espada",
-      "set": {
-        "onHit": "KD +35",
-        "onPC": "HKD +104"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Exilio",
-      "set": {
-        "startup": "18"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Parry",
-      "set": {
-        "active": "12",
-        "recovery": "33"
-      }
-    }
+    {"category": "normal", "move": "Bylina", "set": {"active": "2"}},
+    {"category": "normal", "move": "Ravina", "set": {"onHit": "KD +23", "onPC": "HKD +23"}},
+    {"category": "normal", "move": "Drive Impact: Espada", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
+    {"category": "normal", "move": "Drive Reversal: Exilio", "set": {"startup": "18"}},
+    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
+    {"category": "normal", "move": "Triglav", "set": {"recovery": "24", "onPC": "KD +44"}},
+    {"category": "normal", "move": "OD Triglav", "set": {"active": "10", "recovery": "14", "onHit": "KD +53", "onPC": "KD +57"}},
+    {"category": "normal", "move": "LP Stribog", "set": {"active": "3"}},
+    {"category": "normal", "move": "HP Stribog", "set": {"onHit": "KD +67", "onPC": "KD +67"}},
+    {"category": "normal", "move": "OD Stribog", "set": {"onHit": "KD +56", "onPC": "KD +56"}},
+    {"category": "normal", "move": "Departure", "set": {"startup": "50"}},
+    {"category": "normal", "move": "OD Departure", "set": {"startup": "40", "active": "10"}},
+    {"category": "normal", "move": "LK Torbalan", "set": {"recovery": "50"}},
+    {"category": "normal", "move": "MK Torbalan", "set": {"recovery": "50"}},
+    {"category": "normal", "move": "HK Torbalan", "set": {"recovery": "50"}},
+    {"category": "normal", "move": "OD Torbalan", "set": {"startup": "22", "recovery": "50"}},
+    {"category": "normal", "move": "Amnesia", "set": {"recovery": "35"}},
+    {"category": "normal", "move": "OD Amnesia", "set": {"recovery": "35"}},
+    {"category": "normal", "move": "Chornobog", "set": {"active": "14", "onHit": "KD +22", "onPC": "KD +22"}},
+    {"category": "normal", "move": "Interdiction", "set": {"onHit": "HKD +44", "onPC": "HKD +44"}}
   ]
 }

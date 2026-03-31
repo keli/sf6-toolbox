@@ -2,31 +2,16 @@
   "character": "Manon",
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
-    "Selected index-friendly values from Manon.conflicts.csv."
+    "Manually reviewed Manon.conflicts.csv line by line.",
+    "Only index-friendly and semantically clear values are applied."
   ],
   "entries": [
-    {
-      "category": "normal",
-      "move": "Drive Impact: Glissade",
-      "set": {
-        "onHit": "KD +35",
-        "onPC": "HKD +104"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Écarté",
-      "set": {
-        "startup": "18"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Parry",
-      "set": {
-        "active": "12",
-        "recovery": "33"
-      }
-    }
+    {"category": "normal", "move": "Stand HK", "set": {"recovery": "23"}},
+    {"category": "normal", "move": "Drive Impact: Glissade", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
+    {"category": "normal", "move": "Drive Reversal: Écarté", "set": {"startup": "18"}},
+    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
+    {"category": "normal", "move": "HK Dégagé", "set": {"active": "3"}},
+    {"category": "normal", "move": "OD Dégagé", "set": {"onHit": "6", "onPC": "10"}},
+    {"category": "normal", "move": "Étoile", "set": {"recovery": "38"}}
   ]
 }

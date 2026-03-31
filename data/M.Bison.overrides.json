@@ -2,31 +2,25 @@
   "character": "M.Bison",
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
-    "Selected index-friendly values from M.Bison.conflicts.csv."
+    "Manually reviewed M.Bison.conflicts.csv line by line.",
+    "Only index-friendly and semantically clear values are applied."
   ],
   "entries": [
-    {
-      "category": "normal",
-      "move": "Drive Impact: Hell Twist",
-      "set": {
-        "onHit": "KD +35",
-        "onPC": "HKD +104"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Hell Drive",
-      "set": {
-        "startup": "18"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Parry",
-      "set": {
-        "active": "12",
-        "recovery": "33"
-      }
-    }
+    {"category": "normal", "move": "Stand HP", "set": {"onHit": "4", "onBlock": "1", "onPC": "17"}},
+    {"category": "normal", "move": "Stand HK", "set": {"onPC": "KD +73"}},
+    {"category": "normal", "move": "Crouch HK", "set": {"onHit": "KD +29"}},
+    {"category": "normal", "move": "Hover Kick", "set": {"onHit": "KD +25", "onPC": "HKD +41"}},
+    {"category": "normal", "move": "Drive Impact: Hell Twist", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
+    {"category": "normal", "move": "Drive Reversal: Hell Drive", "set": {"startup": "18"}},
+    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
+    {"category": "normal", "move": "LP Backfist Combo", "set": {"active": "2", "recovery": "24", "onHit": "KD +42", "onBlock": "9", "onPC": "KD +42"}},
+    {"category": "normal", "move": "MP Backfist Combo", "set": {"active": "2", "recovery": "25", "onHit": "KD +44", "onBlock": "9", "onPC": "KD +44"}},
+    {"category": "normal", "move": "HP Backfist Combo", "set": {"active": "3", "recovery": "25", "onHit": "KD +49", "onBlock": "9", "onPC": "KD +49"}},
+    {"category": "normal", "move": "OD Backfist Combo", "set": {"active": "2", "onHit": "KD +48", "onBlock": "-3", "onPC": "KD +48"}},
+    {"category": "normal", "move": "LK Double Knee Press", "set": {"onHit": "2", "onPC": "6"}},
+    {"category": "normal", "move": "MK Double Knee Press", "set": {"onHit": "3", "onPC": "7"}},
+    {"category": "normal", "move": "HK Double Knee Press", "set": {"onHit": "3", "onPC": "7"}},
+    {"category": "normal", "move": "Psycho Punisher", "set": {"startup": "24"}},
+    {"category": "normal", "move": "Final Psycho Crusher", "set": {"onHit": "KD +0", "onPC": "KD +0"}}
   ]
 }

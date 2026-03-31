@@ -2,31 +2,23 @@
   "character": "E.Honda",
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
-    "Selected index-friendly values from E.Honda.conflicts.csv."
+    "Manually reviewed E.Honda.conflicts.csv line by line.",
+    "Only index-friendly and semantically clear values are applied."
   ],
   "entries": [
-    {
-      "category": "normal",
-      "move": "Drive Impact: Sumo Crunch",
-      "set": {
-        "onHit": "KD +35",
-        "onPC": "HKD +104"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Raiden-ho",
-      "set": {
-        "startup": "18"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Parry",
-      "set": {
-        "active": "12",
-        "recovery": "33"
-      }
-    }
+    {"category": "normal", "move": "Stand HP", "set": {"onHit": "1", "onPC": "KD +77"}},
+    {"category": "normal", "move": "Crouch MK", "set": {"onPC": "10"}},
+    {"category": "normal", "move": "Crouch HK", "set": {"onHit": "KD +30", "onPC": "HKD +45"}},
+    {"category": "normal", "move": "Neutral Jump HP", "set": {"onHit": "12", "onBlock": "8", "onPC": "16"}},
+    {"category": "normal", "move": "Drive Impact: Sumo Crunch", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
+    {"category": "normal", "move": "Drive Reversal: Raiden-ho", "set": {"startup": "18"}},
+    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
+    {"category": "normal", "move": "Neko Damashi", "set": {"onHit": "3", "onBlock": "-3", "onPC": "7"}},
+    {"category": "normal", "move": "LP Hundred Hand Slap", "set": {"active": "2", "onHit": "2", "onPC": "6"}},
+    {"category": "normal", "move": "MP Hundred Hand Slap", "set": {"startup": "16", "active": "2", "recovery": "17", "onHit": "2", "onPC": "6"}},
+    {"category": "normal", "move": "HP Hundred Hand Slap", "set": {"startup": "19", "active": "2", "recovery": "17", "onHit": "2", "onPC": "6"}},
+    {"category": "normal", "move": "OD Hundred Hand Slap", "set": {"active": "4", "onHit": "4", "onPC": "8"}},
+    {"category": "normal", "move": "Show of Force", "set": {"onHit": "KD +13", "onPC": "KD +13"}},
+    {"category": "normal", "move": "The Final Bout", "set": {"onHit": "HKD +34", "onPC": "HKD +34"}}
   ]
 }

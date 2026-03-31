@@ -2,31 +2,15 @@
   "character": "Guile",
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
-    "Selected index-friendly values from Guile.conflicts.csv."
+    "Manually reviewed Guile.conflicts.csv line by line.",
+    "Only index-friendly and semantically clear values are applied."
   ],
   "entries": [
-    {
-      "category": "normal",
-      "move": "Drive Impact: Blitz Combination",
-      "set": {
-        "onHit": "KD +35",
-        "onPC": "HKD +104"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Strike Eagle",
-      "set": {
-        "startup": "18"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Parry",
-      "set": {
-        "active": "12",
-        "recovery": "33"
-      }
-    }
+    {"category": "normal", "move": "Knee Bazooka", "set": {"onHit": "0", "onPC": "4"}},
+    {"category": "normal", "move": "Reverse Spin Kick", "set": {"onHit": "-1"}},
+    {"category": "normal", "move": "Guile High Kick", "set": {"onPC": "KD +51"}},
+    {"category": "normal", "move": "Drive Impact: Blitz Combination", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
+    {"category": "normal", "move": "Drive Reversal: Strike Eagle", "set": {"startup": "18"}},
+    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}}
   ]
 }

@@ -2,31 +2,21 @@
   "character": "Dee Jay",
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
-    "Selected index-friendly values from Dee Jay.conflicts.csv."
+    "Manually reviewed Dee Jay.conflicts.csv line by line.",
+    "Only index-friendly and semantically clear values are applied."
   ],
   "entries": [
-    {
-      "category": "normal",
-      "move": "Drive Impact: Wild Beat",
-      "set": {
-        "onHit": "KD +35",
-        "onPC": "HKD +104"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Leg Scratch",
-      "set": {
-        "startup": "18"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Parry",
-      "set": {
-        "active": "12",
-        "recovery": "33"
-      }
-    }
+    {"category": "normal", "move": "Stand HP", "set": {"onHit": "3", "onBlock": "-4", "onPC": "7"}},
+    {"category": "normal", "move": "Crouch MP", "set": {"onHit": "5", "onPC": "9"}},
+    {"category": "normal", "move": "Crouch HK", "set": {"onHit": "HKD +33", "onPC": "HKD +52"}},
+    {"category": "normal", "move": "Sunrise Heel", "set": {"onHit": "5", "onBlock": "1", "onPC": "9"}},
+    {"category": "normal", "move": "Face Breaker", "set": {"active": "2"}},
+    {"category": "normal", "move": "Speedy Maracas", "set": {"startup": "95"}},
+    {"category": "normal", "move": "Drive Impact: Wild Beat", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
+    {"category": "normal", "move": "Drive Reversal: Leg Scratch", "set": {"startup": "18"}},
+    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
+    {"category": "normal", "move": "OD Machine Gun Upper", "set": {"startup": "26"}},
+    {"category": "normal", "move": "The Greatest Sobat", "set": {"onPC": "HKD +79"}},
+    {"category": "normal", "move": "Weekend Pleasure", "set": {"onHit": "HKD +22", "onPC": "HKD +22"}}
   ]
 }

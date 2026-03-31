@@ -2,7 +2,8 @@
   "character": "A.K.I.",
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
-    "Selected index-friendly values from A.K.I.conflicts.csv."
+    "Manually reviewed A.K.I.conflicts.csv line by line.",
+    "Only index-friendly and semantically clear values are applied."
   ],
   "entries": [
     {
@@ -26,6 +27,46 @@
       "set": {
         "active": "12",
         "recovery": "33"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Sinister Slide",
+      "set": {
+        "recovery": "20"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Toxic Wreath",
+      "set": {
+        "onBlock": "-4"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "LP Serpent Lash",
+      "set": {
+        "onHit": "1",
+        "onPC": "KD +55"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Tainted Talons",
+      "set": {
+        "startup": "7",
+        "active": "53",
+        "recovery": "54",
+        "onBlock": "-19"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Claws of Ya Zi",
+      "set": {
+        "onHit": "HKD +21",
+        "onPC": "HKD +21"
       }
     }
   ]

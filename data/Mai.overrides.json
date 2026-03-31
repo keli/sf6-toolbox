@@ -2,31 +2,32 @@
   "character": "Mai",
   "source": "manual-ai-from-conflicts-csv",
   "notes": [
-    "Selected index-friendly values from Mai.conflicts.csv."
+    "Manually reviewed Mai.conflicts.csv line by line.",
+    "Only index-friendly and semantically clear values are applied."
   ],
   "entries": [
-    {
-      "category": "normal",
-      "move": "Drive Impact: Botan Ichige",
-      "set": {
-        "onHit": "KD +35",
-        "onPC": "HKD +104"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Yusura Ume",
-      "set": {
-        "startup": "18"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Parry",
-      "set": {
-        "active": "12",
-        "recovery": "33"
-      }
-    }
+    {"category": "normal", "move": "Crouch HK", "set": {"recovery": "22"}},
+    {"category": "normal", "move": "Drive Impact: Botan Ichige", "set": {"onHit": "KD +35", "onPC": "HKD +104"}},
+    {"category": "normal", "move": "Drive Reversal: Yusura Ume", "set": {"startup": "18"}},
+    {"category": "normal", "move": "Drive Parry", "set": {"active": "12", "recovery": "33"}},
+    {"category": "normal", "move": "Taunt", "set": {"startup": "279"}},
+    {"category": "normal", "move": "LP Kachousen", "set": {"recovery": "29", "onHit": "1", "onBlock": "-3", "onPC": "5"}},
+    {"category": "normal", "move": "MP Kachousen", "set": {"recovery": "31", "onHit": "-1", "onBlock": "-5", "onPC": "3"}},
+    {"category": "normal", "move": "HP Kachousen", "set": {"recovery": "33", "onHit": "-3", "onBlock": "-7", "onPC": "1"}},
+    {"category": "normal", "move": "OD Kachousen", "set": {"onBlock": "1"}},
+    {"category": "normal", "move": "LK Hishou Ryuuenjin", "set": {"active": "5", "recovery": "15", "onHit": "KD +31", "onPC": "KD +31"}},
+    {"category": "normal", "move": "MK Hishou Ryuuenjin", "set": {"active": "5", "recovery": "13", "onHit": "KD +32", "onPC": "KD +32"}},
+    {"category": "normal", "move": "HK Hishou Ryuuenjin", "set": {"active": "5", "recovery": "14", "onHit": "KD +32", "onPC": "KD +32"}},
+    {"category": "normal", "move": "OD Hishou Ryuuenjin", "set": {"active": "5", "recovery": "18", "onHit": "KD +27", "onPC": "KD +27"}},
+    {"category": "normal", "move": "LP Ryuuenbu", "set": {"onHit": "KD +35", "onBlock": "-2"}},
+    {"category": "normal", "move": "MP Ryuuenbu", "set": {"onHit": "KD +42", "onPC": "KD +42"}},
+    {"category": "normal", "move": "HP Ryuuenbu", "set": {"startup": "14", "active": "4", "onHit": "KD +47", "onPC": "KD +47"}},
+    {"category": "normal", "move": "LK Hissatsu Shinobi Bachi", "set": {"onHit": "KD +27", "onBlock": "-10", "onPC": "KD +27"}},
+    {"category": "normal", "move": "MK Hissatsu Shinobi Bachi", "set": {"onHit": "KD +23", "onBlock": "-12", "onPC": "KD +23"}},
+    {"category": "normal", "move": "HK Hissatsu Shinobi Bachi", "set": {"onHit": "KD +22", "onBlock": "-13", "onPC": "KD +22"}},
+    {"category": "normal", "move": "OD Hissatsu Shinobi Bachi", "set": {"recovery": "29"}},
+    {"category": "normal", "move": "Kagerou no Mai", "set": {"active": "7", "recovery": "46", "onHit": "KD +40", "onBlock": "-26", "onPC": "KD +40"}},
+    {"category": "normal", "move": "Chou Hissatsu Shinobi Bachi", "set": {"active": "3", "recovery": "31", "onHit": "KD +38", "onPC": "KD +38"}},
+    {"category": "normal", "move": "Shiranui Ryuu: Enbu Ada Zakura", "set": {"onHit": "HKD +20", "onPC": "HKD +20"}}
   ]
 }

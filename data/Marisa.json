@@ -970,40 +970,40 @@
             "uncertain": false
           },
           "onHit": {
-            "first": 3,
+            "first": 5,
             "kd": [],
-            "max": 3,
-            "min": 3,
+            "max": 5,
+            "min": 5,
             "numbers": [
-              3
+              5
             ],
-            "raw": 3,
+            "raw": "5",
             "tags": [],
-            "text": "3",
+            "text": "5",
             "uncertain": false
           },
           "onPC": {
-            "first": 7,
+            "first": 9,
             "kd": [],
-            "max": 7,
-            "min": 7,
+            "max": 9,
+            "min": 9,
             "numbers": [
-              7
+              9
             ],
-            "raw": 7,
+            "raw": "9",
             "tags": [],
-            "text": "7",
+            "text": "9",
             "uncertain": false
           },
           "recovery": {
-            "first": 18,
-            "max": 18,
-            "min": 18,
+            "first": 17,
+            "max": 17,
+            "min": 17,
             "numbers": [
-              18
+              17
             ],
-            "raw": 18,
-            "text": "18",
+            "raw": "17",
+            "text": "17",
             "uncertain": false
           },
           "startup": {
@@ -1020,11 +1020,11 @@
         },
         "numCmd": "2MK",
         "onBlock": -2,
-        "onHit": 3,
-        "onPC": 7,
+        "onHit": "5",
+        "onPC": "9",
         "onPP": -19,
         "plnCmd": "d+MK",
-        "recovery": 18,
+        "recovery": "17",
         "startup": 9,
         "total": 29
       },
@@ -2678,17 +2678,16 @@
             "uncertain": false
           },
           "onBlock": {
-            "first": 2,
+            "first": 3,
             "kd": [],
             "max": 3,
-            "min": 2,
+            "min": 3,
             "numbers": [
-              2,
               3
             ],
-            "raw": "2(3)",
+            "raw": "3",
             "tags": [],
-            "text": "2(3)",
+            "text": "3",
             "uncertain": false
           },
           "onHit": {
@@ -2753,7 +2752,7 @@
           }
         },
         "numCmd": "623HP",
-        "onBlock": "2(3)",
+        "onBlock": "3",
         "onHit": "KD +42(43)",
         "onPC": "HKD +58(59)",
         "onPP": -19,
@@ -4753,17 +4752,16 @@
             "uncertain": false
           },
           "onBlock": {
-            "first": 2,
+            "first": 3,
             "kd": [],
             "max": 3,
-            "min": 2,
+            "min": 3,
             "numbers": [
-              2,
               3
             ],
-            "raw": "2(3)",
+            "raw": "3",
             "tags": [],
-            "text": "2(3)",
+            "text": "3",
             "uncertain": false
           },
           "onHit": {
@@ -4828,7 +4826,7 @@
           }
         },
         "numCmd": "623LP",
-        "onBlock": "2(3)",
+        "onBlock": "3",
         "onHit": "KD +42(43)",
         "onPC": "HKD +58(59)",
         "onPP": -19,
@@ -5600,17 +5598,16 @@
             "uncertain": false
           },
           "onBlock": {
-            "first": 2,
+            "first": 3,
             "kd": [],
             "max": 3,
-            "min": 2,
+            "min": 3,
             "numbers": [
-              2,
               3
             ],
-            "raw": "2(3)",
+            "raw": "3",
             "tags": [],
-            "text": "2(3)",
+            "text": "3",
             "uncertain": false
           },
           "onHit": {
@@ -5675,7 +5672,7 @@
           }
         },
         "numCmd": "623MP",
-        "onBlock": "2(3)",
+        "onBlock": "3",
         "onHit": "KD +42(43)",
         "onPC": "HKD +58(59)",
         "onPP": -19,
@@ -6739,14 +6736,14 @@
             "uncertain": false
           },
           "startup": {
-            "first": 10,
-            "max": 10,
-            "min": 10,
+            "first": 9,
+            "max": 9,
+            "min": 9,
             "numbers": [
-              10
+              9
             ],
-            "raw": 10,
-            "text": "10",
+            "raw": "9",
+            "text": "9",
             "uncertain": false
           }
         },
@@ -6757,7 +6754,7 @@
         "onPP": -20,
         "plnCmd": "f+MP",
         "recovery": 20,
-        "startup": 10,
+        "startup": "9",
         "total": 31,
         "xx": [
           "tc"
@@ -7533,15 +7530,14 @@
           "onBlock": {
             "first": 4,
             "kd": [],
-            "max": 6,
+            "max": 4,
             "min": 4,
             "numbers": [
-              4,
-              6
+              4
             ],
-            "raw": "4(6)",
+            "raw": "4",
             "tags": [],
-            "text": "4(6)",
+            "text": "4",
             "uncertain": false
           },
           "onHit": {
@@ -7550,24 +7546,16 @@
               {
                 "advantage": 70,
                 "type": "KD"
-              },
-              {
-                "advantage": 138,
-                "type": "HKD"
               }
             ],
-            "max": 138,
+            "max": 70,
             "min": 70,
             "numbers": [
-              70,
-              138
+              70
             ],
-            "raw": "KD +70 (Tumble) (HKD +138 Wall Splat)",
-            "tags": [
-              "tumble",
-              "wall splat"
-            ],
-            "text": "KD +70 (Tumble) (HKD +138 Wall Splat)",
+            "raw": "KD +70",
+            "tags": [],
+            "text": "KD +70",
             "uncertain": false
           },
           "onPC": {
@@ -7576,24 +7564,16 @@
               {
                 "advantage": 76,
                 "type": "HKD"
-              },
-              {
-                "advantage": 144,
-                "type": "HKD"
               }
             ],
-            "max": 144,
+            "max": 76,
             "min": 76,
             "numbers": [
-              76,
-              144
+              76
             ],
-            "raw": "HKD +76 (Tumble) (HKD +144 Wall Splat)",
-            "tags": [
-              "tumble",
-              "wall splat"
-            ],
-            "text": "HKD +76 (Tumble) (HKD +144 Wall Splat)",
+            "raw": "HKD +76",
+            "tags": [],
+            "text": "HKD +76",
             "uncertain": false
           },
           "recovery": {
@@ -7620,9 +7600,9 @@
           }
         },
         "numCmd": "623PP",
-        "onBlock": "4(6)",
-        "onHit": "KD +70 (Tumble) (HKD +138 Wall Splat)",
-        "onPC": "HKD +76 (Tumble) (HKD +144 Wall Splat)",
+        "onBlock": "4",
+        "onHit": "KD +70",
+        "onPC": "HKD +76",
         "onPP": -19,
         "plnCmd": "f,d,df+PP",
         "recovery": 15,
@@ -7683,34 +7663,38 @@
           },
           "onHit": {
             "first": 50,
-            "kd": [],
-            "max": 68,
+            "kd": [
+              {
+                "advantage": 50,
+                "type": "KD"
+              }
+            ],
+            "max": 50,
             "min": 50,
             "numbers": [
-              50,
-              68
+              50
             ],
-            "raw": "Wall Splat +50(68)",
-            "tags": [
-              "wall splat"
-            ],
-            "text": "Wall Splat +50(68)",
+            "raw": "KD +50",
+            "tags": [],
+            "text": "KD +50",
             "uncertain": false
           },
           "onPC": {
             "first": 50,
-            "kd": [],
-            "max": 68,
+            "kd": [
+              {
+                "advantage": 50,
+                "type": "KD"
+              }
+            ],
+            "max": 50,
             "min": 50,
             "numbers": [
-              50,
-              68
+              50
             ],
-            "raw": "Wall Splat +50(68)",
-            "tags": [
-              "wall splat"
-            ],
-            "text": "Wall Splat +50(68)",
+            "raw": "KD +50",
+            "tags": [],
+            "text": "KD +50",
             "uncertain": false
           },
           "recovery": {
@@ -7738,8 +7722,8 @@
         },
         "numCmd": "236KK",
         "onBlock": -6,
-        "onHit": "Wall Splat +50(68)",
-        "onPC": "Wall Splat +50(68)",
+        "onHit": "KD +50",
+        "onPC": "KD +50",
         "onPP": -26,
         "plnCmd": "qcf+KK",
         "recovery": 24,
@@ -7752,7 +7736,7 @@
       },
       "OD Scutum": {
         "DGain": -20000,
-        "active": "28(58)",
+        "active": "4",
         "cmnName": "OD Stance",
         "extraInfo": [
           "2 hits of armor on frame 1 and onward on her whole body (not just upper body like the non-OD version) while in stance (as long as a Kick buttons is held down) up to frame 58 (followed by 29 unarmored recovery frames)",
@@ -7772,48 +7756,46 @@
         "nonHittingMove": true,
         "normalized": {
           "active": {
-            "first": 28,
-            "max": 58,
-            "min": 28,
+            "first": 4,
+            "max": 4,
+            "min": 4,
             "numbers": [
-              28,
-              58
+              4
             ],
-            "raw": "28(58)",
-            "text": "28(58)",
+            "raw": "4",
+            "text": "4",
             "uncertain": false
           },
           "onBlock": null,
           "onHit": null,
           "onPC": null,
           "recovery": {
-            "first": 29,
-            "max": 29,
-            "min": 29,
+            "first": 20,
+            "max": 20,
+            "min": 20,
             "numbers": [
-              29
+              20
             ],
-            "raw": 29,
-            "text": "29",
+            "raw": "20",
+            "text": "20",
             "uncertain": false
           },
           "startup": {
-            "first": 1,
-            "max": 8,
-            "min": 1,
+            "first": 7,
+            "max": 7,
+            "min": 7,
             "numbers": [
-              1,
-              8
+              7
             ],
-            "raw": "1(8)",
-            "text": "1(8)",
+            "raw": "7",
+            "text": "7",
             "uncertain": false
           }
         },
         "numCmd": "214KK",
         "plnCmd": "qcb+KK",
-        "recovery": 29,
-        "startup": "1(8)",
+        "recovery": "20",
+        "startup": "7",
         "total": "57(87)"
       },
       "OD Scutum (absorb)": {
@@ -8155,7 +8137,7 @@
         "total": 55
       },
       "Scutum": {
-        "active": "26(116)",
+        "active": "4",
         "cmnName": "Stance",
         "extraInfo": [
           "1 hit of armor on frame 3 and onwards on her upper body (no armor on the lower body) while in stance (as long as the Kick button is held down) up to frame 118 (followed by 26 unarmormored recovery frames)",
@@ -8175,48 +8157,46 @@
         "nonHittingMove": true,
         "normalized": {
           "active": {
-            "first": 26,
-            "max": 116,
-            "min": 26,
+            "first": 4,
+            "max": 4,
+            "min": 4,
             "numbers": [
-              26,
-              116
+              4
             ],
-            "raw": "26(116)",
-            "text": "26(116)",
+            "raw": "4",
+            "text": "4",
             "uncertain": false
           },
           "onBlock": null,
           "onHit": null,
           "onPC": null,
           "recovery": {
-            "first": 26,
-            "max": 26,
-            "min": 26,
+            "first": 20,
+            "max": 20,
+            "min": 20,
             "numbers": [
-              26
+              20
             ],
-            "raw": 26,
-            "text": "26",
+            "raw": "20",
+            "text": "20",
             "uncertain": false
           },
           "startup": {
-            "first": 3,
-            "max": 8,
-            "min": 3,
+            "first": 7,
+            "max": 7,
+            "min": 7,
             "numbers": [
-              3,
-              8
+              7
             ],
-            "raw": "3(8)",
-            "text": "3(8)",
+            "raw": "7",
+            "text": "7",
             "uncertain": false
           }
         },
         "numCmd": "214K",
         "plnCmd": "qcb+K",
-        "recovery": 26,
-        "startup": "3(8)",
+        "recovery": "20",
+        "startup": "7",
         "total": "54(144)"
       },
       "Scutum (absorb)": {
