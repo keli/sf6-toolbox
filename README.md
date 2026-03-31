@@ -70,20 +70,18 @@ meaty 条件：S <= K <= S+A-1
 ## 更新数据
 
 ```bash
-python3 fetch_data.py --update
+curl -L "https://raw.githubusercontent.com/D4RKONION/FAT/master/src/js/constants/framedata/SF6FrameData.json" -o data/sf6framedata.json
+
+# 或者
+wget -O data/sf6framedata.json "https://raw.githubusercontent.com/D4RKONION/FAT/master/src/js/constants/framedata/SF6FrameData.json"
 ```
 
 ## 文件结构
 
 ```
 sf6-toolbox/
-├── fetch_data.py           # 获取并更新帧数据
 ├── index.html              # 网页工具集
 ├── data/
 │   └── sf6framedata.json   # 完整数据源
 └── README.md
 ```
-
-## 角色列表（29名）
-
-A.K.I. / Akuma / Alex / Blanka / C.Viper / Cammy / Chun-Li / Dee Jay / Dhalsim / E.Honda / Ed / Elena / Guile / Jamie / JP / Juri / Ken / Kimberly / Lily / Luke / M.Bison / Mai / Manon / Marisa / Rashid / Ryu / Sagat / Terry / Zangief
