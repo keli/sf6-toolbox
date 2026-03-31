@@ -1,0 +1,6721 @@
+{
+  "moves": {
+    "normal": {
+      "Aerial Russian Slam": {
+        "DDoH": 5000,
+        "SelfSoB": -10000,
+        "SelfSoH": -10000,
+        "active": 7,
+        "atkLvl": "T",
+        "cmnName": "Super Art Level 1",
+        "dmg": "3500 (1100*2400)",
+        "dmgScaling": "30% Minimum / 20% Immediate",
+        "extraInfo": [
+          "Fully invincible on frames 1-17",
+          "Airborne on frames 2-30 (Forced Knockdown state)",
+          "Depletes 0.5 Drive Bar on hit for the opponent",
+          "Can only hit airborne opponents",
+          "Cannot hit cross-up (behind Zangief)",
+          "Can be quite unreliable to land in some anti-air / juggle scenarios",
+          "Suffers 20% damage scaling when combo'd into from other moves"
+        ],
+        "ezCmd": "SP+H or f+SP+H / qcf,qcf+L",
+        "i": 59,
+        "jugLimit": 99,
+        "moveButton": "1K",
+        "moveMotion": "DQCF",
+        "moveName": "Aerial Russian Slam",
+        "moveType": "super",
+        "movesList": "Super",
+        "normalized": {
+          "active": {
+            "first": 7,
+            "max": 7,
+            "min": 7,
+            "numbers": [
+              7
+            ],
+            "raw": 7,
+            "text": "7",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 29,
+            "kd": [
+              {
+                "advantage": 29,
+                "type": "HKD"
+              }
+            ],
+            "max": 29,
+            "min": 29,
+            "numbers": [
+              29
+            ],
+            "raw": "HKD +29",
+            "tags": [],
+            "text": "HKD +29",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 29,
+            "kd": [
+              {
+                "advantage": 29,
+                "type": "HKD"
+              }
+            ],
+            "max": 29,
+            "min": 29,
+            "numbers": [
+              29
+            ],
+            "raw": "HKD +29",
+            "tags": [],
+            "text": "HKD +29",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 13,
+            "max": 47,
+            "min": 13,
+            "numbers": [
+              13,
+              47
+            ],
+            "raw": "13+47",
+            "text": "13+47",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 11,
+            "max": 11,
+            "min": 11,
+            "numbers": [
+              11
+            ],
+            "raw": 11,
+            "text": "11",
+            "uncertain": false
+          }
+        },
+        "numCmd": "236236K",
+        "onHit": "HKD +29",
+        "onPC": "HKD +29",
+        "plnCmd": "qcf,qcf+K",
+        "recovery": "13+47",
+        "startup": 11,
+        "total": 77
+      },
+      "Bodyslam": {
+        "DDoH": "(10000)",
+        "DGain": 2000,
+        "OppSoH": "1400(2800)",
+        "SelfSoH": "2000(4000)",
+        "active": 3,
+        "atkLvl": "T",
+        "cmnName": "Neutral Throw",
+        "dmg": "1200(1200*600)",
+        "dmgScaling": "20% Immediate",
+        "extraInfo": [
+          "LP+LK Input can be held for an additonal hit (+600 additional damage)",
+          "Data in parentheses refers to the held version",
+          "Throw Loop: Manually timed walk forward into Throw (not possible on mid-screen back roll)",
+          "Gets +70% damage increase (2040 damage | 2640 damage if LP+LK is held), HKD (denies back-roll option on wake-up), and depletes 1 bar of Drive Gauge on a Punish Counter"
+        ],
+        "ezCmd": "L+M",
+        "i": 33,
+        "moveButton": "LPLK",
+        "moveMotion": "N",
+        "moveName": "Bodyslam",
+        "moveType": "throw",
+        "movesList": "Normal Throw",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 22,
+            "kd": [
+              {
+                "advantage": 22,
+                "type": "KD"
+              }
+            ],
+            "max": 22,
+            "min": 0,
+            "numbers": [
+              22,
+              0
+            ],
+            "raw": "KD +22(0)",
+            "tags": [],
+            "text": "KD +22(0)",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 22,
+            "kd": [
+              {
+                "advantage": 22,
+                "type": "HKD"
+              }
+            ],
+            "max": 22,
+            "min": 0,
+            "numbers": [
+              22,
+              0
+            ],
+            "raw": "HKD +22(0)",
+            "tags": [],
+            "text": "HKD +22(0)",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 23,
+            "max": 23,
+            "min": 23,
+            "numbers": [
+              23
+            ],
+            "raw": 23,
+            "text": "23",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 5,
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "text": "5",
+            "uncertain": false
+          }
+        },
+        "numCmd": "5LPLK",
+        "onHit": "KD +22(0)",
+        "onPC": "HKD +22(0)",
+        "plnCmd": "LP+LK",
+        "recovery": 23,
+        "startup": 5,
+        "total": 30
+      },
+      "Bolshoi Storm Buster": {
+        "DDoH": 15000,
+        "SelfSoB": -30000,
+        "SelfSoH": -30000,
+        "active": 2,
+        "atkLvl": "T",
+        "cmnName": "Super Art Level 3",
+        "dmg": 4800,
+        "dmgScaling": "50% Minimum / 10% Immediate",
+        "extraInfo": [
+          "Fully invincible on frames 1-7",
+          "Command Grab Super (Can be combo'd into off OD Lariat cancel, crumples or 3HK Punish Counter wall splat with 10% additional damage scaling)",
+          "Depletes 1.5 Drive Bars on hit for the oppponent",
+          "Super cinematic time regenerates ~2.2 Drive Bars for Zangief",
+          "Entire start-up happens before the initial Super cinematic freeze, meaning that this move is effectively 0F start-up after the Super is activated, making it inescapable if the opponent didn't already do something to avoid the grab before the Super was activated"
+        ],
+        "ezCmd": "d+SP+H / 720+H",
+        "i": 62,
+        "moveButton": "1P",
+        "moveMotion": 720,
+        "moveName": "Bolshoi Storm Buster",
+        "moveType": "super",
+        "movesList": "Super",
+        "normalized": {
+          "active": {
+            "first": 2,
+            "max": 2,
+            "min": 2,
+            "numbers": [
+              2
+            ],
+            "raw": 2,
+            "text": "2",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 26,
+            "kd": [
+              {
+                "advantage": 26,
+                "type": "HKD"
+              }
+            ],
+            "max": 26,
+            "min": 26,
+            "numbers": [
+              26
+            ],
+            "raw": "HKD +26",
+            "tags": [],
+            "text": "HKD +26",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 26,
+            "kd": [
+              {
+                "advantage": 26,
+                "type": "HKD"
+              }
+            ],
+            "max": 26,
+            "min": 26,
+            "numbers": [
+              26
+            ],
+            "raw": "HKD +26",
+            "tags": [],
+            "text": "HKD +26",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 116,
+            "max": 116,
+            "min": 116,
+            "numbers": [
+              116
+            ],
+            "raw": 116,
+            "text": "116",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 6,
+            "max": 6,
+            "min": 0,
+            "numbers": [
+              6,
+              0
+            ],
+            "raw": "6+0",
+            "text": "6+0",
+            "uncertain": false
+          }
+        },
+        "numCmd": "42684268P",
+        "onHit": "HKD +26",
+        "onPC": "HKD +26",
+        "plnCmd": "720+P",
+        "recovery": 116,
+        "startup": "6+0",
+        "total": 123
+      },
+      "Bolshoi Storm Buster (Critical Art)": {
+        "DDoH": 20000,
+        "SelfSoB": -30000,
+        "SelfSoH": -30000,
+        "active": 2,
+        "atkLvl": "T",
+        "cmnName": "Critical Art",
+        "dmg": 5300,
+        "dmgScaling": "50% Minimum / 10% Immediate",
+        "extraInfo": [
+          "Fully invincible on frames 1-7",
+          "Command Grab Super (Can be combo'd into off OD Lariat cancel, crumples or 3HK Punish Counter wall splat with 10% additional damage scaling)",
+          "Critical Art does +500 extra damage over regular version",
+          "Depletes 2 Drive Bars on hit for the oppponent",
+          "Super cinematic time regenerates ~2.7 Drive Bars for Zangief",
+          "Entire start-up happens before the initial Super cinematic freeze, meaning that this move is effectively 0F start-up after the Super is activated, making it inescapable if the opponent didn't already do something to avoid the grab before the Super was activated"
+        ],
+        "ezCmd": "d+SP+H / 720+H (CA)",
+        "i": 63,
+        "moveButton": "1P",
+        "moveMotion": 720,
+        "moveName": "Bolshoi Storm Buster (Critical Art)",
+        "moveType": "super",
+        "normalized": {
+          "active": {
+            "first": 2,
+            "max": 2,
+            "min": 2,
+            "numbers": [
+              2
+            ],
+            "raw": 2,
+            "text": "2",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 26,
+            "kd": [
+              {
+                "advantage": 26,
+                "type": "HKD"
+              }
+            ],
+            "max": 26,
+            "min": 26,
+            "numbers": [
+              26
+            ],
+            "raw": "HKD +26",
+            "tags": [],
+            "text": "HKD +26",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 26,
+            "kd": [
+              {
+                "advantage": 26,
+                "type": "HKD"
+              }
+            ],
+            "max": 26,
+            "min": 26,
+            "numbers": [
+              26
+            ],
+            "raw": "HKD +26",
+            "tags": [],
+            "text": "HKD +26",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 116,
+            "max": 116,
+            "min": 116,
+            "numbers": [
+              116
+            ],
+            "raw": 116,
+            "text": "116",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 6,
+            "max": 6,
+            "min": 0,
+            "numbers": [
+              6,
+              0
+            ],
+            "raw": "6+0",
+            "text": "6+0",
+            "uncertain": false
+          }
+        },
+        "numCmd": "42684268P (CA)",
+        "onHit": "HKD +26",
+        "onPC": "HKD +26",
+        "plnCmd": "720+P (CA)",
+        "recovery": 116,
+        "startup": "6+0",
+        "total": 123
+      },
+      "Borscht Dynamite": {
+        "DDoH": 10000,
+        "DGain": 5000,
+        "OppSoH": 2800,
+        "SelfSoH": 4000,
+        "active": 3,
+        "airmove": true,
+        "atkLvl": "T",
+        "cmnName": "Air SPD",
+        "dmg": "2900(3260)",
+        "dmgScaling": "20% Immediate",
+        "extraInfo": [
+          "Range: 1.46",
+          "Can be performed instantly after leaving the ground (first airborne frame of the jump)",
+          "Combos after some of Zangief's launchers / juggle",
+          "16F landing recovery frames on whiff (minimum / maximum recovery frames overall: 21+16 / 36+16)",
+          "Zangief is in a crouching state for the entire landing recovery frames on whiff",
+          "Forced Knockdown state while airborne",
+          "Deals +15% extra damage (3260) on Punish Counter",
+          "Incurs 20% damage scaling onto itself when combo'd into"
+        ],
+        "ezCmd": "SP / 360+A (air)",
+        "i": 50,
+        "jugLimit": 0,
+        "moveButton": "1K",
+        "moveMotion": 360,
+        "moveName": "Borscht Dynamite",
+        "moveType": "command-grab",
+        "movesList": "Special",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 19,
+            "kd": [
+              {
+                "advantage": 19,
+                "type": "HKD"
+              }
+            ],
+            "max": 19,
+            "min": 19,
+            "numbers": [
+              19
+            ],
+            "raw": "HKD +19",
+            "tags": [],
+            "text": "HKD +19",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 19,
+            "kd": [
+              {
+                "advantage": 19,
+                "type": "HKD"
+              }
+            ],
+            "max": 19,
+            "min": 19,
+            "numbers": [
+              19
+            ],
+            "raw": "HKD +19",
+            "tags": [],
+            "text": "HKD +19",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 16,
+            "max": 16,
+            "min": 16,
+            "numbers": [
+              16
+            ],
+            "raw": 16,
+            "text": "16",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 4,
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "text": "4",
+            "uncertain": false
+          }
+        },
+        "numCmd": "4268K (air)",
+        "onHit": "HKD +19",
+        "onPC": "HKD +19",
+        "plnCmd": "360+K (air)",
+        "recovery": 16,
+        "startup": 4
+      },
+      "Brain Buster": {
+        "DDoH": "(10000)",
+        "DGain": 2000,
+        "OppSoH": "2100(4200)",
+        "SelfSoH": "3000(6000)",
+        "active": 3,
+        "atkLvl": "T",
+        "cmnName": "Crouch Throw",
+        "dmg": 1500,
+        "dmgScaling": "20% Immediate",
+        "extraInfo": [
+          "Deals 300 extra damage (1500) over normal throw (1200) but sacrifices throw loop oki (but can still oki with meaty strikes)",
+          "Gets +70% damage increase (2550 damage), HKD (denies back-roll option on wake-up), and depletes 1 bar of Drive Gauge on a Punish Counter",
+          "Builds more Super meter than a standard throw"
+        ],
+        "ezCmd": "d+L+M",
+        "i": 36,
+        "moveButton": "LPLK",
+        "moveMotion": "D",
+        "moveName": "Brain Buster",
+        "moveType": "throw",
+        "movesList": "Normal Throw",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 14,
+            "kd": [
+              {
+                "advantage": 14,
+                "type": "KD"
+              }
+            ],
+            "max": 14,
+            "min": 14,
+            "numbers": [
+              14
+            ],
+            "raw": "KD +14",
+            "tags": [],
+            "text": "KD +14",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 14,
+            "kd": [
+              {
+                "advantage": 14,
+                "type": "HKD"
+              }
+            ],
+            "max": 14,
+            "min": 14,
+            "numbers": [
+              14
+            ],
+            "raw": "HKD +14",
+            "tags": [],
+            "text": "HKD +14",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 23,
+            "max": 23,
+            "min": 23,
+            "numbers": [
+              23
+            ],
+            "raw": 23,
+            "text": "23",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 5,
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "text": "5",
+            "uncertain": false
+          }
+        },
+        "numCmd": "2LPLK",
+        "onHit": "KD +14",
+        "onPC": "HKD +14",
+        "plnCmd": "d+LP+LK",
+        "recovery": 23,
+        "startup": 5,
+        "total": 30
+      },
+      "Capture Suplex": {
+        "DDoH": "(10000)",
+        "DGain": 2000,
+        "OppSoH": "1400(2800)",
+        "SelfSoH": "2000(4000)",
+        "active": 3,
+        "atkLvl": "T",
+        "cmnName": "Back Throw",
+        "dmg": 1400,
+        "dmgScaling": "20% Immediate",
+        "extraInfo": [
+          "Throw Loop (corner only): Meaty strike or command grab",
+          "Deals 200 extra damage (1400) over normal throw damage (1200)",
+          "Gets +70% damage increase (2380 damage), HKD (denies back-roll option on wake-up), and depletes 1 bar of Drive Gauge on a Punish Counter"
+        ],
+        "ezCmd": "b+L+M",
+        "i": 35,
+        "moveButton": "LPLK",
+        "moveMotion": "B",
+        "moveName": "Capture Suplex",
+        "moveType": "throw",
+        "movesList": "Normal Throw",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 8,
+            "kd": [
+              {
+                "advantage": 8,
+                "type": "KD"
+              }
+            ],
+            "max": 8,
+            "min": 8,
+            "numbers": [
+              8
+            ],
+            "raw": "KD +8",
+            "tags": [],
+            "text": "KD +8",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 8,
+            "kd": [
+              {
+                "advantage": 8,
+                "type": "HKD"
+              }
+            ],
+            "max": 8,
+            "min": 8,
+            "numbers": [
+              8
+            ],
+            "raw": "HKD +8",
+            "tags": [],
+            "text": "HKD +8",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 23,
+            "max": 23,
+            "min": 23,
+            "numbers": [
+              23
+            ],
+            "raw": 23,
+            "text": "23",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 5,
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "text": "5",
+            "uncertain": false
+          }
+        },
+        "numCmd": "4LPLK",
+        "onHit": "KD +8",
+        "onPC": "HKD +8",
+        "plnCmd": "b+LP+LK",
+        "recovery": 23,
+        "startup": 5,
+        "total": 30
+      },
+      "Crouch HK": {
+        "DDoB": 4000,
+        "DDoH": 10000,
+        "DGain": 3500,
+        "OppSoB": 250,
+        "OppSoH": 700,
+        "SelfSoB": 500,
+        "SelfSoH": 1000,
+        "active": 3,
+        "atkLvl": "L",
+        "blockstun": 17,
+        "dmg": 1000,
+        "extraInfo": [
+          "Far range sweep",
+          "Has some Juggle potential naturally without Drive Rush"
+        ],
+        "ezCmd": "df+H",
+        "hitstop": 14,
+        "i": 13,
+        "jugLimit": 5,
+        "moveButton": "HK",
+        "moveMotion": "D",
+        "moveName": "Crouch HK",
+        "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -13,
+            "kd": [],
+            "max": -13,
+            "min": -13,
+            "numbers": [
+              -13
+            ],
+            "raw": -13,
+            "tags": [],
+            "text": "-13",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 36,
+            "kd": [
+              {
+                "advantage": 36,
+                "type": "KD"
+              }
+            ],
+            "max": 36,
+            "min": 36,
+            "numbers": [
+              36
+            ],
+            "raw": "KD +36",
+            "tags": [],
+            "text": "KD +36",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 45,
+            "kd": [
+              {
+                "advantage": 45,
+                "type": "HKD"
+              }
+            ],
+            "max": 45,
+            "min": 45,
+            "numbers": [
+              45
+            ],
+            "raw": "HKD +45",
+            "tags": [],
+            "text": "HKD +45",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 27,
+            "max": 27,
+            "min": 27,
+            "numbers": [
+              27
+            ],
+            "raw": 27,
+            "text": "27",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 12,
+            "max": 12,
+            "min": 12,
+            "numbers": [
+              12
+            ],
+            "raw": 12,
+            "text": "12",
+            "uncertain": false
+          }
+        },
+        "numCmd": "2HK",
+        "onBlock": -13,
+        "onHit": "KD +36",
+        "onPC": "HKD +45",
+        "onPP": "-28(-26)",
+        "plnCmd": "d+HK",
+        "recovery": 27,
+        "startup": 12,
+        "total": 41
+      },
+      "Crouch HP": {
+        "DDoB": 7000,
+        "DDoH": 11000,
+        "DGain": 4000,
+        "OppSoB": 250,
+        "OppSoH": 700,
+        "SelfSoB": 500,
+        "SelfSoH": 1000,
+        "active": 9,
+        "atkLvl": "H",
+        "blockstun": 24,
+        "dmg": 1000,
+        "extraInfo": [
+          "Zangief's head hurtbox is invincible to airborne strikes on frames 10-19 (helps with anti-airing)",
+          "Good vertical anti-air (but pretty slow start-up)",
+          "Only the first 3 active frames can hit grounded (the rest only hits airborne aiming above Zangief)",
+          "Active frames 4-8 (frames 15-19 overall) can hit cross-up (behind Zangief)",
+          "Launches the opponent into a limited juggle state on hit (Punish Counter launches them higher and into an OTG free juggle state, which Zangief can follow-up with a combo)"
+        ],
+        "ezCmd": "d+H",
+        "hitstop": 13,
+        "i": 10,
+        "jugIncr": 0,
+        "jugStart": "1 (PC:0)",
+        "moveButton": "HP",
+        "moveMotion": "D",
+        "moveName": "Crouch HP",
+        "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 9,
+            "max": 9,
+            "min": 9,
+            "numbers": [
+              9
+            ],
+            "raw": 9,
+            "text": "9",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -20,
+            "kd": [],
+            "max": -20,
+            "min": -20,
+            "numbers": [
+              -20
+            ],
+            "raw": -20,
+            "tags": [],
+            "text": "-20",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 20,
+            "kd": [
+              {
+                "advantage": 20,
+                "type": "KD"
+              }
+            ],
+            "max": 20,
+            "min": 20,
+            "numbers": [
+              20
+            ],
+            "raw": "KD +20",
+            "tags": [],
+            "text": "KD +20",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 58,
+            "kd": [
+              {
+                "advantage": 58,
+                "type": "KD"
+              }
+            ],
+            "max": 58,
+            "min": 58,
+            "numbers": [
+              58
+            ],
+            "raw": "KD +58",
+            "tags": [],
+            "text": "KD +58",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 35,
+            "max": 35,
+            "min": 35,
+            "numbers": [
+              35
+            ],
+            "raw": 35,
+            "text": "35",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 11,
+            "max": 11,
+            "min": 11,
+            "numbers": [
+              11
+            ],
+            "raw": 11,
+            "text": "11",
+            "uncertain": false
+          }
+        },
+        "numCmd": "2HP",
+        "onBlock": -20,
+        "onHit": "KD +20",
+        "onPC": "KD +58",
+        "onPP": "-42(-34)",
+        "plnCmd": "d+HP",
+        "recovery": 35,
+        "startup": 11,
+        "total": 54
+      },
+      "Crouch LK": {
+        "DDoB": 500,
+        "DDoH": 2000,
+        "DGain": 250,
+        "OppSoB": 75,
+        "OppSoH": 210,
+        "SelfSoB": 150,
+        "SelfSoH": 300,
+        "active": 3,
+        "atkLvl": "L",
+        "blockstun": 12,
+        "dmg": 250,
+        "dmgScaling": "20% Start",
+        "extraInfo": [
+          "Zangief's only 4F normal",
+          "Chains into stand LP / crouch LP / crouch LK",
+          "True blockstring when chained into crouch LP or crouch LK",
+          "Only 3F start-up when chained into",
+          "Incurs 20% damage scaling penalty if used as the first hit of a combo"
+        ],
+        "ezCmd": "Auto L",
+        "hitstop": 9,
+        "hitstun": 15,
+        "i": 11,
+        "moveButton": "LK",
+        "moveMotion": "D",
+        "moveName": "Crouch LK",
+        "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -3,
+            "kd": [],
+            "max": -3,
+            "min": -3,
+            "numbers": [
+              -3
+            ],
+            "raw": -3,
+            "tags": [],
+            "text": "-3",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 0,
+            "kd": [],
+            "max": 0,
+            "min": 0,
+            "numbers": [
+              0
+            ],
+            "raw": 0,
+            "tags": [],
+            "text": "0",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 4,
+            "kd": [],
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "tags": [],
+            "text": "4",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 12,
+            "max": 12,
+            "min": 12,
+            "numbers": [
+              12
+            ],
+            "raw": 12,
+            "text": "12",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 4,
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "text": "4",
+            "uncertain": false
+          }
+        },
+        "numCmd": "2LK",
+        "onBlock": -3,
+        "onHit": 0,
+        "onPC": 4,
+        "onPP": "-13(-11)",
+        "plnCmd": "d+LK",
+        "recovery": 12,
+        "startup": 4,
+        "total": 18,
+        "xx": [
+          "ch"
+        ]
+      },
+      "Crouch LP": {
+        "DDoB": 500,
+        "DDoH": 2000,
+        "DGain": 250,
+        "DRoB": 1,
+        "DRoH": 6,
+        "OppSoB": 75,
+        "OppSoH": 210,
+        "SelfSoB": 150,
+        "SelfSoH": 300,
+        "active": 2,
+        "atkLvl": "H",
+        "blockstun": 11,
+        "dmg": 300,
+        "dmgScaling": "20% Start",
+        "extraInfo": [
+          "Plus frames on blocked jab (this is unique to Zangief) and a true blockstring when chained into crouch LP or crouch LK, allowing Zangief to pressure better with his light chains than the rest of the roster",
+          "Chains into stand LP / crouch LP / crouch LK",
+          "Only 3F start-up when chained into",
+          "Incurs 20% damage scaling penalty if used as the first hit of a combo",
+          "Topmost hurtboxes on frames 1-7 are vulnerable only to airborne attacks (this is to discourage its use as an anti-air)"
+        ],
+        "ezCmd": "d+L",
+        "hcWinSpCa": 12,
+        "hitstop": 9,
+        "hitstun": 16,
+        "i": 8,
+        "moveButton": "LP",
+        "moveMotion": "D",
+        "moveName": "Crouch LP",
+        "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 2,
+            "max": 2,
+            "min": 2,
+            "numbers": [
+              2
+            ],
+            "raw": 2,
+            "text": "2",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": 1,
+            "kd": [],
+            "max": 1,
+            "min": 1,
+            "numbers": [
+              1
+            ],
+            "raw": 1,
+            "tags": [],
+            "text": "1",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 6,
+            "kd": [],
+            "max": 6,
+            "min": 6,
+            "numbers": [
+              6
+            ],
+            "raw": 6,
+            "tags": [],
+            "text": "6",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 10,
+            "kd": [],
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": 10,
+            "tags": [],
+            "text": "10",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 8,
+            "max": 8,
+            "min": 8,
+            "numbers": [
+              8
+            ],
+            "raw": 8,
+            "text": "8",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 6,
+            "max": 6,
+            "min": 6,
+            "numbers": [
+              6
+            ],
+            "raw": 6,
+            "text": "6",
+            "uncertain": false
+          }
+        },
+        "numCmd": "2LP",
+        "onBlock": 1,
+        "onHit": 6,
+        "onPC": 10,
+        "onPP": "-8(-7)",
+        "plnCmd": "d+LP",
+        "recovery": 8,
+        "startup": 6,
+        "total": 15,
+        "xx": [
+          "ch",
+          "sp",
+          "su"
+        ]
+      },
+      "Crouch MK": {
+        "DDoB": 5000,
+        "DDoH": 8000,
+        "DGain": 2500,
+        "OppSoB": 175,
+        "OppSoH": 490,
+        "SelfSoB": 350,
+        "SelfSoH": 700,
+        "active": 3,
+        "atkLvl": "L",
+        "blockstun": 19,
+        "dmg": 700,
+        "dmgScaling": "20% Start",
+        "extraInfo": [
+          "Low poke with the furthest range and best hitbox priority of any crouch MK in the game",
+          "Incurs 20% damage scaling penalty if used as the first hit of a combo"
+        ],
+        "hitstop": 11,
+        "hitstun": 24,
+        "i": 12,
+        "moveButton": "MK",
+        "moveMotion": "D",
+        "moveName": "Crouch MK",
+        "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -2,
+            "kd": [],
+            "max": -2,
+            "min": -2,
+            "numbers": [
+              -2
+            ],
+            "raw": -2,
+            "tags": [],
+            "text": "-2",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 3,
+            "kd": [],
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "tags": [],
+            "text": "3",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 7,
+            "kd": [],
+            "max": 7,
+            "min": 7,
+            "numbers": [
+              7
+            ],
+            "raw": 7,
+            "tags": [],
+            "text": "7",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 18,
+            "max": 18,
+            "min": 18,
+            "numbers": [
+              18
+            ],
+            "raw": 18,
+            "text": "18",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 9,
+            "max": 9,
+            "min": 9,
+            "numbers": [
+              9
+            ],
+            "raw": 9,
+            "text": "9",
+            "uncertain": false
+          }
+        },
+        "numCmd": "2MK",
+        "onBlock": -2,
+        "onHit": 3,
+        "onPC": 7,
+        "onPP": "-19(-17)",
+        "plnCmd": "d+MK",
+        "recovery": 18,
+        "startup": 9,
+        "total": 29
+      },
+      "Crouch MP": {
+        "DDoB": 6000,
+        "DDoH": 8000,
+        "DGain": 3000,
+        "DRoB": 8,
+        "DRoH": 12,
+        "OppSoB": 200,
+        "OppSoH": 560,
+        "SelfSoB": 400,
+        "SelfSoH": 800,
+        "active": 3,
+        "atkLvl": "H",
+        "blockstun": 18,
+        "dmg": 700,
+        "extraInfo": [
+          "Mostly a combo / buffer tool",
+          "Topmost hurtboxes on frames 1-7 are vulnerable only to airborne attacks (this is to discourage its use as an anti-air) and Projectile invincible on frames 1-15 (avoids Sagat's MP/HP Tiger Shot)"
+        ],
+        "ezCmd": "d+M",
+        "hcWinSpCa": 15,
+        "hitstop": 11,
+        "hitstun": 22,
+        "i": 9,
+        "moveButton": "MP",
+        "moveMotion": "D",
+        "moveName": "Crouch MP",
+        "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -1,
+            "kd": [],
+            "max": -1,
+            "min": -1,
+            "numbers": [
+              -1
+            ],
+            "raw": -1,
+            "tags": [],
+            "text": "-1",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 3,
+            "kd": [],
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "tags": [],
+            "text": "3",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 7,
+            "kd": [],
+            "max": 7,
+            "min": 7,
+            "numbers": [
+              7
+            ],
+            "raw": 7,
+            "tags": [],
+            "text": "7",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 16,
+            "max": 16,
+            "min": 16,
+            "numbers": [
+              16
+            ],
+            "raw": 16,
+            "text": "16",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 8,
+            "max": 8,
+            "min": 8,
+            "numbers": [
+              8
+            ],
+            "raw": 8,
+            "text": "8",
+            "uncertain": false
+          }
+        },
+        "numCmd": "2MP",
+        "onBlock": -1,
+        "onHit": 3,
+        "onPC": 7,
+        "onPP": "-17(-15)",
+        "plnCmd": "d+MP",
+        "recovery": 16,
+        "startup": 8,
+        "total": 26,
+        "xx": [
+          "sp",
+          "su"
+        ]
+      },
+      "Cyclone Lariat": {
+        "DDoB": 5000,
+        "DDoH": 10000,
+        "SelfSoB": -20000,
+        "SelfSoH": -20000,
+        "active": "91(8)3",
+        "atkLvl": "H",
+        "blockstun": "119 total",
+        "chp": "750 (50x9*300)",
+        "cmnName": "Super Art Level 2",
+        "dmg": "3160 (3060)",
+        "dmgScaling": "40% Minimum",
+        "extraInfo": [
+          "Fully invincible on frames 1-18",
+          "Projectile invincible on frames 19-119",
+          "Armor Break",
+          "Depletes 1 Drive Bar on hit for the opponent",
+          "Suctions in the opponent up to half-screen away on frames 18-108",
+          "Too slow to be effectively used as a reversal against fast buttons",
+          "The follow-up grab on hit has 3 variations depending on what direction is input during the grab animation: Neutral (Jackhammer!) | Forward (Zangief throws the opponent forward instead of behind him) | Backward (Zangief throws the opponent slightly further behind him than the neutral Jackhammer version)",
+          "Both forward and backward versions deal 100 less damage than the neutral Jackhammer version",
+          "Forward version has 4F less KDA (HKD +1)",
+          "Can hold the attack button to extend the duration and knock the opponent upwards (see the (hold) entry for more details on that version)",
+          "If juggled into it transitions into the fully held version (since the throw follow-ups do not work on airborne opponents)"
+        ],
+        "ezCmd": "b+SP+H / qcf,qcf+M",
+        "hitstop": "0*4x9*15",
+        "i": 60,
+        "moveButton": "1P",
+        "moveMotion": "DQCF",
+        "moveName": "Cyclone Lariat",
+        "moveType": "super",
+        "movesList": "Super",
+        "normalized": {
+          "active": {
+            "first": 91,
+            "max": 91,
+            "min": 3,
+            "numbers": [
+              91,
+              8,
+              3
+            ],
+            "raw": "91(8)3",
+            "text": "91(8)3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -35,
+            "kd": [],
+            "max": -35,
+            "min": -35,
+            "numbers": [
+              -35
+            ],
+            "raw": -35,
+            "tags": [],
+            "text": "-35",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 5,
+            "kd": [
+              {
+                "advantage": 5,
+                "type": "HKD"
+              }
+            ],
+            "max": 5,
+            "min": 1,
+            "numbers": [
+              5,
+              1
+            ],
+            "raw": "HKD +5(1)",
+            "tags": [],
+            "text": "HKD +5(1)",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 5,
+            "kd": [
+              {
+                "advantage": 5,
+                "type": "HKD"
+              }
+            ],
+            "max": 5,
+            "min": 1,
+            "numbers": [
+              5,
+              1
+            ],
+            "raw": "HKD +5(1)",
+            "tags": [],
+            "text": "HKD +5(1)",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 52,
+            "max": 52,
+            "min": 52,
+            "numbers": [
+              52
+            ],
+            "raw": 52,
+            "text": "52",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 18,
+            "max": 18,
+            "min": 18,
+            "numbers": [
+              18
+            ],
+            "raw": 18,
+            "text": "18",
+            "uncertain": false
+          }
+        },
+        "numCmd": "236236P",
+        "onBlock": -35,
+        "onHit": "HKD +5(1)",
+        "onPC": "HKD +5(1)",
+        "onPP": -53,
+        "plnCmd": "qcf,qcf+P",
+        "recovery": 52,
+        "startup": 18,
+        "total": 171
+      },
+      "Cyclone Lariat (hold)": {
+        "DDoB": 5000,
+        "DDoH": 10000,
+        "SelfSoB": -20000,
+        "SelfSoH": -20000,
+        "active": "94(8)3",
+        "atkLvl": "H",
+        "blockstun": "122 total",
+        "chp": "750 (50x9*300)",
+        "cmnName": "Super Art Level 2 (hold)",
+        "dmg": "1100 (0*60x9*560)",
+        "dmgScaling": "40% Minimum",
+        "extraInfo": [
+          "Fully invincible on frames 1-18",
+          "Projectile invincible on frames 19-122",
+          "Armor Break",
+          "Depletes 1 Drive Bar on hit for the opponent",
+          "Suctions in the opponent up to half-screen away on frames 18-111",
+          "Too slow to be effectively used as a reversal against fast buttons",
+          "This entry is for the held version (or when juggled into) of Cyclone Lariat",
+          "Recovery on hit is much shorter than on whiff/block (25F)",
+          "Launches the opponent into a free juggle state (limited juggle state if used in the middle of a juggle)",
+          "KDA (Knockdown advantage) listed refers to the grounded version (KDA is variable when hitting airborne opponents)"
+        ],
+        "ezCmd": "b+SP+H / qcf,qcf+M (hold)",
+        "hitstop": "0*4x9*15",
+        "i": 61,
+        "jugIncr": "1*0x9*1",
+        "jugLimit": "1*4x9*5",
+        "jugStart": "0 (air: 1)",
+        "moveButton": "1P",
+        "moveMotion": "DQCF",
+        "moveName": "Cyclone Lariat (hold)",
+        "moveType": "super",
+        "normalized": {
+          "active": {
+            "first": 94,
+            "max": 94,
+            "min": 3,
+            "numbers": [
+              94,
+              8,
+              3
+            ],
+            "raw": "94(8)3",
+            "text": "94(8)3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -35,
+            "kd": [],
+            "max": -35,
+            "min": -35,
+            "numbers": [
+              -35
+            ],
+            "raw": -35,
+            "tags": [],
+            "text": "-35",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 87,
+            "kd": [
+              {
+                "advantage": 87,
+                "type": "KD"
+              }
+            ],
+            "max": 87,
+            "min": 87,
+            "numbers": [
+              87
+            ],
+            "raw": "KD +87",
+            "tags": [],
+            "text": "KD +87",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 87,
+            "kd": [
+              {
+                "advantage": 87,
+                "type": "KD"
+              }
+            ],
+            "max": 87,
+            "min": 87,
+            "numbers": [
+              87
+            ],
+            "raw": "KD +87",
+            "tags": [],
+            "text": "KD +87",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 52,
+            "max": 52,
+            "min": 25,
+            "numbers": [
+              52,
+              25
+            ],
+            "raw": "52(25)",
+            "text": "52(25)",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 18,
+            "max": 18,
+            "min": 18,
+            "numbers": [
+              18
+            ],
+            "raw": 18,
+            "text": "18",
+            "uncertain": false
+          }
+        },
+        "numCmd": "236236P (hold)",
+        "onBlock": -35,
+        "onHit": "KD +87",
+        "onPC": "KD +87",
+        "onPP": -53,
+        "plnCmd": "qcf,qcf+P",
+        "recovery": "52(25)",
+        "startup": 18,
+        "total": "174(148)"
+      },
+      "Cyclone Wheel Kick": {
+        "DDoB": 6000,
+        "DDoH": 11000,
+        "DGain": 4000,
+        "OppSoB": 300,
+        "OppSoH": 840,
+        "SelfSoB": 600,
+        "SelfSoH": 1200,
+        "active": "7(5)",
+        "atkLvl": "M",
+        "blockstun": 18,
+        "cmnName": "Overhead",
+        "dmg": 1300,
+        "extraInfo": [
+          "Overhead",
+          "Low crushes on frames 13-28",
+          "Not actually airborne",
+          "First 2 active frames can only hit airborne (making this effectively 24F start-up against standing opponents and 26F start-up against crouching opponents)",
+          "+2 extra KDA (KD +30) against crouching opponents",
+          "Can be spaced out to hit on later active frames for increased KDA and better safety on block (the spacing and pushback on block can even make this safe on block at further ranges)",
+          "Puts airborne opponents into a limited juggle state",
+          "Puts opponent into an OTG juggle state on Punish Counter",
+          "Has some juggle potential naturally without Drive Rush"
+        ],
+        "ezCmd": "f+H",
+        "hitstop": 13,
+        "i": 26,
+        "jugIncr": 1,
+        "jugLimit": 5,
+        "jugStart": "1 (PC: 0)",
+        "moveButton": "HK",
+        "moveMotion": "F",
+        "moveName": "Cyclone Wheel Kick",
+        "moveType": "normal",
+        "movesList": "Command Normal",
+        "normalized": {
+          "active": {
+            "first": 7,
+            "max": 7,
+            "min": 5,
+            "numbers": [
+              7,
+              5
+            ],
+            "raw": "7(5)",
+            "text": "7(5)",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -9,
+            "kd": [],
+            "max": -5,
+            "min": -9,
+            "numbers": [
+              -9,
+              -5
+            ],
+            "raw": "-9(-5)",
+            "tags": [],
+            "text": "-9(-5)",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 28,
+            "kd": [
+              {
+                "advantage": 28,
+                "type": "KD"
+              }
+            ],
+            "max": 32,
+            "min": 28,
+            "numbers": [
+              28,
+              32
+            ],
+            "raw": "KD +28(32)",
+            "tags": [],
+            "text": "KD +28(32)",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 42,
+            "kd": [
+              {
+                "advantage": 42,
+                "type": "KD"
+              }
+            ],
+            "max": 46,
+            "min": 42,
+            "numbers": [
+              42,
+              46
+            ],
+            "raw": "KD +42(46)",
+            "tags": [],
+            "text": "KD +42(46)",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 25,
+            "max": 25,
+            "min": 25,
+            "numbers": [
+              25
+            ],
+            "raw": 25,
+            "text": "25",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 22,
+            "max": 24,
+            "min": 22,
+            "numbers": [
+              22,
+              24
+            ],
+            "raw": "22(24)",
+            "text": "22(24)",
+            "uncertain": false
+          }
+        },
+        "numCmd": "6HK",
+        "onBlock": "-9(-5)",
+        "onHit": "KD +28(32)",
+        "onPC": "KD +42(46)",
+        "onPP": "-28(-24)",
+        "plnCmd": "f+HK",
+        "recovery": 25,
+        "startup": "22(24)",
+        "total": 53
+      },
+      "Double Lariat": {
+        "DDoB": "4000x4",
+        "DDoH": 5000,
+        "DGain": 4000,
+        "OppSoB": "1600 (400x4)",
+        "OppSoH": 1120,
+        "SelfSoB": "3200 (800x4)",
+        "SelfSoH": 1600,
+        "active": "2(3)2(4)2(8)2(6)2",
+        "atkLvl": "H",
+        "blockstun": "17(46)",
+        "chp": "1400 (350x4)",
+        "cmnName": "Lariat",
+        "dmg": 1400,
+        "extraInfo": [
+          "Invincible to airborne strikes on frames 6-16 (great anti-air tool on the first hit, although slow in start-up)",
+          "Projectile invincible on frames 6-45",
+          "No head hurtbox on frames 1-5 and further shrinks his hurtboxes on frames 6-16",
+          "Can hold forward or back to move around slightly during the Lariat.",
+          "Connects only once on hit, but four times on block, though all hits but the first whiff vs crouching opponents.",
+          "Cannot hit cross-up (behind Zangief)",
+          "Launches opponent into a free juggle state on hit if only the last hit connects (requires specific combo / punish setups)"
+        ],
+        "ezCmd": "AA",
+        "hcWinNotes": "*SA3 cancel only works if absorbed by armor",
+        "hcWinSpCa": 18,
+        "hitstop": "15x4",
+        "i": 44,
+        "jugIncr": "10x4*0",
+        "jugLimit": "1x5",
+        "jugStart": "10x4*0",
+        "moveButton": "2P",
+        "moveMotion": "N",
+        "moveName": "Double Lariat",
+        "moveType": "special",
+        "movesList": "Special",
+        "normalized": {
+          "active": {
+            "first": 2,
+            "max": 8,
+            "min": 2,
+            "numbers": [
+              2,
+              3,
+              2,
+              4,
+              2,
+              8,
+              2,
+              6,
+              2
+            ],
+            "raw": "2(3)2(4)2(8)2(6)2",
+            "text": "2(3)2(4)2(8)2(6)2",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -12,
+            "kd": [],
+            "max": -12,
+            "min": -41,
+            "numbers": [
+              -12,
+              -41
+            ],
+            "raw": "-12(-41)",
+            "tags": [],
+            "text": "-12(-41)",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 27,
+            "kd": [
+              {
+                "advantage": 27,
+                "type": "KD"
+              }
+            ],
+            "max": 56,
+            "min": 27,
+            "numbers": [
+              27,
+              56
+            ],
+            "raw": "KD +27(56)",
+            "tags": [],
+            "text": "KD +27(56)",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 27,
+            "kd": [
+              {
+                "advantage": 27,
+                "type": "KD"
+              }
+            ],
+            "max": 56,
+            "min": 27,
+            "numbers": [
+              27,
+              56
+            ],
+            "raw": "KD +27(56)",
+            "tags": [],
+            "text": "KD +27(56)",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 27,
+            "max": 27,
+            "min": 27,
+            "numbers": [
+              27
+            ],
+            "raw": 27,
+            "text": "27",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 15,
+            "max": 15,
+            "min": 15,
+            "numbers": [
+              15
+            ],
+            "raw": 15,
+            "text": "15",
+            "uncertain": false
+          }
+        },
+        "numCmd": "PP",
+        "onBlock": "-12(-41)",
+        "onHit": "KD +27(56)",
+        "onPC": "KD +27(56)",
+        "onPP": "-27(56)",
+        "plnCmd": "PP",
+        "recovery": 27,
+        "startup": 15,
+        "total": 72,
+        "xx": [
+          "su3"
+        ]
+      },
+      "Drive Impact: Double Russian Chop": {
+        "DDoB": 5000,
+        "DDoH": "10000(15000)",
+        "DGain": -10000,
+        "OppSoH": "(2100)",
+        "SelfSoH": "(3000)",
+        "active": 2,
+        "atkLvl": "H",
+        "blockstun": 34,
+        "chargeDirection": "HPHK",
+        "chp": 200,
+        "cmnName": "Drive Impact",
+        "dmg": 800,
+        "dmgScaling": "20% Start",
+        "extraInfo": [
+          "2 hits of armor on frames 1-27",
+          "Damages opponents Drive Gauge on Block (1/2 bar) | Hit (1 bar) | Counter-Hit (1.25 bar) | Punish Counter (1.5 bar)",
+          "Knocks down on hit",
+          "Crumples on Punish Counter or after absorbing at least 1 attack during start-up (+21 frames before the crumple state goes airborne, followed by airborne state on frames 22-46 before they are grounded) which counts as 2 hits of damage scaling",
+          "If the armor absorbs an attack it slows the overall start-up by 1F (27F total instead of 26F)",
+          "Pushes the opponent far back on hit or block and causes a wall splat if they hit the wall",
+          "Wall Splat on block adds 20% damage penalty on the next hit",
+          "Wall splats on hit or during Burnout counts as 2 hits of damage scaling",
+          "Wall Splat puts opponent into a special juggle state where the next move juggles them even if it doesn't normally (similar juggle rules as from Drive Rush)",
+          "Does not cause wall splat if combo'd into from other moves or unblockable setups (Lock)",
+          "Puts airborne opponents into a long spinning free juggle state when hit as a Punish Counter",
+          "Regular KDA without a Wall Splat: +35 KD",
+          "Corner wall splat on HIT: +65 KD | Block: +72 HKD",
+          "KDA can vary greatly depending on how high the opponent wall splats (higher KDA the higher they wall splat)",
+          "Can clash with other Drive Impacts if they collide on the same active frame (start at exactly the same time)",
+          "Costs 1 bar of Drive Gauge",
+          "The scrub killer"
+        ],
+        "ezCmd": "DI",
+        "hitstop": 25,
+        "i": 39,
+        "jugIncr": 1,
+        "jugLimit": 0,
+        "jugStart": "0 (Crumple: -1)",
+        "moveButton": "N",
+        "moveMotion": "drive",
+        "moveName": "Drive Impact: Double Russian Chop",
+        "normalized": {
+          "active": {
+            "first": 2,
+            "max": 2,
+            "min": 2,
+            "numbers": [
+              2
+            ],
+            "raw": 2,
+            "text": "2",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -3,
+            "kd": [],
+            "max": -3,
+            "min": -3,
+            "numbers": [
+              -3
+            ],
+            "raw": -3,
+            "tags": [],
+            "text": "-3",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 35,
+            "kd": [
+              {
+                "advantage": 35,
+                "type": "KD"
+              }
+            ],
+            "max": 35,
+            "min": 35,
+            "numbers": [
+              35
+            ],
+            "raw": "KD +35",
+            "tags": [],
+            "text": "KD +35",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 104,
+            "kd": [
+              {
+                "advantage": 104,
+                "type": "HKD"
+              }
+            ],
+            "max": 104,
+            "min": 104,
+            "numbers": [
+              104
+            ],
+            "raw": "HKD +104",
+            "tags": [],
+            "text": "HKD +104",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 35,
+            "max": 35,
+            "min": 35,
+            "numbers": [
+              35
+            ],
+            "raw": 35,
+            "text": "35",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 26,
+            "max": 26,
+            "min": 26,
+            "numbers": [
+              26
+            ],
+            "raw": 26,
+            "text": "26",
+            "uncertain": false
+          }
+        },
+        "numCmd": "HPHK",
+        "onBlock": -3,
+        "onHit": "KD +35",
+        "onPC": "HKD +104",
+        "onPP": -35,
+        "plnCmd": "HP+HK",
+        "recovery": 35,
+        "startup": 26,
+        "total": 62
+      },
+      "Drive Parry": {
+        "DGain": "-5000*250~",
+        "active": "12",
+        "antiAirMove": true,
+        "chargeDirection": "MPMK",
+        "cmnName": "Drive Parry",
+        "dmgScaling": "50% Multiplier (Perfect)",
+        "extraInfo": [
+          "Parries all strikes and projectiles (high and low) from frame 1",
+          "12F parry window (can hold the parry to extend the parry window)",
+          "Perfect Parry occurs on the first 2 active frames (cannot achieve Perfect Parry if you buffer into parry by holding it during Reversal windows; Perfect Parries have to be timed properly)",
+          "Can still hold charge directions during Parry",
+          "Can block during the recovery frames of a regular parry (can still get hit during the recovery frames if you don't block correctly)",
+          "Getting thrown or hit at any point during the recovery frames of a whiffed parry attempt results in a Punish Counter",
+          "Successfully parrying a move puts you into the same amount of blockstun as that move would regularly do on block (but a Perfect Parry has only 1F of recovery)",
+          "Throw invincible during the recovery of a successful parry (just like during blockstun)",
+          "Perfect Parrying a strike has only 1F of recovery and disables the opponent from canceling their attack (basically a guaranteed punish opportunity)",
+          "After a successful Perfect Parry, you suffer a 50% penalty to your Damage, Drive Gauge Generation, and Drive Gauge Damage on any of your following attacks when punishing the opponent (in addition, both you and the opponent suffer a 20% penalty to their Super Meter gain during this period)",
+          "Fully invincible for 6F after a successful Perfect Parry against a strike, during which period you can cancel into anything you want and it carries over the brief invincibility frames",
+          "Perfect Parrying projectiles puts you into fixed 10 frames of recovery and applies the same 50% scaling penalties (and 20% Super Meter penalty) on your following attacks when punishing the opponent",
+          "Parrying a Strike and Projectile on the same frame will result in a regular parry for the strike attack (effectively ignoring the projectile's hitstop / blockstun)",
+          "Perfect Parrying a Strike and Projectile on the same frame will give a screen freeze like you Perfect Parried a Strike, but still give you 10F recovery as if you had Perfect Parried a Projectile",
+          "Can cancel into Drive Rush during active frames 3 and onward (fastest Drive Rush method is to buffer a forward input before doing parry + forward again)",
+          "Can cancel into Drive Reversal from a successful parry (just like you can normally during blockstun)",
+          "Costs 1/2 bar Drive Gauge (continues to deplete Drive Gauge as you hold the Parry)",
+          "You lose the parry if you go into Burnout from the Drive Gauge cost",
+          "Rewards 1 bar Drive Gauge (1/2 bar total after factoring in the initial parry cost) for successfully parrying a strike",
+          "Rewards 1/2 bar of Drive Gauge (0 bar total after factoring in the initial parry cost) for successfully parrying a projectile",
+          "Rewards 2 bars of Drive Gauge (1.5 bars total after factoring in the initial parry cost) for successful parrying a Drive Impact",
+          "Successfully parrying a strike attack splits the regular block pushback between both players (while Perfect Parrying a strike removes all of its pushback)",
+          "Successfully parrying a projectile or Drive Impact reduces the pushback of it by half (while Perfect Parrying a projectile or Drive Impact removes all of its pushback)",
+          "Your hurtbox and throw box expand slightly towards the opponent for the entire duration of the Parry (Throw box extension starts instantly on frame 1, while the Hurtbox extension starts on frame 3, after the initial 2F Perfect Parry window)",
+          "Parrying while crouching maintains a regular crouch hurtbox for the first 2 frames of the parry (during the initial Perfect Parry window)"
+        ],
+        "ezCmd": "DP",
+        "i": 41,
+        "moveButton": "N",
+        "moveMotion": "drive",
+        "moveName": "Drive Parry",
+        "normalized": {
+          "active": {
+            "first": 12,
+            "max": 12,
+            "min": 12,
+            "numbers": [
+              12
+            ],
+            "raw": "12",
+            "text": "12",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": null,
+          "onPC": null,
+          "recovery": {
+            "first": 33,
+            "max": 33,
+            "min": 33,
+            "numbers": [
+              33
+            ],
+            "raw": "33",
+            "text": "33",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 1,
+            "max": 1,
+            "min": 1,
+            "numbers": [
+              1
+            ],
+            "raw": 1,
+            "text": "1",
+            "uncertain": false
+          }
+        },
+        "numCmd": "MPMK",
+        "plnCmd": "MP+MK",
+        "recovery": "33",
+        "startup": 1,
+        "total": "45(3)"
+      },
+      "Drive Reversal: Reverse Russian Kick": {
+        "DGain": -20000,
+        "active": 3,
+        "atkLvl": "H",
+        "blockstun": 21,
+        "chargeDirection": "HPHK",
+        "chp": 125,
+        "cmnName": "Drive Reversal",
+        "dmg": 500,
+        "extraInfo": [
+          "Fully invincible on frames 1-22 (frames 1-20 when used on wake-up as a Reversal)",
+          "Armor Break (blows through all armor like Drive Impact)",
+          "Can be performed during blockstun or from a successful parry (trying to Drive Reversal after the blockstun is over will result in a Drive Impact)",
+          "Can also be performed during wake-up as a Reversal, doing it this way speeds up the start-up frames by 2 frames (18F start-up instead of 20F)",
+          "Drive Reversal immediately removes the current blockstun you're in and starts the attack",
+          "Causes a 4F screen freeze that occurs after the 6th start-up frame, which can mess up the opponents input timing, or enable them to do a simple input OS to counter the Drive Reversal",
+          "Safe on block (-2) when used against an opponent currently in Burnout",
+          "Costs 2 bars of Drive Gauge"
+        ],
+        "ezCmd": "f+DI",
+        "hitstop": 20,
+        "i": 40,
+        "jugIncr": 100,
+        "jugLimit": 1,
+        "jugStart": 200,
+        "moveButton": "F",
+        "moveMotion": "drive",
+        "moveName": "Drive Reversal: Reverse Russian Kick",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -6,
+            "kd": [],
+            "max": -6,
+            "min": -6,
+            "numbers": [
+              -6
+            ],
+            "raw": -6,
+            "tags": [],
+            "text": "-6",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 23,
+            "kd": [
+              {
+                "advantage": 23,
+                "type": "KD"
+              }
+            ],
+            "max": 23,
+            "min": 23,
+            "numbers": [
+              23
+            ],
+            "raw": "KD +23",
+            "tags": [],
+            "text": "KD +23",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 23,
+            "kd": [
+              {
+                "advantage": 23,
+                "type": "KD"
+              }
+            ],
+            "max": 23,
+            "min": 23,
+            "numbers": [
+              23
+            ],
+            "raw": "KD +23",
+            "tags": [],
+            "text": "KD +23",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 26,
+            "max": 26,
+            "min": 26,
+            "numbers": [
+              26
+            ],
+            "raw": 26,
+            "text": "26",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 18,
+            "max": 18,
+            "min": 18,
+            "numbers": [
+              18
+            ],
+            "raw": "18",
+            "text": "18",
+            "uncertain": false
+          }
+        },
+        "numCmd": "6HPHK",
+        "onBlock": -6,
+        "onHit": "KD +23",
+        "onPC": "KD +23",
+        "onPP": -27,
+        "plnCmd": "f+HP+HK",
+        "recovery": 26,
+        "startup": "18",
+        "total": "48(46)"
+      },
+      "Drive Rush": {
+        "DGain": "-10000(-30000)",
+        "active": "45(46)",
+        "antiAirMove": true,
+        "cmnName": "Drive Rush",
+        "dmgScaling": "15% Multiplier (Mid-Combo)",
+        "extraInfo": [
+          "Dashes forward and enhances the next normal used out of the Drive Rush with +4 extra hitstun / blockstun (some moves also get unique properties enhanced such as juggle state)",
+          "The +4 bonus frame advantage gained from a Drive Rush enhanced move also stacks with any bonus frame advantage that move may have gained from Counter-Hit or Punish Counter",
+          "Cancelable into from special cancelable grounded normals",
+          "Drive Rush maintains buffers (freezes the buffer window) during it start-up and freeze frames - This allows players to do things normally not possible within the normal buffer windows, such as Drive Rushing into a charge special",
+          "The initial screen freeze eats the opponent's directional inputs (including Jumps) but does not prevent attacks from being buffered immediately afterward (this can cause inputs to be combined in unintended ways, such as 2MK + Fireball performing a raw Fireball)",
+          "Framedata shown in parentheses refers to the Drive Rush version used from a Parry",
+          "Drive Rush recovery frames is only 24F total (23F if done from a Parry) - but the enhanced dash itself is 46F total (45F if done from Parry) and you can cancel it as early as frame 9 (frame 11 if done from a Parry)",
+          "You stop building any form of Drive Gauge on your attacks after using a Drive Rush in the MIDDLE of a combo (but you still continue to build drive gauge as normal if you did Drive Rush at the START of a combo)",
+          "Applies extra damage scaling penalty after using a Drive Rush in the MIDDLE of a combo (no damage scaling if you use Drive Rush at the START of a combo)",
+          "Costs 3 bars of Drive Gauge if canceled into from a move",
+          "Costs 1/2 bar of Drive Gauge if canceled into from Parry (for a total of 1 bar of Drive Gauge when you factor in the initial 1/2 bar cost of the Parry)"
+        ],
+        "ezCmd": "DP / f,f (cancel)",
+        "i": 42,
+        "moveButton": "F, F",
+        "moveMotion": "drive",
+        "moveName": "Drive Rush",
+        "normalized": {
+          "active": {
+            "first": 45,
+            "max": 46,
+            "min": 45,
+            "numbers": [
+              45,
+              46
+            ],
+            "raw": "45(46)",
+            "text": "45(46)",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": null,
+          "onPC": null,
+          "recovery": {
+            "first": 24,
+            "max": 24,
+            "min": 23,
+            "numbers": [
+              24,
+              23
+            ],
+            "raw": "24(23)",
+            "text": "24(23)",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 9,
+            "max": 11,
+            "min": 9,
+            "numbers": [
+              9,
+              11
+            ],
+            "raw": "9(11)",
+            "text": "9(11)",
+            "uncertain": false
+          }
+        },
+        "numCmd": "MPMK / 66 (cancel)",
+        "plnCmd": "MP+MK / f,f (cancel)",
+        "recovery": "24(23)",
+        "startup": "9(11)",
+        "total": "24(23)"
+      },
+      "Flying Body Press": {
+        "DDoB": 4000,
+        "DDoH": 5000,
+        "DGain": 2000,
+        "OppSoB": 250,
+        "OppSoH": 700,
+        "SelfSoB": 500,
+        "SelfSoH": 1000,
+        "active": 9,
+        "airmove": true,
+        "atkLvl": "M",
+        "blockstun": 23,
+        "cmnName": "Body Splash",
+        "dmg": 800,
+        "dmgScaling": "Combo (2 hits)",
+        "extraInfo": [
+          "Cross-up",
+          "Spikes down airborne opponents on Counter-Hit or Punish Counter",
+          "5 extra frames landing recovery (8F instead of 3F) which makes it always unsafe if perfect parried",
+          "Counts as 2 hits of damage scaling when combo'd into"
+        ],
+        "ezCmd": "u,d+H",
+        "hitstop": 13,
+        "hitstun": 27,
+        "i": 21,
+        "jugIncr": 0,
+        "moveButton": "HP",
+        "moveMotion": "D",
+        "moveName": "Flying Body Press",
+        "moveType": "normal",
+        "movesList": "Command Normal",
+        "normalized": {
+          "active": {
+            "first": 9,
+            "max": 9,
+            "min": 9,
+            "numbers": [
+              9
+            ],
+            "raw": 9,
+            "text": "9",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": null,
+          "onPC": {
+            "first": null,
+            "kd": [
+              {
+                "advantage": null,
+                "type": "KD"
+              }
+            ],
+            "max": null,
+            "min": null,
+            "numbers": [],
+            "raw": "~ (KD)",
+            "tags": [],
+            "text": "~ (KD)",
+            "uncertain": true
+          },
+          "recovery": {
+            "first": 8,
+            "max": 8,
+            "min": 8,
+            "numbers": [
+              8
+            ],
+            "raw": 8,
+            "text": "8",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 9,
+            "max": 9,
+            "min": 9,
+            "numbers": [
+              9
+            ],
+            "raw": 9,
+            "text": "9",
+            "uncertain": false
+          }
+        },
+        "numCmd": "7 or 8 or 9 > 2HP",
+        "onPC": "~ (KD)",
+        "plnCmd": "u,d+HP",
+        "recovery": 8,
+        "startup": 9
+      },
+      "Flying Headbutt": {
+        "DDoB": 4000,
+        "DDoH": 8000,
+        "DGain": 3000,
+        "OppSoB": 300,
+        "OppSoH": 840,
+        "SelfSoB": 600,
+        "SelfSoH": 1200,
+        "active": 4,
+        "airmove": true,
+        "atkLvl": "M",
+        "blockstun": 20,
+        "cmnName": "Air Headbutt",
+        "dmg": 900,
+        "extraInfo": [
+          "Special cancelable and combo-able into Borscht Dynamite (Air SPD)",
+          "Only combos into non-OD Borscht Dynamite if canceled into it",
+          "Puts airborne opponents into a limited juggle state",
+          "Good air-to-air hitboxes"
+        ],
+        "ezCmd": "Neutral Jump > u+H",
+        "hitstop": 13,
+        "hitstun": 25,
+        "i": 22,
+        "jugIncr": 0,
+        "jugLimit": 0,
+        "jugStart": 1,
+        "moveButton": "HP",
+        "moveMotion": "U",
+        "moveName": "Flying Headbutt",
+        "moveType": "normal",
+        "movesList": "Command Normal",
+        "normalized": {
+          "active": {
+            "first": 4,
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "text": "4",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": null,
+          "onPC": null,
+          "recovery": null,
+          "startup": {
+            "first": 8,
+            "max": 8,
+            "min": 8,
+            "numbers": [
+              8
+            ],
+            "raw": 8,
+            "text": "8",
+            "uncertain": false
+          }
+        },
+        "numCmd": "8 > 8HP",
+        "plnCmd": "Neutral Jump > u+HP",
+        "startup": 8,
+        "xx": [
+          "sp"
+        ]
+      },
+      "German Suplex": {
+        "DDoH": "(10000)",
+        "DGain": 2000,
+        "OppSoH": "2100(4200)",
+        "SelfSoH": "3000(6000)",
+        "active": 3,
+        "atkLvl": "T",
+        "cmnName": "Forward Throw",
+        "dmg": 1500,
+        "dmgScaling": "20% Immediate",
+        "extraInfo": [
+          "Deals 300 extra damage (1500) over normal throw (1200) but sacrifices all oki",
+          "Gets +70% damage increase (2550 damage), HKD (denies back-roll option on wake-up), and depletes 1 bar of Drive Gauge on a Punish Counter",
+          "Builds more Super meter than a standard throw"
+        ],
+        "ezCmd": "f+L+M",
+        "i": 34,
+        "moveButton": "LPLK",
+        "moveMotion": "F",
+        "moveName": "German Suplex",
+        "moveType": "throw",
+        "movesList": "Normal Throw",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 10,
+            "kd": [
+              {
+                "advantage": 10,
+                "type": "KD"
+              }
+            ],
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": "KD +10",
+            "tags": [],
+            "text": "KD +10",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 10,
+            "kd": [
+              {
+                "advantage": 10,
+                "type": "HKD"
+              }
+            ],
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": "HKD +10",
+            "tags": [],
+            "text": "HKD +10",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 23,
+            "max": 23,
+            "min": 23,
+            "numbers": [
+              23
+            ],
+            "raw": 23,
+            "text": "23",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 5,
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "text": "5",
+            "uncertain": false
+          }
+        },
+        "numCmd": "6LPLK",
+        "onHit": "KD +10",
+        "onPC": "HKD +10",
+        "plnCmd": "f+LP+LK",
+        "recovery": 23,
+        "startup": 5,
+        "total": 30
+      },
+      "HP Screw Piledriver": {
+        "DDoH": 10000,
+        "DGain": 7000,
+        "OppSoH": 2800,
+        "SelfSoH": 4000,
+        "active": 3,
+        "atkLvl": "T",
+        "cmnName": "HP SPD",
+        "dmg": "3300(3795)",
+        "dmgScaling": "10% Immediate",
+        "extraInfo": [
+          "Range: 1.22",
+          "Shortest range of his SPDs but most amount of damage",
+          "Deals +15% extra damage (3795) on Punish Counter",
+          "Incurs 10% damage scaling onto itself when combo'd into"
+        ],
+        "ezCmd": "SP / 360+H",
+        "i": 48,
+        "moveButton": "HP",
+        "moveMotion": 360,
+        "moveName": "HP Screw Piledriver",
+        "moveType": "command-grab",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 28,
+            "kd": [
+              {
+                "advantage": 28,
+                "type": "HKD"
+              }
+            ],
+            "max": 28,
+            "min": 28,
+            "numbers": [
+              28
+            ],
+            "raw": "HKD +28",
+            "tags": [],
+            "text": "HKD +28",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 28,
+            "kd": [
+              {
+                "advantage": 28,
+                "type": "HKD"
+              }
+            ],
+            "max": 28,
+            "min": 28,
+            "numbers": [
+              28
+            ],
+            "raw": "HKD +28",
+            "tags": [],
+            "text": "HKD +28",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 54,
+            "max": 54,
+            "min": 54,
+            "numbers": [
+              54
+            ],
+            "raw": 54,
+            "text": "54",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 5,
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "text": "5",
+            "uncertain": false
+          }
+        },
+        "numCmd": "4268HP",
+        "onHit": "HKD +28",
+        "onPC": "HKD +28",
+        "plnCmd": "360+HP",
+        "recovery": 54,
+        "startup": 5,
+        "total": 61
+      },
+      "Headbutt": {
+        "DDoB": 8000,
+        "DDoH": 11000,
+        "DGain": 4500,
+        "DRoB": 12,
+        "DRoH": 16,
+        "OppSoB": 250,
+        "OppSoH": 700,
+        "SelfSoB": 500,
+        "SelfSoH": 1000,
+        "active": 5,
+        "atkLvl": "H",
+        "blockstun": 24,
+        "cmnName": "Headbutt",
+        "dmg": 1000,
+        "dmgScaling": "25% Start / Combo (2 hits)",
+        "extraInfo": [
+          "Tons of frame advantage and active frames, as well as heavy damage and fully cancelable makes this a core tool for damage, pressure and oki",
+          "+2F extra recovery frames (17F) on whiff",
+          "Puts airborne opponents into a limited juggle state",
+          "Incurs 25% damage scaling penalty if used as the first hit of a combo",
+          "Counts as 2 hits of damage scaling when combo'd into"
+        ],
+        "ezCmd": "Auto H",
+        "hcWinSpCa": 19,
+        "hitstop": 13,
+        "hitstun": 28,
+        "i": 25,
+        "moveButton": "HP",
+        "moveMotion": "F",
+        "moveName": "Headbutt",
+        "moveType": "normal",
+        "movesList": "Command Normal",
+        "normalized": {
+          "active": {
+            "first": 5,
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "text": "5",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": 4,
+            "kd": [],
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "tags": [],
+            "text": "4",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 8,
+            "kd": [],
+            "max": 8,
+            "min": 8,
+            "numbers": [
+              8
+            ],
+            "raw": 8,
+            "tags": [],
+            "text": "8",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 12,
+            "kd": [],
+            "max": 12,
+            "min": 12,
+            "numbers": [
+              12
+            ],
+            "raw": 12,
+            "tags": [],
+            "text": "12",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 15,
+            "max": 17,
+            "min": 15,
+            "numbers": [
+              15,
+              17
+            ],
+            "raw": "15(17)",
+            "text": "15(17)",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 14,
+            "max": 14,
+            "min": 14,
+            "numbers": [
+              14
+            ],
+            "raw": 14,
+            "text": "14",
+            "uncertain": false
+          }
+        },
+        "numCmd": "6HP",
+        "onBlock": 4,
+        "onHit": 8,
+        "onPC": 12,
+        "onPP": "-18(-14)",
+        "plnCmd": "f+HP",
+        "recovery": "15(17)",
+        "startup": 14,
+        "total": "33(35)",
+        "xx": [
+          "sp",
+          "su"
+        ]
+      },
+      "Hellstab": {
+        "DDoB": 5000,
+        "DDoH": 6000,
+        "DGain": 3000,
+        "DRoB": 9,
+        "DRoH": 11,
+        "OppSoB": 175,
+        "OppSoH": 490,
+        "SelfSoB": 350,
+        "SelfSoH": 700,
+        "active": 3,
+        "atkLvl": "H",
+        "blockstun": 21,
+        "cmnName": "df+MP",
+        "dmg": 800,
+        "extraInfo": [
+          "Core tool for Zangief's combos / juggles",
+          "Forces stand on hit",
+          "Launches airborne opponents into a limited juggle state on hit",
+          "Extended arm is invincible to airborne strikes on frames 7-12 (not an ideal anti-air since there's still a head hurtbox)",
+          "Very lenient cancel window (final cancel frame does not combo into Lariat)"
+        ],
+        "ezCmd": "df+M",
+        "hcWinNotes": "*Final cancel frame does not combo to Double Lariat",
+        "hcWinSpCa": 21,
+        "hitstop": 11,
+        "hitstun": 23,
+        "i": 23,
+        "jugIncr": 1,
+        "jugLimit": 0,
+        "jugStart": 1,
+        "moveButton": "MP",
+        "moveMotion": "DF",
+        "moveName": "Hellstab",
+        "moveType": "normal",
+        "movesList": "Command Normal",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -3,
+            "kd": [],
+            "max": -3,
+            "min": -3,
+            "numbers": [
+              -3
+            ],
+            "raw": -3,
+            "tags": [],
+            "text": "-3",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": -1,
+            "kd": [],
+            "max": -1,
+            "min": -1,
+            "numbers": [
+              -1
+            ],
+            "raw": -1,
+            "tags": [],
+            "text": "-1",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 3,
+            "kd": [],
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "tags": [],
+            "text": "3",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 21,
+            "max": 21,
+            "min": 21,
+            "numbers": [
+              21
+            ],
+            "raw": 21,
+            "text": "21",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 7,
+            "max": 7,
+            "min": 7,
+            "numbers": [
+              7
+            ],
+            "raw": 7,
+            "text": "7",
+            "uncertain": false
+          }
+        },
+        "numCmd": "3MP",
+        "onBlock": -3,
+        "onHit": -1,
+        "onPC": 3,
+        "onPP": "-22(-20)",
+        "plnCmd": "df+MP",
+        "recovery": 21,
+        "startup": 7,
+        "total": 30,
+        "xx": [
+          "sp",
+          "su"
+        ]
+      },
+      "Jump HK": {
+        "DDoB": 4000,
+        "DDoH": 5000,
+        "DGain": 2000,
+        "OppSoB": 250,
+        "OppSoH": 700,
+        "SelfSoB": 500,
+        "SelfSoH": 1000,
+        "active": 7,
+        "airmove": true,
+        "atkLvl": "M",
+        "blockstun": 15,
+        "dmg": 800,
+        "extraInfo": [
+          "Can be held"
+        ],
+        "ezCmd": "u+H",
+        "hitstop": 13,
+        "hitstun": 19,
+        "i": 19,
+        "jugIncr": 0,
+        "moveButton": "HK",
+        "moveMotion": "U",
+        "moveName": "Jump HK",
+        "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 7,
+            "max": 7,
+            "min": 7,
+            "numbers": [
+              7
+            ],
+            "raw": 7,
+            "text": "7",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": null,
+          "onPC": null,
+          "recovery": null,
+          "startup": {
+            "first": 10,
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": 10,
+            "text": "10",
+            "uncertain": false
+          }
+        },
+        "numCmd": "8HK",
+        "plnCmd": "u+HK",
+        "startup": 10
+      },
+      "Jump HK (hold)": {
+        "DDoB": 4000,
+        "DDoH": 10000,
+        "DGain": 2000,
+        "OppSoB": 250,
+        "OppSoH": 700,
+        "SelfSoB": 500,
+        "SelfSoH": 1000,
+        "active": 6,
+        "airmove": true,
+        "atkLvl": "M",
+        "blockstun": 20,
+        "dmg": 1500,
+        "extraInfo": [
+          "Wall splats the opponent on hit and wall bounces the opponent on Punish Counter",
+          "KDA varies greatly depending on how close/far to the wall they were and how low to the ground Zangief was on hit (the further the opponent was from the wall on hit, and the close to the ground Zangief was on hit, the higher the KDA)",
+          "20F landing recovery on whiff if the HK is fully held (this 20F landing recovery is cancelable into any move except another jump)",
+          "12F landing recovery on whiff if Zangief lands with HK only partially held (this 12F landing recovery is cancelable into any move except another jump)",
+          "If active frames 2-6 connect on the opponent just before Zangief lands (like during a safe jump setup) then Zangief does not bounce off the opponent, granting him alternative combo routes as well pressure / mixups on block",
+          "The first active frame always causes Zangief to bounce off the opponent on Hit/Block, even if used during a frame perfect safe jump setup"
+        ],
+        "ezCmd": "u+H (hold)",
+        "hitstop": 20,
+        "i": 20,
+        "jugLimit": 1,
+        "jugStart": 0,
+        "moveButton": "HK",
+        "moveMotion": "U",
+        "moveName": "Jump HK (hold)",
+        "moveType": "normal",
+        "movesList": "Holdable Normal",
+        "normalized": {
+          "active": {
+            "first": 6,
+            "max": 6,
+            "min": 6,
+            "numbers": [
+              6
+            ],
+            "raw": 6,
+            "text": "6",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -30,
+            "kd": [],
+            "max": -30,
+            "min": -43,
+            "numbers": [
+              -30,
+              -43
+            ],
+            "raw": "-30(-43)",
+            "tags": [],
+            "text": "-30(-43)",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 1,
+            "kd": [],
+            "max": 33,
+            "min": 1,
+            "numbers": [
+              1,
+              33
+            ],
+            "raw": "Wall Splat +1(+33)",
+            "tags": [
+              "wall splat"
+            ],
+            "text": "Wall Splat +1(+33)",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 26,
+            "kd": [],
+            "max": 58,
+            "min": 26,
+            "numbers": [
+              26,
+              58
+            ],
+            "raw": "Wall Bounce +26(+58)",
+            "tags": [
+              "wall bounce"
+            ],
+            "text": "Wall Bounce +26(+58)",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 12,
+            "max": 20,
+            "min": 12,
+            "numbers": [
+              12,
+              20
+            ],
+            "raw": "12(20)",
+            "text": "12(20)",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 32,
+            "max": 32,
+            "min": 32,
+            "numbers": [
+              32
+            ],
+            "raw": 32,
+            "text": "32",
+            "uncertain": false
+          }
+        },
+        "numCmd": "8HK (hold)",
+        "onBlock": "-30(-43)",
+        "onHit": "Wall Splat +1(+33)",
+        "onPC": "Wall Bounce +26(+58)",
+        "onPP": "-48(-61)",
+        "plnCmd": "u+HK (hold)",
+        "recovery": "12(20)",
+        "startup": 32
+      },
+      "Jump HP": {
+        "DDoB": 4000,
+        "DDoH": 5000,
+        "DGain": 2000,
+        "OppSoB": 250,
+        "OppSoH": 700,
+        "SelfSoB": 500,
+        "SelfSoH": 1000,
+        "active": 6,
+        "airmove": true,
+        "atkLvl": "M",
+        "blockstun": 17,
+        "dmg": 800,
+        "extraInfo": [
+          "Spikes down airborne opponents on hit."
+        ],
+        "ezCmd": "u+Auto H",
+        "hitstop": 13,
+        "hitstun": 25,
+        "i": 16,
+        "jugIncr": 0,
+        "moveButton": "HP",
+        "moveMotion": "U",
+        "moveName": "Jump HP",
+        "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 6,
+            "max": 6,
+            "min": 6,
+            "numbers": [
+              6
+            ],
+            "raw": 6,
+            "text": "6",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": null,
+            "kd": [
+              {
+                "advantage": null,
+                "type": "KD"
+              }
+            ],
+            "max": null,
+            "min": null,
+            "numbers": [],
+            "raw": "~ (KD)",
+            "tags": [],
+            "text": "~ (KD)",
+            "uncertain": true
+          },
+          "onPC": {
+            "first": null,
+            "kd": [
+              {
+                "advantage": null,
+                "type": "KD"
+              }
+            ],
+            "max": null,
+            "min": null,
+            "numbers": [],
+            "raw": "~ (KD)",
+            "tags": [],
+            "text": "~ (KD)",
+            "uncertain": true
+          },
+          "recovery": null,
+          "startup": {
+            "first": 9,
+            "max": 9,
+            "min": 9,
+            "numbers": [
+              9
+            ],
+            "raw": 9,
+            "text": "9",
+            "uncertain": false
+          }
+        },
+        "numCmd": "8HP",
+        "onHit": "~ (KD)",
+        "onPC": "~ (KD)",
+        "plnCmd": "u+HP",
+        "startup": 9
+      },
+      "Jump LK": {
+        "DDoB": 1500,
+        "DDoH": 2000,
+        "DGain": 500,
+        "OppSoB": 75,
+        "OppSoH": 210,
+        "SelfSoB": 150,
+        "SelfSoH": 300,
+        "active": 10,
+        "airmove": true,
+        "atkLvl": "M",
+        "blockstun": 12,
+        "dmg": 300,
+        "extraInfo": [
+          "Cross-up",
+          "Can be used as a fuzzy instant Overhead after a deep jump-in Heavy (or jump-in Mediums in Burnout as well)"
+        ],
+        "ezCmd": "u+Auto L",
+        "hitstop": 9,
+        "hitstun": 15,
+        "i": 17,
+        "moveButton": "LK",
+        "moveMotion": "U",
+        "moveName": "Jump LK",
+        "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 10,
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": 10,
+            "text": "10",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": null,
+          "onPC": null,
+          "recovery": null,
+          "startup": {
+            "first": 5,
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "text": "5",
+            "uncertain": false
+          }
+        },
+        "numCmd": "8LK",
+        "plnCmd": "u+LK",
+        "startup": 5
+      },
+      "Jump LP": {
+        "DDoB": 1500,
+        "DDoH": 2000,
+        "DGain": 500,
+        "OppSoB": 75,
+        "OppSoH": 210,
+        "SelfSoB": 150,
+        "SelfSoH": 300,
+        "active": 7,
+        "airmove": true,
+        "atkLvl": "M",
+        "blockstun": 12,
+        "dmg": 300,
+        "extraInfo": [
+          "Decent air-to-air"
+        ],
+        "ezCmd": "u+L",
+        "hitstop": 9,
+        "hitstun": 15,
+        "i": 14,
+        "moveButton": "LP",
+        "moveMotion": "U",
+        "moveName": "Jump LP",
+        "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 7,
+            "max": 7,
+            "min": 7,
+            "numbers": [
+              7
+            ],
+            "raw": 7,
+            "text": "7",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": null,
+          "onPC": null,
+          "recovery": null,
+          "startup": {
+            "first": 5,
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "text": "5",
+            "uncertain": false
+          }
+        },
+        "numCmd": "8LP",
+        "plnCmd": "u+LP",
+        "startup": 5
+      },
+      "Jump MK": {
+        "DDoB": 2500,
+        "DDoH": 4000,
+        "DGain": 1000,
+        "OppSoB": 125,
+        "OppSoH": 350,
+        "SelfSoB": 250,
+        "SelfSoH": 500,
+        "active": 8,
+        "airmove": true,
+        "atkLvl": "M",
+        "blockstun": 15,
+        "dmg": 500,
+        "extraInfo": [
+          "Pretty far reaching jump-in",
+          "Can be used as a fuzzy instant Overhead against tall characters (JP / Marisa / Zangief) in burnout or after a deep jump d+HP (Flying Body Press)"
+        ],
+        "ezCmd": "u+Auto M",
+        "hitstop": 11,
+        "hitstun": 18,
+        "i": 18,
+        "moveButton": "MK",
+        "moveMotion": "U",
+        "moveName": "Jump MK",
+        "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 8,
+            "max": 8,
+            "min": 8,
+            "numbers": [
+              8
+            ],
+            "raw": 8,
+            "text": "8",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": null,
+          "onPC": null,
+          "recovery": null,
+          "startup": {
+            "first": 8,
+            "max": 8,
+            "min": 8,
+            "numbers": [
+              8
+            ],
+            "raw": 8,
+            "text": "8",
+            "uncertain": false
+          }
+        },
+        "numCmd": "8MK",
+        "plnCmd": "u+MK",
+        "startup": 8
+      },
+      "Jump MP": {
+        "DDoB": 3000,
+        "DDoH": 4000,
+        "DGain": 1000,
+        "OppSoB": 125,
+        "OppSoH": 350,
+        "SelfSoB": 250,
+        "SelfSoH": 500,
+        "active": 5,
+        "airmove": true,
+        "atkLvl": "M",
+        "blockstun": 15,
+        "dmg": 700,
+        "extraInfo": [
+          "Puts airborne opponents into a limited juggle state on Counter Hit / Punish Counter"
+        ],
+        "ezCmd": "u+M",
+        "hitstop": 11,
+        "hitstun": 18,
+        "i": 15,
+        "moveButton": "MP",
+        "moveMotion": "U",
+        "moveName": "Jump MP",
+        "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 5,
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "text": "5",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": null,
+          "onPC": {
+            "first": null,
+            "kd": [
+              {
+                "advantage": null,
+                "type": "KD"
+              }
+            ],
+            "max": null,
+            "min": null,
+            "numbers": [],
+            "raw": "~ (KD)",
+            "tags": [],
+            "text": "~ (KD)",
+            "uncertain": true
+          },
+          "recovery": null,
+          "startup": {
+            "first": 8,
+            "max": 8,
+            "min": 8,
+            "numbers": [
+              8
+            ],
+            "raw": 8,
+            "text": "8",
+            "uncertain": false
+          }
+        },
+        "numCmd": "8MP",
+        "onPC": "~ (KD)",
+        "plnCmd": "u+MP",
+        "startup": 8
+      },
+      "Knee Hammer": {
+        "DDoB": 6000,
+        "DDoH": 6000,
+        "DGain": 3000,
+        "OppSoB": 200,
+        "OppSoH": 560,
+        "SelfSoB": 400,
+        "SelfSoH": 800,
+        "active": 7,
+        "atkLvl": "H",
+        "blockstun": 16,
+        "cmnName": "Hop Knee",
+        "dmg": 700,
+        "extraInfo": [
+          "Low crushes on frames 7-23",
+          "Not actually airborne",
+          "Last active frame has quite a bit further range than the prior so it's not hard to space out the knee to connect on last active frame for +7/+2 combo extensions / mixups",
+          "Zangief extends his hurtboxes forward quite a bit during start-up frame 2 and onward, making this move suspect to being counterpoked by non-low attacks"
+        ],
+        "ezCmd": "f+M",
+        "hitstop": 11,
+        "hitstun": 21,
+        "i": 24,
+        "moveButton": "MK",
+        "moveMotion": "F",
+        "moveName": "Knee Hammer",
+        "moveType": "normal",
+        "movesList": "Command Normal",
+        "normalized": {
+          "active": {
+            "first": 7,
+            "max": 7,
+            "min": 7,
+            "numbers": [
+              7
+            ],
+            "raw": 7,
+            "text": "7",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -4,
+            "kd": [],
+            "max": 2,
+            "min": -4,
+            "numbers": [
+              -4,
+              2
+            ],
+            "raw": "-4(2)",
+            "tags": [],
+            "text": "-4(2)",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 1,
+            "kd": [],
+            "max": 7,
+            "min": 1,
+            "numbers": [
+              1,
+              7
+            ],
+            "raw": "1(7)",
+            "tags": [],
+            "text": "1(7)",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 5,
+            "kd": [],
+            "max": 11,
+            "min": 5,
+            "numbers": [
+              5,
+              11
+            ],
+            "raw": "5(11)",
+            "tags": [],
+            "text": "5(11)",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 13,
+            "max": 13,
+            "min": 13,
+            "numbers": [
+              13
+            ],
+            "raw": 13,
+            "text": "13",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 14,
+            "max": 14,
+            "min": 14,
+            "numbers": [
+              14
+            ],
+            "raw": 14,
+            "text": "14",
+            "uncertain": false
+          }
+        },
+        "numCmd": "6MK",
+        "onBlock": "-4(2)",
+        "onHit": "1(7)",
+        "onPC": "5(11)",
+        "onPP": "-18(-12)",
+        "plnCmd": "f+MK",
+        "recovery": 13,
+        "startup": 14,
+        "total": 33
+      },
+      "LP Screw Piledriver": {
+        "DDoH": 10000,
+        "DGain": 7000,
+        "OppSoH": 2800,
+        "SelfSoH": 4000,
+        "active": 3,
+        "atkLvl": "T",
+        "cmnName": "LP SPD",
+        "dmg": "2500(2875)",
+        "dmgScaling": "10% Immediate",
+        "extraInfo": [
+          "Range: 1.62",
+          "Furthest range and highest KDA of his SPDs but least amount of damage",
+          "Deals +15% extra damage (2875) on Punish Counter",
+          "Incurs 10% damage scaling onto itself when combo'd into"
+        ],
+        "ezCmd": "360+L",
+        "i": 46,
+        "moveButton": "LP",
+        "moveMotion": 360,
+        "moveName": "LP Screw Piledriver",
+        "moveType": "command-grab",
+        "movesList": "Special",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 30,
+            "kd": [
+              {
+                "advantage": 30,
+                "type": "HKD"
+              }
+            ],
+            "max": 30,
+            "min": 30,
+            "numbers": [
+              30
+            ],
+            "raw": "HKD +30",
+            "tags": [],
+            "text": "HKD +30",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 30,
+            "kd": [
+              {
+                "advantage": 30,
+                "type": "HKD"
+              }
+            ],
+            "max": 30,
+            "min": 30,
+            "numbers": [
+              30
+            ],
+            "raw": "HKD +30",
+            "tags": [],
+            "text": "HKD +30",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 54,
+            "max": 54,
+            "min": 54,
+            "numbers": [
+              54
+            ],
+            "raw": 54,
+            "text": "54",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 5,
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "text": "5",
+            "uncertain": false
+          }
+        },
+        "numCmd": "4268LP",
+        "onHit": "HKD +30",
+        "onPC": "HKD +30",
+        "plnCmd": "360+LP",
+        "recovery": 54,
+        "startup": 5,
+        "total": 61
+      },
+      "MP Screw Piledriver": {
+        "DDoH": 10000,
+        "DGain": 7000,
+        "OppSoH": 2800,
+        "SelfSoH": 4000,
+        "active": 3,
+        "atkLvl": "T",
+        "cmnName": "MP SPD",
+        "dmg": "2900(3335)",
+        "dmgScaling": "10% Immediate",
+        "extraInfo": [
+          "Range: 1.47",
+          "Medium range and damage of his SPDs",
+          "Deals +15% extra damage (3335) on Punish Counter",
+          "Incurs 10% damage scaling onto itself when combo'd into"
+        ],
+        "ezCmd": "360+M",
+        "i": 47,
+        "moveButton": "MP",
+        "moveMotion": 360,
+        "moveName": "MP Screw Piledriver",
+        "moveType": "command-grab",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 28,
+            "kd": [
+              {
+                "advantage": 28,
+                "type": "HKD"
+              }
+            ],
+            "max": 28,
+            "min": 28,
+            "numbers": [
+              28
+            ],
+            "raw": "HKD +28",
+            "tags": [],
+            "text": "HKD +28",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 28,
+            "kd": [
+              {
+                "advantage": 28,
+                "type": "HKD"
+              }
+            ],
+            "max": 28,
+            "min": 28,
+            "numbers": [
+              28
+            ],
+            "raw": "HKD +28",
+            "tags": [],
+            "text": "HKD +28",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 54,
+            "max": 54,
+            "min": 54,
+            "numbers": [
+              54
+            ],
+            "raw": 54,
+            "text": "54",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 5,
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "text": "5",
+            "uncertain": false
+          }
+        },
+        "numCmd": "4268MP",
+        "onHit": "HKD +28",
+        "onPC": "HKD +28",
+        "plnCmd": "360+MP",
+        "recovery": 54,
+        "startup": 5,
+        "total": 61
+      },
+      "Machine Gun Chops 1": {
+        "DDoB": "7500 (5000*2500)",
+        "DDoH": 4000,
+        "DGain": "3500 (2500*1000)",
+        "OppSoB": "250 (125*125)",
+        "OppSoH": "700 (350*350)",
+        "SelfSoB": "500 (250*250)",
+        "SelfSoH": "1000 (500*500)",
+        "active": 4,
+        "atkLvl": "H",
+        "blockstun": 18,
+        "cmnName": "Double Chop",
+        "dmg": 600,
+        "extraInfo": [
+          "Very lenient cancel window makes this second hit very easy to Counter-Hit / Punish confirm into (28F hit confirm window)",
+          "Only combos from Standing Medium Punch on Counter Hit, Punish Counter, when it hits meaty on active frames 3-4, or when used after Drive Rush",
+          "Can be performed on whiff",
+          "Second hit will whiff if the initial MP connects from too far away",
+          "6F blockstring gap between hits"
+        ],
+        "ezCmd": "M > M",
+        "followUp": true,
+        "fullActive": "4*4",
+        "fullDmg": "1300 (700*600)",
+        "fullStartup": "9+9",
+        "hcWinNotes": "*22F if only 2nd hit connects",
+        "hcWinTc": "57-65(22)",
+        "hitstop": 11,
+        "hitstun": 26,
+        "i": 28,
+        "moveButton": "MP",
+        "moveMotion": "N",
+        "moveName": "Machine Gun Chops 1",
+        "moveType": "normal",
+        "movesList": "Target Combo",
+        "normalized": {
+          "active": {
+            "first": 4,
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "text": "4",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -6,
+            "kd": [],
+            "max": -6,
+            "min": -6,
+            "numbers": [
+              -6
+            ],
+            "raw": -6,
+            "tags": [],
+            "text": "-6",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 2,
+            "kd": [],
+            "max": 2,
+            "min": 2,
+            "numbers": [
+              2
+            ],
+            "raw": 2,
+            "tags": [],
+            "text": "2",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 6,
+            "kd": [],
+            "max": 6,
+            "min": 6,
+            "numbers": [
+              6
+            ],
+            "raw": 6,
+            "tags": [],
+            "text": "6",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 20,
+            "max": 20,
+            "min": 20,
+            "numbers": [
+              20
+            ],
+            "raw": 20,
+            "text": "20",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 9,
+            "max": 9,
+            "min": 9,
+            "numbers": [
+              9
+            ],
+            "raw": 9,
+            "text": "9",
+            "uncertain": false
+          }
+        },
+        "numCmd": "5MP > MP",
+        "onBlock": -6,
+        "onHit": 2,
+        "onPC": 6,
+        "onPP": "-22(-19)",
+        "plnCmd": "MP > MP",
+        "recovery": 20,
+        "startup": 9,
+        "total": 32,
+        "xx": [
+          "tc"
+        ]
+      },
+      "Machine Gun Chops 2": {
+        "DDoB": "10000 (5000*2500x2)",
+        "DDoH": 4000,
+        "DGain": "4500 (2500*1000x2)",
+        "OppSoB": "375 (125x3)",
+        "OppSoH": "1050 (350x3)",
+        "SelfSoB": "750 (250x3)",
+        "SelfSoH": "1500 (500x3)",
+        "active": 3,
+        "atkLvl": "H",
+        "blockstun": 18,
+        "cmnName": "Triple Chop",
+        "dmg": 900,
+        "extraInfo": [
+          "Last hit combos naturally from the prior MP (second hit)",
+          "Can be performed on whiff",
+          "7F blockstring gap between hits"
+        ],
+        "ezCmd": "M > M > M",
+        "followUp": true,
+        "fullActive": "4*4*3",
+        "fullDmg": "2020 (700*600*720)",
+        "fullStartup": "9+9+15",
+        "hitstop": 11,
+        "i": 29,
+        "moveButton": "MP",
+        "moveMotion": "N",
+        "moveName": "Machine Gun Chops 2",
+        "moveType": "normal",
+        "movesList": "Target Combo",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -17,
+            "kd": [],
+            "max": -17,
+            "min": -17,
+            "numbers": [
+              -17
+            ],
+            "raw": -17,
+            "tags": [],
+            "text": "-17",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 27,
+            "kd": [
+              {
+                "advantage": 27,
+                "type": "KD"
+              }
+            ],
+            "max": 27,
+            "min": 27,
+            "numbers": [
+              27
+            ],
+            "raw": "KD +27",
+            "tags": [],
+            "text": "KD +27",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 27,
+            "kd": [
+              {
+                "advantage": 27,
+                "type": "KD"
+              }
+            ],
+            "max": 27,
+            "min": 27,
+            "numbers": [
+              27
+            ],
+            "raw": "KD +27",
+            "tags": [],
+            "text": "KD +27",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 32,
+            "max": 32,
+            "min": 32,
+            "numbers": [
+              32
+            ],
+            "raw": 32,
+            "text": "32",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 15,
+            "max": 15,
+            "min": 15,
+            "numbers": [
+              15
+            ],
+            "raw": 15,
+            "text": "15",
+            "uncertain": false
+          }
+        },
+        "numCmd": "5MP > MP > MP",
+        "onBlock": -17,
+        "onHit": "KD +27",
+        "onPC": "KD +27",
+        "onPP": "-33(-31)",
+        "plnCmd": "MP > MP > MP",
+        "recovery": 32,
+        "startup": 15,
+        "total": 49
+      },
+      "OD Borscht Dynamite": {
+        "DDoH": 10000,
+        "DGain": -20000,
+        "OppSoH": 2800,
+        "SelfSoH": 4000,
+        "active": 3,
+        "airmove": true,
+        "atkLvl": "T",
+        "cmnName": "OD Air SPD",
+        "dmg": "3000(3375)",
+        "dmgScaling": "10% Immediate",
+        "extraInfo": [
+          "Range: 1.64",
+          "Can be performed instantly after leaving the ground (first airborne frame of the jump)",
+          "Combos after some of Zangief's launchers / juggles",
+          "16F landing recovery frames on whiff (minimum / maximum recovery frames overall: 21+16 / 36+16)",
+          "Zangief is in a crouching state for the entire landing recovery frames on whiff",
+          "Forced Knockdown state while airborne",
+          "Deals +15% extra damage (3375) on Punish Counter",
+          "Incurs 10% damage scaling onto itself when combo'd into"
+        ],
+        "ezCmd": "Auto SP / 360+AA (air)",
+        "i": 51,
+        "jugLimit": 99,
+        "moveButton": "2K",
+        "moveMotion": 360,
+        "moveName": "OD Borscht Dynamite",
+        "moveType": "command-grab",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 19,
+            "kd": [
+              {
+                "advantage": 19,
+                "type": "HKD"
+              }
+            ],
+            "max": 19,
+            "min": 19,
+            "numbers": [
+              19
+            ],
+            "raw": "HKD +19",
+            "tags": [],
+            "text": "HKD +19",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 19,
+            "kd": [
+              {
+                "advantage": 19,
+                "type": "HKD"
+              }
+            ],
+            "max": 19,
+            "min": 19,
+            "numbers": [
+              19
+            ],
+            "raw": "HKD +19",
+            "tags": [],
+            "text": "HKD +19",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 16,
+            "max": 16,
+            "min": 16,
+            "numbers": [
+              16
+            ],
+            "raw": 16,
+            "text": "16",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 4,
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "text": "4",
+            "uncertain": false
+          }
+        },
+        "numCmd": "4268KK (air)",
+        "onHit": "HKD +19",
+        "onPC": "HKD +19",
+        "plnCmd": "360+KK (air)",
+        "recovery": 16,
+        "startup": 4
+      },
+      "OD Double Lariat": {
+        "DDoB": "4000x5",
+        "DDoH": 5000,
+        "DGain": -20000,
+        "OppSoB": "1000 (200x5)",
+        "OppSoH": "1120 (560x2)",
+        "SelfSoB": "2000 (400x5)",
+        "SelfSoH": "1600 (800x2)",
+        "active": "2(1)3(3)2(6)2(4)2",
+        "atkLvl": "H",
+        "blockstun": "21(40)",
+        "chp": "1175 (175*250x4)",
+        "cmnName": "OD Lariat",
+        "dmg": "1700 (700*1000)",
+        "extraInfo": [
+          "Invincible to airborne strikes on frames 6-13 (great anti-air tool on the first hit)",
+          "Projectile invincible on frames 1-36",
+          "No head hurtbox on frames 1-5 and further shrinks his hurtboxes on frames 6-13",
+          "Can hold forward or back to move around slightly during the Lariat.",
+          "First hit keeps the opponent grounded and can be canceled into SA3 for a combo",
+          "Connects only twice on hit, but five times on block, though all hits but the first two whiff vs crouching opponents.",
+          "Cannot hit cross-up (behind Zangief)",
+          "If the second hit juggle is staggered, Zangief can go for more powerful follow-ups such as OD Air SPD or SA1",
+          "Only the first hit is cancelable into Level 2 Super Art"
+        ],
+        "ezCmd": "AAA",
+        "hcWinSpCa": 18,
+        "hitstop": "15x5",
+        "i": 45,
+        "jugIncr": "1*10x4",
+        "jugLimit": "1*3x4",
+        "jugStart": "1*10x4",
+        "moveButton": "3P",
+        "moveMotion": "N",
+        "moveName": "OD Double Lariat",
+        "moveType": "special",
+        "normalized": {
+          "active": {
+            "first": 2,
+            "max": 6,
+            "min": 1,
+            "numbers": [
+              2,
+              1,
+              3,
+              3,
+              2,
+              6,
+              2,
+              4,
+              2
+            ],
+            "raw": "2(1)3(3)2(6)2(4)2",
+            "text": "2(1)3(3)2(6)2(4)2",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -11,
+            "kd": [],
+            "max": -11,
+            "min": -30,
+            "numbers": [
+              -11,
+              -30
+            ],
+            "raw": "-11(-30)",
+            "tags": [],
+            "text": "-11(-30)",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 38,
+            "kd": [
+              {
+                "advantage": 38,
+                "type": "KD"
+              }
+            ],
+            "max": 57,
+            "min": 38,
+            "numbers": [
+              38,
+              57
+            ],
+            "raw": "KD +38(57)",
+            "tags": [],
+            "text": "KD +38(57)",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 38,
+            "kd": [
+              {
+                "advantage": 38,
+                "type": "KD"
+              }
+            ],
+            "max": 57,
+            "min": 38,
+            "numbers": [
+              38,
+              57
+            ],
+            "raw": "KD +38(57)",
+            "tags": [],
+            "text": "KD +38(57)",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 26,
+            "max": 26,
+            "min": 26,
+            "numbers": [
+              26
+            ],
+            "raw": 26,
+            "text": "26",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 12,
+            "max": 12,
+            "min": 12,
+            "numbers": [
+              12
+            ],
+            "raw": 12,
+            "text": "12",
+            "uncertain": false
+          }
+        },
+        "numCmd": "PPP",
+        "onBlock": "-11(-30)",
+        "onHit": "KD +38(57)",
+        "onPC": "KD +38(57)",
+        "onPP": "-25(49)",
+        "plnCmd": "PPP",
+        "recovery": 26,
+        "startup": 12,
+        "total": 62,
+        "xx": [
+          "su2",
+          "su3"
+        ]
+      },
+      "OD Russian Suplex (close)": {
+        "DDoH": 10000,
+        "DGain": -20000,
+        "OppSoH": "4550 (2100*2450)",
+        "SelfSoH": "6500 (3000*3500)",
+        "active": 2,
+        "atkLvl": "T",
+        "cmnName": "OD Double Suplex (close)",
+        "dmg": "3200(3680)",
+        "extraInfo": [
+          "Range: 1.14",
+          "This is the up close version that only plays out in close proximity (has the fastest start-up and more damage, but slightly less KDA and switches sides with the opponent)",
+          "Deals +15% extra damage (3680) on Punish Counter"
+        ],
+        "ezCmd": "b+Auto SP / hcb+AA (close)",
+        "i": 53,
+        "moveButton": "2K",
+        "moveMotion": "HCB",
+        "moveName": "OD Russian Suplex (close)",
+        "moveType": "command-grab",
+        "normalized": {
+          "active": {
+            "first": 2,
+            "max": 2,
+            "min": 2,
+            "numbers": [
+              2
+            ],
+            "raw": 2,
+            "text": "2",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 27,
+            "kd": [
+              {
+                "advantage": 27,
+                "type": "HKD"
+              }
+            ],
+            "max": 27,
+            "min": 27,
+            "numbers": [
+              27
+            ],
+            "raw": "HKD +27",
+            "tags": [],
+            "text": "HKD +27",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 27,
+            "kd": [
+              {
+                "advantage": 27,
+                "type": "HKD"
+              }
+            ],
+            "max": 27,
+            "min": 27,
+            "numbers": [
+              27
+            ],
+            "raw": "HKD +27",
+            "tags": [],
+            "text": "HKD +27",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 50,
+            "max": 50,
+            "min": 50,
+            "numbers": [
+              50
+            ],
+            "raw": 50,
+            "text": "50",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 10,
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": 10,
+            "text": "10",
+            "uncertain": false
+          }
+        },
+        "numCmd": "624KK (close)",
+        "onHit": "HKD +27",
+        "onPC": "HKD +27",
+        "plnCmd": "hcb+KK (close)",
+        "recovery": 50,
+        "startup": 10,
+        "total": 61
+      },
+      "OD Screw Piledriver": {
+        "DDoH": 10000,
+        "DGain": -20000,
+        "OppSoH": 2800,
+        "SelfSoH": 4000,
+        "active": 3,
+        "atkLvl": "T",
+        "cmnName": "OD SPD",
+        "dmg": "3400(3910)",
+        "extraInfo": [
+          "Range: 1.58",
+          "Slightly less range than the LP version but even more damage than the HP version",
+          "Deals +15% extra damage (3910) on Punish Counter"
+        ],
+        "ezCmd": "Auto SP / 360+AA",
+        "i": 49,
+        "moveButton": "2P",
+        "moveMotion": 360,
+        "moveName": "OD Screw Piledriver",
+        "moveType": "command-grab",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 28,
+            "kd": [
+              {
+                "advantage": 28,
+                "type": "HKD"
+              }
+            ],
+            "max": 28,
+            "min": 28,
+            "numbers": [
+              28
+            ],
+            "raw": "HKD +28",
+            "tags": [],
+            "text": "HKD +28",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 28,
+            "kd": [
+              {
+                "advantage": 28,
+                "type": "HKD"
+              }
+            ],
+            "max": 28,
+            "min": 28,
+            "numbers": [
+              28
+            ],
+            "raw": "HKD +28",
+            "tags": [],
+            "text": "HKD +28",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 54,
+            "max": 54,
+            "min": 54,
+            "numbers": [
+              54
+            ],
+            "raw": 54,
+            "text": "54",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 5,
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "text": "5",
+            "uncertain": false
+          }
+        },
+        "numCmd": "4268PP",
+        "onHit": "HKD +28",
+        "onPC": "HKD +28",
+        "plnCmd": "360+PP",
+        "recovery": 54,
+        "startup": 5,
+        "total": 61
+      },
+      "OD Siberian Express (far)": {
+        "DDoH": 10000,
+        "DGain": -20000,
+        "OppSoH": 2800,
+        "SelfSoH": 4000,
+        "active": 2,
+        "atkLvl": "T",
+        "cmnName": "OD Running Bear Grab (far)",
+        "dmg": "3000(3450)",
+        "extraInfo": [
+          "Run Speed: 0.045~0.099",
+          "This is the Far version of Siberian Express that plays out if Zangief is at least half-screen away from the opponent",
+          "This far version has one hit of armor on frame 3 and onwards as Zangief runs forward",
+          "Zangief will raise his arms up at the beginning of the animation before he runs forward",
+          "Zangief starts the Throw animation immediately if the opponent strikes the armor (this can cause Zangief to run across the screen incredibly fast if the armor is triggered from far away, such as a Dhalsim limb)",
+          "Slower start-up the further away Zangief has to run to the opponent (up to 81F start-up from full-screen away)",
+          "Deals +15% extra damage (3450) on Punish Counter"
+        ],
+        "ezCmd": "b+Auto SP / hcb+AA (far)",
+        "i": 57,
+        "moveButton": "2K",
+        "moveMotion": "HCB",
+        "moveName": "OD Siberian Express (far)",
+        "moveType": "command-grab",
+        "normalized": {
+          "active": {
+            "first": 2,
+            "max": 2,
+            "min": 2,
+            "numbers": [
+              2
+            ],
+            "raw": 2,
+            "text": "2",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 29,
+            "kd": [
+              {
+                "advantage": 29,
+                "type": "HKD"
+              }
+            ],
+            "max": 29,
+            "min": 29,
+            "numbers": [
+              29
+            ],
+            "raw": "HKD +29",
+            "tags": [],
+            "text": "HKD +29",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 29,
+            "kd": [
+              {
+                "advantage": 29,
+                "type": "HKD"
+              }
+            ],
+            "max": 29,
+            "min": 29,
+            "numbers": [
+              29
+            ],
+            "raw": "HKD +29",
+            "tags": [],
+            "text": "HKD +29",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 40,
+            "max": 40,
+            "min": 40,
+            "numbers": [
+              40
+            ],
+            "raw": 40,
+            "text": "40",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 54,
+            "max": 81,
+            "min": 54,
+            "numbers": [
+              54,
+              81
+            ],
+            "raw": "54(81)",
+            "text": "54(81)",
+            "uncertain": false
+          }
+        },
+        "numCmd": "624KK (far)",
+        "onHit": "HKD +29",
+        "onPC": "HKD +29",
+        "plnCmd": "hcb+KK (far)",
+        "recovery": 40,
+        "startup": "54(81)",
+        "total": "95(123)"
+      },
+      "OD Siberian Express (near)": {
+        "DDoH": 10000,
+        "DGain": -20000,
+        "OppSoH": 2800,
+        "SelfSoH": 4000,
+        "active": 2,
+        "atkLvl": "T",
+        "cmnName": "OD Running Bear Grab (near)",
+        "dmg": "3000(3450)",
+        "extraInfo": [
+          "Run Speed: 0.086",
+          "This is the near version of Siberian Express that plays out if Zangief is further away than point-blank range but still within half-screen range",
+          "Zangief will run towards the opponent and grab them (23F start-up)",
+          "Siberian Express does less damage than the close version (Russian Suplex) but has slightly higher KDA and doesn't switch sides with the opponent",
+          "Deals +15% extra damage (3450) on Punish Counter"
+        ],
+        "ezCmd": "b+Auto SP / hcb+AA (near)",
+        "i": 55,
+        "moveButton": "2K",
+        "moveMotion": "HCB",
+        "moveName": "OD Siberian Express (near)",
+        "moveType": "command-grab",
+        "normalized": {
+          "active": {
+            "first": 2,
+            "max": 2,
+            "min": 2,
+            "numbers": [
+              2
+            ],
+            "raw": 2,
+            "text": "2",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 29,
+            "kd": [
+              {
+                "advantage": 29,
+                "type": "HKD"
+              }
+            ],
+            "max": 29,
+            "min": 29,
+            "numbers": [
+              29
+            ],
+            "raw": "HKD +29",
+            "tags": [],
+            "text": "HKD +29",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 29,
+            "kd": [
+              {
+                "advantage": 29,
+                "type": "HKD"
+              }
+            ],
+            "max": 29,
+            "min": 29,
+            "numbers": [
+              29
+            ],
+            "raw": "HKD +29",
+            "tags": [],
+            "text": "HKD +29",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 44,
+            "max": 44,
+            "min": 44,
+            "numbers": [
+              44
+            ],
+            "raw": 44,
+            "text": "44",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 23,
+            "max": 23,
+            "min": 23,
+            "numbers": [
+              23
+            ],
+            "raw": 23,
+            "text": "23",
+            "uncertain": false
+          }
+        },
+        "numCmd": "624KK (near)",
+        "onHit": "HKD +29",
+        "onPC": "HKD +29",
+        "plnCmd": "hcb+KK (near)",
+        "recovery": 44,
+        "startup": 23,
+        "total": 68
+      },
+      "Power Stomps 1": {
+        "DDoB": "5000 (2500*2500)",
+        "DDoH": 4000,
+        "DGain": "3000 (1500*1500)",
+        "DRoB": 5,
+        "DRoH": 6,
+        "OppSoB": "350 (175*175)",
+        "OppSoH": "980 (490*490)",
+        "SelfSoB": "700 (350*350)",
+        "SelfSoH": "1400 (700*700)",
+        "active": 3,
+        "atkLvl": "L",
+        "blockstun": 18,
+        "cmnName": "Double Stomp",
+        "dmg": 500,
+        "extraInfo": [
+          "This second MK combos naturally, but requires Counter-Hit to combo into the third MK hit",
+          "Can be performed on whiff",
+          "2F blockstring gap between each stomp"
+        ],
+        "ezCmd": "d,d+M > M",
+        "followUp": true,
+        "fullActive": "3*3",
+        "fullDmg": "1000 (500*500)",
+        "fullStartup": "9+9",
+        "hcWinNotes": "*Confirming 2nd hit CH/PC into 3rd hit",
+        "hcWinSpCa": "45(16)",
+        "hcWinTc": "23*",
+        "hitstop": 11,
+        "hitstun": 19,
+        "i": 31,
+        "moveButton": "MK",
+        "moveMotion": "N",
+        "moveName": "Power Stomps 1",
+        "moveType": "normal",
+        "movesList": "Stomp",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -4,
+            "kd": [],
+            "max": -4,
+            "min": -4,
+            "numbers": [
+              -4
+            ],
+            "raw": -4,
+            "tags": [],
+            "text": "-4",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": -3,
+            "kd": [],
+            "max": -3,
+            "min": -3,
+            "numbers": [
+              -3
+            ],
+            "raw": -3,
+            "tags": [],
+            "text": "-3",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 1,
+            "kd": [],
+            "max": 1,
+            "min": 1,
+            "numbers": [
+              1
+            ],
+            "raw": 1,
+            "tags": [],
+            "text": "1",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 19,
+            "max": 19,
+            "min": 19,
+            "numbers": [
+              19
+            ],
+            "raw": 19,
+            "text": "19",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 9,
+            "max": 9,
+            "min": 9,
+            "numbers": [
+              9
+            ],
+            "raw": 9,
+            "text": "9",
+            "uncertain": false
+          }
+        },
+        "numCmd": "22MK > MK",
+        "onBlock": -4,
+        "onHit": -3,
+        "onPC": 1,
+        "onPP": -20,
+        "plnCmd": "d,d+MK > MK",
+        "recovery": 19,
+        "startup": 9,
+        "total": 30,
+        "xx": [
+          "sp",
+          "su",
+          "tc"
+        ]
+      },
+      "Power Stomps 2": {
+        "DDoB": "7500 (2500x3)",
+        "DDoH": 4000,
+        "DGain": "4500 (1500x3)",
+        "DRoB": 6,
+        "DRoH": 14,
+        "OppSoB": "525 (175x3)",
+        "OppSoH": "1470 (490x3)",
+        "SelfSoB": "1050 (350x3)",
+        "SelfSoH": "2100 (700x3)",
+        "active": 3,
+        "atkLvl": "L",
+        "blockstun": 17,
+        "cmnName": "Triple Stomp",
+        "dmg": 700,
+        "extraInfo": [
+          "Only combos from the second hit of the target combo on Counter Hit",
+          "Can be performed on whiff",
+          "2F blockstring gap between each stomp (can frametrap opponents trying to take back their turn)"
+        ],
+        "ezCmd": "d,d+M > M > M",
+        "followUp": true,
+        "fullActive": "3*3*3",
+        "fullStartup": "9+9+10",
+        "hcWinNotes": "*50F if starting with CH/PC 2nd hit, 19F for only 3rd hit",
+        "hcWinSpCa": "50(19)",
+        "hitstop": 12,
+        "hitstun": 25,
+        "i": 32,
+        "moveButton": "MK",
+        "moveMotion": "N",
+        "moveName": "Power Stomps 2",
+        "moveType": "normal",
+        "movesList": "Stomp",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -10,
+            "kd": [],
+            "max": -10,
+            "min": -10,
+            "numbers": [
+              -10
+            ],
+            "raw": -10,
+            "tags": [],
+            "text": "-10",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": -2,
+            "kd": [],
+            "max": -2,
+            "min": -2,
+            "numbers": [
+              -2
+            ],
+            "raw": -2,
+            "tags": [],
+            "text": "-2",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 2,
+            "kd": [],
+            "max": 2,
+            "min": 2,
+            "numbers": [
+              2
+            ],
+            "raw": 2,
+            "tags": [],
+            "text": "2",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 24,
+            "max": 24,
+            "min": 24,
+            "numbers": [
+              24
+            ],
+            "raw": 24,
+            "text": "24",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 10,
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": 10,
+            "text": "10",
+            "uncertain": false
+          }
+        },
+        "numCmd": "22MK > MK > MK",
+        "onBlock": -10,
+        "onHit": -2,
+        "onPC": 2,
+        "onPP": -25,
+        "plnCmd": "d,d+MK > MK > MK",
+        "recovery": 24,
+        "startup": 10,
+        "total": 36,
+        "xx": [
+          "sp",
+          "su"
+        ]
+      },
+      "Russian Drop": {
+        "DDoH": "(10000)",
+        "DGain": 2000,
+        "OppSoH": "2100(4200)",
+        "SelfSoH": "3000(6000)",
+        "active": 3,
+        "atkLvl": "T",
+        "cmnName": "Crouch Back Throw",
+        "dmg": 1500,
+        "dmgScaling": "20% Immediate",
+        "extraInfo": [
+          "Deals 300 extra damage (1500) over normal throw (1200) but sacrifices all oki",
+          "Gets +70% damage increase (2550 damage), HKD (denies back-roll option on wake-up), and depletes 1 bar of Drive Gauge on a Punish Counter",
+          "Builds more Super meter than a standard throw"
+        ],
+        "ezCmd": "db+L+M",
+        "i": 38,
+        "moveButton": "LPLK",
+        "moveMotion": "DB",
+        "moveName": "Russian Drop",
+        "moveType": "throw",
+        "movesList": "Normal Throw",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 9,
+            "kd": [
+              {
+                "advantage": 9,
+                "type": "KD"
+              }
+            ],
+            "max": 9,
+            "min": 9,
+            "numbers": [
+              9
+            ],
+            "raw": "KD +9",
+            "tags": [],
+            "text": "KD +9",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 9,
+            "kd": [
+              {
+                "advantage": 9,
+                "type": "HKD"
+              }
+            ],
+            "max": 9,
+            "min": 9,
+            "numbers": [
+              9
+            ],
+            "raw": "HKD +9",
+            "tags": [],
+            "text": "HKD +9",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 23,
+            "max": 23,
+            "min": 23,
+            "numbers": [
+              23
+            ],
+            "raw": 23,
+            "text": "23",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 5,
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "text": "5",
+            "uncertain": false
+          }
+        },
+        "numCmd": "1LPLK",
+        "onHit": "KD +9",
+        "onPC": "HKD +9",
+        "plnCmd": "db+LP+LK",
+        "recovery": 23,
+        "startup": 5,
+        "total": 30
+      },
+      "Russian Suplex (close)": {
+        "DDoH": 10000,
+        "DGain": "7000 (3500x2)",
+        "OppSoH": "3500 (1750x2)",
+        "SelfSoH": "5000 (2500x2)",
+        "active": 2,
+        "atkLvl": "T",
+        "cmnName": "Double Suplex (close)",
+        "dmg": "2900(3335)",
+        "dmgScaling": "10% Immediate",
+        "extraInfo": [
+          "Range: 1.14",
+          "This is the up close version that only plays out in close proximity (has the fastest start-up and more damage, but slightly less KDA and switches sides with the opponent)",
+          "Deals +15% extra damage (3335) on Punish Counter",
+          "Incurs 10% damage scaling onto itself when combo'd into"
+        ],
+        "ezCmd": "b+SP / hcb+A (close)",
+        "i": 52,
+        "moveButton": "LK",
+        "moveMotion": "HCB",
+        "moveName": "Russian Suplex (close)",
+        "moveType": "command-grab",
+        "movesList": "Special",
+        "normalized": {
+          "active": {
+            "first": 2,
+            "max": 2,
+            "min": 2,
+            "numbers": [
+              2
+            ],
+            "raw": 2,
+            "text": "2",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 26,
+            "kd": [
+              {
+                "advantage": 26,
+                "type": "HKD"
+              }
+            ],
+            "max": 26,
+            "min": 26,
+            "numbers": [
+              26
+            ],
+            "raw": "HKD +26",
+            "tags": [],
+            "text": "HKD +26",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 26,
+            "kd": [
+              {
+                "advantage": 26,
+                "type": "HKD"
+              }
+            ],
+            "max": 26,
+            "min": 26,
+            "numbers": [
+              26
+            ],
+            "raw": "HKD +26",
+            "tags": [],
+            "text": "HKD +26",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 50,
+            "max": 50,
+            "min": 50,
+            "numbers": [
+              50
+            ],
+            "raw": 50,
+            "text": "50",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 10,
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": 10,
+            "text": "10",
+            "uncertain": false
+          }
+        },
+        "numCmd": "624K (close)",
+        "onHit": "HKD +26",
+        "onPC": "HKD +26",
+        "plnCmd": "hcb+K (close)",
+        "recovery": 50,
+        "startup": 10,
+        "total": 61
+      },
+      "Siberian Express (far)": {
+        "DDoH": 10000,
+        "DGain": 5000,
+        "OppSoH": 2800,
+        "SelfSoH": 4000,
+        "active": 2,
+        "atkLvl": "T",
+        "cmnName": "Running Bear Grab (far)",
+        "dmg": "2700(3105)",
+        "extraInfo": [
+          "Run Speed: 0.090~0.099",
+          "This is the Far version of Siberian Express that plays out if Zangief is at least half-screen away from the opponent",
+          "This far version has one hit of armor on frame 11 and onwards as Zangief runs forward",
+          "Zangief will raise his arms up at the beginning of the animation before he runs forward",
+          "Zangief starts the Throw animation immediately if the opponent strikes the armor (this can cause Zangief to run across the screen incredibly fast if the armor is triggered from far away, such as a Dhalsim limb)",
+          "Slower start-up the further away Zangief has to run to the opponent (up to 81F start-up from full-screen away)",
+          "Deals +15% extra damage (3105) on Punish Counter"
+        ],
+        "ezCmd": "b+SP / hcb+A (far)",
+        "i": 56,
+        "moveButton": "HK",
+        "moveMotion": "HCB",
+        "moveName": "Siberian Express (far)",
+        "moveType": "command-grab",
+        "movesList": "Special",
+        "normalized": {
+          "active": {
+            "first": 2,
+            "max": 2,
+            "min": 2,
+            "numbers": [
+              2
+            ],
+            "raw": 2,
+            "text": "2",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 29,
+            "kd": [
+              {
+                "advantage": 29,
+                "type": "HKD"
+              }
+            ],
+            "max": 29,
+            "min": 29,
+            "numbers": [
+              29
+            ],
+            "raw": "HKD +29",
+            "tags": [],
+            "text": "HKD +29",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 29,
+            "kd": [
+              {
+                "advantage": 29,
+                "type": "HKD"
+              }
+            ],
+            "max": 29,
+            "min": 29,
+            "numbers": [
+              29
+            ],
+            "raw": "HKD +29",
+            "tags": [],
+            "text": "HKD +29",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 40,
+            "max": 40,
+            "min": 40,
+            "numbers": [
+              40
+            ],
+            "raw": 40,
+            "text": "40",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 55,
+            "max": 81,
+            "min": 55,
+            "numbers": [
+              55,
+              81
+            ],
+            "raw": "55(81)",
+            "text": "55(81)",
+            "uncertain": false
+          }
+        },
+        "numCmd": "624K (far)",
+        "onHit": "HKD +29",
+        "onPC": "HKD +29",
+        "plnCmd": "hcb+K (far)",
+        "recovery": 40,
+        "startup": "55(81)",
+        "total": "96(123)"
+      },
+      "Siberian Express (near)": {
+        "DDoH": 10000,
+        "DGain": 5000,
+        "OppSoH": 2800,
+        "SelfSoH": 4000,
+        "active": 2,
+        "atkLvl": "T",
+        "cmnName": "Running Bear Grab (near)",
+        "dmg": "2700(3105)",
+        "extraInfo": [
+          "Run Speed: 0.086",
+          "This is the near version of Siberian Express that plays out if Zangief is further away than point-blank range but still within half-screen range",
+          "Zangief will run towards the opponent and grab them (28F start-up)",
+          "Siberian Express does less damage than the close version (Russian Suplex) but has slightly higher KDA and doesn't switch sides with the opponent",
+          "Deals +15% extra damage (3105) on Punish Counter"
+        ],
+        "ezCmd": "b+SP / hcb+A (near)",
+        "i": 54,
+        "moveButton": "HK",
+        "moveMotion": "HCB",
+        "moveName": "Siberian Express (near)",
+        "moveType": "command-grab",
+        "movesList": "Special",
+        "normalized": {
+          "active": {
+            "first": 2,
+            "max": 2,
+            "min": 2,
+            "numbers": [
+              2
+            ],
+            "raw": 2,
+            "text": "2",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 29,
+            "kd": [
+              {
+                "advantage": 29,
+                "type": "HKD"
+              }
+            ],
+            "max": 29,
+            "min": 29,
+            "numbers": [
+              29
+            ],
+            "raw": "HKD +29",
+            "tags": [],
+            "text": "HKD +29",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 29,
+            "kd": [
+              {
+                "advantage": 29,
+                "type": "HKD"
+              }
+            ],
+            "max": 29,
+            "min": 29,
+            "numbers": [
+              29
+            ],
+            "raw": "HKD +29",
+            "tags": [],
+            "text": "HKD +29",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 41,
+            "max": 41,
+            "min": 41,
+            "numbers": [
+              41
+            ],
+            "raw": 41,
+            "text": "41",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 28,
+            "max": 28,
+            "min": 28,
+            "numbers": [
+              28
+            ],
+            "raw": 28,
+            "text": "28",
+            "uncertain": false
+          }
+        },
+        "numCmd": "624K (near)",
+        "onHit": "HKD +29",
+        "onPC": "HKD +29",
+        "plnCmd": "hcb+K (near)",
+        "recovery": 41,
+        "startup": 28,
+        "total": 70
+      },
+      "Smetana Dropkick": {
+        "DDoB": 8000,
+        "DDoH": 11000,
+        "DGain": 4000,
+        "OppSoB": 300,
+        "OppSoH": 840,
+        "SelfSoB": 600,
+        "SelfSoH": 1200,
+        "active": 4,
+        "atkLvl": "H",
+        "blockstun": 26,
+        "cmnName": "Dropkick",
+        "dmg": 1000,
+        "extraInfo": [
+          "Throw invincible and low crushes on frames 5-26",
+          "Not actually airborne",
+          "Very strong hitbox priority (could be used for potential counterpoking)",
+          "Sends the opponent tumbling on a Punish Counter which can lead into a wall splat (HKD +128)",
+          "The wall splat Punish Counter is Juggle Start 0 against grounded opponents but Juggle Start 1 against airborne opponents",
+          "The opponent is in a grounded state after the low wall splat so they can be Thrown or Command Grabbed (but strike attacks still put the opponent into a juggle state even if they're technically grounded)"
+        ],
+        "hitstop": 13,
+        "i": 27,
+        "jugIncr": 1,
+        "jugLimit": 5,
+        "jugStart": "1 (PC ground: 0)",
+        "moveButton": "HK",
+        "moveMotion": "DF",
+        "moveName": "Smetana Dropkick",
+        "moveType": "normal",
+        "movesList": "Command Normal",
+        "normalized": {
+          "active": {
+            "first": 4,
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "text": "4",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -18,
+            "kd": [],
+            "max": -18,
+            "min": -18,
+            "numbers": [
+              -18
+            ],
+            "raw": -18,
+            "tags": [],
+            "text": "-18",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 21,
+            "kd": [
+              {
+                "advantage": 21,
+                "type": "KD"
+              }
+            ],
+            "max": 21,
+            "min": 21,
+            "numbers": [
+              21
+            ],
+            "raw": "KD +21",
+            "tags": [],
+            "text": "KD +21",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 60,
+            "kd": [
+              {
+                "advantage": 60,
+                "type": "KD"
+              },
+              {
+                "advantage": 128,
+                "type": "HKD"
+              }
+            ],
+            "max": 128,
+            "min": 60,
+            "numbers": [
+              60,
+              128
+            ],
+            "raw": "KD +60 Tumble (HKD +128 Wall Splat)",
+            "tags": [
+              "tumble",
+              "wall splat"
+            ],
+            "text": "KD +60 Tumble (HKD +128 Wall Splat)",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 40,
+            "max": 40,
+            "min": 40,
+            "numbers": [
+              40
+            ],
+            "raw": 40,
+            "text": "40",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 16,
+            "max": 16,
+            "min": 16,
+            "numbers": [
+              16
+            ],
+            "raw": 16,
+            "text": "16",
+            "uncertain": false
+          }
+        },
+        "numCmd": "3HK",
+        "onBlock": -18,
+        "onHit": "KD +21",
+        "onPC": "KD +60 Tumble (HKD +128 Wall Splat)",
+        "onPP": "-42(-39)",
+        "plnCmd": "df+HK",
+        "recovery": 40,
+        "startup": 16,
+        "total": 59
+      },
+      "Spinebuster": {
+        "DDoH": "(10000)",
+        "DGain": 2000,
+        "OppSoH": "1400(2800)",
+        "SelfSoH": "2000(4000)",
+        "active": 3,
+        "atkLvl": "T",
+        "cmnName": "Crouch Forward Throw",
+        "dmg": 1200,
+        "dmgScaling": "20% Immediate",
+        "extraInfo": [
+          "Zangief's best throw option for oki",
+          "Leads to a throw loop in the corner or a very strict Drive Rush throw loop midscreen",
+          "Gets +70% damage increase (2040 damage), HKD (denies back-roll option on wake-up), and depletes 1 bar of Drive Gauge on a Punish Counter"
+        ],
+        "ezCmd": "df+L+M",
+        "i": 37,
+        "moveButton": "LPLK",
+        "moveMotion": "DF",
+        "moveName": "Spinebuster",
+        "moveType": "throw",
+        "movesList": "Normal Throw",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 28,
+            "kd": [
+              {
+                "advantage": 28,
+                "type": "KD"
+              }
+            ],
+            "max": 28,
+            "min": 28,
+            "numbers": [
+              28
+            ],
+            "raw": "KD +28",
+            "tags": [],
+            "text": "KD +28",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 28,
+            "kd": [
+              {
+                "advantage": 28,
+                "type": "HKD"
+              }
+            ],
+            "max": 28,
+            "min": 28,
+            "numbers": [
+              28
+            ],
+            "raw": "HKD +28",
+            "tags": [],
+            "text": "HKD +28",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 23,
+            "max": 23,
+            "min": 23,
+            "numbers": [
+              23
+            ],
+            "raw": 23,
+            "text": "23",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 5,
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "text": "5",
+            "uncertain": false
+          }
+        },
+        "numCmd": "3LPLK",
+        "onHit": "KD +28",
+        "onPC": "HKD +28",
+        "plnCmd": "df+LP+LK",
+        "recovery": 23,
+        "startup": 5,
+        "total": 30
+      },
+      "Stand HK": {
+        "DDoB": 7000,
+        "DDoH": 11000,
+        "DGain": 4000,
+        "OppSoB": 250,
+        "OppSoH": 700,
+        "SelfSoB": 500,
+        "SelfSoH": 1000,
+        "active": 4,
+        "atkLvl": "H",
+        "blockstun": 26,
+        "dmg": 1000,
+        "extraInfo": [
+          "Cannot hit crouching",
+          "Zangief's kicking leg is invincible to airborne strikes on frames 13-22",
+          "Good horizontal anti-air (albeit a bit slow start-up)",
+          "The brief extended leg hurtbox extension 1F before active frames is strike invincible (cannot counter-poke projectiles)",
+          "Launches opponent into a free juggle state (KD +51) on Punish Counter",
+          "Puts airborne opponents into a limited juggle state on hit"
+        ],
+        "hitstop": 13,
+        "hitstun": 28,
+        "i": 7,
+        "jugIncr": 1,
+        "jugLimit": 0,
+        "jugStart": "1 (PC: 0)",
+        "moveButton": "HK",
+        "moveMotion": "N",
+        "moveName": "Stand HK",
+        "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 4,
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "text": "4",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": 1,
+            "kd": [],
+            "max": 1,
+            "min": 1,
+            "numbers": [
+              1
+            ],
+            "raw": 1,
+            "tags": [],
+            "text": "1",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 3,
+            "kd": [],
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "tags": [],
+            "text": "3",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 51,
+            "kd": [
+              {
+                "advantage": 51,
+                "type": "KD"
+              }
+            ],
+            "max": 51,
+            "min": 51,
+            "numbers": [
+              51
+            ],
+            "raw": "KD +51",
+            "tags": [],
+            "text": "KD +51",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 21,
+            "max": 21,
+            "min": 21,
+            "numbers": [
+              21
+            ],
+            "raw": 21,
+            "text": "21",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 13,
+            "max": 13,
+            "min": 13,
+            "numbers": [
+              13
+            ],
+            "raw": 13,
+            "text": "13",
+            "uncertain": false
+          }
+        },
+        "numCmd": "5HK",
+        "onBlock": 1,
+        "onHit": 3,
+        "onPC": "KD +51",
+        "onPP": "-23(-20)",
+        "plnCmd": "HK",
+        "recovery": 21,
+        "startup": 13,
+        "total": 37
+      },
+      "Stand HP": {
+        "DDoB": 6000,
+        "DDoH": 8000,
+        "DGain": 3500,
+        "OppSoB": 250,
+        "OppSoH": 700,
+        "SelfSoB": 500,
+        "SelfSoH": 1000,
+        "active": 3,
+        "afterDRoB": 1,
+        "afterDRoH": 7,
+        "atkLvl": "H",
+        "blockstun": 22,
+        "dmg": 1000,
+        "extraInfo": [
+          "Normally this move has no armor unless held, however Zangief does get 1-hit of upper-body armor (attacks that hit low enough can go past the armor) on frames 4-6 if Zangief holds the HP button for at least 4-6F before releasing HP (it will still be 16F overall if you release HP before frame 7)",
+          "The armor for partially held HP is lost immediately upon releasing HP",
+          "+2F extra recovery frames (24F) on whiff",
+          "Knocks down opponent on Counter Hit / Punish Counter",
+          "Puts airborne opponents into a limited juggle state on hit",
+          "Can be held"
+        ],
+        "ezCmd": "H",
+        "hitstop": 13,
+        "hitstun": 28,
+        "i": 3,
+        "moveButton": "HP",
+        "moveMotion": "N",
+        "moveName": "Stand HP",
+        "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -3,
+            "kd": [],
+            "max": -3,
+            "min": -3,
+            "numbers": [
+              -3
+            ],
+            "raw": -3,
+            "tags": [],
+            "text": "-3",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 3,
+            "kd": [],
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "tags": [],
+            "text": "3",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 32,
+            "kd": [
+              {
+                "advantage": 32,
+                "type": "KD"
+              }
+            ],
+            "max": 32,
+            "min": 32,
+            "numbers": [
+              32
+            ],
+            "raw": "KD +32",
+            "tags": [],
+            "text": "KD +32",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 22,
+            "max": 24,
+            "min": 22,
+            "numbers": [
+              22,
+              24
+            ],
+            "raw": "22(24)",
+            "text": "22(24)",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 16,
+            "max": 16,
+            "min": 16,
+            "numbers": [
+              16
+            ],
+            "raw": 16,
+            "text": "16",
+            "uncertain": false
+          }
+        },
+        "numCmd": "5HP",
+        "onBlock": -3,
+        "onHit": 3,
+        "onPC": "KD +32",
+        "onPP": "-23(-21)",
+        "plnCmd": "HP",
+        "recovery": "22(24)",
+        "startup": 16,
+        "total": "40(42)"
+      },
+      "Stand HP (hold)": {
+        "DDoB": 10000,
+        "DDoH": 13000,
+        "DGain": 6000,
+        "OppSoB": 250,
+        "OppSoH": 700,
+        "SelfSoB": 500,
+        "SelfSoH": 1000,
+        "active": 3,
+        "afterDRoB": 7,
+        "afterDRoH": "KD +40",
+        "atkLvl": "H",
+        "blockstun": 28,
+        "chargeDirection": "R",
+        "dmg": 1400,
+        "extraInfo": [
+          "1-hit of armor on upper-body on frames 4-34 (attacks that hit low enough can go past the armor)",
+          "The armor for partially held HP is lost immediately upon releasing HP (followed up with un-armored 10F start-up HP attack)",
+          "The 10F start-up shown in the parentheses refers to when the HP button is released after holding HP for at least 6 frames",
+          "Fully held HP version deals a ton of damage, drive gauge chip as well as give good frame advantage on block makes this a very powerful tool if the opponent doesn't stop it",
+          "Fully held version deals 400 extra damage (1400)",
+          "+2F extra recovery frames (24F) on whiff",
+          "Causes a +40 Hard Knockdown on Counter-Hit (and a ground slide on Punish Counter for +54 Hard Knockdown)"
+        ],
+        "ezCmd": "H (hold)",
+        "hitstop": 13,
+        "i": 4,
+        "jugIncr": 1,
+        "jugLimit": 0,
+        "jugStart": 1,
+        "moveButton": "HP",
+        "moveMotion": "N",
+        "moveName": "Stand HP (hold)",
+        "moveType": "normal",
+        "movesList": "Holdable Normal",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": 3,
+            "kd": [],
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "tags": [],
+            "text": "3",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 40,
+            "kd": [
+              {
+                "advantage": 40,
+                "type": "KD"
+              }
+            ],
+            "max": 40,
+            "min": 40,
+            "numbers": [
+              40
+            ],
+            "raw": "KD +40",
+            "tags": [],
+            "text": "KD +40",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 54,
+            "kd": [
+              {
+                "advantage": 54,
+                "type": "HKD"
+              }
+            ],
+            "max": 54,
+            "min": 54,
+            "numbers": [
+              54
+            ],
+            "raw": "HKD +54",
+            "tags": [],
+            "text": "HKD +54",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 22,
+            "max": 24,
+            "min": 22,
+            "numbers": [
+              22,
+              24
+            ],
+            "raw": "22(24)",
+            "text": "22(24)",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 32,
+            "max": 32,
+            "min": 10,
+            "numbers": [
+              32,
+              10
+            ],
+            "raw": "32(10)",
+            "text": "32(10)",
+            "uncertain": false
+          }
+        },
+        "numCmd": "5HP (hold)",
+        "onBlock": 3,
+        "onHit": "KD +40",
+        "onPC": "HKD +54",
+        "onPP": "-23(-21)",
+        "plnCmd": "HP (hold)",
+        "recovery": "22(24)",
+        "startup": "32(10)",
+        "total": "56(58)"
+      },
+      "Stand LK": {
+        "DDoB": 500,
+        "DDoH": 2000,
+        "DGain": 250,
+        "DRoB": 5,
+        "DRoH": 7,
+        "OppSoB": 75,
+        "OppSoH": 210,
+        "SelfSoB": 150,
+        "SelfSoH": 300,
+        "active": 2,
+        "afterDRoB": 0,
+        "afterDRoH": 2,
+        "atkLvl": "H",
+        "blockstun": 15,
+        "dmg": 400,
+        "dmgScaling": "20% Start",
+        "extraInfo": [
+          "Very far range for a stand LK, although slower than most (slightly further range than his own Stand MP)",
+          "Incurs 20% damage scaling penalty if used as the first hit of a combo"
+        ],
+        "ezCmd": "L",
+        "hcWinSpCa": 13,
+        "hitstop": 9,
+        "hitstun": 17,
+        "i": 5,
+        "moveButton": "LK",
+        "moveMotion": "N",
+        "moveName": "Stand LK",
+        "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 2,
+            "max": 2,
+            "min": 2,
+            "numbers": [
+              2
+            ],
+            "raw": 2,
+            "text": "2",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -4,
+            "kd": [],
+            "max": -4,
+            "min": -4,
+            "numbers": [
+              -4
+            ],
+            "raw": -4,
+            "tags": [],
+            "text": "-4",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": -2,
+            "kd": [],
+            "max": -2,
+            "min": -2,
+            "numbers": [
+              -2
+            ],
+            "raw": -2,
+            "tags": [],
+            "text": "-2",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 2,
+            "kd": [],
+            "max": 2,
+            "min": 2,
+            "numbers": [
+              2
+            ],
+            "raw": 2,
+            "tags": [],
+            "text": "2",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 17,
+            "max": 17,
+            "min": 17,
+            "numbers": [
+              17
+            ],
+            "raw": 17,
+            "text": "17",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 7,
+            "max": 7,
+            "min": 7,
+            "numbers": [
+              7
+            ],
+            "raw": 7,
+            "text": "7",
+            "uncertain": false
+          }
+        },
+        "numCmd": "5LK",
+        "onBlock": -4,
+        "onHit": -2,
+        "onPC": 2,
+        "onPP": "-17(-16)",
+        "plnCmd": "LK",
+        "recovery": 17,
+        "startup": 7,
+        "total": 25,
+        "xx": [
+          "sp",
+          "su"
+        ]
+      },
+      "Stand LP": {
+        "DDoB": 500,
+        "DDoH": 2000,
+        "DGain": 250,
+        "DRoB": 4,
+        "DRoH": 6,
+        "OppSoB": 75,
+        "OppSoH": 210,
+        "SelfSoB": 150,
+        "SelfSoH": 300,
+        "active": 3,
+        "afterDRoB": 6,
+        "afterDRoH": 8,
+        "atkLvl": "H",
+        "blockstun": 14,
+        "dmg": 400,
+        "dmgScaling": "20% Start",
+        "extraInfo": [
+          "+2 on block is amazing for a jab and sets Zangief up for a true mixup between strike or SPD (command grab)",
+          "Chains into stand LP / crouch LP / crouch LK",
+          "True blockstring when chained into his other light chains",
+          "Only 4F start-up when chained into",
+          "Incurs 20% damage scaling penalty if used as the first hit of a combo",
+          "AKA The Credit Card Swipe"
+        ],
+        "ezCmd": "L (chain)",
+        "hcWinSpCa": 13,
+        "hitstop": 9,
+        "hitstun": 16,
+        "i": 1,
+        "moveButton": "LP",
+        "moveMotion": "N",
+        "moveName": "Stand LP",
+        "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": 2,
+            "kd": [],
+            "max": 2,
+            "min": 2,
+            "numbers": [
+              2
+            ],
+            "raw": 2,
+            "tags": [],
+            "text": "2",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 4,
+            "kd": [],
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "tags": [],
+            "text": "4",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 8,
+            "kd": [],
+            "max": 8,
+            "min": 8,
+            "numbers": [
+              8
+            ],
+            "raw": 8,
+            "tags": [],
+            "text": "8",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 9,
+            "max": 9,
+            "min": 9,
+            "numbers": [
+              9
+            ],
+            "raw": 9,
+            "text": "9",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 7,
+            "max": 7,
+            "min": 7,
+            "numbers": [
+              7
+            ],
+            "raw": 7,
+            "text": "7",
+            "uncertain": false
+          }
+        },
+        "numCmd": "5LP",
+        "onBlock": 2,
+        "onHit": 4,
+        "onPC": 8,
+        "onPP": "-10(-8)",
+        "plnCmd": "LP",
+        "recovery": 9,
+        "startup": 7,
+        "total": 18,
+        "xx": [
+          "ch",
+          "sp",
+          "su"
+        ]
+      },
+      "Stand MK": {
+        "DDoB": 6000,
+        "DDoH": 8000,
+        "DGain": 3000,
+        "OppSoB": 225,
+        "OppSoH": 630,
+        "SelfSoB": 450,
+        "SelfSoH": 900,
+        "active": 4,
+        "atkLvl": "H",
+        "blockstun": 19,
+        "dmg": 900,
+        "extraInfo": [
+          "Very good poke button with decent range, strong hitbox priority and very good damage for a MK poke"
+        ],
+        "hitstop": 11,
+        "hitstun": 24,
+        "i": 6,
+        "moveButton": "MK",
+        "moveMotion": "N",
+        "moveName": "Stand MK",
+        "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 4,
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "text": "4",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -4,
+            "kd": [],
+            "max": -4,
+            "min": -4,
+            "numbers": [
+              -4
+            ],
+            "raw": -4,
+            "tags": [],
+            "text": "-4",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 1,
+            "kd": [],
+            "max": 1,
+            "min": 1,
+            "numbers": [
+              1
+            ],
+            "raw": 1,
+            "tags": [],
+            "text": "1",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 5,
+            "kd": [],
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "tags": [],
+            "text": "5",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 19,
+            "max": 19,
+            "min": 19,
+            "numbers": [
+              19
+            ],
+            "raw": 19,
+            "text": "19",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 10,
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": 10,
+            "text": "10",
+            "uncertain": false
+          }
+        },
+        "numCmd": "5MK",
+        "onBlock": -4,
+        "onHit": 1,
+        "onPC": 5,
+        "onPP": "-21(-18)",
+        "plnCmd": "MK",
+        "recovery": 19,
+        "startup": 10,
+        "total": 32
+      },
+      "Stand MP": {
+        "DDoB": 5000,
+        "DDoH": 6000,
+        "DGain": 2500,
+        "OppSoB": 175,
+        "OppSoH": 490,
+        "SelfSoB": 350,
+        "SelfSoH": 700,
+        "active": 4,
+        "afterDRoB": 2,
+        "afterDRoH": 6,
+        "atkLvl": "H",
+        "blockstun": 19,
+        "dmg": 700,
+        "extraInfo": [
+          "Great poke button with decent range and hitboxes, as well as being very easily Counter-hit / Punish confirmable into the MP Target Combo (28F hit confirm window)",
+          "Only combos into its TC follow-up on Counter Hit, Punish Counter, or when used after Drive Rush",
+          "The Flair Chop!"
+        ],
+        "ezCmd": "M",
+        "hcWinNotes": "*Only combos after CH/PC/DR",
+        "hcWinTc": 28,
+        "hitstop": 11,
+        "hitstun": 23,
+        "i": 2,
+        "moveButton": "MP",
+        "moveMotion": "N",
+        "moveName": "Stand MP",
+        "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 4,
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "text": "4",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -2,
+            "kd": [],
+            "max": -2,
+            "min": -2,
+            "numbers": [
+              -2
+            ],
+            "raw": -2,
+            "tags": [],
+            "text": "-2",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 2,
+            "kd": [],
+            "max": 2,
+            "min": 2,
+            "numbers": [
+              2
+            ],
+            "raw": 2,
+            "tags": [],
+            "text": "2",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 6,
+            "kd": [],
+            "max": 6,
+            "min": 6,
+            "numbers": [
+              6
+            ],
+            "raw": 6,
+            "tags": [],
+            "text": "6",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 17,
+            "max": 17,
+            "min": 17,
+            "numbers": [
+              17
+            ],
+            "raw": 17,
+            "text": "17",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 9,
+            "max": 9,
+            "min": 9,
+            "numbers": [
+              9
+            ],
+            "raw": 9,
+            "text": "9",
+            "uncertain": false
+          }
+        },
+        "numCmd": "5MP",
+        "onBlock": -2,
+        "onHit": 2,
+        "onPC": 6,
+        "onPP": "-19(-16)",
+        "plnCmd": "MP",
+        "recovery": 17,
+        "startup": 9,
+        "total": 29,
+        "xx": [
+          "tc"
+        ]
+      },
+      "Stomp": {
+        "DDoB": 2500,
+        "DDoH": 4000,
+        "DGain": 1500,
+        "OppSoB": 175,
+        "OppSoH": 490,
+        "SelfSoB": 350,
+        "SelfSoH": 700,
+        "active": 3,
+        "atkLvl": "L",
+        "blockstun": 17,
+        "cmnName": "Stomp",
+        "dmg": 500,
+        "extraInfo": [
+          "All the follow-up stomps can be performed on whiff",
+          "2F blockstring gap between each stomp"
+        ],
+        "ezCmd": "d,d+M",
+        "hcWinTc": 22,
+        "hitstop": 11,
+        "hitstun": 24,
+        "i": 30,
+        "moveButton": "MK",
+        "moveMotion": "DD",
+        "moveName": "Stomp",
+        "moveType": "normal",
+        "movesList": "Stomp",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -3,
+            "kd": [],
+            "max": -3,
+            "min": -3,
+            "numbers": [
+              -3
+            ],
+            "raw": -3,
+            "tags": [],
+            "text": "-3",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 4,
+            "kd": [],
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "tags": [],
+            "text": "4",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 8,
+            "kd": [],
+            "max": 8,
+            "min": 8,
+            "numbers": [
+              8
+            ],
+            "raw": 8,
+            "tags": [],
+            "text": "8",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 17,
+            "max": 17,
+            "min": 17,
+            "numbers": [
+              17
+            ],
+            "raw": 17,
+            "text": "17",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 9,
+            "max": 9,
+            "min": 9,
+            "numbers": [
+              9
+            ],
+            "raw": 9,
+            "text": "9",
+            "uncertain": false
+          }
+        },
+        "numCmd": "22MK",
+        "onBlock": -3,
+        "onHit": 4,
+        "onPC": 8,
+        "onPP": -18,
+        "plnCmd": "d,d+MK",
+        "recovery": 17,
+        "startup": 9,
+        "total": 28,
+        "xx": [
+          "tc"
+        ]
+      },
+      "Taunt": {
+        "cmnName": "Taunt",
+        "ezCmd": "LMH+SP+DP+Auto",
+        "i": 43,
+        "moveButton": "3P3K",
+        "moveMotion": "N",
+        "moveName": "Taunt",
+        "moveType": "taunt",
+        "nonHittingMove": true,
+        "normalized": {
+          "active": null,
+          "onBlock": null,
+          "onHit": null,
+          "onPC": null,
+          "recovery": null,
+          "startup": null
+        },
+        "numCmd": "5PPPKKK",
+        "plnCmd": "PPP+KKK"
+      },
+      "Tundra Storm": {
+        "DDoH": 10000,
+        "DGain": 15000,
+        "OppSoH": 1400,
+        "SelfSoH": 2000,
+        "active": 50,
+        "cmnName": "Kick Parry",
+        "dmg": 2400,
+        "extraInfo": [
+          "Counter is active on frames 6-55",
+          "Parries any incoming kick-based normals, specials, or Drive moves that hit between Zangief's open arms while in the parry stance",
+          "Cannot counter kicks from a crouching or airborne opponent, or when the opponent is behind Zangief",
+          "A successful counter results in a throw hitbox, which can make this attack whiff on airborne or throw invincible opponents)"
+        ],
+        "ezCmd": "d,d+H",
+        "i": 58,
+        "moveButton": "1P",
+        "moveMotion": "DP",
+        "moveName": "Tundra Storm",
+        "moveType": "special",
+        "movesList": "Special",
+        "normalized": {
+          "active": {
+            "first": 50,
+            "max": 50,
+            "min": 50,
+            "numbers": [
+              50
+            ],
+            "raw": 50,
+            "text": "50",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 5,
+            "kd": [
+              {
+                "advantage": 5,
+                "type": "HKD"
+              }
+            ],
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": "HKD +5",
+            "tags": [],
+            "text": "HKD +5",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 5,
+            "kd": [
+              {
+                "advantage": 5,
+                "type": "HKD"
+              }
+            ],
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": "HKD +5",
+            "tags": [],
+            "text": "HKD +5",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 24,
+            "max": 24,
+            "min": 24,
+            "numbers": [
+              24
+            ],
+            "raw": 24,
+            "text": "24",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 6,
+            "max": 6,
+            "min": 6,
+            "numbers": [
+              6
+            ],
+            "raw": 6,
+            "text": "6",
+            "uncertain": false
+          }
+        },
+        "numCmd": "22HK",
+        "onHit": "HKD +5",
+        "onPC": "HKD +5",
+        "plnCmd": "d,d+HK",
+        "recovery": 24,
+        "startup": 6,
+        "total": 79
+      }
+    }
+  },
+  "stats": {
+    "bDash": "25",
+    "bDashDist": "0.712",
+    "bJump": "46 (5+38+3)",
+    "bJumpDist": "1.406",
+    "bWalk": "0.025",
+    "bestReversal": "Bolshoi Storm Buster",
+    "color": "#d21b1a",
+    "dRushDist": "0.327",
+    "dRushDistBlock": "1.455",
+    "dRushDistMax": "3.034",
+    "dRushDistMin": "0.327",
+    "fDash": "22",
+    "fDashDist": "1.006",
+    "fJump": "46 (5+38+3)",
+    "fJumpDist": "1.725",
+    "fWalk": "0.0364",
+    "fastestNormal": "4f",
+    "hashtag": "#SF6_ZANGIEF",
+    "health": "11000",
+    "nJump": "46 (5+38+3)",
+    "phrase": "Show me everything you have!",
+    "taunt": "?",
+    "threeLetterCode": "ZGF",
+    "throwHurt": "0.49",
+    "throwRange": "1.02"
+  }
+}

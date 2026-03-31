@@ -1,0 +1,32 @@
+{
+  "character": "Juri",
+  "source": "manual-ai-from-conflicts-csv",
+  "notes": [
+    "Selected index-friendly values from Juri.conflicts.csv."
+  ],
+  "entries": [
+    {
+      "category": "normal",
+      "move": "Drive Impact: Sekkan Kick",
+      "set": {
+        "onHit": "KD +35",
+        "onPC": "HKD +104"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Kaita Raid",
+      "set": {
+        "startup": "18"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Parry",
+      "set": {
+        "active": "12",
+        "recovery": "33"
+      }
+    }
+  ]
+}

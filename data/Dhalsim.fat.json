@@ -23,6 +23,45 @@
         "moveName": "Aerial Yoga Float (air)",
         "moveType": "special",
         "movesList": "Special",
+        "normalized": {
+          "active": {
+            "first": 81,
+            "max": 81,
+            "min": 81,
+            "numbers": [
+              81
+            ],
+            "raw": 81,
+            "text": "81",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": null,
+          "onPC": null,
+          "recovery": {
+            "first": 18,
+            "max": 18,
+            "min": 3,
+            "numbers": [
+              18,
+              3
+            ],
+            "raw": "18+3",
+            "text": "18+3",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 15,
+            "max": 15,
+            "min": 15,
+            "numbers": [
+              15
+            ],
+            "raw": 15,
+            "text": "15",
+            "uncertain": false
+          }
+        },
         "numCmd": "2KK (air)",
         "plnCmd": "d+KK (air)",
         "recovery": "18+3",
@@ -48,6 +87,24 @@
         "moveType": "special",
         "movesList": "Special",
         "nonHittingMove": true,
+        "normalized": {
+          "active": null,
+          "onBlock": null,
+          "onHit": null,
+          "onPC": null,
+          "recovery": null,
+          "startup": {
+            "first": 10,
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": 10,
+            "text": "10",
+            "uncertain": false
+          }
+        },
         "numCmd": "4 or 6PPP or KKK (air)",
         "plnCmd": "b or f+PPP or KKK (air)",
         "startup": 10
@@ -79,6 +136,80 @@
         "moveName": "Agile Kick",
         "moveType": "normal",
         "movesList": "Command Normal",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -3,
+            "kd": [],
+            "max": -3,
+            "min": -3,
+            "numbers": [
+              -3
+            ],
+            "raw": -3,
+            "tags": [],
+            "text": "-3",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 1,
+            "kd": [],
+            "max": 1,
+            "min": 1,
+            "numbers": [
+              1
+            ],
+            "raw": 1,
+            "tags": [],
+            "text": "1",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 5,
+            "kd": [],
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "tags": [],
+            "text": "5",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 10,
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": 10,
+            "text": "10",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 5,
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "text": "5",
+            "uncertain": false
+          }
+        },
         "numCmd": "1LK",
         "onBlock": -3,
         "onHit": 1,
@@ -122,6 +253,93 @@
         "moveMotion": "D",
         "moveName": "Crouch HK",
         "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 16,
+            "max": 16,
+            "min": 16,
+            "numbers": [
+              16
+            ],
+            "raw": 16,
+            "text": "16",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -16,
+            "kd": [],
+            "max": -1,
+            "min": -16,
+            "numbers": [
+              -16,
+              -1
+            ],
+            "raw": "-16(-1)",
+            "tags": [],
+            "text": "-16(-1)",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 22,
+            "kd": [
+              {
+                "advantage": 22,
+                "type": "HKD"
+              }
+            ],
+            "max": 37,
+            "min": 22,
+            "numbers": [
+              22,
+              37
+            ],
+            "raw": "HKD +22(37)",
+            "tags": [],
+            "text": "HKD +22(37)",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 37,
+            "kd": [
+              {
+                "advantage": 37,
+                "type": "HKD"
+              }
+            ],
+            "max": 52,
+            "min": 37,
+            "numbers": [
+              37,
+              52
+            ],
+            "raw": "HKD +37(52)",
+            "tags": [],
+            "text": "HKD +37(52)",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 20,
+            "max": 20,
+            "min": 20,
+            "numbers": [
+              20
+            ],
+            "raw": 20,
+            "text": "20",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 12,
+            "max": 12,
+            "min": 12,
+            "numbers": [
+              12
+            ],
+            "raw": 12,
+            "text": "12",
+            "uncertain": false
+          }
+        },
         "numCmd": "2HK",
         "onBlock": "-16(-1)",
         "onHit": "HKD +22(37)",
@@ -164,6 +382,81 @@
         "moveMotion": "D",
         "moveName": "Crouch HP",
         "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 4,
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "text": "4",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -8,
+            "kd": [],
+            "max": -8,
+            "min": -8,
+            "numbers": [
+              -8
+            ],
+            "raw": -8,
+            "tags": [],
+            "text": "-8",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 3,
+            "kd": [],
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "tags": [],
+            "text": "3",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 7,
+            "kd": [],
+            "max": 7,
+            "min": 7,
+            "numbers": [
+              7
+            ],
+            "raw": 7,
+            "tags": [],
+            "text": "7",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 20,
+            "max": 24,
+            "min": 20,
+            "numbers": [
+              20,
+              24
+            ],
+            "raw": "20(24)",
+            "text": "20(24)",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 19,
+            "max": 19,
+            "min": 19,
+            "numbers": [
+              19
+            ],
+            "raw": 19,
+            "text": "19",
+            "uncertain": false
+          }
+        },
         "numCmd": "2HP",
         "onBlock": -8,
         "onHit": 3,
@@ -205,6 +498,83 @@
         "moveMotion": "D",
         "moveName": "Crouch LK",
         "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 7,
+            "max": 7,
+            "min": 7,
+            "numbers": [
+              7
+            ],
+            "raw": 7,
+            "text": "7",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -10,
+            "kd": [],
+            "max": -4,
+            "min": -10,
+            "numbers": [
+              -10,
+              -4
+            ],
+            "raw": "-10(-4)",
+            "tags": [],
+            "text": "-10(-4)",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": -5,
+            "kd": [],
+            "max": 1,
+            "min": -5,
+            "numbers": [
+              -5,
+              1
+            ],
+            "raw": "-5(1)",
+            "tags": [],
+            "text": "-5(1)",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": -1,
+            "kd": [],
+            "max": 5,
+            "min": -1,
+            "numbers": [
+              -1,
+              5
+            ],
+            "raw": "-1(5)",
+            "tags": [],
+            "text": "-1(5)",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 16,
+            "max": 16,
+            "min": 16,
+            "numbers": [
+              16
+            ],
+            "raw": 16,
+            "text": "16",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 4,
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "text": "4",
+            "uncertain": false
+          }
+        },
         "numCmd": "2LK",
         "onBlock": "-10(-4)",
         "onHit": "-5(1)",
@@ -244,6 +614,80 @@
         "moveMotion": "D",
         "moveName": "Crouch LP",
         "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -1,
+            "kd": [],
+            "max": -1,
+            "min": -1,
+            "numbers": [
+              -1
+            ],
+            "raw": -1,
+            "tags": [],
+            "text": "-1",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 4,
+            "kd": [],
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "tags": [],
+            "text": "4",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 8,
+            "kd": [],
+            "max": 8,
+            "min": 8,
+            "numbers": [
+              8
+            ],
+            "raw": 8,
+            "tags": [],
+            "text": "8",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 9,
+            "max": 9,
+            "min": 9,
+            "numbers": [
+              9
+            ],
+            "raw": 9,
+            "text": "9",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 5,
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "text": "5",
+            "uncertain": false
+          }
+        },
         "numCmd": "2LP",
         "onBlock": -1,
         "onHit": 4,
@@ -293,6 +737,83 @@
         "moveMotion": "D",
         "moveName": "Crouch MK",
         "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 13,
+            "max": 13,
+            "min": 13,
+            "numbers": [
+              13
+            ],
+            "raw": 13,
+            "text": "13",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -10,
+            "kd": [],
+            "max": 2,
+            "min": -10,
+            "numbers": [
+              -10,
+              2
+            ],
+            "raw": "-10(2)",
+            "tags": [],
+            "text": "-10(2)",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": -3,
+            "kd": [],
+            "max": 9,
+            "min": -3,
+            "numbers": [
+              -3,
+              9
+            ],
+            "raw": "-3(9)",
+            "tags": [],
+            "text": "-3(9)",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 1,
+            "kd": [],
+            "max": 13,
+            "min": 1,
+            "numbers": [
+              1,
+              13
+            ],
+            "raw": "1(13)",
+            "tags": [],
+            "text": "1(13)",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 14,
+            "max": 14,
+            "min": 14,
+            "numbers": [
+              14
+            ],
+            "raw": 14,
+            "text": "14",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 10,
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": 10,
+            "text": "10",
+            "uncertain": false
+          }
+        },
         "numCmd": "2MK",
         "onBlock": "-10(2)",
         "onHit": "-3(9)",
@@ -334,6 +855,80 @@
         "moveMotion": "D",
         "moveName": "Crouch MP",
         "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -4,
+            "kd": [],
+            "max": -4,
+            "min": -4,
+            "numbers": [
+              -4
+            ],
+            "raw": -4,
+            "tags": [],
+            "text": "-4",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 0,
+            "kd": [],
+            "max": 0,
+            "min": 0,
+            "numbers": [
+              0
+            ],
+            "raw": 0,
+            "tags": [],
+            "text": "0",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 4,
+            "kd": [],
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "tags": [],
+            "text": "4",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 16,
+            "max": 16,
+            "min": 16,
+            "numbers": [
+              16
+            ],
+            "raw": 16,
+            "text": "16",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 12,
+            "max": 12,
+            "min": 12,
+            "numbers": [
+              12
+            ],
+            "raw": 12,
+            "text": "12",
+            "uncertain": false
+          }
+        },
         "numCmd": "2MP",
         "onBlock": -4,
         "onHit": 0,
@@ -377,6 +972,80 @@
         "moveName": "Divine Kick",
         "moveType": "normal",
         "movesList": "Command Normal",
+        "normalized": {
+          "active": {
+            "first": 4,
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "text": "4",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": 0,
+            "kd": [],
+            "max": 0,
+            "min": 0,
+            "numbers": [
+              0
+            ],
+            "raw": 0,
+            "tags": [],
+            "text": "0",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 3,
+            "kd": [],
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "tags": [],
+            "text": "3",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 7,
+            "kd": [],
+            "max": 7,
+            "min": 7,
+            "numbers": [
+              7
+            ],
+            "raw": 7,
+            "tags": [],
+            "text": "7",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 17,
+            "max": 17,
+            "min": 17,
+            "numbers": [
+              17
+            ],
+            "raw": 17,
+            "text": "17",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 7,
+            "max": 7,
+            "min": 7,
+            "numbers": [
+              7
+            ],
+            "raw": 7,
+            "text": "7",
+            "uncertain": false
+          }
+        },
         "numCmd": "4MK",
         "onBlock": 0,
         "onHit": 3,
@@ -434,6 +1103,85 @@
         "moveMotion": "N",
         "moveName": "Drive Impact: Yoga Rise",
         "moveType": "drive",
+        "normalized": {
+          "active": {
+            "first": 2,
+            "max": 2,
+            "min": 2,
+            "numbers": [
+              2
+            ],
+            "raw": 2,
+            "text": "2",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -3,
+            "kd": [],
+            "max": -3,
+            "min": -3,
+            "numbers": [
+              -3
+            ],
+            "raw": -3,
+            "tags": [],
+            "text": "-3",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": null,
+            "kd": [
+              {
+                "advantage": null,
+                "type": "KD"
+              }
+            ],
+            "max": null,
+            "min": null,
+            "numbers": [],
+            "raw": "KD (notes)",
+            "tags": [],
+            "text": "KD (notes)",
+            "uncertain": true
+          },
+          "onPC": {
+            "first": 104,
+            "kd": [],
+            "max": 104,
+            "min": 104,
+            "numbers": [
+              104
+            ],
+            "raw": "Crumple +104",
+            "tags": [
+              "crumple"
+            ],
+            "text": "Crumple +104",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 35,
+            "max": 35,
+            "min": 35,
+            "numbers": [
+              35
+            ],
+            "raw": 35,
+            "text": "35",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 26,
+            "max": 26,
+            "min": 26,
+            "numbers": [
+              26
+            ],
+            "raw": 26,
+            "text": "26",
+            "uncertain": false
+          }
+        },
         "numCmd": "HPHK",
         "onBlock": -3,
         "onHit": "KD (notes)",
@@ -483,6 +1231,46 @@
         "moveName": "Drive Parry",
         "moveType": "drive",
         "nonHittingMove": true,
+        "normalized": {
+          "active": {
+            "first": 12,
+            "max": 12,
+            "min": 2,
+            "numbers": [
+              12,
+              2
+            ],
+            "raw": "12(2)",
+            "text": "12(2)",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": null,
+          "onPC": null,
+          "recovery": {
+            "first": 33,
+            "max": 33,
+            "min": 1,
+            "numbers": [
+              33,
+              1
+            ],
+            "raw": "33(1)notes",
+            "text": "33(1)notes",
+            "uncertain": true
+          },
+          "startup": {
+            "first": 1,
+            "max": 1,
+            "min": 1,
+            "numbers": [
+              1
+            ],
+            "raw": 1,
+            "text": "1",
+            "uncertain": false
+          }
+        },
         "numCmd": "MPMK",
         "plnCmd": "MP+MK",
         "recovery": "33(1)notes",
@@ -518,6 +1306,91 @@
         "moveMotion": "F",
         "moveName": "Drive Reversal: Yoga Illusion",
         "moveType": "drive",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -6,
+            "kd": [],
+            "max": -6,
+            "min": -6,
+            "numbers": [
+              -6
+            ],
+            "raw": -6,
+            "tags": [],
+            "text": "-6",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 24,
+            "kd": [
+              {
+                "advantage": 24,
+                "type": "KD"
+              }
+            ],
+            "max": 24,
+            "min": 24,
+            "numbers": [
+              24
+            ],
+            "raw": "KD +24",
+            "tags": [],
+            "text": "KD +24",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 24,
+            "kd": [
+              {
+                "advantage": 24,
+                "type": "KD"
+              }
+            ],
+            "max": 24,
+            "min": 24,
+            "numbers": [
+              24
+            ],
+            "raw": "KD +24",
+            "tags": [],
+            "text": "KD +24",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 26,
+            "max": 26,
+            "min": 26,
+            "numbers": [
+              26
+            ],
+            "raw": 26,
+            "text": "26",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 20,
+            "max": 20,
+            "min": 18,
+            "numbers": [
+              20,
+              18
+            ],
+            "raw": "20(18)",
+            "text": "20(18)",
+            "uncertain": false
+          }
+        },
         "numCmd": "6HPHK",
         "onBlock": -6,
         "onHit": "KD +24",
@@ -552,6 +1425,47 @@
         "moveName": "Drive Rush",
         "moveType": "drive",
         "nonHittingMove": true,
+        "normalized": {
+          "active": {
+            "first": 45,
+            "max": 46,
+            "min": 45,
+            "numbers": [
+              45,
+              46
+            ],
+            "raw": "45(46)",
+            "text": "45(46)",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": null,
+          "onPC": null,
+          "recovery": {
+            "first": 24,
+            "max": 24,
+            "min": 23,
+            "numbers": [
+              24,
+              23
+            ],
+            "raw": "24(23)",
+            "text": "24(23)",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 9,
+            "max": 11,
+            "min": 9,
+            "numbers": [
+              9,
+              11
+            ],
+            "raw": "9(11)",
+            "text": "9(11)",
+            "uncertain": false
+          }
+        },
         "numCmd": "MPMK / 66 (cancel)",
         "plnCmd": "MP+MK / f,f (cancel)",
         "recovery": "24(23)",
@@ -589,6 +1503,82 @@
         "moveName": "HK Drill Kick",
         "moveType": "normal",
         "movesList": "Command Normal",
+        "normalized": {
+          "active": {
+            "first": null,
+            "max": null,
+            "min": null,
+            "numbers": [],
+            "raw": "until land",
+            "text": "until land",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -22,
+            "kd": [],
+            "max": 5,
+            "min": -22,
+            "numbers": [
+              -22,
+              5
+            ],
+            "raw": "-22(5)",
+            "tags": [],
+            "text": "-22(5)",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": -17,
+            "kd": [],
+            "max": 10,
+            "min": -17,
+            "numbers": [
+              -17,
+              10
+            ],
+            "raw": "-17(10)",
+            "tags": [],
+            "text": "-17(10)",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": -13,
+            "kd": [],
+            "max": 14,
+            "min": -13,
+            "numbers": [
+              -13,
+              14
+            ],
+            "raw": "-13(14)",
+            "tags": [],
+            "text": "-13(14)",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 6,
+            "max": 11,
+            "min": 6,
+            "numbers": [
+              6,
+              11
+            ],
+            "raw": "6(11)",
+            "text": "6(11)",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 9,
+            "max": 9,
+            "min": 9,
+            "numbers": [
+              9
+            ],
+            "raw": 9,
+            "text": "9",
+            "uncertain": false
+          }
+        },
         "numCmd": "1 or 2 or 3HK (air)",
         "onBlock": "-22(5)",
         "onHit": "-17(10)",
@@ -633,6 +1623,90 @@
         "moveMotion": "HCB",
         "moveName": "HK Yoga Blast",
         "moveType": "special",
+        "normalized": {
+          "active": {
+            "first": 10,
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": 10,
+            "text": "10",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -1,
+            "kd": [],
+            "max": -1,
+            "min": -1,
+            "numbers": [
+              -1
+            ],
+            "raw": -1,
+            "tags": [],
+            "text": "-1",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 47,
+            "kd": [
+              {
+                "advantage": 47,
+                "type": "KD"
+              }
+            ],
+            "max": 47,
+            "min": 47,
+            "numbers": [
+              47
+            ],
+            "raw": "KD +47",
+            "tags": [],
+            "text": "KD +47",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 47,
+            "kd": [
+              {
+                "advantage": 47,
+                "type": "KD"
+              }
+            ],
+            "max": 47,
+            "min": 47,
+            "numbers": [
+              47
+            ],
+            "raw": "KD +47",
+            "tags": [],
+            "text": "KD +47",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 18,
+            "max": 18,
+            "min": 18,
+            "numbers": [
+              18
+            ],
+            "raw": 18,
+            "text": "18",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 17,
+            "max": 17,
+            "min": 17,
+            "numbers": [
+              17
+            ],
+            "raw": 17,
+            "text": "17",
+            "uncertain": false
+          }
+        },
         "numCmd": "63214HK",
         "onBlock": -1,
         "onHit": "KD +47",
@@ -680,6 +1754,93 @@
         "moveMotion": "HCB",
         "moveName": "HP Yoga Flame",
         "moveType": "special",
+        "normalized": {
+          "active": {
+            "first": 17,
+            "max": 17,
+            "min": 17,
+            "numbers": [
+              17
+            ],
+            "raw": 17,
+            "text": "17",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -4,
+            "kd": [],
+            "max": -2,
+            "min": -4,
+            "numbers": [
+              -4,
+              -2
+            ],
+            "raw": "-4(-2)",
+            "tags": [],
+            "text": "-4(-2)",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 45,
+            "kd": [
+              {
+                "advantage": 45,
+                "type": "KD"
+              }
+            ],
+            "max": 47,
+            "min": 45,
+            "numbers": [
+              45,
+              47
+            ],
+            "raw": "KD +45(47)",
+            "tags": [],
+            "text": "KD +45(47)",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 45,
+            "kd": [
+              {
+                "advantage": 45,
+                "type": "KD"
+              }
+            ],
+            "max": 47,
+            "min": 45,
+            "numbers": [
+              45,
+              47
+            ],
+            "raw": "KD +45(47)",
+            "tags": [],
+            "text": "KD +45(47)",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 16,
+            "max": 16,
+            "min": 16,
+            "numbers": [
+              16
+            ],
+            "raw": 16,
+            "text": "16",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 26,
+            "max": 26,
+            "min": 26,
+            "numbers": [
+              26
+            ],
+            "raw": 26,
+            "text": "26",
+            "uncertain": false
+          }
+        },
         "numCmd": "63214HP",
         "onBlock": "-4(-2)",
         "onHit": "KD +45(47)",
@@ -726,6 +1887,73 @@
         "moveMotion": "U",
         "moveName": "Jump HK",
         "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 10,
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": 10,
+            "text": "10",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": 5,
+            "kd": [],
+            "max": 11,
+            "min": 5,
+            "numbers": [
+              5,
+              11
+            ],
+            "raw": "5~11",
+            "tags": [],
+            "text": "5~11",
+            "uncertain": true
+          },
+          "onHit": {
+            "first": 9,
+            "kd": [],
+            "max": 15,
+            "min": 9,
+            "numbers": [
+              9,
+              15
+            ],
+            "raw": "9~15",
+            "tags": [],
+            "text": "9~15",
+            "uncertain": true
+          },
+          "onPC": {
+            "first": 13,
+            "kd": [],
+            "max": 19,
+            "min": 13,
+            "numbers": [
+              13,
+              19
+            ],
+            "raw": "13~19",
+            "tags": [],
+            "text": "13~19",
+            "uncertain": true
+          },
+          "recovery": null,
+          "startup": {
+            "first": 10,
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": 10,
+            "text": "10",
+            "uncertain": false
+          }
+        },
         "numCmd": "8HK",
         "onBlock": "5~11",
         "onHit": "9~15",
@@ -767,6 +1995,80 @@
         "moveMotion": "U",
         "moveName": "Jump HP",
         "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 4,
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "text": "4",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": 15,
+            "kd": [],
+            "max": 15,
+            "min": 15,
+            "numbers": [
+              15
+            ],
+            "raw": "up to 15",
+            "tags": [],
+            "text": "up to 15",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 19,
+            "kd": [
+              {
+                "advantage": null,
+                "type": "KD"
+              }
+            ],
+            "max": 19,
+            "min": 19,
+            "numbers": [
+              19
+            ],
+            "raw": "up to 19 (KD)",
+            "tags": [],
+            "text": "up to 19 (KD)",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 23,
+            "kd": [
+              {
+                "advantage": null,
+                "type": "KD"
+              }
+            ],
+            "max": 23,
+            "min": 23,
+            "numbers": [
+              23
+            ],
+            "raw": "up to 23 (KD)",
+            "tags": [],
+            "text": "up to 23 (KD)",
+            "uncertain": false
+          },
+          "recovery": null,
+          "startup": {
+            "first": 13,
+            "max": 13,
+            "min": 13,
+            "numbers": [
+              13
+            ],
+            "raw": 13,
+            "text": "13",
+            "uncertain": false
+          }
+        },
         "numCmd": "8HP",
         "onBlock": "up to 15",
         "onHit": "up to 19 (KD)",
@@ -800,6 +2102,73 @@
         "moveMotion": "U",
         "moveName": "Jump LK",
         "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 4,
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "text": "4",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -9,
+            "kd": [],
+            "max": 5,
+            "min": -9,
+            "numbers": [
+              -9,
+              5
+            ],
+            "raw": "-9~5",
+            "tags": [],
+            "text": "-9~5",
+            "uncertain": true
+          },
+          "onHit": {
+            "first": -6,
+            "kd": [],
+            "max": 8,
+            "min": -6,
+            "numbers": [
+              -6,
+              8
+            ],
+            "raw": "-6~8",
+            "tags": [],
+            "text": "-6~8",
+            "uncertain": true
+          },
+          "onPC": {
+            "first": -2,
+            "kd": [],
+            "max": 12,
+            "min": -2,
+            "numbers": [
+              -2,
+              12
+            ],
+            "raw": "-2~12",
+            "tags": [],
+            "text": "-2~12",
+            "uncertain": true
+          },
+          "recovery": null,
+          "startup": {
+            "first": 6,
+            "max": 6,
+            "min": 6,
+            "numbers": [
+              6
+            ],
+            "raw": 6,
+            "text": "6",
+            "uncertain": false
+          }
+        },
         "numCmd": "8LK",
         "onBlock": "-9~5",
         "onHit": "-6~8",
@@ -832,6 +2201,73 @@
         "moveMotion": "U",
         "moveName": "Jump LP",
         "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 4,
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "text": "4",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": 0,
+            "kd": [],
+            "max": 5,
+            "min": 0,
+            "numbers": [
+              0,
+              5
+            ],
+            "raw": "0~5",
+            "tags": [],
+            "text": "0~5",
+            "uncertain": true
+          },
+          "onHit": {
+            "first": 8,
+            "kd": [],
+            "max": 13,
+            "min": 8,
+            "numbers": [
+              8,
+              13
+            ],
+            "raw": "8~13",
+            "tags": [],
+            "text": "8~13",
+            "uncertain": true
+          },
+          "onPC": {
+            "first": 12,
+            "kd": [],
+            "max": 17,
+            "min": 12,
+            "numbers": [
+              12,
+              17
+            ],
+            "raw": "12~17",
+            "tags": [],
+            "text": "12~17",
+            "uncertain": true
+          },
+          "recovery": null,
+          "startup": {
+            "first": 4,
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "text": "4",
+            "uncertain": false
+          }
+        },
         "numCmd": "8LP",
         "onBlock": "0~5",
         "onHit": "8~13",
@@ -871,6 +2307,73 @@
         "moveMotion": "U",
         "moveName": "Jump MK",
         "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 6,
+            "max": 6,
+            "min": 6,
+            "numbers": [
+              6
+            ],
+            "raw": 6,
+            "text": "6",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -11,
+            "kd": [],
+            "max": 9,
+            "min": -11,
+            "numbers": [
+              -11,
+              9
+            ],
+            "raw": "-11~9",
+            "tags": [],
+            "text": "-11~9",
+            "uncertain": true
+          },
+          "onHit": {
+            "first": -7,
+            "kd": [],
+            "max": 13,
+            "min": -7,
+            "numbers": [
+              -7,
+              13
+            ],
+            "raw": "-7~13",
+            "tags": [],
+            "text": "-7~13",
+            "uncertain": true
+          },
+          "onPC": {
+            "first": -3,
+            "kd": [],
+            "max": 17,
+            "min": -3,
+            "numbers": [
+              -3,
+              17
+            ],
+            "raw": "-3~17",
+            "tags": [],
+            "text": "-3~17",
+            "uncertain": true
+          },
+          "recovery": null,
+          "startup": {
+            "first": 11,
+            "max": 11,
+            "min": 11,
+            "numbers": [
+              11
+            ],
+            "raw": 11,
+            "text": "11",
+            "uncertain": false
+          }
+        },
         "numCmd": "8MK",
         "onBlock": "-11~9",
         "onHit": "-7~13",
@@ -912,6 +2415,73 @@
         "moveMotion": "U",
         "moveName": "Jump MP",
         "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 6,
+            "max": 6,
+            "min": 6,
+            "numbers": [
+              6
+            ],
+            "raw": 6,
+            "text": "6",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": 3,
+            "kd": [],
+            "max": 7,
+            "min": 3,
+            "numbers": [
+              3,
+              7
+            ],
+            "raw": "3~7",
+            "tags": [],
+            "text": "3~7",
+            "uncertain": true
+          },
+          "onHit": {
+            "first": 9,
+            "kd": [],
+            "max": 13,
+            "min": 9,
+            "numbers": [
+              9,
+              13
+            ],
+            "raw": "9~13",
+            "tags": [],
+            "text": "9~13",
+            "uncertain": true
+          },
+          "onPC": {
+            "first": 13,
+            "kd": [],
+            "max": 17,
+            "min": 13,
+            "numbers": [
+              13,
+              17
+            ],
+            "raw": "13~17",
+            "tags": [],
+            "text": "13~17",
+            "uncertain": true
+          },
+          "recovery": null,
+          "startup": {
+            "first": 9,
+            "max": 9,
+            "min": 9,
+            "numbers": [
+              9
+            ],
+            "raw": 9,
+            "text": "9",
+            "uncertain": false
+          }
+        },
         "numCmd": "8MP",
         "onBlock": "3~7",
         "onHit": "9~13",
@@ -950,6 +2520,90 @@
         "moveName": "Karma Kick",
         "moveType": "normal",
         "movesList": "Command Normal",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -7,
+            "kd": [],
+            "max": -7,
+            "min": -7,
+            "numbers": [
+              -7
+            ],
+            "raw": -7,
+            "tags": [],
+            "text": "-7",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 33,
+            "kd": [
+              {
+                "advantage": 33,
+                "type": "KD"
+              }
+            ],
+            "max": 33,
+            "min": 33,
+            "numbers": [
+              33
+            ],
+            "raw": "KD +33",
+            "tags": [],
+            "text": "KD +33",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 48,
+            "kd": [
+              {
+                "advantage": 48,
+                "type": "HKD"
+              }
+            ],
+            "max": 48,
+            "min": 48,
+            "numbers": [
+              48
+            ],
+            "raw": "HKD +48",
+            "tags": [],
+            "text": "HKD +48",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 22,
+            "max": 22,
+            "min": 22,
+            "numbers": [
+              22
+            ],
+            "raw": 22,
+            "text": "22",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 9,
+            "max": 9,
+            "min": 9,
+            "numbers": [
+              9
+            ],
+            "raw": 9,
+            "text": "9",
+            "uncertain": false
+          }
+        },
         "numCmd": "1HK",
         "onBlock": -7,
         "onHit": "KD +33",
@@ -992,6 +2646,82 @@
         "moveName": "LK Drill Kick",
         "moveType": "normal",
         "movesList": "Command Normal",
+        "normalized": {
+          "active": {
+            "first": null,
+            "max": null,
+            "min": null,
+            "numbers": [],
+            "raw": "until land",
+            "text": "until land",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -30,
+            "kd": [],
+            "max": 5,
+            "min": -30,
+            "numbers": [
+              -30,
+              5
+            ],
+            "raw": "-30(5)",
+            "tags": [],
+            "text": "-30(5)",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": -23,
+            "kd": [],
+            "max": 12,
+            "min": -23,
+            "numbers": [
+              -23,
+              12
+            ],
+            "raw": "-23(12)",
+            "tags": [],
+            "text": "-23(12)",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": -19,
+            "kd": [],
+            "max": 16,
+            "min": -19,
+            "numbers": [
+              -19,
+              16
+            ],
+            "raw": "-19(16)",
+            "tags": [],
+            "text": "-19(16)",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 6,
+            "max": 11,
+            "min": 6,
+            "numbers": [
+              6,
+              11
+            ],
+            "raw": "6(11)",
+            "text": "6(11)",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 9,
+            "max": 9,
+            "min": 9,
+            "numbers": [
+              9
+            ],
+            "raw": 9,
+            "text": "9",
+            "uncertain": false
+          }
+        },
         "numCmd": "1 or 2 or 3LK (air)",
         "onBlock": "-30(5)",
         "onHit": "-23(12)",
@@ -1035,6 +2765,90 @@
         "moveName": "LK Yoga Blast",
         "moveType": "special",
         "movesList": "Special",
+        "normalized": {
+          "active": {
+            "first": 10,
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": 10,
+            "text": "10",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -6,
+            "kd": [],
+            "max": -6,
+            "min": -6,
+            "numbers": [
+              -6
+            ],
+            "raw": -6,
+            "tags": [],
+            "text": "-6",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 39,
+            "kd": [
+              {
+                "advantage": 39,
+                "type": "KD"
+              }
+            ],
+            "max": 39,
+            "min": 39,
+            "numbers": [
+              39
+            ],
+            "raw": "KD +39",
+            "tags": [],
+            "text": "KD +39",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 39,
+            "kd": [
+              {
+                "advantage": 39,
+                "type": "KD"
+              }
+            ],
+            "max": 39,
+            "min": 39,
+            "numbers": [
+              39
+            ],
+            "raw": "KD +39",
+            "tags": [],
+            "text": "KD +39",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 23,
+            "max": 23,
+            "min": 23,
+            "numbers": [
+              23
+            ],
+            "raw": 23,
+            "text": "23",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 12,
+            "max": 12,
+            "min": 12,
+            "numbers": [
+              12
+            ],
+            "raw": 12,
+            "text": "12",
+            "uncertain": false
+          }
+        },
         "numCmd": "63214LK",
         "onBlock": -6,
         "onHit": "KD +39",
@@ -1081,6 +2895,90 @@
         "moveName": "LP Yoga Flame",
         "moveType": "special",
         "movesList": "Special",
+        "normalized": {
+          "active": {
+            "first": 15,
+            "max": 15,
+            "min": 15,
+            "numbers": [
+              15
+            ],
+            "raw": 15,
+            "text": "15",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -4,
+            "kd": [],
+            "max": -4,
+            "min": -4,
+            "numbers": [
+              -4
+            ],
+            "raw": -4,
+            "tags": [],
+            "text": "-4",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 33,
+            "kd": [
+              {
+                "advantage": 33,
+                "type": "KD"
+              }
+            ],
+            "max": 33,
+            "min": 33,
+            "numbers": [
+              33
+            ],
+            "raw": "KD +33",
+            "tags": [],
+            "text": "KD +33",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 33,
+            "kd": [
+              {
+                "advantage": 33,
+                "type": "KD"
+              }
+            ],
+            "max": 33,
+            "min": 33,
+            "numbers": [
+              33
+            ],
+            "raw": "KD +33",
+            "tags": [],
+            "text": "KD +33",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 15,
+            "max": 15,
+            "min": 15,
+            "numbers": [
+              15
+            ],
+            "raw": 15,
+            "text": "15",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 16,
+            "max": 16,
+            "min": 16,
+            "numbers": [
+              16
+            ],
+            "raw": 16,
+            "text": "16",
+            "uncertain": false
+          }
+        },
         "numCmd": "63214LP",
         "onBlock": -4,
         "onHit": "KD +33",
@@ -1127,6 +3025,82 @@
         "moveName": "MK Drill Kick",
         "moveType": "normal",
         "movesList": "Command Normal",
+        "normalized": {
+          "active": {
+            "first": null,
+            "max": null,
+            "min": null,
+            "numbers": [],
+            "raw": "until land",
+            "text": "until land",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -20,
+            "kd": [],
+            "max": 5,
+            "min": -20,
+            "numbers": [
+              -20,
+              5
+            ],
+            "raw": "-20(5)",
+            "tags": [],
+            "text": "-20(5)",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": -15,
+            "kd": [],
+            "max": 10,
+            "min": -15,
+            "numbers": [
+              -15,
+              10
+            ],
+            "raw": "-15(10)",
+            "tags": [],
+            "text": "-15(10)",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": -11,
+            "kd": [],
+            "max": 14,
+            "min": -11,
+            "numbers": [
+              -11,
+              14
+            ],
+            "raw": "-11(14)",
+            "tags": [],
+            "text": "-11(14)",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 6,
+            "max": 11,
+            "min": 6,
+            "numbers": [
+              6,
+              11
+            ],
+            "raw": "6(11)",
+            "text": "6(11)",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 9,
+            "max": 9,
+            "min": 9,
+            "numbers": [
+              9
+            ],
+            "raw": 9,
+            "text": "9",
+            "uncertain": false
+          }
+        },
         "numCmd": "1 or 2 or 3MK (air)",
         "onBlock": "-20(5)",
         "onHit": "-15(10)",
@@ -1170,6 +3144,90 @@
         "moveMotion": "HCB",
         "moveName": "MK Yoga Blast",
         "moveType": "special",
+        "normalized": {
+          "active": {
+            "first": 10,
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": 10,
+            "text": "10",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -3,
+            "kd": [],
+            "max": -3,
+            "min": -3,
+            "numbers": [
+              -3
+            ],
+            "raw": -3,
+            "tags": [],
+            "text": "-3",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 42,
+            "kd": [
+              {
+                "advantage": 42,
+                "type": "KD"
+              }
+            ],
+            "max": 42,
+            "min": 42,
+            "numbers": [
+              42
+            ],
+            "raw": "KD +42",
+            "tags": [],
+            "text": "KD +42",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 42,
+            "kd": [
+              {
+                "advantage": 42,
+                "type": "KD"
+              }
+            ],
+            "max": 42,
+            "min": 42,
+            "numbers": [
+              42
+            ],
+            "raw": "KD +42",
+            "tags": [],
+            "text": "KD +42",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 20,
+            "max": 20,
+            "min": 20,
+            "numbers": [
+              20
+            ],
+            "raw": 20,
+            "text": "20",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 15,
+            "max": 15,
+            "min": 15,
+            "numbers": [
+              15
+            ],
+            "raw": 15,
+            "text": "15",
+            "uncertain": false
+          }
+        },
         "numCmd": "63214MK",
         "onBlock": -3,
         "onHit": "KD +42",
@@ -1216,6 +3274,90 @@
         "moveMotion": "HCB",
         "moveName": "MP Yoga Flame",
         "moveType": "special",
+        "normalized": {
+          "active": {
+            "first": 15,
+            "max": 15,
+            "min": 15,
+            "numbers": [
+              15
+            ],
+            "raw": 15,
+            "text": "15",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -4,
+            "kd": [],
+            "max": -4,
+            "min": -4,
+            "numbers": [
+              -4
+            ],
+            "raw": -4,
+            "tags": [],
+            "text": "-4",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 33,
+            "kd": [
+              {
+                "advantage": 33,
+                "type": "KD"
+              }
+            ],
+            "max": 33,
+            "min": 33,
+            "numbers": [
+              33
+            ],
+            "raw": "KD +33",
+            "tags": [],
+            "text": "KD +33",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 33,
+            "kd": [
+              {
+                "advantage": 33,
+                "type": "KD"
+              }
+            ],
+            "max": 33,
+            "min": 33,
+            "numbers": [
+              33
+            ],
+            "raw": "KD +33",
+            "tags": [],
+            "text": "KD +33",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 17,
+            "max": 17,
+            "min": 17,
+            "numbers": [
+              17
+            ],
+            "raw": 17,
+            "text": "17",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 20,
+            "max": 20,
+            "min": 20,
+            "numbers": [
+              20
+            ],
+            "raw": 20,
+            "text": "20",
+            "uncertain": false
+          }
+        },
         "numCmd": "63214MP",
         "onBlock": -4,
         "onHit": "KD +33",
@@ -1259,6 +3401,90 @@
         "moveName": "Merciless Yoga",
         "moveType": "super",
         "movesList": "Super",
+        "normalized": {
+          "active": {
+            "first": 5,
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "text": "5",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -62,
+            "kd": [],
+            "max": -62,
+            "min": -62,
+            "numbers": [
+              -62
+            ],
+            "raw": -62,
+            "tags": [],
+            "text": "-62",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 19,
+            "kd": [
+              {
+                "advantage": 19,
+                "type": "HKD"
+              }
+            ],
+            "max": 19,
+            "min": 19,
+            "numbers": [
+              19
+            ],
+            "raw": "HKD +19",
+            "tags": [],
+            "text": "HKD +19",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 19,
+            "kd": [
+              {
+                "advantage": 19,
+                "type": "HKD"
+              }
+            ],
+            "max": 19,
+            "min": 19,
+            "numbers": [
+              19
+            ],
+            "raw": "HKD +19",
+            "tags": [],
+            "text": "HKD +19",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 75,
+            "max": 75,
+            "min": 75,
+            "numbers": [
+              75
+            ],
+            "raw": 75,
+            "text": "75",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 10,
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": 10,
+            "text": "10",
+            "uncertain": false
+          }
+        },
         "numCmd": "236236K",
         "onBlock": -62,
         "onHit": "HKD +19",
@@ -1298,6 +3524,90 @@
         "moveMotion": "DQCF",
         "moveName": "Merciless Yoga (Critical Art)",
         "moveType": "super",
+        "normalized": {
+          "active": {
+            "first": 5,
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "text": "5",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -62,
+            "kd": [],
+            "max": -62,
+            "min": -62,
+            "numbers": [
+              -62
+            ],
+            "raw": -62,
+            "tags": [],
+            "text": "-62",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 19,
+            "kd": [
+              {
+                "advantage": 19,
+                "type": "HKD"
+              }
+            ],
+            "max": 19,
+            "min": 19,
+            "numbers": [
+              19
+            ],
+            "raw": "HKD +19",
+            "tags": [],
+            "text": "HKD +19",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 19,
+            "kd": [
+              {
+                "advantage": 19,
+                "type": "HKD"
+              }
+            ],
+            "max": 19,
+            "min": 19,
+            "numbers": [
+              19
+            ],
+            "raw": "HKD +19",
+            "tags": [],
+            "text": "HKD +19",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 75,
+            "max": 75,
+            "min": 75,
+            "numbers": [
+              75
+            ],
+            "raw": 75,
+            "text": "75",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 10,
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": 10,
+            "text": "10",
+            "uncertain": false
+          }
+        },
         "numCmd": "236236K (CA)",
         "onBlock": -62,
         "onHit": "HKD +19",
@@ -1337,6 +3647,80 @@
         "moveName": "Nirvana Punch",
         "moveType": "normal",
         "movesList": "Command Normal",
+        "normalized": {
+          "active": {
+            "first": 4,
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "text": "4",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -3,
+            "kd": [],
+            "max": -3,
+            "min": -3,
+            "numbers": [
+              -3
+            ],
+            "raw": -3,
+            "tags": [],
+            "text": "-3",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 3,
+            "kd": [],
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "tags": [],
+            "text": "3",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 7,
+            "kd": [],
+            "max": 7,
+            "min": 7,
+            "numbers": [
+              7
+            ],
+            "raw": 7,
+            "tags": [],
+            "text": "7",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 20,
+            "max": 20,
+            "min": 20,
+            "numbers": [
+              20
+            ],
+            "raw": 20,
+            "text": "20",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 10,
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": 10,
+            "text": "10",
+            "uncertain": false
+          }
+        },
         "numCmd": "1HP",
         "onBlock": -3,
         "onHit": 3,
@@ -1392,6 +3776,81 @@
         "moveMotion": "QCF",
         "moveName": "OD Yoga Arch",
         "moveType": "special",
+        "normalized": {
+          "active": {
+            "first": 190,
+            "max": 190,
+            "min": 10,
+            "numbers": [
+              190,
+              10
+            ],
+            "raw": "~(190)+10",
+            "text": "~(190)+10",
+            "uncertain": true
+          },
+          "onBlock": {
+            "first": -3,
+            "kd": [],
+            "max": -3,
+            "min": -3,
+            "numbers": [
+              -3
+            ],
+            "raw": -3,
+            "tags": [],
+            "text": "-3",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 1,
+            "kd": [],
+            "max": 1,
+            "min": 1,
+            "numbers": [
+              1
+            ],
+            "raw": 1,
+            "tags": [],
+            "text": "1",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 5,
+            "kd": [],
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "tags": [],
+            "text": "5",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 27,
+            "max": 27,
+            "min": 27,
+            "numbers": [
+              27
+            ],
+            "raw": 27,
+            "text": "27",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 18,
+            "max": 18,
+            "min": 18,
+            "numbers": [
+              18
+            ],
+            "raw": 18,
+            "text": "18",
+            "uncertain": false
+          }
+        },
         "numCmd": "236KK (Arch)",
         "onBlock": -3,
         "onHit": 1,
@@ -1443,6 +3902,90 @@
         "moveMotion": "HCB",
         "moveName": "OD Yoga Blast",
         "moveType": "special",
+        "normalized": {
+          "active": {
+            "first": 10,
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": 10,
+            "text": "10",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": 0,
+            "kd": [],
+            "max": 0,
+            "min": 0,
+            "numbers": [
+              0
+            ],
+            "raw": 0,
+            "tags": [],
+            "text": "0",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 42,
+            "kd": [
+              {
+                "advantage": 42,
+                "type": "KD"
+              }
+            ],
+            "max": 42,
+            "min": 42,
+            "numbers": [
+              42
+            ],
+            "raw": "KD +42",
+            "tags": [],
+            "text": "KD +42",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 42,
+            "kd": [
+              {
+                "advantage": 42,
+                "type": "KD"
+              }
+            ],
+            "max": 42,
+            "min": 42,
+            "numbers": [
+              42
+            ],
+            "raw": "KD +42",
+            "tags": [],
+            "text": "KD +42",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 20,
+            "max": 20,
+            "min": 20,
+            "numbers": [
+              20
+            ],
+            "raw": 20,
+            "text": "20",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 12,
+            "max": 12,
+            "min": 12,
+            "numbers": [
+              12
+            ],
+            "raw": 12,
+            "text": "12",
+            "uncertain": false
+          }
+        },
         "numCmd": "63214KK",
         "onBlock": 0,
         "onHit": "KD +42",
@@ -1497,6 +4040,70 @@
         "moveMotion": "HCB",
         "moveName": "OD Yoga Comet (air)",
         "moveType": "special",
+        "normalized": {
+          "active": null,
+          "onBlock": {
+            "first": 9,
+            "kd": [],
+            "max": 9,
+            "min": 9,
+            "numbers": [
+              9
+            ],
+            "raw": "9~",
+            "tags": [],
+            "text": "9~",
+            "uncertain": true
+          },
+          "onHit": {
+            "first": 5,
+            "kd": [],
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": "5~",
+            "tags": [],
+            "text": "5~",
+            "uncertain": true
+          },
+          "onPC": {
+            "first": 6,
+            "kd": [],
+            "max": 6,
+            "min": 6,
+            "numbers": [
+              6
+            ],
+            "raw": "6~",
+            "tags": [],
+            "text": "6~",
+            "uncertain": true
+          },
+          "recovery": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": "3 land",
+            "text": "3 land",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 30,
+            "max": 30,
+            "min": 30,
+            "numbers": [
+              30
+            ],
+            "raw": 30,
+            "text": "30",
+            "uncertain": false
+          }
+        },
         "numCmd": "63214PP (Air)",
         "onBlock": "9~",
         "onHit": "5~",
@@ -1539,6 +4146,80 @@
         "moveMotion": "QCF",
         "moveName": "OD Yoga Fire",
         "moveType": "special",
+        "normalized": {
+          "active": null,
+          "onBlock": {
+            "first": -3,
+            "kd": [],
+            "max": -3,
+            "min": -3,
+            "numbers": [
+              -3
+            ],
+            "raw": -3,
+            "tags": [],
+            "text": "-3",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 49,
+            "kd": [
+              {
+                "advantage": 49,
+                "type": "KD"
+              }
+            ],
+            "max": 49,
+            "min": 49,
+            "numbers": [
+              49
+            ],
+            "raw": "KD +49",
+            "tags": [],
+            "text": "KD +49",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 49,
+            "kd": [
+              {
+                "advantage": 49,
+                "type": "KD"
+              }
+            ],
+            "max": 49,
+            "min": 49,
+            "numbers": [
+              49
+            ],
+            "raw": "KD +49",
+            "tags": [],
+            "text": "KD +49",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 33,
+            "max": 33,
+            "min": 33,
+            "numbers": [
+              33
+            ],
+            "raw": 33,
+            "text": "33",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 12,
+            "max": 12,
+            "min": 12,
+            "numbers": [
+              12
+            ],
+            "raw": 12,
+            "text": "12",
+            "uncertain": false
+          }
+        },
         "numCmd": "236PP",
         "onBlock": -3,
         "onHit": "KD +49",
@@ -1584,6 +4265,94 @@
         "moveMotion": "HCB",
         "moveName": "OD Yoga Flame",
         "moveType": "special",
+        "normalized": {
+          "active": {
+            "first": 5,
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5,
+              5,
+              5,
+              5,
+              5
+            ],
+            "raw": "5*5*5*5*5",
+            "text": "5*5*5*5*5",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -11,
+            "kd": [],
+            "max": -11,
+            "min": -11,
+            "numbers": [
+              -11
+            ],
+            "raw": -11,
+            "tags": [],
+            "text": "-11",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 50,
+            "kd": [
+              {
+                "advantage": 50,
+                "type": "KD"
+              }
+            ],
+            "max": 50,
+            "min": 50,
+            "numbers": [
+              50
+            ],
+            "raw": "KD +50",
+            "tags": [],
+            "text": "KD +50",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 50,
+            "kd": [
+              {
+                "advantage": 50,
+                "type": "KD"
+              }
+            ],
+            "max": 50,
+            "min": 50,
+            "numbers": [
+              50
+            ],
+            "raw": "KD +50",
+            "tags": [],
+            "text": "KD +50",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 24,
+            "max": 24,
+            "min": 24,
+            "numbers": [
+              24
+            ],
+            "raw": 24,
+            "text": "24",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 18,
+            "max": 18,
+            "min": 18,
+            "numbers": [
+              18
+            ],
+            "raw": 18,
+            "text": "18",
+            "uncertain": false
+          }
+        },
         "numCmd": "63214PP",
         "onBlock": -11,
         "onHit": "KD +50",
@@ -1634,6 +4403,80 @@
         "moveMotion": "N",
         "moveName": "Stand HK",
         "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -6,
+            "kd": [],
+            "max": -6,
+            "min": -6,
+            "numbers": [
+              -6
+            ],
+            "raw": -6,
+            "tags": [],
+            "text": "-6",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 3,
+            "kd": [],
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "tags": [],
+            "text": "3",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 24,
+            "kd": [],
+            "max": 24,
+            "min": 24,
+            "numbers": [
+              24
+            ],
+            "raw": 24,
+            "tags": [],
+            "text": "24",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 20,
+            "max": 20,
+            "min": 20,
+            "numbers": [
+              20
+            ],
+            "raw": 20,
+            "text": "20",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 17,
+            "max": 17,
+            "min": 17,
+            "numbers": [
+              17
+            ],
+            "raw": 17,
+            "text": "17",
+            "uncertain": false
+          }
+        },
         "numCmd": "5HK",
         "onBlock": -6,
         "onHit": 3,
@@ -1676,6 +4519,85 @@
         "moveMotion": "N",
         "moveName": "Stand HP",
         "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 4,
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "text": "4",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -11,
+            "kd": [],
+            "max": -11,
+            "min": -11,
+            "numbers": [
+              -11
+            ],
+            "raw": -11,
+            "tags": [],
+            "text": "-11",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": -6,
+            "kd": [],
+            "max": -6,
+            "min": -6,
+            "numbers": [
+              -6
+            ],
+            "raw": -6,
+            "tags": [],
+            "text": "-6",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 32,
+            "kd": [
+              {
+                "advantage": 32,
+                "type": "KD"
+              }
+            ],
+            "max": 32,
+            "min": 32,
+            "numbers": [
+              32
+            ],
+            "raw": "KD +32",
+            "tags": [],
+            "text": "KD +32",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 27,
+            "max": 27,
+            "min": 27,
+            "numbers": [
+              27
+            ],
+            "raw": 27,
+            "text": "27",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 16,
+            "max": 16,
+            "min": 16,
+            "numbers": [
+              16
+            ],
+            "raw": 16,
+            "text": "16",
+            "uncertain": false
+          }
+        },
         "numCmd": "5HP",
         "onBlock": -11,
         "onHit": -6,
@@ -1713,6 +4635,80 @@
         "moveMotion": "N",
         "moveName": "Stand LK",
         "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 4,
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "text": "4",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -6,
+            "kd": [],
+            "max": -6,
+            "min": -6,
+            "numbers": [
+              -6
+            ],
+            "raw": -6,
+            "tags": [],
+            "text": "-6",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 2,
+            "kd": [],
+            "max": 2,
+            "min": 2,
+            "numbers": [
+              2
+            ],
+            "raw": 2,
+            "tags": [],
+            "text": "2",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 6,
+            "kd": [],
+            "max": 6,
+            "min": 6,
+            "numbers": [
+              6
+            ],
+            "raw": 6,
+            "tags": [],
+            "text": "6",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 11,
+            "max": 11,
+            "min": 11,
+            "numbers": [
+              11
+            ],
+            "raw": 11,
+            "text": "11",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 9,
+            "max": 9,
+            "min": 9,
+            "numbers": [
+              9
+            ],
+            "raw": 9,
+            "text": "9",
+            "uncertain": false
+          }
+        },
         "numCmd": "5LK",
         "onBlock": -6,
         "onHit": 2,
@@ -1756,6 +4752,80 @@
         "moveMotion": "N",
         "moveName": "Stand LP",
         "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -1,
+            "kd": [],
+            "max": -1,
+            "min": -1,
+            "numbers": [
+              -1
+            ],
+            "raw": -1,
+            "tags": [],
+            "text": "-1",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 4,
+            "kd": [],
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "tags": [],
+            "text": "4",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 8,
+            "kd": [],
+            "max": 8,
+            "min": 8,
+            "numbers": [
+              8
+            ],
+            "raw": 8,
+            "tags": [],
+            "text": "8",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 8,
+            "max": 8,
+            "min": 8,
+            "numbers": [
+              8
+            ],
+            "raw": 8,
+            "text": "8",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 4,
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "text": "4",
+            "uncertain": false
+          }
+        },
         "numCmd": "5LP",
         "onBlock": -1,
         "onHit": 4,
@@ -1798,6 +4868,80 @@
         "moveMotion": "N",
         "moveName": "Stand MK",
         "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -6,
+            "kd": [],
+            "max": -6,
+            "min": -6,
+            "numbers": [
+              -6
+            ],
+            "raw": -6,
+            "tags": [],
+            "text": "-6",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": -2,
+            "kd": [],
+            "max": -2,
+            "min": -2,
+            "numbers": [
+              -2
+            ],
+            "raw": -2,
+            "tags": [],
+            "text": "-2",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 2,
+            "kd": [],
+            "max": 2,
+            "min": 2,
+            "numbers": [
+              2
+            ],
+            "raw": 2,
+            "tags": [],
+            "text": "2",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 18,
+            "max": 18,
+            "min": 18,
+            "numbers": [
+              18
+            ],
+            "raw": 18,
+            "text": "18",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 12,
+            "max": 12,
+            "min": 12,
+            "numbers": [
+              12
+            ],
+            "raw": 12,
+            "text": "12",
+            "uncertain": false
+          }
+        },
         "numCmd": "5MK",
         "onBlock": -6,
         "onHit": -2,
@@ -1836,6 +4980,80 @@
         "moveMotion": "N",
         "moveName": "Stand MP",
         "moveType": "normal",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -5,
+            "kd": [],
+            "max": -5,
+            "min": -5,
+            "numbers": [
+              -5
+            ],
+            "raw": -5,
+            "tags": [],
+            "text": "-5",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 0,
+            "kd": [],
+            "max": 0,
+            "min": 0,
+            "numbers": [
+              0
+            ],
+            "raw": 0,
+            "tags": [],
+            "text": "0",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 4,
+            "kd": [],
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "tags": [],
+            "text": "4",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 19,
+            "max": 19,
+            "min": 19,
+            "numbers": [
+              19
+            ],
+            "raw": 19,
+            "text": "19",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 14,
+            "max": 14,
+            "min": 14,
+            "numbers": [
+              14
+            ],
+            "raw": 14,
+            "text": "14",
+            "uncertain": false
+          }
+        },
         "numCmd": "5MP",
         "onBlock": -5,
         "onHit": 0,
@@ -1856,6 +5074,14 @@
         "moveName": "Taunt",
         "moveType": "taunt",
         "nonHittingMove": true,
+        "normalized": {
+          "active": null,
+          "onBlock": null,
+          "onHit": null,
+          "onPC": null,
+          "recovery": null,
+          "startup": null
+        },
         "numCmd": "5PPPKKK",
         "plnCmd": "PPP+KKK"
       },
@@ -1889,6 +5115,80 @@
         "moveName": "Thrust Kick",
         "moveType": "normal",
         "movesList": "Command Normal",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -7,
+            "kd": [],
+            "max": -7,
+            "min": -7,
+            "numbers": [
+              -7
+            ],
+            "raw": -7,
+            "tags": [],
+            "text": "-7",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": -3,
+            "kd": [],
+            "max": -3,
+            "min": -3,
+            "numbers": [
+              -3
+            ],
+            "raw": -3,
+            "tags": [],
+            "text": "-3",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 1,
+            "kd": [],
+            "max": 1,
+            "min": 1,
+            "numbers": [
+              1
+            ],
+            "raw": 1,
+            "tags": [],
+            "text": "1",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 20,
+            "max": 20,
+            "min": 20,
+            "numbers": [
+              20
+            ],
+            "raw": 20,
+            "text": "20",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 8,
+            "max": 8,
+            "min": 8,
+            "numbers": [
+              8
+            ],
+            "raw": 8,
+            "text": "8",
+            "uncertain": false
+          }
+        },
         "numCmd": "1MK",
         "onBlock": -7,
         "onHit": -3,
@@ -1941,6 +5241,81 @@
         "moveName": "Yoga Arch",
         "moveType": "special",
         "movesList": "Special",
+        "normalized": {
+          "active": {
+            "first": 81,
+            "max": 81,
+            "min": 10,
+            "numbers": [
+              81,
+              10
+            ],
+            "raw": "~(81)+10",
+            "text": "~(81)+10",
+            "uncertain": true
+          },
+          "onBlock": {
+            "first": -1,
+            "kd": [],
+            "max": -1,
+            "min": -1,
+            "numbers": [
+              -1
+            ],
+            "raw": -1,
+            "tags": [],
+            "text": "-1",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 1,
+            "kd": [],
+            "max": 1,
+            "min": 1,
+            "numbers": [
+              1
+            ],
+            "raw": 1,
+            "tags": [],
+            "text": "1",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 5,
+            "kd": [],
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "tags": [],
+            "text": "5",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 27,
+            "max": 27,
+            "min": 27,
+            "numbers": [
+              27
+            ],
+            "raw": 27,
+            "text": "27",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 18,
+            "max": 18,
+            "min": 18,
+            "numbers": [
+              18
+            ],
+            "raw": 18,
+            "text": "18",
+            "uncertain": false
+          }
+        },
         "numCmd": "236K (Arch)",
         "onBlock": -1,
         "onHit": 1,
@@ -1994,6 +5369,80 @@
         "moveName": "Yoga Comet (air)",
         "moveType": "special",
         "movesList": "Special",
+        "normalized": {
+          "active": {
+            "first": 55,
+            "max": 55,
+            "min": 55,
+            "numbers": [
+              55
+            ],
+            "raw": "~(55)",
+            "text": "~(55)",
+            "uncertain": true
+          },
+          "onBlock": {
+            "first": -2,
+            "kd": [],
+            "max": -2,
+            "min": -2,
+            "numbers": [
+              -2
+            ],
+            "raw": "-2~",
+            "tags": [],
+            "text": "-2~",
+            "uncertain": true
+          },
+          "onHit": {
+            "first": -4,
+            "kd": [],
+            "max": -4,
+            "min": -4,
+            "numbers": [
+              -4
+            ],
+            "raw": "-4~",
+            "tags": [],
+            "text": "-4~",
+            "uncertain": true
+          },
+          "onPC": {
+            "first": 0,
+            "kd": [],
+            "max": 0,
+            "min": 0,
+            "numbers": [
+              0
+            ],
+            "raw": "0~",
+            "tags": [],
+            "text": "0~",
+            "uncertain": true
+          },
+          "recovery": {
+            "first": 8,
+            "max": 8,
+            "min": 8,
+            "numbers": [
+              8
+            ],
+            "raw": "8 land",
+            "text": "8 land",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 30,
+            "max": 30,
+            "min": 30,
+            "numbers": [
+              30
+            ],
+            "raw": 30,
+            "text": "30",
+            "uncertain": false
+          }
+        },
         "numCmd": "63214P (Air)",
         "onBlock": "-2~",
         "onHit": "-4~",
@@ -2039,6 +5488,71 @@
         "moveName": "Yoga Fire",
         "moveType": "special",
         "movesList": "Special",
+        "normalized": {
+          "active": null,
+          "onBlock": {
+            "first": -6,
+            "kd": [],
+            "max": -6,
+            "min": -6,
+            "numbers": [
+              -6
+            ],
+            "raw": -6,
+            "tags": [],
+            "text": "-6",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": -2,
+            "kd": [],
+            "max": -2,
+            "min": -2,
+            "numbers": [
+              -2
+            ],
+            "raw": -2,
+            "tags": [],
+            "text": "-2",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 2,
+            "kd": [],
+            "max": 2,
+            "min": 2,
+            "numbers": [
+              2
+            ],
+            "raw": 2,
+            "tags": [],
+            "text": "2",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 33,
+            "max": 33,
+            "min": 33,
+            "numbers": [
+              33
+            ],
+            "raw": 33,
+            "text": "33",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 15,
+            "max": 15,
+            "min": 11,
+            "numbers": [
+              15,
+              11
+            ],
+            "raw": "15(11)",
+            "text": "15(11)",
+            "uncertain": false
+          }
+        },
         "numCmd": "236P",
         "onBlock": -6,
         "onHit": -2,
@@ -2085,6 +5599,80 @@
         "moveMotion": "QCF",
         "moveName": "Yoga Fire (hold)",
         "moveType": "special",
+        "normalized": {
+          "active": null,
+          "onBlock": {
+            "first": -1,
+            "kd": [],
+            "max": -1,
+            "min": -1,
+            "numbers": [
+              -1
+            ],
+            "raw": -1,
+            "tags": [],
+            "text": "-1",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 51,
+            "kd": [
+              {
+                "advantage": 51,
+                "type": "KD"
+              }
+            ],
+            "max": 51,
+            "min": 51,
+            "numbers": [
+              51
+            ],
+            "raw": "KD +51",
+            "tags": [],
+            "text": "KD +51",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 51,
+            "kd": [
+              {
+                "advantage": 51,
+                "type": "KD"
+              }
+            ],
+            "max": 51,
+            "min": 51,
+            "numbers": [
+              51
+            ],
+            "raw": "KD +51",
+            "tags": [],
+            "text": "KD +51",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 30,
+            "max": 30,
+            "min": 30,
+            "numbers": [
+              30
+            ],
+            "raw": 30,
+            "text": "30",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 43,
+            "max": 43,
+            "min": 43,
+            "numbers": [
+              43
+            ],
+            "raw": 43,
+            "text": "43",
+            "uncertain": false
+          }
+        },
         "numCmd": "236P (hold)",
         "onBlock": -1,
         "onHit": "KD +51",
@@ -2119,6 +5707,45 @@
         "moveName": "Yoga Float",
         "moveType": "special",
         "movesList": "Special",
+        "normalized": {
+          "active": {
+            "first": 91,
+            "max": 91,
+            "min": 91,
+            "numbers": [
+              91
+            ],
+            "raw": 91,
+            "text": "91",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": null,
+          "onPC": null,
+          "recovery": {
+            "first": 20,
+            "max": 20,
+            "min": 3,
+            "numbers": [
+              20,
+              3
+            ],
+            "raw": "20+3",
+            "text": "20+3",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 30,
+            "max": 30,
+            "min": 30,
+            "numbers": [
+              30
+            ],
+            "raw": 30,
+            "text": "30",
+            "uncertain": false
+          }
+        },
         "numCmd": "2 or 3KK",
         "plnCmd": "d or df+KK",
         "recovery": "20+3",
@@ -2159,6 +5786,95 @@
         "moveName": "Yoga Inferno",
         "moveType": "super",
         "movesList": "Super",
+        "normalized": {
+          "active": {
+            "first": 104,
+            "max": 104,
+            "min": 84,
+            "numbers": [
+              104,
+              84
+            ],
+            "raw": "104(84)",
+            "text": "104(84)",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -10,
+            "kd": [],
+            "max": -10,
+            "min": -22,
+            "numbers": [
+              -10,
+              -22
+            ],
+            "raw": "-10(-22)",
+            "tags": [],
+            "text": "-10(-22)",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 24,
+            "kd": [
+              {
+                "advantage": 24,
+                "type": "KD"
+              }
+            ],
+            "max": 27,
+            "min": 24,
+            "numbers": [
+              24,
+              27
+            ],
+            "raw": "KD +24(27)",
+            "tags": [],
+            "text": "KD +24(27)",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 24,
+            "kd": [
+              {
+                "advantage": 24,
+                "type": "KD"
+              }
+            ],
+            "max": 27,
+            "min": 24,
+            "numbers": [
+              24,
+              27
+            ],
+            "raw": "KD +24(27)",
+            "tags": [],
+            "text": "KD +24(27)",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 15,
+            "max": 40,
+            "min": 15,
+            "numbers": [
+              15,
+              40
+            ],
+            "raw": "15(40)",
+            "text": "15(40)",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 10,
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": 10,
+            "text": "10",
+            "uncertain": false
+          }
+        },
         "numCmd": "236236P",
         "onBlock": "-10(-22)",
         "onHit": "KD +24(27)",
@@ -2208,6 +5924,85 @@
         "moveName": "Yoga Lance",
         "moveType": "normal",
         "movesList": "Command Normal",
+        "normalized": {
+          "active": {
+            "first": 7,
+            "max": 7,
+            "min": 7,
+            "numbers": [
+              7
+            ],
+            "raw": 7,
+            "text": "7",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -16,
+            "kd": [],
+            "max": -16,
+            "min": -16,
+            "numbers": [
+              -16
+            ],
+            "raw": -16,
+            "tags": [],
+            "text": "-16",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": -9,
+            "kd": [],
+            "max": -9,
+            "min": -9,
+            "numbers": [
+              -9
+            ],
+            "raw": -9,
+            "tags": [],
+            "text": "-9",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": -5,
+            "kd": [
+              {
+                "advantage": null,
+                "type": "KD"
+              }
+            ],
+            "max": -5,
+            "min": -5,
+            "numbers": [
+              -5
+            ],
+            "raw": "-5 (KD)",
+            "tags": [],
+            "text": "-5 (KD)",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 29,
+            "max": 29,
+            "min": 29,
+            "numbers": [
+              29
+            ],
+            "raw": 29,
+            "text": "29",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 14,
+            "max": 14,
+            "min": 14,
+            "numbers": [
+              14
+            ],
+            "raw": 14,
+            "text": "14",
+            "uncertain": false
+          }
+        },
         "numCmd": "4HP",
         "onBlock": -16,
         "onHit": -9,
@@ -2254,6 +6049,80 @@
         "moveName": "Yoga Mountain",
         "moveType": "normal",
         "movesList": "Command Normal",
+        "normalized": {
+          "active": {
+            "first": 6,
+            "max": 6,
+            "min": 6,
+            "numbers": [
+              6
+            ],
+            "raw": 6,
+            "text": "6",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -9,
+            "kd": [],
+            "max": -9,
+            "min": -9,
+            "numbers": [
+              -9
+            ],
+            "raw": -9,
+            "tags": [],
+            "text": "-9",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 0,
+            "kd": [],
+            "max": 0,
+            "min": 0,
+            "numbers": [
+              0
+            ],
+            "raw": 0,
+            "tags": [],
+            "text": "0",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 4,
+            "kd": [],
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "tags": [],
+            "text": "4",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 20,
+            "max": 20,
+            "min": 20,
+            "numbers": [
+              20
+            ],
+            "raw": 20,
+            "text": "20",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 14,
+            "max": 14,
+            "min": 14,
+            "numbers": [
+              14
+            ],
+            "raw": 14,
+            "text": "14",
+            "uncertain": false
+          }
+        },
         "numCmd": "4HK",
         "onBlock": -9,
         "onHit": 0,
@@ -2300,6 +6169,81 @@
         "moveName": "Yoga Mummy",
         "moveType": "normal",
         "movesList": "Command Normal",
+        "normalized": {
+          "active": {
+            "first": null,
+            "max": null,
+            "min": null,
+            "numbers": [],
+            "raw": "until land",
+            "text": "until land",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -22,
+            "kd": [],
+            "max": 4,
+            "min": -22,
+            "numbers": [
+              -22,
+              4
+            ],
+            "raw": "-22(4)",
+            "tags": [],
+            "text": "-22(4)",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": -18,
+            "kd": [],
+            "max": 8,
+            "min": -18,
+            "numbers": [
+              -18,
+              8
+            ],
+            "raw": "-18(8)",
+            "tags": [],
+            "text": "-18(8)",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": -14,
+            "kd": [],
+            "max": 12,
+            "min": -14,
+            "numbers": [
+              -14,
+              12
+            ],
+            "raw": "-14(12)",
+            "tags": [],
+            "text": "-14(12)",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 9,
+            "max": 9,
+            "min": 9,
+            "numbers": [
+              9
+            ],
+            "raw": 9,
+            "text": "9",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 10,
+            "max": 10,
+            "min": 10,
+            "numbers": [
+              10
+            ],
+            "raw": 10,
+            "text": "10",
+            "uncertain": false
+          }
+        },
         "numCmd": "2LP (air)",
         "onBlock": "-22(4)",
         "onHit": "-18(8)",
@@ -2333,6 +6277,78 @@
         "moveName": "Yoga Smash",
         "moveType": "throw",
         "movesList": "Normal Throw",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 31,
+            "kd": [
+              {
+                "advantage": 31,
+                "type": "KD"
+              }
+            ],
+            "max": 31,
+            "min": 31,
+            "numbers": [
+              31
+            ],
+            "raw": "KD +31",
+            "tags": [],
+            "text": "KD +31",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 31,
+            "kd": [
+              {
+                "advantage": 31,
+                "type": "HKD"
+              }
+            ],
+            "max": 31,
+            "min": 31,
+            "numbers": [
+              31
+            ],
+            "raw": "HKD +31",
+            "tags": [],
+            "text": "HKD +31",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 23,
+            "max": 23,
+            "min": 23,
+            "numbers": [
+              23
+            ],
+            "raw": 23,
+            "text": "23",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 5,
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "text": "5",
+            "uncertain": false
+          }
+        },
         "numCmd": "LPLK",
         "onHit": "KD +31",
         "onPC": "HKD +31",
@@ -2364,6 +6380,78 @@
         "moveName": "Yoga Splash",
         "moveType": "throw",
         "movesList": "Normal Throw",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 35,
+            "kd": [
+              {
+                "advantage": 35,
+                "type": "KD"
+              }
+            ],
+            "max": 35,
+            "min": 35,
+            "numbers": [
+              35
+            ],
+            "raw": "KD +35",
+            "tags": [],
+            "text": "KD +35",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 35,
+            "kd": [
+              {
+                "advantage": 35,
+                "type": "HKD"
+              }
+            ],
+            "max": 35,
+            "min": 35,
+            "numbers": [
+              35
+            ],
+            "raw": "HKD +35",
+            "tags": [],
+            "text": "HKD +35",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 23,
+            "max": 23,
+            "min": 23,
+            "numbers": [
+              23
+            ],
+            "raw": 23,
+            "text": "23",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 5,
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "text": "5",
+            "uncertain": false
+          }
+        },
         "numCmd": "2LPLK",
         "onHit": "KD +35",
         "onPC": "HKD +35",
@@ -2408,6 +6496,91 @@
         "moveName": "Yoga Sunburst",
         "moveType": "super",
         "movesList": "Super",
+        "normalized": {
+          "active": {
+            "first": 142,
+            "max": 142,
+            "min": 20,
+            "numbers": [
+              142,
+              20
+            ],
+            "raw": "~(142)+20",
+            "text": "~(142)+20",
+            "uncertain": true
+          },
+          "onBlock": {
+            "first": -4,
+            "kd": [],
+            "max": -4,
+            "min": -4,
+            "numbers": [
+              -4
+            ],
+            "raw": -4,
+            "tags": [],
+            "text": "-4",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 50,
+            "kd": [
+              {
+                "advantage": 50,
+                "type": "KD"
+              }
+            ],
+            "max": 50,
+            "min": 50,
+            "numbers": [
+              50
+            ],
+            "raw": "KD +50",
+            "tags": [],
+            "text": "KD +50",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 50,
+            "kd": [
+              {
+                "advantage": 50,
+                "type": "KD"
+              }
+            ],
+            "max": 50,
+            "min": 50,
+            "numbers": [
+              50
+            ],
+            "raw": "KD +50",
+            "tags": [],
+            "text": "KD +50",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 60,
+            "max": 60,
+            "min": 60,
+            "numbers": [
+              60
+            ],
+            "raw": 60,
+            "text": "60",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 7,
+            "max": 7,
+            "min": 7,
+            "numbers": [
+              7
+            ],
+            "raw": 7,
+            "text": "7",
+            "uncertain": false
+          }
+        },
         "numCmd": "214214K",
         "onBlock": -4,
         "onHit": "KD +50",
@@ -2457,6 +6630,65 @@
         "moveMotion": "DQCB",
         "moveName": "Yoga Sunburst (hold)",
         "moveType": "super",
+        "normalized": {
+          "active": null,
+          "onBlock": null,
+          "onHit": {
+            "first": null,
+            "kd": [
+              {
+                "advantage": null,
+                "type": "KD"
+              }
+            ],
+            "max": null,
+            "min": null,
+            "numbers": [],
+            "raw": "KD",
+            "tags": [],
+            "text": "KD",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": null,
+            "kd": [
+              {
+                "advantage": null,
+                "type": "KD"
+              }
+            ],
+            "max": null,
+            "min": null,
+            "numbers": [],
+            "raw": "KD",
+            "tags": [],
+            "text": "KD",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 58,
+            "max": 58,
+            "min": 58,
+            "numbers": [
+              58
+            ],
+            "raw": 58,
+            "text": "58",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 23,
+            "max": 71,
+            "min": 23,
+            "numbers": [
+              23,
+              71
+            ],
+            "raw": "23(71)",
+            "text": "23(71)",
+            "uncertain": false
+          }
+        },
         "numCmd": "214214K (hold)",
         "onHit": "KD",
         "onPC": "KD",
@@ -2486,6 +6718,35 @@
         "moveType": "special",
         "movesList": "Special",
         "nonHittingMove": true,
+        "normalized": {
+          "active": null,
+          "onBlock": null,
+          "onHit": null,
+          "onPC": null,
+          "recovery": {
+            "first": 24,
+            "max": 31,
+            "min": 24,
+            "numbers": [
+              24,
+              31
+            ],
+            "raw": "24(31)",
+            "text": "24(31)",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 4,
+            "max": 4,
+            "min": 4,
+            "numbers": [
+              4
+            ],
+            "raw": 4,
+            "text": "4",
+            "uncertain": false
+          }
+        },
         "numCmd": "4 or 6PPP or KKK",
         "plnCmd": "b or f+PPP or KKK",
         "recovery": "24(31)",
@@ -2513,6 +6774,78 @@
         "moveName": "Yoga Throw",
         "moveType": "throw",
         "movesList": "Normal Throw",
+        "normalized": {
+          "active": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": 3,
+            "text": "3",
+            "uncertain": false
+          },
+          "onBlock": null,
+          "onHit": {
+            "first": 19,
+            "kd": [
+              {
+                "advantage": 19,
+                "type": "KD"
+              }
+            ],
+            "max": 19,
+            "min": 19,
+            "numbers": [
+              19
+            ],
+            "raw": "KD +19",
+            "tags": [],
+            "text": "KD +19",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 19,
+            "kd": [
+              {
+                "advantage": 19,
+                "type": "HKD"
+              }
+            ],
+            "max": 19,
+            "min": 19,
+            "numbers": [
+              19
+            ],
+            "raw": "HKD +19",
+            "tags": [],
+            "text": "HKD +19",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 23,
+            "max": 23,
+            "min": 23,
+            "numbers": [
+              23
+            ],
+            "raw": 23,
+            "text": "23",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 5,
+            "max": 5,
+            "min": 5,
+            "numbers": [
+              5
+            ],
+            "raw": 5,
+            "text": "5",
+            "uncertain": false
+          }
+        },
         "numCmd": "4LPLK",
         "onHit": "KD +19",
         "onPC": "HKD +19",
@@ -2555,6 +6888,80 @@
         "moveName": "Yoga Uppercut",
         "moveType": "normal",
         "movesList": "Command Normal",
+        "normalized": {
+          "active": {
+            "first": 6,
+            "max": 6,
+            "min": 6,
+            "numbers": [
+              6
+            ],
+            "raw": 6,
+            "text": "6",
+            "uncertain": false
+          },
+          "onBlock": {
+            "first": -3,
+            "kd": [],
+            "max": -3,
+            "min": -3,
+            "numbers": [
+              -3
+            ],
+            "raw": -3,
+            "tags": [],
+            "text": "-3",
+            "uncertain": false
+          },
+          "onHit": {
+            "first": 2,
+            "kd": [],
+            "max": 2,
+            "min": 2,
+            "numbers": [
+              2
+            ],
+            "raw": 2,
+            "tags": [],
+            "text": "2",
+            "uncertain": false
+          },
+          "onPC": {
+            "first": 6,
+            "kd": [],
+            "max": 6,
+            "min": 6,
+            "numbers": [
+              6
+            ],
+            "raw": 6,
+            "tags": [],
+            "text": "6",
+            "uncertain": false
+          },
+          "recovery": {
+            "first": 16,
+            "max": 16,
+            "min": 16,
+            "numbers": [
+              16
+            ],
+            "raw": 16,
+            "text": "16",
+            "uncertain": false
+          },
+          "startup": {
+            "first": 8,
+            "max": 8,
+            "min": 8,
+            "numbers": [
+              8
+            ],
+            "raw": 8,
+            "text": "8",
+            "uncertain": false
+          }
+        },
         "numCmd": "4MP",
         "onBlock": -3,
         "onHit": 2,

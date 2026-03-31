@@ -106,6 +106,12 @@ python3 build_character_data.py review
   - 生成每角色冲突文件 `角色名.conflicts.csv`
   - 生成总表 `data/sf6framedata.conflicts.csv`
 
+如果你希望和最终角色文件 `角色名.json` 对比（而不是 `角色名.fat.json`），执行：
+
+```bash
+python3 build_character_data.py review --review-base final
+```
+
 ## 文件结构
 
 ```

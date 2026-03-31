@@ -1,0 +1,32 @@
+{
+  "character": "Marisa",
+  "source": "manual-ai-from-conflicts-csv",
+  "notes": [
+    "Selected index-friendly values from Marisa.conflicts.csv."
+  ],
+  "entries": [
+    {
+      "category": "normal",
+      "move": "Drive Impact: Secutor",
+      "set": {
+        "onHit": "KD +35",
+        "onPC": "HKD +104"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Love Tap",
+      "set": {
+        "startup": "18"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Parry",
+      "set": {
+        "active": "12",
+        "recovery": "33"
+      }
+    }
+  ]
+}

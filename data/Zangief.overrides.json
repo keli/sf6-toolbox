@@ -1,0 +1,32 @@
+{
+  "character": "Zangief",
+  "source": "manual-ai-from-conflicts-csv",
+  "notes": [
+    "Selected index-friendly values from Zangief.conflicts.csv."
+  ],
+  "entries": [
+    {
+      "category": "normal",
+      "move": "Drive Impact: Double Russian Chop",
+      "set": {
+        "onHit": "KD +35",
+        "onPC": "HKD +104"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Reverse Russian Kick",
+      "set": {
+        "startup": "18"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Parry",
+      "set": {
+        "active": "12",
+        "recovery": "33"
+      }
+    }
+  ]
+}

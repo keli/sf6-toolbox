@@ -143,6 +143,43 @@ def load_sc_supplement_from_character_files(
     return {"characters": characters}
 
 
+def load_review_base_from_character_files(
+    char_names: list[str],
+    data_dir: str,
+    use_final_json: bool,
+    fallback_base_data: dict[str, Any],
+) -> tuple[dict[str, Any], list[str]]:
+    base_data: dict[str, Any] = {}
+    warnings: list[str] = []
+    suffix = ".json" if use_final_json else ".fat.json"
+
+    for char_name in char_names:
+        fname = char_filename(char_name)
+        path = os.path.join(data_dir, f"{fname}{suffix}")
+        if not os.path.exists(path):
+            base_fallback = fallback_base_data.get(char_name)
+            if base_fallback is None:
+                warnings.append(
+                    f"{char_name}: missing {os.path.basename(path)} and no fallback base data."
+                )
+                continue
+            base_data[char_name] = base_fallback
+            warnings.append(
+                f"{char_name}: missing {os.path.basename(path)}, fallback to --base-file data."
+            )
+            continue
+        payload = read_json_file(path)
+        if not isinstance(payload, dict):
+            warnings.append(
+                f"{char_name}: invalid JSON object in {os.path.basename(path)}, fallback to --base-file data."
+            )
+            base_data[char_name] = fallback_base_data.get(char_name, {})
+            continue
+        base_data[char_name] = payload
+
+    return base_data, warnings
+
+
 def write_character_conflicts(
     conflict_rows: list[dict[str, Any]],
     char_names: list[str],
@@ -236,6 +273,93 @@ def normalize_wiki_text(text: str | None) -> str:
     s = re.sub(r"<br\s*/?>", " ", s, flags=re.IGNORECASE)
     s = s.replace("&nbsp;", " ")
     return normalize_spaces(s)
+
+
+def _parse_first_int(text: str) -> int | None:
+    m = re.search(r"-?\d+", text)
+    return int(m.group(0)) if m else None
+
+
+def _parse_all_ints(text: str) -> list[int]:
+    return [int(m.group(0)) for m in re.finditer(r"-?\d+", text)]
+
+
+def normalize_numeric_field(value: Any) -> dict[str, Any] | None:
+    if value is None:
+        return None
+    if isinstance(value, (int, float)):
+        n = int(value)
+        return {
+            "raw": value,
+            "text": str(value),
+            "numbers": [n],
+            "first": n,
+            "min": n,
+            "max": n,
+            "uncertain": False,
+        }
+
+    text = normalize_spaces(str(value))
+    if not text:
+        return None
+    nums = _parse_all_ints(text)
+    first = nums[0] if nums else None
+    return {
+        "raw": value,
+        "text": text,
+        "numbers": nums,
+        "first": first,
+        "min": min(nums) if nums else None,
+        "max": max(nums) if nums else None,
+        "uncertain": ("~" in text)
+        or ("notes" in text.lower())
+        or ("or" in text.lower()),
+    }
+
+
+def normalize_adv_field(value: Any) -> dict[str, Any] | None:
+    base = normalize_numeric_field(value)
+    if base is None:
+        return None
+
+    text = base["text"]
+    kd: list[dict[str, Any]] = []
+    for m in re.finditer(r"(H?KD)\s*\+?\s*(-?\d+)?", text, flags=re.IGNORECASE):
+        kd_type = m.group(1).upper()
+        adv_raw = m.group(2)
+        kd.append(
+            {
+                "type": kd_type,
+                "advantage": int(adv_raw) if adv_raw is not None else None,
+            }
+        )
+
+    tags: list[str] = []
+    text_low = text.lower()
+    for tag in ("crumple", "tumble", "wall bounce", "wall splat", "otg"):
+        if tag in text_low:
+            tags.append(tag)
+
+    out = dict(base)
+    out["kd"] = kd
+    out["tags"] = tags
+    return out
+
+
+def normalize_character_moves(base_data: dict[str, Any]) -> None:
+    for char_data in base_data.values():
+        for cat_moves in char_data.get("moves", {}).values():
+            for move in cat_moves.values():
+                if not isinstance(move, dict):
+                    continue
+                move["normalized"] = {
+                    "startup": normalize_numeric_field(move.get("startup")),
+                    "active": normalize_numeric_field(move.get("active")),
+                    "recovery": normalize_numeric_field(move.get("recovery")),
+                    "onHit": normalize_adv_field(move.get("onHit")),
+                    "onBlock": normalize_adv_field(move.get("onBlock")),
+                    "onPC": normalize_adv_field(move.get("onPC")),
+                }
 
 
 def parse_cancel_types(text: str | None) -> list[str]:
@@ -426,11 +550,12 @@ def main() -> int:
     ap.add_argument(
         "action",
         nargs="?",
-        choices=("fetch", "review"),
+        choices=("fetch", "review", "normalize"),
         default="review",
         help=(
             "fetch: write per-character FAT + SuperCombo source files; "
-            "review: write per-character conflict CSV files"
+            "review: write per-character conflict CSV files; "
+            "normalize: rewrite per-character FAT files with normalized fields"
         ),
     )
     ap.add_argument(
@@ -463,6 +588,16 @@ def main() -> int:
         default="data/characters.index.json",
         help="Character index JSON path for frontend loading",
     )
+    ap.add_argument(
+        "--review-base",
+        choices=("fat", "final"),
+        default="fat",
+        help=(
+            "Base dataset for `review`: `fat` compares SuperCombo against "
+            "`<char>.fat.json`; `final` compares against `<char>.json` "
+            "(default: fat)"
+        ),
+    )
     args = ap.parse_args()
 
     def load_base() -> dict[str, Any]:
@@ -483,6 +618,7 @@ def main() -> int:
 
     if args.action == "fetch":
         base_data = load_base()
+        normalize_character_moves(base_data)
         supplement, errors = build_sc_supplement(base_data)
         print(f"Characters fetched: {len(supplement.get('characters', {}))}")
         source_stats = write_character_sources(
@@ -504,22 +640,57 @@ def main() -> int:
                 print(f"  ... and {len(errors) - 20} more")
 
     if args.action == "review":
-        base_data = load_base()
+        fallback_base_data = load_base()
+        char_names = list(fallback_base_data.keys())
+        use_final_json = args.review_base == "final"
+        base_data, base_warnings = load_review_base_from_character_files(
+            char_names=char_names,
+            data_dir=args.char_data_dir,
+            use_final_json=use_final_json,
+            fallback_base_data=fallback_base_data,
+        )
         supplement = load_sc_supplement_from_character_files(
-            char_names=list(base_data.keys()),
+            char_names=char_names,
             data_dir=args.char_data_dir,
         )
         conflict_rows = build_conflicts(base_data, supplement)
         review_stats = write_character_conflicts(
             conflict_rows=conflict_rows,
-            char_names=list(base_data.keys()),
+            char_names=char_names,
             out_dir=args.char_data_dir,
             audit_out=args.audit_out,
         )
+        base_label = "final *.json" if use_final_json else "*.fat.json"
+        print(f"Review base source: {base_label} under {args.char_data_dir}")
         print(f"Per-character conflicts written under: {args.char_data_dir}")
         print(f"Aggregated conflicts written: {args.audit_out}")
         print("Review stats:")
         for k, v in review_stats.items():
+            print(f"  {k}: {v}")
+        if base_warnings:
+            print(f"Warnings ({len(base_warnings)}):")
+            for e in base_warnings[:20]:
+                print(f"  - {e}")
+            if len(base_warnings) > 20:
+                print(f"  ... and {len(base_warnings) - 20} more")
+
+    if args.action == "normalize":
+        base_data = load_base()
+        normalize_character_moves(base_data)
+        supplement = load_sc_supplement_from_character_files(
+            char_names=list(base_data.keys()),
+            data_dir=args.char_data_dir,
+        )
+        source_stats = write_character_sources(
+            base_data=base_data,
+            supplement=supplement,
+            out_dir=args.char_data_dir,
+            index_out=args.index_out,
+        )
+        print(f"Per-character source files rewritten under: {args.char_data_dir}")
+        print(f"Character index written: {args.index_out}")
+        print("Normalize stats:")
+        for k, v in source_stats.items():
             print(f"  {k}: {v}")
     return 0
 

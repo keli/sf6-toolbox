@@ -1,0 +1,32 @@
+{
+  "character": "Akuma",
+  "source": "manual-ai-from-conflicts-csv",
+  "notes": [
+    "Selected index-friendly values from Akuma.conflicts.csv."
+  ],
+  "entries": [
+    {
+      "category": "normal",
+      "move": "Drive Impact: Oni Goroshi",
+      "set": {
+        "onHit": "KD +35",
+        "onPC": "HKD +104"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Souha Double Palm",
+      "set": {
+        "startup": "18"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Parry",
+      "set": {
+        "active": "12",
+        "recovery": "33"
+      }
+    }
+  ]
+}

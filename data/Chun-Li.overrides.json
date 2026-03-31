@@ -1,0 +1,78 @@
+{
+  "character": "Chun-Li",
+  "source": "manual-ai-from-supercombo",
+  "notes": [
+    "Values are selected from SuperCombo entries where meaning is clear and then rewritten into index-friendly format.",
+    "For values like +A(+B), this file keeps the stable base value +A for index.html compatibility.",
+    "Complex multi-part formats (ranges, notes, land suffix, until released) are intentionally skipped."
+  ],
+  "entries": [
+    {
+      "category": "normal",
+      "move": "Neutral Jump HK",
+      "set": {
+        "onHit": "11",
+        "onBlock": "6",
+        "onPC": "15"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Falling Crane",
+      "set": {
+        "onHit": "7",
+        "onBlock": "3",
+        "onPC": "11"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Impact: Hosen Kick",
+      "set": {
+        "onHit": "KD +35",
+        "onPC": "HKD +104"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Hoyoku Kick",
+      "set": {
+        "startup": "18"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "LK Hazanshu",
+      "set": {
+        "active": "3",
+        "recovery": "20",
+        "onHit": "KD +21",
+        "onBlock": "-5",
+        "onPC": "KD +21"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Hazanshu",
+      "set": {
+        "onHit": "KD +52",
+        "onPC": "KD +52"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Hundred Lightning Kicks",
+      "set": {
+        "onPC": "KD +73"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Soten Ranka",
+      "set": {
+        "onHit": "HKD +18",
+        "onPC": "HKD +18"
+      }
+    }
+  ]
+}

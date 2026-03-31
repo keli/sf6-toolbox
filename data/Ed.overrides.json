@@ -1,0 +1,32 @@
+{
+  "character": "Ed",
+  "source": "manual-ai-from-conflicts-csv",
+  "notes": [
+    "Selected index-friendly values from Ed.conflicts.csv."
+  ],
+  "entries": [
+    {
+      "category": "normal",
+      "move": "Drive Impact: Turn Punch",
+      "set": {
+        "onHit": "KD +35",
+        "onPC": "HKD +104"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Hammer Blow",
+      "set": {
+        "startup": "18"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Parry",
+      "set": {
+        "active": "12",
+        "recovery": "33"
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "character": "Kimberly",
+  "source": "manual-ai-from-conflicts-csv",
+  "notes": [
+    "Selected index-friendly values from Kimberly.conflicts.csv (normal category)."
+  ],
+  "entries": [
+    {
+      "category": "normal",
+      "move": "Drive Impact: Steadfast Strike",
+      "set": {
+        "onHit": "KD +35",
+        "onPC": "HKD +104"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Shapeless State",
+      "set": {
+        "startup": "18"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Parry",
+      "set": {
+        "active": "12",
+        "recovery": "33"
+      }
+    }
+  ]
+}
