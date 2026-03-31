@@ -1098,7 +1098,9 @@
                 if (!tags.includes("tumble")) return false;
                 const kd = normField.kd || [];
                 if (!kd.length) return false;
-                const minKD = Math.min(...kd.map((k) => k.advantageMin ?? k.advantage));
+                const minKD = Math.min(
+                    ...kd.map((k) => k.advantageMin ?? k.advantage),
+                );
                 return normField.first > minKD;
             }
 
@@ -1127,11 +1129,24 @@
                             total = startup + active + (recovery || 0) - 1;
 
                         const knockdowns = [
-                            ...(isTumblePrimary(norm.onHit) ? [] : parseKDField(norm.onHit ?? mv.onHit, "normal")),
-                            ...(isTumblePrimary(norm.onPC) ? [] : parseKDField(norm.onPC ?? mv.onPC, "pc")),
+                            ...(isTumblePrimary(norm.onHit)
+                                ? []
+                                : parseKDField(
+                                      norm.onHit ?? mv.onHit,
+                                      "normal",
+                                  )),
+                            ...(isTumblePrimary(norm.onPC)
+                                ? []
+                                : parseKDField(norm.onPC ?? mv.onPC, "pc")),
                             ...parseKDField(mv.onCC, "cc"),
                         ];
                         const cmd = mv.numCmd || mv.plnCmd || moveKey;
+                        const atkLevel =
+                            mv.atkLvl == null ? "" : String(mv.atkLvl);
+                        const isThrowLike =
+                            atkLevel.toUpperCase() === "T" ||
+                            catName === "throw" ||
+                            catName === "command-grab";
                         moves.push({
                             name: mv.moveName || moveKey,
                             cmd,
@@ -1143,6 +1158,7 @@
                             onHit: parseInt1(norm.onHit ?? mv.onHit),
                             moveType: catName,
                             isAttack: mv.atkLvl != null,
+                            isThrowLike,
                             cancelTypes: mv.xx || [],
                             knockdowns,
                         });
@@ -1189,7 +1205,11 @@
                 const prefixPool = moves.filter(
                     (m) =>
                         m.moveType === "dash" ||
-                        (firstAny && m.isAttack && !m.cmd.startsWith("8")),
+                        (firstAny &&
+                            m.isAttack &&
+                            !m.isThrowLike &&
+                            !m.cmd.startsWith("8") &&
+                            m.knockdowns.length === 0),
                 );
                 const firstPool = firstAny
                     ? prefixPool
@@ -1563,7 +1583,11 @@
                     return;
                 }
                 const moves = extractMoves(currentCharData);
-                const kdMoves = moves.filter((m) => m.knockdowns.length > 0 && !m.name.includes("Drive Impact"));
+                const kdMoves = moves.filter(
+                    (m) =>
+                        m.knockdowns.length > 0 &&
+                        !m.name.includes("Drive Impact"),
+                );
                 sel.innerHTML =
                     `<option value="">${t("kd_move_all")}</option>` +
                     kdMoves
