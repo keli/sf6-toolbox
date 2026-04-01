@@ -46,6 +46,19 @@ function listStealableNormals(ob, normalButtons) {
     );
 }
 
+function listBlockStealableNormals(ob, normalButtons) {
+  if (ob == null || ob <= 0) return [];
+  // On block, plus frames let you challenge 4f mash with slower buttons.
+  return normalButtons
+    .filter((m) => m.startup <= ob + 3)
+    .sort(
+      (a, b) =>
+        (b.dmg ?? -1) - (a.dmg ?? -1) ||
+        a.startup - b.startup ||
+        a.cmd.localeCompare(b.cmd),
+    );
+}
+
 function buildNormalButtons(charData) {
   const byCmd = new Map();
   for (const m of extractMoves(charData)) {
@@ -90,6 +103,14 @@ function fmtHitFollowupTags(adv, normalButtons) {
   const c = fmtFollowupTag(adv + 2, normalButtons, "C");
   const pc = fmtFollowupTag(adv + 4, normalButtons, "PC");
   return `${h}${c}${pc}`;
+}
+
+function fmtBlockFollowupTag(ob, normalButtons) {
+  if (ob == null || ob <= 0) return "";
+  const moves = listBlockStealableNormals(ob, normalButtons);
+  if (!moves.length) return "";
+  const labels = moves.map((m) => m.cmd).join("/");
+  return ` <span title="${escapeAttr(labels)}" style="color:#f90;font-size:0.85em;cursor:default">B</span>`;
 }
 
 export function renderCharSelect(state) {
@@ -278,7 +299,7 @@ export function renderResults(state, results) {
       html += `<td>${r.activeFrameHit}/${r.meaty.active}${canDelayStr}</td>`;
       html += `<td><span class="stolen">+${stolen}</span></td>`;
       html += `<td>${totalStr}</td>`;
-      html += `<td>${fmtBlock(r.totalBlock)}${fmtFollowupTag(r.totalBlock, normalButtons, "B")}</td>`;
+      html += `<td>${fmtBlock(r.totalBlock)}${fmtBlockFollowupTag(r.totalBlock, normalButtons)}</td>`;
       html += "</tr>";
     }
 
