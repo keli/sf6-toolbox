@@ -34,11 +34,6 @@ function escapeAttr(text) {
     .replaceAll("\n", "&#10;");
 }
 
-function diffMoves(nowMoves, baseMoves) {
-  const baseCmds = new Set(baseMoves.map((m) => m.cmd));
-  return nowMoves.filter((m) => !baseCmds.has(m.cmd));
-}
-
 function listStealableNormals(ob, normalButtons) {
   if (ob == null) return [];
   return normalButtons
@@ -79,19 +74,26 @@ function buildNormalButtons(charData) {
   return [...byCmd.values()];
 }
 
-function fmtBlock(ob, rawOb, normalButtons) {
+function fmtBlock(ob) {
   if (ob == null) return '<span class="safe-zero">?</span>';
   const cls = ob > 0 ? "safe-plus" : ob < 0 ? "safe-minus" : "safe-zero";
-  const baseStealable =
-    rawOb != null ? listStealableNormals(rawOb, normalButtons) : [];
-  const currStealable =
-    rawOb != null ? listStealableNormals(ob, normalButtons) : [];
-  const extraStealable = diffMoves(currStealable, baseStealable);
-  const extraTooltip = extraStealable.map((m) => m.cmd).join("/");
-  const flipTag = extraTooltip
-    ? ` <span title="${escapeAttr(extraTooltip)}" style="color:#f90;font-size:0.85em">↑</span>`
-    : "";
-  return `<span class="${cls}">${ob >= 0 ? "+" : ""}${ob}</span>${flipTag}`;
+  return `<span class="${cls}">${ob >= 0 ? "+" : ""}${ob}</span>`;
+}
+
+function fmtFollowupTag(adv, normalButtons, marker) {
+  if (adv == null) return "";
+  const moves = listStealableNormals(adv, normalButtons);
+  if (!moves.length) return "";
+  const labels = moves.map((m) => m.cmd).join("/");
+  return ` <span title="${escapeAttr(labels)}" style="color:#f90;font-size:0.85em;cursor:default">${marker}</span>`;
+}
+
+function fmtHitFollowupTags(adv, normalButtons) {
+  if (adv == null) return "";
+  const h = fmtFollowupTag(adv, normalButtons, "H");
+  const c = fmtFollowupTag(adv + 2, normalButtons, "C");
+  const pc = fmtFollowupTag(adv + 4, normalButtons, "PC");
+  return `${h}${c}${pc}`;
 }
 
 export function renderCharSelect(state) {
@@ -249,19 +251,11 @@ export function renderResults(state, results) {
     visibleCount += sortedRows.length;
     for (const r of sortedRows) {
       const stolen = r.activeFrameHit - 1;
-      let hitTags = "";
-      if (r.totalAdv != null && r.meaty.onHit != null) {
-        const extraHitLabels = r.unlockedMoves.map((m) => m.cmd).join("/");
-        const extraTag = extraHitLabels
-          ? ` <span title="${escapeAttr(extraHitLabels)}" style="color:#f90;font-size:0.85em;cursor:default">↑</span>`
-          : "";
-        hitTags = extraTag;
-      }
 
       const totalStr = r.meaty.knockdowns.length
         ? `<span class="kd-adv-cell">${t(r.kdInfo.kdType === "HKD" ? "hkd_label" : "kd_label")}</span>`
         : r.totalAdv != null
-          ? `<span class="total-adv">+${r.totalAdv}</span>${hitTags}`
+          ? `<span class="total-adv">+${r.totalAdv}</span>${fmtHitFollowupTags(r.totalAdv, normalButtons)}`
           : "?";
 
       const delayStr =
@@ -281,7 +275,7 @@ export function renderResults(state, results) {
       html += `<td>${r.activeFrameHit}/${r.meaty.active}${canDelayStr}</td>`;
       html += `<td><span class="stolen">+${stolen}</span></td>`;
       html += `<td>${totalStr}</td>`;
-      html += `<td>${fmtBlock(r.totalBlock, r.meaty.onBlock, normalButtons)}</td>`;
+      html += `<td>${fmtBlock(r.totalBlock)}${fmtFollowupTag(r.totalBlock, normalButtons, "B")}</td>`;
       html += "</tr>";
     }
 
