@@ -1432,14 +1432,16 @@
 
                 const groups = new Map();
                 for (const r of results) {
-                    const key = `${r.kdInfo.kdType}|${r.kdInfo.advantageMin}|${r.kdInfo.advantageMax}`;
+                    const key = `${r.kdInfo.advantageMin}|${r.kdInfo.advantageMax}`;
                     if (!groups.has(key))
                         groups.set(key, {
                             kdInfo: r.kdInfo,
+                            kdTypes: new Set(),
                             sources: new Map(),
                             rows: [],
                         });
                     const g = groups.get(key);
+                    g.kdTypes.add(r.kdInfo.kdType);
                     const srcKey = `${r.kdMove.name}|${r.kdMove.cmd}|${r.kdInfo.hitType}`;
                     if (!g.sources.has(srcKey))
                         g.sources.set(srcKey, {
@@ -1467,7 +1469,7 @@
                 );
 
                 let html = "";
-                for (const { kdInfo, sources, rows } of sorted) {
+                for (const { kdInfo, kdTypes, sources, rows } of sorted) {
                     const moveMap = new Map();
                     for (const { move, hitType } of sources.values()) {
                         const k = `${move.name}|${move.cmd}`;
@@ -1492,11 +1494,15 @@
                     html += `<div class="kd-group${collapsed}">`;
                     html += `<div class="kd-header" onclick="this.parentElement.classList.toggle('collapsed')">`;
                     html += `${srcHtml} `;
+                    const kdTypeLabel =
+                        kdTypes.size > 1
+                            ? [...kdTypes].sort().join("/")
+                            : kdInfo.kdType;
                     const kdAdvText =
                         typeof kdInfo.advantageMax === "number" &&
                         kdInfo.advantageMax !== kdInfo.advantageMin
-                            ? `${kdInfo.kdType} +${kdInfo.advantageMin}~${kdInfo.advantageMax}`
-                            : `${kdInfo.kdType} +${kdInfo.advantageMin ?? kdInfo.advantage}`;
+                            ? `${kdTypeLabel} +${kdInfo.advantageMin}~${kdInfo.advantageMax}`
+                            : `${kdTypeLabel} +${kdInfo.advantageMin ?? kdInfo.advantage}`;
                     html += `<span class="kd-adv">${kdAdvText}</span>`;
                     html += `</div>`;
                     html += `<div class="kd-body"><table><thead><tr>`;
