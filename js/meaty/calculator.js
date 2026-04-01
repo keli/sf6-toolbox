@@ -8,8 +8,13 @@ function tryMeaty(
   results,
   minAdv,
   nonLightMoves,
+  opts,
 ) {
-  const S = meaty.startup;
+  const isDrLastPrefix = prefix[prefix.length - 1]?.cmd === "DR";
+  const drNormalBypassStartup =
+    isDrLastPrefix && meaty.moveType === "normal" && !meaty.cmd.startsWith("8");
+  // DR -> ground normals skip startup; treat it as 1f in this timeline model.
+  const S = drNormalBypassStartup ? 1 : meaty.startup;
   const A = meaty.active;
   if (S - 1 <= K && K <= S + A - 2) {
     const activeFrameHit = K - S + 2;
@@ -79,6 +84,21 @@ export function calcMeatys(moves, opts) {
         !m.cmd.startsWith("8") &&
         m.knockdowns.length === 0),
   );
+  if (opts.includeDrPrefix) {
+    prefixPool.push({
+      name: "Drive Rush",
+      cmd: "DR",
+      startup: 14,
+      active: 0,
+      recovery: 0,
+      total: 14,
+      onBlock: null,
+      onHit: null,
+      moveType: "dash",
+      isAttack: false,
+      knockdowns: [],
+    });
+  }
   const firstPool = firstAny
     ? prefixPool
     : prefixPool.filter((m) => !m.isAttack);
@@ -119,9 +139,13 @@ export function calcMeatys(moves, opts) {
               results,
               minAdv,
               nonLightMoves,
+              opts,
             );
           }
         }
+
+        // DR must be the last prefix step before the meaty button.
+        if (first.cmd === "DR") continue;
 
         if (maxPrefix >= 2) {
           for (const second of prefixPool) {
@@ -140,12 +164,14 @@ export function calcMeatys(moves, opts) {
                   results,
                   minAdv,
                   nonLightMoves,
+                  opts,
                 );
               }
             }
 
             if (maxPrefix >= 3) {
               for (const third of prefixPool) {
+                if (second.cmd === "DR") continue;
                 const K3 = K2 - third.total;
                 if (K3 <= 0) continue;
 
@@ -161,6 +187,7 @@ export function calcMeatys(moves, opts) {
                       results,
                       minAdv,
                       nonLightMoves,
+                      opts,
                     );
                   }
                 }

@@ -270,7 +270,14 @@ export function renderResults(state, results) {
 
       html += "<tr>";
       html += `<td>${fmtSeqWithFrames(r.prefix, r.meaty)}${delayStr}</td>`;
-      html += `<td>${r.meaty.startup}</td>`;
+      const drBypassStartup =
+        r.prefix[0]?.cmd === "DR" &&
+        r.meaty.moveType === "normal" &&
+        !r.meaty.cmd.startsWith("8");
+      const startupCell = drBypassStartup
+        ? `0 <span style="color:#888;font-size:0.85em">(${r.meaty.startup})</span>`
+        : `${r.meaty.startup}`;
+      html += `<td>${startupCell}</td>`;
       html += `<td>${r.meaty.active}</td>`;
       html += `<td>${r.activeFrameHit}/${r.meaty.active}${canDelayStr}</td>`;
       html += `<td><span class="stolen">+${stolen}</span></td>`;
