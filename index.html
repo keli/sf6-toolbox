@@ -1105,6 +1105,32 @@
                 return normField.first > minKD;
             }
 
+            function buildMoveSignature(mv) {
+                const kdSig = (mv.knockdowns || [])
+                    .map(
+                        (k) =>
+                            `${k.hitType}:${k.kdType}:${k.advantageMin ?? k.advantage}:${k.advantageMax ?? k.advantageMin ?? k.advantage}`,
+                    )
+                    .sort()
+                    .join(";");
+                const cancelSig = (mv.cancelTypes || [])
+                    .slice()
+                    .sort()
+                    .join(",");
+                return [
+                    mv.cmd,
+                    mv.startup,
+                    mv.active,
+                    mv.total,
+                    mv.onBlock,
+                    mv.onHit,
+                    mv.isAttack,
+                    mv.isThrowLike,
+                    cancelSig,
+                    kdSig,
+                ].join("|");
+            }
+
             function extractMoves(charData) {
                 const moves = [];
                 for (const [catName, catMoves] of Object.entries(
@@ -1181,7 +1207,15 @@
                         knockdowns: [],
                     });
                 }
-                return moves;
+
+                // Deduplicate identical move entries across mode buckets (e.g. Jamie drink levels)
+                // while keeping distinct frame-data variants.
+                const uniq = new Map();
+                for (const mv of moves) {
+                    const key = buildMoveSignature(mv);
+                    if (!uniq.has(key)) uniq.set(key, mv);
+                }
+                return [...uniq.values()];
             }
 
             function calcMeatys(moves, opts) {
@@ -1405,6 +1439,8 @@
 
             function renderResults(results) {
                 const el = document.getElementById("meaty-results");
+                const statusEl = document.getElementById("status");
+                const charName = document.getElementById("charSelect").value;
                 const effectiveOnly =
                     document.getElementById("effectiveOnly").checked;
                 const onBlockFlipped = (r) =>
@@ -1415,17 +1451,10 @@
                     results = results.filter(
                         (r) => r.onHitFlipped || onBlockFlipped(r),
                     );
-                const statusEl = document.getElementById("status");
-                if (statusEl.dataset.state === "result" && _lastResults) {
-                    const charName =
-                        document.getElementById("charSelect").value;
-                    statusEl.textContent = t(
-                        "status_result",
-                        charName,
-                        results.length,
-                    );
-                }
                 if (!results.length) {
+                    if (statusEl.dataset.state === "result" && _lastResults) {
+                        statusEl.textContent = t("status_result", charName, 0);
+                    }
                     el.innerHTML = `<div class="no-results">${t("no_results")}</div>`;
                     return;
                 }
@@ -1469,6 +1498,7 @@
                 );
 
                 let html = "";
+                let visibleCount = 0;
                 for (const { kdInfo, kdTypes, sources, rows } of sorted) {
                     const moveMap = new Map();
                     for (const { move, hitType } of sources.values()) {
@@ -1522,6 +1552,7 @@
                             b.activeFrameHit - a.activeFrameHit ||
                             a.prefix.length - b.prefix.length,
                     );
+                    visibleCount += sortedRows.length;
                     for (const r of sortedRows) {
                         const stolen = r.activeFrameHit - 1;
                         let flipTag = "";
@@ -1556,6 +1587,13 @@
                         html += `</tr>`;
                     }
                     html += `</tbody></table></div></div>`;
+                }
+                if (statusEl.dataset.state === "result" && _lastResults) {
+                    statusEl.textContent = t(
+                        "status_result",
+                        charName,
+                        visibleCount,
+                    );
                 }
                 el.innerHTML = html;
             }
@@ -1701,11 +1739,6 @@
                 setTimeout(() => {
                     const results = calcMeatys(moves, opts);
                     _lastResults = { list: results, total: results.length };
-                    statusEl.textContent = t(
-                        "status_result",
-                        charName,
-                        results.length,
-                    );
                     statusEl.dataset.state = "result";
                     renderResults(results);
                 }, 10);
