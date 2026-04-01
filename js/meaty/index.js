@@ -9,6 +9,36 @@ import {
 } from "./renderer.js";
 
 const state = createMeatyState();
+const LAST_CHAR_KEY = "meaty:lastChar";
+
+const DEFAULT_OPTS = {
+  kdMove: "",
+  hitType: "both",
+  maxPrefix: "2",
+  minAdv: "4",
+  maxDelay: "0",
+  safeOnly: true,
+  cancelOnly: true,
+  noSpKd: true,
+  firstAny: false,
+  includeDrFirst: true,
+  effectiveOnly: true,
+};
+
+function applyDefaultOptions() {
+  document.getElementById("kdMoveSelect").value = DEFAULT_OPTS.kdMove;
+  document.getElementById("hitType").value = DEFAULT_OPTS.hitType;
+  document.getElementById("maxPrefix").value = DEFAULT_OPTS.maxPrefix;
+  document.getElementById("minAdv").value = DEFAULT_OPTS.minAdv;
+  document.getElementById("maxDelay").value = DEFAULT_OPTS.maxDelay;
+  document.getElementById("safeOnly").checked = DEFAULT_OPTS.safeOnly;
+  document.getElementById("cancelOnly").checked = DEFAULT_OPTS.cancelOnly;
+  document.getElementById("noSpKd").checked = DEFAULT_OPTS.noSpKd;
+  document.getElementById("firstAny").checked = DEFAULT_OPTS.firstAny;
+  document.getElementById("includeDrFirst").checked =
+    DEFAULT_OPTS.includeDrFirst;
+  document.getElementById("effectiveOnly").checked = DEFAULT_OPTS.effectiveOnly;
+}
 
 async function loadDataAndInitUi() {
   const statusEl = document.getElementById("status");
@@ -16,10 +46,16 @@ async function loadDataAndInitUi() {
     await loadData(state, async () => {
       renderCharSelect(state);
       const sel = document.getElementById("charSelect");
+      const savedChar = localStorage.getItem(LAST_CHAR_KEY);
       const ryuIdx = state.charList.indexOf("Ryu");
-      if (ryuIdx >= 0) sel.selectedIndex = ryuIdx;
+      if (savedChar && state.charList.includes(savedChar)) {
+        sel.value = savedChar;
+      } else if (ryuIdx >= 0) {
+        sel.selectedIndex = ryuIdx;
+      }
 
       const selected = sel.value || state.charList[0];
+      localStorage.setItem(LAST_CHAR_KEY, selected);
       state.currentCharData = await ensureCharData(state, selected);
       renderKdMoveSelect(state, selected);
     });
@@ -97,18 +133,24 @@ function initResultToggle() {
   });
 }
 
+async function resetOptions() {
+  applyDefaultOptions();
+  state.lastResults = null;
+  await calculate();
+}
+
 export async function initMeaty() {
   document.getElementById("calcBtn").addEventListener("click", calculate);
+  document.getElementById("resetBtn").addEventListener("click", resetOptions);
   document.getElementById("effectiveOnly").addEventListener("change", () => {
     if (state.lastResults) renderResults(state, state.lastResults.list);
   });
   document.getElementById("charSelect").addEventListener("change", async () => {
+    const charName = document.getElementById("charSelect").value;
+    localStorage.setItem(LAST_CHAR_KEY, charName);
     state.lastResults = null;
-    state.currentCharData = await ensureCharData(
-      state,
-      document.getElementById("charSelect").value,
-    );
-    renderKdMoveSelect(state, document.getElementById("charSelect").value);
+    state.currentCharData = await ensureCharData(state, charName);
+    renderKdMoveSelect(state, charName);
     await calculate();
   });
 
