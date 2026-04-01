@@ -1,0 +1,639 @@
+{
+  "character": "Ed",
+  "fetchedAt": "2026-04-01T13:11:52.622027+00:00",
+  "moveCount": 70,
+  "moves": [
+    {
+      "active": "4-6",
+      "category": "Normal Moves",
+      "name": "Standing Light Punch",
+      "onBlock": "-1",
+      "onHit": "4",
+      "recovery": "7",
+      "startup": "4"
+    },
+    {
+      "active": "6-7",
+      "category": "Normal Moves",
+      "name": "Standing Light Kick",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "13",
+      "startup": "6"
+    },
+    {
+      "active": "7-9",
+      "category": "Normal Moves",
+      "name": "Standing Medium Punch",
+      "onBlock": "-1",
+      "onHit": "6",
+      "recovery": "15",
+      "startup": "7"
+    },
+    {
+      "active": "10-11",
+      "category": "Normal Moves",
+      "name": "Standing Medium Kick",
+      "onBlock": "-5",
+      "onHit": "0",
+      "recovery": "16",
+      "startup": "10"
+    },
+    {
+      "active": "10-13",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Punch",
+      "onBlock": "-2",
+      "onHit": "5",
+      "recovery": "18",
+      "startup": "10"
+    },
+    {
+      "active": "10-12",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Kick",
+      "onBlock": "4",
+      "onHit": "8",
+      "recovery": "12",
+      "startup": "10"
+    },
+    {
+      "active": "4-6",
+      "category": "Normal Moves",
+      "name": "Crouching Light Punch",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "10",
+      "startup": "4"
+    },
+    {
+      "active": "5-6",
+      "category": "Normal Moves",
+      "name": "Crouching Light Kick",
+      "onBlock": "-4",
+      "onHit": "2",
+      "recovery": "12",
+      "startup": "5"
+    },
+    {
+      "active": "8-10",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Punch",
+      "onBlock": "-6",
+      "onHit": "2",
+      "recovery": "19",
+      "startup": "8"
+    },
+    {
+      "active": "9-10",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Kick",
+      "onBlock": "-1",
+      "onHit": "8",
+      "recovery": "16",
+      "startup": "9"
+    },
+    {
+      "active": "10-13",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Punch",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "10"
+    },
+    {
+      "active": "12-13",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Kick",
+      "onBlock": "-6",
+      "onHit": "-1",
+      "recovery": "19",
+      "startup": "12"
+    },
+    {
+      "active": "5-9",
+      "category": "Normal Moves",
+      "name": "Jumping Light Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "8-10",
+      "category": "Normal Moves",
+      "name": "Jumping Light Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "8-13",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "10-11",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "9-13",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "8-9",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "39-53",
+      "category": "Unique Attacks",
+      "name": "Psycho Knuckle(Lv1)",
+      "onBlock": "*-2",
+      "onHit": "D",
+      "recovery": "35",
+      "startup": "39"
+    },
+    {
+      "active": "69-83",
+      "category": "Unique Attacks",
+      "name": "Psycho Knuckle(Lv2)",
+      "onBlock": "4",
+      "onHit": "D",
+      "recovery": "35",
+      "startup": "69"
+    },
+    {
+      "active": "17-19",
+      "category": "Unique Attacks",
+      "name": "Cobra Punch",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "21",
+      "startup": "17"
+    },
+    {
+      "active": "7-9",
+      "category": "Unique Attacks",
+      "name": "Flicker Combination(2)",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "15",
+      "startup": "7"
+    },
+    {
+      "active": "7-9",
+      "category": "Unique Attacks",
+      "name": "Flicker Combination(3)",
+      "onBlock": "-8",
+      "onHit": "1",
+      "recovery": "16",
+      "startup": "7"
+    },
+    {
+      "active": "13-14",
+      "category": "Unique Attacks",
+      "name": "Body Blow Combination",
+      "onBlock": "-8",
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "13"
+    },
+    {
+      "active": "7-8",
+      "category": "Unique Attacks",
+      "name": "Hitman Combination(2)",
+      "onBlock": "-6",
+      "onHit": "0",
+      "recovery": "20",
+      "startup": "7"
+    },
+    {
+      "active": "11-15",
+      "category": "Unique Attacks",
+      "name": "Hitman Combination(3)",
+      "onBlock": "-11",
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "11"
+    },
+    {
+      "active": "12-16",
+      "category": "Unique Attacks",
+      "name": "Low Smash Combination",
+      "onBlock": "-8",
+      "onHit": "D",
+      "recovery": "19",
+      "startup": "12"
+    },
+    {
+      "active": "14-25",
+      "category": "Special Moves",
+      "name": "Psycho Spark",
+      "onBlock": "-5",
+      "onHit": "3",
+      "recovery": "8",
+      "startup": "14"
+    },
+    {
+      "active": "14-25",
+      "category": "Special Moves",
+      "name": "OD Psycho Spark",
+      "onBlock": "-2",
+      "onHit": "D",
+      "recovery": "7",
+      "startup": "14"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "L Psycho Shoot",
+      "onBlock": "-8",
+      "onHit": "3",
+      "recovery": "42 total frames",
+      "startup": "12"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "M Psycho Shoot",
+      "onBlock": "-8",
+      "onHit": "3",
+      "recovery": "42 total frames",
+      "startup": "12"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "H Psycho Shoot",
+      "onBlock": "-8",
+      "onHit": "3",
+      "recovery": "42 total frames",
+      "startup": "12"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD L Psycho Shoot",
+      "onBlock": "-2",
+      "onHit": "D",
+      "recovery": "40 total frames",
+      "startup": "12"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD M Psycho Shoot",
+      "onBlock": "-2",
+      "onHit": "D",
+      "recovery": "40 total frames",
+      "startup": "12"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD H Psycho Shoot",
+      "onBlock": "-2",
+      "onHit": "D",
+      "recovery": "40 total frames",
+      "startup": "12"
+    },
+    {
+      "active": "10-17",
+      "category": "Special Moves",
+      "name": "L Psycho Uppercut",
+      "onBlock": "-13",
+      "onHit": "D",
+      "recovery": "28",
+      "startup": "10"
+    },
+    {
+      "active": "14-19",
+      "category": "Special Moves",
+      "name": "M Psycho Uppercut",
+      "onBlock": "-20",
+      "onHit": "D",
+      "recovery": "32",
+      "startup": "14"
+    },
+    {
+      "active": "16-21",
+      "category": "Special Moves",
+      "name": "H Psycho Uppercut",
+      "onBlock": "-21",
+      "onHit": "D",
+      "recovery": "33",
+      "startup": "16"
+    },
+    {
+      "active": "13-18",
+      "category": "Special Moves",
+      "name": "OD Psycho Uppercut",
+      "onBlock": "-28",
+      "onHit": "D",
+      "recovery": "36",
+      "startup": "13"
+    },
+    {
+      "active": "11-29 11-13, 17-19, 26-29",
+      "category": "Special Moves",
+      "name": "L Psycho Blitz",
+      "onBlock": "-5",
+      "onHit": "3",
+      "recovery": "14",
+      "startup": "11"
+    },
+    {
+      "active": "13-36 13-14, 22-24, 34-36",
+      "category": "Special Moves",
+      "name": "M Psycho Blitz",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "16",
+      "startup": "13"
+    },
+    {
+      "active": "15-37 15-16, 28-29, 36-37",
+      "category": "Special Moves",
+      "name": "H Psycho Blitz",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "15"
+    },
+    {
+      "active": "13-44 13, 18, 22, 26, 30, 34,43-44",
+      "category": "Special Moves",
+      "name": "OD Psycho Blitz",
+      "onBlock": "-4",
+      "onHit": "D",
+      "recovery": "20",
+      "startup": "13"
+    },
+    {
+      "active": "16-19",
+      "category": "Special Moves",
+      "name": "L Psycho Flicker",
+      "onBlock": "-6",
+      "onHit": "1",
+      "recovery": "26",
+      "startup": "16"
+    },
+    {
+      "active": "31-35",
+      "category": "Special Moves",
+      "name": "L Psycho Flicker (Charged)",
+      "onBlock": "4",
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "31"
+    },
+    {
+      "active": "20-23",
+      "category": "Special Moves",
+      "name": "M Psycho Flicker",
+      "onBlock": "-6",
+      "onHit": "3",
+      "recovery": "26",
+      "startup": "20"
+    },
+    {
+      "active": "35-39",
+      "category": "Special Moves",
+      "name": "M Psycho Flicker (Charged)",
+      "onBlock": "4",
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "35"
+    },
+    {
+      "active": "17-24",
+      "category": "Special Moves",
+      "name": "H Psycho Flicker",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "18",
+      "startup": "17"
+    },
+    {
+      "active": "35-44",
+      "category": "Special Moves",
+      "name": "H Psycho Flicker (Charged)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "19",
+      "startup": "35"
+    },
+    {
+      "active": "25-28",
+      "category": "Special Moves",
+      "name": "OD Psycho Flicker",
+      "onBlock": "4",
+      "onHit": "D",
+      "recovery": "32",
+      "startup": "25"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "Kill Rush (Forward)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "31 total frames",
+      "startup": null
+    },
+    {
+      "active": "11-13",
+      "category": "Special Moves",
+      "name": "Kill Switch Break",
+      "onBlock": "-4",
+      "onHit": "D",
+      "recovery": "20",
+      "startup": "11"
+    },
+    {
+      "active": "11-13",
+      "category": "Special Moves",
+      "name": "Kill Switch Chaser",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "20",
+      "startup": "11"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "Kill Rush (Backward)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "31 total frames",
+      "startup": null
+    },
+    {
+      "active": "13- 67 13-14, 22-23, 40-41, 45-46, 63, 65, 67",
+      "category": "Super Arts",
+      "name": "SA1 Psycho Storm",
+      "onBlock": "-32",
+      "onHit": "D",
+      "recovery": "56",
+      "startup": "13"
+    },
+    {
+      "active": null,
+      "category": "Super Arts",
+      "name": "SA2 Psycho Cannon",
+      "onBlock": "65",
+      "onHit": "D",
+      "recovery": "35 total frames",
+      "startup": "8"
+    },
+    {
+      "active": "10-19",
+      "category": "Super Arts",
+      "name": "SA3 Psycho Chamber",
+      "onBlock": "-49",
+      "onHit": "D",
+      "recovery": "64",
+      "startup": "10"
+    },
+    {
+      "active": "10-19",
+      "category": "Super Arts",
+      "name": "CA Psycho Chamber",
+      "onBlock": "-49",
+      "onHit": "D",
+      "recovery": "64",
+      "startup": "10"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Face Buster",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Rib Crusher",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Forward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "19 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Backward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "23 total frames",
+      "startup": null
+    },
+    {
+      "active": "26-27",
+      "category": "Common Moves",
+      "name": "Drive Impact (Turn Punch)",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "35",
+      "startup": "26"
+    },
+    {
+      "active": "20-22",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while blocking): Hammer Blow",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "20"
+    },
+    {
+      "active": "18-20",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while recovering): Hammer Blow",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "18"
+    },
+    {
+      "active": "[*2] 1-12",
+      "category": "Common Moves",
+      "name": "Drive Parry",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "33",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (strike)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "1",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (projectile)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "10",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Parry Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "45 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Cancel Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "46 total frames",
+      "startup": null
+    }
+  ],
+  "slug": "ed",
+  "url": "https://www.streetfighter.com/6/character/ed/frame"
+}

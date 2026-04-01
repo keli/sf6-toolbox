@@ -1,0 +1,729 @@
+{
+  "character": "Guile",
+  "fetchedAt": "2026-04-01T13:12:02.868460+00:00",
+  "moveCount": 80,
+  "moves": [
+    {
+      "active": "5-7",
+      "category": "Normal Moves",
+      "name": "Standing Light Punch",
+      "onBlock": "-2",
+      "onHit": "4",
+      "recovery": "7",
+      "startup": "5"
+    },
+    {
+      "active": "5-6",
+      "category": "Normal Moves",
+      "name": "Standing Light Kick",
+      "onBlock": "-1",
+      "onHit": "3",
+      "recovery": "12",
+      "startup": "5"
+    },
+    {
+      "active": "7-9",
+      "category": "Normal Moves",
+      "name": "Standing Medium Punch",
+      "onBlock": "0",
+      "onHit": "6",
+      "recovery": "15",
+      "startup": "7"
+    },
+    {
+      "active": "7-11",
+      "category": "Normal Moves",
+      "name": "Standing Medium Kick",
+      "onBlock": "-4",
+      "onHit": "1",
+      "recovery": "18",
+      "startup": "7"
+    },
+    {
+      "active": "7-9",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Punch",
+      "onBlock": "-6",
+      "onHit": "-1",
+      "recovery": "23",
+      "startup": "7"
+    },
+    {
+      "active": "13-15",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Kick",
+      "onBlock": "-4",
+      "onHit": "4",
+      "recovery": "21",
+      "startup": "13"
+    },
+    {
+      "active": "4-6",
+      "category": "Normal Moves",
+      "name": "Crouching Light Punch",
+      "onBlock": "-2",
+      "onHit": "5",
+      "recovery": "8",
+      "startup": "4"
+    },
+    {
+      "active": "5-6",
+      "category": "Normal Moves",
+      "name": "Crouching Light Kick",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "12",
+      "startup": "5"
+    },
+    {
+      "active": "6-8",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Punch",
+      "onBlock": "-2",
+      "onHit": "4",
+      "recovery": "13",
+      "startup": "6"
+    },
+    {
+      "active": "8-10",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Kick",
+      "onBlock": "-5",
+      "onHit": "4",
+      "recovery": "18",
+      "startup": "8"
+    },
+    {
+      "active": "9-13",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Punch",
+      "onBlock": "-9",
+      "onHit": "0",
+      "recovery": "20",
+      "startup": "9"
+    },
+    {
+      "active": "9-29 9-10, 27-29",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Kick",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "21",
+      "startup": "9"
+    },
+    {
+      "active": "4-13",
+      "category": "Normal Moves",
+      "name": "Jumping Light Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "4"
+    },
+    {
+      "active": "6-15",
+      "category": "Normal Moves",
+      "name": "Jumping Light Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "7-9",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "7-13",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "9-12",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "10-14",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "20-22",
+      "category": "Unique Attacks",
+      "name": "Full Bullet Magnum",
+      "onBlock": "-3",
+      "onHit": "2",
+      "recovery": "19",
+      "startup": "20"
+    },
+    {
+      "active": "9-11",
+      "category": "Unique Attacks",
+      "name": "Burning Straight",
+      "onBlock": "-4",
+      "onHit": "1",
+      "recovery": "21",
+      "startup": "9"
+    },
+    {
+      "active": "16-18",
+      "category": "Unique Attacks",
+      "name": "Spinning Back Knuckle",
+      "onBlock": "3",
+      "onHit": "5",
+      "recovery": "20",
+      "startup": "16"
+    },
+    {
+      "active": "8-11",
+      "category": "Unique Attacks",
+      "name": "Knee Bazooka",
+      "onBlock": "-4",
+      "onHit": "0",
+      "recovery": "15",
+      "startup": "8"
+    },
+    {
+      "active": "11-13",
+      "category": "Unique Attacks",
+      "name": "Rolling Sobat",
+      "onBlock": "-6",
+      "onHit": "3",
+      "recovery": "18",
+      "startup": "11"
+    },
+    {
+      "active": "11-13",
+      "category": "Unique Attacks",
+      "name": "Rolling Sobat",
+      "onBlock": "-6",
+      "onHit": "3",
+      "recovery": "18",
+      "startup": "11"
+    },
+    {
+      "active": "17-19",
+      "category": "Unique Attacks",
+      "name": "Reverse Spin Kick",
+      "onBlock": "-8",
+      "onHit": "-1",
+      "recovery": "26",
+      "startup": "17"
+    },
+    {
+      "active": "10-12",
+      "category": "Unique Attacks",
+      "name": "Guile High Kick",
+      "onBlock": "-9",
+      "onHit": "0",
+      "recovery": "23",
+      "startup": "10"
+    },
+    {
+      "active": "16-18",
+      "category": "Unique Attacks",
+      "name": "Recoil Cannon",
+      "onBlock": "-9",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "16"
+    },
+    {
+      "active": "12-14",
+      "category": "Unique Attacks",
+      "name": "Double Shot",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "16",
+      "startup": "12"
+    },
+    {
+      "active": "20-22",
+      "category": "Unique Attacks",
+      "name": "Drake Fang",
+      "onBlock": "-5",
+      "onHit": "1",
+      "recovery": "21",
+      "startup": "20"
+    },
+    {
+      "active": "10-12",
+      "category": "Unique Attacks",
+      "name": "Phantom Cutter",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "25",
+      "startup": "10"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "L Sonic Boom",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "40 total frames",
+      "startup": "10"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "(Perfect timing) L Sonic Boom",
+      "onBlock": "-3",
+      "onHit": "4",
+      "recovery": "40 total frames",
+      "startup": "10"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "M Sonic Boom",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "40 total frames",
+      "startup": "10"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "(Perfect timing) M Sonic Boom",
+      "onBlock": "-3",
+      "onHit": "4",
+      "recovery": "40 total frames",
+      "startup": "10"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "H Sonic Boom",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "40 total frames",
+      "startup": "10"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "(Perfect timing) H Sonic Boom",
+      "onBlock": "-3",
+      "onHit": "4",
+      "recovery": "40 total frames",
+      "startup": "10"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD Sonic Boom",
+      "onBlock": "3",
+      "onHit": null,
+      "recovery": "38 total frames",
+      "startup": "10"
+    },
+    {
+      "active": "5-10",
+      "category": "Special Moves",
+      "name": "L Somersault Kick",
+      "onBlock": "-30",
+      "onHit": "D",
+      "recovery": "26+15 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "5-10",
+      "category": "Special Moves",
+      "name": "(Perfect timing) L Somersault Kick",
+      "onBlock": "-30",
+      "onHit": "D",
+      "recovery": "26+15 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "6-11",
+      "category": "Special Moves",
+      "name": "M Somersault Kick",
+      "onBlock": "-31",
+      "onHit": "D",
+      "recovery": "27+15 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "6-11",
+      "category": "Special Moves",
+      "name": "(Perfect timing) M Somersault Kick",
+      "onBlock": "-31",
+      "onHit": "D",
+      "recovery": "27+15 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "7-12",
+      "category": "Special Moves",
+      "name": "H Somersault Kick",
+      "onBlock": "-32",
+      "onHit": "D",
+      "recovery": "28+15 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "7-12",
+      "category": "Special Moves",
+      "name": "(Perfect timing) H Somersault Kick",
+      "onBlock": "-32",
+      "onHit": "D",
+      "recovery": "28+15 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "6-11",
+      "category": "Special Moves",
+      "name": "OD Somersault Kick",
+      "onBlock": "-33",
+      "onHit": "D",
+      "recovery": "26+20 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "16-60",
+      "category": "Special Moves",
+      "name": "L Sonic Blade",
+      "onBlock": "-4",
+      "onHit": "-3",
+      "recovery": "42 total frames",
+      "startup": "16"
+    },
+    {
+      "active": "21-105",
+      "category": "Special Moves",
+      "name": "M Sonic Blade",
+      "onBlock": "-7",
+      "onHit": "-6",
+      "recovery": "50 total frames",
+      "startup": "21"
+    },
+    {
+      "active": "31-130",
+      "category": "Special Moves",
+      "name": "H Sonic Blade",
+      "onBlock": "-1",
+      "onHit": "1",
+      "recovery": "54 total frames",
+      "startup": "31"
+    },
+    {
+      "active": "15-114",
+      "category": "Special Moves",
+      "name": "OD L Sonic Blade",
+      "onBlock": "-4",
+      "onHit": "D",
+      "recovery": "39 total frames",
+      "startup": "15"
+    },
+    {
+      "active": "15-114",
+      "category": "Special Moves",
+      "name": "OD M Sonic Blade",
+      "onBlock": "-4",
+      "onHit": "D",
+      "recovery": "39 total frames",
+      "startup": "15"
+    },
+    {
+      "active": "15-114",
+      "category": "Special Moves",
+      "name": "OD H Sonic Blade",
+      "onBlock": "-4",
+      "onHit": "D",
+      "recovery": "39 total frames",
+      "startup": "15"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "L Sonic Cross",
+      "onBlock": "-1",
+      "onHit": "D",
+      "recovery": "38 total frames",
+      "startup": "10"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "(Perfect timing)L Sonic Cross",
+      "onBlock": "-1",
+      "onHit": "D",
+      "recovery": "38 total frames",
+      "startup": "10"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "M Sonic Cross",
+      "onBlock": "-1",
+      "onHit": "D",
+      "recovery": "38 total frames",
+      "startup": "10"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "(Perfect timing)M Sonic Cross",
+      "onBlock": "-1",
+      "onHit": "D",
+      "recovery": "38 total frames",
+      "startup": "10"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "H Sonic Cross",
+      "onBlock": "-1",
+      "onHit": "D",
+      "recovery": "38 total frames",
+      "startup": "10"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "(Perfect timing)H Sonic Cross",
+      "onBlock": "-1",
+      "onHit": "D",
+      "recovery": "38 total frames",
+      "startup": "10"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD Sonic Cross1",
+      "onBlock": "6",
+      "onHit": "D",
+      "recovery": "38 total frames",
+      "startup": "10"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD Sonic Cross2",
+      "onBlock": "6",
+      "onHit": "D",
+      "recovery": "38 total frames",
+      "startup": "10"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "Sonic Break(Single shot)",
+      "onBlock": "-2",
+      "onHit": "2",
+      "recovery": "36 total frames",
+      "startup": "11"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "Sonic Break(Variation)",
+      "onBlock": "-2",
+      "onHit": "2",
+      "recovery": "*36 total frames",
+      "startup": "11"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD Sonic Break",
+      "onBlock": "3",
+      "onHit": "D",
+      "recovery": "35 total frames",
+      "startup": "11"
+    },
+    {
+      "active": "7-58",
+      "category": "Super Arts",
+      "name": "SA1 Sonic Hurricane(Up)",
+      "onBlock": "-2",
+      "onHit": null,
+      "recovery": "75 total frames",
+      "startup": "7"
+    },
+    {
+      "active": "8-58",
+      "category": "Super Arts",
+      "name": "SA1 Sonic Hurricane(Side)",
+      "onBlock": "-26",
+      "onHit": "D",
+      "recovery": "89 total frames",
+      "startup": "8"
+    },
+    {
+      "active": null,
+      "category": "Super Arts",
+      "name": "SA2 Solid Puncher",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "6 total frames",
+      "startup": null
+    },
+    {
+      "active": "9-14",
+      "category": "Super Arts",
+      "name": "SA3 Crossfire Somersault",
+      "onBlock": "-59",
+      "onHit": "D",
+      "recovery": "30+40 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "9-14",
+      "category": "Super Arts",
+      "name": "CA Crossfire Somersault",
+      "onBlock": "-59",
+      "onHit": "D",
+      "recovery": "30+40 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Dragon Suplex",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Judo Throw",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Flying Mare",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Flying Buster Drop",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Forward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "21 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Backward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "23 total frames",
+      "startup": null
+    },
+    {
+      "active": "26-27",
+      "category": "Common Moves",
+      "name": "Drive Impact: Blitz Combination",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "35",
+      "startup": "26"
+    },
+    {
+      "active": "20-22",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while blocking): Strike Eagle",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "20"
+    },
+    {
+      "active": "18-20",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while recovering): Strike Eagle",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "18"
+    },
+    {
+      "active": "[*2] 1-12",
+      "category": "Common Moves",
+      "name": "Drive Parry",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "33",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (strike)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "1",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (projectile)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "10",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Parry Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "45 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Cancel Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "46 total frames",
+      "startup": null
+    }
+  ],
+  "slug": "guile",
+  "url": "https://www.streetfighter.com/6/character/guile/frame"
+}

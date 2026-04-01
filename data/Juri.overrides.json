@@ -1,95 +1,161 @@
 {
   "character": "Juri",
-  "source": "manual-ai-from-conflicts-csv",
-  "notes": [
-    "Manually reviewed Juri.conflicts.csv line by line.",
-    "Applied stable overrides for normal category in this pass.",
-    "Preserved SuperCombo/FAT-style range and variant semantics where present."
-  ],
   "entries": [
-    { "category": "normal", "move": "Ankensatsu", "set": { "onBlock": "-8" } },
     {
       "category": "normal",
-      "move": "Drive Impact: Sekkan Kick",
+      "move": "> OD Shiren-sen",
       "set": {
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+        "recovery": "7 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "> Shiren-sen",
+      "set": {
+        "recovery": "12 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Crouch MP",
+      "set": {
+        "recovery": "14"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Death Crest 2",
+      "set": {
+        "recovery": "19",
+        "startup": "12"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Kaita Raid",
-      "set": { "startup": "18" }
-    },
-    {
-      "category": "normal",
-      "move": "Go Ohsatsu",
-      "set": { "onHit": "KD +37", "onBlock": "-12", "onPC": "KD +37" }
-    },
-    {
-      "category": "normal",
-      "move": "HP Tenserin",
-      "set": { "recovery": "24+14 land" }
-    },
-    {
-      "category": "normal",
-      "move": "Kaisen Dankai Raku",
-      "set": { "onHit": "HKD +20", "onPC": "HKD +20" }
-    },
-    {
-      "category": "normal",
-      "move": "Korenzan",
-      "set": { "startup": "10(19)" }
-    },
-    {
-      "category": "normal",
-      "move": "MP Tenserin",
-      "set": { "recovery": "24+14 land" }
-    },
-    {
-      "category": "normal",
-      "move": "Neutral Jump HK",
-      "set": { "onHit": "11(+15)", "onBlock": "7(+11)", "onPC": "15(+19)" }
-    },
-    {
-      "category": "normal",
-      "move": "OD Ankensatsu",
-      "set": { "onBlock": "-8" }
-    },
-    {
-      "category": "normal",
-      "move": "OD Tenserin",
-      "set": { "recovery": "32+19 land" }
-    },
-    {
-      "category": "normal",
-      "move": "Renko Kicks",
-      "set": { "startup": "15(23)" }
-    },
-    {
-      "category": "normal",
-      "move": "Sakkai Fuhazan (0 stock)",
       "set": {
-        "recovery": "201 total",
-        "onHit": "KD +26(+49)",
-        "onPC": "KD +26(+49)"
+        "recovery": "33"
       }
     },
     {
       "category": "normal",
-      "move": "Shadow Kick Throw",
-      "set": { "onPC": "HKD +18" }
+      "move": "HK Fuhajin",
+      "set": {
+        "recovery": "19"
+      }
     },
     {
       "category": "normal",
-      "move": "Stand HK",
-      "set": { "onHit": "+2(+5)", "onPC": "KD +42(+45) Launch" }
+      "move": "Jump HK",
+      "set": {
+        "recovery": "3 land"
+      }
     },
-    { "category": "normal", "move": "Stand MK", "set": { "startup": "5(8)" } }
-  ]
+    {
+      "category": "normal",
+      "move": "Jump HP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Korenzan",
+      "set": {
+        "startup": "10"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "LK Fuhajin",
+      "set": {
+        "recovery": "*21"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Neutral Jump HK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Shiku-sen",
+      "set": {
+        "recovery": "18 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Renko Kicks",
+      "set": {
+        "recovery": "*20",
+        "startup": "15"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Senkai Kick",
+      "set": {
+        "recovery": "*23"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Shiku-sen",
+      "set": {
+        "recovery": "18 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Stand MK",
+      "set": {
+        "startup": "5"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Zanka-sen",
+      "set": {
+        "recovery": "3 land"
+      }
+    }
+  ],
+  "generatedAt": "2026-04-01T13:12:11.589337+00:00",
+  "notes": [
+    "Auto-generated from official SF6 frame pages and FAT comparison.",
+    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+  ],
+  "source": "official-streetfighter-com-frame-vs-fat",
+  "sourceUrl": "https://www.streetfighter.com/6/character/juri/frame"
 }

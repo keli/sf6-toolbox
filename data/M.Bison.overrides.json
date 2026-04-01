@@ -1,112 +1,153 @@
 {
   "character": "M.Bison",
-  "source": "manual-ai-from-conflicts-csv",
-  "notes": [
-    "Manually reviewed M.Bison.conflicts.csv line by line.",
-    "Preserved SuperCombo/FAT-style range and variant semantics where present."
-  ],
   "entries": [
-    { "category": "normal", "move": "Crouch HK", "set": { "onHit": "KD +29" } },
     {
       "category": "normal",
-      "move": "Drive Impact: Hell Twist",
+      "move": "Crouch MP",
       "set": {
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+        "recovery": "14"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Devil Reverse",
+      "set": {
+        "startup": "16"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Hell Drive",
-      "set": { "startup": "18" }
-    },
-    {
-      "category": "normal",
-      "move": "Final Psycho Crusher",
-      "set": { "onHit": "KD +0(+6)", "onPC": "KD +0(+6)" }
-    },
-    {
-      "category": "normal",
-      "move": "HK Double Knee Press",
-      "set": { "onHit": "+3(+4)", "onPC": "+7(+8)" }
-    },
-    {
-      "category": "normal",
-      "move": "HP Backfist Combo",
       "set": {
-        "active": "3(10)5,1",
-        "recovery": "25",
-        "onHit": "KD +49",
-        "onBlock": "+9",
-        "onPC": "KD +49"
+        "recovery": "33"
       }
     },
     {
       "category": "normal",
-      "move": "Hover Kick",
-      "set": { "onHit": "KD +25(+34)", "onPC": "HKD +41(+50)" }
+      "move": "HK Double Knee Press",
+      "set": {
+        "recovery": "20"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Head Press",
+      "set": {
+        "startup": "15"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Hell Attack",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MP",
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
       "move": "LK Double Knee Press",
-      "set": { "onHit": "+2(+3)", "onPC": "+6(+7)" }
+      "set": {
+        "recovery": "20"
+      }
     },
     {
       "category": "normal",
       "move": "LP Backfist Combo",
       "set": {
-        "active": "2(10)5,1",
-        "recovery": "24",
-        "onHit": "KD +42",
-        "onBlock": "+9",
-        "onPC": "KD +42"
+        "recovery": "25"
       }
     },
     {
       "category": "normal",
       "move": "MK Double Knee Press",
-      "set": { "onHit": "+3(+4)", "onPC": "+7(+8)" }
+      "set": {
+        "recovery": "20"
+      }
     },
     {
       "category": "normal",
       "move": "MP Backfist Combo",
       "set": {
-        "active": "2(10)5,1",
-        "recovery": "25",
-        "onHit": "KD +44",
-        "onBlock": "+9",
-        "onPC": "KD +44"
+        "recovery": "26"
       }
     },
     {
       "category": "normal",
-      "move": "OD Backfist Combo",
+      "move": "OD Devil Reverse",
       "set": {
-        "active": "2(19)1(26)1,1",
-        "onHit": "KD +48",
-        "onBlock": "-3",
-        "onPC": "KD +48"
+        "recovery": "10 land",
+        "startup": "21"
       }
     },
     {
       "category": "normal",
-      "move": "Psycho Punisher",
-      "set": { "startup": "24" }
+      "move": "OD Head Press",
+      "set": {
+        "startup": "15"
+      }
     },
     {
       "category": "normal",
-      "move": "Stand HK",
-      "set": { "onPC": "KD +73 Crumple" }
+      "move": "Somersault Skull Diver",
+      "set": {
+        "recovery": "29"
+      }
     },
     {
       "category": "normal",
       "move": "Stand HP",
-      "set": { "onHit": "+4(+6)", "onBlock": "+1(+3)", "onPC": "+17(+19)" }
+      "set": {
+        "recovery": "17"
+      }
     }
-  ]
+  ],
+  "generatedAt": "2026-04-01T13:12:30.460938+00:00",
+  "notes": [
+    "Auto-generated from official SF6 frame pages and FAT comparison.",
+    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+  ],
+  "source": "official-streetfighter-com-frame-vs-fat",
+  "sourceUrl": "https://www.streetfighter.com/6/character/vega_mbison/frame"
 }

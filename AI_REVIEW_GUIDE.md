@@ -1,13 +1,13 @@
 # AI Review Guide
 
-This guide defines the AI workflow for deciding and applying manual overrides to character data, based on conflicts files. In conflicts files Supercombo's data is more up-to-date but were manually editted by human so hard to parse by code, your job is to understand them and decide which items should be used to override existing values.
+This guide defines the AI workflow for deciding and applying manual overrides to character data, based on conflicts files generated from official frame pages vs FAT.
 
 ## Workflow Contract
 
-1. Use `data/<Character>.conflicts.csv` as evidence when selecting values. 
+1. Use `data/official-frame/<Character>.official.conflicts.csv` as evidence when selecting values.
 2. Do not batch process these files. Manually go through each items, one file at a time.
 3. Write manual corrections into `data/<Character>.overrides.json` based on your understanding, one file at a time. You are not allowed to use code to do this.
-4. Prefer preserving Supercombo/FAT-style value shapes in overrides when semantics depend on ranges/variants.
+4. Prefer preserving FAT-style value shapes in overrides when semantics depend on ranges/variants.
 5. Treat `normalized` output as the source of truth for search/calculation behavior.
 6. Rebuild normalized data and apply overrides in the order shown below.
 
@@ -37,7 +37,7 @@ Strict value-format validation is optional:
 
 ## Current Normalize Limits
 
-The current normalize logic preserves raw text and extracts some numbers, but it does **not** fully understand every FAT/SuperCombo text shape. When writing overrides, keep the following limits in mind:
+The current normalize logic preserves raw text and extracts some numbers, but it does **not** fully understand every FAT/official text shape. When writing overrides, keep the following limits in mind:
 
 - Correctly/mostly handled:
   - Plain integers: `12`, `-3`
@@ -108,7 +108,7 @@ Example — both are intentional:
 
 ## Review Checklist For AI-Generated Overrides
 
-1. Every override entry is traceable to a row in `data/<Character>.conflicts.csv`.
+1. Every override entry is traceable to a row in `data/official-frame/<Character>.official.conflicts.csv`.
 2. Fields are limited to: `startup`, `active`, `recovery`, `onHit`, `onBlock`, `onPC`.
 3. Range/KD semantics from evidence are not collapsed accidentally.
 4. KD prefix is only on ground-wakeup values, not air/Tumble-state advantages (see KD Value Format Rules above).

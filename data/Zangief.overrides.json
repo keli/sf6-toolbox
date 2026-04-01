@@ -1,73 +1,140 @@
 {
   "character": "Zangief",
-  "source": "manual-ai-from-conflicts-csv",
-  "notes": [
-    "Manually reviewed Zangief.conflicts.csv line by line.",
-    "Preserved SuperCombo/FAT-style range and variant semantics where present."
-  ],
   "entries": [
     {
       "category": "normal",
-      "move": "Aerial Russian Slam",
-      "set": { "recovery": "13+47 land" }
-    },
-    {
-      "category": "normal",
-      "move": "Bodyslam",
-      "set": { "onHit": "KD +22(+0)", "onPC": "HKD +22(+0)" }
-    },
-    {
-      "category": "normal",
-      "move": "Cyclone Lariat",
-      "set": { "active": "102", "onHit": "HKD +5(+1)", "onPC": "HKD +5(+1)" }
+      "move": "Borscht Dynamite",
+      "set": {
+        "recovery": "16 land"
+      }
     },
     {
       "category": "normal",
       "move": "Cyclone Wheel Kick",
-      "set": { "onHit": "KD +28(+30)", "onPC": "KD +42(44) OTG" }
-    },
-    {
-      "category": "normal",
-      "move": "Double Lariat",
-      "set": { "onHit": "KD +27(+56)", "onPC": "KD +27(+56)" }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Impact: Double Russian Chop",
       "set": {
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+        "startup": "22"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
+      "set": {
+        "recovery": "33"
+      }
     },
     {
       "category": "normal",
-      "move": "Drive Reversal: Reverse Russian Kick",
-      "set": { "startup": "18" }
+      "move": "Flying Body Press",
+      "set": {
+        "recovery": "8 land"
+      }
     },
     {
       "category": "normal",
-      "move": "Knee Hammer",
-      "set": { "onHit": "+1(+7)", "onBlock": "-4(+2)", "onPC": "+5(+11)" }
+      "move": "Flying Headbutt",
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
-      "move": "OD Double Lariat",
-      "set": { "onHit": "KD +38(+57)", "onPC": "KD +38(+57)" }
+      "move": "Headbutt",
+      "set": {
+        "recovery": "15"
+      }
     },
     {
       "category": "normal",
-      "move": "Smetana Dropkick",
-      "set": { "onPC": "KD +60 Tumble (HKD +128 Wallsplat)" }
+      "move": "Jump HK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Machine Gun Chops 2",
+      "set": {
+        "recovery": "20",
+        "startup": "9"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Borscht Dynamite",
+      "set": {
+        "recovery": "16 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Power Stomps 1",
+      "set": {
+        "recovery": "17"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Power Stomps 2",
+      "set": {
+        "recovery": "19",
+        "startup": "9"
+      }
     },
     {
       "category": "normal",
       "move": "Stand HP",
-      "set": { "startup": "(6~22)+10" }
+      "set": {
+        "recovery": "22"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Tundra Storm",
+      "set": {
+        "startup": "5"
+      }
     }
-  ]
+  ],
+  "generatedAt": "2026-04-01T13:12:31.950813+00:00",
+  "notes": [
+    "Auto-generated from official SF6 frame pages and FAT comparison.",
+    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+  ],
+  "source": "official-streetfighter-com-frame-vs-fat",
+  "sourceUrl": "https://www.streetfighter.com/6/character/zangief/frame"
 }

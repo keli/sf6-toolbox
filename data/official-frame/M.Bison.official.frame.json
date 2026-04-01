@@ -1,0 +1,657 @@
+{
+  "character": "M.Bison",
+  "fetchedAt": "2026-04-01T13:12:30.455933+00:00",
+  "moveCount": 72,
+  "moves": [
+    {
+      "active": "5-6",
+      "category": "Normal Moves",
+      "name": "Standing Light Punch",
+      "onBlock": "-3",
+      "onHit": "4",
+      "recovery": "11",
+      "startup": "5"
+    },
+    {
+      "active": "4-5",
+      "category": "Normal Moves",
+      "name": "Standing Light Kick",
+      "onBlock": "-1",
+      "onHit": "3",
+      "recovery": "10",
+      "startup": "4"
+    },
+    {
+      "active": "8-10",
+      "category": "Normal Moves",
+      "name": "Standing Medium Punch",
+      "onBlock": "0",
+      "onHit": "6",
+      "recovery": "15",
+      "startup": "8"
+    },
+    {
+      "active": "10-12",
+      "category": "Normal Moves",
+      "name": "Standing Medium Kick",
+      "onBlock": "-3",
+      "onHit": "2",
+      "recovery": "17",
+      "startup": "10"
+    },
+    {
+      "active": "19-21",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Punch",
+      "onBlock": "1",
+      "onHit": "4",
+      "recovery": "17",
+      "startup": "19"
+    },
+    {
+      "active": "13-16",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Kick",
+      "onBlock": "-2",
+      "onHit": "6",
+      "recovery": "19",
+      "startup": "13"
+    },
+    {
+      "active": "4-5",
+      "category": "Normal Moves",
+      "name": "Crouching Light Punch",
+      "onBlock": "-2",
+      "onHit": "4",
+      "recovery": "10",
+      "startup": "4"
+    },
+    {
+      "active": "5-6",
+      "category": "Normal Moves",
+      "name": "Crouching Light Kick",
+      "onBlock": "-2",
+      "onHit": "4",
+      "recovery": "10",
+      "startup": "5"
+    },
+    {
+      "active": "6-8",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Punch",
+      "onBlock": "-1",
+      "onHit": "5",
+      "recovery": "14",
+      "startup": "6"
+    },
+    {
+      "active": "8-10",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Kick",
+      "onBlock": "-6",
+      "onHit": "-2",
+      "recovery": "19",
+      "startup": "8"
+    },
+    {
+      "active": "10-15",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Punch",
+      "onBlock": "-9",
+      "onHit": "0",
+      "recovery": "21",
+      "startup": "10"
+    },
+    {
+      "active": "11-13",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Kick",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "11"
+    },
+    {
+      "active": "5-8",
+      "category": "Normal Moves",
+      "name": "Jumping Light Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "5-11",
+      "category": "Normal Moves",
+      "name": "Jumping Light Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "8-11",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "7-13",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "9-14",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "10-15",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "22-24",
+      "category": "Unique Attacks",
+      "name": "Psycho Hammer",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "20",
+      "startup": "22"
+    },
+    {
+      "active": "10-13",
+      "category": "Unique Attacks",
+      "name": "Evil Knee",
+      "onBlock": "1",
+      "onHit": "4",
+      "recovery": "17",
+      "startup": "10"
+    },
+    {
+      "active": "15-24",
+      "category": "Unique Attacks",
+      "name": "Hover Kick",
+      "onBlock": "-15",
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "15"
+    },
+    {
+      "active": "22-24",
+      "category": "Unique Attacks",
+      "name": "Shadow Hammer",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "20",
+      "startup": "22"
+    },
+    {
+      "active": "16-19",
+      "category": "Unique Attacks",
+      "name": "Shadow Spear",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "20",
+      "startup": "16"
+    },
+    {
+      "active": "7-10",
+      "category": "Unique Attacks",
+      "name": "Hell Attack",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "14-29",
+      "category": "Special Moves",
+      "name": "L Psycho Crusher Attack",
+      "onBlock": "-20",
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "14"
+    },
+    {
+      "active": "14-29",
+      "category": "Special Moves",
+      "name": "[when Psycho Mine is embedded]L Psycho Crusher Attack",
+      "onBlock": "6",
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "14"
+    },
+    {
+      "active": "20-35",
+      "category": "Special Moves",
+      "name": "M Psycho Crusher Attack",
+      "onBlock": "-20",
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "20"
+    },
+    {
+      "active": "20-35",
+      "category": "Special Moves",
+      "name": "[when Psycho Mine is embedded]M Psycho Crusher Attack",
+      "onBlock": "6",
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "20"
+    },
+    {
+      "active": "24-49",
+      "category": "Special Moves",
+      "name": "H Psycho Crusher Attack",
+      "onBlock": "-23",
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "24"
+    },
+    {
+      "active": "24-49",
+      "category": "Special Moves",
+      "name": "[when Psycho Mine is embedded]H Psycho Crusher Attack",
+      "onBlock": "5",
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "24"
+    },
+    {
+      "active": "16-31",
+      "category": "Special Moves",
+      "name": "OD Psycho Crusher Attack",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "20",
+      "startup": "16"
+    },
+    {
+      "active": "16-31",
+      "category": "Special Moves",
+      "name": "[when Psycho Mine is embedded]OD Psycho Crusher Attack",
+      "onBlock": "10",
+      "onHit": "D",
+      "recovery": "20",
+      "startup": "16"
+    },
+    {
+      "active": "13-17 13-14, 16-17",
+      "category": "Special Moves",
+      "name": "L Double Knee Press",
+      "onBlock": "-5",
+      "onHit": "2",
+      "recovery": "20",
+      "startup": "13"
+    },
+    {
+      "active": "17-21 17-18, 20-21",
+      "category": "Special Moves",
+      "name": "M Double Knee Press",
+      "onBlock": "-5",
+      "onHit": "3",
+      "recovery": "20",
+      "startup": "17"
+    },
+    {
+      "active": "22-26 22-23, 25-26",
+      "category": "Special Moves",
+      "name": "H Double Knee Press",
+      "onBlock": "-4",
+      "onHit": "3",
+      "recovery": "20",
+      "startup": "22"
+    },
+    {
+      "active": "17-41 17-18, 20-21, 39-41",
+      "category": "Special Moves",
+      "name": "OD Double Knee Press",
+      "onBlock": "-15",
+      "onHit": "D",
+      "recovery": "28",
+      "startup": "17"
+    },
+    {
+      "active": "13-29 13-14, 25-29",
+      "category": "Special Moves",
+      "name": "L Backfist Combo",
+      "onBlock": "-14",
+      "onHit": "D",
+      "recovery": "25",
+      "startup": "13"
+    },
+    {
+      "active": "13-29 13-14, 25-29",
+      "category": "Special Moves",
+      "name": "[when Psycho Mine is embedded]L Backfist Combo",
+      "onBlock": "9",
+      "onHit": "D",
+      "recovery": "25",
+      "startup": "13"
+    },
+    {
+      "active": "17-33 17-18, 29-33",
+      "category": "Special Moves",
+      "name": "M Backfist Combo",
+      "onBlock": "-15",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "17"
+    },
+    {
+      "active": "17-33 17-18, 29-33",
+      "category": "Special Moves",
+      "name": "[when Psycho Mine is embedded]M Backfist Combo",
+      "onBlock": "9",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "17"
+    },
+    {
+      "active": "22-39 22-24, 35-39",
+      "category": "Special Moves",
+      "name": "H Backfist Combo",
+      "onBlock": "-15",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "22"
+    },
+    {
+      "active": "22-39 22-24, 35-39",
+      "category": "Special Moves",
+      "name": "[when Psycho Mine is embedded]H Backfist Combo",
+      "onBlock": "9",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "22"
+    },
+    {
+      "active": "14-63 14-15, 35-37, 61-63",
+      "category": "Special Moves",
+      "name": "OD Backfist Combo",
+      "onBlock": "-25",
+      "onHit": "D",
+      "recovery": "44",
+      "startup": "14"
+    },
+    {
+      "active": "14-63 14-15, 35-37, 61-63",
+      "category": "Special Moves",
+      "name": "[when Psycho Mine is embedded]OD Backfist Combo",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "44",
+      "startup": "14"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "Psycho Mine (self-detonation)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": null,
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "L Shadow Rise",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "53 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "M Shadow Rise",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "58 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "H Shadow Rise",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "63 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD Shadow Rise",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "55 total frames",
+      "startup": null
+    },
+    {
+      "active": "15-until landing",
+      "category": "Special Moves",
+      "name": "Head Press",
+      "onBlock": "-39～-33",
+      "onHit": "-28～-23",
+      "recovery": "26 frame(s) after landing",
+      "startup": "15"
+    },
+    {
+      "active": "15-until landing",
+      "category": "Special Moves",
+      "name": "OD Head Press",
+      "onBlock": "5～7",
+      "onHit": "D",
+      "recovery": "12 frame(s) after landing",
+      "startup": "15"
+    },
+    {
+      "active": "12-21",
+      "category": "Special Moves",
+      "name": "Somersault Skull Diver",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "29",
+      "startup": "12"
+    },
+    {
+      "active": "16-until landing",
+      "category": "Special Moves",
+      "name": "Devil Reverse",
+      "onBlock": "2～8",
+      "onHit": "D",
+      "recovery": "10 frame(s) after landing",
+      "startup": "16"
+    },
+    {
+      "active": "16-until landing",
+      "category": "Special Moves",
+      "name": "[when Psycho Mine is embedded]Devil Reverse",
+      "onBlock": "22～28",
+      "onHit": "D",
+      "recovery": "10 frame(s) after landing",
+      "startup": "16"
+    },
+    {
+      "active": "21-until landing",
+      "category": "Special Moves",
+      "name": "OD Devil Reverse",
+      "onBlock": "4",
+      "onHit": "D",
+      "recovery": "10 frame(s) after landing",
+      "startup": "21"
+    },
+    {
+      "active": "21-until landing",
+      "category": "Special Moves",
+      "name": "[when Psycho Mine is embedded]OD Devil Reverse",
+      "onBlock": "24",
+      "onHit": "D",
+      "recovery": "10 frame(s) after landing",
+      "startup": "21"
+    },
+    {
+      "active": "10-51 10-11, 13-15, 47-48, 50-51",
+      "category": "Super Arts",
+      "name": "SA1 Knee Press Nightmare",
+      "onBlock": "-41",
+      "onHit": "D",
+      "recovery": "62",
+      "startup": "10"
+    },
+    {
+      "active": "24-30",
+      "category": "Super Arts",
+      "name": "SA2 Psycho Punisher",
+      "onBlock": "-34",
+      "onHit": "D",
+      "recovery": "52",
+      "startup": "24"
+    },
+    {
+      "active": "10-15",
+      "category": "Super Arts",
+      "name": "SA3 Unlimited Psycho Crusher",
+      "onBlock": "-46",
+      "onHit": "D",
+      "recovery": "65",
+      "startup": "10"
+    },
+    {
+      "active": "10-15",
+      "category": "Super Arts",
+      "name": "CA Unlimited Psycho Crusher",
+      "onBlock": "-46",
+      "onHit": "D",
+      "recovery": "65",
+      "startup": "10"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Deadly Throw",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Death Tower",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Forward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "19 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Backward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "23 total frames",
+      "startup": null
+    },
+    {
+      "active": "26-27",
+      "category": "Common Moves",
+      "name": "Drive Impact: Hell Twist",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "35",
+      "startup": "26"
+    },
+    {
+      "active": "20-22",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while blocking): Hell Drive",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "20"
+    },
+    {
+      "active": "18-20",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while recovering): Hell Drive",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "18"
+    },
+    {
+      "active": "[*2] 1-12",
+      "category": "Common Moves",
+      "name": "Drive Parry",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "33",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (strike)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "1",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (projectile)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "10",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Parry Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "45 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Cancel Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "46 total frames",
+      "startup": null
+    }
+  ],
+  "slug": "vega_mbison",
+  "url": "https://www.streetfighter.com/6/character/vega_mbison/frame"
+}

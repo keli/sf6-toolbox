@@ -1,63 +1,96 @@
 {
   "character": "Dhalsim",
-  "source": "manual-ai-from-conflicts-csv",
-  "notes": [
-    "Manually reviewed Dhalsim.conflicts.csv line by line.",
-    "Preserved SuperCombo/FAT-style range and variant semantics where present."
-  ],
   "entries": [
     {
       "category": "normal",
-      "move": "Crouch HK",
-      "set": { "onHit": "HKD +22(+37)", "onPC": "HKD +37(+52)" }
-    },
-    {
-      "category": "normal",
-      "move": "Crouch LK",
-      "set": { "onHit": "-5(+1)", "onPC": "-1(+5)" }
-    },
-    {
-      "category": "normal",
-      "move": "Crouch MK",
-      "set": { "onHit": "-3(+9)", "onBlock": "-10(+2)", "onPC": "+1(+13)" }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Impact: Yoga Rise",
+      "move": "Crouch HP",
       "set": {
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+        "recovery": "20"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Yoga Illusion",
-      "set": { "startup": "18" }
-    },
-    {
-      "category": "normal",
-      "move": "HP Yoga Flame",
-      "set": { "onHit": "KD +45(+47)", "onPC": "KD +45(+47)" }
-    },
-    {
-      "category": "normal",
-      "move": "OD Yoga Flame",
       "set": {
-        "active": "5,5,5,5,5",
-        "recovery": "19(24)",
-        "onHit": "KD +51",
-        "onPC": "KD +51"
+        "recovery": "33"
       }
     },
     {
       "category": "normal",
-      "move": "Yoga Sunburst",
-      "set": { "active": "[142+20]" }
+      "move": "HK Drill Kick",
+      "set": {
+        "recovery": "11 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "LK Drill Kick",
+      "set": {
+        "recovery": "11 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MK Drill Kick",
+      "set": {
+        "recovery": "11 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Yoga Mummy",
+      "set": {
+        "recovery": "9 land"
+      }
     }
-  ]
+  ],
+  "generatedAt": "2026-04-01T13:11:51.151070+00:00",
+  "notes": [
+    "Auto-generated from official SF6 frame pages and FAT comparison.",
+    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+  ],
+  "source": "official-streetfighter-com-frame-vs-fat",
+  "sourceUrl": "https://www.streetfighter.com/6/character/dhalsim/frame"
 }

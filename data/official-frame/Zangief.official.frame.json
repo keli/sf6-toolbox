@@ -1,0 +1,657 @@
+{
+  "character": "Zangief",
+  "fetchedAt": "2026-04-01T13:12:31.945603+00:00",
+  "moveCount": 72,
+  "moves": [
+    {
+      "active": "7-9",
+      "category": "Normal Moves",
+      "name": "Standing Light Punch",
+      "onBlock": "2",
+      "onHit": "4",
+      "recovery": "9",
+      "startup": "7"
+    },
+    {
+      "active": "4-6",
+      "category": "Normal Moves",
+      "name": "(Rapid cancel version)Standing Light Punch",
+      "onBlock": "2",
+      "onHit": "4",
+      "recovery": "9",
+      "startup": "4"
+    },
+    {
+      "active": "7-8",
+      "category": "Normal Moves",
+      "name": "Standing Light Kick",
+      "onBlock": "-4",
+      "onHit": "-2",
+      "recovery": "17",
+      "startup": "7"
+    },
+    {
+      "active": "9-12",
+      "category": "Normal Moves",
+      "name": "Standing Medium Punch",
+      "onBlock": "-2",
+      "onHit": "2",
+      "recovery": "17",
+      "startup": "9"
+    },
+    {
+      "active": "10-13",
+      "category": "Normal Moves",
+      "name": "Standing Medium Kick",
+      "onBlock": "-4",
+      "onHit": "1",
+      "recovery": "19",
+      "startup": "10"
+    },
+    {
+      "active": "16-18",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Punch",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "22",
+      "startup": "16"
+    },
+    {
+      "active": "32-34",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Punch(Charged)",
+      "onBlock": "3",
+      "onHit": "D",
+      "recovery": "22",
+      "startup": "32"
+    },
+    {
+      "active": "13-16",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Kick",
+      "onBlock": "1",
+      "onHit": "3",
+      "recovery": "21",
+      "startup": "13"
+    },
+    {
+      "active": "6-7",
+      "category": "Normal Moves",
+      "name": "Crouching Light Punch",
+      "onBlock": "1",
+      "onHit": "6",
+      "recovery": "8",
+      "startup": "6"
+    },
+    {
+      "active": "3-4",
+      "category": "Normal Moves",
+      "name": "(Rapid cancel version)Crouching Light Punch",
+      "onBlock": "1",
+      "onHit": "6",
+      "recovery": "8",
+      "startup": "3"
+    },
+    {
+      "active": "4-6",
+      "category": "Normal Moves",
+      "name": "Crouching Light Kick",
+      "onBlock": "-3",
+      "onHit": "0",
+      "recovery": "12",
+      "startup": "4"
+    },
+    {
+      "active": "3-5",
+      "category": "Normal Moves",
+      "name": "(Rapid cancel version)Crouching Light Kick",
+      "onBlock": "-3",
+      "onHit": "0",
+      "recovery": "12",
+      "startup": "3"
+    },
+    {
+      "active": "8-10",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Punch",
+      "onBlock": "-1",
+      "onHit": "3",
+      "recovery": "16",
+      "startup": "8"
+    },
+    {
+      "active": "9-11",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Kick",
+      "onBlock": "-2",
+      "onHit": "3",
+      "recovery": "18",
+      "startup": "9"
+    },
+    {
+      "active": "11-19",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Punch",
+      "onBlock": "-20",
+      "onHit": "D",
+      "recovery": "35",
+      "startup": "11"
+    },
+    {
+      "active": "12-14",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Kick",
+      "onBlock": "-13",
+      "onHit": "D",
+      "recovery": "27",
+      "startup": "12"
+    },
+    {
+      "active": "5-11",
+      "category": "Normal Moves",
+      "name": "Jumping Light Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "5-14",
+      "category": "Normal Moves",
+      "name": "Jumping Light Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "8-12",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "8-15",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "9-14",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "10-16",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "32-37",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Kick(Charged)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "20 frame(s) after landing",
+      "startup": "32"
+    },
+    {
+      "active": "7-9",
+      "category": "Unique Attacks",
+      "name": "Hellstab",
+      "onBlock": "-3",
+      "onHit": "-1",
+      "recovery": "21",
+      "startup": "7"
+    },
+    {
+      "active": "14-20",
+      "category": "Unique Attacks",
+      "name": "Knee Hammer",
+      "onBlock": "-4",
+      "onHit": "1",
+      "recovery": "13",
+      "startup": "14"
+    },
+    {
+      "active": "14-18",
+      "category": "Unique Attacks",
+      "name": "Headbutt",
+      "onBlock": "4",
+      "onHit": "8",
+      "recovery": "15",
+      "startup": "14"
+    },
+    {
+      "active": "22-28",
+      "category": "Unique Attacks",
+      "name": "Cyclone Wheel Kick",
+      "onBlock": "-9",
+      "onHit": "D",
+      "recovery": "25",
+      "startup": "22"
+    },
+    {
+      "active": "16-19",
+      "category": "Unique Attacks",
+      "name": "Smetana Dropkick",
+      "onBlock": "-18",
+      "onHit": "D",
+      "recovery": "40",
+      "startup": "16"
+    },
+    {
+      "active": "9-17",
+      "category": "Unique Attacks",
+      "name": "Flying Body Press",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "8 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "8-11",
+      "category": "Unique Attacks",
+      "name": "Flying Headbutt",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "9-12",
+      "category": "Unique Attacks",
+      "name": "Machine Gun Chops(2)",
+      "onBlock": "-6",
+      "onHit": "2",
+      "recovery": "20",
+      "startup": "9"
+    },
+    {
+      "active": "15-17",
+      "category": "Unique Attacks",
+      "name": "Machine Gun Chops(3)",
+      "onBlock": "-17",
+      "onHit": "D",
+      "recovery": "32",
+      "startup": "15"
+    },
+    {
+      "active": "9-11",
+      "category": "Unique Attacks",
+      "name": "Power Stomps(1)",
+      "onBlock": "-3",
+      "onHit": "4",
+      "recovery": "17",
+      "startup": "9"
+    },
+    {
+      "active": "9-11",
+      "category": "Unique Attacks",
+      "name": "Power Stomps(2)",
+      "onBlock": "-4",
+      "onHit": "-3",
+      "recovery": "19",
+      "startup": "9"
+    },
+    {
+      "active": "10-12",
+      "category": "Unique Attacks",
+      "name": "Power Stomps(3)",
+      "onBlock": "-10",
+      "onHit": "-2",
+      "recovery": "24",
+      "startup": "10"
+    },
+    {
+      "active": "15-45 15-16, 26-27, 36-37, 44-45",
+      "category": "Special Moves",
+      "name": "Double Lariat",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "27",
+      "startup": "15"
+    },
+    {
+      "active": "12-36 12-13, 16-17, 21-22, 29-30, 35-36",
+      "category": "Special Moves",
+      "name": "OD Double Lariat",
+      "onBlock": "-11",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "12"
+    },
+    {
+      "active": "5-7",
+      "category": "Special Moves",
+      "name": "L Screw Piledriver",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "54",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Special Moves",
+      "name": "M Screw Piledriver",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "54",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Special Moves",
+      "name": "H Screw Piledriver",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "54",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Special Moves",
+      "name": "OD Screw Piledriver",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "54",
+      "startup": "5"
+    },
+    {
+      "active": "4-6",
+      "category": "Special Moves",
+      "name": "Borscht Dynamite",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "16 frame(s) after landing",
+      "startup": "4"
+    },
+    {
+      "active": "4-6",
+      "category": "Special Moves",
+      "name": "OD Borscht Dynamite",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "16 frame(s) after landing",
+      "startup": "4"
+    },
+    {
+      "active": "10-11",
+      "category": "Special Moves",
+      "name": "Russian Suplex",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "50",
+      "startup": "10"
+    },
+    {
+      "active": "10-11",
+      "category": "Special Moves",
+      "name": "OD Russian Suplex",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "50",
+      "startup": "10"
+    },
+    {
+      "active": "28-29",
+      "category": "Special Moves",
+      "name": "Siberian Express(Close range)",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "41",
+      "startup": "28"
+    },
+    {
+      "active": "23-24",
+      "category": "Special Moves",
+      "name": "OD Siberian Express(Close range)",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "44",
+      "startup": "23"
+    },
+    {
+      "active": "55-56",
+      "category": "Special Moves",
+      "name": "Siberian Express(Far range)",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "40",
+      "startup": "55"
+    },
+    {
+      "active": "54-55",
+      "category": "Special Moves",
+      "name": "OD Siberian Express(Far range)",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "40",
+      "startup": "54"
+    },
+    {
+      "active": "5-55",
+      "category": "Special Moves",
+      "name": "Tundra Storm",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "5"
+    },
+    {
+      "active": "11-17",
+      "category": "Super Arts",
+      "name": "SA1 Aerial Russian Slam",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "60",
+      "startup": "11"
+    },
+    {
+      "active": "*18-122 *18-111, 33-35, 41-42, 50-51, 60-61, 69-70, 79-80, 90-91, 99-100, 110-111, 120-122",
+      "category": "Super Arts",
+      "name": "SA2 Cyclone Lariat(Charged)",
+      "onBlock": "-35",
+      "onHit": "D",
+      "recovery": "52",
+      "startup": "18"
+    },
+    {
+      "active": null,
+      "category": "Super Arts",
+      "name": "SA2 Cyclone Lariat(immediately)",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": null,
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Super Arts",
+      "name": "SA2 Cyclone Lariat(Movement)",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": null,
+      "startup": null
+    },
+    {
+      "active": "6-7",
+      "category": "Super Arts",
+      "name": "SA3 Bolshoi Storm Buster",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "116",
+      "startup": "6+0"
+    },
+    {
+      "active": "6-7",
+      "category": "Super Arts",
+      "name": "CA Bolshoi Storm Buster",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "116",
+      "startup": "6+0"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Bodyslam",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Capture Suplex",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "German Suplex",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Spinebuster",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Russian Drop",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Brain Buster",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Forward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "22 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Backward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "25 total frames",
+      "startup": null
+    },
+    {
+      "active": "26-27",
+      "category": "Common Moves",
+      "name": "Drive Impact: Double Russian Chop",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "35",
+      "startup": "26"
+    },
+    {
+      "active": "20-22",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while blocking): Reverse Russian Kick",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "20"
+    },
+    {
+      "active": "18-20",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while recovering): Reverse Russian Kick",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "18"
+    },
+    {
+      "active": "[*2] 1-12",
+      "category": "Common Moves",
+      "name": "Drive Parry",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "33",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (strike)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "1",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (projectile)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "10",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Parry Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "45 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Cancel Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "46 total frames",
+      "startup": null
+    }
+  ],
+  "slug": "zangief",
+  "url": "https://www.streetfighter.com/6/character/zangief/frame"
+}

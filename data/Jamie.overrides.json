@@ -1,106 +1,103 @@
 {
   "character": "Jamie",
-  "source": "manual-ai-from-conflicts-csv",
-  "notes": [
-    "Manually reviewed Jamie.conflicts.csv line by line.",
-    "Applied stable overrides for normal category to avoid drink-state ambiguity in this pass.",
-    "Preserved SuperCombo/FAT-style range and variant semantics where present."
-  ],
   "entries": [
     {
       "category": "normal",
-      "move": "Back Shaver",
-      "set": { "onHit": "KD +23", "onPC": "HKD +23" }
-    },
-    {
-      "category": "normal",
-      "move": "Breakin'",
+      "move": "Crouch HK",
       "set": {
-        "active": "2,7(6)5(6)2(7)2(7)2(6)2(6)2(6)2(29)2(9)2(6)2(5)2",
-        "recovery": "74",
-        "onHit": "KD +12",
-        "onBlock": "-60",
-        "onPC": "KD +12"
+        "recovery": "28"
       }
     },
-    { "category": "normal", "move": "Crouch HK", "set": { "active": "2(2)3" } },
     {
       "category": "normal",
-      "move": "Drive Impact: Vainglory Strike",
+      "move": "Crouch MP",
       "set": {
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+        "recovery": "13"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Leg Sweep",
-      "set": { "startup": "18" }
-    },
-    {
-      "category": "normal",
-      "move": "Getsuga Saiho",
-      "set": { "onHit": "HKD +18 (KD +14)", "onPC": "HKD +18 (KD +14)" }
-    },
-    {
-      "category": "normal",
-      "move": "HP Freeflow Strikes",
-      "set": { "recovery": "19", "onHit": "+1", "onBlock": "-3", "onPC": "+5" }
-    },
-    {
-      "category": "normal",
-      "move": "Hermit's Elbow",
-      "set": { "recovery": "21(19)" }
-    },
-    {
-      "category": "normal",
-      "move": "LP Freeflow Strikes",
-      "set": { "recovery": "19", "onHit": "+1", "onBlock": "-3", "onPC": "+5" }
-    },
-    {
-      "category": "normal",
-      "move": "MP Freeflow Strikes",
-      "set": { "recovery": "19", "onHit": "+1", "onBlock": "-3", "onPC": "+5" }
-    },
-    {
-      "category": "normal",
-      "move": "OD Freeflow Strikes",
-      "set": { "recovery": "19", "onHit": "+3", "onPC": "+7" }
-    },
-    {
-      "category": "normal",
-      "move": "OD Swagger Step",
       "set": {
-        "onHit": "KD +73(+81) Tumble",
-        "onPC": "KD +87(+95) Tumble / +155 Wall Splat"
+        "recovery": "33"
       }
     },
     {
       "category": "normal",
-      "move": "Senei Kick",
-      "set": { "active": "4", "recovery": "19" }
-    },
-    {
-      "category": "normal",
-      "move": "Stand LP",
+      "move": "Jump HK",
       "set": {
-        "active": "3",
-        "recovery": "9",
-        "onHit": "+2",
-        "onBlock": "-3",
-        "onPC": "+6"
+        "recovery": "3 land"
       }
     },
-    { "category": "normal", "move": "Stand MK", "set": { "onPC": "+5" } },
     {
       "category": "normal",
-      "move": "The Devil Inside (2 drinks)",
-      "set": { "startup": "188" }
+      "move": "Jump HP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Arrow Kick",
+      "set": {
+        "recovery": "53"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Freeflow Kicks 2",
+      "set": {
+        "startup": "14"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Freeflow Kicks 3",
+      "set": {
+        "startup": "18"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Stand MK",
+      "set": {
+        "recovery": "17"
+      }
     }
-  ]
+  ],
+  "generatedAt": "2026-04-01T13:12:05.583599+00:00",
+  "notes": [
+    "Auto-generated from official SF6 frame pages and FAT comparison.",
+    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+  ],
+  "source": "official-streetfighter-com-frame-vs-fat",
+  "sourceUrl": "https://www.streetfighter.com/6/character/jamie/frame"
 }

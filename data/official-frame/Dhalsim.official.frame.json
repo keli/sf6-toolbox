@@ -1,0 +1,810 @@
+{
+  "character": "Dhalsim",
+  "fetchedAt": "2026-04-01T13:11:51.145424+00:00",
+  "moveCount": 89,
+  "moves": [
+    {
+      "active": "4-6",
+      "category": "Normal Moves",
+      "name": "Standing Light Punch",
+      "onBlock": "-1",
+      "onHit": "4",
+      "recovery": "8",
+      "startup": "4"
+    },
+    {
+      "active": "9-12",
+      "category": "Normal Moves",
+      "name": "Standing Light Kick",
+      "onBlock": "-6",
+      "onHit": "2",
+      "recovery": "11",
+      "startup": "9"
+    },
+    {
+      "active": "14-16",
+      "category": "Normal Moves",
+      "name": "Standing Medium Punch",
+      "onBlock": "-5",
+      "onHit": "0",
+      "recovery": "19",
+      "startup": "14"
+    },
+    {
+      "active": "12-14",
+      "category": "Normal Moves",
+      "name": "Standing Medium Kick",
+      "onBlock": "-6",
+      "onHit": "-2",
+      "recovery": "18",
+      "startup": "12"
+    },
+    {
+      "active": "16-19",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Punch",
+      "onBlock": "-11",
+      "onHit": "-6",
+      "recovery": "27",
+      "startup": "16"
+    },
+    {
+      "active": "17-19",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Kick",
+      "onBlock": "-6",
+      "onHit": "3",
+      "recovery": "20",
+      "startup": "17"
+    },
+    {
+      "active": "5-7",
+      "category": "Normal Moves",
+      "name": "Crouching Light Punch",
+      "onBlock": "-1",
+      "onHit": "4",
+      "recovery": "9",
+      "startup": "5"
+    },
+    {
+      "active": "4-10",
+      "category": "Normal Moves",
+      "name": "Crouching Light Kick",
+      "onBlock": "-10",
+      "onHit": "-5",
+      "recovery": "16",
+      "startup": "4"
+    },
+    {
+      "active": "12-14",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Punch",
+      "onBlock": "-4",
+      "onHit": "0",
+      "recovery": "16",
+      "startup": "12"
+    },
+    {
+      "active": "10-22",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Kick",
+      "onBlock": "-10",
+      "onHit": "-3",
+      "recovery": "14",
+      "startup": "10"
+    },
+    {
+      "active": "19-22",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Punch",
+      "onBlock": "-8",
+      "onHit": "3",
+      "recovery": "20",
+      "startup": "19"
+    },
+    {
+      "active": "12-27",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Kick",
+      "onBlock": "-16",
+      "onHit": "D",
+      "recovery": "20",
+      "startup": "12"
+    },
+    {
+      "active": "4-7",
+      "category": "Normal Moves",
+      "name": "Jumping Light Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "4"
+    },
+    {
+      "active": "6-9",
+      "category": "Normal Moves",
+      "name": "Jumping Light Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "9-14",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "11-16",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "11"
+    },
+    {
+      "active": "13-16",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "13"
+    },
+    {
+      "active": "10-19",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "8-13",
+      "category": "Unique Attacks",
+      "name": "Yoga Uppercut",
+      "onBlock": "-3",
+      "onHit": "2",
+      "recovery": "16",
+      "startup": "8"
+    },
+    {
+      "active": "14-20",
+      "category": "Unique Attacks",
+      "name": "Yoga Lance",
+      "onBlock": "-16",
+      "onHit": "-9",
+      "recovery": "29",
+      "startup": "14"
+    },
+    {
+      "active": "10-13",
+      "category": "Unique Attacks",
+      "name": "Nirvana Punch",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "20",
+      "startup": "10"
+    },
+    {
+      "active": "5-7",
+      "category": "Unique Attacks",
+      "name": "Agile Kick",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "10",
+      "startup": "5"
+    },
+    {
+      "active": "7-10",
+      "category": "Unique Attacks",
+      "name": "Divine Kick",
+      "onBlock": "0",
+      "onHit": "3",
+      "recovery": "17",
+      "startup": "7"
+    },
+    {
+      "active": "8-10",
+      "category": "Unique Attacks",
+      "name": "Thrust Kick",
+      "onBlock": "-7",
+      "onHit": "-3",
+      "recovery": "20",
+      "startup": "8"
+    },
+    {
+      "active": "14-19",
+      "category": "Unique Attacks",
+      "name": "Yoga Mountain",
+      "onBlock": "-9",
+      "onHit": "0",
+      "recovery": "20",
+      "startup": "14"
+    },
+    {
+      "active": "9-11",
+      "category": "Unique Attacks",
+      "name": "Karma Kick",
+      "onBlock": "-7",
+      "onHit": "D",
+      "recovery": "22",
+      "startup": "9"
+    },
+    {
+      "active": "10-until landing",
+      "category": "Unique Attacks",
+      "name": "Yoga Mummy",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "9 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "9-until landing",
+      "category": "Unique Attacks",
+      "name": "L Drill Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "11 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "9-until landing",
+      "category": "Unique Attacks",
+      "name": "M Drill Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "11 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "9-until landing",
+      "category": "Unique Attacks",
+      "name": "H Drill Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "11 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "12-27",
+      "category": "Unique Attacks",
+      "name": "Long Sliding Kick",
+      "onBlock": "-16",
+      "onHit": "D",
+      "recovery": "20",
+      "startup": "12"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "L Yoga Fire",
+      "onBlock": "-6",
+      "onHit": "-2",
+      "recovery": "48 total frames",
+      "startup": "15"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "L Yoga Fire(Charged)",
+      "onBlock": "-1",
+      "onHit": "D",
+      "recovery": "73 total frames",
+      "startup": "43"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "M Yoga Fire",
+      "onBlock": "-6",
+      "onHit": "-2",
+      "recovery": "48 total frames",
+      "startup": "15"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "M Yoga Fire(Charged)",
+      "onBlock": "-1",
+      "onHit": "D",
+      "recovery": "73 total frames",
+      "startup": "43"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "H Yoga Fire",
+      "onBlock": "-6",
+      "onHit": "-2",
+      "recovery": "48 total frames",
+      "startup": "15"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "H Yoga Fire(Charged)",
+      "onBlock": "-1",
+      "onHit": "D",
+      "recovery": "73 total frames",
+      "startup": "43"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD L Yoga Fire",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "45 total frames",
+      "startup": "12"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD M Yoga Fire",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "45 total frames",
+      "startup": "12"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD H Yoga Fire",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "45 total frames",
+      "startup": "12"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "L Yoga Arch",
+      "onBlock": "-1",
+      "onHit": "1",
+      "recovery": "45 total frames",
+      "startup": "18"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "M Yoga Arch",
+      "onBlock": "-1",
+      "onHit": "1",
+      "recovery": "45 total frames",
+      "startup": "18"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "H Yoga Arch",
+      "onBlock": "-1",
+      "onHit": "1",
+      "recovery": "45 total frames",
+      "startup": "18"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD L Yoga Arch",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "45 total frames",
+      "startup": "18"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD M Yoga Arch",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "45 total frames",
+      "startup": "18"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD H Yoga Arch",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "45 total frames",
+      "startup": "18"
+    },
+    {
+      "active": "16-30",
+      "category": "Special Moves",
+      "name": "L Yoga Flame",
+      "onBlock": "-4",
+      "onHit": "D",
+      "recovery": "45 total frames",
+      "startup": "16"
+    },
+    {
+      "active": "19-34",
+      "category": "Special Moves",
+      "name": "M Yoga Flame",
+      "onBlock": "-4",
+      "onHit": "D",
+      "recovery": "51 total frames",
+      "startup": "20"
+    },
+    {
+      "active": "26-42",
+      "category": "Special Moves",
+      "name": "H Yoga Flame",
+      "onBlock": "-4",
+      "onHit": "D",
+      "recovery": "58 total frames",
+      "startup": "26"
+    },
+    {
+      "active": "18-42",
+      "category": "Special Moves",
+      "name": "OD Yoga Flame",
+      "onBlock": "-11",
+      "onHit": "D",
+      "recovery": "66 total frames",
+      "startup": "18"
+    },
+    {
+      "active": "12-21",
+      "category": "Special Moves",
+      "name": "L Yoga Blast",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "44 total frames",
+      "startup": "12"
+    },
+    {
+      "active": "15-24",
+      "category": "Special Moves",
+      "name": "M Yoga Blast",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "44 total frames",
+      "startup": "15"
+    },
+    {
+      "active": "17-26",
+      "category": "Special Moves",
+      "name": "H Yoga Blast",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "44 total frames",
+      "startup": "17"
+    },
+    {
+      "active": "12-21",
+      "category": "Special Moves",
+      "name": "OD Yoga Blast",
+      "onBlock": "0",
+      "onHit": "D",
+      "recovery": "41 total frames",
+      "startup": "12"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "L Yoga Comet",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "8 frame(s) after landing",
+      "startup": "30"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "M Yoga Comet",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "8 frame(s) after landing",
+      "startup": "30"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "H Yoga Comet",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "8 frame(s) after landing",
+      "startup": "30"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD Yoga Comet",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "30"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "Yoga Float(immediately)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "35 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "Yoga Float(Forward)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "35 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "Aerial Yoga Float",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "15 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "P Yoga Teleport (Forward)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "39 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "K Yoga Teleport (Forward)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "39 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "P Aerial Yoga Teleport (Forward)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "29 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "K Aerial Yoga Teleport (Forward)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "29 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "Yoga Teleport (Backward)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "46 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "P Aerial Yoga Teleport (Backward)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "34 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "K Aerial Yoga Teleport (Backward)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "34 total frames",
+      "startup": null
+    },
+    {
+      "active": "10-93",
+      "category": "Super Arts",
+      "name": "SA1 L Yoga Inferno",
+      "onBlock": "-10",
+      "onHit": "D",
+      "recovery": "128 total frames",
+      "startup": "10"
+    },
+    {
+      "active": "10-93",
+      "category": "Super Arts",
+      "name": "SA1 M Yoga Inferno",
+      "onBlock": "-10",
+      "onHit": "D",
+      "recovery": "128 total frames",
+      "startup": "10"
+    },
+    {
+      "active": "10-93",
+      "category": "Super Arts",
+      "name": "SA1 H Yoga Inferno",
+      "onBlock": "-22",
+      "onHit": "D",
+      "recovery": "133 total frames",
+      "startup": "10"
+    },
+    {
+      "active": null,
+      "category": "Super Arts",
+      "name": "SA2 Yoga Sunburst(Lv1)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "67 total frames",
+      "startup": "7"
+    },
+    {
+      "active": null,
+      "category": "Super Arts",
+      "name": "SA2 Yoga Sunburst(Lv2)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "80 total frames",
+      "startup": "7"
+    },
+    {
+      "active": null,
+      "category": "Super Arts",
+      "name": "SA2 Yoga Sunburst(Lv3)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "128 total frames",
+      "startup": "7"
+    },
+    {
+      "active": "10-14",
+      "category": "Super Arts",
+      "name": "SA3 Merciless Yoga",
+      "onBlock": "-62",
+      "onHit": "D",
+      "recovery": "75",
+      "startup": "10"
+    },
+    {
+      "active": "10-14",
+      "category": "Super Arts",
+      "name": "CA Merciless Yoga",
+      "onBlock": "-62",
+      "onHit": "D",
+      "recovery": "75",
+      "startup": "10"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Yoga Smash",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Yoga Throw",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Yoga Splash",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Forward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "25 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Backward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "23 total frames",
+      "startup": null
+    },
+    {
+      "active": "26-27",
+      "category": "Common Moves",
+      "name": "Drive Impact: Yoga Rise",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "35",
+      "startup": "26"
+    },
+    {
+      "active": "20-31 20-22, 29-31",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while blocking): Yoga Illusion",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "20"
+    },
+    {
+      "active": "18-29 18-20, 27-29",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while recovering): Yoga Illusion",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "18"
+    },
+    {
+      "active": "[*2] 1-12",
+      "category": "Common Moves",
+      "name": "Drive Parry",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "33",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (strike)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "1",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (projectile)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "10",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Parry Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "45 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Cancel Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "46 total frames",
+      "startup": null
+    }
+  ],
+  "slug": "dhalsim",
+  "url": "https://www.streetfighter.com/6/character/dhalsim/frame"
+}

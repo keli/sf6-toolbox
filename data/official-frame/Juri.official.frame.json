@@ -1,0 +1,792 @@
+{
+  "character": "Juri",
+  "fetchedAt": "2026-04-01T13:12:11.585402+00:00",
+  "moveCount": 87,
+  "moves": [
+    {
+      "active": "4-7",
+      "category": "Normal Moves",
+      "name": "Standing Light Punch",
+      "onBlock": "-2",
+      "onHit": "5",
+      "recovery": "7",
+      "startup": "4"
+    },
+    {
+      "active": "4-7",
+      "category": "Normal Moves",
+      "name": "[Chain combo]Standing Light Punch",
+      "onBlock": "-2",
+      "onHit": "5",
+      "recovery": "7",
+      "startup": "4"
+    },
+    {
+      "active": "5-7",
+      "category": "Normal Moves",
+      "name": "Standing Light Kick",
+      "onBlock": "-3",
+      "onHit": "2",
+      "recovery": "9",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Normal Moves",
+      "name": "[Chain combo]Standing Light Kick",
+      "onBlock": "-3",
+      "onHit": "2",
+      "recovery": "9",
+      "startup": "5"
+    },
+    {
+      "active": "6-9",
+      "category": "Normal Moves",
+      "name": "Standing Medium Punch",
+      "onBlock": "2",
+      "onHit": "7",
+      "recovery": "12",
+      "startup": "6"
+    },
+    {
+      "active": "6-9",
+      "category": "Normal Moves",
+      "name": "[Chain combo]Standing Medium Punch",
+      "onBlock": "2",
+      "onHit": "7",
+      "recovery": "12",
+      "startup": "6"
+    },
+    {
+      "active": "5-10 5-6, 8-10",
+      "category": "Normal Moves",
+      "name": "Standing Medium Kick",
+      "onBlock": "-4",
+      "onHit": "3",
+      "recovery": "17",
+      "startup": "5"
+    },
+    {
+      "active": "5-10 5-6, 8-10",
+      "category": "Normal Moves",
+      "name": "[Chain combo]Standing Medium Kick",
+      "onBlock": "-4",
+      "onHit": "3",
+      "recovery": "17",
+      "startup": "5"
+    },
+    {
+      "active": "10-12",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Punch",
+      "onBlock": "-5",
+      "onHit": "-1",
+      "recovery": "24",
+      "startup": "10"
+    },
+    {
+      "active": "10-12",
+      "category": "Normal Moves",
+      "name": "[Chain combo]Standing Heavy Punch",
+      "onBlock": "-5",
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "10"
+    },
+    {
+      "active": "17-20",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Kick",
+      "onBlock": "-3",
+      "onHit": "2",
+      "recovery": "19",
+      "startup": "17"
+    },
+    {
+      "active": "17-20",
+      "category": "Normal Moves",
+      "name": "[Chain combo]Standing Heavy Kick",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "19",
+      "startup": "17"
+    },
+    {
+      "active": "4-6",
+      "category": "Normal Moves",
+      "name": "Crouching Light Punch",
+      "onBlock": "-1",
+      "onHit": "4",
+      "recovery": "8",
+      "startup": "4"
+    },
+    {
+      "active": "4-6",
+      "category": "Normal Moves",
+      "name": "[Chain combo]Crouching Light Punch",
+      "onBlock": "-1",
+      "onHit": "4",
+      "recovery": "8",
+      "startup": "4"
+    },
+    {
+      "active": "5-7",
+      "category": "Normal Moves",
+      "name": "Crouching Light Kick",
+      "onBlock": "-1",
+      "onHit": "3",
+      "recovery": "8",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Normal Moves",
+      "name": "[Chain combo]Crouching Light Kick",
+      "onBlock": "-1",
+      "onHit": "3",
+      "recovery": "8",
+      "startup": "5"
+    },
+    {
+      "active": "6-9",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Punch",
+      "onBlock": "-2",
+      "onHit": "5",
+      "recovery": "14",
+      "startup": "6"
+    },
+    {
+      "active": "6-9",
+      "category": "Normal Moves",
+      "name": "[Chain combo]Crouching Medium Punch",
+      "onBlock": "-2",
+      "onHit": "5",
+      "recovery": "14",
+      "startup": "6"
+    },
+    {
+      "active": "8-10",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Kick",
+      "onBlock": "-6",
+      "onHit": "1",
+      "recovery": "19",
+      "startup": "8"
+    },
+    {
+      "active": "8-10",
+      "category": "Normal Moves",
+      "name": "[Chain combo]Crouching Medium Kick",
+      "onBlock": "-6",
+      "onHit": "1",
+      "recovery": "19",
+      "startup": "8"
+    },
+    {
+      "active": "8-11",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Punch",
+      "onBlock": "-11",
+      "onHit": "3",
+      "recovery": "23",
+      "startup": "8"
+    },
+    {
+      "active": "8-11",
+      "category": "Normal Moves",
+      "name": "[Chain combo]Crouching Heavy Punch",
+      "onBlock": "-11",
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "8"
+    },
+    {
+      "active": "10-12",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Kick",
+      "onBlock": "-11",
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "10"
+    },
+    {
+      "active": "10-12",
+      "category": "Normal Moves",
+      "name": "[Chain combo]Crouching Heavy Kick",
+      "onBlock": "-11",
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "10"
+    },
+    {
+      "active": "5-10",
+      "category": "Normal Moves",
+      "name": "Jumping Light Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "5-10",
+      "category": "Normal Moves",
+      "name": "[Chain combo]Jumping Light Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "4-9",
+      "category": "Normal Moves",
+      "name": "Jumping Light Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "4"
+    },
+    {
+      "active": "4-9",
+      "category": "Normal Moves",
+      "name": "[Chain combo]Jumping Light Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "4"
+    },
+    {
+      "active": "7-11",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "7-11",
+      "category": "Normal Moves",
+      "name": "[Chain combo]Jumping Medium Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "6-11",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "6-11",
+      "category": "Normal Moves",
+      "name": "[Chain combo]Jumping Medium Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "12-17",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "12"
+    },
+    {
+      "active": "12-17",
+      "category": "Normal Moves",
+      "name": "[Chain combo]Neutral Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "12"
+    },
+    {
+      "active": "10-15",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "10-15",
+      "category": "Normal Moves",
+      "name": "[Chain combo]Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "10-13",
+      "category": "Normal Moves",
+      "name": "Neutral Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "10-13",
+      "category": "Normal Moves",
+      "name": "[Chain combo]Neutral Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "8-10",
+      "category": "Unique Attacks",
+      "name": "Kyosesho",
+      "onBlock": "-3",
+      "onHit": "4",
+      "recovery": "17",
+      "startup": "8"
+    },
+    {
+      "active": "8-10",
+      "category": "Unique Attacks",
+      "name": "[Chain combo]Kyosesho",
+      "onBlock": "-3",
+      "onHit": "4",
+      "recovery": "17",
+      "startup": "8"
+    },
+    {
+      "active": "21-22",
+      "category": "Unique Attacks",
+      "name": "Senkai Kick",
+      "onBlock": "-3",
+      "onHit": "2",
+      "recovery": "*23",
+      "startup": "21"
+    },
+    {
+      "active": "21-22",
+      "category": "Unique Attacks",
+      "name": "[Chain combo]Senkai Kick",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "*23",
+      "startup": "21"
+    },
+    {
+      "active": "15-25 15-17, 23-25",
+      "category": "Unique Attacks",
+      "name": "Renko Kicks",
+      "onBlock": "-4",
+      "onHit": "2",
+      "recovery": "*20",
+      "startup": "15"
+    },
+    {
+      "active": "15-25 15-17, 23-25",
+      "category": "Unique Attacks",
+      "name": "[Chain combo]Renko Kicks",
+      "onBlock": "-4",
+      "onHit": "D",
+      "recovery": "*20",
+      "startup": "15"
+    },
+    {
+      "active": "10-21 10-12, 19-21",
+      "category": "Unique Attacks",
+      "name": "Korenzan",
+      "onBlock": "-6",
+      "onHit": "2",
+      "recovery": "19",
+      "startup": "10"
+    },
+    {
+      "active": "10-21 10-12, 19-21",
+      "category": "Unique Attacks",
+      "name": "[Chain combo]Korenzan",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "19",
+      "startup": "10"
+    },
+    {
+      "active": "12-14",
+      "category": "Unique Attacks",
+      "name": "Death Crest(2)",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "19",
+      "startup": "12"
+    },
+    {
+      "active": "17-19",
+      "category": "Unique Attacks",
+      "name": "Death Crest(3)",
+      "onBlock": "-16",
+      "onHit": "D",
+      "recovery": "27",
+      "startup": "17"
+    },
+    {
+      "active": "10-13",
+      "category": "Special Moves",
+      "name": "L Fuhajin",
+      "onBlock": "-4",
+      "onHit": "D",
+      "recovery": "*21",
+      "startup": "10"
+    },
+    {
+      "active": "13-16",
+      "category": "Special Moves",
+      "name": "M Fuhajin",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "21",
+      "startup": "13"
+    },
+    {
+      "active": "25-29",
+      "category": "Special Moves",
+      "name": "H Fuhajin",
+      "onBlock": "-8",
+      "onHit": "D",
+      "recovery": "19",
+      "startup": "25"
+    },
+    {
+      "active": "12-17",
+      "category": "Special Moves",
+      "name": "OD Fuhajin",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "21",
+      "startup": "12"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "Saihasho",
+      "onBlock": "-8",
+      "onHit": "-2",
+      "recovery": "45 total frames",
+      "startup": "16"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "[Boosted]Saihasho",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "45 total frames",
+      "startup": "16"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD Saihasho",
+      "onBlock": "-2",
+      "onHit": "D",
+      "recovery": "38 total frames",
+      "startup": "11"
+    },
+    {
+      "active": "24-27",
+      "category": "Special Moves",
+      "name": "Ankensatsu",
+      "onBlock": "-8",
+      "onHit": "5",
+      "recovery": "19",
+      "startup": "24"
+    },
+    {
+      "active": "24-27",
+      "category": "Special Moves",
+      "name": "[Boosted]Ankensatsu",
+      "onBlock": "-8",
+      "onHit": "8",
+      "recovery": "19",
+      "startup": "24"
+    },
+    {
+      "active": "24-27",
+      "category": "Special Moves",
+      "name": "OD Ankensatsu",
+      "onBlock": "-8",
+      "onHit": "9",
+      "recovery": "19",
+      "startup": "24"
+    },
+    {
+      "active": "18-21",
+      "category": "Special Moves",
+      "name": "Go Ohsatsu",
+      "onBlock": "-11",
+      "onHit": "D",
+      "recovery": "27",
+      "startup": "18"
+    },
+    {
+      "active": "18-36 18-21, 34-36",
+      "category": "Special Moves",
+      "name": "[Boosted]Go Ohsatsu",
+      "onBlock": "-10",
+      "onHit": "D",
+      "recovery": "27",
+      "startup": "18"
+    },
+    {
+      "active": "18-69 18-21, 34-36, 65-69",
+      "category": "Special Moves",
+      "name": "OD Go Ohsatsu",
+      "onBlock": "-16",
+      "onHit": "D",
+      "recovery": "28",
+      "startup": "18"
+    },
+    {
+      "active": "11-17 11-13, 16-17",
+      "category": "Special Moves",
+      "name": "L Tensenrin",
+      "onBlock": "-8",
+      "onHit": "D",
+      "recovery": "22",
+      "startup": "11"
+    },
+    {
+      "active": "5-24 5-12, 18-19, 23-24",
+      "category": "Special Moves",
+      "name": "M Tensenrin",
+      "onBlock": "-37",
+      "onHit": "D",
+      "recovery": "14 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "5-24 5-12, 18-19, 23-24",
+      "category": "Special Moves",
+      "name": "H Tensenrin",
+      "onBlock": "-37",
+      "onHit": "D",
+      "recovery": "14 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "6-24 6-9, 11-12, 19-20, 23-24",
+      "category": "Special Moves",
+      "name": "OD Tensenrin",
+      "onBlock": "-48",
+      "onHit": "D",
+      "recovery": "19 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "18-until landing",
+      "category": "Special Moves",
+      "name": "Shiku-sen",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "18 frame(s) after landing",
+      "startup": "18"
+    },
+    {
+      "active": "16-until landing",
+      "category": "Special Moves",
+      "name": "OD Shiku-sen",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "18 frame(s) after landing",
+      "startup": "16"
+    },
+    {
+      "active": "6-38 6-9, 14-17,35-38",
+      "category": "Special Moves",
+      "name": "Shiren-sen",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "12 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "6-38 6-9, 14-17,35-38",
+      "category": "Special Moves",
+      "name": "OD Shiren-sen",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "7 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": null,
+      "category": "Super Arts",
+      "name": "SA1 Sakkai Fuhazan",
+      "onBlock": "-32",
+      "onHit": "D",
+      "recovery": "201 total frames",
+      "startup": "7"
+    },
+    {
+      "active": null,
+      "category": "Super Arts",
+      "name": "SA2 Feng Shui Engine",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "7 total frames",
+      "startup": null
+    },
+    {
+      "active": "9-19",
+      "category": "Super Arts",
+      "name": "SA2 Feng Shui Engine(Rush)",
+      "onBlock": "-17",
+      "onHit": "-4",
+      "recovery": "26",
+      "startup": "9"
+    },
+    {
+      "active": "10-13",
+      "category": "Super Arts",
+      "name": "SA3 Kaisen Dankai Raku",
+      "onBlock": "-31",
+      "onHit": "D",
+      "recovery": "52",
+      "startup": "10"
+    },
+    {
+      "active": "10-13",
+      "category": "Super Arts",
+      "name": "CA Kaisen Dankai Raku",
+      "onBlock": "-31",
+      "onHit": "D",
+      "recovery": "52",
+      "startup": "10"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Spider Fang Throw",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Shadow Kick Throw",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Zanka-sen",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Forward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "22 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Backward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "23 total frames",
+      "startup": null
+    },
+    {
+      "active": "26-27",
+      "category": "Common Moves",
+      "name": "Drive Impact: Sekkan Kick",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "35",
+      "startup": "26"
+    },
+    {
+      "active": "20-22",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while blocking): Kaita Raid",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "20"
+    },
+    {
+      "active": "18-20",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while recovering): Kaita Raid",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "18"
+    },
+    {
+      "active": "[*2] 1-12",
+      "category": "Common Moves",
+      "name": "Drive Parry",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "33",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (strike)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "1",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (projectile)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "10",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Parry Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "45 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Cancel Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "46 total frames",
+      "startup": null
+    }
+  ],
+  "slug": "juri",
+  "url": "https://www.streetfighter.com/6/character/juri/frame"
+}

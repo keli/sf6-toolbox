@@ -74,47 +74,26 @@ meaty 条件：S <= K <= S+A-1
 
 ## 更新数据
 
-当前流程分两步：
+先更新 FAT 基线并重建按角色 FAT 文件/索引：
 
 ```bash
-python3 build_character_data.py fetch
+python3 build_character_data.py normalize
 ```
 
-- `fetch` 会：
-  - 读取完整 FAT 基线（默认 `data/sf6framedata.json`）
-  - 抓取每个角色的 SuperCombo 页面并解析
-  - 生成每角色源文件到 `data/`：
-    - `角色名.fat.json`
-    - `角色名.supercombo.json`
-  - 更新 `data/characters.index.json`（前端角色索引）
+- `normalize` 会：
+  - 读取 FAT 基线（默认 `data/sf6framedata.json`）
+  - 重写 `data/角色名.fat.json`（包含 `normalized` 字段）
+  - 更新 `data/characters.index.json`
 
-如果要先在线下载最新 FAT 基线，再执行上面的流程：
+如需先在线下载最新 FAT 基线再重建：
 
 ```bash
-python3 build_character_data.py fetch --download-base
-```
-
-对比审阅时执行：
-
-```bash
-python3 build_character_data.py review
-```
-
-- `review` 会：
-  - 直接读取 `data/角色名.supercombo.json`（不依赖聚合 supercombo 文件）
-  - 对 FAT 与 SuperCombo 做字段对比
-  - 生成每角色冲突文件 `角色名.conflicts.csv`
-  - 生成总表 `data/sf6framedata.conflicts.csv`
-
-如果你希望和最终角色文件 `角色名.json` 对比（而不是 `角色名.fat.json`），执行：
-
-```bash
-python3 build_character_data.py review --review-base final
+python3 build_character_data.py normalize --download-base
 ```
 
 ## 人工/AI 校对与覆盖
 
-生成冲突文件后，根据 `AI_REVIEW_GUIDE.md` 的说明，逐角色审阅 `角色名.conflicts.csv`，将需要修正的值写入 `data/角色名.overrides.json`。
+先用官网数据对比 FAT 生成 overrides 候选与冲突清单，再按需人工审阅。
 
 写好覆盖文件后，执行 apply 脚本生成最终 `角色名.json`：
 
@@ -130,11 +109,33 @@ python3 apply_character_overrides.py
 - `--copy-fat-only`：强制仅复制 FAT（即使传了 `--use-overrides` 也会忽略）
 - `--strict`：启用值格式校验
 
+## 从官网重建 Overrides（推荐）
+
+如果你希望忽略旧的 overrides，直接从官网 Frame Data 重新抓取并和 FAT 比对生成新的 `data/*.overrides.json`，运行：
+
+```bash
+python3 build_official_overrides.py
+```
+
+说明：
+- 脚本会自动从 `https://www.streetfighter.com/6/character` 读取角色 slug（例如 `vega_mbison`、`gouki_akuma`）。
+- 默认优先复用 `data/official-frame/*.official.frame.json`，不会重复抓网页；只有缺失时才抓取。
+- 如需强制重新抓取每个角色页面，使用 `--refresh`。
+- 会覆盖现有的 `data/角色名.overrides.json`。
+- 会把官网解析后的原始行数据保存到 `data/official-frame/角色名.official.frame.json` 方便审计。
+- 会额外生成差异清单：`data/official-frame/角色名.official.conflicts.csv` 与汇总 `data/official-frame/official_overrides.conflicts.csv`。
+
+常用选项：
+- `--chars Ryu,Ken`：只处理指定角色（用 `data/characters.index.json` 里的名称）
+- `--allow-opaque-hitblock`：允许把 `D` 这类非数值 onHit/onBlock 也写入 overrides（默认跳过）
+- `--timeout 40`：设置网络超时秒数
+
 ## 文件结构
 
 ```
 sf6-toolbox/
-├── build_character_data.py         # 抓取 SuperCombo 并生成按角色源数据/冲突清单
+├── build_character_data.py         # 读取 FAT 并生成按角色 fat/source 索引
+├── build_official_overrides.py     # 抓官网 frame 并与 FAT 对比，重建 overrides
 ├── apply_character_overrides.py    # 将 overrides.json 应用到 fat.json 生成最终数据
 ├── AI_REVIEW_GUIDE.md              # AI 校对工作流说明
 ├── index.html                      # 网页工具集
@@ -143,8 +144,10 @@ sf6-toolbox/
 │   ├── characters.index.json       # 角色索引（前端先读取）
 │   ├── 角色名.json                  # 正式使用数据（apply 脚本生成）
 │   ├── 角色名.fat.json              # FAT 来源数据
-│   ├── 角色名.supercombo.json       # SuperCombo 来源数据
-│   ├── 角色名.conflicts.csv         # 该角色冲突清单
+│   ├── official-frame/              # 官网抓取及对比产物
+│   │   ├── 角色名.official.frame.json
+│   │   ├── 角色名.official.conflicts.csv
+│   │   └── official_overrides.conflicts.csv
 │   └── 角色名.overrides.json        # 人工/AI 校对后的覆盖值
 └── README.md
 ```

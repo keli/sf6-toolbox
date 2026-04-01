@@ -1,0 +1,828 @@
+{
+  "character": "Blanka",
+  "fetchedAt": "2026-04-01T13:11:43.668450+00:00",
+  "moveCount": 91,
+  "moves": [
+    {
+      "active": "5-7",
+      "category": "Normal Moves",
+      "name": "Standing Light Punch",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "10",
+      "startup": "5"
+    },
+    {
+      "active": "4-7",
+      "category": "Normal Moves",
+      "name": "Standing Light Kick",
+      "onBlock": "-2",
+      "onHit": "5",
+      "recovery": "7",
+      "startup": "4"
+    },
+    {
+      "active": "10-12",
+      "category": "Normal Moves",
+      "name": "Standing Medium Punch",
+      "onBlock": "-4",
+      "onHit": "3",
+      "recovery": "15",
+      "startup": "10"
+    },
+    {
+      "active": "8-10",
+      "category": "Normal Moves",
+      "name": "Standing Medium Kick",
+      "onBlock": "-2",
+      "onHit": "5",
+      "recovery": "17",
+      "startup": "8"
+    },
+    {
+      "active": "10-16",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Punch",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "22",
+      "startup": "10"
+    },
+    {
+      "active": "7-15",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Kick",
+      "onBlock": "-4",
+      "onHit": "6",
+      "recovery": "18",
+      "startup": "7"
+    },
+    {
+      "active": "6-8",
+      "category": "Normal Moves",
+      "name": "Crouching Light Punch",
+      "onBlock": "-2",
+      "onHit": "5",
+      "recovery": "8",
+      "startup": "6"
+    },
+    {
+      "active": "5-6",
+      "category": "Normal Moves",
+      "name": "Crouching Light Kick",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "10",
+      "startup": "5"
+    },
+    {
+      "active": "9-13",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Punch",
+      "onBlock": "-5",
+      "onHit": "-1",
+      "recovery": "16",
+      "startup": "9"
+    },
+    {
+      "active": "8-10",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Kick",
+      "onBlock": "-5",
+      "onHit": "5",
+      "recovery": "*16",
+      "startup": "8"
+    },
+    {
+      "active": "15-19",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Punch",
+      "onBlock": "-5",
+      "onHit": "0",
+      "recovery": "20",
+      "startup": "15"
+    },
+    {
+      "active": "11-14",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Kick",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "11"
+    },
+    {
+      "active": "4-8",
+      "category": "Normal Moves",
+      "name": "Jumping Light Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "4"
+    },
+    {
+      "active": "5-10",
+      "category": "Normal Moves",
+      "name": "Jumping Light Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "7-13",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "7-12",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "9",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "11-16",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "11"
+    },
+    {
+      "active": "7-9",
+      "category": "Normal Moves",
+      "name": "Neutral Jumping Heavy Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "20-22",
+      "category": "Unique Attacks",
+      "name": "Rock Crusher",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "20",
+      "startup": "20"
+    },
+    {
+      "active": "9-20 9-11, 19-20",
+      "category": "Unique Attacks",
+      "name": "Double Knee Bombs",
+      "onBlock": "-2",
+      "onHit": "6",
+      "recovery": "18",
+      "startup": "9"
+    },
+    {
+      "active": "9-14",
+      "category": "Unique Attacks",
+      "name": "Wild Edge",
+      "onBlock": "2",
+      "onHit": "8",
+      "recovery": "12",
+      "startup": "9"
+    },
+    {
+      "active": "18-21",
+      "category": "Unique Attacks",
+      "name": "Wild Nail",
+      "onBlock": "-15",
+      "onHit": "D",
+      "recovery": "31",
+      "startup": "18"
+    },
+    {
+      "active": "14-23",
+      "category": "Unique Attacks",
+      "name": "Amazon River Run",
+      "onBlock": "-18",
+      "onHit": "D",
+      "recovery": "22",
+      "startup": "14"
+    },
+    {
+      "active": null,
+      "category": "Unique Attacks",
+      "name": "Coward Crouch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "98 total frames",
+      "startup": null
+    },
+    {
+      "active": "8-14",
+      "category": "Unique Attacks",
+      "name": "Wild Lift",
+      "onBlock": "-21",
+      "onHit": "D",
+      "recovery": "31",
+      "startup": "8"
+    },
+    {
+      "active": null,
+      "category": "Unique Attacks",
+      "name": "Raid Jump",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "43+12 frame(s) after landing",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Unique Attacks",
+      "name": "Surprise Forward Hop",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "27 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Unique Attacks",
+      "name": "Surprise Back Hop",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "32 total frames",
+      "startup": null
+    },
+    {
+      "active": "10-21 10-11,15-16,20-21",
+      "category": "Special Moves",
+      "name": "Electric Thunder",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "17",
+      "startup": "10"
+    },
+    {
+      "active": "10-21 10-11,15-16,20-21",
+      "category": "Special Moves",
+      "name": "[Lightning Beast] Electric Thunder",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "17",
+      "startup": "10"
+    },
+    {
+      "active": "10-21 10-11,15-16,20-21",
+      "category": "Special Moves",
+      "name": "OD Electric Thunder",
+      "onBlock": "4",
+      "onHit": "D",
+      "recovery": "17",
+      "startup": "10"
+    },
+    {
+      "active": "10-21 10-11,15-16,20-21",
+      "category": "Special Moves",
+      "name": "[Lightning Beast]OD Electric Thunder",
+      "onBlock": "4",
+      "onHit": "D",
+      "recovery": "17",
+      "startup": "10"
+    },
+    {
+      "active": "10-20",
+      "category": "Special Moves",
+      "name": "L Rolling Attack",
+      "onBlock": "-23",
+      "onHit": "D",
+      "recovery": "11",
+      "startup": "10"
+    },
+    {
+      "active": "10-20",
+      "category": "Special Moves",
+      "name": "[Lightning Beast] L Rolling Attack",
+      "onBlock": "-21",
+      "onHit": "D",
+      "recovery": "11",
+      "startup": "10"
+    },
+    {
+      "active": "12-30",
+      "category": "Special Moves",
+      "name": "M Rolling Attack",
+      "onBlock": "-23",
+      "onHit": "D",
+      "recovery": "11",
+      "startup": "12"
+    },
+    {
+      "active": "12-30",
+      "category": "Special Moves",
+      "name": "[Lightning Beast] M Rolling Attack",
+      "onBlock": "-21",
+      "onHit": "D",
+      "recovery": "11",
+      "startup": "12"
+    },
+    {
+      "active": "22-41",
+      "category": "Special Moves",
+      "name": "H Rolling Attack",
+      "onBlock": "-15",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "22"
+    },
+    {
+      "active": "22-41",
+      "category": "Special Moves",
+      "name": "[Lightning Beast] H Rolling Attack",
+      "onBlock": "-21",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "22"
+    },
+    {
+      "active": "18-39",
+      "category": "Special Moves",
+      "name": "OD Rolling Attack",
+      "onBlock": "-7",
+      "onHit": "D",
+      "recovery": "17",
+      "startup": "18"
+    },
+    {
+      "active": "18-39",
+      "category": "Special Moves",
+      "name": "[Lightning Beast] OD Rolling Attack",
+      "onBlock": "-7",
+      "onHit": "D",
+      "recovery": "17",
+      "startup": "18"
+    },
+    {
+      "active": "8-27",
+      "category": "Special Moves",
+      "name": "L Vertical Rolling Attack",
+      "onBlock": "-27",
+      "onHit": "D",
+      "recovery": "31+17 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "8-27",
+      "category": "Special Moves",
+      "name": "[Lightning Beast] L Vertical Rolling Attack",
+      "onBlock": "-27",
+      "onHit": "D",
+      "recovery": "31+17 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "8-27",
+      "category": "Special Moves",
+      "name": "M Vertical Rolling Attack",
+      "onBlock": "-27",
+      "onHit": "D",
+      "recovery": "31+17 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "8-27",
+      "category": "Special Moves",
+      "name": "[Lightning Beast] M Vertical Rolling Attack",
+      "onBlock": "-27",
+      "onHit": "D",
+      "recovery": "31+17 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "8-27",
+      "category": "Special Moves",
+      "name": "H Vertical Rolling Attack",
+      "onBlock": "-27",
+      "onHit": "D",
+      "recovery": "31+17 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "8-27",
+      "category": "Special Moves",
+      "name": "[Lightning Beast] H Vertical Rolling Attack",
+      "onBlock": "-27",
+      "onHit": "D",
+      "recovery": "31+17 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "7-22 7-14,17-22",
+      "category": "Special Moves",
+      "name": "OD Vertical Rolling Attack",
+      "onBlock": "-40",
+      "onHit": "D",
+      "recovery": "31+17 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "7-22 7-14,17-22",
+      "category": "Special Moves",
+      "name": "[Lightning Beast] OD Vertical Rolling Attack",
+      "onBlock": "-40",
+      "onHit": "D",
+      "recovery": "31+17 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "41-until landing",
+      "category": "Special Moves",
+      "name": "L Backstep Rolling Attack",
+      "onBlock": "3",
+      "onHit": "9",
+      "recovery": "5 frame(s) after landing",
+      "startup": "41"
+    },
+    {
+      "active": "41-until landing",
+      "category": "Special Moves",
+      "name": "[Lightning Beast] L Backstep Rolling Attack",
+      "onBlock": "3",
+      "onHit": "9",
+      "recovery": "5 frame(s) after landing",
+      "startup": "41"
+    },
+    {
+      "active": "41-until landing",
+      "category": "Special Moves",
+      "name": "M Backstep Rolling Attack",
+      "onBlock": "2",
+      "onHit": "8",
+      "recovery": "5 frame(s) after landing",
+      "startup": "41"
+    },
+    {
+      "active": "41-until landing",
+      "category": "Special Moves",
+      "name": "[Lightning Beast] M Backstep Rolling Attack",
+      "onBlock": "2",
+      "onHit": "8",
+      "recovery": "5 frame(s) after landing",
+      "startup": "41"
+    },
+    {
+      "active": "41-until landing",
+      "category": "Special Moves",
+      "name": "H Backstep Rolling Attack",
+      "onBlock": "4",
+      "onHit": "8",
+      "recovery": "5 frame(s) after landing",
+      "startup": "41"
+    },
+    {
+      "active": "41-until landing",
+      "category": "Special Moves",
+      "name": "[Lightning Beast] H Backstep Rolling Attack",
+      "onBlock": "4",
+      "onHit": "8",
+      "recovery": "5 frame(s) after landing",
+      "startup": "41"
+    },
+    {
+      "active": "8-66 8-12,41-61,63-66",
+      "category": "Special Moves",
+      "name": "OD Backstep Rolling Attack",
+      "onBlock": "6",
+      "onHit": "10",
+      "recovery": "4 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "8-66 8-12,41-61,63-66",
+      "category": "Special Moves",
+      "name": "[Lightning Beast] OD Backstep Rolling Attack",
+      "onBlock": "6",
+      "onHit": "10",
+      "recovery": "4 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "13-until landing",
+      "category": "Special Moves",
+      "name": "L Aerial Rolling Attack",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "17 frame(s) after landing",
+      "startup": "13"
+    },
+    {
+      "active": "13-until landing",
+      "category": "Special Moves",
+      "name": "[Lightning Beast] L Aerial Rolling Attack",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "17 frame(s) after landing",
+      "startup": "13"
+    },
+    {
+      "active": "13-until landing",
+      "category": "Special Moves",
+      "name": "M Aerial Rolling Attack",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "17 frame(s) after landing",
+      "startup": "13"
+    },
+    {
+      "active": "13-until landing",
+      "category": "Special Moves",
+      "name": "[Lightning Beast] M Aerial Rolling Attack",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "17 frame(s) after landing",
+      "startup": "13"
+    },
+    {
+      "active": "13-until landing",
+      "category": "Special Moves",
+      "name": "H Aerial Rolling Attack",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "17 frame(s) after landing",
+      "startup": "13"
+    },
+    {
+      "active": "13-until landing",
+      "category": "Special Moves",
+      "name": "[Lightning Beast] H Aerial Rolling Attack",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "17 frame(s) after landing",
+      "startup": "13"
+    },
+    {
+      "active": "13-until landing",
+      "category": "Special Moves",
+      "name": "OD Aerial Rolling Attack",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "15 frame(s) after landing",
+      "startup": "13"
+    },
+    {
+      "active": "13-until landing",
+      "category": "Special Moves",
+      "name": "[Lightning Beast] OD Aerial Rolling Attack",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "10 frame(s) after landing",
+      "startup": "13"
+    },
+    {
+      "active": "34-36",
+      "category": "Special Moves",
+      "name": "L Wild Hunt",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "57",
+      "startup": "34"
+    },
+    {
+      "active": "39-41",
+      "category": "Special Moves",
+      "name": "M Wild Hunt",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "57",
+      "startup": "39"
+    },
+    {
+      "active": "43-45",
+      "category": "Special Moves",
+      "name": "H Wild Hunt",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "57",
+      "startup": "43"
+    },
+    {
+      "active": "32-34",
+      "category": "Special Moves",
+      "name": "OD Wild Hunt",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "57",
+      "startup": "32"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "Blanka-chan Bomb",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "50 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "Blanka-chan Bomb (Activated)",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": null,
+      "startup": "36"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD Blanka-chan Bomb (Activated)",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": null,
+      "startup": "36"
+    },
+    {
+      "active": "3-27",
+      "category": "Special Moves",
+      "name": "Rolling Cannon",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "9 frames of recovery upon landing",
+      "startup": "3"
+    },
+    {
+      "active": "8-16",
+      "category": "Super Arts",
+      "name": "SA1 Shout of Earth",
+      "onBlock": "-29",
+      "onHit": "D",
+      "recovery": "78 total frames",
+      "startup": "8"
+    },
+    {
+      "active": "8-16",
+      "category": "Super Arts",
+      "name": "[Lightning Beast] SA1 Shout of Earth",
+      "onBlock": "-29",
+      "onHit": "D",
+      "recovery": "78 total frames",
+      "startup": "8"
+    },
+    {
+      "active": null,
+      "category": "Super Arts",
+      "name": "SA2 Lightning Beast",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "10 total frames",
+      "startup": null
+    },
+    {
+      "active": "10-12",
+      "category": "Super Arts",
+      "name": "SA3 Ground Shave Cannonball",
+      "onBlock": "-46",
+      "onHit": "D",
+      "recovery": "61",
+      "startup": "10"
+    },
+    {
+      "active": "10-12",
+      "category": "Super Arts",
+      "name": "CA Ground Shave Cannonball",
+      "onBlock": "-46",
+      "onHit": "D",
+      "recovery": "61",
+      "startup": "10"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Wild Fang",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Jungle Flip",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Wild Bites",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": null,
+      "startup": "5"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Forward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "19 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Backward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "23 total frames",
+      "startup": null
+    },
+    {
+      "active": "26-27",
+      "category": "Common Moves",
+      "name": "Drive Impact: Wild Scratch",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "35",
+      "startup": "26"
+    },
+    {
+      "active": "20-22",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while blocking): Quick Rolling Attack",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "20"
+    },
+    {
+      "active": "18-20",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while recovering): Quick Rolling Attack",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "18"
+    },
+    {
+      "active": "[*2] 1-12",
+      "category": "Common Moves",
+      "name": "Drive Parry",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "33",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (strike)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "1",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (projectile)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "10",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Parry Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "55 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Cancel Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "55 total frames",
+      "startup": null
+    }
+  ],
+  "slug": "blanka",
+  "url": "https://www.streetfighter.com/6/character/blanka/frame"
+}

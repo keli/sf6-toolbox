@@ -1,0 +1,693 @@
+{
+  "character": "Ken",
+  "fetchedAt": "2026-04-01T13:12:13.044687+00:00",
+  "moveCount": 76,
+  "moves": [
+    {
+      "active": "4-6",
+      "category": "Normal Moves",
+      "name": "Standing Light Punch",
+      "onBlock": "-1",
+      "onHit": "4",
+      "recovery": "7",
+      "startup": "4"
+    },
+    {
+      "active": "5-6",
+      "category": "Normal Moves",
+      "name": "Standing Light Kick",
+      "onBlock": "-2",
+      "onHit": "0",
+      "recovery": "12",
+      "startup": "5"
+    },
+    {
+      "active": "5-8",
+      "category": "Normal Moves",
+      "name": "Standing Medium Punch",
+      "onBlock": "-2",
+      "onHit": "4",
+      "recovery": "14",
+      "startup": "5"
+    },
+    {
+      "active": "8-10",
+      "category": "Normal Moves",
+      "name": "Standing Medium Kick",
+      "onBlock": "-5",
+      "onHit": "3",
+      "recovery": "20",
+      "startup": "8"
+    },
+    {
+      "active": "10-14",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Punch",
+      "onBlock": "-2",
+      "onHit": "3",
+      "recovery": "17",
+      "startup": "10"
+    },
+    {
+      "active": "12-13",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Kick",
+      "onBlock": "-5",
+      "onHit": "1",
+      "recovery": "*23",
+      "startup": "12"
+    },
+    {
+      "active": "4-5",
+      "category": "Normal Moves",
+      "name": "Crouching Light Punch",
+      "onBlock": "-1",
+      "onHit": "5",
+      "recovery": "9",
+      "startup": "4"
+    },
+    {
+      "active": "5-7",
+      "category": "Normal Moves",
+      "name": "Crouching Light Kick",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "10",
+      "startup": "5"
+    },
+    {
+      "active": "6-8",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Punch",
+      "onBlock": "0",
+      "onHit": "3",
+      "recovery": "14",
+      "startup": "6"
+    },
+    {
+      "active": "7-9",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Kick",
+      "onBlock": "-6",
+      "onHit": "-2",
+      "recovery": "19",
+      "startup": "7"
+    },
+    {
+      "active": "8-11",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Punch",
+      "onBlock": "-7",
+      "onHit": "3",
+      "recovery": "24",
+      "startup": "8"
+    },
+    {
+      "active": "8-10",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Kick",
+      "onBlock": "-10",
+      "onHit": "D",
+      "recovery": "*24",
+      "startup": "8"
+    },
+    {
+      "active": "5-11",
+      "category": "Normal Moves",
+      "name": "Jumping Light Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "6-11",
+      "category": "Normal Moves",
+      "name": "Jumping Light Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "6-9",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "7-12",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "9-14",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "10-16",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "6-11",
+      "category": "Normal Moves",
+      "name": "Neutral Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": null,
+      "category": "Unique Attacks",
+      "name": "Quick Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "45 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Unique Attacks",
+      "name": "Emergency Stop",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "16 total frames",
+      "startup": null
+    },
+    {
+      "active": "18-20",
+      "category": "Unique Attacks",
+      "name": "Thunder Kick",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "20",
+      "startup": "18"
+    },
+    {
+      "active": "10-13",
+      "category": "Unique Attacks",
+      "name": "Forward Step Kick",
+      "onBlock": "-4",
+      "onHit": "3",
+      "recovery": "20",
+      "startup": "10"
+    },
+    {
+      "active": "11-13",
+      "category": "Unique Attacks",
+      "name": "Chin Buster",
+      "onBlock": "-14",
+      "onHit": "D",
+      "recovery": "27",
+      "startup": "11"
+    },
+    {
+      "active": "11-12",
+      "category": "Unique Attacks",
+      "name": "Triple Flash Kicks (2)",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "27",
+      "startup": "11"
+    },
+    {
+      "active": "13-15",
+      "category": "Unique Attacks",
+      "name": "Triple Flash Kicks (3)",
+      "onBlock": "-11",
+      "onHit": "D",
+      "recovery": "28",
+      "startup": "13"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "L Hadoken",
+      "onBlock": "-7",
+      "onHit": "-1",
+      "recovery": "49 total frames",
+      "startup": "16"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "M Hadoken",
+      "onBlock": "-9",
+      "onHit": "-3",
+      "recovery": "49 total frames",
+      "startup": "14"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "H Hadoken",
+      "onBlock": "-11",
+      "onHit": "-5",
+      "recovery": "49 total frames",
+      "startup": "12"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD Hadoken",
+      "onBlock": "-2",
+      "onHit": "2",
+      "recovery": "40 total frames",
+      "startup": "12"
+    },
+    {
+      "active": "5-14",
+      "category": "Special Moves",
+      "name": "L Shoryuken",
+      "onBlock": "-23",
+      "onHit": "D",
+      "recovery": "21+12 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "6-15 6-8,9-15",
+      "category": "Special Moves",
+      "name": "M Shoryuken",
+      "onBlock": "-28",
+      "onHit": "D",
+      "recovery": "28+12 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "7-16 7-8,9-10,11-16",
+      "category": "Special Moves",
+      "name": "H Shoryuken",
+      "onBlock": "-36",
+      "onHit": "D",
+      "recovery": "35+15 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "6-39 6-7, 8-15, 30-31, 32, 33-34, 35-39",
+      "category": "Special Moves",
+      "name": "OD Shoryuken",
+      "onBlock": "-40",
+      "onHit": "D",
+      "recovery": "35+15 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "8-17 8, 9, 10, 11, 12-17",
+      "category": "Special Moves",
+      "name": "[Quick Dash] Shoryuken",
+      "onBlock": "-35",
+      "onHit": "D",
+      "recovery": "33+15 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "4-14 4-5, 12-14",
+      "category": "Special Moves",
+      "name": "L Tatsumaki Senpu-kyaku",
+      "onBlock": "-14",
+      "onHit": "D",
+      "recovery": "32",
+      "startup": "4"
+    },
+    {
+      "active": "14-30 14-15, 29-30",
+      "category": "Special Moves",
+      "name": "M Tatsumaki Senpu-kyaku",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "31",
+      "startup": "14"
+    },
+    {
+      "active": "16-47 16-17, 31-32, 46-47",
+      "category": "Special Moves",
+      "name": "H Tatsumaki Senpu-kyaku",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "31",
+      "startup": "16"
+    },
+    {
+      "active": "9-56 9-12, 18-20, 27-29, 36-38,54-56",
+      "category": "Special Moves",
+      "name": "OD Tatsumaki Senpu-kyaku",
+      "onBlock": "-61",
+      "onHit": "D",
+      "recovery": "22+12 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "13-58 13-14,17-19,22-23,26-28,31-32,35-37, 40-41,44-46,49-50,56-58",
+      "category": "Special Moves",
+      "name": "[Quick Dash] Tatsumaki Senpu-kyaku",
+      "onBlock": "-9",
+      "onHit": "3",
+      "recovery": "20",
+      "startup": "13"
+    },
+    {
+      "active": "11-27 11-12,18-19,26-27",
+      "category": "Special Moves",
+      "name": "Aerial Tatsumaki Senpu-kyaku",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "14 frame(s) after landing",
+      "startup": "11"
+    },
+    {
+      "active": "11-28 11-12, 14-15, 18-19, 22-23, 27-28",
+      "category": "Special Moves",
+      "name": "OD Aerial Tatsumaki Senpu-kyaku",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "14 frame(s) after landing",
+      "startup": "11"
+    },
+    {
+      "active": "18-23",
+      "category": "Special Moves",
+      "name": "L Dragonlash Kick",
+      "onBlock": "-4",
+      "onHit": "2",
+      "recovery": "21",
+      "startup": "18"
+    },
+    {
+      "active": "23-27",
+      "category": "Special Moves",
+      "name": "M Dragonlash Kick",
+      "onBlock": "-8",
+      "onHit": "3",
+      "recovery": "25",
+      "startup": "23"
+    },
+    {
+      "active": "28-32",
+      "category": "Special Moves",
+      "name": "H Dragonlash Kick",
+      "onBlock": "1",
+      "onHit": "3",
+      "recovery": "21",
+      "startup": "28"
+    },
+    {
+      "active": "9-24 9-10, 18-24",
+      "category": "Special Moves",
+      "name": "OD Dragonlash Kick",
+      "onBlock": "-9",
+      "onHit": "1",
+      "recovery": "24",
+      "startup": "9"
+    },
+    {
+      "active": "9-23 9-12, 18-23",
+      "category": "Special Moves",
+      "name": "[Quick Dash] Dragonlash Kick",
+      "onBlock": "-8",
+      "onHit": "2",
+      "recovery": "24",
+      "startup": "9"
+    },
+    {
+      "active": "12-14",
+      "category": "Special Moves",
+      "name": "L Jinrai Kick",
+      "onBlock": "-11",
+      "onHit": "1",
+      "recovery": "28",
+      "startup": "12"
+    },
+    {
+      "active": "16-18",
+      "category": "Special Moves",
+      "name": "M Jinrai Kick",
+      "onBlock": "-7",
+      "onHit": "2",
+      "recovery": "24",
+      "startup": "16"
+    },
+    {
+      "active": "25-27",
+      "category": "Special Moves",
+      "name": "H Jinrai Kick",
+      "onBlock": "-2",
+      "onHit": "D",
+      "recovery": "19",
+      "startup": "25"
+    },
+    {
+      "active": "13-15",
+      "category": "Special Moves",
+      "name": "OD Jinrai Kick",
+      "onBlock": "-7",
+      "onHit": "-4",
+      "recovery": "25",
+      "startup": "13"
+    },
+    {
+      "active": "6-9",
+      "category": "Special Moves",
+      "name": "Kazekama Shin Kick",
+      "onBlock": "-5",
+      "onHit": "3",
+      "recovery": "19",
+      "startup": "6"
+    },
+    {
+      "active": "6-8",
+      "category": "Special Moves",
+      "name": "OD Kazekama Shin Kick",
+      "onBlock": "-5",
+      "onHit": "3",
+      "recovery": "20",
+      "startup": "6"
+    },
+    {
+      "active": "15-17",
+      "category": "Special Moves",
+      "name": "Kasai Thrust Kick",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "29",
+      "startup": "15"
+    },
+    {
+      "active": "18-20",
+      "category": "Special Moves",
+      "name": "Gorai Axe Kick",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "20",
+      "startup": "18"
+    },
+    {
+      "active": "17-19",
+      "category": "Special Moves",
+      "name": "OD Gorai Axe Kick",
+      "onBlock": "-7",
+      "onHit": "-3",
+      "recovery": "24",
+      "startup": "17"
+    },
+    {
+      "active": "11-13",
+      "category": "Special Moves",
+      "name": "Kasai Thrust Kick",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "29",
+      "startup": "11"
+    },
+    {
+      "active": "10-12",
+      "category": "Special Moves",
+      "name": "Senka Snap Kick",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "25",
+      "startup": "10"
+    },
+    {
+      "active": "10-15",
+      "category": "Special Moves",
+      "name": "OD Senka Snap Kick",
+      "onBlock": "-4",
+      "onHit": "D",
+      "recovery": "18",
+      "startup": "10"
+    },
+    {
+      "active": "15-17",
+      "category": "Special Moves",
+      "name": "Kasai Thrust Kick",
+      "onBlock": "-20",
+      "onHit": "D",
+      "recovery": "37",
+      "startup": "15"
+    },
+    {
+      "active": "7-9",
+      "category": "Super Arts",
+      "name": "SA1 Dragonlash Flame",
+      "onBlock": "-24",
+      "onHit": "D",
+      "recovery": "41",
+      "startup": "7"
+    },
+    {
+      "active": "6-61 6-7,18-20,31-33,46-48,60-61",
+      "category": "Super Arts",
+      "name": "SA2 Shippu Jinrai-kyaku",
+      "onBlock": "-5",
+      "onHit": "D",
+      "recovery": "28",
+      "startup": "6"
+    },
+    {
+      "active": "7-45 7-9,11-13,14-16,33-35,36-37,38-39,40-41,42-43,44-45",
+      "category": "Super Arts",
+      "name": "SA3 Shinryu Reppa",
+      "onBlock": "-40",
+      "onHit": "D",
+      "recovery": "55",
+      "startup": "7"
+    },
+    {
+      "active": "7-45 7-9,11-13,14-16,33-35,36-37,38-39,40-41,42-43,44-45",
+      "category": "Super Arts",
+      "name": "CA Shinryu Reppa",
+      "onBlock": "-40",
+      "onHit": "D",
+      "recovery": "55",
+      "startup": "7"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Knee Strikes",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Hell Wheel",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Forward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "19 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Backward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "23 total frames",
+      "startup": null
+    },
+    {
+      "active": "26-27",
+      "category": "Common Moves",
+      "name": "Drive Impact: Flame Strike",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "35",
+      "startup": "26"
+    },
+    {
+      "active": "20-22",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while blocking): Lightning Crack",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "20"
+    },
+    {
+      "active": "18-20",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while recovering): Lightning Crack",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "18"
+    },
+    {
+      "active": "[*2] 1-12",
+      "category": "Common Moves",
+      "name": "Drive Parry",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "33",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (strike)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "1",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (projectile)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "10",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Parry Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "45 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Cancel Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "46 total frames",
+      "startup": null
+    }
+  ],
+  "slug": "ken",
+  "url": "https://www.streetfighter.com/6/character/ken/frame"
+}

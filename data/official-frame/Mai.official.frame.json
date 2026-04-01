@@ -1,0 +1,819 @@
+{
+  "character": "Mai",
+  "fetchedAt": "2026-04-01T13:12:20.210481+00:00",
+  "moveCount": 90,
+  "moves": [
+    {
+      "active": "4-6",
+      "category": "Normal Moves",
+      "name": "Standing Light Punch",
+      "onBlock": "-2",
+      "onHit": "5",
+      "recovery": "7",
+      "startup": "4"
+    },
+    {
+      "active": "4-6",
+      "category": "Normal Moves",
+      "name": "Standing Light Kick",
+      "onBlock": "-1",
+      "onHit": "1",
+      "recovery": "8",
+      "startup": "4"
+    },
+    {
+      "active": "8-11",
+      "category": "Normal Moves",
+      "name": "Standing Medium Punch",
+      "onBlock": "-3",
+      "onHit": "2",
+      "recovery": "15",
+      "startup": "8"
+    },
+    {
+      "active": "9-11",
+      "category": "Normal Moves",
+      "name": "Standing Medium Kick",
+      "onBlock": "-4",
+      "onHit": "5",
+      "recovery": "18",
+      "startup": "9"
+    },
+    {
+      "active": "9-11",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Punch",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "21",
+      "startup": "9"
+    },
+    {
+      "active": "14-16",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Kick",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "19",
+      "startup": "14"
+    },
+    {
+      "active": "4-6",
+      "category": "Normal Moves",
+      "name": "Crouching Light Punch",
+      "onBlock": "-1",
+      "onHit": "4",
+      "recovery": "7",
+      "startup": "4"
+    },
+    {
+      "active": "5-7",
+      "category": "Normal Moves",
+      "name": "Crouching Light Kick",
+      "onBlock": "-2",
+      "onHit": "2",
+      "recovery": "8",
+      "startup": "5"
+    },
+    {
+      "active": "6-9",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Punch",
+      "onBlock": "-3",
+      "onHit": "5",
+      "recovery": "15",
+      "startup": "6"
+    },
+    {
+      "active": "7-9",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Kick",
+      "onBlock": "-6",
+      "onHit": "-2",
+      "recovery": "19",
+      "startup": "7"
+    },
+    {
+      "active": "10-22 10-11, 20-22",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Punch",
+      "onBlock": "-3",
+      "onHit": "4",
+      "recovery": "19",
+      "startup": "10"
+    },
+    {
+      "active": "9-11",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Kick",
+      "onBlock": "-11",
+      "onHit": "D",
+      "recovery": "22",
+      "startup": "9"
+    },
+    {
+      "active": "4-12",
+      "category": "Normal Moves",
+      "name": "Jumping Light Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "4"
+    },
+    {
+      "active": "5-11",
+      "category": "Normal Moves",
+      "name": "Jumping Light Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "7-11",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "7-11",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "9-13",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "10-15",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "20-22",
+      "category": "Unique Attacks",
+      "name": "Senkotsu Uchi",
+      "onBlock": "-3",
+      "onHit": "2",
+      "recovery": "18",
+      "startup": "20"
+    },
+    {
+      "active": "7-8",
+      "category": "Unique Attacks",
+      "name": "Hien Ren Kyaku(2)",
+      "onBlock": "-10",
+      "onHit": "-2",
+      "recovery": "20",
+      "startup": "7"
+    },
+    {
+      "active": "10-11",
+      "category": "Unique Attacks",
+      "name": "Hien Ren Kyaku(3)",
+      "onBlock": "-10",
+      "onHit": "3",
+      "recovery": "28",
+      "startup": "10"
+    },
+    {
+      "active": "8-12",
+      "category": "Unique Attacks",
+      "name": "Hoshi Kujaku(1)",
+      "onBlock": "-1",
+      "onHit": "3",
+      "recovery": "20",
+      "startup": "8"
+    },
+    {
+      "active": "9-11",
+      "category": "Unique Attacks",
+      "name": "Hoshi Kujaku(2)",
+      "onBlock": "-11",
+      "onHit": "D",
+      "recovery": "38",
+      "startup": "9"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "L Kachousen",
+      "onBlock": "-7",
+      "onHit": "-1",
+      "recovery": "48 total frames",
+      "startup": "16"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "L Kachousen(Charged)",
+      "onBlock": "-5",
+      "onHit": "-1",
+      "recovery": "64 total frames",
+      "startup": "32"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "[Boosted]L Kachousen",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "45 total frames",
+      "startup": "16"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "[Boosted]L Kachousen(Charged)",
+      "onBlock": "-1",
+      "onHit": "1",
+      "recovery": "62 total frames",
+      "startup": "32"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "M Kachousen",
+      "onBlock": "-9",
+      "onHit": "-3",
+      "recovery": "48 total frames",
+      "startup": "14"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "M Kachousen(Charged)",
+      "onBlock": "-5",
+      "onHit": "-1",
+      "recovery": "64 total frames",
+      "startup": "32"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "[Boosted]M Kachousen",
+      "onBlock": "-5",
+      "onHit": "-1",
+      "recovery": "45 total frames",
+      "startup": "14"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "[Boosted]M Kachousen(Charged)",
+      "onBlock": "-1",
+      "onHit": "1",
+      "recovery": "62 total frames",
+      "startup": "32"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "H Kachousen",
+      "onBlock": "-11",
+      "onHit": "-5",
+      "recovery": "48 total frames",
+      "startup": "12"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "H Kachousen(Charged)",
+      "onBlock": "-5",
+      "onHit": "-1",
+      "recovery": "64 total frames",
+      "startup": "32"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "[Boosted]H Kachousen",
+      "onBlock": "-7",
+      "onHit": "-3",
+      "recovery": "45 total frames",
+      "startup": "12"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "[Boosted]H Kachousen(Charged)",
+      "onBlock": "-1",
+      "onHit": "1",
+      "recovery": "62 total frames",
+      "startup": "32"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD Kachousen",
+      "onBlock": "-5",
+      "onHit": "3",
+      "recovery": "42 total frames",
+      "startup": "12"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD Kachousen(Charged)",
+      "onBlock": "12",
+      "onHit": "14",
+      "recovery": "58 total frames",
+      "startup": "28"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "[Boosted]OD Kachousen",
+      "onBlock": "1",
+      "onHit": "3",
+      "recovery": "42 total frames",
+      "startup": "12"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "[Boosted]OD Kachousen(Charged)",
+      "onBlock": "12",
+      "onHit": "14",
+      "recovery": "58 total frames",
+      "startup": "28"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "Midare Kachousen",
+      "onBlock": "0",
+      "onHit": "D",
+      "recovery": "39 total frames",
+      "startup": "15"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "[Boosted]Midare Kachousen",
+      "onBlock": "0",
+      "onHit": "D",
+      "recovery": "39 total frames",
+      "startup": "15"
+    },
+    {
+      "active": "5-22",
+      "category": "Special Moves",
+      "name": "L Hishou Ryuuenjin",
+      "onBlock": "-29",
+      "onHit": "D",
+      "recovery": "15+15 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "5-22",
+      "category": "Special Moves",
+      "name": "[Boosted]L Hishou Ryuuenjin",
+      "onBlock": "-29",
+      "onHit": "D",
+      "recovery": "15+15 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "6-23",
+      "category": "Special Moves",
+      "name": "M Hishou Ryuuenjin",
+      "onBlock": "-28",
+      "onHit": "D",
+      "recovery": "14+15 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "6-24",
+      "category": "Special Moves",
+      "name": "[Boosted]M Hishou Ryuuenjin",
+      "onBlock": "-28",
+      "onHit": "D",
+      "recovery": "13+15 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "7-24",
+      "category": "Special Moves",
+      "name": "H Hishou Ryuuenjin",
+      "onBlock": "-31",
+      "onHit": "D",
+      "recovery": "14+15 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "7-24",
+      "category": "Special Moves",
+      "name": "[Boosted]H Hishou Ryuuenjin",
+      "onBlock": "-31",
+      "onHit": "D",
+      "recovery": "14+15 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "6-22",
+      "category": "Special Moves",
+      "name": "OD Hishou Ryuuenjin",
+      "onBlock": "-40",
+      "onHit": "D",
+      "recovery": "19+16 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "6-23",
+      "category": "Special Moves",
+      "name": "[Boosted]OD Hishou Ryuuenjin",
+      "onBlock": "-40",
+      "onHit": "D",
+      "recovery": "18+16 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "14-20",
+      "category": "Special Moves",
+      "name": "L Ryuuenbu",
+      "onBlock": "-4",
+      "onHit": "3",
+      "recovery": "15",
+      "startup": "14"
+    },
+    {
+      "active": "14-20",
+      "category": "Special Moves",
+      "name": "[Boosted]L Ryuuenbu",
+      "onBlock": "-2",
+      "onHit": "D",
+      "recovery": "15",
+      "startup": "14"
+    },
+    {
+      "active": "14-31 14-15, 25-31",
+      "category": "Special Moves",
+      "name": "M Ryuuenbu",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "16",
+      "startup": "14"
+    },
+    {
+      "active": "14-31 14-15, 25-31",
+      "category": "Special Moves",
+      "name": "[Boosted]M Ryuuenbu",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "16",
+      "startup": "14"
+    },
+    {
+      "active": "15-36 15-17, 27-36",
+      "category": "Special Moves",
+      "name": "H Ryuuenbu",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "12",
+      "startup": "15"
+    },
+    {
+      "active": "14-36 14-17, 27-36",
+      "category": "Special Moves",
+      "name": "[Boosted]H Ryuuenbu",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "12",
+      "startup": "14"
+    },
+    {
+      "active": "16-46 16-17, 30-34, 42-46",
+      "category": "Special Moves",
+      "name": "OD Ryuuenbu",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "16",
+      "startup": "16"
+    },
+    {
+      "active": "16-46 16-17, 30-34, 42-46",
+      "category": "Special Moves",
+      "name": "[Boosted]OD Ryuuenbu",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "16",
+      "startup": "16"
+    },
+    {
+      "active": "10-39 10-11, 23-39",
+      "category": "Special Moves",
+      "name": "L Hissatsu Shinobi Bachi",
+      "onBlock": "-10",
+      "onHit": "D",
+      "recovery": "16",
+      "startup": "10"
+    },
+    {
+      "active": "10-39 10-11, 23-39",
+      "category": "Special Moves",
+      "name": "[Boosted]L Hissatsu Shinobi Bachi",
+      "onBlock": "-10",
+      "onHit": "D",
+      "recovery": "16",
+      "startup": "10"
+    },
+    {
+      "active": "15-44 15-16, 28-44",
+      "category": "Special Moves",
+      "name": "M Hissatsu Shinobi Bachi",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "20",
+      "startup": "15"
+    },
+    {
+      "active": "15-44 15-16, 28-44",
+      "category": "Special Moves",
+      "name": "[Boosted]M Hissatsu Shinobi Bachi",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "20",
+      "startup": "15"
+    },
+    {
+      "active": "18-47 18-19, 31-47",
+      "category": "Special Moves",
+      "name": "H Hissatsu Shinobi Bachi",
+      "onBlock": "-13",
+      "onHit": "D",
+      "recovery": "21",
+      "startup": "18"
+    },
+    {
+      "active": "18-47 18-19, 31-47",
+      "category": "Special Moves",
+      "name": "[Boosted]H Hissatsu Shinobi Bachi",
+      "onBlock": "-13",
+      "onHit": "D",
+      "recovery": "21",
+      "startup": "18"
+    },
+    {
+      "active": "14-45 14-15, 29-45",
+      "category": "Special Moves",
+      "name": "OD Hissatsu Shinobi Bachi",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "32",
+      "startup": "14"
+    },
+    {
+      "active": "14-45 14-15, 29-45",
+      "category": "Special Moves",
+      "name": "[Boosted]OD Hissatsu Shinobi Bachi",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "32",
+      "startup": "14"
+    },
+    {
+      "active": "21-until landing",
+      "category": "Special Moves",
+      "name": "Musasabi no Mai",
+      "onBlock": "-7～1",
+      "onHit": "D",
+      "recovery": "18 frame(s) after landing",
+      "startup": "21"
+    },
+    {
+      "active": "21-until landing",
+      "category": "Special Moves",
+      "name": "[Boosted]Musasabi no Mai",
+      "onBlock": "-4～2",
+      "onHit": "D",
+      "recovery": "18 frame(s) after landing",
+      "startup": "21"
+    },
+    {
+      "active": "21-until landing",
+      "category": "Special Moves",
+      "name": "OD Musasabi no Mai",
+      "onBlock": "-7～1",
+      "onHit": "D",
+      "recovery": "18 frame(s) after landing",
+      "startup": "21"
+    },
+    {
+      "active": "21-until landing",
+      "category": "Special Moves",
+      "name": "[Boosted]OD Musasabi no Mai",
+      "onBlock": "-4～2",
+      "onHit": "D",
+      "recovery": "18 frame(s) after landing",
+      "startup": "21"
+    },
+    {
+      "active": "6-39",
+      "category": "Super Arts",
+      "name": "SA1 Kagerou no Mai",
+      "onBlock": "-31",
+      "onHit": "D",
+      "recovery": "51",
+      "startup": "6"
+    },
+    {
+      "active": "6-95",
+      "category": "Super Arts",
+      "name": "[Boosted]SA1 Kagerou no Mai",
+      "onBlock": "-26",
+      "onHit": "D",
+      "recovery": "46",
+      "startup": "6"
+    },
+    {
+      "active": "7-42 7-8, 12-13, 26-27, 32-33, 40-42",
+      "category": "Super Arts",
+      "name": "SA2 Chou Hissatsu Shinobi Bachi",
+      "onBlock": "-24",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "7"
+    },
+    {
+      "active": "7-42",
+      "category": "Super Arts",
+      "name": "[Boosted]SA2 Chou Hissatsu Shinobi Bachi",
+      "onBlock": "-24",
+      "onHit": "D",
+      "recovery": "31",
+      "startup": "7"
+    },
+    {
+      "active": "3-22 3-4, 7-8, 11-12, 16-17, 20-22",
+      "category": "Super Arts",
+      "name": "SA2 Air Chou Hissatsu Shinobi Bachi",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "24 frame(s) after landing",
+      "startup": "3"
+    },
+    {
+      "active": "3-26",
+      "category": "Super Arts",
+      "name": "[Boosted]SA2 Air Chou Hissatsu Shinobi Bachi",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "24 frame(s) after landing",
+      "startup": "3"
+    },
+    {
+      "active": "10-48 10-11, 16-17, 33-36, 45-48",
+      "category": "Super Arts",
+      "name": "SA3 Shiranui Ryuu: Enbu Ada Zakura",
+      "onBlock": "-33",
+      "onHit": "D",
+      "recovery": "46",
+      "startup": "10"
+    },
+    {
+      "active": "10-48 10-11, 16-17, 33-36, 45-48",
+      "category": "Super Arts",
+      "name": "CA Shiranui Ryuu: Enbu Ada Zakura",
+      "onBlock": "-33",
+      "onHit": "D",
+      "recovery": "46",
+      "startup": "10"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Shiranui Gourin",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Fuusha Kuzushi",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Yume Zakura",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Forward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "18 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Backward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "23 total frames",
+      "startup": null
+    },
+    {
+      "active": "26-27",
+      "category": "Common Moves",
+      "name": "Drive Impact: Botan Ichige",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "35",
+      "startup": "26"
+    },
+    {
+      "active": "20-22",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while blocking): Yusura Ume",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "20"
+    },
+    {
+      "active": "18-20",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while recovering): Yusura Ume",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "18"
+    },
+    {
+      "active": "[*2] 1-12",
+      "category": "Common Moves",
+      "name": "Drive Parry",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "33",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (strike)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "1",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (projectile)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "10",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Parry Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "45 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Cancel Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "46 total frames",
+      "startup": null
+    }
+  ],
+  "slug": "mai",
+  "url": "https://www.streetfighter.com/6/character/mai/frame"
+}

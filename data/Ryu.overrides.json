@@ -1,156 +1,167 @@
 {
   "character": "Ryu",
-  "source": "manual-ai-from-conflicts-csv",
-  "notes": [
-    "Manually reviewed Ryu.conflicts.csv line by line.",
-    "Preserved SuperCombo/FAT-style range and variant semantics where present."
-  ],
   "entries": [
     {
       "category": "normal",
       "move": "Axe Kick",
-      "set": { "startup": "10(20)", "onHit": "0" }
-    },
-    {
-      "category": "normal",
-      "move": "Collarbone Breaker",
-      "set": { "active": "1,3" }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Impact: Shingeki",
       "set": {
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+        "startup": "10"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Crouch HK",
+      "set": {
+        "recovery": "23"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Crouch HP",
+      "set": {
+        "recovery": "22"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Crouch MP",
+      "set": {
+        "recovery": "13"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
+      "set": {
+        "recovery": "33"
+      }
     },
     {
       "category": "normal",
-      "move": "Drive Reversal: Chest Strike",
-      "set": { "startup": "18" }
-    },
-    {
-      "category": "normal",
-      "move": "HK High Blade Kick",
-      "set": { "onPC": "KD +96~102 Tumble" }
+      "move": "Fuwa Triple Strike 2",
+      "set": {
+        "recovery": "16",
+        "startup": "5"
+      }
     },
     {
       "category": "normal",
       "move": "HK Tatsumaki Senpukyaku",
       "set": {
-        "recovery": "14+17 land",
-        "onHit": "KD +20(+35)(+50)",
-        "onPC": "KD +20(+35)(+50)"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "HP Hadoken",
-      "set": {
-        "recovery": "28",
-        "onHit": "KD +54",
-        "onBlock": "-1",
-        "onPC": "KD +54"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "HP Hashogeki",
-      "set": {
-        "startup": "20",
-        "onHit": "KD +62 Spin",
-        "onBlock": "+3",
-        "onPC": "KD +62 Spin"
+        "recovery": "14+17 land"
       }
     },
     {
       "category": "normal",
       "move": "HP Shoryuken",
-      "set": { "recovery": "34+12 land" }
+      "set": {
+        "recovery": "34+12 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MP",
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
       "move": "LK Tatsumaki Senpukyaku",
-      "set": { "recovery": "14+18 land" }
+      "set": {
+        "recovery": "14+18 land"
+      }
     },
     {
       "category": "normal",
       "move": "LP Shoryuken",
-      "set": { "recovery": "21+12 land" }
+      "set": {
+        "recovery": "21+12 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MK High Blade Kick",
+      "set": {
+        "recovery": "19"
+      }
     },
     {
       "category": "normal",
       "move": "MK Tatsumaki Senpukyaku",
       "set": {
-        "recovery": "11+20 land",
-        "onHit": "KD +23(+38)",
-        "onPC": "KD +23(+38)"
+        "recovery": "11+20 land"
       }
     },
     {
       "category": "normal",
       "move": "MP Shoryuken",
-      "set": { "recovery": "30+12 land" }
-    },
-    {
-      "category": "normal",
-      "move": "OD Hadoken",
       "set": {
-        "recovery": "26",
-        "onHit": "KD +57",
-        "onBlock": "+2",
-        "onPC": "KD +57"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "OD Hashogeki",
-      "set": {
-        "recovery": "19",
-        "onHit": "KD +87 Crumple",
-        "onBlock": "+4",
-        "onPC": "KD +91 Crumple"
+        "recovery": "30+12 land"
       }
     },
     {
       "category": "normal",
       "move": "OD Shoryuken",
-      "set": { "active": "2,8", "recovery": "37+15 land" }
+      "set": {
+        "recovery": "37+15 land"
+      }
     },
     {
       "category": "normal",
       "move": "OD Tatsumaki Senpukyaku",
-      "set": { "recovery": "10+13 land" }
+      "set": {
+        "recovery": "10+13 land"
+      }
     },
     {
       "category": "normal",
-      "move": "Shin Hashogeki",
-      "set": { "startup": "12", "onHit": "KD +20", "onPC": "KD +20" }
-    },
-    {
-      "category": "normal",
-      "move": "Shin Shoryuken",
-      "set": { "recovery": "32+39 land" }
-    },
-    {
-      "category": "normal",
-      "move": "Shinku Hadoken",
-      "set": { "recovery": "82", "onHit": "KD +27", "onPC": "KD +27" }
-    },
-    {
-      "category": "normal",
-      "move": "Solar Plexus Strike",
-      "set": { "active": "2,3" }
-    },
-    {
-      "category": "normal",
-      "move": "Stand HK",
-      "set": { "onPC": "KD +84 Crumple" }
+      "move": "Short Uppercut",
+      "set": {
+        "recovery": "26"
+      }
     }
-  ]
+  ],
+  "generatedAt": "2026-04-01T14:57:33.016831+00:00",
+  "notes": [
+    "Auto-generated from official SF6 frame pages and FAT comparison.",
+    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+  ],
+  "source": "official-streetfighter-com-frame-vs-fat",
+  "sourceUrl": "https://www.streetfighter.com/6/character/ryu/frame"
 }

@@ -1,0 +1,684 @@
+{
+  "character": "Ryu",
+  "fetchedAt": "2026-04-01T13:12:26.146387+00:00",
+  "moveCount": 75,
+  "moves": [
+    {
+      "active": "4-6",
+      "category": "Normal Moves",
+      "name": "Standing Light Punch",
+      "onBlock": "-1",
+      "onHit": "4",
+      "recovery": "7",
+      "startup": "4"
+    },
+    {
+      "active": "5-7",
+      "category": "Normal Moves",
+      "name": "Standing Light Kick",
+      "onBlock": "-4",
+      "onHit": "2",
+      "recovery": "11",
+      "startup": "5"
+    },
+    {
+      "active": "6-9",
+      "category": "Normal Moves",
+      "name": "Standing Medium Punch",
+      "onBlock": "-1",
+      "onHit": "7",
+      "recovery": "11",
+      "startup": "6"
+    },
+    {
+      "active": "9-11",
+      "category": "Normal Moves",
+      "name": "Standing Medium Kick",
+      "onBlock": "-4",
+      "onHit": "4",
+      "recovery": "18",
+      "startup": "9"
+    },
+    {
+      "active": "10-14",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Punch",
+      "onBlock": "-2",
+      "onHit": "4",
+      "recovery": "18",
+      "startup": "10"
+    },
+    {
+      "active": "12-15",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Kick",
+      "onBlock": "1",
+      "onHit": "9",
+      "recovery": "20",
+      "startup": "12"
+    },
+    {
+      "active": "4-5",
+      "category": "Normal Moves",
+      "name": "Crouching Light Punch",
+      "onBlock": "-1",
+      "onHit": "4",
+      "recovery": "9",
+      "startup": "4"
+    },
+    {
+      "active": "5-6",
+      "category": "Normal Moves",
+      "name": "Crouching Light Kick",
+      "onBlock": "-1",
+      "onHit": "3",
+      "recovery": "10",
+      "startup": "5"
+    },
+    {
+      "active": "6-9",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Punch",
+      "onBlock": "0",
+      "onHit": "5",
+      "recovery": "13",
+      "startup": "6"
+    },
+    {
+      "active": "8-10",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Kick",
+      "onBlock": "-6",
+      "onHit": "1",
+      "recovery": "19",
+      "startup": "8"
+    },
+    {
+      "active": "9-14",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Punch",
+      "onBlock": "-7",
+      "onHit": "1",
+      "recovery": "22",
+      "startup": "9"
+    },
+    {
+      "active": "9-11",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Kick",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "9"
+    },
+    {
+      "active": "4-13",
+      "category": "Normal Moves",
+      "name": "Jumping Light Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "4"
+    },
+    {
+      "active": "6-15",
+      "category": "Normal Moves",
+      "name": "Jumping Light Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "8-12",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "7-12",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "9-14",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "10-17",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "20-23",
+      "category": "Unique Attacks",
+      "name": "Collarbone Breaker",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "19",
+      "startup": "20"
+    },
+    {
+      "active": "20-24",
+      "category": "Unique Attacks",
+      "name": "Solar Plexus Strike",
+      "onBlock": "3",
+      "onHit": "6",
+      "recovery": "16",
+      "startup": "20"
+    },
+    {
+      "active": "7-10",
+      "category": "Unique Attacks",
+      "name": "Short Uppercut",
+      "onBlock": "-13",
+      "onHit": "1",
+      "recovery": "26",
+      "startup": "7"
+    },
+    {
+      "active": "10-23 10-14, 20-23",
+      "category": "Unique Attacks",
+      "name": "Axe Kick",
+      "onBlock": "-4",
+      "onHit": "0",
+      "recovery": "21",
+      "startup": "10"
+    },
+    {
+      "active": "16-19",
+      "category": "Unique Attacks",
+      "name": "Whirlwind Kick",
+      "onBlock": "-4",
+      "onHit": "2",
+      "recovery": "20",
+      "startup": "16"
+    },
+    {
+      "active": "9-12",
+      "category": "Unique Attacks",
+      "name": "High Double Strike",
+      "onBlock": "-8",
+      "onHit": "D",
+      "recovery": "20",
+      "startup": "9"
+    },
+    {
+      "active": "5-7",
+      "category": "Unique Attacks",
+      "name": "Fuwa Triple Strike(2)",
+      "onBlock": "-4",
+      "onHit": "1",
+      "recovery": "16",
+      "startup": "5"
+    },
+    {
+      "active": "17-20",
+      "category": "Unique Attacks",
+      "name": "Fuwa Triple Strike(3)",
+      "onBlock": "-8",
+      "onHit": "D",
+      "recovery": "20",
+      "startup": "17"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "L Hadoken",
+      "onBlock": "-5",
+      "onHit": "2",
+      "recovery": "47 total frames",
+      "startup": "16"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "M Hadoken",
+      "onBlock": "-7",
+      "onHit": "0",
+      "recovery": "47 total frames",
+      "startup": "14"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "H Hadoken",
+      "onBlock": "-9",
+      "onHit": "-2",
+      "recovery": "47 total frames",
+      "startup": "12"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "[Denjin Charge]Hadoken",
+      "onBlock": "-1",
+      "onHit": "D",
+      "recovery": "40 total frames",
+      "startup": "12"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD Hadoken",
+      "onBlock": "-1",
+      "onHit": "D",
+      "recovery": "40 total frames",
+      "startup": "12"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "[Denjin Charge]OD Hadoken",
+      "onBlock": "2",
+      "onHit": "D",
+      "recovery": "38 total frames",
+      "startup": "12"
+    },
+    {
+      "active": "5-14",
+      "category": "Special Moves",
+      "name": "L Shoryuken",
+      "onBlock": "-23",
+      "onHit": "D",
+      "recovery": "21+12 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "6-15",
+      "category": "Special Moves",
+      "name": "M Shoryuken",
+      "onBlock": "-32",
+      "onHit": "D",
+      "recovery": "30+12 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "7-16",
+      "category": "Special Moves",
+      "name": "H Shoryuken",
+      "onBlock": "-36",
+      "onHit": "D",
+      "recovery": "34+12 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "6-15 6-7,8-15",
+      "category": "Special Moves",
+      "name": "OD Shoryuken",
+      "onBlock": "-40",
+      "onHit": "D",
+      "recovery": "37+15 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "12-14",
+      "category": "Special Moves",
+      "name": "L Tatsumaki Senpu-kyaku",
+      "onBlock": "-15",
+      "onHit": "D",
+      "recovery": "14+18 frame(s) after landing",
+      "startup": "12"
+    },
+    {
+      "active": "14-30 14-15, 29-30",
+      "category": "Special Moves",
+      "name": "M Tatsumaki Senpu-kyaku",
+      "onBlock": "-13",
+      "onHit": "D",
+      "recovery": "11+20 frame(s) after landing",
+      "startup": "14"
+    },
+    {
+      "active": "16-47 16-17, 31-32, 46-47",
+      "category": "Special Moves",
+      "name": "H Tatsumaki Senpu-kyaku",
+      "onBlock": "-13",
+      "onHit": "D",
+      "recovery": "14+17 frame(s) after landing",
+      "startup": "16"
+    },
+    {
+      "active": "13-37 13-14, 19-20, 25-26, 30-31, 36-37",
+      "category": "Special Moves",
+      "name": "OD Tatsumaki Senpu-kyaku",
+      "onBlock": "-14",
+      "onHit": "D",
+      "recovery": "10+13 frame(s) after landing",
+      "startup": "13"
+    },
+    {
+      "active": "11-27 11-12,18-19,26-27",
+      "category": "Special Moves",
+      "name": "Aerial Tatsumaki Senpu-kyaku",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "16 frame(s) after landing",
+      "startup": "11"
+    },
+    {
+      "active": "11-28 11-12, 14-16, 18-20, 22-24, 27-28",
+      "category": "Special Moves",
+      "name": "OD Aerial Tatsumaki Senpu-kyaku",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "16 frame(s) after landing",
+      "startup": "11"
+    },
+    {
+      "active": "14-19",
+      "category": "Special Moves",
+      "name": "L High Blade Kick",
+      "onBlock": "-11",
+      "onHit": "D",
+      "recovery": "22",
+      "startup": "14"
+    },
+    {
+      "active": "18-26",
+      "category": "Special Moves",
+      "name": "M High Blade Kick",
+      "onBlock": "-8",
+      "onHit": "D",
+      "recovery": "19",
+      "startup": "18"
+    },
+    {
+      "active": "27-35",
+      "category": "Special Moves",
+      "name": "H High Blade Kick",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "15",
+      "startup": "27"
+    },
+    {
+      "active": "17-21",
+      "category": "Special Moves",
+      "name": "OD High Blade Kick",
+      "onBlock": "-18",
+      "onHit": "D",
+      "recovery": "33",
+      "startup": "17"
+    },
+    {
+      "active": "12-17",
+      "category": "Special Moves",
+      "name": "L Hashogeki",
+      "onBlock": "-3",
+      "onHit": "2",
+      "recovery": "18",
+      "startup": "12"
+    },
+    {
+      "active": "19-24",
+      "category": "Special Moves",
+      "name": "M Hashogeki",
+      "onBlock": "-6",
+      "onHit": "2",
+      "recovery": "17",
+      "startup": "19"
+    },
+    {
+      "active": "30-34.35",
+      "category": "Special Moves",
+      "name": "H Hashogeki",
+      "onBlock": "2",
+      "onHit": "D",
+      "recovery": "19",
+      "startup": "30"
+    },
+    {
+      "active": "20-24.25",
+      "category": "Special Moves",
+      "name": "[Denjin Charge]Hashogeki",
+      "onBlock": "3",
+      "onHit": "D",
+      "recovery": "19",
+      "startup": "20"
+    },
+    {
+      "active": "18-22",
+      "category": "Special Moves",
+      "name": "OD Hashogeki",
+      "onBlock": "3",
+      "onHit": "3",
+      "recovery": "20",
+      "startup": "18"
+    },
+    {
+      "active": "18-23",
+      "category": "Special Moves",
+      "name": "[Denjin Charge]OD Hashogeki",
+      "onBlock": "4",
+      "onHit": "D",
+      "recovery": "19",
+      "startup": "18"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "Denjin Charge",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "52 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Super Arts",
+      "name": "SA1 Shinku Hadoken",
+      "onBlock": "-24",
+      "onHit": "D",
+      "recovery": "86 total frames",
+      "startup": "7"
+    },
+    {
+      "active": null,
+      "category": "Super Arts",
+      "name": "[Denjin Charge]SA1 Shinku Hadoken",
+      "onBlock": "-24",
+      "onHit": "D",
+      "recovery": "89 total frames",
+      "startup": "7"
+    },
+    {
+      "active": "12-17",
+      "category": "Super Arts",
+      "name": "SA2 Shin Hashogeki（Lv1）",
+      "onBlock": "-20",
+      "onHit": "D",
+      "recovery": "39",
+      "startup": "12"
+    },
+    {
+      "active": "20-25",
+      "category": "Super Arts",
+      "name": "SA2 Shin Hashogeki（Lv2）",
+      "onBlock": "-20",
+      "onHit": "D",
+      "recovery": "39",
+      "startup": "20"
+    },
+    {
+      "active": "70-75",
+      "category": "Super Arts",
+      "name": "SA2 Shin Hashogeki（Lv3）",
+      "onBlock": "-20",
+      "onHit": "D",
+      "recovery": "39",
+      "startup": "70"
+    },
+    {
+      "active": "12-17",
+      "category": "Super Arts",
+      "name": "[Denjin Charge]SA2 Shin Hashogeki（Lv1）",
+      "onBlock": "-20",
+      "onHit": "D",
+      "recovery": "39",
+      "startup": "12"
+    },
+    {
+      "active": "20-25",
+      "category": "Super Arts",
+      "name": "[Denjin Charge]SA2 Shin Hashogeki（Lv2）",
+      "onBlock": "-20",
+      "onHit": "D",
+      "recovery": "39",
+      "startup": "20"
+    },
+    {
+      "active": "70-75",
+      "category": "Super Arts",
+      "name": "[Denjin Charge]SA2 Shin Hashogeki（Lv3）",
+      "onBlock": "-20",
+      "onHit": "D",
+      "recovery": "39",
+      "startup": "70"
+    },
+    {
+      "active": "5-16 5-6, 7-8, 9-10, 11-12, 13-14, 15-16",
+      "category": "Super Arts",
+      "name": "SA3 Shin Shoryuken",
+      "onBlock": "-52",
+      "onHit": "D",
+      "recovery": "71",
+      "startup": "5"
+    },
+    {
+      "active": "5-16 5-6, 7-8, 9-10, 11-12, 13-14, 15-16",
+      "category": "Super Arts",
+      "name": "CA Shin Shoryuken",
+      "onBlock": "-52",
+      "onHit": "D",
+      "recovery": "71",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Shoulder Throw",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Somersault Throw",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Forward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "19 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Backward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "23 total frames",
+      "startup": null
+    },
+    {
+      "active": "26-27",
+      "category": "Common Moves",
+      "name": "Drive Impact: Shingeki",
+      "onBlock": "-3",
+      "onHit": null,
+      "recovery": "35",
+      "startup": "26"
+    },
+    {
+      "active": "20-22",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while blocking): Chest Strike",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "20"
+    },
+    {
+      "active": "18-20",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while recovering): Chest Strike",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "18"
+    },
+    {
+      "active": "[*2] 1-12",
+      "category": "Common Moves",
+      "name": "Drive Parry",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "33",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (strike)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "1",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (projectile)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "10",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Parry Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "45 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Cancel Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "46 total frames",
+      "startup": null
+    }
+  ],
+  "slug": "ryu",
+  "url": "https://www.streetfighter.com/6/character/ryu/frame"
+}

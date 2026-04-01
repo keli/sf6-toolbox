@@ -1,156 +1,159 @@
 {
   "character": "Elena",
-  "source": "manual-ai-from-conflicts-csv",
-  "notes": [
-    "Manually reviewed Elena.conflicts.csv line by line.",
-    "Preserved SuperCombo/FAT-style range and variant semantics where present."
-  ],
   "entries": [
     {
       "category": "normal",
-      "move": "Drive Impact: Giraffe Neck",
+      "move": "Crouch MK",
       "set": {
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+        "recovery": "18"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Boar Charge",
-      "set": { "startup": "18" }
+      "set": {
+        "recovery": "33"
+      }
     },
     {
       "category": "normal",
       "move": "HK Rhino Horn",
       "set": {
-        "recovery": "3+13(17) land",
-        "onHit": "KD +40~45",
-        "onPC": "KD +40~45"
+        "recovery": "20"
       }
     },
     {
       "category": "normal",
       "move": "HK Scratch Wheel",
-      "set": { "active": "2,2,2", "recovery": "34+14 land" }
+      "set": {
+        "recovery": "34+14 land"
+      }
     },
     {
       "category": "normal",
-      "move": "HK Spin Scythe",
-      "set": { "active": "4(17)3(22)5(2)2" }
+      "move": "Jump HK",
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
-      "move": "HP Lynx Song",
-      "set": { "startup": "16(19)~" }
+      "move": "Jump HP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MP",
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
       "move": "LK Rhino Horn",
       "set": {
-        "recovery": "3+13(16) land",
-        "onHit": "KD +39~44",
-        "onPC": "KD +39~44"
+        "recovery": "19"
       }
     },
     {
       "category": "normal",
       "move": "LK Scratch Wheel",
-      "set": { "recovery": "25+14 land" }
-    },
-    {
-      "category": "normal",
-      "move": "LK Spin Scythe",
-      "set": { "active": "4(14)3(24)2(3)3" }
-    },
-    {
-      "category": "normal",
-      "move": "LP Lynx Song",
-      "set": { "startup": "13(16)~" }
+      "set": {
+        "recovery": "25+14 land"
+      }
     },
     {
       "category": "normal",
       "move": "MK Rhino Horn",
       "set": {
-        "recovery": "3+13(17) land",
-        "onHit": "KD +39~44",
-        "onPC": "KD +39~44"
+        "recovery": "20"
       }
     },
     {
       "category": "normal",
       "move": "MK Scratch Wheel",
-      "set": { "active": "3,3", "recovery": "30+14 land" }
-    },
-    {
-      "category": "normal",
-      "move": "MK Spin Scythe",
-      "set": { "active": "4(19)3(22)5(2)2" }
-    },
-    {
-      "category": "normal",
-      "move": "MP Lynx Song",
-      "set": { "startup": "13(18)~" }
-    },
-    {
-      "category": "normal",
-      "move": "Meteor Volley",
-      "set": { "recovery": "24+31 land", "onHit": "KD +44", "onPC": "KD +44" }
-    },
-    {
-      "category": "normal",
-      "move": "OD Lynx Song (Lynx Whirl)",
-      "set": { "startup": "15(18)~" }
+      "set": {
+        "recovery": "30+14 land"
+      }
     },
     {
       "category": "normal",
       "move": "OD Rhino Horn",
       "set": {
-        "active": "7(7)4,7",
-        "recovery": "3+10(16) land",
-        "onHit": "KD +43~49",
-        "onBlock": "-9(-4)",
-        "onPC": "KD +43~49"
+        "recovery": "19"
       }
     },
     {
       "category": "normal",
       "move": "OD Scratch Wheel",
-      "set": { "active": "4,2(12)2(1)2", "recovery": "24+20 land" }
+      "set": {
+        "recovery": "25+19 land"
+      }
     },
     {
       "category": "normal",
-      "move": "OD Spin Scythe",
-      "set": { "active": "4(12)3(24)2(3)3" }
+      "move": "Raptor Range",
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
-      "move": "Revival Dance",
-      "set": { "onHit": "HKD +25", "onPC": "HKD +25" }
+      "move": "Round Arch",
+      "set": {
+        "recovery": "17"
+      }
     },
     {
       "category": "normal",
       "move": "Slide",
-      "set": { "onHit": "HKD +31(+39)", "onPC": "HKD +46(+54)" }
+      "set": {
+        "recovery": "22"
+      }
     },
     {
       "category": "normal",
-      "move": "Song of the Grasslands",
-      "set": { "onHit": "HKD +29", "onPC": "HKD +29" }
+      "move": "Soaring Raid",
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
-      "move": "Stand MP",
-      "set": { "onHit": "+3(+5)", "onPC": "+7(+9)" }
-    },
-    {
-      "category": "normal",
-      "move": "Taunt",
-      "set": { "startup": "685 (total)" }
+      "move": "Stand MK",
+      "set": {
+        "recovery": "13"
+      }
     }
-  ]
+  ],
+  "generatedAt": "2026-04-01T13:11:57.629138+00:00",
+  "notes": [
+    "Auto-generated from official SF6 frame pages and FAT comparison.",
+    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+  ],
+  "source": "official-streetfighter-com-frame-vs-fat",
+  "sourceUrl": "https://www.streetfighter.com/6/character/elena/frame"
 }

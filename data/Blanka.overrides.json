@@ -1,63 +1,159 @@
 {
   "character": "Blanka",
-  "source": "manual-ai-from-conflicts-csv",
-  "notes": [
-    "Manually reviewed Blanka.conflicts.csv line by line.",
-    "Preserved SuperCombo/FAT-style range and variant semantics where present."
-  ],
   "entries": [
     {
-      "category": "normal",
-      "move": "Amazon River Run",
-      "set": { "onHit": "KD +29(+38)", "onPC": "HKD +29(+38)" }
-    },
-    {
-      "category": "normal",
-      "move": "Coward Crouch",
-      "set": { "active": "1~102" }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Impact: Wild Scratch",
+      "category": "Super Install",
+      "move": "Rolling Cannon",
       "set": {
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+        "recovery": "9 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Crouch HP",
+      "set": {
+        "recovery": "20"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Crouch MK",
+      "set": {
+        "recovery": "*16"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
+      "set": {
+        "recovery": "33"
+      }
     },
     {
       "category": "normal",
-      "move": "Drive Reversal: Quick Rolling Attack",
-      "set": { "startup": "18" }
+      "move": "Electric Thunder",
+      "set": {
+        "recovery": "17"
+      }
     },
     {
       "category": "normal",
-      "move": "Ground Shave Cannonball",
-      "set": { "onHit": "HKD +14", "onPC": "HKD +14" }
+      "move": "Jump HK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MP",
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
       "move": "Neutral Jump HP",
-      "set": { "onHit": "10(+15)", "onBlock": "6(+11)", "onPC": "14(+19)" }
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
-      "move": "Rock Crusher",
-      "set": { "active": "2,1" }
+      "move": "OD Backstep Rolling Attack",
+      "set": {
+        "recovery": "4 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Electric Thunder",
+      "set": {
+        "recovery": "17"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Rolling Attack",
+      "set": {
+        "recovery": "17"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Vertical Rolling Attack",
+      "set": {
+        "recovery": "31+17 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Raid Jump",
+      "set": {
+        "recovery": "43+12 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Stand HK",
+      "set": {
+        "recovery": "18"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Stand HP",
+      "set": {
+        "recovery": "22"
+      }
     },
     {
       "category": "normal",
       "move": "Stand MK",
-      "set": { "onHit": "+5", "onPC": "+9" }
+      "set": {
+        "recovery": "17"
+      }
     },
     {
       "category": "normal",
       "move": "Wild Nail",
-      "set": { "onHit": "KD +27(+30)", "onPC": "HKD +76(+79) Crumple" }
+      "set": {
+        "recovery": "31"
+      }
     }
-  ]
+  ],
+  "generatedAt": "2026-04-01T13:11:43.674427+00:00",
+  "notes": [
+    "Auto-generated from official SF6 frame pages and FAT comparison.",
+    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+  ],
+  "source": "official-streetfighter-com-frame-vs-fat",
+  "sourceUrl": "https://www.streetfighter.com/6/character/blanka/frame"
 }

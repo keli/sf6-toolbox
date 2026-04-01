@@ -1,0 +1,828 @@
+{
+  "character": "Marisa",
+  "fetchedAt": "2026-04-01T13:12:23.278108+00:00",
+  "moveCount": 91,
+  "moves": [
+    {
+      "active": "6-8",
+      "category": "Normal Moves",
+      "name": "Standing Light Punch",
+      "onBlock": "-2",
+      "onHit": "0",
+      "recovery": "11",
+      "startup": "6"
+    },
+    {
+      "active": "6-7",
+      "category": "Normal Moves",
+      "name": "Standing Light Kick",
+      "onBlock": "-2",
+      "onHit": "0",
+      "recovery": "14",
+      "startup": "6"
+    },
+    {
+      "active": "7-10",
+      "category": "Normal Moves",
+      "name": "Standing Medium Punch",
+      "onBlock": "-1",
+      "onHit": "2",
+      "recovery": "15",
+      "startup": "7"
+    },
+    {
+      "active": "11-14",
+      "category": "Normal Moves",
+      "name": "Standing Medium Kick",
+      "onBlock": "-2",
+      "onHit": "4",
+      "recovery": "16",
+      "startup": "11"
+    },
+    {
+      "active": "12-13",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Punch",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "23",
+      "startup": "12"
+    },
+    {
+      "active": "23-24",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Punch(Charged)",
+      "onBlock": "4",
+      "onHit": "7",
+      "recovery": "22",
+      "startup": "23"
+    },
+    {
+      "active": "15-16",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Kick",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "25",
+      "startup": "15"
+    },
+    {
+      "active": "24-25",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Kick(Charged)",
+      "onBlock": "1",
+      "onHit": "D",
+      "recovery": "25",
+      "startup": "24"
+    },
+    {
+      "active": "4-5",
+      "category": "Normal Moves",
+      "name": "Crouching Light Punch",
+      "onBlock": "-1",
+      "onHit": "4",
+      "recovery": "10",
+      "startup": "4"
+    },
+    {
+      "active": "5-7",
+      "category": "Normal Moves",
+      "name": "Crouching Light Kick",
+      "onBlock": "-3",
+      "onHit": "2",
+      "recovery": "12",
+      "startup": "5"
+    },
+    {
+      "active": "8-10",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Punch",
+      "onBlock": "-2",
+      "onHit": "3",
+      "recovery": "16",
+      "startup": "8"
+    },
+    {
+      "active": "9-11",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Kick",
+      "onBlock": "-2",
+      "onHit": "5",
+      "recovery": "18",
+      "startup": "9"
+    },
+    {
+      "active": "9-13",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Punch",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "9"
+    },
+    {
+      "active": "21-26",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Punch(Charged)",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "21",
+      "startup": "21"
+    },
+    {
+      "active": "11-13",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Kick",
+      "onBlock": "-11",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "11"
+    },
+    {
+      "active": "20-22",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Kick(Charged)",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "20"
+    },
+    {
+      "active": "4-10",
+      "category": "Normal Moves",
+      "name": "Jumping Light Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "4"
+    },
+    {
+      "active": "5-14",
+      "category": "Normal Moves",
+      "name": "Jumping Light Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "7-10",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "8-15",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "10-16",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "28-33",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Punch(Charged)",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "3 frame(s) after landing",
+      "startup": "28"
+    },
+    {
+      "active": "10-16",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "29-34",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Kick(Charged)",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "3 frame(s) after landing",
+      "startup": "29"
+    },
+    {
+      "active": "14-16",
+      "category": "Unique Attacks",
+      "name": "Light Two Hitter",
+      "onBlock": "-6",
+      "onHit": "-3",
+      "recovery": "22",
+      "startup": "14"
+    },
+    {
+      "active": "14-15",
+      "category": "Unique Attacks",
+      "name": "Medium Two Hitter",
+      "onBlock": "-8",
+      "onHit": "-3",
+      "recovery": "23",
+      "startup": "14"
+    },
+    {
+      "active": "24-26",
+      "category": "Unique Attacks",
+      "name": "Heavy Two Hitter",
+      "onBlock": "2",
+      "onHit": "D",
+      "recovery": "19",
+      "startup": "24"
+    },
+    {
+      "active": "10-12",
+      "category": "Unique Attacks",
+      "name": "Volare Combo",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "9-17",
+      "category": "Unique Attacks",
+      "name": "Caelum Arc",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "28-36",
+      "category": "Unique Attacks",
+      "name": "Caelum Arc(Charged)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "28"
+    },
+    {
+      "active": "8-9",
+      "category": "Unique Attacks",
+      "name": "Magna Bunker",
+      "onBlock": "-1",
+      "onHit": "3",
+      "recovery": "21",
+      "startup": "8"
+    },
+    {
+      "active": "20-21",
+      "category": "Unique Attacks",
+      "name": "Magna Bunker(Charged)",
+      "onBlock": "4",
+      "onHit": "13",
+      "recovery": "24",
+      "startup": "20"
+    },
+    {
+      "active": "9-10",
+      "category": "Unique Attacks",
+      "name": "Novacula Swipe/Novacula Thrust(1)",
+      "onBlock": "-3",
+      "onHit": "2",
+      "recovery": "20",
+      "startup": "9"
+    },
+    {
+      "active": "11-12",
+      "category": "Unique Attacks",
+      "name": "Novacula Swipe",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "11"
+    },
+    {
+      "active": "11-14",
+      "category": "Unique Attacks",
+      "name": "Novacula Thrust",
+      "onBlock": "-10",
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "11"
+    },
+    {
+      "active": "21-22",
+      "category": "Unique Attacks",
+      "name": "Malleus Breaker(1)",
+      "onBlock": "-3",
+      "onHit": "0",
+      "recovery": "21",
+      "startup": "21"
+    },
+    {
+      "active": "28-29",
+      "category": "Unique Attacks",
+      "name": "Malleus Breaker(1)(Charged)",
+      "onBlock": "2",
+      "onHit": "5",
+      "recovery": "19",
+      "startup": "28"
+    },
+    {
+      "active": "18-19",
+      "category": "Unique Attacks",
+      "name": "Malleus Breaker(2)",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "18"
+    },
+    {
+      "active": "14-17",
+      "category": "Unique Attacks",
+      "name": "Falx Crusher(1)",
+      "onBlock": "-3",
+      "onHit": "0",
+      "recovery": "21",
+      "startup": "14"
+    },
+    {
+      "active": "27-30",
+      "category": "Unique Attacks",
+      "name": "Falx Crusher(1)(Charged)",
+      "onBlock": "3",
+      "onHit": "10",
+      "recovery": "19",
+      "startup": "27"
+    },
+    {
+      "active": "16-20",
+      "category": "Unique Attacks",
+      "name": "Falx Crusher(2)",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "25",
+      "startup": "16"
+    },
+    {
+      "active": "17-20",
+      "category": "Special Moves",
+      "name": "L Gladius",
+      "onBlock": "-5",
+      "onHit": "D",
+      "recovery": "21",
+      "startup": "17"
+    },
+    {
+      "active": "30-33",
+      "category": "Special Moves",
+      "name": "L Gladius(Charged)",
+      "onBlock": "4",
+      "onHit": "D",
+      "recovery": "20",
+      "startup": "30"
+    },
+    {
+      "active": "19-22",
+      "category": "Special Moves",
+      "name": "M Gladius",
+      "onBlock": "-5",
+      "onHit": "D",
+      "recovery": "21",
+      "startup": "19"
+    },
+    {
+      "active": "35-38",
+      "category": "Special Moves",
+      "name": "M Gladius(Charged)",
+      "onBlock": "4",
+      "onHit": "D",
+      "recovery": "20",
+      "startup": "35"
+    },
+    {
+      "active": "22-25",
+      "category": "Special Moves",
+      "name": "H Gladius",
+      "onBlock": "-5",
+      "onHit": "D",
+      "recovery": "21",
+      "startup": "22"
+    },
+    {
+      "active": "41-44",
+      "category": "Special Moves",
+      "name": "H Gladius(Charged)",
+      "onBlock": "4",
+      "onHit": "D",
+      "recovery": "20",
+      "startup": "41"
+    },
+    {
+      "active": "19-22",
+      "category": "Special Moves",
+      "name": "OD Gladius",
+      "onBlock": "-2",
+      "onHit": "D",
+      "recovery": "21",
+      "startup": "19"
+    },
+    {
+      "active": "35-38",
+      "category": "Special Moves",
+      "name": "OD Gladius(Charged)",
+      "onBlock": "4",
+      "onHit": "D",
+      "recovery": "20",
+      "startup": "35"
+    },
+    {
+      "active": "12-15",
+      "category": "Special Moves",
+      "name": "L Dimachaerus(1)",
+      "onBlock": "-16",
+      "onHit": "-3",
+      "recovery": "30",
+      "startup": "12"
+    },
+    {
+      "active": "13-17",
+      "category": "Special Moves",
+      "name": "L Dimachaerus(2)",
+      "onBlock": "-13",
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "13"
+    },
+    {
+      "active": "16-20",
+      "category": "Special Moves",
+      "name": "M Dimachaerus(1)",
+      "onBlock": "-16",
+      "onHit": "0",
+      "recovery": "30",
+      "startup": "16"
+    },
+    {
+      "active": "13-17",
+      "category": "Special Moves",
+      "name": "M Dimachaerus(2)",
+      "onBlock": "-14",
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "13"
+    },
+    {
+      "active": "22-25",
+      "category": "Special Moves",
+      "name": "H Dimachaerus(1)",
+      "onBlock": "-16",
+      "onHit": "D",
+      "recovery": "30",
+      "startup": "22"
+    },
+    {
+      "active": "18-22",
+      "category": "Special Moves",
+      "name": "H Dimachaerus(2)",
+      "onBlock": "-13",
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "18"
+    },
+    {
+      "active": "16-19",
+      "category": "Special Moves",
+      "name": "OD Dimachaerus(1)",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "16"
+    },
+    {
+      "active": "13-17",
+      "category": "Special Moves",
+      "name": "OD Dimachaerus(2)",
+      "onBlock": "-13",
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "13"
+    },
+    {
+      "active": "25-30",
+      "category": "Special Moves",
+      "name": "L Phalanx",
+      "onBlock": "3",
+      "onHit": "D",
+      "recovery": "15",
+      "startup": "25"
+    },
+    {
+      "active": "28-33",
+      "category": "Special Moves",
+      "name": "M Phalanx",
+      "onBlock": "3",
+      "onHit": "D",
+      "recovery": "15",
+      "startup": "28"
+    },
+    {
+      "active": "32-37",
+      "category": "Special Moves",
+      "name": "H Phalanx",
+      "onBlock": "3",
+      "onHit": "D",
+      "recovery": "15",
+      "startup": "32"
+    },
+    {
+      "active": "28-33",
+      "category": "Special Moves",
+      "name": "OD Phalanx",
+      "onBlock": "4",
+      "onHit": "D",
+      "recovery": "15",
+      "startup": "28"
+    },
+    {
+      "active": "20-23",
+      "category": "Special Moves",
+      "name": "L Quadriga",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "20"
+    },
+    {
+      "active": "24-27",
+      "category": "Special Moves",
+      "name": "M Quadriga",
+      "onBlock": "-4",
+      "onHit": "D",
+      "recovery": "22",
+      "startup": "24"
+    },
+    {
+      "active": "29-32",
+      "category": "Special Moves",
+      "name": "H Quadriga",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "21",
+      "startup": "29"
+    },
+    {
+      "active": "24-27",
+      "category": "Special Moves",
+      "name": "OD Quadriga",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "24"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "Scutum",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "54 total frames",
+      "startup": null
+    },
+    {
+      "active": "7-10",
+      "category": "Special Moves",
+      "name": "Scutum(Physical counter version)",
+      "onBlock": "-3",
+      "onHit": "-1",
+      "recovery": "20",
+      "startup": "7"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD Scutum",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "57 total frames",
+      "startup": null
+    },
+    {
+      "active": "7-10",
+      "category": "Special Moves",
+      "name": "OD Scutum(Physical counter version)",
+      "onBlock": "-3",
+      "onHit": "-1",
+      "recovery": "20",
+      "startup": "7"
+    },
+    {
+      "active": "15-17",
+      "category": "Special Moves",
+      "name": "Tonitrus(1)",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "23",
+      "startup": "15"
+    },
+    {
+      "active": "20-22",
+      "category": "Special Moves",
+      "name": "Tonitrus(2)",
+      "onBlock": "-21",
+      "onHit": "D",
+      "recovery": "36",
+      "startup": "20"
+    },
+    {
+      "active": "16-18",
+      "category": "Special Moves",
+      "name": "Procella",
+      "onBlock": "-24",
+      "onHit": "D",
+      "recovery": "37",
+      "startup": "16"
+    },
+    {
+      "active": "5-7",
+      "category": "Special Moves",
+      "name": "Enfold",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "54",
+      "startup": "5"
+    },
+    {
+      "active": "19-23",
+      "category": "Super Arts",
+      "name": "SA1 Javelin of Marisa",
+      "onBlock": "-43",
+      "onHit": "D",
+      "recovery": "60",
+      "startup": "19"
+    },
+    {
+      "active": "42-47",
+      "category": "Super Arts",
+      "name": "SA1 Javelin of Marisa(Charged)",
+      "onBlock": "-42",
+      "onHit": "D",
+      "recovery": "60",
+      "startup": "42"
+    },
+    {
+      "active": "7-9",
+      "category": "Super Arts",
+      "name": "SA1 Javelin of Marisa(Physical counter version)",
+      "onBlock": "-37",
+      "onHit": "D",
+      "recovery": "54",
+      "startup": "7"
+    },
+    {
+      "active": "9-51 9-16,49-51",
+      "category": "Super Arts",
+      "name": "SA2 Meteorite",
+      "onBlock": "-44",
+      "onHit": "D",
+      "recovery": "59",
+      "startup": "9"
+    },
+    {
+      "active": "13-19",
+      "category": "Super Arts",
+      "name": "SA3 Goddess of the Hunt",
+      "onBlock": "-39",
+      "onHit": "D",
+      "recovery": "60",
+      "startup": "13"
+    },
+    {
+      "active": "13-19",
+      "category": "Super Arts",
+      "name": "CA Goddess of the Hunt",
+      "onBlock": "-39",
+      "onHit": "D",
+      "recovery": "60",
+      "startup": "13"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Mounted Grace",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Ponte Milvio",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Forward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "22 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Backward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "25 total frames",
+      "startup": null
+    },
+    {
+      "active": "26-27",
+      "category": "Common Moves",
+      "name": "Drive Impact: Secutor",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "35",
+      "startup": "26"
+    },
+    {
+      "active": "20-22",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while blocking): Love Tap",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "20"
+    },
+    {
+      "active": "18-20",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while recovering): Love Tap",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "18"
+    },
+    {
+      "active": "[*2] 1-12",
+      "category": "Common Moves",
+      "name": "Drive Parry",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "33",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (strike)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "1",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (projectile)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "10",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Parry Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "45 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Cancel Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "46 total frames",
+      "startup": null
+    }
+  ],
+  "slug": "marisa",
+  "url": "https://www.streetfighter.com/6/character/marisa/frame"
+}

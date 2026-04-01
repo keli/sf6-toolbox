@@ -1,44 +1,124 @@
 {
   "character": "Manon",
-  "source": "manual-ai-from-conflicts-csv",
-  "notes": [
-    "Manually reviewed Manon.conflicts.csv line by line.",
-    "Preserved SuperCombo/FAT-style range and variant semantics where present."
-  ],
   "entries": [
     {
       "category": "normal",
-      "move": "Drive Impact: Glissade",
+      "move": "Crouch MP",
       "set": {
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+        "recovery": "11"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
+      "set": {
+        "recovery": "33"
+      }
     },
     {
       "category": "normal",
-      "move": "Drive Reversal: Écarté",
-      "set": { "startup": "18" }
+      "move": "Grand Fouetté",
+      "set": {
+        "startup": "11"
+      }
     },
-    { "category": "normal", "move": "HK Dégagé", "set": { "active": "3" } },
+    {
+      "category": "normal",
+      "move": "HK Dégagé",
+      "set": {
+        "startup": "20"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HK Rond-point",
+      "set": {
+        "recovery": "24"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
     {
       "category": "normal",
       "move": "OD Dégagé",
-      "set": { "onHit": "+6(+7)", "onPC": "+10(+11)" }
+      "set": {
+        "startup": "22"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Grand Fouetté",
+      "set": {
+        "startup": "10"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Rond-point",
+      "set": {
+        "recovery": "30"
+      }
     },
     {
       "category": "normal",
       "move": "Stand HK",
-      "set": { "recovery": "23(26)" }
+      "set": {
+        "recovery": "26"
+      }
     },
     {
       "category": "normal",
-      "move": "Étoile",
-      "set": { "recovery": "38+34 land" }
+      "move": "Temps Lié",
+      "set": {
+        "recovery": "*17"
+      }
     }
-  ]
+  ],
+  "generatedAt": "2026-04-01T13:12:21.749305+00:00",
+  "notes": [
+    "Auto-generated from official SF6 frame pages and FAT comparison.",
+    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+  ],
+  "source": "official-streetfighter-com-frame-vs-fat",
+  "sourceUrl": "https://www.streetfighter.com/6/character/manon/frame"
 }

@@ -1,76 +1,118 @@
 {
   "character": "Marisa",
-  "source": "manual-ai-from-conflicts-csv",
-  "notes": [
-    "Manually reviewed Marisa.conflicts.csv line by line.",
-    "Preserved SuperCombo/FAT-style range and variant semantics where present."
-  ],
   "entries": [
     {
       "category": "normal",
-      "move": "Crouch MK",
-      "set": { "recovery": "17(18)", "onHit": "+5", "onPC": "+9" }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Impact: Secutor",
+      "move": "Caelum Arc",
       "set": {
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+        "recovery": "3 land"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Love Tap",
-      "set": { "startup": "18" }
-    },
-    {
-      "category": "normal",
-      "move": "HP Phalanx",
-      "set": { "onBlock": "+3(+4)" }
-    },
-    {
-      "category": "normal",
-      "move": "LP Phalanx",
-      "set": { "onBlock": "+3(+4)" }
-    },
-    {
-      "category": "normal",
-      "move": "MP Phalanx",
-      "set": { "onBlock": "+3(+4)" }
-    },
-    { "category": "normal", "move": "Novacula", "set": { "startup": "9" } },
-    {
-      "category": "normal",
-      "move": "OD Phalanx",
       "set": {
-        "onHit": "KD +70 Tumble (HKD +138 Wall Splat)",
-        "onBlock": "+4(5)",
-        "onPC": "HKD +76 Tumble (HKD +144 Wall Splat)"
+        "recovery": "33"
       }
     },
     {
       "category": "normal",
-      "move": "OD Quadriga",
+      "move": "Enfold",
       "set": {
-        "onHit": "KD +50(68) Wall Splat",
-        "onPC": "KD +50(68) Wall Splat"
+        "startup": "5"
       }
     },
     {
       "category": "normal",
-      "move": "OD Scutum",
-      "set": { "startup": "7", "active": "4", "recovery": "20" }
+      "move": "Jump HK",
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
-      "move": "Scutum",
-      "set": { "startup": "7", "active": "4", "recovery": "20" }
+      "move": "Jump HP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Magna Bunker",
+      "set": {
+        "recovery": "21"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Procella",
+      "set": {
+        "startup": "16"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Stand MP",
+      "set": {
+        "recovery": "15"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Tonitrus 1",
+      "set": {
+        "recovery": "23",
+        "startup": "15"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Tonitrus 2",
+      "set": {
+        "startup": "20"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Volare Combo",
+      "set": {
+        "recovery": "3 land"
+      }
     }
-  ]
+  ],
+  "generatedAt": "2026-04-01T13:12:23.283924+00:00",
+  "notes": [
+    "Auto-generated from official SF6 frame pages and FAT comparison.",
+    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+  ],
+  "source": "official-streetfighter-com-frame-vs-fat",
+  "sourceUrl": "https://www.streetfighter.com/6/character/marisa/frame"
 }

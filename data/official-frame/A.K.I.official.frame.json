@@ -1,0 +1,585 @@
+{
+  "character": "A.K.I.",
+  "fetchedAt": "2026-04-01T13:11:38.630619+00:00",
+  "moveCount": 64,
+  "moves": [
+    {
+      "active": "5-6",
+      "category": "Normal Moves",
+      "name": "Standing Light Punch",
+      "onBlock": "-1",
+      "onHit": "4",
+      "recovery": "7",
+      "startup": "5"
+    },
+    {
+      "active": "4-6",
+      "category": "Normal Moves",
+      "name": "Standing Light Kick",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "12",
+      "startup": "4"
+    },
+    {
+      "active": "6-10",
+      "category": "Normal Moves",
+      "name": "Standing Medium Punch",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "14",
+      "startup": "6"
+    },
+    {
+      "active": "8-10",
+      "category": "Normal Moves",
+      "name": "Standing Medium Kick",
+      "onBlock": "-2",
+      "onHit": "6",
+      "recovery": "15",
+      "startup": "8"
+    },
+    {
+      "active": "12-14",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Punch",
+      "onBlock": "-4",
+      "onHit": "1",
+      "recovery": "21",
+      "startup": "12"
+    },
+    {
+      "active": "9-12",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Kick",
+      "onBlock": "-3",
+      "onHit": "4",
+      "recovery": "19",
+      "startup": "9"
+    },
+    {
+      "active": "4-5",
+      "category": "Normal Moves",
+      "name": "Crouching Light Punch",
+      "onBlock": "-1",
+      "onHit": "4",
+      "recovery": "9",
+      "startup": "4"
+    },
+    {
+      "active": "5-7",
+      "category": "Normal Moves",
+      "name": "Crouching Light Kick",
+      "onBlock": "-2",
+      "onHit": "3",
+      "recovery": "8",
+      "startup": "5"
+    },
+    {
+      "active": "7-9",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Punch",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "18",
+      "startup": "7"
+    },
+    {
+      "active": "7-9",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Kick",
+      "onBlock": "1",
+      "onHit": "5",
+      "recovery": "16",
+      "startup": "7"
+    },
+    {
+      "active": "10-12",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Punch",
+      "onBlock": "-8",
+      "onHit": "D",
+      "recovery": "28",
+      "startup": "10"
+    },
+    {
+      "active": "10-15",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Kick",
+      "onBlock": "-3",
+      "onHit": "0",
+      "recovery": "20",
+      "startup": "10"
+    },
+    {
+      "active": "5-13",
+      "category": "Normal Moves",
+      "name": "Jumping Light Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "5-10",
+      "category": "Normal Moves",
+      "name": "Jumping Light Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "7-10",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "7-12",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "11-16",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "11"
+    },
+    {
+      "active": "8-15",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "24-26",
+      "category": "Unique Attacks",
+      "name": "Pu Lao",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "18",
+      "startup": "24"
+    },
+    {
+      "active": "16-18",
+      "category": "Unique Attacks",
+      "name": "Chi Wen",
+      "onBlock": "-4",
+      "onHit": "3",
+      "recovery": "21",
+      "startup": "16"
+    },
+    {
+      "active": "14-24 14-16, 22-24",
+      "category": "Unique Attacks",
+      "name": "Qiu Niu",
+      "onBlock": "2",
+      "onHit": "4",
+      "recovery": "16",
+      "startup": "14"
+    },
+    {
+      "active": "9-13",
+      "category": "Unique Attacks",
+      "name": "Gong Fu",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "8-9",
+      "category": "Unique Attacks",
+      "name": "Hun Dun(2)",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "15",
+      "startup": "8"
+    },
+    {
+      "active": "14-16",
+      "category": "Unique Attacks",
+      "name": "Qiong Qi (2)",
+      "onBlock": "-15",
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "14"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "Nightshade Pulse",
+      "onBlock": "-10",
+      "onHit": "-5",
+      "recovery": "52 total frames",
+      "startup": "17"
+    },
+    {
+      "active": "13-14",
+      "category": "Special Moves",
+      "name": "Nightshade Chaser",
+      "onBlock": "-16",
+      "onHit": "-4",
+      "recovery": "34",
+      "startup": "13"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD Nightshade Pulse",
+      "onBlock": "1",
+      "onHit": "D",
+      "recovery": "44 total frames",
+      "startup": "16"
+    },
+    {
+      "active": "13-17",
+      "category": "Special Moves",
+      "name": "OD Nightshade Chaser",
+      "onBlock": "-13",
+      "onHit": "D",
+      "recovery": "28",
+      "startup": "13"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "Nightshade Chaser (Burst)",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": null,
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD Nightshade Chaser (Burst)",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": null,
+      "startup": null
+    },
+    {
+      "active": "*",
+      "category": "Special Moves",
+      "name": "Orchid Spring",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "46 total frames",
+      "startup": "26"
+    },
+    {
+      "active": "13-38 13-15, 30-38",
+      "category": "Special Moves",
+      "name": "Toxic Wreath",
+      "onBlock": "-4",
+      "onHit": "D",
+      "recovery": "13",
+      "startup": "13"
+    },
+    {
+      "active": "14-16",
+      "category": "Special Moves",
+      "name": "L Serpent Lash",
+      "onBlock": "-8",
+      "onHit": "1",
+      "recovery": "26",
+      "startup": "14"
+    },
+    {
+      "active": "14-22",
+      "category": "Special Moves",
+      "name": "M Serpent Lash",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "21",
+      "startup": "14"
+    },
+    {
+      "active": "11-16",
+      "category": "Special Moves",
+      "name": "H Serpent Lash",
+      "onBlock": "-20",
+      "onHit": "D",
+      "recovery": "32",
+      "startup": "11"
+    },
+    {
+      "active": "21-25",
+      "category": "Special Moves",
+      "name": "OD Serpent Lash",
+      "onBlock": "-14",
+      "onHit": "4",
+      "recovery": "25",
+      "startup": "21"
+    },
+    {
+      "active": "24-45 24-25, 31-32, 37-38, 44-45",
+      "category": "Special Moves",
+      "name": "L Cruel Fate",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "18 frame(s) after landing",
+      "startup": "24"
+    },
+    {
+      "active": "28-49 28-29, 35-36, 41-42, 48-49",
+      "category": "Special Moves",
+      "name": "M Cruel Fate",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "18 frame(s) after landing",
+      "startup": "28"
+    },
+    {
+      "active": "33-54 33-34, 40-41, 46-47, 53-54",
+      "category": "Special Moves",
+      "name": "H Cruel Fate",
+      "onBlock": "-3",
+      "onHit": "4",
+      "recovery": "18 frame(s) after landing",
+      "startup": "33"
+    },
+    {
+      "active": "28-49 28-30, 35-36, 41-42, 48-49",
+      "category": "Special Moves",
+      "name": "OD Cruel Fate",
+      "onBlock": "2",
+      "onHit": "D",
+      "recovery": "18 frame(s) after landing",
+      "startup": "28"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "L Snake Step",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "37 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "M Snake Step",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "39 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "H Snake Step",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "*43 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD Snake Step",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "*42 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "Sinister Slide",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "216 total frames",
+      "startup": null
+    },
+    {
+      "active": "19-33",
+      "category": "Special Moves",
+      "name": "Venomous Fang",
+      "onBlock": "-25",
+      "onHit": "D",
+      "recovery": "30",
+      "startup": "19"
+    },
+    {
+      "active": "11-25 11-13, 23-25",
+      "category": "Special Moves",
+      "name": "Heel Strike",
+      "onBlock": "-3",
+      "onHit": "4",
+      "recovery": "20",
+      "startup": "11"
+    },
+    {
+      "active": "23-25",
+      "category": "Special Moves",
+      "name": "Entrapment",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "55",
+      "startup": "23"
+    },
+    {
+      "active": "10-12",
+      "category": "Super Arts",
+      "name": "SA1 Deadly Implication",
+      "onBlock": "-46",
+      "onHit": "D",
+      "recovery": "68",
+      "startup": "10"
+    },
+    {
+      "active": "*",
+      "category": "Super Arts",
+      "name": "SA2 Tainted Talons",
+      "onBlock": "-19",
+      "onHit": "D",
+      "recovery": "65",
+      "startup": "7"
+    },
+    {
+      "active": "10-12",
+      "category": "Super Arts",
+      "name": "SA3 Claws of Ya Zi",
+      "onBlock": "-36",
+      "onHit": "D",
+      "recovery": "58",
+      "startup": "10"
+    },
+    {
+      "active": "10-12",
+      "category": "Super Arts",
+      "name": "CA Claws of Ya Zi",
+      "onBlock": "-36",
+      "onHit": "D",
+      "recovery": "58",
+      "startup": "10"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Whisper",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Gluttony",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Forward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "19 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Backward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "23 total frames",
+      "startup": null
+    },
+    {
+      "active": "26-27",
+      "category": "Common Moves",
+      "name": "Drive Impact: Zao Chi",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "35",
+      "startup": "26"
+    },
+    {
+      "active": "20-22",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while blocking): Feng Shi",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "20"
+    },
+    {
+      "active": "18-20",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while recovering): Feng Shi",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "18"
+    },
+    {
+      "active": "[*2] 1-12",
+      "category": "Common Moves",
+      "name": "Drive Parry",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "33",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (strike)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "1",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (projectile)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "10",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Parry Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "45 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Cancel Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "46 total frames",
+      "startup": null
+    }
+  ],
+  "slug": "aki",
+  "url": "https://www.streetfighter.com/6/character/aki/frame"
+}

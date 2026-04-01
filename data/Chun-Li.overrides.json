@@ -1,94 +1,210 @@
 {
   "character": "Chun-Li",
-  "source": "manual-ai-from-conflicts-csv",
-  "notes": [
-    "Manually reviewed Chun-Li.conflicts.csv line by line.",
-    "Preserved SuperCombo/FAT-style range and variant semantics where present."
-  ],
   "entries": [
     {
       "category": "normal",
-      "move": "Drive Impact: Hosen Kick",
+      "move": "Crouch HK",
       "set": {
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+        "recovery": "19"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Crouch MP",
+      "set": {
+        "recovery": "13"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Hoyoku Kick",
-      "set": { "startup": "18" }
+      "set": {
+        "recovery": "33"
+      }
     },
     {
       "category": "normal",
       "move": "Falling Crane",
-      "set": { "onHit": "+7", "onBlock": "+3", "onPC": "+11" }
+      "set": {
+        "recovery": "1+12 land"
+      }
     },
     {
       "category": "normal",
-      "move": "HK Hundred Lightning Kicks",
-      "set": { "active": "2(3)2(2)2(4)2(6)2" }
+      "move": "Forward Strike",
+      "set": {
+        "recovery": "*13"
+      }
     },
     {
       "category": "normal",
-      "move": "HK Tenshokyaku",
-      "set": { "recovery": "26+12 land" }
+      "move": "HK Aerial Hundred Lightning Kicks",
+      "set": {
+        "recovery": "15 land"
+      }
     },
     {
       "category": "normal",
-      "move": "Hoyoku-sen",
-      "set": { "active": "[2(1)x3],2(2), [2(1)x3],2(11), [2(2)x6],2(23)3" }
+      "move": "HK Hazanshu",
+      "set": {
+        "recovery": "18"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HK Spinning Bird Kick",
+      "set": {
+        "recovery": "8+22 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "LK Aerial Hundred Lightning Kicks",
+      "set": {
+        "recovery": "15 land"
+      }
     },
     {
       "category": "normal",
       "move": "LK Hazanshu",
       "set": {
-        "active": "3",
-        "recovery": "20",
-        "onHit": "KD +21",
-        "onBlock": "-5",
-        "onPC": "KD +21"
+        "recovery": "20"
       }
     },
     {
       "category": "normal",
-      "move": "LK Tenshokyaku",
-      "set": { "recovery": "27+12 land" }
+      "move": "LK Spinning Bird Kick",
+      "set": {
+        "recovery": "6+24 land"
+      }
     },
     {
       "category": "normal",
-      "move": "MK Tenshokyaku",
-      "set": { "recovery": "31+12 land" }
+      "move": "Lightning Kick Barrage",
+      "set": {
+        "startup": "11"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MK Aerial Hundred Lightning Kicks",
+      "set": {
+        "recovery": "15 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MK Spinning Bird Kick",
+      "set": {
+        "recovery": "8+21 land"
+      }
     },
     {
       "category": "normal",
       "move": "Neutral Jump HK",
-      "set": { "onHit": "11(+16)", "onBlock": "6(+11)", "onPC": "15(+20)" }
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
-      "move": "OD Hazanshu",
-      "set": { "onHit": "KD +52 OTG", "onPC": "KD +52 OTG" }
+      "move": "OD Aerial Hundred Lightning Kicks",
+      "set": {
+        "recovery": "5 land"
+      }
     },
     {
       "category": "normal",
-      "move": "OD Hundred Lightning Kicks",
-      "set": { "active": "2(4)2(4)2(4)2(4)2", "onPC": "KD +73 Crumple" }
+      "move": "OD Spinning Bird Kick",
+      "set": {
+        "recovery": "8+15 land"
+      }
     },
     {
       "category": "normal",
-      "move": "OD Tenshokyaku",
-      "set": { "recovery": "16+25 land" }
+      "move": "Orchid Palm",
+      "set": {
+        "recovery": "*17"
+      }
     },
     {
       "category": "normal",
-      "move": "Soten Ranka",
-      "set": { "onHit": "HKD +18", "onPC": "HKD +18" }
+      "move": "Ryuseiraku",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Senpu Kick",
+      "set": {
+        "recovery": "*23"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Snake Strike",
+      "set": {
+        "recovery": "*20",
+        "startup": "6"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Soaring Eagle Punches",
+      "set": {
+        "recovery": "3 land",
+        "startup": "6"
+      }
     }
-  ]
+  ],
+  "generatedAt": "2026-04-01T13:11:46.735338+00:00",
+  "notes": [
+    "Auto-generated from official SF6 frame pages and FAT comparison.",
+    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+  ],
+  "source": "official-streetfighter-com-frame-vs-fat",
+  "sourceUrl": "https://www.streetfighter.com/6/character/chunli/frame"
 }

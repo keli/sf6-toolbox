@@ -1,176 +1,160 @@
 {
   "character": "Mai",
-  "source": "manual-ai-from-conflicts-csv",
-  "notes": [
-    "Manually reviewed Mai.conflicts.csv line by line.",
-    "Preserved SuperCombo/FAT-style range and variant semantics where present."
-  ],
   "entries": [
     {
       "category": "normal",
-      "move": "Chou Hissatsu Shinobi Bachi",
+      "move": "Crouch HK",
       "set": {
-        "active": "3x12",
-        "recovery": "31(37)",
-        "onHit": "KD +38",
-        "onPC": "KD +38"
+        "recovery": "22"
       }
     },
     {
       "category": "normal",
-      "move": "Crouch HK",
-      "set": { "recovery": "22(23/25)" }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Impact: Botan Ichige",
+      "move": "Crouch MP",
       "set": {
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+        "recovery": "15"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Yusura Ume",
-      "set": { "startup": "18" }
-    },
-    {
-      "category": "normal",
-      "move": "HK Hissatsu Shinobi Bachi",
       "set": {
-        "onHit": "KD +22(+38)",
-        "onBlock": "-13(+3)",
-        "onPC": "KD +22(+38)"
+        "recovery": "33"
       }
     },
     {
       "category": "normal",
       "move": "HK Hishou Ryuuenjin",
       "set": {
-        "active": "5,2,11",
-        "recovery": "14+15 land",
-        "onHit": "KD +32",
-        "onPC": "KD +32"
+        "recovery": "14+15 land"
       }
     },
     {
       "category": "normal",
-      "move": "HP Kachousen",
-      "set": { "recovery": "33", "onHit": "-3", "onBlock": "-7", "onPC": "+1" }
-    },
-    {
-      "category": "normal",
-      "move": "HP Ryuuenbu",
+      "move": "Hien Ren Kyaku 2",
       "set": {
-        "startup": "14(27)",
-        "active": "4(9)10",
-        "onHit": "KD +47",
-        "onPC": "KD +47"
+        "recovery": "20",
+        "startup": "7"
       }
     },
     {
       "category": "normal",
-      "move": "Kagerou no Mai",
+      "move": "Jump HK",
       "set": {
-        "active": "7x9,4,20,3 (90 total)",
-        "recovery": "46",
-        "onHit": "KD +40",
-        "onBlock": "-26",
-        "onPC": "KD +40"
+        "recovery": "3 land"
       }
     },
     {
       "category": "normal",
-      "move": "LK Hissatsu Shinobi Bachi",
+      "move": "Jump HP",
       "set": {
-        "onHit": "KD +27(+43)",
-        "onBlock": "-10(+6)",
-        "onPC": "KD +27(+43)"
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MP",
+      "set": {
+        "recovery": "3 land"
       }
     },
     {
       "category": "normal",
       "move": "LK Hishou Ryuuenjin",
       "set": {
-        "active": "5,2,11",
-        "recovery": "15+15 land",
-        "onHit": "KD +31",
-        "onPC": "KD +31"
-      }
-    },
-    {
-      "category": "normal",
-      "move": "LP Kachousen",
-      "set": { "recovery": "29", "onHit": "+1", "onBlock": "-3", "onPC": "+5" }
-    },
-    {
-      "category": "normal",
-      "move": "LP Ryuuenbu",
-      "set": { "onHit": "KD +35", "onBlock": "-2" }
-    },
-    {
-      "category": "normal",
-      "move": "MK Hissatsu Shinobi Bachi",
-      "set": {
-        "onHit": "KD +23(+39)",
-        "onBlock": "-12(+4)",
-        "onPC": "KD +23(+39)"
+        "recovery": "15+15 land"
       }
     },
     {
       "category": "normal",
       "move": "MK Hishou Ryuuenjin",
       "set": {
-        "active": "5,2,12",
-        "recovery": "13+15 land",
-        "onHit": "KD +32",
-        "onPC": "KD +32"
+        "recovery": "14+15 land"
       }
     },
     {
       "category": "normal",
-      "move": "MP Kachousen",
-      "set": { "recovery": "31", "onHit": "-1", "onBlock": "-5", "onPC": "+3" }
+      "move": "Midare Kachousen",
+      "set": {
+        "startup": "15"
+      }
     },
     {
       "category": "normal",
-      "move": "MP Ryuuenbu",
-      "set": { "onHit": "KD +42(+44)", "onPC": "KD +42(+44)" }
-    },
-    {
-      "category": "normal",
-      "move": "OD Hissatsu Shinobi Bachi",
-      "set": { "recovery": "29+3 land" }
+      "move": "Musasabi no Mai",
+      "set": {
+        "recovery": "18 land"
+      }
     },
     {
       "category": "normal",
       "move": "OD Hishou Ryuuenjin",
       "set": {
-        "active": "5,2,11",
-        "recovery": "18+16(23) land",
-        "onHit": "KD +27",
-        "onPC": "KD +27"
+        "recovery": "19+16 land"
       }
     },
     {
       "category": "normal",
-      "move": "OD Kachousen",
-      "set": { "onBlock": "+1" }
+      "move": "OD Hissatsu Shinobi Bachi",
+      "set": {
+        "recovery": "32"
+      }
     },
     {
       "category": "normal",
-      "move": "Shiranui Ryuu: Enbu Ada Zakura",
-      "set": { "onHit": "HKD +20 (KD +52)", "onPC": "HKD +20 (KD +52)" }
+      "move": "OD Musasabi no Mai",
+      "set": {
+        "recovery": "18 land"
+      }
     },
     {
       "category": "normal",
-      "move": "Taunt",
-      "set": { "startup": "279 (total)" }
+      "move": "OD Ryuuenbu",
+      "set": {
+        "recovery": "16"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Stand HK",
+      "set": {
+        "recovery": "19"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Yume Zakura",
+      "set": {
+        "recovery": "3 land"
+      }
     }
-  ]
+  ],
+  "generatedAt": "2026-04-01T13:12:20.216066+00:00",
+  "notes": [
+    "Auto-generated from official SF6 frame pages and FAT comparison.",
+    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+  ],
+  "source": "official-streetfighter-com-frame-vs-fat",
+  "sourceUrl": "https://www.streetfighter.com/6/character/mai/frame"
 }

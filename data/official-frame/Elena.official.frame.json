@@ -1,0 +1,720 @@
+{
+  "character": "Elena",
+  "fetchedAt": "2026-04-01T13:11:57.623517+00:00",
+  "moveCount": 79,
+  "moves": [
+    {
+      "active": "5-8",
+      "category": "Normal Moves",
+      "name": "Standing Light Punch",
+      "onBlock": "-2",
+      "onHit": "4",
+      "recovery": "8",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Normal Moves",
+      "name": "Standing Light Kick",
+      "onBlock": "-4",
+      "onHit": "2",
+      "recovery": "11",
+      "startup": "5"
+    },
+    {
+      "active": "8-12",
+      "category": "Normal Moves",
+      "name": "Standing Medium Punch",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "15",
+      "startup": "8"
+    },
+    {
+      "active": "6-9",
+      "category": "Normal Moves",
+      "name": "Standing Medium Kick",
+      "onBlock": "1",
+      "onHit": "5",
+      "recovery": "13",
+      "startup": "6"
+    },
+    {
+      "active": "12-15",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Punch",
+      "onBlock": "-2",
+      "onHit": "2",
+      "recovery": "20",
+      "startup": "12"
+    },
+    {
+      "active": "12-15",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Kick",
+      "onBlock": "-4",
+      "onHit": "2",
+      "recovery": "19",
+      "startup": "12"
+    },
+    {
+      "active": "4-6",
+      "category": "Normal Moves",
+      "name": "Crouching Light Punch",
+      "onBlock": "-1",
+      "onHit": "5",
+      "recovery": "8",
+      "startup": "4"
+    },
+    {
+      "active": "5-7",
+      "category": "Normal Moves",
+      "name": "Crouching Light Kick",
+      "onBlock": "-1",
+      "onHit": "3",
+      "recovery": "8",
+      "startup": "5"
+    },
+    {
+      "active": "8-10",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Punch",
+      "onBlock": "-4",
+      "onHit": "1",
+      "recovery": "20",
+      "startup": "8"
+    },
+    {
+      "active": "9-11",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Kick",
+      "onBlock": "-4",
+      "onHit": "4",
+      "recovery": "18",
+      "startup": "9"
+    },
+    {
+      "active": "9-18 9-11, 16-18",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Punch",
+      "onBlock": "-7",
+      "onHit": "6",
+      "recovery": "20",
+      "startup": "9"
+    },
+    {
+      "active": "11-13",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Kick",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "11"
+    },
+    {
+      "active": "5-10",
+      "category": "Normal Moves",
+      "name": "Jumping Light Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "5-10",
+      "category": "Normal Moves",
+      "name": "Jumping Light Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "8-12",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "7-11",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "10-16",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "10-20 10-11, 13-20",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "14-22",
+      "category": "Unique Attacks",
+      "name": "Slide",
+      "onBlock": "-10",
+      "onHit": "D",
+      "recovery": "22",
+      "startup": "14"
+    },
+    {
+      "active": "14-17",
+      "category": "Unique Attacks",
+      "name": "Round Arch",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "17",
+      "startup": "14"
+    },
+    {
+      "active": "17-21",
+      "category": "Unique Attacks",
+      "name": "Starling Beak(2)",
+      "onBlock": "-10",
+      "onHit": "-4",
+      "recovery": "20",
+      "startup": "17"
+    },
+    {
+      "active": "20-22",
+      "category": "Unique Attacks",
+      "name": "Handstand Whip(1)",
+      "onBlock": "-3",
+      "onHit": "2",
+      "recovery": "19",
+      "startup": "20"
+    },
+    {
+      "active": "14-16",
+      "category": "Unique Attacks",
+      "name": "Handstand Whip(2)",
+      "onBlock": "-14",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "14"
+    },
+    {
+      "active": "12-14",
+      "category": "Unique Attacks",
+      "name": "Hind Kick(2)",
+      "onBlock": "-8",
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "12"
+    },
+    {
+      "active": "15",
+      "category": "Unique Attacks",
+      "name": "Fluttering Lark(2)",
+      "onBlock": "-9",
+      "onHit": "4",
+      "recovery": "24",
+      "startup": "15"
+    },
+    {
+      "active": "17-27 17-20, 24-27",
+      "category": "Unique Attacks",
+      "name": "Turning Tail(2)",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "17",
+      "startup": "17"
+    },
+    {
+      "active": "16-19",
+      "category": "Unique Attacks",
+      "name": "Trunk Slap(1)",
+      "onBlock": "-4",
+      "onHit": "1",
+      "recovery": "20",
+      "startup": "16"
+    },
+    {
+      "active": "13-15",
+      "category": "Unique Attacks",
+      "name": "Trunk Slap(2)",
+      "onBlock": "-11",
+      "onHit": "-2",
+      "recovery": "26",
+      "startup": "13"
+    },
+    {
+      "active": "7-17 7-9, 15-17",
+      "category": "Unique Attacks",
+      "name": "Trunk Slap(3)",
+      "onBlock": "-16",
+      "onHit": "D",
+      "recovery": "27",
+      "startup": "7"
+    },
+    {
+      "active": "6-10",
+      "category": "Unique Attacks",
+      "name": "Soaring Raid",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "12-16",
+      "category": "Unique Attacks",
+      "name": "Raptor Range",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "12"
+    },
+    {
+      "active": "13-33 13-17, 28-33",
+      "category": "Special Moves",
+      "name": "L Rhino Horn",
+      "onBlock": "-9",
+      "onHit": "D",
+      "recovery": "19",
+      "startup": "13"
+    },
+    {
+      "active": "17-38 17-21, 33-38",
+      "category": "Special Moves",
+      "name": "M Rhino Horn",
+      "onBlock": "-9",
+      "onHit": "D",
+      "recovery": "20",
+      "startup": "17"
+    },
+    {
+      "active": "21-42 21-25, 37-42",
+      "category": "Special Moves",
+      "name": "H Rhino Horn",
+      "onBlock": "-9",
+      "onHit": "D",
+      "recovery": "20",
+      "startup": "21"
+    },
+    {
+      "active": "11-35 11-17, 25-35",
+      "category": "Special Moves",
+      "name": "OD Rhino Horn",
+      "onBlock": "-9",
+      "onHit": "D",
+      "recovery": "19",
+      "startup": "11"
+    },
+    {
+      "active": "5-9",
+      "category": "Special Moves",
+      "name": "L Scratch Wheel",
+      "onBlock": "-24",
+      "onHit": "D",
+      "recovery": "25+14 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "6-11",
+      "category": "Special Moves",
+      "name": "M Scratch Wheel",
+      "onBlock": "-30",
+      "onHit": "D",
+      "recovery": "30+14 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "7-12",
+      "category": "Special Moves",
+      "name": "H Scratch Wheel",
+      "onBlock": "-33",
+      "onHit": "D",
+      "recovery": "34+14 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "6-28 6-11, 24-25, 27-28",
+      "category": "Special Moves",
+      "name": "OD Scratch Wheel",
+      "onBlock": "-46",
+      "onHit": "D",
+      "recovery": "25+19 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "L Lynx Song",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "28 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "M Lynx Song",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "36 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "H Lynx Song",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "38 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD Lynx Song",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "34 total frames",
+      "startup": null
+    },
+    {
+      "active": "10-14",
+      "category": "Special Moves",
+      "name": "Leopard Snap",
+      "onBlock": "-5",
+      "onHit": "D",
+      "recovery": "22",
+      "startup": "10"
+    },
+    {
+      "active": "10-22 10-14, 20-22",
+      "category": "Special Moves",
+      "name": "[Boosted]Leopard Snap",
+      "onBlock": "1",
+      "onHit": "D",
+      "recovery": "15",
+      "startup": "10"
+    },
+    {
+      "active": "8-10",
+      "category": "Special Moves",
+      "name": "Harvest Circle",
+      "onBlock": "-9",
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "8"
+    },
+    {
+      "active": "8-19 8-10, 17-19",
+      "category": "Special Moves",
+      "name": "[Boosted]Harvest Circle",
+      "onBlock": "-4",
+      "onHit": "D",
+      "recovery": "16",
+      "startup": "8"
+    },
+    {
+      "active": "22-24",
+      "category": "Special Moves",
+      "name": "Mallet Smash",
+      "onBlock": "-3",
+      "onHit": "2",
+      "recovery": "19",
+      "startup": "22"
+    },
+    {
+      "active": "22-27 22-23, 26-27",
+      "category": "Special Moves",
+      "name": "[Boosted]Mallet Smash",
+      "onBlock": "3",
+      "onHit": "4",
+      "recovery": "16",
+      "startup": "22"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "L Lynx Whirl",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "28 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "M Lynx Whirl",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "36 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "H Lynx Whirl",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "38 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD Lynx Whirl",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "34 total frames",
+      "startup": null
+    },
+    {
+      "active": "15-67 15-18, 33-35, 60-61, 65-67",
+      "category": "Special Moves",
+      "name": "L Spinning Scythe",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "15"
+    },
+    {
+      "active": "20-76 20-23, 43-45, 68-72, 75-76",
+      "category": "Special Moves",
+      "name": "M Spinning Scythe",
+      "onBlock": "-14",
+      "onHit": "D",
+      "recovery": "27",
+      "startup": "20"
+    },
+    {
+      "active": "24-78 24-27, 45-47, 70-74, 77-78",
+      "category": "Special Moves",
+      "name": "H Spinning Scythe",
+      "onBlock": "-10",
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "24"
+    },
+    {
+      "active": "18-68 18-21, 34-36, 61-62, 66-68",
+      "category": "Special Moves",
+      "name": "OD Spinning Scythe",
+      "onBlock": "-10",
+      "onHit": "D",
+      "recovery": "22",
+      "startup": "18"
+    },
+    {
+      "active": "20-22",
+      "category": "Special Moves",
+      "name": "L Moon Glider(1)",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "20",
+      "startup": "20"
+    },
+    {
+      "active": "24-26",
+      "category": "Special Moves",
+      "name": "M Moon Glider(1)",
+      "onBlock": "-2",
+      "onHit": "2",
+      "recovery": "19",
+      "startup": "24"
+    },
+    {
+      "active": "28-30",
+      "category": "Special Moves",
+      "name": "H Moon Glider(1)",
+      "onBlock": "-2",
+      "onHit": "2",
+      "recovery": "20",
+      "startup": "28"
+    },
+    {
+      "active": "16-25 16-17, 22-25",
+      "category": "Special Moves",
+      "name": "Moon Glider(2)",
+      "onBlock": "-13",
+      "onHit": "D",
+      "recovery": "25",
+      "startup": "16"
+    },
+    {
+      "active": "23-25",
+      "category": "Special Moves",
+      "name": "OD Moon Glider(1)",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "20",
+      "startup": "23"
+    },
+    {
+      "active": "16-47 16-17, 22-25, 45-47",
+      "category": "Special Moves",
+      "name": "OD Moon Glider(2)",
+      "onBlock": "-19",
+      "onHit": "D",
+      "recovery": "35",
+      "startup": "16"
+    },
+    {
+      "active": "7-39 7-11, 18-21, 38-39",
+      "category": "Super Arts",
+      "name": "SA1 Meteor Volley",
+      "onBlock": "-68",
+      "onHit": "D",
+      "recovery": "55",
+      "startup": "7"
+    },
+    {
+      "active": "12-17",
+      "category": "Super Arts",
+      "name": "SA2 Revival Dance",
+      "onBlock": "-47",
+      "onHit": "D",
+      "recovery": "62",
+      "startup": "12"
+    },
+    {
+      "active": "8-11",
+      "category": "Super Arts",
+      "name": "SA3 Song of the Grasslands",
+      "onBlock": "-54",
+      "onHit": "D",
+      "recovery": "68",
+      "startup": "8"
+    },
+    {
+      "active": "8-11",
+      "category": "Super Arts",
+      "name": "CA Song of the Grasslands",
+      "onBlock": "-54",
+      "onHit": "D",
+      "recovery": "68",
+      "startup": "8"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Leg Tackle",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Leg Lift Throw",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Forward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "20 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Backward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "23 total frames",
+      "startup": null
+    },
+    {
+      "active": "26-27",
+      "category": "Common Moves",
+      "name": "Drive Impact: Giraffe Neck",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "35",
+      "startup": "26"
+    },
+    {
+      "active": "20-22",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while blocking): Boar Charge",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "20"
+    },
+    {
+      "active": "18-20",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while recovering): Boar Charge",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "18"
+    },
+    {
+      "active": "[*2] 1-12",
+      "category": "Common Moves",
+      "name": "Drive Parry",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "33",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (strike)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "1",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (projectile)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "10",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Parry Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "45 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Cancel Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "46 total frames",
+      "startup": null
+    }
+  ],
+  "slug": "elena",
+  "url": "https://www.streetfighter.com/6/character/elena/frame"
+}

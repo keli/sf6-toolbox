@@ -1,117 +1,190 @@
 {
   "character": "Akuma",
-  "source": "manual-ai-from-conflicts-csv",
-  "notes": [
-    "Manually reviewed Akuma.conflicts.csv line by line.",
-    "Preserved SuperCombo/FAT-style range and variant semantics where present."
-  ],
   "entries": [
     {
       "category": "normal",
-      "move": "Ashura Senku (forward)",
-      "set": { "startup": "23" }
+      "move": "Crouch HK",
+      "set": {
+        "recovery": "23"
+      }
     },
     {
       "category": "normal",
-      "move": "Drive Impact: Oni Goroshi",
+      "move": "Crouch MP",
       "set": {
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+        "recovery": "14"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Souha Double Palm",
-      "set": { "startup": "18" }
-    },
-    {
-      "category": "normal",
-      "move": "Empyrean's End",
       "set": {
-        "startup": "9",
-        "onHit": "HKD +29 (HKD +97 Wallsplat)",
-        "onPC": "HKD +29 (HKD +97 Wallsplat)"
+        "recovery": "33"
       }
     },
     {
       "category": "normal",
-      "move": "Forward Taunt",
-      "set": { "startup": "570(514) (total)" }
-    },
-    {
-      "category": "normal",
-      "move": "Goshoha",
-      "set": { "onHit": "KD +28", "onPC": "HKD +28" }
-    },
-    {
-      "category": "normal",
       "move": "HK Tatsumaki Zanku-kyaku",
-      "set": { "recovery": "21+14(20) land" }
+      "set": {
+        "recovery": "23+12 land"
+      }
     },
     {
       "category": "normal",
       "move": "HP Gou Shoryuken",
-      "set": { "active": "2,3,6", "recovery": "35+15 land" }
+      "set": {
+        "recovery": "35+15 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Kikoku Combination 1",
+      "set": {
+        "recovery": "20",
+        "startup": "13"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Kikoku Combination 2",
+      "set": {
+        "recovery": "21",
+        "startup": "10"
+      }
     },
     {
       "category": "normal",
       "move": "LK Tatsumaki Zanku-kyaku",
-      "set": { "recovery": "14+7(13) land" }
+      "set": {
+        "recovery": "21"
+      }
     },
     {
       "category": "normal",
       "move": "LP Gou Shoryuken",
-      "set": { "recovery": "21+12 land" }
+      "set": {
+        "recovery": "21+12 land"
+      }
     },
     {
       "category": "normal",
       "move": "MK Tatsumaki Zanku-kyaku",
       "set": {
-        "active": "2(13)3",
-        "recovery": "10+20 land",
-        "onHit": "KD +41(38)",
-        "onPC": "KD +41(38)"
+        "recovery": "30"
       }
     },
     {
       "category": "normal",
       "move": "MP Gou Shoryuken",
-      "set": { "active": "2,8", "recovery": "30+12 land" }
+      "set": {
+        "recovery": "30+12 land"
+      }
     },
     {
       "category": "normal",
-      "move": "OD Adamant Flame",
-      "set": { "onPC": "KD +78 Crumple" }
+      "move": "OD Gou Hadoken",
+      "set": {
+        "startup": "12"
+      }
     },
     {
       "category": "normal",
       "move": "OD Gou Shoryuken",
-      "set": { "active": "2,2,7", "recovery": "37+15 land" }
+      "set": {
+        "recovery": "37+15 land"
+      }
     },
     {
       "category": "normal",
       "move": "OD Tatsumaki Zanku-kyaku",
-      "set": { "recovery": "7+19 land" }
+      "set": {
+        "recovery": "26"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Zanku Hadoken",
+      "set": {
+        "recovery": "9 land",
+        "startup": "6"
+      }
     },
     {
       "category": "normal",
       "move": "Resso Snap Kick",
-      "set": { "recovery": "15(18/19)" }
-    },
-    {
-      "category": "normal",
-      "move": "Shuretto",
-      "set": { "onHit": "KD +14", "onPC": "HKD +14" }
+      "set": {
+        "recovery": "15"
+      }
     },
     {
       "category": "normal",
       "move": "Stand HK",
-      "set": { "onBlock": "+3(-13)" }
+      "set": {
+        "recovery": "15"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Stand MP",
+      "set": {
+        "recovery": "11"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Tenmaku Blade Kick",
+      "set": {
+        "recovery": "13 land"
+      }
     }
-  ]
+  ],
+  "generatedAt": "2026-04-01T13:11:59.104981+00:00",
+  "notes": [
+    "Auto-generated from official SF6 frame pages and FAT comparison.",
+    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+  ],
+  "source": "official-streetfighter-com-frame-vs-fat",
+  "sourceUrl": "https://www.streetfighter.com/6/character/gouki_akuma/frame"
 }

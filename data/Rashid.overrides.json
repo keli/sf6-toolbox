@@ -1,123 +1,222 @@
 {
   "character": "Rashid",
-  "source": "manual-ai-from-conflicts-csv",
-  "notes": [
-    "Manually reviewed Rashid.conflicts.csv line by line.",
-    "Preserved SuperCombo/FAT-style range and variant semantics where present."
-  ],
   "entries": [
     {
       "category": "normal",
-      "move": "Altair",
-      "set": { "onHit": "HKD +18", "onPC": "HKD +18" }
+      "move": "Aerial Shot",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Backup",
+      "set": {
+        "startup": "8"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Blitz Strike",
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
       "move": "Crescent Kick",
-      "set": { "onHit": "+2(+5)", "onPC": "+6(+9)" }
+      "set": {
+        "recovery": "20"
+      }
     },
     {
       "category": "normal",
-      "move": "Drive Impact: Eagle Edge",
+      "move": "Crouch HK",
       "set": {
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+        "recovery": "24"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Crouch HP",
+      "set": {
+        "recovery": "21"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Desert Slider",
+      "set": {
+        "recovery": "3 land"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Eagle Slash",
-      "set": { "startup": "18" }
+      "set": {
+        "recovery": "33"
+      }
     },
     {
       "category": "normal",
       "move": "Flapping Spin",
-      "set": { "startup": "8(24)" }
+      "set": {
+        "startup": "8"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HK Arabian Skyhigh",
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
       "move": "HK Eagle Spike",
       "set": {
-        "recovery": "6+21 land (22+33 land oB)",
-        "onHit": "KD +56(+68)",
-        "onPC": "KD +56(+68)"
+        "recovery": "27"
       }
     },
     {
       "category": "normal",
-      "move": "HP Arabian Cyclone",
-      "set": { "onBlock": "-2" }
+      "move": "HP Spinning Mixer",
+      "set": {
+        "recovery": "14 land"
+      }
     },
     {
       "category": "normal",
-      "move": "HP Spinning Mixer",
-      "set": { "active": "2(2)3(3)3(4)3(4)3(4)3", "recovery": "24+14 land" }
+      "move": "Jump HK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "LK Arabian Skyhigh",
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
       "move": "LK Eagle Spike",
       "set": {
-        "recovery": "11+20 land (19+32 land oB)",
-        "onHit": "KD +30(+42)",
-        "onPC": "KD +30(+42)"
+        "recovery": "31"
       }
     },
     {
       "category": "normal",
-      "move": "LP Arabian Cyclone",
-      "set": { "onHit": "+2", "onBlock": "-6", "onPC": "+6" }
+      "move": "LP Spinning Mixer",
+      "set": {
+        "recovery": "19"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MK Arabian Skyhigh",
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
       "move": "MK Eagle Spike",
       "set": {
-        "recovery": "5+21 land (22+33 land oB)",
-        "onHit": "KD +52(+64)",
-        "onPC": "KD +52(+64)"
+        "recovery": "26"
       }
     },
     {
       "category": "normal",
-      "move": "MP Arabian Cyclone",
-      "set": { "onHit": "+4", "onBlock": "-4", "onPC": "+8" }
+      "move": "MP Spinning Mixer",
+      "set": {
+        "recovery": "11 land"
+      }
     },
     {
       "category": "normal",
-      "move": "MP Spinning Mixer",
-      "set": { "active": "1,2(2)2(5)2(3)2", "recovery": "34+14 land" }
+      "move": "OD Arabian Skyhigh",
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
       "move": "OD Eagle Spike",
       "set": {
-        "recovery": "7+19 land (22+33 land oB)",
-        "onHit": "KD +53(+65)",
-        "onPC": "KD +53(+65)"
+        "recovery": "26"
       }
     },
     {
       "category": "normal",
       "move": "OD Spinning Mixer",
       "set": {
-        "active": "1,2(2)3(2)4(2)4(2)4(2)4(2)4(2)3",
-        "recovery": "38+24 land (34+20 land oB)"
+        "recovery": "15 land"
       }
     },
     {
       "category": "normal",
-      "move": "Super Rashid Kick",
-      "set": { "recovery": "20+56 land (33+42 land oB)" }
+      "move": "Stand MK",
+      "set": {
+        "recovery": "17"
+      }
     },
     {
       "category": "normal",
-      "move": "Whirlwind Shot",
-      "set": { "startup": "11+6" }
+      "move": "Tempest Moon",
+      "set": {
+        "startup": "16"
+      }
     },
-    { "category": "normal", "move": "Ysaar", "set": { "active": "[349]" } }
-  ]
+    {
+      "category": "normal",
+      "move": "Wing Stroke",
+      "set": {
+        "recovery": "6 land"
+      }
+    }
+  ],
+  "generatedAt": "2026-04-01T13:12:24.650262+00:00",
+  "notes": [
+    "Auto-generated from official SF6 frame pages and FAT comparison.",
+    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+  ],
+  "source": "official-streetfighter-com-frame-vs-fat",
+  "sourceUrl": "https://www.streetfighter.com/6/character/rashid/frame"
 }

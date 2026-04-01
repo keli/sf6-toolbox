@@ -1,0 +1,675 @@
+{
+  "character": "Lily",
+  "fetchedAt": "2026-04-01T13:12:17.312939+00:00",
+  "moveCount": 74,
+  "moves": [
+    {
+      "active": "5-7",
+      "category": "Normal Moves",
+      "name": "Standing Light Punch",
+      "onBlock": "-1",
+      "onHit": "6",
+      "recovery": "8",
+      "startup": "5"
+    },
+    {
+      "active": "4-6",
+      "category": "Normal Moves",
+      "name": "Standing Light Kick",
+      "onBlock": "-1",
+      "onHit": "5",
+      "recovery": "8",
+      "startup": "4"
+    },
+    {
+      "active": "9-12",
+      "category": "Normal Moves",
+      "name": "Standing Medium Punch",
+      "onBlock": "-4",
+      "onHit": "1",
+      "recovery": "17",
+      "startup": "9"
+    },
+    {
+      "active": "7-9",
+      "category": "Normal Moves",
+      "name": "Standing Medium Kick",
+      "onBlock": "-1",
+      "onHit": "2",
+      "recovery": "15",
+      "startup": "7"
+    },
+    {
+      "active": "10-12",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Punch",
+      "onBlock": "-5",
+      "onHit": "0",
+      "recovery": "22",
+      "startup": "10"
+    },
+    {
+      "active": "14-17",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Kick",
+      "onBlock": "-5",
+      "onHit": "1",
+      "recovery": "21",
+      "startup": "14"
+    },
+    {
+      "active": "6-8",
+      "category": "Normal Moves",
+      "name": "Crouching Light Punch",
+      "onBlock": "-1",
+      "onHit": "6",
+      "recovery": "8",
+      "startup": "6"
+    },
+    {
+      "active": "5-6",
+      "category": "Normal Moves",
+      "name": "Crouching Light Kick",
+      "onBlock": "-2",
+      "onHit": "2",
+      "recovery": "12",
+      "startup": "5"
+    },
+    {
+      "active": "8-10",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Punch",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "18",
+      "startup": "8"
+    },
+    {
+      "active": "9-11",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Kick",
+      "onBlock": "-5",
+      "onHit": "1",
+      "recovery": "18",
+      "startup": "9"
+    },
+    {
+      "active": "10-15 10-11,12-15",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Punch",
+      "onBlock": "-2",
+      "onHit": "0",
+      "recovery": "22",
+      "startup": "10"
+    },
+    {
+      "active": "11-20 11-12, 19-20",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Kick",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "11"
+    },
+    {
+      "active": "5-13",
+      "category": "Normal Moves",
+      "name": "Jumping Light Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "6-11",
+      "category": "Normal Moves",
+      "name": "Jumping Light Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "9-12",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "8-12",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "10-15",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "11-16",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "11"
+    },
+    {
+      "active": "25-27",
+      "category": "Unique Attacks",
+      "name": "Ridge Thrust",
+      "onBlock": "-3",
+      "onHit": "2",
+      "recovery": "18",
+      "startup": "25"
+    },
+    {
+      "active": "14-17",
+      "category": "Unique Attacks",
+      "name": "Horn Breaker",
+      "onBlock": "-2",
+      "onHit": "5",
+      "recovery": "18",
+      "startup": "14"
+    },
+    {
+      "active": "9-19",
+      "category": "Unique Attacks",
+      "name": "Great Spin",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "10-12",
+      "category": "Unique Attacks",
+      "name": "Double Arrow",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "16-17",
+      "category": "Unique Attacks",
+      "name": "Desert Storm(1)",
+      "onBlock": "-4",
+      "onHit": "2",
+      "recovery": "24",
+      "startup": "16"
+    },
+    {
+      "active": "20-21",
+      "category": "Unique Attacks",
+      "name": "Desert Storm(2)",
+      "onBlock": "-9",
+      "onHit": "0",
+      "recovery": "27",
+      "startup": "20"
+    },
+    {
+      "active": "20-24",
+      "category": "Unique Attacks",
+      "name": "Desert Storm(3)",
+      "onBlock": "-23",
+      "onHit": "D",
+      "recovery": "39",
+      "startup": "20"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "L Condor Wind",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "47 total frames",
+      "startup": null
+    },
+    {
+      "active": "23-26",
+      "category": "Special Moves",
+      "name": "M Condor Wind",
+      "onBlock": "-8",
+      "onHit": "2",
+      "recovery": "25",
+      "startup": "23"
+    },
+    {
+      "active": "25-28",
+      "category": "Special Moves",
+      "name": "H Condor Wind",
+      "onBlock": "-8",
+      "onHit": "D",
+      "recovery": "25",
+      "startup": "25"
+    },
+    {
+      "active": "19-22",
+      "category": "Special Moves",
+      "name": "OD Condor Wind",
+      "onBlock": "-5",
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "19"
+    },
+    {
+      "active": "17-29",
+      "category": "Special Moves",
+      "name": "L Condor Spire",
+      "onBlock": "-8",
+      "onHit": "D",
+      "recovery": "16",
+      "startup": "17"
+    },
+    {
+      "active": "21-33",
+      "category": "Special Moves",
+      "name": "M Condor Spire",
+      "onBlock": "-8",
+      "onHit": "D",
+      "recovery": "16",
+      "startup": "21"
+    },
+    {
+      "active": "25-37",
+      "category": "Special Moves",
+      "name": "H Condor Spire",
+      "onBlock": "-8",
+      "onHit": "D",
+      "recovery": "16",
+      "startup": "25"
+    },
+    {
+      "active": "15-27",
+      "category": "Special Moves",
+      "name": "OD L Condor Spire",
+      "onBlock": "-8",
+      "onHit": "D",
+      "recovery": "13",
+      "startup": "15"
+    },
+    {
+      "active": "15-27",
+      "category": "Special Moves",
+      "name": "OD H Condor Spire",
+      "onBlock": "-8",
+      "onHit": "D",
+      "recovery": "13",
+      "startup": "15"
+    },
+    {
+      "active": "9-37 9-13, 20-30, 31-37",
+      "category": "Special Moves",
+      "name": "[Windclad]L Condor Spire",
+      "onBlock": "1",
+      "onHit": "D",
+      "recovery": "14",
+      "startup": "9"
+    },
+    {
+      "active": "13-41 13-17, 24-34, 35-41",
+      "category": "Special Moves",
+      "name": "[Windclad]M Condor Spire",
+      "onBlock": "1",
+      "onHit": "D",
+      "recovery": "14",
+      "startup": "13"
+    },
+    {
+      "active": "17-45 17-21, 28-38, 39-45",
+      "category": "Special Moves",
+      "name": "[Windclad]H Condor Spire",
+      "onBlock": "1",
+      "onHit": "D",
+      "recovery": "14",
+      "startup": "17"
+    },
+    {
+      "active": "9-32 9-22, 23-25, 26-32",
+      "category": "Special Moves",
+      "name": "[Windclad]OD L Condor Spire",
+      "onBlock": "2",
+      "onHit": "D",
+      "recovery": "14",
+      "startup": "9"
+    },
+    {
+      "active": "9-32 9-22, 23-25, 26-32",
+      "category": "Special Moves",
+      "name": "[Windclad]OD H Condor Spire",
+      "onBlock": "2",
+      "onHit": "D",
+      "recovery": "14",
+      "startup": "9"
+    },
+    {
+      "active": "6-16",
+      "category": "Special Moves",
+      "name": "L Tomahawk Buster",
+      "onBlock": "-27",
+      "onHit": "D",
+      "recovery": "20+12 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "8-19",
+      "category": "Special Moves",
+      "name": "M Tomahawk Buster",
+      "onBlock": "-32",
+      "onHit": "D",
+      "recovery": "24+12 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "10-23",
+      "category": "Special Moves",
+      "name": "H Tomahawk Buster",
+      "onBlock": "-35",
+      "onHit": "D",
+      "recovery": "25+12 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "6-17",
+      "category": "Special Moves",
+      "name": "OD Tomahawk Buster",
+      "onBlock": "-35",
+      "onHit": "D",
+      "recovery": "27+15 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "4-16 4-7, 8-16",
+      "category": "Special Moves",
+      "name": "[Windclad]L Tomahawk Buster",
+      "onBlock": "-25",
+      "onHit": "D",
+      "recovery": "20+12 frame(s) after landing",
+      "startup": "4"
+    },
+    {
+      "active": "6-9 10-19",
+      "category": "Special Moves",
+      "name": "[Windclad]M Tomahawk Buster",
+      "onBlock": "-30",
+      "onHit": "D",
+      "recovery": "24+12 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "8-23 8-11, 12-23",
+      "category": "Special Moves",
+      "name": "[Windclad]H Tomahawk Buster",
+      "onBlock": "-33",
+      "onHit": "D",
+      "recovery": "25+12 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "4-17 4-5, 6-7, 8-17",
+      "category": "Special Moves",
+      "name": "[Windclad]OD Tomahawk Buster",
+      "onBlock": "-35",
+      "onHit": "D",
+      "recovery": "27+15 frame(s) after landing",
+      "startup": "4"
+    },
+    {
+      "active": "12-until landing",
+      "category": "Special Moves",
+      "name": "Condor Dive",
+      "onBlock": "-24",
+      "onHit": "D",
+      "recovery": "24 frame(s) after landing",
+      "startup": "12"
+    },
+    {
+      "active": "12-until landing",
+      "category": "Special Moves",
+      "name": "OD Condor Dive",
+      "onBlock": "-24",
+      "onHit": "D",
+      "recovery": "24 frame(s) after landing",
+      "startup": "12"
+    },
+    {
+      "active": "12-until landing",
+      "category": "Special Moves",
+      "name": "[Windclad]Condor Dive",
+      "onBlock": "-23",
+      "onHit": "D",
+      "recovery": "24 frame(s) after landing",
+      "startup": "12"
+    },
+    {
+      "active": "12-until landing",
+      "category": "Special Moves",
+      "name": "[Windclad]OD Condor Dive",
+      "onBlock": "-23",
+      "onHit": "D",
+      "recovery": "24 frame(s) after landing",
+      "startup": "12"
+    },
+    {
+      "active": "5-7",
+      "category": "Special Moves",
+      "name": "L Mexican Typhoon",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "53",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Special Moves",
+      "name": "M Mexican Typhoon",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "53",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Special Moves",
+      "name": "H Mexican Typhoon",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "53",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Special Moves",
+      "name": "OD Mexican Typhoon",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "53",
+      "startup": "5"
+    },
+    {
+      "active": "10-47 10-11,17-18,26-27,36-37,46-47",
+      "category": "Super Arts",
+      "name": "SA1 Breezing Hawk",
+      "onBlock": "-36",
+      "onHit": "D",
+      "recovery": "54",
+      "startup": "10"
+    },
+    {
+      "active": "9-41 9-30,40-41",
+      "category": "Super Arts",
+      "name": "SA2 Thunderbird",
+      "onBlock": "-60",
+      "onHit": "D",
+      "recovery": "39+24 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "9-41 9-33,40-41",
+      "category": "Super Arts",
+      "name": "[Windclad]SA2 Thunderbird",
+      "onBlock": "-59",
+      "onHit": "D",
+      "recovery": "39+24 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "9-41 9-30,40-41",
+      "category": "Super Arts",
+      "name": "SA2 Soaring Thunderbird",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "25 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "9-41 9-33,40-41",
+      "category": "Super Arts",
+      "name": "[Windclad]SA2 Soaring Thunderbird",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "25 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "7-8",
+      "category": "Super Arts",
+      "name": "SA3 Raging Typhoon",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "106",
+      "startup": "7"
+    },
+    {
+      "active": "7-8",
+      "category": "Super Arts",
+      "name": "CA Raging Typhoon",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "106",
+      "startup": "7"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Canyon Throw",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Falling Cliff",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Forward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "21 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Backward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "24 total frames",
+      "startup": null
+    },
+    {
+      "active": "26-27",
+      "category": "Common Moves",
+      "name": "Drive Impact: Earth's Rage",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "35",
+      "startup": "26"
+    },
+    {
+      "active": "20-22",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while blocking): Cross Hammer",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "20"
+    },
+    {
+      "active": "18-20",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while recovering): Cross Hammer",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "18"
+    },
+    {
+      "active": "[*2] 1-12",
+      "category": "Common Moves",
+      "name": "Drive Parry",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "33",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (strike)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "1",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (projectile)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "10",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Parry Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "45 total frames",
+      "startup": null
+    },
+    {
+      "active": "0",
+      "category": "Common Moves",
+      "name": "Cancel Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "0",
+      "startup": "0"
+    }
+  ],
+  "slug": "lily",
+  "url": "https://www.streetfighter.com/6/character/lily/frame"
+}

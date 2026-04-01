@@ -1,68 +1,159 @@
 {
   "character": "Alex",
-  "source": "manual-ai-from-conflicts-csv",
-  "notes": [
-    "Manually reviewed Alex.conflicts.csv line by line.",
-    "Preserved SuperCombo/FAT-style range and variant semantics where present."
-  ],
   "entries": [
     {
       "category": "normal",
-      "move": "Drive Impact: Lariat Kick",
+      "move": "Crouch MP",
       "set": {
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+        "recovery": "20"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Dangerous Armbar",
+      "set": {
+        "recovery": "32"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
+      "set": {
+        "recovery": "33"
+      }
     },
     {
       "category": "normal",
-      "move": "Drive Reversal: Headbutt",
-      "set": { "startup": "18" }
+      "move": "Flying Cross Chop",
+      "set": {
+        "recovery": "36 land"
+      }
     },
     {
       "category": "normal",
       "move": "HK Aerial Knee Smash",
-      "set": { "recovery": "21+28 land" }
+      "set": {
+        "recovery": "49"
+      }
     },
     {
       "category": "normal",
-      "move": "HP Flash Chop",
-      "set": { "onHit": "+5 (Backturn)", "onPC": "+9 (Backturn)" }
+      "move": "Heavy Lariat",
+      "set": {
+        "startup": "12"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MP",
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
       "move": "LK Aerial Knee Smash",
-      "set": { "recovery": "19+24 land" }
+      "set": {
+        "recovery": "43"
+      }
     },
     {
       "category": "normal",
       "move": "MK Aerial Knee Smash",
-      "set": { "recovery": "18+24 land" }
+      "set": {
+        "recovery": "42"
+      }
     },
     {
       "category": "normal",
       "move": "OD Aerial Knee Smash",
-      "set": { "recovery": "21+32 land" }
+      "set": {
+        "recovery": "53"
+      }
     },
     {
       "category": "normal",
-      "move": "OD Flash Chop",
-      "set": { "active": "2,2" }
+      "move": "Slashing Elbow",
+      "set": {
+        "startup": "12"
+      }
     },
     {
       "category": "normal",
-      "move": "Stand HK",
-      "set": { "onPC": "KD +62 Crumple" }
+      "move": "Slashing Elbow",
+      "set": {
+        "startup": "15"
+      }
     },
     {
       "category": "normal",
-      "move": "The Final Prison",
-      "set": { "onHit": "HKD +25", "onPC": "HKD +25" }
+      "move": "Slashing Elbow",
+      "set": {
+        "startup": "18"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Stand MP",
+      "set": {
+        "recovery": "17"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Sweep Combination 1",
+      "set": {
+        "recovery": "43"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Sweep Combination 2",
+      "set": {
+        "recovery": "46"
+      }
     }
-  ]
+  ],
+  "generatedAt": "2026-04-01T13:11:42.028568+00:00",
+  "notes": [
+    "Auto-generated from official SF6 frame pages and FAT comparison.",
+    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+  ],
+  "source": "official-streetfighter-com-frame-vs-fat",
+  "sourceUrl": "https://www.streetfighter.com/6/character/alex/frame"
 }

@@ -1,0 +1,774 @@
+{
+  "character": "Rashid",
+  "fetchedAt": "2026-04-01T13:12:24.646193+00:00",
+  "moveCount": 85,
+  "moves": [
+    {
+      "active": "4-5",
+      "category": "Normal Moves",
+      "name": "Standing Light Punch",
+      "onBlock": "-1",
+      "onHit": "4",
+      "recovery": "9",
+      "startup": "4"
+    },
+    {
+      "active": "4-6",
+      "category": "Normal Moves",
+      "name": "Standing Light Kick",
+      "onBlock": "-1",
+      "onHit": "3",
+      "recovery": "10",
+      "startup": "4"
+    },
+    {
+      "active": "6-8",
+      "category": "Normal Moves",
+      "name": "Standing Medium Punch",
+      "onBlock": "1",
+      "onHit": "5",
+      "recovery": "14",
+      "startup": "6"
+    },
+    {
+      "active": "8-10",
+      "category": "Normal Moves",
+      "name": "Standing Medium Kick",
+      "onBlock": "-3",
+      "onHit": "6",
+      "recovery": "17",
+      "startup": "8"
+    },
+    {
+      "active": "9-11",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Punch",
+      "onBlock": "-4",
+      "onHit": "1",
+      "recovery": "21",
+      "startup": "9"
+    },
+    {
+      "active": "13-20",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Kick",
+      "onBlock": "-5",
+      "onHit": "-1",
+      "recovery": "18",
+      "startup": "13"
+    },
+    {
+      "active": "5-7",
+      "category": "Normal Moves",
+      "name": "Crouching Light Punch",
+      "onBlock": "-1",
+      "onHit": "5",
+      "recovery": "7",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Normal Moves",
+      "name": "Crouching Light Kick",
+      "onBlock": "-1",
+      "onHit": "3",
+      "recovery": "8",
+      "startup": "5"
+    },
+    {
+      "active": "6-9",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Punch",
+      "onBlock": "1",
+      "onHit": "4",
+      "recovery": "13",
+      "startup": "6"
+    },
+    {
+      "active": "7-9",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Kick",
+      "onBlock": "-5",
+      "onHit": "-1",
+      "recovery": "18",
+      "startup": "7"
+    },
+    {
+      "active": "12-14",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Punch",
+      "onBlock": "-6",
+      "onHit": "5",
+      "recovery": "21",
+      "startup": "12"
+    },
+    {
+      "active": "9-11",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Kick",
+      "onBlock": "-11",
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "9"
+    },
+    {
+      "active": "4-8",
+      "category": "Normal Moves",
+      "name": "Jumping Light Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "4"
+    },
+    {
+      "active": "5-9",
+      "category": "Normal Moves",
+      "name": "Jumping Light Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "9-13",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "7-12",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "8-16 8-10, 14-16",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "10-14",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": null,
+      "category": "Unique Attacks",
+      "name": "Run",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": null,
+      "startup": null
+    },
+    {
+      "active": "8-17",
+      "category": "Unique Attacks",
+      "name": "Backup",
+      "onBlock": "-10",
+      "onHit": "7",
+      "recovery": "17",
+      "startup": "8"
+    },
+    {
+      "active": "16-24 16-17, 22-24",
+      "category": "Unique Attacks",
+      "name": "Tempest Moon",
+      "onBlock": "-4",
+      "onHit": "3",
+      "recovery": "21",
+      "startup": "16"
+    },
+    {
+      "active": "9-40 9-11, 33-34,38-40",
+      "category": "Unique Attacks",
+      "name": "[Air Current Boosted]Tempest Moon",
+      "onBlock": "-5",
+      "onHit": "D",
+      "recovery": "22",
+      "startup": "9"
+    },
+    {
+      "active": "8-25 8-9, 24-25",
+      "category": "Unique Attacks",
+      "name": "Flapping Spin",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "18",
+      "startup": "8"
+    },
+    {
+      "active": "22-24",
+      "category": "Unique Attacks",
+      "name": "Beak Assault",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "21",
+      "startup": "22"
+    },
+    {
+      "active": "16-19",
+      "category": "Unique Attacks",
+      "name": "Crescent Kick",
+      "onBlock": "-3",
+      "onHit": "2",
+      "recovery": "20",
+      "startup": "16"
+    },
+    {
+      "active": "10-14",
+      "category": "Unique Attacks",
+      "name": "Blitz Strike",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "8-12",
+      "category": "Unique Attacks",
+      "name": "Aerial Shot",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "13-16",
+      "category": "Unique Attacks",
+      "name": "Rising Kick",
+      "onBlock": "-20",
+      "onHit": "D",
+      "recovery": "36",
+      "startup": "13"
+    },
+    {
+      "active": null,
+      "category": "Unique Attacks",
+      "name": "Side Flip",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "32 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Unique Attacks",
+      "name": "Front Flip",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "8 frame(s) after landing",
+      "startup": null
+    },
+    {
+      "active": "8-23 8, 16-17, 22-23",
+      "category": "Special Moves",
+      "name": "L Spinning Mixer",
+      "onBlock": "-3",
+      "onHit": "2",
+      "recovery": "19",
+      "startup": "8"
+    },
+    {
+      "active": "6-59 6, 12-14, 18-20,25-27,31-33,38-40,44-46,51-53,57-59",
+      "category": "Special Moves",
+      "name": "[Air Current Boosted] L Spinning Mixer",
+      "onBlock": "2",
+      "onHit": "4",
+      "recovery": "15",
+      "startup": "6"
+    },
+    {
+      "active": "8-26 8,9-10,13-14,20-21,25-26",
+      "category": "Special Moves",
+      "name": "M Spinning Mixer",
+      "onBlock": "-45",
+      "onHit": "D",
+      "recovery": "11 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "5-59 5,6-7,10-11,16-17,21-22,29-30,34-35,41-42,46-47,53-54,58-59",
+      "category": "Special Moves",
+      "name": "[Air Current Boosted] M Spinning Mixer",
+      "onBlock": "-78",
+      "onHit": "D",
+      "recovery": "15 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "6-39 6-7, 10-12, 16-18, 23-25, 30-32, 37-39",
+      "category": "Special Moves",
+      "name": "H Spinning Mixer",
+      "onBlock": "-55",
+      "onHit": "D",
+      "recovery": "14 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "5-51 5-7, 9-11, 15-17, 22-24, 28-30, 33-35,38-40,43-45,49-51",
+      "category": "Special Moves",
+      "name": "[Air Current Boosted] H Spinning Mixer",
+      "onBlock": "-83",
+      "onHit": "D",
+      "recovery": "14 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "6-48 6, 7-8, 11-13, 16-19, 22-25, 28-31, 34-37, 40-43, 46-48",
+      "category": "Special Moves",
+      "name": "OD Spinning Mixer",
+      "onBlock": "-42",
+      "onHit": "D",
+      "recovery": "15 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "4-59 4, 5-6, 9-11, 14-17, 20-23, 26-29, 32-35, 38-41, 44-47,50-53,56-59",
+      "category": "Special Moves",
+      "name": "[Air Current Boosted] OD Spinning Mixer",
+      "onBlock": "-72",
+      "onHit": "D",
+      "recovery": "15 frame(s) after landing",
+      "startup": "4"
+    },
+    {
+      "active": "15-27",
+      "category": "Special Moves",
+      "name": "L Eagle Spike",
+      "onBlock": "-36",
+      "onHit": "D",
+      "recovery": "31",
+      "startup": "15"
+    },
+    {
+      "active": "14-26",
+      "category": "Special Moves",
+      "name": "[Air Current Boosted] L Eagle Spike",
+      "onBlock": "-24",
+      "onHit": "D",
+      "recovery": "33",
+      "startup": "14"
+    },
+    {
+      "active": "21-33",
+      "category": "Special Moves",
+      "name": "M Eagle Spike",
+      "onBlock": "-36",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "21"
+    },
+    {
+      "active": "17-31",
+      "category": "Special Moves",
+      "name": "[Air Current Boosted] M Eagle Spike",
+      "onBlock": "-15",
+      "onHit": "D",
+      "recovery": "50",
+      "startup": "17"
+    },
+    {
+      "active": "26-38",
+      "category": "Special Moves",
+      "name": "H Eagle Spike",
+      "onBlock": "-36",
+      "onHit": "D",
+      "recovery": "27",
+      "startup": "26"
+    },
+    {
+      "active": "17-31",
+      "category": "Special Moves",
+      "name": "[Air Current Boosted] H Eagle Spike",
+      "onBlock": "-15",
+      "onHit": "D",
+      "recovery": "50",
+      "startup": "17"
+    },
+    {
+      "active": "21-33",
+      "category": "Special Moves",
+      "name": "OD Eagle Spike",
+      "onBlock": "-36",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "21"
+    },
+    {
+      "active": "18-31",
+      "category": "Special Moves",
+      "name": "[Air Current Boosted] OD Eagle Spike",
+      "onBlock": "-24",
+      "onHit": "D",
+      "recovery": "22",
+      "startup": "18"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "L Whirlwind Shot",
+      "onBlock": "-9",
+      "onHit": "-1",
+      "recovery": "52 total frames",
+      "startup": "17"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "L Whirlwind Shot(Charged)",
+      "onBlock": "0",
+      "onHit": "5",
+      "recovery": null,
+      "startup": "34"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "L Whirlwind Shot(Longest possible button hold)",
+      "onBlock": "8",
+      "onHit": "16",
+      "recovery": null,
+      "startup": "53"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "M Whirlwind Shot",
+      "onBlock": "-9",
+      "onHit": "-1",
+      "recovery": "52 total frames",
+      "startup": "17"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "M Whirlwind Shot(Charged)",
+      "onBlock": "0",
+      "onHit": "5",
+      "recovery": null,
+      "startup": "34"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "M Whirlwind Shot(Longest possible button hold)",
+      "onBlock": "8",
+      "onHit": "16",
+      "recovery": null,
+      "startup": "53"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "H Whirlwind Shot",
+      "onBlock": "-9",
+      "onHit": "-1",
+      "recovery": "52 total frames",
+      "startup": "17"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "H Whirlwind Shot(Charged)",
+      "onBlock": "0",
+      "onHit": "5",
+      "recovery": null,
+      "startup": "34"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "H Whirlwind Shot(Longest possible button hold)",
+      "onBlock": "8",
+      "onHit": "16",
+      "recovery": null,
+      "startup": "53"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD Whirlwind Shot",
+      "onBlock": "-2",
+      "onHit": "D",
+      "recovery": "52 total frames",
+      "startup": "17"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD Whirlwind Shot(Charged)",
+      "onBlock": "10",
+      "onHit": "D",
+      "recovery": null,
+      "startup": "38"
+    },
+    {
+      "active": "15-17",
+      "category": "Special Moves",
+      "name": "L Arabian Cyclone",
+      "onBlock": "-6",
+      "onHit": "2",
+      "recovery": "47 total frames",
+      "startup": "15"
+    },
+    {
+      "active": "20-22",
+      "category": "Special Moves",
+      "name": "M Arabian Cyclone",
+      "onBlock": "-4",
+      "onHit": "4",
+      "recovery": "50 total frames",
+      "startup": "20"
+    },
+    {
+      "active": "27-29",
+      "category": "Special Moves",
+      "name": "H Arabian Cyclone",
+      "onBlock": "-2",
+      "onHit": "D",
+      "recovery": "69 total frames",
+      "startup": "27"
+    },
+    {
+      "active": "20-22",
+      "category": "Special Moves",
+      "name": "OD Arabian Cyclone",
+      "onBlock": "-10",
+      "onHit": "D",
+      "recovery": "53 total frames",
+      "startup": "20"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "Wing Stroke",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "6 frame(s) after landing",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "Rolling Assault",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "33 total frames",
+      "startup": null
+    },
+    {
+      "active": "17-19",
+      "category": "Special Moves",
+      "name": "Nail Assault",
+      "onBlock": "-9",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "17"
+    },
+    {
+      "active": "13-21",
+      "category": "Special Moves",
+      "name": "L Arabian Skyhigh",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "3 frame(s) after landing",
+      "startup": "13"
+    },
+    {
+      "active": "18-26",
+      "category": "Special Moves",
+      "name": "M Arabian Skyhigh",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "3 frame(s) after landing",
+      "startup": "18"
+    },
+    {
+      "active": "21-29",
+      "category": "Special Moves",
+      "name": "H Arabian Skyhigh",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "3 frame(s) after landing",
+      "startup": "21"
+    },
+    {
+      "active": "13-21",
+      "category": "Special Moves",
+      "name": "OD Arabian Skyhigh",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "3 frame(s) after landing",
+      "startup": "13"
+    },
+    {
+      "active": "9-15",
+      "category": "Super Arts",
+      "name": "SA1 Super Rashid Kick",
+      "onBlock": "-53",
+      "onHit": "D",
+      "recovery": "76",
+      "startup": "9"
+    },
+    {
+      "active": null,
+      "category": "Super Arts",
+      "name": "SA2 Ysaar",
+      "onBlock": "33",
+      "onHit": "D",
+      "recovery": "33 total frames",
+      "startup": "11"
+    },
+    {
+      "active": "11-28",
+      "category": "Super Arts",
+      "name": "SA3 Altair",
+      "onBlock": "-75",
+      "onHit": "D",
+      "recovery": "82",
+      "startup": "11"
+    },
+    {
+      "active": "11-28",
+      "category": "Super Arts",
+      "name": "CA Altair",
+      "onBlock": "-75",
+      "onHit": "D",
+      "recovery": "82",
+      "startup": "11"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Riding Glider",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Sunset Drop",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Desert Slider",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "3 frames of recovery upon landing",
+      "startup": "5"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Forward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "18 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Backward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "25 total frames",
+      "startup": null
+    },
+    {
+      "active": "26-27",
+      "category": "Common Moves",
+      "name": "Drive Impact: Eagle Edge",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "35",
+      "startup": "26"
+    },
+    {
+      "active": "20-22",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while blocking): Eagle Slash",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "20"
+    },
+    {
+      "active": "18-20",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while recovering): Eagle Slash",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "18"
+    },
+    {
+      "active": "[*2] 1-12",
+      "category": "Common Moves",
+      "name": "Drive Parry",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "33",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (strike)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "1",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (projectile)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "10",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Parry Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "45 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Cancel Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "46 total frames",
+      "startup": null
+    }
+  ],
+  "slug": "rashid",
+  "url": "https://www.streetfighter.com/6/character/rashid/frame"
+}

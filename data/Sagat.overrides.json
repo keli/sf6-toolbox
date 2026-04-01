@@ -1,109 +1,174 @@
 {
   "character": "Sagat",
-  "source": "manual-ai-from-conflicts-csv",
-  "notes": [
-    "Manually reviewed Sagat.conflicts.csv line by line.",
-    "Preserved SuperCombo/FAT-style range and variant semantics where present."
-  ],
   "entries": [
     {
       "category": "normal",
       "move": "Crouch MP",
-      "set": { "recovery": "16(17/19)" }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Impact: Tiger Punishment",
       "set": {
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+        "recovery": "16"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
+      "set": {
+        "recovery": "33"
+      }
     },
     {
       "category": "normal",
-      "move": "Drive Reversal: Tiger Twin Babel",
-      "set": { "startup": "18" }
+      "move": "Greedy Tiger",
+      "set": {
+        "recovery": "17"
+      }
     },
     {
       "category": "normal",
       "move": "HK Tiger Knee Crush",
       "set": {
-        "recovery": "3+15 land",
-        "onHit": "KD +40~41 (KD +37~47)",
-        "onBlock": "-5(+5)",
-        "onPC": "KD +40~41 (KD +37~47)"
+        "recovery": "18"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HK Tiger Nexus",
+      "set": {
+        "recovery": "20"
       }
     },
     {
       "category": "normal",
       "move": "HP Tiger Uppercut",
-      "set": { "recovery": "40+15 land" }
+      "set": {
+        "recovery": "40+15 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MP",
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
       "move": "LK Tiger Knee Crush",
       "set": {
-        "recovery": "3+15(18) land",
-        "onHit": "KD +36(+46)",
-        "onBlock": "-8(+2)",
-        "onPC": "KD +36(+46)"
+        "recovery": "18"
       }
     },
     {
       "category": "normal",
       "move": "LP Tiger Uppercut",
-      "set": { "recovery": "35+12 land" }
+      "set": {
+        "recovery": "35+12 land"
+      }
     },
     {
       "category": "normal",
       "move": "MK Tiger Knee Crush",
       "set": {
-        "recovery": "3+15(18) land",
-        "onHit": "KD +39(+49)",
-        "onBlock": "-7(+3)",
-        "onPC": "KD +39(+49)"
+        "recovery": "18"
       }
     },
     {
       "category": "normal",
       "move": "MP Tiger Uppercut",
-      "set": { "recovery": "40+15 land" }
+      "set": {
+        "recovery": "40+15 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Greedy Tiger",
+      "set": {
+        "recovery": "17"
+      }
     },
     {
       "category": "normal",
       "move": "OD Tiger Knee Crush",
       "set": {
-        "active": "3(4)6,5",
-        "recovery": "2+16 land",
-        "onHit": "Tumble +66 (KD +44~50)",
-        "onBlock": "-2(+2)",
-        "onPC": "Tumble +66 (KD +44~50)"
+        "recovery": "18"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Tiger Nexus",
+      "set": {
+        "recovery": "20"
       }
     },
     {
       "category": "normal",
       "move": "OD Tiger Uppercut",
-      "set": { "recovery": "38+15 land" }
+      "set": {
+        "recovery": "38+15 land"
+      }
     },
     {
       "category": "normal",
       "move": "Stand HK",
-      "set": { "startup": "10(12)", "active": "2,4" }
+      "set": {
+        "recovery": "21",
+        "startup": "10"
+      }
     },
     {
       "category": "normal",
-      "move": "Tiger Monolith",
-      "set": { "active": "3,5", "onPC": "KD +41 (1st hit: OTG)" }
+      "move": "Stand HP",
+      "set": {
+        "recovery": "22"
+      }
     },
     {
       "category": "normal",
-      "move": "Tiger Vanquisher",
-      "set": { "startup": "12" }
+      "move": "Stand LK",
+      "set": {
+        "recovery": "15"
+      }
     }
-  ]
+  ],
+  "generatedAt": "2026-04-01T13:12:27.638234+00:00",
+  "notes": [
+    "Auto-generated from official SF6 frame pages and FAT comparison.",
+    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+  ],
+  "source": "official-streetfighter-com-frame-vs-fat",
+  "sourceUrl": "https://www.streetfighter.com/6/character/sagat/frame"
 }

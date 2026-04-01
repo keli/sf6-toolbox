@@ -1,99 +1,187 @@
 {
   "character": "E.Honda",
-  "source": "manual-ai-from-conflicts-csv",
-  "notes": [
-    "Manually reviewed E.Honda.conflicts.csv line by line.",
-    "Preserved SuperCombo/FAT-style range and variant semantics where present."
-  ],
   "entries": [
     {
       "category": "normal",
-      "move": "Crouch HK",
-      "set": { "onHit": "KD +30(+39)", "onPC": "HKD +45(+54)" }
-    },
-    { "category": "normal", "move": "Crouch MK", "set": { "onPC": "+10" } },
-    {
-      "category": "normal",
-      "move": "Drive Impact: Sumo Crunch",
+      "move": "Crouch HP",
       "set": {
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+        "recovery": "*17"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
+      "set": {
+        "recovery": "33"
+      }
     },
     {
       "category": "normal",
-      "move": "Drive Reversal: Raiden-ho",
-      "set": { "startup": "18" }
+      "move": "Flying Sumo Press",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HK Sumo Smash",
+      "set": {
+        "recovery": "17 land",
+        "startup": "11"
+      }
     },
     {
       "category": "normal",
       "move": "HP Hundred Hand Slap",
       "set": {
-        "startup": "19",
-        "active": "2(4)2(3)1(3)1(3)1(3)1(3)1(3)1(2)1(2)1(2)1(1)2 [2(4)2(3)1(3)1(3)1(3)1(3)1(3)1(1)1(1)1(14)2]",
-        "recovery": "17[14]",
-        "onHit": "+2[+4]",
-        "onPC": "+6[+8]"
+        "recovery": "17",
+        "startup": "19"
       }
     },
     {
       "category": "normal",
-      "move": "LP Hundred Hand Slap",
+      "move": "HP Sumo Headbutt",
       "set": {
-        "active": "2(4)2(2)1(2)2(1)1(1)2 [2(4)2(2)1(1)2(1)1(10)2]",
-        "onHit": "+2[+4]",
-        "onPC": "+6[+8]"
+        "recovery": "20"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "LK Sumo Smash",
+      "set": {
+        "recovery": "17 land",
+        "startup": "11"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "LP Sumo Headbutt",
+      "set": {
+        "recovery": "20"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MK Sumo Smash",
+      "set": {
+        "recovery": "17 land",
+        "startup": "11"
       }
     },
     {
       "category": "normal",
       "move": "MP Hundred Hand Slap",
       "set": {
-        "startup": "16",
-        "active": "2(4)2(1)1(3)1(2)1(3)1(3)1(2)1(2)2 [2(4)2(2)1(3)1(2)1(4)1(1)1(14)2]",
-        "recovery": "17[14]",
-        "onHit": "+2[+4]",
-        "onPC": "+6[+8]"
+        "recovery": "17",
+        "startup": "16"
       }
     },
     {
       "category": "normal",
-      "move": "Neko Damashi",
-      "set": { "onHit": "+3(+7)", "onBlock": "-3(+1)", "onPC": "+7(+11)" }
+      "move": "MP Sumo Headbutt",
+      "set": {
+        "recovery": "20"
+      }
     },
     {
       "category": "normal",
       "move": "Neutral Jump HP",
-      "set": { "onHit": "12(+15)", "onBlock": "8(+11)", "onPC": "16(+19)" }
-    },
-    {
-      "category": "normal",
-      "move": "OD Hundred Hand Slap",
       "set": {
-        "active": "4(6)2(3)2(3)2(4)2(2)2(2)2(2)2(1)2 [4(6)2(3)2(3)2(4)2(1)2(1)1(1)1(10)2]",
-        "onHit": "+4[+6]",
-        "onPC": "+8[+10]"
+        "recovery": "3 land"
       }
     },
     {
       "category": "normal",
-      "move": "Show of Force",
-      "set": { "onHit": "KD +13(+38)", "onPC": "KD +13(+38)" }
+      "move": "OD Sumo Headbutt",
+      "set": {
+        "recovery": "20"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Sumo Smash",
+      "set": {
+        "recovery": "17 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Taiho Cannon Lift",
+      "set": {
+        "recovery": "32",
+        "startup": "12"
+      }
     },
     {
       "category": "normal",
       "move": "Stand HP",
-      "set": { "onHit": "+1(+4)", "onPC": "KD +77(+80) Crumple" }
+      "set": {
+        "startup": "8"
+      }
     },
     {
       "category": "normal",
-      "move": "The Final Bout",
-      "set": { "onHit": "HKD +34 (KD +19)", "onPC": "HKD +34 (KD +19)" }
+      "move": "Stand MP",
+      "set": {
+        "recovery": "13"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Taiho Cannon Lift",
+      "set": {
+        "recovery": "32",
+        "startup": "12"
+      }
     }
-  ]
+  ],
+  "generatedAt": "2026-04-01T13:11:55.398877+00:00",
+  "notes": [
+    "Auto-generated from official SF6 frame pages and FAT comparison.",
+    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+  ],
+  "source": "official-streetfighter-com-frame-vs-fat",
+  "sourceUrl": "https://www.streetfighter.com/6/character/ehonda/frame"
 }

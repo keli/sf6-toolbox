@@ -1,104 +1,145 @@
 {
   "character": "Cammy",
-  "source": "manual-ai-from-conflicts-csv",
-  "notes": [
-    "Manually reviewed Cammy.conflicts.csv line by line.",
-    "Preserved SuperCombo/FAT-style range and variant semantics where present."
-  ],
   "entries": [
     {
       "category": "normal",
-      "move": "Delayed Ripper",
+      "move": "Cannon Strike",
       "set": {
-        "recovery": "20(25)",
-        "onHit": "KD +31",
-        "onPC": "KD +52 Launch"
+        "recovery": "12 land"
       }
     },
     {
       "category": "normal",
-      "move": "Delta Red Assault",
-      "set": { "onHit": "HKD +22", "onPC": "HKD +22" }
+      "move": "Cannon Strike",
+      "set": {
+        "recovery": "12 land"
+      }
     },
     {
       "category": "normal",
-      "move": "Drive Impact: Spin Raider",
+      "move": "Crouch MP",
       "set": {
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+        "recovery": "14"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Reversal: Countersnipe",
-      "set": { "startup": "18" }
-    },
-    {
-      "category": "normal",
-      "move": "HK Cannon Spike",
-      "set": { "recovery": "28+16 Land" }
-    },
-    {
-      "category": "normal",
-      "move": "HK Spiral Arrow",
       "set": {
-        "onHit": "KD +29(+48)",
-        "onBlock": "-12(-1)",
-        "onPC": "KD +29(+48)"
+        "recovery": "33"
       }
     },
     {
       "category": "normal",
-      "move": "Hooligan Combination",
-      "set": { "startup": "20(40)" }
+      "move": "HK Cannon Spike",
+      "set": {
+        "recovery": "28+16 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MP",
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
       "move": "LK Cannon Spike",
-      "set": { "recovery": "24+16 Land" }
+      "set": {
+        "recovery": "24+16 land"
+      }
     },
     {
       "category": "normal",
-      "move": "LK Spiral Arrow",
+      "move": "Leg Scissors Choke",
       "set": {
-        "onHit": "KD +26(+48)",
-        "onBlock": "-12(0)",
-        "onPC": "KD +26(+48)"
+        "recovery": "3 land"
       }
     },
     {
       "category": "normal",
       "move": "MK Cannon Spike",
-      "set": { "recovery": "25+16 Land" }
-    },
-    {
-      "category": "normal",
-      "move": "MK Spiral Arrow",
       "set": {
-        "onHit": "KD +26(+48)",
-        "onBlock": "-14(0)",
-        "onPC": "KD +26(+48)"
+        "recovery": "25+16 land"
       }
     },
     {
       "category": "normal",
       "move": "OD Cannon Spike",
-      "set": { "recovery": "30+16 Land" }
+      "set": {
+        "recovery": "30+16 land"
+      }
     },
     {
       "category": "normal",
-      "move": "OD Hooligan Combination",
-      "set": { "startup": "20(40)" }
+      "move": "OD Cannon Strike",
+      "set": {
+        "recovery": "12 land"
+      }
     },
     {
       "category": "normal",
-      "move": "Spin Drive Smasher",
-      "set": { "active": "4,3,3,3,3" }
+      "move": "OD Cannon Strike",
+      "set": {
+        "recovery": "12 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Quick Spin Knuckle",
+      "set": {
+        "startup": "25"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Stand HK",
+      "set": {
+        "recovery": "21"
+      }
     }
-  ]
+  ],
+  "generatedAt": "2026-04-01T13:11:45.111051+00:00",
+  "notes": [
+    "Auto-generated from official SF6 frame pages and FAT comparison.",
+    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+  ],
+  "source": "official-streetfighter-com-frame-vs-fat",
+  "sourceUrl": "https://www.streetfighter.com/6/character/cammy/frame"
 }

@@ -1,0 +1,936 @@
+{
+  "character": "Jamie",
+  "fetchedAt": "2026-04-01T13:12:05.573044+00:00",
+  "moveCount": 103,
+  "moves": [
+    {
+      "active": "5-6",
+      "category": "Normal Moves",
+      "name": "Standing Light Punch",
+      "onBlock": "0",
+      "onHit": "5",
+      "recovery": "7",
+      "startup": "5"
+    },
+    {
+      "active": "5-6",
+      "category": "Normal Moves",
+      "name": "Standing Light Kick",
+      "onBlock": "-1",
+      "onHit": "3",
+      "recovery": "11",
+      "startup": "5"
+    },
+    {
+      "active": "8-11",
+      "category": "Normal Moves",
+      "name": "Standing Medium Punch",
+      "onBlock": "2",
+      "onHit": "6",
+      "recovery": "14",
+      "startup": "8"
+    },
+    {
+      "active": "9-11",
+      "category": "Normal Moves",
+      "name": "Standing Medium Kick",
+      "onBlock": "-3",
+      "onHit": "2",
+      "recovery": "17",
+      "startup": "9"
+    },
+    {
+      "active": "5-14 5, 7, 12-14",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Punch",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "20",
+      "startup": "5"
+    },
+    {
+      "active": "15-17",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Kick",
+      "onBlock": "-5",
+      "onHit": "3",
+      "recovery": "21",
+      "startup": "15"
+    },
+    {
+      "active": "4-5",
+      "category": "Normal Moves",
+      "name": "Crouching Light Punch",
+      "onBlock": "-1",
+      "onHit": "5",
+      "recovery": "9",
+      "startup": "4"
+    },
+    {
+      "active": "5-6",
+      "category": "Normal Moves",
+      "name": "Crouching Light Kick",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "11",
+      "startup": "5"
+    },
+    {
+      "active": "6-8",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Punch",
+      "onBlock": "-1",
+      "onHit": "5",
+      "recovery": "13",
+      "startup": "6"
+    },
+    {
+      "active": "7-9",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Kick",
+      "onBlock": "-6",
+      "onHit": "-1",
+      "recovery": "18",
+      "startup": "7"
+    },
+    {
+      "active": "8-12",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Punch",
+      "onBlock": "-8",
+      "onHit": "0",
+      "recovery": "23",
+      "startup": "8"
+    },
+    {
+      "active": "9-15 9-10, 13-15",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Kick",
+      "onBlock": "-11",
+      "onHit": "D",
+      "recovery": "28",
+      "startup": "9"
+    },
+    {
+      "active": "5-13",
+      "category": "Normal Moves",
+      "name": "Jumping Light Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "6-11",
+      "category": "Normal Moves",
+      "name": "Jumping Light Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "7-10",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "7-12",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "10-15",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "8-19 8-10, 16-19",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "9-11",
+      "category": "Unique Attacks",
+      "name": "Tensei Kick",
+      "onBlock": "-8",
+      "onHit": "D",
+      "recovery": "22",
+      "startup": "9"
+    },
+    {
+      "active": "12-14",
+      "category": "Unique Attacks",
+      "name": "Phantom Sway(2)",
+      "onBlock": "-28",
+      "onHit": "D",
+      "recovery": "43",
+      "startup": "12"
+    },
+    {
+      "active": null,
+      "category": "Unique Attacks",
+      "name": "Phantom Sway(3)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "60 total frames",
+      "startup": null
+    },
+    {
+      "active": "22-24",
+      "category": "Unique Attacks",
+      "name": "Falling Star Kick",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "20",
+      "startup": "22"
+    },
+    {
+      "active": "18-21",
+      "category": "Unique Attacks",
+      "name": "Hermit's Elbow",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "20",
+      "startup": "18"
+    },
+    {
+      "active": "16-18",
+      "category": "Unique Attacks",
+      "name": "Senei Kick",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "20",
+      "startup": "16"
+    },
+    {
+      "active": "5-7",
+      "category": "Unique Attacks",
+      "name": "Bitter Strikes(1)",
+      "onBlock": "-3",
+      "onHit": "2",
+      "recovery": "9",
+      "startup": "5"
+    },
+    {
+      "active": "6-7",
+      "category": "Unique Attacks",
+      "name": "Bitter Strikes(2)",
+      "onBlock": "-8",
+      "onHit": "-3",
+      "recovery": "16",
+      "startup": "6"
+    },
+    {
+      "active": "8-10",
+      "category": "Unique Attacks",
+      "name": "Bitter Strikes(3)",
+      "onBlock": "-10",
+      "onHit": "-1",
+      "recovery": "21",
+      "startup": "8"
+    },
+    {
+      "active": "22-24",
+      "category": "Unique Attacks",
+      "name": "Full Moon Kick(1)",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "20",
+      "startup": "22"
+    },
+    {
+      "active": "15-24 15-17, 23-24",
+      "category": "Unique Attacks",
+      "name": "Full Moon Kick(2)",
+      "onBlock": "-14",
+      "onHit": "D",
+      "recovery": "28",
+      "startup": "15"
+    },
+    {
+      "active": null,
+      "category": "Unique Attacks",
+      "name": "Full Moon Kick(3)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "61 total frames",
+      "startup": null
+    },
+    {
+      "active": "18-21",
+      "category": "Unique Attacks",
+      "name": "Intoxicated Assault(1)",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "21",
+      "startup": "18"
+    },
+    {
+      "active": "21-24",
+      "category": "Unique Attacks",
+      "name": "Intoxicated Assault(2)",
+      "onBlock": "-11",
+      "onHit": "1",
+      "recovery": "20",
+      "startup": "21"
+    },
+    {
+      "active": "21-23",
+      "category": "Unique Attacks",
+      "name": "Intoxicated Assault(3)",
+      "onBlock": "-20",
+      "onHit": "D",
+      "recovery": "37",
+      "startup": "21"
+    },
+    {
+      "active": "16-19",
+      "category": "Unique Attacks",
+      "name": "Ransui Haze(1)",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "19",
+      "startup": "16"
+    },
+    {
+      "active": null,
+      "category": "Unique Attacks",
+      "name": "Ransui Haze(2)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "75 total frames",
+      "startup": null
+    },
+    {
+      "active": "14-18",
+      "category": "Unique Attacks",
+      "name": "Ransui Haze(3rd hit / immediate)",
+      "onBlock": "-13",
+      "onHit": "D",
+      "recovery": "28",
+      "startup": "14"
+    },
+    {
+      "active": "4-28 4-5, 14-15, 27-28",
+      "category": "Unique Attacks",
+      "name": "Ransui Haze(3rd hit / delayed)",
+      "onBlock": "-9",
+      "onHit": "D",
+      "recovery": "27",
+      "startup": "4"
+    },
+    {
+      "active": null,
+      "category": "Unique Attacks",
+      "name": "Ransui Haze(3rd hit / longest possible delay)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "52 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "The Devil Inside",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "50 total frames",
+      "startup": null
+    },
+    {
+      "active": "13-14",
+      "category": "Special Moves",
+      "name": "L Freeflow Strikes(1)",
+      "onBlock": "-6",
+      "onHit": "-1",
+      "recovery": "24",
+      "startup": "13"
+    },
+    {
+      "active": "13-26 13-14,24-26",
+      "category": "Special Moves",
+      "name": "[Drink level 4]L Freeflow Strikes(1)",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "19",
+      "startup": "13"
+    },
+    {
+      "active": "16-17",
+      "category": "Special Moves",
+      "name": "M Freeflow Strikes(1)",
+      "onBlock": "-6",
+      "onHit": "-1",
+      "recovery": "24",
+      "startup": "16"
+    },
+    {
+      "active": "16-29 16-17,27-29",
+      "category": "Special Moves",
+      "name": "[Drink level 4]M Freeflow Strikes(1)",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "19",
+      "startup": "16"
+    },
+    {
+      "active": "19-20",
+      "category": "Special Moves",
+      "name": "H Freeflow Strikes(1)",
+      "onBlock": "-6",
+      "onHit": "-1",
+      "recovery": "24",
+      "startup": "19"
+    },
+    {
+      "active": "19-32 19-20,30-32",
+      "category": "Special Moves",
+      "name": "[Drink level 4]H Freeflow Strikes(1)",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "19",
+      "startup": "19"
+    },
+    {
+      "active": "13-14",
+      "category": "Special Moves",
+      "name": "OD Freeflow Strikes(1)",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "24",
+      "startup": "13"
+    },
+    {
+      "active": "16-26 16-17,24-26",
+      "category": "Special Moves",
+      "name": "[Drink level 4]OD Freeflow Strikes(1)",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "19",
+      "startup": "13"
+    },
+    {
+      "active": "13-14",
+      "category": "Special Moves",
+      "name": "L Freeflow Strikes(2)",
+      "onBlock": "-13",
+      "onHit": "-3",
+      "recovery": "28",
+      "startup": "13"
+    },
+    {
+      "active": "16-17",
+      "category": "Special Moves",
+      "name": "M Freeflow Strikes(2)",
+      "onBlock": "-11",
+      "onHit": "-3",
+      "recovery": "28",
+      "startup": "16"
+    },
+    {
+      "active": "19-20",
+      "category": "Special Moves",
+      "name": "H Freeflow Strikes(2)",
+      "onBlock": "-9",
+      "onHit": "-3",
+      "recovery": "28",
+      "startup": "19"
+    },
+    {
+      "active": "15-23 15-16, 22-23",
+      "category": "Special Moves",
+      "name": "[Drink level 4]Freeflow Strikes(2)",
+      "onBlock": "-10",
+      "onHit": "-2",
+      "recovery": "27",
+      "startup": "15"
+    },
+    {
+      "active": "13-14",
+      "category": "Special Moves",
+      "name": "OD Freeflow Strikes(2)",
+      "onBlock": "-9",
+      "onHit": "-3",
+      "recovery": "28",
+      "startup": "13"
+    },
+    {
+      "active": "15-23 15-16, 22-23",
+      "category": "Special Moves",
+      "name": "[Drink level 4]OD Freeflow Strikes(2)",
+      "onBlock": "-10",
+      "onHit": "-2",
+      "recovery": "27",
+      "startup": "15"
+    },
+    {
+      "active": "13-14",
+      "category": "Special Moves",
+      "name": "L Freeflow Strikes(3)",
+      "onBlock": "-17",
+      "onHit": "D",
+      "recovery": "30",
+      "startup": "13"
+    },
+    {
+      "active": "16-17",
+      "category": "Special Moves",
+      "name": "M Freeflow Strikes(3)",
+      "onBlock": "-15",
+      "onHit": "D",
+      "recovery": "30",
+      "startup": "16"
+    },
+    {
+      "active": "19-20",
+      "category": "Special Moves",
+      "name": "H Freeflow Strikes(3)",
+      "onBlock": "-13",
+      "onHit": "D",
+      "recovery": "30",
+      "startup": "19"
+    },
+    {
+      "active": "16-40 16-17,22-23, 38-40",
+      "category": "Special Moves",
+      "name": "[Drink level 4]Freeflow Strikes(3)",
+      "onBlock": "-14",
+      "onHit": "D",
+      "recovery": "28",
+      "startup": "16"
+    },
+    {
+      "active": "13-14",
+      "category": "Special Moves",
+      "name": "OD Freeflow Strikes(3)",
+      "onBlock": "-13",
+      "onHit": "D",
+      "recovery": "30",
+      "startup": "13"
+    },
+    {
+      "active": "16-40 16-17,22-23, 38-40",
+      "category": "Special Moves",
+      "name": "[Drink level 4]OD Freeflow Strikes(3)",
+      "onBlock": "-14",
+      "onHit": "D",
+      "recovery": "28",
+      "startup": "16"
+    },
+    {
+      "active": "14-15",
+      "category": "Special Moves",
+      "name": "L Freeflow Kicks(2)",
+      "onBlock": "-15",
+      "onHit": "-7",
+      "recovery": "32",
+      "startup": "14"
+    },
+    {
+      "active": "17-18",
+      "category": "Special Moves",
+      "name": "M Freeflow Kicks(2)",
+      "onBlock": "-15",
+      "onHit": "-7",
+      "recovery": "32",
+      "startup": "17"
+    },
+    {
+      "active": "20-21",
+      "category": "Special Moves",
+      "name": "H Freeflow Kicks(2)",
+      "onBlock": "-15",
+      "onHit": "-7",
+      "recovery": "32",
+      "startup": "20"
+    },
+    {
+      "active": "14-15",
+      "category": "Special Moves",
+      "name": "OD Freeflow Kicks(2)",
+      "onBlock": "-15",
+      "onHit": "-7",
+      "recovery": "32",
+      "startup": "14"
+    },
+    {
+      "active": "18-19",
+      "category": "Special Moves",
+      "name": "L Freeflow Kicks(3)",
+      "onBlock": "-49",
+      "onHit": "D",
+      "recovery": "64",
+      "startup": "18"
+    },
+    {
+      "active": "21-22",
+      "category": "Special Moves",
+      "name": "M Freeflow Kicks(3)",
+      "onBlock": "-49",
+      "onHit": "D",
+      "recovery": "64",
+      "startup": "21"
+    },
+    {
+      "active": "24-25",
+      "category": "Special Moves",
+      "name": "H Freeflow Kicks(3)",
+      "onBlock": "-49",
+      "onHit": "D",
+      "recovery": "64",
+      "startup": "24"
+    },
+    {
+      "active": "18-19",
+      "category": "Special Moves",
+      "name": "OD Freeflow Kicks(3)",
+      "onBlock": "-49",
+      "onHit": "D",
+      "recovery": "64",
+      "startup": "18"
+    },
+    {
+      "active": "17-25",
+      "category": "Special Moves",
+      "name": "L Swagger Step",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "17",
+      "startup": "17"
+    },
+    {
+      "active": "20-28",
+      "category": "Special Moves",
+      "name": "M Swagger Step",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "17",
+      "startup": "20"
+    },
+    {
+      "active": "25-33",
+      "category": "Special Moves",
+      "name": "H Swagger Step",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "16",
+      "startup": "25"
+    },
+    {
+      "active": "20-28",
+      "category": "Special Moves",
+      "name": "OD Swagger Step",
+      "onBlock": "-1",
+      "onHit": "D",
+      "recovery": "15",
+      "startup": "20"
+    },
+    {
+      "active": "5-50 5-14, 41-50",
+      "category": "Special Moves",
+      "name": "L Arrow Kick",
+      "onBlock": "-45",
+      "onHit": "D",
+      "recovery": "52",
+      "startup": "5"
+    },
+    {
+      "active": "8-43 8-16, 39-43",
+      "category": "Special Moves",
+      "name": "M Arrow Kick",
+      "onBlock": "-43",
+      "onHit": "D",
+      "recovery": "51",
+      "startup": "8"
+    },
+    {
+      "active": "10-57 10-18, 41-45, 54-57",
+      "category": "Special Moves",
+      "name": "H Arrow Kick",
+      "onBlock": "-43",
+      "onHit": "D",
+      "recovery": "51",
+      "startup": "10"
+    },
+    {
+      "active": "6-51 6-12, 37-38, 50-51",
+      "category": "Special Moves",
+      "name": "OD Arrow Kick",
+      "onBlock": "-43",
+      "onHit": "D",
+      "recovery": "53",
+      "startup": "6"
+    },
+    {
+      "active": "11-until landing 11,14-until landing",
+      "category": "Special Moves",
+      "name": "L Luminous Dive Kick",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "13 frame(s) after landing",
+      "startup": "11"
+    },
+    {
+      "active": "11-until landing 11,14-until landing",
+      "category": "Special Moves",
+      "name": "M Luminous Dive Kick",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "13 frame(s) after landing",
+      "startup": "11"
+    },
+    {
+      "active": "11-until landing 11,14-until landing",
+      "category": "Special Moves",
+      "name": "H Luminous Dive Kick",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "13 frame(s) after landing",
+      "startup": "11"
+    },
+    {
+      "active": "11-until landing 11,14-until landing",
+      "category": "Special Moves",
+      "name": "OD Luminous Dive Kick",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "13 frame(s) after landing",
+      "startup": "11"
+    },
+    {
+      "active": "18-43 18-19, 22-24, 29-30, 42-43",
+      "category": "Special Moves",
+      "name": "L Bakkai",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "18"
+    },
+    {
+      "active": "22-59 22-23, 25-26, 30-31, 37-38, 51-52, 58-59",
+      "category": "Special Moves",
+      "name": "M Bakkai",
+      "onBlock": "-16",
+      "onHit": "D",
+      "recovery": "31",
+      "startup": "22"
+    },
+    {
+      "active": "25-92 25-27, 34-35, 42-43, 50-51, 65-66, 74-75, 91-92",
+      "category": "Special Moves",
+      "name": "H Bakkai",
+      "onBlock": "-17",
+      "onHit": "D",
+      "recovery": "32",
+      "startup": "25"
+    },
+    {
+      "active": "18-100 18-23, 27-28, 37-38, 42-43, 51-52, 60-61, 74-75, 87-88, 93-94, 99-100",
+      "category": "Special Moves",
+      "name": "OD Bakkai",
+      "onBlock": "-43",
+      "onHit": "D",
+      "recovery": "59",
+      "startup": "18"
+    },
+    {
+      "active": "8-9",
+      "category": "Special Moves",
+      "name": "Tenshin",
+      "onBlock": null,
+      "onHit": "8",
+      "recovery": "52",
+      "startup": "8"
+    },
+    {
+      "active": "8-9",
+      "category": "Special Moves",
+      "name": "OD Tenshin",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "52",
+      "startup": "8"
+    },
+    {
+      "active": "19-21",
+      "category": "Special Moves",
+      "name": "Swagger Hermit Punch",
+      "onBlock": "-23",
+      "onHit": "D",
+      "recovery": "39",
+      "startup": "19"
+    },
+    {
+      "active": "19-21",
+      "category": "Special Moves",
+      "name": "OD Swagger Hermit Punch",
+      "onBlock": "-23",
+      "onHit": "D",
+      "recovery": "39",
+      "startup": "19"
+    },
+    {
+      "active": "8-133 8-16, 23-27, 34-35, 43-44, 52-53, 60-61, 68-69, 75-76, 106-107, 117-118, 125-126, 132-133",
+      "category": "Super Arts",
+      "name": "SA1 Breakin'",
+      "onBlock": "-60*-93",
+      "onHit": "D",
+      "recovery": "74*107",
+      "startup": "8"
+    },
+    {
+      "active": null,
+      "category": "Super Arts",
+      "name": "SA2 The Devil's Song",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "6 total frames",
+      "startup": null
+    },
+    {
+      "active": "10-28 10-12, 26-28",
+      "category": "Super Arts",
+      "name": "SA3 Getsuga Saiho",
+      "onBlock": "-27",
+      "onHit": "D",
+      "recovery": "42",
+      "startup": "10"
+    },
+    {
+      "active": "10-28 10-12, 26-28",
+      "category": "Super Arts",
+      "name": "CA Getsuga Saiho",
+      "onBlock": "-27",
+      "onHit": "D",
+      "recovery": "42",
+      "startup": "10"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Back Shaver",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Wheel Punch",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Forward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "19 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Backward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "23 total frames",
+      "startup": null
+    },
+    {
+      "active": "26-27",
+      "category": "Common Moves",
+      "name": "Drive Impact: Vainglory Strike",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "35",
+      "startup": "26"
+    },
+    {
+      "active": "20-22",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while blocking): Leg Sweep",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "20"
+    },
+    {
+      "active": "18-20",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while recovering): Leg Sweep",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "18"
+    },
+    {
+      "active": "[*2] 1-12",
+      "category": "Common Moves",
+      "name": "Drive Parry",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "33",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (strike)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "1",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (projectile)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "10",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Parry Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "45 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Cancel Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "46 total frames",
+      "startup": null
+    }
+  ],
+  "slug": "jamie",
+  "url": "https://www.streetfighter.com/6/character/jamie/frame"
+}

@@ -439,14 +439,13 @@
           },
           "recovery": {
             "first": 20,
-            "max": 24,
+            "max": 20,
             "min": 20,
             "numbers": [
-              20,
-              24
+              20
             ],
-            "raw": "20(24)",
-            "text": "20(24)",
+            "raw": "20",
+            "text": "20",
             "uncertain": false
           },
           "startup": {
@@ -468,7 +467,7 @@
         "onPP": -26,
         "plnCmd": "d+HP",
         "range": 2.95,
-        "recovery": "20(24)",
+        "recovery": "20",
         "startup": 19,
         "total": "42(46)"
       },
@@ -1256,14 +1255,13 @@
           "recovery": {
             "first": 33,
             "max": 33,
-            "min": 1,
+            "min": 33,
             "numbers": [
-              33,
-              1
+              33
             ],
-            "raw": "33(1)notes",
-            "text": "33(1)notes",
-            "uncertain": true
+            "raw": "33",
+            "text": "33",
+            "uncertain": false
           },
           "startup": {
             "first": 1,
@@ -1279,7 +1277,7 @@
         },
         "numCmd": "MPMK",
         "plnCmd": "MP+MK",
-        "recovery": "33(1)notes",
+        "recovery": "33",
         "startup": 1,
         "total": "45(3)"
       },
@@ -1566,15 +1564,14 @@
             "uncertain": false
           },
           "recovery": {
-            "first": 6,
+            "first": 11,
             "max": 11,
-            "min": 6,
+            "min": 11,
             "numbers": [
-              6,
               11
             ],
-            "raw": "6(11)",
-            "text": "6(11)",
+            "raw": "11 land",
+            "text": "11 land",
             "uncertain": false
           },
           "startup": {
@@ -1595,7 +1592,7 @@
         "onPC": "-13(14)",
         "onPP": "-35(-6)",
         "plnCmd": "d+HK or db+HK or df+HK (air)",
-        "recovery": "6(11)",
+        "recovery": "11 land",
         "startup": 9
       },
       "HK Yoga Blast": {
@@ -1959,7 +1956,17 @@
             "text": "13~19",
             "uncertain": true
           },
-          "recovery": null,
+          "recovery": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": "3 land",
+            "text": "3 land",
+            "uncertain": false
+          },
           "startup": {
             "first": 10,
             "max": 10,
@@ -1978,6 +1985,7 @@
         "onPC": "13~19",
         "plnCmd": "u+HK",
         "range": "0.94~2.82",
+        "recovery": "3 land",
         "startup": 10
       },
       "Jump HP": {
@@ -2078,7 +2086,17 @@
             "text": "up to 23 (KD)",
             "uncertain": false
           },
-          "recovery": null,
+          "recovery": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": "3 land",
+            "text": "3 land",
+            "uncertain": false
+          },
           "startup": {
             "first": 13,
             "max": 13,
@@ -2097,6 +2115,7 @@
         "onPC": "up to 23 (KD)",
         "plnCmd": "u+HP",
         "range": "1.22~1.68",
+        "recovery": "3 land",
         "startup": 13
       },
       "Jump LK": {
@@ -2178,7 +2197,17 @@
             "text": "-2~12",
             "uncertain": true
           },
-          "recovery": null,
+          "recovery": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": "3 land",
+            "text": "3 land",
+            "uncertain": false
+          },
           "startup": {
             "first": 6,
             "max": 6,
@@ -2197,6 +2226,7 @@
         "onPC": "-2~12",
         "plnCmd": "u+LK",
         "range": 1.03,
+        "recovery": "3 land",
         "startup": 6
       },
       "Jump LP": {
@@ -2277,7 +2307,17 @@
             "text": "12~17",
             "uncertain": true
           },
-          "recovery": null,
+          "recovery": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": "3 land",
+            "text": "3 land",
+            "uncertain": false
+          },
           "startup": {
             "first": 4,
             "max": 4,
@@ -2296,6 +2336,7 @@
         "onPC": "12~17",
         "plnCmd": "u+LP",
         "range": 0.84,
+        "recovery": "3 land",
         "startup": 4
       },
       "Jump MK": {
@@ -2383,7 +2424,17 @@
             "text": "-3~17",
             "uncertain": true
           },
-          "recovery": null,
+          "recovery": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": "3 land",
+            "text": "3 land",
+            "uncertain": false
+          },
           "startup": {
             "first": 11,
             "max": 11,
@@ -2402,6 +2453,7 @@
         "onPC": "-3~17",
         "plnCmd": "u+MK",
         "range": 1.76,
+        "recovery": "3 land",
         "startup": 11
       },
       "Jump MP": {
@@ -2491,7 +2543,17 @@
             "text": "13~17",
             "uncertain": true
           },
-          "recovery": null,
+          "recovery": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": "3 land",
+            "text": "3 land",
+            "uncertain": false
+          },
           "startup": {
             "first": 9,
             "max": 9,
@@ -2510,6 +2572,7 @@
         "onPC": "13~17",
         "plnCmd": "u+MP",
         "range": 2.36,
+        "recovery": "3 land",
         "startup": 9,
         "xx": [
           "sp"
@@ -2725,15 +2788,14 @@
             "uncertain": false
           },
           "recovery": {
-            "first": 6,
+            "first": 11,
             "max": 11,
-            "min": 6,
+            "min": 11,
             "numbers": [
-              6,
               11
             ],
-            "raw": "6(11)",
-            "text": "6(11)",
+            "raw": "11 land",
+            "text": "11 land",
             "uncertain": false
           },
           "startup": {
@@ -2754,7 +2816,7 @@
         "onPC": "-19(16)",
         "onPP": "-42(-6)",
         "plnCmd": "d+LK or db+LK or df+LK (air)",
-        "recovery": "6(11)",
+        "recovery": "11 land",
         "startup": 9
       },
       "LK Yoga Blast": {
@@ -3112,15 +3174,14 @@
             "uncertain": false
           },
           "recovery": {
-            "first": 6,
+            "first": 11,
             "max": 11,
-            "min": 6,
+            "min": 11,
             "numbers": [
-              6,
               11
             ],
-            "raw": "6(11)",
-            "text": "6(11)",
+            "raw": "11 land",
+            "text": "11 land",
             "uncertain": false
           },
           "startup": {
@@ -3141,7 +3202,7 @@
         "onPC": "-11(14)",
         "onPP": "-32(-6)",
         "plnCmd": "d+MK or db+MK or df+MK (air)",
-        "recovery": "6(11)",
+        "recovery": "11 land",
         "startup": 9
       },
       "MK Yoga Blast": {
@@ -6302,8 +6363,8 @@
             "numbers": [
               9
             ],
-            "raw": 9,
-            "text": "9",
+            "raw": "9 land",
+            "text": "9 land",
             "uncertain": false
           },
           "startup": {
@@ -6324,7 +6385,7 @@
         "onPC": "-14(12)",
         "onPP": "-34(-8)",
         "plnCmd": "d+LP (air)",
-        "recovery": 9,
+        "recovery": "9 land",
         "startup": 10,
         "xx": [
           "sp"

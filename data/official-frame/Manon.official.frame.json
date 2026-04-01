@@ -1,0 +1,540 @@
+{
+  "character": "Manon",
+  "fetchedAt": "2026-04-01T13:12:21.743584+00:00",
+  "moveCount": 59,
+  "moves": [
+    {
+      "active": "4-6",
+      "category": "Normal Moves",
+      "name": "Standing Light Punch",
+      "onBlock": "-1",
+      "onHit": "4",
+      "recovery": "10",
+      "startup": "4"
+    },
+    {
+      "active": "5-6",
+      "category": "Normal Moves",
+      "name": "Standing Light Kick",
+      "onBlock": "-2",
+      "onHit": "2",
+      "recovery": "12",
+      "startup": "5"
+    },
+    {
+      "active": "7-10",
+      "category": "Normal Moves",
+      "name": "Standing Medium Punch",
+      "onBlock": "-2",
+      "onHit": "2",
+      "recovery": "15",
+      "startup": "7"
+    },
+    {
+      "active": "10-12",
+      "category": "Normal Moves",
+      "name": "Standing Medium Kick",
+      "onBlock": "-5",
+      "onHit": "-2",
+      "recovery": "18",
+      "startup": "10"
+    },
+    {
+      "active": "10-13",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Punch",
+      "onBlock": "-3",
+      "onHit": "0",
+      "recovery": "20",
+      "startup": "10"
+    },
+    {
+      "active": "15-17",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Kick",
+      "onBlock": "-6",
+      "onHit": "※1",
+      "recovery": "26",
+      "startup": "15"
+    },
+    {
+      "active": "4-5",
+      "category": "Normal Moves",
+      "name": "Crouching Light Punch",
+      "onBlock": "-2",
+      "onHit": "3",
+      "recovery": "11",
+      "startup": "4"
+    },
+    {
+      "active": "5-6",
+      "category": "Normal Moves",
+      "name": "Crouching Light Kick",
+      "onBlock": "-3",
+      "onHit": "-1",
+      "recovery": "13",
+      "startup": "5"
+    },
+    {
+      "active": "7-9",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Punch",
+      "onBlock": "-1",
+      "onHit": "6",
+      "recovery": "11",
+      "startup": "7"
+    },
+    {
+      "active": "8-11",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Kick",
+      "onBlock": "-2",
+      "onHit": "3",
+      "recovery": "16",
+      "startup": "8"
+    },
+    {
+      "active": "10-14",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Punch",
+      "onBlock": "-8",
+      "onHit": "-2",
+      "recovery": "21",
+      "startup": "10"
+    },
+    {
+      "active": "11-12",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Kick",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "27",
+      "startup": "11"
+    },
+    {
+      "active": "5-14",
+      "category": "Normal Moves",
+      "name": "Jumping Light Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "6-14",
+      "category": "Normal Moves",
+      "name": "Jumping Light Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "6"
+    },
+    {
+      "active": "8-11",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "7-12",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "9-12",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "9"
+    },
+    {
+      "active": "11-15",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "11"
+    },
+    {
+      "active": "8-13",
+      "category": "Unique Attacks",
+      "name": "Révérence",
+      "onBlock": "1",
+      "onHit": "3",
+      "recovery": "17",
+      "startup": "8"
+    },
+    {
+      "active": "11-19",
+      "category": "Unique Attacks",
+      "name": "Tomoe Derrière",
+      "onBlock": "-23",
+      "onHit": "26",
+      "recovery": "32",
+      "startup": "11"
+    },
+    {
+      "active": "10-11",
+      "category": "Unique Attacks",
+      "name": "À Terre",
+      "onBlock": "-5",
+      "onHit": "2",
+      "recovery": "17",
+      "startup": "10"
+    },
+    {
+      "active": "10-13",
+      "category": "Unique Attacks",
+      "name": "En Haut(1)",
+      "onBlock": "-3",
+      "onHit": "-1",
+      "recovery": "19",
+      "startup": "10"
+    },
+    {
+      "active": "14-18",
+      "category": "Unique Attacks",
+      "name": "En Haut(2)",
+      "onBlock": "-11",
+      "onHit": "-3",
+      "recovery": "21",
+      "startup": "14"
+    },
+    {
+      "active": "5-9",
+      "category": "Unique Attacks",
+      "name": "Temps Lié",
+      "onBlock": "-8",
+      "onHit": "3",
+      "recovery": "*17",
+      "startup": "5"
+    },
+    {
+      "active": "4-7",
+      "category": "Unique Attacks",
+      "name": "Allongé",
+      "onBlock": "-10",
+      "onHit": "1",
+      "recovery": "26",
+      "startup": "4"
+    },
+    {
+      "active": "10-11",
+      "category": "Special Moves",
+      "name": "L Manège Doré(Attack changes according to Medal level)",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "49",
+      "startup": "10"
+    },
+    {
+      "active": "8-9",
+      "category": "Special Moves",
+      "name": "M Manège Doré(Attack changes according to Medal level)",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "51",
+      "startup": "8"
+    },
+    {
+      "active": "5-6",
+      "category": "Special Moves",
+      "name": "H Manège Doré(Attack changes according to Medal level)",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "54",
+      "startup": "5"
+    },
+    {
+      "active": "8-9",
+      "category": "Special Moves",
+      "name": "OD Manège Doré(Attack changes according to Medal level)",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "51",
+      "startup": "8"
+    },
+    {
+      "active": "9-15 9-11, 14-15",
+      "category": "Special Moves",
+      "name": "L Rond-point",
+      "onBlock": "-15",
+      "onHit": "3",
+      "recovery": "29",
+      "startup": "9"
+    },
+    {
+      "active": "11-19 11-13, 17-19",
+      "category": "Special Moves",
+      "name": "M Rond-point",
+      "onBlock": "-14",
+      "onHit": "D",
+      "recovery": "27",
+      "startup": "11"
+    },
+    {
+      "active": "14-22 14-16, 20-22",
+      "category": "Special Moves",
+      "name": "H Rond-point",
+      "onBlock": "-11",
+      "onHit": "D",
+      "recovery": "24",
+      "startup": "14"
+    },
+    {
+      "active": "8-16 8-11, 14-16",
+      "category": "Special Moves",
+      "name": "OD Rond-point",
+      "onBlock": "-19",
+      "onHit": "D",
+      "recovery": "30",
+      "startup": "8"
+    },
+    {
+      "active": "16-31 16-17, 28-31",
+      "category": "Special Moves",
+      "name": "L Dégagé",
+      "onBlock": "-24",
+      "onHit": "D",
+      "recovery": "36",
+      "startup": "16"
+    },
+    {
+      "active": "16-39 16-19, 34-39",
+      "category": "Special Moves",
+      "name": "M Dégagé",
+      "onBlock": "-13",
+      "onHit": "D",
+      "recovery": "22",
+      "startup": "16"
+    },
+    {
+      "active": "20-22",
+      "category": "Special Moves",
+      "name": "H Dégagé",
+      "onBlock": "-9",
+      "onHit": "3",
+      "recovery": "24",
+      "startup": "20"
+    },
+    {
+      "active": "22-24",
+      "category": "Special Moves",
+      "name": "OD Dégagé",
+      "onBlock": "-3",
+      "onHit": "6",
+      "recovery": "22",
+      "startup": "22"
+    },
+    {
+      "active": "22-23",
+      "category": "Special Moves",
+      "name": "L Renversé(Attack changes according to Medal level)",
+      "onBlock": "-23",
+      "onHit": "D",
+      "recovery": "37",
+      "startup": "22"
+    },
+    {
+      "active": "25-26",
+      "category": "Special Moves",
+      "name": "M Renversé(Attack changes according to Medal level)",
+      "onBlock": "-20",
+      "onHit": "D",
+      "recovery": "34",
+      "startup": "25"
+    },
+    {
+      "active": "29-30",
+      "category": "Special Moves",
+      "name": "H Renversé(Attack changes according to Medal level)",
+      "onBlock": "-16",
+      "onHit": "D",
+      "recovery": "30",
+      "startup": "29"
+    },
+    {
+      "active": "25-26",
+      "category": "Special Moves",
+      "name": "OD Renversé(Attack changes according to Medal level)",
+      "onBlock": "-20",
+      "onHit": "D",
+      "recovery": "34",
+      "startup": "25"
+    },
+    {
+      "active": "11-16",
+      "category": "Special Moves",
+      "name": "Grand Fouetté",
+      "onBlock": "-5",
+      "onHit": "D",
+      "recovery": "22",
+      "startup": "11"
+    },
+    {
+      "active": "10-15",
+      "category": "Special Moves",
+      "name": "OD Grand Fouetté",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "22",
+      "startup": "10"
+    },
+    {
+      "active": "10-13",
+      "category": "Super Arts",
+      "name": "SA1 Arabesque",
+      "onBlock": "-49",
+      "onHit": "D",
+      "recovery": "65",
+      "startup": "10"
+    },
+    {
+      "active": "7-80 7-9,21-26,72-80",
+      "category": "Super Arts",
+      "name": "SA2 Étoile",
+      "onBlock": "-61",
+      "onHit": "D",
+      "recovery": "38+34 frame(s) after landing",
+      "startup": "7"
+    },
+    {
+      "active": "7-8",
+      "category": "Super Arts",
+      "name": "SA3 Pas de Deux",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "72",
+      "startup": "7"
+    },
+    {
+      "active": "7-8",
+      "category": "Super Arts",
+      "name": "CA Pas de Deux",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "72",
+      "startup": "7"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Ouchi Gari",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Uchi Mata",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Forward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "21 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Backward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "25 total frames",
+      "startup": null
+    },
+    {
+      "active": "26-27",
+      "category": "Common Moves",
+      "name": "Drive Impact: Glissade",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "35",
+      "startup": "26"
+    },
+    {
+      "active": "20-22",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while blocking): Écarté",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "20"
+    },
+    {
+      "active": "18-20",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while recovering): Écarté",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "18"
+    },
+    {
+      "active": "[*2] 1-12",
+      "category": "Common Moves",
+      "name": "Drive Parry",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "33",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (strike)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "1",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (projectile)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "10",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Parry Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "45 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Cancel Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "46 total frames",
+      "startup": null
+    }
+  ],
+  "slug": "manon",
+  "url": "https://www.streetfighter.com/6/character/manon/frame"
+}

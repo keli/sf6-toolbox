@@ -1,0 +1,639 @@
+{
+  "character": "Sagat",
+  "fetchedAt": "2026-04-01T13:12:27.632310+00:00",
+  "moveCount": 70,
+  "moves": [
+    {
+      "active": "5-7",
+      "category": "Normal Moves",
+      "name": "Standing Light Punch",
+      "onBlock": "-3",
+      "onHit": "4",
+      "recovery": "11",
+      "startup": "5"
+    },
+    {
+      "active": "7-8",
+      "category": "Normal Moves",
+      "name": "Standing Light Kick",
+      "onBlock": "-4",
+      "onHit": "-1",
+      "recovery": "15",
+      "startup": "7"
+    },
+    {
+      "active": "6-9",
+      "category": "Normal Moves",
+      "name": "Standing Medium Punch",
+      "onBlock": "2",
+      "onHit": "6",
+      "recovery": "15",
+      "startup": "6"
+    },
+    {
+      "active": "11-14",
+      "category": "Normal Moves",
+      "name": "Standing Medium Kick",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "19",
+      "startup": "11"
+    },
+    {
+      "active": "15-18",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Punch",
+      "onBlock": "-5",
+      "onHit": "0",
+      "recovery": "22",
+      "startup": "15"
+    },
+    {
+      "active": "10-15",
+      "category": "Normal Moves",
+      "name": "Standing Heavy Kick",
+      "onBlock": "-5",
+      "onHit": "1",
+      "recovery": "21",
+      "startup": "10"
+    },
+    {
+      "active": "4-5",
+      "category": "Normal Moves",
+      "name": "Crouching Light Punch",
+      "onBlock": "-1",
+      "onHit": "5",
+      "recovery": "10",
+      "startup": "4"
+    },
+    {
+      "active": "5-7",
+      "category": "Normal Moves",
+      "name": "Crouching Light Kick",
+      "onBlock": "-3",
+      "onHit": "1",
+      "recovery": "12",
+      "startup": "5"
+    },
+    {
+      "active": "7-9",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Punch",
+      "onBlock": "-1",
+      "onHit": "4",
+      "recovery": "16",
+      "startup": "7"
+    },
+    {
+      "active": "9-11",
+      "category": "Normal Moves",
+      "name": "Crouching Medium Kick",
+      "onBlock": "-2",
+      "onHit": "5",
+      "recovery": "18",
+      "startup": "9"
+    },
+    {
+      "active": "11-14",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Punch",
+      "onBlock": "-5",
+      "onHit": "1",
+      "recovery": "21",
+      "startup": "11"
+    },
+    {
+      "active": "11-13",
+      "category": "Normal Moves",
+      "name": "Crouching Heavy Kick",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "11"
+    },
+    {
+      "active": "4-10",
+      "category": "Normal Moves",
+      "name": "Jumping Light Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "4"
+    },
+    {
+      "active": "5-14",
+      "category": "Normal Moves",
+      "name": "Jumping Light Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "8-12",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "8-15",
+      "category": "Normal Moves",
+      "name": "Jumping Medium Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "10-15",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Punch",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "10-15",
+      "category": "Normal Moves",
+      "name": "Jumping Heavy Kick",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "3 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "22-24",
+      "category": "Unique Attacks",
+      "name": "Tiger Heavy Elbow",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "19",
+      "startup": "22"
+    },
+    {
+      "active": "8-15",
+      "category": "Unique Attacks",
+      "name": "Tiger Monolith",
+      "onBlock": "-10",
+      "onHit": "D",
+      "recovery": "25",
+      "startup": "8"
+    },
+    {
+      "active": "18-20",
+      "category": "Unique Attacks",
+      "name": "Low Step Kick",
+      "onBlock": "-3",
+      "onHit": "3",
+      "recovery": "18",
+      "startup": "18"
+    },
+    {
+      "active": "16-19",
+      "category": "Unique Attacks",
+      "name": "High Step Kick",
+      "onBlock": "4",
+      "onHit": "7",
+      "recovery": "21",
+      "startup": "16"
+    },
+    {
+      "active": "19-21",
+      "category": "Unique Attacks",
+      "name": "Middle Step Kick",
+      "onBlock": "-8",
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "19"
+    },
+    {
+      "active": "16-18",
+      "category": "Unique Attacks",
+      "name": "Tiger Sting",
+      "onBlock": "-12",
+      "onHit": "D",
+      "recovery": "27",
+      "startup": "16"
+    },
+    {
+      "active": "20-22",
+      "category": "Unique Attacks",
+      "name": "Tiger Slash",
+      "onBlock": "-14",
+      "onHit": "-2",
+      "recovery": "27",
+      "startup": "20"
+    },
+    {
+      "active": "18-21",
+      "category": "Unique Attacks",
+      "name": "Tiger Rise",
+      "onBlock": "-10",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "18"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "M High Tiger Shot",
+      "onBlock": "3",
+      "onHit": "3",
+      "recovery": "42 total frames",
+      "startup": "16"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "H High Tiger Shot",
+      "onBlock": "-1",
+      "onHit": "-1",
+      "recovery": "42 total frames",
+      "startup": "12"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD High Tiger Shot",
+      "onBlock": "6",
+      "onHit": "D",
+      "recovery": "48 total frames",
+      "startup": "21"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "Low Tiger Shot",
+      "onBlock": "-7",
+      "onHit": "-3",
+      "recovery": "50 total frames",
+      "startup": "14"
+    },
+    {
+      "active": null,
+      "category": "Special Moves",
+      "name": "OD Low Tiger Shot",
+      "onBlock": "-1",
+      "onHit": "D",
+      "recovery": "44 total frames",
+      "startup": "12"
+    },
+    {
+      "active": "5-14",
+      "category": "Special Moves",
+      "name": "L Tiger Uppercut",
+      "onBlock": "-37",
+      "onHit": "D",
+      "recovery": "35+12 frame(s) after landing",
+      "startup": "5"
+    },
+    {
+      "active": "10-19",
+      "category": "Special Moves",
+      "name": "M Tiger Uppercut",
+      "onBlock": "-45",
+      "onHit": "D",
+      "recovery": "40+15 frame(s) after landing",
+      "startup": "10"
+    },
+    {
+      "active": "18-27",
+      "category": "Special Moves",
+      "name": "H Tiger Uppercut",
+      "onBlock": "-45",
+      "onHit": "D",
+      "recovery": "40+15 frame(s) after landing",
+      "startup": "18"
+    },
+    {
+      "active": "35-44",
+      "category": "Special Moves",
+      "name": "H Tiger Uppercut(Charged)",
+      "onBlock": "-45",
+      "onHit": "D",
+      "recovery": "40+15 frame(s) after landing",
+      "startup": "35"
+    },
+    {
+      "active": "8-19",
+      "category": "Special Moves",
+      "name": "OD Tiger Uppercut",
+      "onBlock": "-43",
+      "onHit": "D",
+      "recovery": "38+15 frame(s) after landing",
+      "startup": "8"
+    },
+    {
+      "active": "14-24",
+      "category": "Special Moves",
+      "name": "L Tiger Knee Crush",
+      "onBlock": "-8",
+      "onHit": "D",
+      "recovery": "18",
+      "startup": "14"
+    },
+    {
+      "active": "18-28",
+      "category": "Special Moves",
+      "name": "M Tiger Knee Crush",
+      "onBlock": "-7",
+      "onHit": "D",
+      "recovery": "18",
+      "startup": "18"
+    },
+    {
+      "active": "22-40 22-25, 30-40",
+      "category": "Special Moves",
+      "name": "H Tiger Knee Crush",
+      "onBlock": "-5",
+      "onHit": "D",
+      "recovery": "18",
+      "startup": "22"
+    },
+    {
+      "active": "19-36 19-21, 26-36",
+      "category": "Special Moves",
+      "name": "OD Tiger Knee Crush",
+      "onBlock": "-2",
+      "onHit": "D",
+      "recovery": "18",
+      "startup": "19"
+    },
+    {
+      "active": "17-19",
+      "category": "Special Moves",
+      "name": "L Tiger Nexus",
+      "onBlock": "-5",
+      "onHit": "2",
+      "recovery": "23",
+      "startup": "17"
+    },
+    {
+      "active": "20-22",
+      "category": "Special Moves",
+      "name": "M Tiger Nexus",
+      "onBlock": "-5",
+      "onHit": "2",
+      "recovery": "23",
+      "startup": "20"
+    },
+    {
+      "active": "28-35 28-30, 32-35",
+      "category": "Special Moves",
+      "name": "H Tiger Nexus",
+      "onBlock": "-3",
+      "onHit": "4",
+      "recovery": "20",
+      "startup": "28"
+    },
+    {
+      "active": "23-30 23-25, 27-30",
+      "category": "Special Moves",
+      "name": "OD Tiger Nexus",
+      "onBlock": "-3",
+      "onHit": "4",
+      "recovery": "20",
+      "startup": "23"
+    },
+    {
+      "active": "15-17",
+      "category": "Special Moves",
+      "name": "Mighty Tiger",
+      "onBlock": "-5",
+      "onHit": "3",
+      "recovery": "22",
+      "startup": "15"
+    },
+    {
+      "active": "15-17",
+      "category": "Special Moves",
+      "name": "OD Mighty Tiger",
+      "onBlock": "-5",
+      "onHit": "3",
+      "recovery": "22",
+      "startup": "15"
+    },
+    {
+      "active": "17-19",
+      "category": "Special Moves",
+      "name": "Greedy Tiger",
+      "onBlock": "4",
+      "onHit": "D",
+      "recovery": "17",
+      "startup": "17"
+    },
+    {
+      "active": "17-19",
+      "category": "Special Moves",
+      "name": "OD Greedy Tiger",
+      "onBlock": "4",
+      "onHit": "D",
+      "recovery": "17",
+      "startup": "17"
+    },
+    {
+      "active": "21-23",
+      "category": "Special Moves",
+      "name": "Nova Tiger",
+      "onBlock": "2",
+      "onHit": "D",
+      "recovery": "19",
+      "startup": "21"
+    },
+    {
+      "active": "21-23",
+      "category": "Special Moves",
+      "name": "OD Nova Tiger",
+      "onBlock": "2",
+      "onHit": "D",
+      "recovery": "19",
+      "startup": "21"
+    },
+    {
+      "active": null,
+      "category": "Super Arts",
+      "name": "SA1 Tiger Cannon",
+      "onBlock": "-31",
+      "onHit": "D",
+      "recovery": "109 total frames",
+      "startup": "13"
+    },
+    {
+      "active": "10-14",
+      "category": "Super Arts",
+      "name": "SA2 Savage Tiger",
+      "onBlock": "-58",
+      "onHit": null,
+      "recovery": "73",
+      "startup": "10"
+    },
+    {
+      "active": null,
+      "category": "Super Arts",
+      "name": "SA2 Savage Tiger Raid",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": null,
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Super Arts",
+      "name": "SA2 Savage Tiger Zenith",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": null,
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Super Arts",
+      "name": "SA2 Savage Tiger Pendulum",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": null,
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Super Arts",
+      "name": "SA2 Savage Tiger Stomp",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": null,
+      "startup": null
+    },
+    {
+      "active": "12-15",
+      "category": "Super Arts",
+      "name": "SA3 Tiger Vanquisher",
+      "onBlock": "-51",
+      "onHit": "D",
+      "recovery": "67",
+      "startup": "12"
+    },
+    {
+      "active": "12-15",
+      "category": "Super Arts",
+      "name": "CA Tiger Vanquisher",
+      "onBlock": "-51",
+      "onHit": "D",
+      "recovery": "67",
+      "startup": "12"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Tiger Hang",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": "5-7",
+      "category": "Throws",
+      "name": "Tiger Carry",
+      "onBlock": null,
+      "onHit": "D",
+      "recovery": "23",
+      "startup": "5"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Forward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "23 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Backward Dash",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "23 total frames",
+      "startup": null
+    },
+    {
+      "active": "26-27",
+      "category": "Common Moves",
+      "name": "Drive Impact: Tiger Punishment",
+      "onBlock": "-3",
+      "onHit": "D",
+      "recovery": "35",
+      "startup": "26"
+    },
+    {
+      "active": "20-22",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while blocking): Tiger Twin Babel",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "20"
+    },
+    {
+      "active": "18-20",
+      "category": "Common Moves",
+      "name": "Drive Reversal (while recovering): Tiger Twin Babel",
+      "onBlock": "-6",
+      "onHit": "D",
+      "recovery": "26",
+      "startup": "18"
+    },
+    {
+      "active": "[*2] 1-12",
+      "category": "Common Moves",
+      "name": "Drive Parry",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "33",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (strike)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "1",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Perfect Parry (projectile)",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "10",
+      "startup": "1"
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Parry Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "45 total frames",
+      "startup": null
+    },
+    {
+      "active": null,
+      "category": "Common Moves",
+      "name": "Cancel Drive Rush",
+      "onBlock": null,
+      "onHit": null,
+      "recovery": "46 total frames",
+      "startup": null
+    }
+  ],
+  "slug": "sagat",
+  "url": "https://www.streetfighter.com/6/character/sagat/frame"
+}

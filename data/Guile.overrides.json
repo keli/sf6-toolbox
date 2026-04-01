@@ -1,43 +1,124 @@
 {
   "character": "Guile",
-  "source": "manual-ai-from-conflicts-csv",
-  "notes": [
-    "Manually reviewed Guile.conflicts.csv line by line.",
-    "Preserved SuperCombo/FAT-style range and variant semantics where present."
-  ],
   "entries": [
     {
       "category": "normal",
-      "move": "Drive Impact: Blitz Combination",
+      "move": "Crouch MP",
       "set": {
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+        "recovery": "13"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
+      "set": {
+        "recovery": "33"
+      }
     },
     {
       "category": "normal",
-      "move": "Drive Reversal: Strike Eagle",
-      "set": { "startup": "18" }
+      "move": "Flying Buster Drop",
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
-      "move": "Guile High Kick",
-      "set": { "onPC": "KD +51 Spin" }
+      "move": "Flying Mare",
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
-      "move": "Knee Bazooka",
-      "set": { "onHit": "0(+4)", "onPC": "+4(+8)" }
+      "move": "HK Somersault Kick",
+      "set": {
+        "recovery": "28+15 land"
+      }
     },
     {
       "category": "normal",
-      "move": "Reverse Spin Kick",
-      "set": { "onHit": "-1 (KD +29)" }
+      "move": "Jump HK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "LK Somersault Kick",
+      "set": {
+        "recovery": "26+15 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MK Somersault Kick",
+      "set": {
+        "recovery": "27+15 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Somersault Kick",
+      "set": {
+        "recovery": "26+20 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Rolling Sobat",
+      "set": {
+        "recovery": "18"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Rolling Sobat",
+      "set": {
+        "recovery": "18"
+      }
     }
-  ]
+  ],
+  "generatedAt": "2026-04-01T13:12:02.871236+00:00",
+  "notes": [
+    "Auto-generated from official SF6 frame pages and FAT comparison.",
+    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+  ],
+  "source": "official-streetfighter-com-frame-vs-fat",
+  "sourceUrl": "https://www.streetfighter.com/6/character/guile/frame"
 }

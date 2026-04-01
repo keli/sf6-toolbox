@@ -1,73 +1,169 @@
 {
   "character": "Dee Jay",
-  "source": "manual-ai-from-conflicts-csv",
-  "notes": [
-    "Manually reviewed Dee Jay.conflicts.csv line by line.",
-    "Preserved SuperCombo/FAT-style range and variant semantics where present."
-  ],
   "entries": [
     {
       "category": "normal",
-      "move": "Crouch HK",
-      "set": { "onHit": "HKD +33(+42)", "onPC": "HKD +52(+61)" }
-    },
-    {
-      "category": "normal",
       "move": "Crouch MP",
-      "set": { "onHit": "+5", "onPC": "+9" }
+      "set": {
+        "recovery": "*14"
+      }
     },
     {
       "category": "normal",
-      "move": "Drive Impact: Wild Beat",
+      "move": "Dee Jay Special 2",
       "set": {
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+        "recovery": "24",
+        "startup": "11"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
+      "set": {
+        "recovery": "33"
+      }
     },
     {
       "category": "normal",
-      "move": "Drive Reversal: Leg Scratch",
-      "set": { "startup": "18" }
+      "move": "Funky Dance 2",
+      "set": {
+        "recovery": "17",
+        "startup": "12"
+      }
     },
     {
       "category": "normal",
-      "move": "Face Breaker",
-      "set": { "active": "2,4" }
+      "move": "HK Jackknife Maximum",
+      "set": {
+        "recovery": "17+15 land"
+      }
     },
     {
       "category": "normal",
-      "move": "OD Machine Gun Upper",
-      "set": { "startup": "26" }
+      "move": "HP Air Slasher",
+      "set": {
+        "startup": "17"
+      }
     },
     {
       "category": "normal",
-      "move": "Speedy Maracas",
-      "set": { "startup": "95(168) minimum" }
+      "move": "Jump HK",
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
-      "move": "Stand HP",
-      "set": { "onHit": "+3(+8)", "onBlock": "-4(+1)", "onPC": "+7(+12)" }
+      "move": "Jump HP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Knee Shot",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "LK Jackknife Maximum",
+      "set": {
+        "recovery": "6 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MK Jackknife Maximum",
+      "set": {
+        "recovery": "22+10 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Air Slasher",
+      "set": {
+        "startup": "10"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Jackknife Maximum",
+      "set": {
+        "recovery": "29+18 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Jus Cool",
+      "set": {
+        "recovery": "36"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Party in the Air",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Stand HK",
+      "set": {
+        "recovery": "*22"
+      }
     },
     {
       "category": "normal",
       "move": "Sunrise Heel",
-      "set": { "onHit": "+5(+6)", "onBlock": "+1(+2)", "onPC": "+9(+10)" }
+      "set": {
+        "startup": "19"
+      }
     },
     {
       "category": "normal",
-      "move": "The Greatest Sobat",
-      "set": { "onPC": "HKD +79 Crumple" }
-    },
-    {
-      "category": "normal",
-      "move": "Weekend Pleasure",
-      "set": { "onHit": "HKD +22", "onPC": "HKD +22" }
+      "move": "Threebeat Combo 2",
+      "set": {
+        "recovery": "20",
+        "startup": "9"
+      }
     }
-  ]
+  ],
+  "generatedAt": "2026-04-01T13:11:49.694614+00:00",
+  "notes": [
+    "Auto-generated from official SF6 frame pages and FAT comparison.",
+    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+  ],
+  "source": "official-streetfighter-com-frame-vs-fat",
+  "sourceUrl": "https://www.streetfighter.com/6/character/deejay/frame"
 }

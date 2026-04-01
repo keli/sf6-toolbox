@@ -1,94 +1,155 @@
 {
   "character": "Ed",
-  "source": "manual-ai-from-conflicts-csv",
-  "notes": [
-    "Manually reviewed Ed.conflicts.csv line by line.",
-    "Preserved SuperCombo/FAT-style range and variant semantics where present."
-  ],
   "entries": [
     {
       "category": "normal",
       "move": "Crouch HK",
       "set": {
-        "recovery": "19(21)",
-        "onHit": "-1",
-        "onBlock": "-6",
-        "onPC": "+3"
+        "recovery": "19"
       }
     },
     {
       "category": "normal",
       "move": "Crouch MK",
-      "set": { "recovery": "16(19)" }
-    },
-    {
-      "category": "normal",
-      "move": "Drive Impact: Turn Punch",
       "set": {
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+        "recovery": "16"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
+      "set": {
+        "recovery": "33"
+      }
     },
     {
       "category": "normal",
-      "move": "Drive Reversal: Hammer Blow",
-      "set": { "startup": "18" }
-    },
-    {
-      "category": "normal",
-      "move": "Face Buster",
-      "set": { "onHit": "KD +24", "onPC": "HKD +24" }
+      "move": "Flicker Combination 2",
+      "set": {
+        "recovery": "15"
+      }
     },
     {
       "category": "normal",
       "move": "HK Psycho Flicker",
-      "set": { "onHit": "KD +51(+63)", "onPC": "KD +51(+63)" }
+      "set": {
+        "startup": "17"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HP Psycho Blitz",
+      "set": {
+        "recovery": "23"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Hitman Combination 2",
+      "set": {
+        "recovery": "20",
+        "startup": "7"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump HP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump LP",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MK",
+      "set": {
+        "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Jump MP",
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
       "move": "LK Psycho Flicker",
-      "set": { "onPC": "KD +60 Crumple" }
+      "set": {
+        "recovery": "26",
+        "startup": "16"
+      }
     },
     {
       "category": "normal",
       "move": "LP Psycho Uppercut",
-      "set": { "recovery": "23(28)" }
+      "set": {
+        "recovery": "28"
+      }
     },
     {
       "category": "normal",
       "move": "MK Psycho Flicker",
-      "set": { "onPC": "KD +62 Crumple" }
+      "set": {
+        "recovery": "26",
+        "startup": "20"
+      }
     },
     {
       "category": "normal",
-      "move": "OD Psycho Blitz",
-      "set": { "active": "1(4)1(3)1(3)1(3)1(3)1(8)2" }
+      "move": "MP Psycho Blitz",
+      "set": {
+        "recovery": "16"
+      }
     },
     {
       "category": "normal",
-      "move": "OD Psycho Spark",
-      "set": { "onBlock": "-2(10)" }
+      "move": "OD Psycho Uppercut",
+      "set": {
+        "recovery": "36"
+      }
     },
     {
       "category": "normal",
-      "move": "Psycho Cannon",
-      "set": { "onBlock": "+65~" }
+      "move": "Stand HP",
+      "set": {
+        "startup": "10"
+      }
     },
     {
       "category": "normal",
-      "move": "Psycho Spark",
-      "set": { "onHit": "+3", "onBlock": "-5", "onPC": "+7" }
-    },
-    {
-      "category": "normal",
-      "move": "Psycho Storm",
-      "set": { "active": "2(7)2(16)2(3)2(16)1(1)1(1)1" }
-    },
-    { "category": "normal", "move": "Stand HP", "set": { "startup": "10" } }
-  ]
+      "move": "Stand MK",
+      "set": {
+        "recovery": "16"
+      }
+    }
+  ],
+  "generatedAt": "2026-04-01T13:11:52.627447+00:00",
+  "notes": [
+    "Auto-generated from official SF6 frame pages and FAT comparison.",
+    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+  ],
+  "source": "official-streetfighter-com-frame-vs-fat",
+  "sourceUrl": "https://www.streetfighter.com/6/character/ed/frame"
 }

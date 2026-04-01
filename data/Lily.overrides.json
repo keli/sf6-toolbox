@@ -1,158 +1,159 @@
 {
   "character": "Lily",
-  "source": "manual-ai-from-conflicts-csv",
-  "notes": [
-    "Manually reviewed Lily.conflicts.csv line by line.",
-    "Preserved SuperCombo/FAT-style range and variant semantics where present."
-  ],
   "entries": [
     {
       "category": "normal",
-      "move": "Breezing Hawk",
-      "set": { "onHit": "KD +27(+19)", "onPC": "KD +27(+19)" }
+      "move": "Condor Dive",
+      "set": {
+        "recovery": "24 land"
+      }
     },
-    { "category": "normal", "move": "Crouch HP", "set": { "active": "2,4" } },
     {
       "category": "normal",
-      "move": "Drive Impact: Earth's Rage",
+      "move": "Double Arrow",
       "set": {
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)"
+        "recovery": "3 land"
       }
     },
     {
       "category": "normal",
       "move": "Drive Parry",
-      "set": { "active": "12 or until released", "recovery": "33(1)(11)" }
+      "set": {
+        "recovery": "33"
+      }
     },
     {
       "category": "normal",
-      "move": "Drive Reversal: Cross Hammer",
-      "set": { "startup": "18" }
+      "move": "Great Spin",
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
       "move": "HK Condor Spire",
       "set": {
-        "recovery": "2+14 land",
-        "onHit": "KD +37(+49)",
-        "onBlock": "-8(+4)",
-        "onPC": "KD +37(+49)"
+        "recovery": "16"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HP Condor Wind",
+      "set": {
+        "startup": "25"
       }
     },
     {
       "category": "normal",
       "move": "HP Tomahawk Buster",
       "set": {
-        "active": "13",
-        "recovery": "26+12 land",
-        "onHit": "KD +36(+41)",
-        "onPC": "KD +36(+41)"
+        "recovery": "25+12 land"
       }
     },
     {
       "category": "normal",
       "move": "Jump HK",
-      "set": { "onHit": "9(+15)", "onBlock": "5(+11)", "onPC": "13(+19)" }
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
       "move": "Jump HP",
-      "set": { "onHit": "6(+15)", "onBlock": "2(+11)", "onPC": "10(+19)" }
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
       "move": "Jump LK",
-      "set": { "onHit": "4(+10)", "onBlock": "0(+6)", "onPC": "8(+14)" }
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
       "move": "Jump LP",
-      "set": { "onHit": "6(+9)", "onBlock": "2(+5)", "onPC": "10(+13)" }
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
       "move": "Jump MK",
-      "set": { "onHit": "7(+13)", "onBlock": "3(+9)", "onPC": "11(+17)" }
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
       "move": "Jump MP",
-      "set": { "onHit": "5(+11)", "onBlock": "1(+7)", "onPC": "9(+15)" }
+      "set": {
+        "recovery": "3 land"
+      }
     },
     {
       "category": "normal",
       "move": "LK Condor Spire",
       "set": {
-        "recovery": "2+14 land",
-        "onHit": "KD +33(+45)",
-        "onBlock": "-8(+4)",
-        "onPC": "KD +33(+45)"
+        "recovery": "16"
       }
     },
     {
       "category": "normal",
       "move": "LP Tomahawk Buster",
       "set": {
-        "recovery": "21+12 land",
-        "onHit": "KD +36(+41)",
-        "onPC": "KD +36(+41)"
+        "recovery": "20+12 land"
       }
     },
     {
       "category": "normal",
       "move": "MK Condor Spire",
       "set": {
-        "recovery": "2+14 land",
-        "onHit": "KD +37(+49)",
-        "onBlock": "-8(+4)",
-        "onPC": "KD +37(+49)"
+        "recovery": "16"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MP Condor Wind",
+      "set": {
+        "startup": "23"
       }
     },
     {
       "category": "normal",
       "move": "MP Tomahawk Buster",
       "set": {
-        "recovery": "25+12 land",
-        "onHit": "KD +36(+42)",
-        "onPC": "KD +36(+42)"
+        "recovery": "24+12 land"
       }
     },
     {
       "category": "normal",
-      "move": "OD Condor Spire",
+      "move": "OD Condor Dive",
       "set": {
-        "recovery": "2+11 land",
-        "onHit": "KD +43(+55)",
-        "onBlock": "-8(+4)",
-        "onPC": "KD +43(+55)"
+        "recovery": "24 land"
       }
     },
     {
       "category": "normal",
       "move": "OD Tomahawk Buster",
       "set": {
-        "active": "3,9",
-        "recovery": "28+15 land",
-        "onHit": "KD +32(+37)",
-        "onPC": "KD +32(+37)"
+        "recovery": "27+15 land"
       }
     },
     {
       "category": "normal",
       "move": "Stand HP",
-      "set": { "startup": "10", "onPC": "KD +84 Crumple" }
-    },
-    {
-      "category": "normal",
-      "move": "Thunderbird",
       "set": {
-        "active": "2x11,3(6)2",
-        "recovery": "39+24 land",
-        "onHit": "KD +46",
-        "onBlock": "-59(-65)",
-        "onPC": "KD +46"
+        "startup": "10"
       }
     }
-  ]
+  ],
+  "generatedAt": "2026-04-01T13:12:17.317991+00:00",
+  "notes": [
+    "Auto-generated from official SF6 frame pages and FAT comparison.",
+    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+  ],
+  "source": "official-streetfighter-com-frame-vs-fat",
+  "sourceUrl": "https://www.streetfighter.com/6/character/lily/frame"
 }
