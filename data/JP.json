@@ -54,14 +54,15 @@
           "recovery": {
             "first": 35,
             "max": 35,
-            "min": 17,
+            "min": 18,
             "numbers": [
               35,
-              17
+              18,
+              20
             ],
-            "raw": "35(17)",
-            "text": "35(17)",
-            "uncertain": false
+            "raw": "35(18~20)",
+            "text": "35(18~20)",
+            "uncertain": true
           },
           "startup": {
             "first": 3,
@@ -77,7 +78,7 @@
         },
         "numCmd": "22K",
         "plnCmd": "d,d+K",
-        "recovery": "35(17)",
+        "recovery": "35(18~20)",
         "startup": 3,
         "total": 55
       },
@@ -195,7 +196,7 @@
         "SA2oH": "KD +51",
         "SelfSoB": "250*250 (500)",
         "SelfSoH": "500*500 (1000)",
-        "active": "2,4",
+        "active": "2*4",
         "atkLvl": "H",
         "blockstun": "25(22)",
         "cmnName": "Launcher Kick",
@@ -230,8 +231,8 @@
               2,
               4
             ],
-            "raw": "2,4",
-            "text": "2,4",
+            "raw": "2*4",
+            "text": "2*4",
             "uncertain": false
           },
           "onBlock": {
@@ -331,7 +332,7 @@
         "DDoH": 5000,
         "SelfSoB": -10000,
         "SelfSoH": -10000,
-        "active": "14,1~",
+        "active": "14*~",
         "atkLvl": "H",
         "blockstun": "44(30)",
         "chp": 500,
@@ -361,13 +362,12 @@
           "active": {
             "first": 14,
             "max": 14,
-            "min": 1,
+            "min": 14,
             "numbers": [
-              14,
-              1
+              14
             ],
-            "raw": "14,1~",
-            "text": "14,1~",
+            "raw": "14*~",
+            "text": "14*~",
             "uncertain": true
           },
           "onBlock": {
@@ -400,9 +400,9 @@
               22,
               32
             ],
-            "raw": "KD +22(+32)",
+            "raw": "KD +22(32)",
             "tags": [],
-            "text": "KD +22(+32)",
+            "text": "KD +22(32)",
             "uncertain": false
           },
           "onPC": {
@@ -421,9 +421,9 @@
               22,
               32
             ],
-            "raw": "KD +22(+32)",
+            "raw": "KD +22(32)",
             "tags": [],
-            "text": "KD +22(+32)",
+            "text": "KD +22(32)",
             "uncertain": false
           },
           "recovery": {
@@ -451,8 +451,8 @@
         },
         "numCmd": "236236P",
         "onBlock": "-33(-23)",
-        "onHit": "KD +22(+32)",
-        "onPC": "KD +22(+32)",
+        "onHit": "KD +22(32)",
+        "onPC": "KD +22(32)",
         "onPP": "-52(-42)",
         "plnCmd": "qcf,qcf+P",
         "range": "1.50 (1st)",
@@ -1284,15 +1284,14 @@
             "uncertain": false
           },
           "startup": {
-            "first": 50,
-            "max": 100,
-            "min": 50,
+            "first": 150,
+            "max": 150,
+            "min": 150,
             "numbers": [
-              50,
-              100
+              150
             ],
-            "raw": "50+100",
-            "text": "50+100",
+            "raw": 150,
+            "text": "150",
             "uncertain": false
           }
         },
@@ -1303,7 +1302,7 @@
         "plnCmd": "qcb+P",
         "projectile": true,
         "recovery": 50,
-        "startup": "50+100",
+        "startup": 150,
         "total": 50
       },
       "Departure: Shadow": {
@@ -1579,56 +1578,36 @@
             "uncertain": false
           },
           "onHit": {
-            "first": 35,
+            "first": null,
             "kd": [
               {
-                "advantage": 35,
-                "advantageMax": 35,
-                "advantageMin": 35,
-                "type": "KD"
-              },
-              {
-                "advantage": 65,
-                "advantageMax": 65,
-                "advantageMin": 65,
+                "advantage": null,
+                "advantageMax": null,
+                "advantageMin": null,
                 "type": "KD"
               }
             ],
-            "max": 65,
-            "min": 35,
-            "numbers": [
-              35,
-              65
-            ],
-            "raw": "KD +35 / Wall Splat KD +65",
-            "tags": [
-              "wall splat"
-            ],
-            "text": "KD +35 / Wall Splat KD +65",
-            "uncertain": false
+            "max": null,
+            "min": null,
+            "numbers": [],
+            "raw": "KD (notes)",
+            "tags": [],
+            "text": "KD (notes)",
+            "uncertain": true
           },
           "onPC": {
-            "first": 21,
-            "kd": [
-              {
-                "advantage": 104,
-                "advantageMax": 104,
-                "advantageMin": 104,
-                "type": "HKD"
-              }
-            ],
+            "first": 104,
+            "kd": [],
             "max": 104,
-            "min": 21,
+            "min": 104,
             "numbers": [
-              21,
-              46,
               104
             ],
-            "raw": "Crumple (Standing +21, Juggle +46, HKD +104)",
+            "raw": "Crumple +104",
             "tags": [
               "crumple"
             ],
-            "text": "Crumple (Standing +21, Juggle +46, HKD +104)",
+            "text": "Crumple +104",
             "uncertain": false
           },
           "recovery": {
@@ -1656,8 +1635,8 @@
         },
         "numCmd": "HPHK",
         "onBlock": -3,
-        "onHit": "KD +35 / Wall Splat KD +65",
-        "onPC": "Crumple (Standing +21, Juggle +46, HKD +104)",
+        "onHit": "KD (notes)",
+        "onPC": "Crumple +104",
         "onPP": -35,
         "plnCmd": "HP+HK",
         "range": 2.535,
@@ -1666,7 +1645,7 @@
         "total": 62
       },
       "Drive Parry": {
-        "active": "12 or until released",
+        "active": "12(2)",
         "cmnName": "Drive Parry",
         "dmgScaling": "50% Multiplier (Perfect)",
         "extraInfo": [
@@ -1707,13 +1686,14 @@
           "active": {
             "first": 12,
             "max": 12,
-            "min": 12,
+            "min": 2,
             "numbers": [
-              12
+              12,
+              2
             ],
-            "raw": "12 or until released",
-            "text": "12 or until released",
-            "uncertain": true
+            "raw": "12(2)",
+            "text": "12(2)",
+            "uncertain": false
           },
           "onBlock": null,
           "onHit": null,
@@ -1724,12 +1704,11 @@
             "min": 1,
             "numbers": [
               33,
-              1,
-              11
+              1
             ],
-            "raw": "33(1)(11)",
-            "text": "33(1)(11)",
-            "uncertain": false
+            "raw": "33(1)notes",
+            "text": "33(1)notes",
+            "uncertain": true
           },
           "startup": {
             "first": 1,
@@ -1745,7 +1724,7 @@
         },
         "numCmd": "MPMK",
         "plnCmd": "MP+MK",
-        "recovery": "33(1)(11)",
+        "recovery": "33(1)notes",
         "startup": 1,
         "total": "45(3)"
       },
@@ -1854,14 +1833,15 @@
             "uncertain": false
           },
           "startup": {
-            "first": 18,
-            "max": 18,
+            "first": 20,
+            "max": 20,
             "min": 18,
             "numbers": [
+              20,
               18
             ],
-            "raw": "18",
-            "text": "18",
+            "raw": "20(18)",
+            "text": "20(18)",
             "uncertain": false
           }
         },
@@ -1873,7 +1853,7 @@
         "plnCmd": "f+HP+HK",
         "range": 1.622,
         "recovery": 26,
-        "startup": "18",
+        "startup": "20(18)",
         "total": "48(46)"
       },
       "Drive Rush": {
@@ -2503,14 +2483,14 @@
             "uncertain": false
           },
           "recovery": {
-            "first": 50,
-            "max": 50,
-            "min": 50,
+            "first": 36,
+            "max": 36,
+            "min": 36,
             "numbers": [
-              50
+              36
             ],
-            "raw": "50 total",
-            "text": "50 total",
+            "raw": 36,
+            "text": "36",
             "uncertain": false
           },
           "startup": {
@@ -2532,7 +2512,7 @@
         "onPP": -14,
         "plnCmd": "qcf+HK",
         "projectile": true,
-        "recovery": "50 total",
+        "recovery": 36,
         "startup": 14,
         "total": 50,
         "xx": [
@@ -2615,9 +2595,9 @@
               67,
               87
             ],
-            "raw": "KD +67(+87)",
+            "raw": "KD +67(87)",
             "tags": [],
-            "text": "KD +67(+87)",
+            "text": "KD +67(87)",
             "uncertain": false
           },
           "onPC": {
@@ -2636,9 +2616,9 @@
               67,
               87
             ],
-            "raw": "KD +67(+87)",
+            "raw": "KD +67(87)",
             "tags": [],
-            "text": "KD +67(+87)",
+            "text": "KD +67(87)",
             "uncertain": false
           },
           "recovery": {
@@ -2666,8 +2646,8 @@
         },
         "numCmd": "236HP",
         "onBlock": 4,
-        "onHit": "KD +67(+87)",
-        "onPC": "KD +67(+87)",
+        "onHit": "KD +67(87)",
+        "onPC": "KD +67(87)",
         "onPP": "-35(-23)",
         "plnCmd": "qcf+HP",
         "projectile": true,
@@ -2733,43 +2713,43 @@
             "uncertain": false
           },
           "onHit": {
-            "first": 44,
+            "first": 23,
             "kd": [
               {
-                "advantage": 44,
-                "advantageMax": 44,
-                "advantageMin": 44,
+                "advantage": 23,
+                "advantageMax": 23,
+                "advantageMin": 23,
                 "type": "HKD"
               }
             ],
-            "max": 44,
-            "min": 44,
+            "max": 23,
+            "min": 23,
             "numbers": [
-              44
+              23
             ],
-            "raw": "HKD +44",
+            "raw": "HKD +23",
             "tags": [],
-            "text": "HKD +44",
+            "text": "HKD +23",
             "uncertain": false
           },
           "onPC": {
-            "first": 44,
+            "first": 23,
             "kd": [
               {
-                "advantage": 44,
-                "advantageMax": 44,
-                "advantageMin": 44,
+                "advantage": 23,
+                "advantageMax": 23,
+                "advantageMin": 23,
                 "type": "HKD"
               }
             ],
-            "max": 44,
-            "min": 44,
+            "max": 23,
+            "min": 23,
             "numbers": [
-              44
+              23
             ],
-            "raw": "HKD +44",
+            "raw": "HKD +23",
             "tags": [],
-            "text": "HKD +44",
+            "text": "HKD +23",
             "uncertain": false
           },
           "recovery": {
@@ -2797,8 +2777,8 @@
         },
         "numCmd": "236236K",
         "onBlock": -50,
-        "onHit": "HKD +44",
-        "onPC": "HKD +44",
+        "onHit": "HKD +23",
+        "onPC": "HKD +23",
         "onPP": -66,
         "plnCmd": "qcf,qcf+K",
         "recovery": 62,
@@ -3662,14 +3642,14 @@
             "uncertain": false
           },
           "recovery": {
-            "first": 50,
-            "max": 50,
-            "min": 50,
+            "first": 36,
+            "max": 36,
+            "min": 36,
             "numbers": [
-              50
+              36
             ],
-            "raw": "50 total",
-            "text": "50 total",
+            "raw": 36,
+            "text": "36",
             "uncertain": false
           },
           "startup": {
@@ -3691,7 +3671,7 @@
         "onPP": -18,
         "plnCmd": "qcf+LK",
         "projectile": true,
-        "recovery": "50 total",
+        "recovery": 36,
         "startup": 14,
         "total": 50,
         "xx": [
@@ -3706,7 +3686,7 @@
         "OppSoH": "210*350 (560)",
         "SelfSoB": "150*250 (400)",
         "SelfSoH": "300*500 (800)",
-        "active": "3,3",
+        "active": "3*3",
         "atkLvl": "H",
         "blockstun": "24(21)",
         "chp": "250 (75*175)",
@@ -3739,8 +3719,8 @@
               3,
               3
             ],
-            "raw": "3,3",
-            "text": "3,3",
+            "raw": "3*3",
+            "text": "3*3",
             "uncertain": false
           },
           "onBlock": {
@@ -4002,14 +3982,14 @@
             "uncertain": false
           },
           "recovery": {
-            "first": 50,
-            "max": 50,
-            "min": 50,
+            "first": 36,
+            "max": 36,
+            "min": 36,
             "numbers": [
-              50
+              36
             ],
-            "raw": "50 total",
-            "text": "50 total",
+            "raw": 36,
+            "text": "36",
             "uncertain": false
           },
           "startup": {
@@ -4031,7 +4011,7 @@
         "onPP": -14,
         "plnCmd": "qcf+MK",
         "projectile": true,
-        "recovery": "50 total",
+        "recovery": 36,
         "startup": 14,
         "total": 50,
         "xx": [
@@ -4356,11 +4336,12 @@
             "min": 17,
             "numbers": [
               35,
-              17
+              17,
+              20
             ],
-            "raw": "35(17)",
-            "text": "35(17)",
-            "uncertain": false
+            "raw": "35(17~20)",
+            "text": "35(17~20)",
+            "uncertain": true
           },
           "startup": {
             "first": 1,
@@ -4376,7 +4357,7 @@
         },
         "numCmd": "22KK",
         "plnCmd": "d,d+KK",
-        "recovery": "35(17)",
+        "recovery": "35(17~20)",
         "startup": 1,
         "total": 55
       },
@@ -4492,7 +4473,7 @@
         "OppSoH": "280*280 (560)",
         "SelfSoB": "200*200 (400)",
         "SelfSoH": "400*400 (800)",
-        "active": "[10(20)10]",
+        "active": "10(20)10",
         "atkLvl": "H",
         "blockstun": "31 each",
         "chp": "250 (125*125)",
@@ -4535,8 +4516,8 @@
               20,
               10
             ],
-            "raw": "[10(20)10]",
-            "text": "[10(20)10]",
+            "raw": "10(20)10",
+            "text": "10(20)10",
             "uncertain": false
           },
           "onBlock": {
@@ -4600,15 +4581,15 @@
             "uncertain": false
           },
           "startup": {
-            "first": 40,
-            "max": 70,
-            "min": 40,
+            "first": 110,
+            "max": 140,
+            "min": 110,
             "numbers": [
-              40,
-              70
+              110,
+              140
             ],
-            "raw": "40+70",
-            "text": "40+70",
+            "raw": "110*140",
+            "text": "110*140",
             "uncertain": false
           }
         },
@@ -4619,7 +4600,7 @@
         "plnCmd": "qcb+PP",
         "projectile": true,
         "recovery": 40,
-        "startup": "40+70",
+        "startup": "110*140",
         "total": 40
       },
       "OD Departure: Shadow": {
@@ -4954,9 +4935,9 @@
               56,
               72
             ],
-            "raw": "KD +56(+72)",
+            "raw": "KD +56(72)",
             "tags": [],
-            "text": "KD +56(+72)",
+            "text": "KD +56(72)",
             "uncertain": false
           },
           "onPC": {
@@ -4975,9 +4956,9 @@
               56,
               72
             ],
-            "raw": "KD +56(+72)",
+            "raw": "KD +56(72)",
             "tags": [],
-            "text": "KD +56(+72)",
+            "text": "KD +56(72)",
             "uncertain": false
           },
           "recovery": {
@@ -5005,8 +4986,8 @@
         },
         "numCmd": "236PP",
         "onBlock": 2,
-        "onHit": "KD +56(+72)",
-        "onPC": "KD +56(+72)",
+        "onHit": "KD +56(72)",
+        "onPC": "KD +56(72)",
         "onPP": "-35(-26)",
         "plnCmd": "qcf+PP",
         "projectile": true,
@@ -5126,25 +5107,25 @@
             "uncertain": false
           },
           "recovery": {
-            "first": 50,
-            "max": 50,
-            "min": 50,
+            "first": 36,
+            "max": 36,
+            "min": 36,
             "numbers": [
-              50
+              36
             ],
-            "raw": "50 total",
-            "text": "50 total",
+            "raw": 36,
+            "text": "36",
             "uncertain": false
           },
           "startup": {
-            "first": 22,
-            "max": 22,
-            "min": 22,
+            "first": 14,
+            "max": 14,
+            "min": 14,
             "numbers": [
-              22
+              14
             ],
-            "raw": "22",
-            "text": "22",
+            "raw": 14,
+            "text": "14",
             "uncertain": false
           }
         },
@@ -5155,8 +5136,8 @@
         "onPP": "-18(+13)",
         "plnCmd": "qcf+KK",
         "projectile": true,
-        "recovery": "50 total",
-        "startup": "22",
+        "recovery": 36,
+        "startup": 14,
         "total": 50,
         "xx": [
           "su2",
@@ -5173,7 +5154,7 @@
         "SA2oH": "KD +56 / Combo",
         "SelfSoB": "250*250 (500)",
         "SelfSoH": "500*500 (1000)",
-        "active": "10,10",
+        "active": "10*10",
         "atkLvl": "H",
         "blockstun": "37(27)",
         "chp": "250 (125*125)",
@@ -5208,8 +5189,8 @@
               10,
               10
             ],
-            "raw": "10,10",
-            "text": "10,10",
+            "raw": "10*10",
+            "text": "10*10",
             "uncertain": false
           },
           "onBlock": {
@@ -5241,9 +5222,9 @@
               53,
               50
             ],
-            "raw": "KD +53(+50)",
+            "raw": "KD +53(50)",
             "tags": [],
-            "text": "KD +53(+50)",
+            "text": "KD +53(50)",
             "uncertain": false
           },
           "onPC": {
@@ -5262,20 +5243,20 @@
               57,
               50
             ],
-            "raw": "KD +57(+50)",
+            "raw": "KD +57(50)",
             "tags": [],
-            "text": "KD +57(+50)",
+            "text": "KD +57(50)",
             "uncertain": false
           },
           "recovery": {
-            "first": 14,
-            "max": 14,
-            "min": 14,
+            "first": 33,
+            "max": 33,
+            "min": 33,
             "numbers": [
-              14
+              33
             ],
-            "raw": "14",
-            "text": "14",
+            "raw": 33,
+            "text": "33",
             "uncertain": false
           },
           "startup": {
@@ -5292,12 +5273,12 @@
         },
         "numCmd": "22PP",
         "onBlock": 3,
-        "onHit": "KD +53(+50)",
-        "onPC": "KD +57(+50)",
+        "onHit": "KD +53(50)",
+        "onPC": "KD +57(50)",
         "onPP": "3(-23)",
         "plnCmd": "d,d+PP",
         "projectile": true,
-        "recovery": "14",
+        "recovery": 33,
         "startup": 20,
         "total": 53,
         "xx": [
@@ -5342,43 +5323,43 @@
           },
           "onBlock": null,
           "onHit": {
-            "first": 23,
+            "first": 24,
             "kd": [
               {
-                "advantage": 23,
-                "advantageMax": 23,
-                "advantageMin": 23,
+                "advantage": 24,
+                "advantageMax": 24,
+                "advantageMin": 24,
                 "type": "KD"
               }
             ],
-            "max": 23,
-            "min": 23,
+            "max": 24,
+            "min": 24,
             "numbers": [
-              23
+              24
             ],
-            "raw": "KD +23",
+            "raw": "KD +24",
             "tags": [],
-            "text": "KD +23",
+            "text": "KD +24",
             "uncertain": false
           },
           "onPC": {
-            "first": 23,
+            "first": 24,
             "kd": [
               {
-                "advantage": 23,
-                "advantageMax": 23,
-                "advantageMin": 23,
+                "advantage": 24,
+                "advantageMax": 24,
+                "advantageMin": 24,
                 "type": "HKD"
               }
             ],
-            "max": 23,
-            "min": 23,
+            "max": 24,
+            "min": 24,
             "numbers": [
-              23
+              24
             ],
-            "raw": "HKD +23",
+            "raw": "HKD +24",
             "tags": [],
-            "text": "HKD +23",
+            "text": "HKD +24",
             "uncertain": false
           },
           "recovery": {
@@ -5405,8 +5386,8 @@
           }
         },
         "numCmd": "LPLK",
-        "onHit": "KD +23",
-        "onPC": "HKD +23",
+        "onHit": "KD +24",
+        "onPC": "HKD +24",
         "plnCmd": "LP+LK",
         "range": 0.8,
         "recovery": 23,
@@ -6361,34 +6342,34 @@
             "uncertain": false
           },
           "onPC": {
-            "first": 44,
+            "first": 48,
             "kd": [
               {
-                "advantage": 44,
-                "advantageMax": 44,
-                "advantageMin": 44,
+                "advantage": 48,
+                "advantageMax": 48,
+                "advantageMin": 48,
                 "type": "KD"
               }
             ],
-            "max": 44,
-            "min": 44,
+            "max": 48,
+            "min": 48,
             "numbers": [
-              44
+              48
             ],
-            "raw": "KD +44",
+            "raw": "KD +48",
             "tags": [],
-            "text": "KD +44",
+            "text": "KD +48",
             "uncertain": false
           },
           "recovery": {
-            "first": 24,
-            "max": 24,
-            "min": 24,
+            "first": 34,
+            "max": 34,
+            "min": 34,
             "numbers": [
-              24
+              34
             ],
-            "raw": "24",
-            "text": "24",
+            "raw": 34,
+            "text": "34",
             "uncertain": false
           },
           "startup": {
@@ -6406,11 +6387,11 @@
         "numCmd": "22P",
         "onBlock": -2,
         "onHit": "KD +44",
-        "onPC": "KD +44",
+        "onPC": "KD +48",
         "onPP": -23,
         "plnCmd": "d,d+P",
         "projectile": true,
-        "recovery": "24",
+        "recovery": 34,
         "startup": 22,
         "total": 55,
         "xx": [

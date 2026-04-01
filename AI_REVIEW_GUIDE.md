@@ -15,12 +15,15 @@ This guide defines the AI workflow for deciding and applying manual overrides to
 
 `apply_character_overrides.py` supports two base sources:
 
-- `--apply-base fat` (default): read from `data/<Character>.fat.json`
-- `--apply-base final`: read from existing `data/<Character>.json`
+- default behavior: copy `data/<Character>.fat.json` to final `data/<Character>.json` and skip all overrides
+- `--use-overrides`: enable reading and applying `data/<Character>.overrides.json`
+- `--apply-base fat` (default): when overrides are enabled, read from `data/<Character>.fat.json`
+- `--apply-base final`: when overrides are enabled, read from existing `data/<Character>.json`
+- `--copy-fat-only`: force FAT copy mode and skip all overrides (even if `--use-overrides` is set)
 
 Strict value-format validation is optional:
 
-- default: non-strict (simple override application)
+- default: non-strict
 - `--strict`: enforce index-friendly value format checks
 
 ## Override Authoring Policy (Current)
@@ -74,9 +77,9 @@ If overrides intentionally preserve FAT-style ranges/variants, use non-strict ap
 1. Regenerate per-character FAT normalized fields:
    - `python3 build_character_data.py normalize`
 2. Apply manual overrides from FAT base:
-   - `python3 apply_character_overrides.py --apply-base fat`
+   - `python3 apply_character_overrides.py --use-overrides --apply-base fat`
 3. Optional strict lint run (only if your overrides intentionally avoid FAT-style range forms):
-   - `python3 apply_character_overrides.py --apply-base fat --strict`
+   - `python3 apply_character_overrides.py --use-overrides --apply-base fat --strict`
 
 ## KD Value Format Rules
 

@@ -125,8 +125,8 @@ def apply_overrides_to_character(
 def main() -> int:
     ap = argparse.ArgumentParser(
         description=(
-            "Apply per-character index-friendly overrides and write "
-            "frontend-ready merged character JSON files."
+            "Write frontend-ready per-character JSON files; default mode copies "
+            "FAT data and skips overrides unless --use-overrides is set."
         )
     )
     ap.add_argument(
@@ -162,7 +162,28 @@ def main() -> int:
             "(default: off)"
         ),
     )
+    ap.add_argument(
+        "--copy-fat-only",
+        action="store_true",
+        help=(
+            "Generate final `<char>.json` by copying `<char>.fat.json` directly "
+            "and skip all overrides."
+        ),
+    )
+    ap.add_argument(
+        "--use-overrides",
+        action="store_true",
+        help=(
+            "Apply `<char>.overrides.json` on top of base data. "
+            "Default behavior skips overrides and copies FAT data."
+        ),
+    )
     args = ap.parse_args()
+    use_fat_only = (not args.use_overrides) or args.copy_fat_only
+    if args.copy_fat_only and args.use_overrides:
+        print("Note: --copy-fat-only takes precedence; overrides will be skipped.")
+    if use_fat_only and args.apply_base != "fat":
+        print("Note: FAT-copy mode ignores --apply-base and always uses FAT files.")
 
     index_payload = read_json(args.char_index)
     rows = list(index_payload.get("characters", []))
@@ -174,7 +195,9 @@ def main() -> int:
         if not char_name or not fat_file:
             continue
 
-        source_file = fat_file if args.apply_base == "fat" else out_file
+        source_file = (
+            fat_file if (use_fat_only or args.apply_base == "fat") else out_file
+        )
         source_path = os.path.join(args.data_dir, source_file)
         out_path = os.path.join(args.data_dir, out_file)
         if not os.path.exists(source_path):
@@ -183,7 +206,7 @@ def main() -> int:
 
         overrides_file = f"{char_filename(char_name)}.overrides.json"
         overrides_path = os.path.join(args.overrides_dir, overrides_file)
-        entries = load_char_overrides(overrides_path, char_name)
+        entries = [] if use_fat_only else load_char_overrides(overrides_path, char_name)
         changed = (
             apply_overrides_to_character(
                 char_name, char_data, entries, strict=args.strict
@@ -193,9 +216,10 @@ def main() -> int:
         )
         total_changes += changed
         write_json(out_path, char_data)
+        base_label = "fat(copy-only)" if use_fat_only else args.apply_base
         print(
             f"{char_name}: wrote {os.path.basename(out_path)} "
-            f"(base={args.apply_base}, strict={args.strict}, changed_fields={changed})"
+            f"(base={base_label}, strict={args.strict}, changed_fields={changed})"
         )
 
     print(f"Done. total_changed_fields={total_changes}")

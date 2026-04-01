@@ -123,8 +123,11 @@ python3 apply_character_overrides.py
 ```
 
 选项：
-- `--apply-base fat`（默认）：从 `角色名.fat.json` 开始应用覆盖
-- `--apply-base final`：从现有 `角色名.json` 开始应用覆盖（追加修正）
+- 默认行为：生成最终 `角色名.json` 时完全复制 `角色名.fat.json`，并跳过全部 overrides
+- `--use-overrides`：启用 `角色名.overrides.json` 覆盖逻辑
+- `--apply-base fat`（默认）：启用 overrides 时，从 `角色名.fat.json` 开始应用覆盖
+- `--apply-base final`：启用 overrides 时，从现有 `角色名.json` 开始应用覆盖（追加修正）
+- `--copy-fat-only`：强制仅复制 FAT（即使传了 `--use-overrides` 也会忽略）
 - `--strict`：启用值格式校验
 
 ## 文件结构
