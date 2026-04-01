@@ -37,11 +37,7 @@ function escapeAttr(text) {
 function listStealableNormals(ob, normalButtons) {
   if (ob == null) return [];
   return normalButtons
-    .filter((m) => {
-      const diff = m.startup - ob - 4;
-      if (diff < 0) return true;
-      return diff === 0 && /(MP|MK|HP|HK)$/.test(m.cmd);
-    })
+    .filter((m) => m.startup <= ob)
     .sort(
       (a, b) =>
         (b.dmg ?? -1) - (a.dmg ?? -1) ||
