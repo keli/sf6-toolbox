@@ -7,6 +7,24 @@ const HIT_TYPE_CLASS = {
   cc: "kd-type-cc",
 };
 
+function isFixedDrMeatyRow(r) {
+  const isDrLastPrefix = r.prefix[r.prefix.length - 1]?.cmd === "DR";
+  return (
+    isDrLastPrefix &&
+    r.meaty.moveType === "normal" &&
+    !/^[789]/.test(r.meaty.cmd) &&
+    (r.meaty.rawDRoH != null || r.meaty.rawDRoB != null)
+  );
+}
+
+function rowOnHitAdv(r) {
+  return isFixedDrMeatyRow(r) ? r.meaty.rawDRoH : r.totalAdv;
+}
+
+function rowOnBlockAdv(r) {
+  return isFixedDrMeatyRow(r) ? r.meaty.rawDRoB : r.totalBlock;
+}
+
 function fmtSeq(prefix, meaty) {
   return [...prefix.map((m) => m.cmd), meaty.cmd].join(" → ");
 }
@@ -158,7 +176,7 @@ export function renderResults(state, results) {
 
   const effectiveOnly = document.getElementById("effectiveOnly").checked;
   const onBlockFlipped = (r) =>
-    r.meaty.onBlock != null && r.meaty.onBlock <= 0 && r.totalBlock > 0;
+    r.meaty.onBlock != null && r.meaty.onBlock <= 0 && rowOnBlockAdv(r) > 0;
   if (effectiveOnly)
     results = results.filter((r) => r.onHitFlipped || onBlockFlipped(r));
 
@@ -267,12 +285,15 @@ export function renderResults(state, results) {
 
     visibleCount += sortedRows.length;
     for (const r of sortedRows) {
+      const isFixedDr = isFixedDrMeatyRow(r);
       const stolen = r.activeFrameHit - 1;
+      const hitAdv = rowOnHitAdv(r);
+      const blockAdv = rowOnBlockAdv(r);
 
       const totalStr = r.meaty.knockdowns.length
         ? `<span class="kd-adv-cell">${t(r.kdInfo.kdType === "HKD" ? "hkd_label" : "kd_label")}</span>`
-        : r.totalAdv != null
-          ? `<span class="total-adv">+${r.totalAdv}</span>${fmtHitFollowupTags(r.totalAdv, normalButtons)}`
+        : hitAdv != null
+          ? `<span class="total-adv">+${hitAdv}</span>${fmtHitFollowupTags(hitAdv, normalButtons)}`
           : "?";
 
       const delayStr =
@@ -296,10 +317,14 @@ export function renderResults(state, results) {
         : `${r.meaty.startup}`;
       html += `<td>${startupCell}</td>`;
       html += `<td>${r.meaty.active}</td>`;
-      html += `<td>${r.activeFrameHit}/${r.meaty.active}${canDelayStr}</td>`;
-      html += `<td><span class="stolen">+${stolen}</span></td>`;
+      html += isFixedDr
+        ? `<td>1/${r.meaty.active}</td>`
+        : `<td>${r.activeFrameHit}/${r.meaty.active}${canDelayStr}</td>`;
+      html += isFixedDr
+        ? `<td><span class="safe-zero">-</span></td>`
+        : `<td><span class="stolen">+${stolen}</span></td>`;
       html += `<td>${totalStr}</td>`;
-      html += `<td>${fmtBlock(r.totalBlock)}${fmtBlockFollowupTag(r.totalBlock, normalButtons)}</td>`;
+      html += `<td>${fmtBlock(blockAdv)}${fmtBlockFollowupTag(blockAdv, normalButtons)}</td>`;
       html += "</tr>";
     }
 
