@@ -17,8 +17,8 @@ python3 -m http.server
 
 数据加载方式（Meaty 计算器）：
 - 先读取 `data/characters.index.json` 角色索引
-- 再按角色按需读取 `data/<角色名>.json`
-- FAT 原始版本对应 `data/<角色名>.fat.json`
+- 再按角色按需读取 `data/<角色目录>/final.json`
+- FAT 原始版本对应 `data/<角色目录>/fat.json`
 
 ---
 
@@ -82,7 +82,7 @@ python3 build_character_data.py normalize
 
 - `normalize` 会：
   - 读取 FAT 基线（默认 `data/sf6framedata.json`）
-  - 重写 `data/角色名.fat.json`（包含 `normalized` 字段）
+  - 重写 `data/<角色目录>/fat.json`（包含 `normalized` 字段）
   - 更新 `data/characters.index.json`
 
 如需先在线下载最新 FAT 基线再重建：
@@ -95,23 +95,23 @@ python3 build_character_data.py normalize --download-base
 
 先用官网数据对比 FAT 生成 overrides 候选与冲突清单，再按需人工审阅。
 
-写好覆盖文件后，执行 apply 脚本生成最终 `角色名.json`：
+写好覆盖文件后，执行 apply 脚本生成最终 `final.json`：
 
 ```bash
 python3 apply_character_overrides.py
 ```
 
 选项：
-- 默认行为：生成最终 `角色名.json` 时完全复制 `角色名.fat.json`，并跳过全部 overrides
-- `--use-overrides`：启用 `角色名.overrides.json` 覆盖逻辑
-- `--apply-base fat`（默认）：启用 overrides 时，从 `角色名.fat.json` 开始应用覆盖
-- `--apply-base final`：启用 overrides 时，从现有 `角色名.json` 开始应用覆盖（追加修正）
+- 默认行为：生成最终数据时完全复制索引里的 `fatFile`，并跳过全部 overrides
+- `--use-overrides`：启用索引里的 `overridesFile` 覆盖逻辑
+- `--apply-base fat`（默认）：启用 overrides 时，从索引里的 `fatFile` 开始应用覆盖
+- `--apply-base final`：启用 overrides 时，从索引里的 `file` 开始应用覆盖（追加修正）
 - `--copy-fat-only`：强制仅复制 FAT（即使传了 `--use-overrides` 也会忽略）
 - `--strict`：启用值格式校验
 
 ## 从官网重建 Overrides（推荐）
 
-如果你希望忽略旧的 overrides，直接从官网 Frame Data 重新抓取并和 FAT 比对生成新的 `data/*.overrides.json`，运行：
+如果你希望忽略旧的 overrides，直接从官网 Frame Data 重新抓取并和 FAT 比对生成新的角色覆盖文件，运行：
 
 ```bash
 python3 build_official_overrides.py
@@ -121,9 +121,9 @@ python3 build_official_overrides.py
 - 脚本会自动从 `https://www.streetfighter.com/6/character` 读取角色 slug（例如 `vega_mbison`、`gouki_akuma`）。
 - 默认优先复用各角色目录下的 `official.json`，不会重复抓网页；只有缺失时才抓取。
 - 如需强制重新抓取每个角色页面，使用 `--refresh`。
-- 会覆盖现有的 `data/角色名.overrides.json`。
-- 会把官网解析后的原始行数据保存到 `data/角色名/official.json` 方便审计。
-- 会额外生成差异清单：`data/official-frame/角色名.official.conflicts.csv` 与汇总 `data/official-frame/official_overrides.conflicts.csv`。
+- 会覆盖现有的 `data/<角色目录>/overrides.json`。
+- 会把官网解析后的原始行数据保存到 `data/<角色目录>/official.json` 方便审计。
+- 会额外生成差异清单：`data/<角色目录>/official.conflicts.csv` 与汇总 `data/official_overrides.conflicts.csv`。
 
 常用选项：
 - `--chars Ryu,Ken`：只处理指定角色（用 `data/characters.index.json` 里的名称）
@@ -142,12 +142,13 @@ sf6-toolbox/
 ├── data/
 │   ├── sf6framedata.json           # FAT 基线数据（完整）
 │   ├── characters.index.json       # 角色索引（前端先读取）
-│   ├── 角色名.json                  # 正式使用数据（apply 脚本生成）
-│   ├── 角色名.fat.json              # FAT 来源数据
-│   ├── official-frame/              # 官网抓取及对比产物
-│   │   ├── official.json
-│   │   ├── 角色名.official.conflicts.csv
-│   │   └── official_overrides.conflicts.csv
-│   └── 角色名.overrides.json        # 人工/AI 校对后的覆盖值
+│   ├── official_overrides.conflicts.csv  # 官网比对总冲突清单
+│   ├── 角色目录/
+│   │   ├── fat.json                 # FAT 来源数据（含 normalized）
+│   │   ├── final.json               # 正式使用数据（apply 脚本生成）
+│   │   ├── overrides.json           # 人工/AI 校对后的覆盖值
+│   │   ├── official.json            # 官网抓取的原始 frame 解析结果
+│   │   └── official.conflicts.csv   # 该角色官网 vs FAT 冲突清单
+│   └── i18n-zh.json                 # 中文文案
 └── README.md
 ```
