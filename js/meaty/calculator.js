@@ -9,21 +9,27 @@ function tryMeaty(
   nonLightMoves,
   opts,
 ) {
-  const isDrLastPrefix = prefix[prefix.length - 1]?.cmd === "DR";
-  const drNormalBypassStartup =
-    isDrLastPrefix && meaty.moveType === "normal" && !/^[789]/.test(meaty.cmd);
-  // DR -> ground normals skip startup; treat it as 1f in this timeline model.
-  const S = drNormalBypassStartup ? 1 : meaty.startup;
+  const S = meaty.startup;
   const A = meaty.active;
+  const isDrLastPrefix = prefix[prefix.length - 1]?.cmd === "DR";
+  if (isDrLastPrefix && moveNeedsCharge(meaty)) return;
+  const drNoSteal = isDrLastPrefix;
+  const drBonus = drNoSteal && meaty.moveType === "normal" ? 4 : 0;
   if (S - 1 <= K && K <= S + A - 2) {
     const activeFrameHit = K - S + 2;
     const stolen = activeFrameHit - 1;
     let totalAdv = null;
-    if (!meaty.knockdowns.length && meaty.onHit != null)
-      totalAdv = meaty.onHit + stolen;
-    const totalBlock = meaty.onBlock != null ? meaty.onBlock + stolen : null;
+    if (!meaty.knockdowns.length && meaty.onHit != null) {
+      totalAdv = drNoSteal ? meaty.onHit + drBonus : meaty.onHit + stolen;
+    }
+    const totalBlock =
+      meaty.onBlock != null
+        ? drNoSteal
+          ? meaty.onBlock + drBonus
+          : meaty.onBlock + stolen
+        : null;
 
-    if (stolen === 0) return;
+    if (stolen === 0 && !drNoSteal) return;
     const unlockedMoves =
       totalAdv != null && meaty.onHit != null
         ? nonLightMoves
@@ -45,6 +51,7 @@ function tryMeaty(
       K,
       delay,
       activeFrameHit,
+      drNoSteal,
       totalAdv,
       totalBlock,
       onHitFlipped,
@@ -68,11 +75,24 @@ function moveIsSuperOrCA(move) {
   );
 }
 
+function moveNeedsCharge(move) {
+  const cmd = String(move?.cmd || "").trim();
+  // Numpad charge motions, e.g. 46P / 28K and directional variants.
+  return /^(?:[124]6|[123]8)/.test(cmd);
+}
+
 const CHARACTER_FILTER_RULES = {
   "M.Bison": {
     consumeBombAfterBombKd: true,
     consumeBombAfterSuperKd: true,
-    consumeBombAfterKdCmdPrefixes: ["46PP", "236KK"],
+    consumeBombAfterKdCmdPrefixes: [
+      "46PP",
+      "236KK",
+      "46LP",
+      "46MP",
+      "46HP",
+      "214PP",
+    ],
   },
 };
 
@@ -137,10 +157,10 @@ export function calcMeatys(moves, opts) {
     prefixPool.push({
       name: "Drive Rush",
       cmd: "DR",
-      startup: 14,
+      startup: 11,
       active: 0,
       recovery: 0,
-      total: 14,
+      total: 11,
       onBlock: null,
       onHit: null,
       moveType: "dash",

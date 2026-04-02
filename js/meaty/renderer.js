@@ -7,22 +7,12 @@ const HIT_TYPE_CLASS = {
   cc: "kd-type-cc",
 };
 
-function isFixedDrMeatyRow(r) {
-  const isDrLastPrefix = r.prefix[r.prefix.length - 1]?.cmd === "DR";
-  return (
-    isDrLastPrefix &&
-    r.meaty.moveType === "normal" &&
-    !/^[789]/.test(r.meaty.cmd) &&
-    (r.meaty.rawDRoH != null || r.meaty.rawDRoB != null)
-  );
-}
-
 function rowOnHitAdv(r) {
-  return isFixedDrMeatyRow(r) ? r.meaty.rawDRoH : r.totalAdv;
+  return r.totalAdv;
 }
 
 function rowOnBlockAdv(r) {
-  return isFixedDrMeatyRow(r) ? r.meaty.rawDRoB : r.totalBlock;
+  return r.totalBlock;
 }
 
 function fmtSeq(prefix, meaty) {
@@ -285,7 +275,6 @@ export function renderResults(state, results) {
 
     visibleCount += sortedRows.length;
     for (const r of sortedRows) {
-      const isFixedDr = isFixedDrMeatyRow(r);
       const stolen = r.activeFrameHit - 1;
       const hitAdv = rowOnHitAdv(r);
       const blockAdv = rowOnBlockAdv(r);
@@ -308,19 +297,10 @@ export function renderResults(state, results) {
 
       html += "<tr>";
       html += `<td>${fmtSeqWithFrames(r.prefix, r.meaty)}${delayStr}</td>`;
-      const drBypassStartup =
-        r.prefix[0]?.cmd === "DR" &&
-        r.meaty.moveType === "normal" &&
-        !/^[789]/.test(r.meaty.cmd);
-      const startupCell = drBypassStartup
-        ? `0 <span style="color:#888;font-size:0.85em">(${r.meaty.startup})</span>`
-        : `${r.meaty.startup}`;
-      html += `<td>${startupCell}</td>`;
+      html += `<td>${r.meaty.startup}</td>`;
       html += `<td>${r.meaty.active}</td>`;
-      html += isFixedDr
-        ? `<td>1/${r.meaty.active}</td>`
-        : `<td>${r.activeFrameHit}/${r.meaty.active}${canDelayStr}</td>`;
-      html += isFixedDr
+      html += `<td>${r.activeFrameHit}/${r.meaty.active}${canDelayStr}</td>`;
+      html += r.drNoSteal
         ? `<td><span class="safe-zero">-</span></td>`
         : `<td><span class="stolen">+${stolen}</span></td>`;
       html += `<td>${totalStr}</td>`;
