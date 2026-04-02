@@ -8632,7 +8632,6 @@
         "onPC": "KD +22",
         "onPP": -39,
         "plnCmd": "qcf,qcf+K (0 stock)",
-        "rawDRoB": -21,
         "recovery": 40,
         "startup": 10,
         "total": 64
@@ -8759,7 +8758,6 @@
         "onPC": "KD +38",
         "onPP": -39,
         "plnCmd": "qcf,qcf+K > K (1 stock)",
-        "rawDRoB": -21,
         "recovery": 40,
         "startup": 10,
         "total": 64
@@ -8876,8 +8874,6 @@
         "onHit": 2,
         "onPC": 6,
         "plnCmd": "LP > MP > d+HP",
-        "rawDRoB": -6,
-        "rawDRoH": 6,
         "recovery": 25,
         "startup": 10,
         "total": 36
@@ -9003,7 +8999,6 @@
         "onPC": "KD +26",
         "onPP": -25,
         "plnCmd": "LP > MP > d+HP > HK",
-        "rawDRoB": -8,
         "recovery": 24,
         "startup": 15,
         "total": 41
@@ -9130,7 +9125,6 @@
         "onPC": "KD +16",
         "onPP": -24,
         "plnCmd": "LP > MP > d+HP > d+HK ",
-        "rawDRoB": -8,
         "recovery": 23,
         "startup": 15,
         "total": 40
@@ -9259,7 +9253,6 @@
         "onPC": "HKD +16",
         "onPP": -55,
         "plnCmd": "qcf,qcf+P",
-        "rawDRoB": -31,
         "recovery": 51,
         "startup": 8,
         "total": 64
@@ -9388,7 +9381,6 @@
         "onPC": "HKD +16",
         "onPP": -55,
         "plnCmd": "qcf,qcf+P (CA)",
-        "rawDRoB": -31,
         "recovery": 51,
         "startup": 8,
         "total": 64
@@ -9502,8 +9494,6 @@
         "onHit": 1,
         "onPC": 5,
         "plnCmd": "LP > MP",
-        "rawDRoB": -2,
-        "rawDRoH": 5,
         "recovery": 18,
         "startup": 6,
         "total": 26
@@ -9632,7 +9622,6 @@
         "onHit": "KD +47",
         "onPC": "KD +47",
         "plnCmd": "LP > MP > HP",
-        "rawDRoB": -6,
         "recovery": 25,
         "startup": 12,
         "total": 38
@@ -9766,7 +9755,6 @@
         "onPC": "KD +26",
         "onPP": -25,
         "plnCmd": "LP > MP > HP > HK ",
-        "rawDRoB": -8,
         "recovery": "19(24)",
         "startup": 26,
         "total": "47(52)"
@@ -10027,7 +10015,6 @@
         "onHit": "KD +28",
         "onPC": "KD +28",
         "plnCmd": "MP > HP",
-        "rawDRoB": -8,
         "recovery": 26,
         "runStopOB": "-6(-3)",
         "runStopOH": "KD +34(+37)",
@@ -10877,7 +10864,6 @@
         "onPC": "Crumple +104",
         "onPP": -35,
         "plnCmd": "HP+HK",
-        "rawDRoB": 1,
         "recovery": 35,
         "startup": 26,
         "total": 62
@@ -11090,7 +11076,6 @@
         "onPC": "KD +23",
         "onPP": -27,
         "plnCmd": "f+HP+HK",
-        "rawDRoB": -2,
         "recovery": 26,
         "startup": "20(18)",
         "total": "48(46)"
@@ -11467,7 +11452,6 @@
         "onPC": "KD +21",
         "onPP": -57,
         "plnCmd": "qcb+HK",
-        "rawDRoB": -31,
         "recovery": "11+17",
         "startup": 8,
         "total": 66
@@ -11596,7 +11580,6 @@
         "onPC": "KD +56",
         "onPP": -28,
         "plnCmd": "qcf+HP",
-        "rawDRoB": -8,
         "recovery": 28,
         "startup": 24,
         "total": 53,
@@ -12570,7 +12553,6 @@
         "onPC": "KD +23",
         "onPP": -52,
         "plnCmd": "qcb+LK",
-        "rawDRoB": -26,
         "recovery": "6+17",
         "startup": 6,
         "total": 59
@@ -12832,7 +12814,6 @@
         "onPC": "KD +22",
         "onPP": -54,
         "plnCmd": "qcb+MK",
-        "rawDRoB": -28,
         "recovery": "8+17",
         "startup": 7,
         "total": 62
@@ -12961,7 +12942,6 @@
         "onPC": "KD +37",
         "onPP": -28,
         "plnCmd": "qcf+MP",
-        "rawDRoB": -8,
         "recovery": 28,
         "startup": 17,
         "total": 46,
@@ -13610,7 +13590,6 @@
         "onPC": "KD +21",
         "onPP": -57,
         "plnCmd": "qcb+KK",
-        "rawDRoB": -36,
         "recovery": "12+17",
         "startup": 6,
         "total": 64,
@@ -14007,8 +13986,6 @@
         "onPC": 3,
         "onPP": -30,
         "plnCmd": "qcf+KK (proximity)",
-        "rawDRoB": -2,
-        "rawDRoH": 7,
         "recovery": "26+4(25)",
         "startup": "8+13",
         "total": 58
@@ -14188,7 +14165,6 @@
         "onPC": "KD +25",
         "onPP": -22,
         "plnCmd": "qcf+KK > HK",
-        "rawDRoB": 3,
         "recovery": 19,
         "startup": "8+15",
         "total": 38,
@@ -14466,7 +14442,6 @@
         "onPC": "KD +43",
         "onPP": -21,
         "plnCmd": "qcf+KK > LK",
-        "rawDRoB": 7,
         "recovery": 16,
         "startup": "8+17",
         "total": 39,
@@ -14599,7 +14574,6 @@
         "onPC": "KD +56",
         "onPP": -28,
         "plnCmd": "qcf+PP",
-        "rawDRoB": -8,
         "recovery": 28,
         "startup": 17,
         "total": 46,
@@ -15250,8 +15224,6 @@
         "onPC": 3,
         "onPP": -30,
         "plnCmd": "qcf+K (proximity)",
-        "rawDRoB": -2,
-        "rawDRoH": 7,
         "recovery": "26+4(25)",
         "startup": "8+15",
         "total": 60
@@ -15431,7 +15403,6 @@
         "onPC": "KD +23",
         "onPP": -22,
         "plnCmd": "qcf+K > HK",
-        "rawDRoB": 1,
         "recovery": 19,
         "startup": "8+19",
         "total": 42,
@@ -15707,7 +15678,6 @@
         "onPC": "KD +41",
         "onPP": -21,
         "plnCmd": "qcf+K > LK",
-        "rawDRoB": 5,
         "recovery": 16,
         "startup": "8+21",
         "total": 43,

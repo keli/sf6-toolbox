@@ -1608,7 +1608,6 @@
         "onPC": "HKD +5(1)",
         "onPP": -53,
         "plnCmd": "qcf,qcf+P",
-        "rawDRoB": -31,
         "recovery": 52,
         "startup": 18,
         "total": 171
@@ -1744,7 +1743,6 @@
         "onPC": "KD +87",
         "onPP": -53,
         "plnCmd": "qcf,qcf+P",
-        "rawDRoB": -31,
         "recovery": "52(25)",
         "startup": 18,
         "total": "174(148)"
@@ -2164,7 +2162,6 @@
         "onPC": "Crumple +104",
         "onPP": -35,
         "plnCmd": "HP+HK",
-        "rawDRoB": 1,
         "recovery": 35,
         "startup": 26,
         "total": 62
@@ -2377,7 +2374,6 @@
         "onPC": "KD +23",
         "onPP": -27,
         "plnCmd": "f+HP+HK",
-        "rawDRoB": -2,
         "recovery": 26,
         "startup": "20(18)",
         "total": "48(46)"
@@ -4033,8 +4029,6 @@
         "onPC": 6,
         "onPP": "-22(-19)",
         "plnCmd": "MP > MP",
-        "rawDRoB": -2,
-        "rawDRoH": 6,
         "recovery": 20,
         "startup": 9,
         "total": 32,
@@ -4166,7 +4160,6 @@
         "onPC": "KD +27",
         "onPP": "-33(-31)",
         "plnCmd": "MP > MP > MP",
-        "rawDRoB": -13,
         "recovery": 32,
         "startup": 15,
         "total": 49
@@ -4970,8 +4963,6 @@
         "onPC": 1,
         "onPP": -20,
         "plnCmd": "d,d+MK > MK",
-        "rawDRoB": 0,
-        "rawDRoH": 1,
         "recovery": 19,
         "startup": 9,
         "total": 30,
@@ -5095,8 +5086,6 @@
         "onPC": 2,
         "onPP": -25,
         "plnCmd": "d,d+MK > MK > MK",
-        "rawDRoB": -6,
-        "rawDRoH": 2,
         "recovery": 24,
         "startup": 10,
         "total": 36,
@@ -6159,7 +6148,6 @@
         "onPC": "HKD +54",
         "onPP": "-23(-21)",
         "plnCmd": "HP (hold)",
-        "rawDRoB": 7,
         "recovery": "22(24)",
         "startup": "32(10)",
         "total": "56(58)"
@@ -6742,8 +6730,6 @@
         "onPC": 8,
         "onPP": -18,
         "plnCmd": "d,d+MK",
-        "rawDRoB": 1,
-        "rawDRoH": 8,
         "recovery": 17,
         "startup": 9,
         "total": 28,

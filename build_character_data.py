@@ -120,6 +120,20 @@ def parse_strict_int(value: Any) -> int | None:
     return None
 
 
+def is_ground_normal_button(move: dict[str, Any]) -> bool:
+    if move.get("moveType") != "normal":
+        return False
+    if move.get("airmove") is True:
+        return False
+    atk = str(move.get("atkLvl", "")).upper()
+    if atk not in {"L", "M", "H"}:
+        return False
+
+    num_cmd = normalize_spaces(str(move.get("numCmd", "")))
+    # Ground normal buttons only: 1-6 direction + punch/kick button.
+    return bool(re.fullmatch(r"[1-6](?:LP|MP|HP|LK|MK|HK)", num_cmd))
+
+
 def normalize_spaces(text: str | None) -> str:
     if text is None:
         return ""
@@ -243,18 +257,17 @@ def normalize_character_moves(base_data: dict[str, Any]) -> None:
             for move in cat_moves.values():
                 if not isinstance(move, dict):
                     continue
-                # Manual/parry Drive Rush follow-up frame data for grounded normals.
-                if (
-                    cat_name == "normal"
-                    and move.get("airmove") is not True
-                    and move.get("atkLvl") in {"L", "M", "H"}
-                ):
+                # Raw Drive Rush frame data for grounded normal buttons.
+                if cat_name == "normal" and is_ground_normal_button(move):
                     on_block = parse_strict_int(move.get("onBlock"))
                     on_hit = parse_strict_int(move.get("onHit"))
                     if on_block is not None:
                         move["rawDRoB"] = on_block + 4
                     if on_hit is not None:
                         move["rawDRoH"] = on_hit + 4
+                else:
+                    move.pop("rawDRoB", None)
+                    move.pop("rawDRoH", None)
                 move["normalized"] = {
                     "startup": normalize_numeric_field(move.get("startup")),
                     "active": normalize_numeric_field(move.get("active")),

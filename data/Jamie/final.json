@@ -37753,7 +37753,6 @@
         "onPP": -35,
         "plnCmd": "HP+HK",
         "range": 2.49,
-        "rawDRoB": 1,
         "recovery": 35,
         "startup": 26,
         "total": 62
@@ -37967,7 +37966,6 @@
         "onPP": -27,
         "plnCmd": "f+HP+HK",
         "range": "2.003 / 1.898",
-        "rawDRoB": -2,
         "recovery": 26,
         "startup": "20(18)",
         "total": "48(46)"
@@ -38291,7 +38289,6 @@
         "onPP": "-43(-41)",
         "plnCmd": "qcf,qcf+P",
         "range": "1.945~2.525",
-        "rawDRoB": -23,
         "recovery": 42,
         "startup": 10,
         "total": 70
@@ -38421,7 +38418,6 @@
         "onPP": "-43(-41)",
         "plnCmd": "qcf,qcf+P (CA)",
         "range": "1.945~2.525",
-        "rawDRoB": -23,
         "recovery": 42,
         "startup": 10,
         "total": 70
@@ -38554,7 +38550,6 @@
         "onPP": -58,
         "plnCmd": "f,d,df+HK",
         "range": "1.247 (1st)",
-        "rawDRoB": -39,
         "recovery": 51,
         "startup": 10,
         "total": 69
@@ -38673,8 +38668,6 @@
         "onPP": "-32(-31)",
         "plnCmd": "qcf+HP > f+K",
         "range": "?",
-        "rawDRoB": -11,
-        "rawDRoH": -3,
         "recovery": 32,
         "startup": 20,
         "total": 53
@@ -38807,7 +38800,6 @@
         "onPP": -64,
         "plnCmd": "qcf+HP > f+K > f+K",
         "range": "?",
-        "rawDRoB": -45,
         "recovery": 64,
         "startup": 24,
         "total": 89
@@ -38924,8 +38916,6 @@
         "onPP": "-24(-23)",
         "plnCmd": "qcf+HP",
         "range": 1.982,
-        "rawDRoB": -2,
-        "rawDRoH": 3,
         "recovery": 24,
         "startup": 19,
         "total": 44,
@@ -39048,8 +39038,6 @@
         "onPP": "-28(-27)",
         "plnCmd": "qcf+HP > f+P",
         "range": 2.706,
-        "rawDRoB": -5,
-        "rawDRoH": 1,
         "recovery": 28,
         "startup": 19,
         "total": 48
@@ -39185,7 +39173,6 @@
         "onPP": "-30(-29)",
         "plnCmd": "qcf+HP > f+P  > f+P",
         "range": 3.602,
-        "rawDRoB": -9,
         "recovery": 30,
         "startup": 19,
         "total": 50
@@ -39318,7 +39305,6 @@
         "onPP": "-23(-15)",
         "plnCmd": "qcb+HP",
         "range": "2.669~3.13",
-        "rawDRoB": 1,
         "recovery": 16,
         "startup": 25,
         "total": 49,
@@ -39564,8 +39550,6 @@
         "onPP": "-11(-10)",
         "plnCmd": "LK (mash)",
         "range": 1.13,
-        "rawDRoB": 3,
-        "rawDRoH": 7,
         "recovery": 11,
         "startup": 5,
         "xx": [
@@ -40366,7 +40350,6 @@
         "onPP": -59,
         "plnCmd": "f,d,df+LK",
         "range": "1.147 (1st)",
-        "rawDRoB": -40,
         "recovery": 52,
         "startup": 5,
         "total": 66
@@ -40486,8 +40469,6 @@
         "onPP": "-32(-31)",
         "plnCmd": "qcf+LP > f+K",
         "range": "?",
-        "rawDRoB": -11,
-        "rawDRoH": -3,
         "recovery": 32,
         "startup": 14,
         "total": 47
@@ -40621,7 +40602,6 @@
         "onPP": -64,
         "plnCmd": "qcf+LP > f+K > f+K",
         "range": "?",
-        "rawDRoB": -45,
         "recovery": 64,
         "startup": 18,
         "total": 83
@@ -40739,8 +40719,6 @@
         "onPP": "-24(-23)",
         "plnCmd": "qcf+LP",
         "range": 1.462,
-        "rawDRoB": -2,
-        "rawDRoH": 3,
         "recovery": 24,
         "startup": 13,
         "total": 38,
@@ -40864,8 +40842,6 @@
         "onPP": "-28(-27)",
         "plnCmd": "qcf+LP > f+P",
         "range": 1.856,
-        "rawDRoB": -9,
-        "rawDRoH": 1,
         "recovery": 28,
         "startup": 13,
         "total": 42
@@ -41002,7 +40978,6 @@
         "onPP": "-30(-29)",
         "plnCmd": "qcf+LP > f+P  > f+P",
         "range": 2.327,
-        "rawDRoB": -13,
         "recovery": 30,
         "startup": 13,
         "total": 44
@@ -41135,7 +41110,6 @@
         "onPP": "-24(-16)",
         "plnCmd": "qcb+LP",
         "range": "1.939~2.29",
-        "rawDRoB": -2,
         "recovery": 17,
         "startup": 17,
         "total": 42,
@@ -41270,7 +41244,6 @@
         "onPP": -58,
         "plnCmd": "f,d,df+MK",
         "range": "1.197 (1st)",
-        "rawDRoB": -39,
         "recovery": 51,
         "startup": 8,
         "total": 67
@@ -41389,8 +41362,6 @@
         "onPP": "-32(-31)",
         "plnCmd": "qcf+MP > f+K",
         "range": "?",
-        "rawDRoB": -11,
-        "rawDRoH": -3,
         "recovery": 32,
         "startup": 17,
         "total": 50
@@ -41523,7 +41494,6 @@
         "onPP": -64,
         "plnCmd": "qcf+MP > f+K > f+K",
         "range": "?",
-        "rawDRoB": -45,
         "recovery": 64,
         "startup": 21,
         "total": 86
@@ -41640,8 +41610,6 @@
         "onPP": "-24(-23)",
         "plnCmd": "qcf+MP",
         "range": 1.762,
-        "rawDRoB": -2,
-        "rawDRoH": 3,
         "recovery": 24,
         "startup": 16,
         "total": 41,
@@ -41764,8 +41732,6 @@
         "onPP": "-28(-27)",
         "plnCmd": "qcf+MP > f+P",
         "range": 2.259,
-        "rawDRoB": -7,
-        "rawDRoH": 1,
         "recovery": 28,
         "startup": 16,
         "total": 45
@@ -41901,7 +41867,6 @@
         "onPP": "-30(-29)",
         "plnCmd": "qcf+MP > f+P  > f+P",
         "range": 2.907,
-        "rawDRoB": -11,
         "recovery": 30,
         "startup": 16,
         "total": 47
@@ -42033,7 +41998,6 @@
         "onPP": "-24(-16)",
         "plnCmd": "qcb+MP",
         "range": "2.264~2.77",
-        "rawDRoB": -2,
         "recovery": 17,
         "startup": 20,
         "total": 45,
@@ -42169,7 +42133,6 @@
         "onPP": -58,
         "plnCmd": "f,d,df+KK",
         "range": "1.147 (1st)",
-        "rawDRoB": -39,
         "recovery": 51,
         "startup": 6,
         "total": 65
@@ -42287,8 +42250,6 @@
         "onPP": "-32(-31)",
         "plnCmd": "qcf+PP > f+K",
         "range": "?",
-        "rawDRoB": -11,
-        "rawDRoH": -3,
         "recovery": 32,
         "startup": 16,
         "total": 47
@@ -42422,7 +42383,6 @@
         "onPP": -64,
         "plnCmd": "qcf+PP > f+K > f+K",
         "range": "?",
-        "rawDRoB": -45,
         "recovery": 64,
         "startup": 19,
         "total": 83
@@ -42544,8 +42504,6 @@
         "onPP": "-24(-23)",
         "plnCmd": "qcf+PP",
         "range": 1.987,
-        "rawDRoB": 1,
-        "rawDRoH": 5,
         "recovery": 24,
         "startup": 13,
         "total": 38,
@@ -42670,8 +42628,6 @@
         "onPP": "-28(-27)",
         "plnCmd": "qcf+PP > f+P",
         "range": 2.641,
-        "rawDRoB": -5,
-        "rawDRoH": 1,
         "recovery": 28,
         "startup": 13,
         "total": 42
@@ -42806,7 +42762,6 @@
         "onPP": "-30(-29)",
         "plnCmd": "qcf+PP > f+P > f+P",
         "range": 3.462,
-        "rawDRoB": -9,
         "recovery": 30,
         "startup": 13,
         "total": 44
@@ -42955,7 +42910,6 @@
         "onPP": "-22(-14)",
         "plnCmd": "qcb+PP",
         "range": "2.744~3.25",
-        "rawDRoB": 3,
         "recovery": 15,
         "startup": 20,
         "total": 43,
@@ -44259,7 +44213,6 @@
         "onPP": -23,
         "plnCmd": "d+KK",
         "range": 1.194,
-        "rawDRoB": -4,
         "recovery": 22,
         "startup": 9,
         "total": 33,
