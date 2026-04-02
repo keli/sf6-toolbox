@@ -12,7 +12,7 @@ function tryMeaty(
 ) {
   const isDrLastPrefix = prefix[prefix.length - 1]?.cmd === "DR";
   const drNormalBypassStartup =
-    isDrLastPrefix && meaty.moveType === "normal" && !meaty.cmd.startsWith("8");
+    isDrLastPrefix && meaty.moveType === "normal" && !/^[789]/.test(meaty.cmd);
   // DR -> ground normals skip startup; treat it as 1f in this timeline model.
   const S = drNormalBypassStartup ? 1 : meaty.startup;
   const A = meaty.active;
@@ -70,7 +70,7 @@ export function calcMeatys(moves, opts) {
   const meatyCandidates = moves.filter(
     (m) =>
       m.isAttack &&
-      !m.cmd.startsWith("8") &&
+      !/^[789]/.test(m.cmd) &&
       (!safeOnly || m.onBlock == null || m.onBlock >= -3) &&
       (!opts.cancelOnly || m.cancelTypes.length > 0) &&
       !m.name.startsWith("OD "),
@@ -81,7 +81,7 @@ export function calcMeatys(moves, opts) {
       (firstAny &&
         m.isAttack &&
         !m.isThrowLike &&
-        !m.cmd.startsWith("8") &&
+        !/^[789]/.test(m.cmd) &&
         m.knockdowns.length === 0),
   );
   if (opts.includeDrPrefix) {
@@ -106,7 +106,7 @@ export function calcMeatys(moves, opts) {
   const nonLightMoves = moves.filter(
     (m) =>
       /^\d(MP|MK|HP|HK)$/.test(m.cmd) &&
-      !m.cmd.startsWith("8") &&
+      !/^[789]/.test(m.cmd) &&
       m.startup != null,
   );
 

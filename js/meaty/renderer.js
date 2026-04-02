@@ -65,7 +65,7 @@ function buildNormalButtons(charData) {
     if (
       !(
         m.moveType === "normal" &&
-        !m.cmd.startsWith("8") &&
+        !/^[789]/.test(m.cmd) &&
         /^\d(LP|LK|MP|MK|HP|HK)$/.test(m.cmd) &&
         m.startup != null
       )
@@ -290,7 +290,7 @@ export function renderResults(state, results) {
       const drBypassStartup =
         r.prefix[0]?.cmd === "DR" &&
         r.meaty.moveType === "normal" &&
-        !r.meaty.cmd.startsWith("8");
+        !/^[789]/.test(r.meaty.cmd);
       const startupCell = drBypassStartup
         ? `0 <span style="color:#888;font-size:0.85em">(${r.meaty.startup})</span>`
         : `${r.meaty.startup}`;
