@@ -76,6 +76,7 @@ export function calcMeatys(moves, opts) {
       m.moveType === "dash" ||
       (firstAny &&
         m.isAttack &&
+        !m.isDerived &&
         !m.isThrowLike &&
         !/^[789]/.test(m.cmd) &&
         m.knockdowns.length === 0),
@@ -103,6 +104,7 @@ export function calcMeatys(moves, opts) {
     (m) =>
       /^\d(MP|MK|HP|HK)$/.test(m.cmd) &&
       !/^[789]/.test(m.cmd) &&
+      !m.isDerived &&
       m.startup != null,
   );
 

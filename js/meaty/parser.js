@@ -15,6 +15,24 @@ function parseInt1(val) {
   return m ? parseInt(m[0]) : null;
 }
 
+function hasText(val) {
+  return val != null && String(val).trim() !== "";
+}
+
+function firstPhaseText(val, sepRegex) {
+  if (!hasText(val)) return null;
+  const text = String(val).trim();
+  const idx = text.search(sepRegex);
+  return idx >= 0 ? text.slice(0, idx).trim() : text;
+}
+
+function normalizeBaseCmd(cmd) {
+  const text = String(cmd ?? "").trim();
+  if (!text) return text;
+  const [base] = text.split(">");
+  return base.trim();
+}
+
 function parseIntWorst(val) {
   if (val == null) return null;
   if (typeof val === "number") return val;
@@ -112,6 +130,7 @@ function buildMoveSignature(mv) {
     mv.onHit,
     mv.isAttack,
     mv.isThrowLike,
+    mv.isDerived,
     cancelSig,
     kdSig,
   ].join("|");
@@ -127,8 +146,12 @@ export function extractMoves(charData) {
       if (catName === "drive" && mv.nonHittingMove) continue;
       if (moveName === "Drive Rush") continue;
       const norm = mv.normalized || {};
-      const startup = parseInt1(norm.startup ?? mv.startup);
-      const active = parseInt1(norm.active ?? mv.active);
+      const startupRaw =
+        firstPhaseText(mv.fullStartup, /\+/) ?? norm.startup ?? mv.startup;
+      const activeRaw =
+        firstPhaseText(mv.fullActive, /\*/) ?? norm.active ?? mv.active;
+      const startup = parseInt1(startupRaw);
+      const active = parseInt1(activeRaw);
       const recovery = parseInt1(norm.recovery ?? mv.recovery);
       if (startup == null || active == null || active <= 0) continue;
       let total = parseInt1(mv.total);
@@ -143,12 +166,16 @@ export function extractMoves(charData) {
           : parseKDField(norm.onPC ?? mv.onPC, "pc")),
         ...parseKDField(mv.onCC, "cc"),
       ];
-      const cmd = mv.numCmd || mv.plnCmd || moveKey;
+      const cmd = normalizeBaseCmd(mv.numCmd || mv.plnCmd || moveKey);
       const atkLevel = mv.atkLvl == null ? "" : String(mv.atkLvl);
       const isThrowLike =
         atkLevel.toUpperCase() === "T" ||
         catName === "throw" ||
         catName === "command-grab";
+      const isDerived =
+        mv.followUp === true ||
+        hasText(mv.fullStartup) ||
+        hasText(mv.fullActive);
       moves.push({
         name: mv.moveName || moveKey,
         cmd,
@@ -162,6 +189,7 @@ export function extractMoves(charData) {
         moveType: catName,
         isAttack: mv.atkLvl != null,
         isThrowLike,
+        isDerived,
         cancelTypes: mv.xx || [],
         knockdowns,
       });

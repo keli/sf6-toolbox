@@ -64,6 +64,7 @@ function buildNormalButtons(charData) {
     if (
       !(
         m.moveType === "normal" &&
+        !m.isDerived &&
         !/^[789]/.test(m.cmd) &&
         /^\d(MP|MK|HP|HK)$/.test(m.cmd) &&
         m.startup != null
