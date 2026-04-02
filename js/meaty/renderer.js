@@ -182,9 +182,9 @@ export function renderResults(state, results) {
 
   const groups = new Map();
   for (const r of results) {
-    // Keep groups source-specific so rows never mix across different KD moves.
-    const srcKey = `${r.kdMove.name}|${r.kdMove.cmd}|${r.kdInfo.hitType}`;
-    const key = `${srcKey}|${r.kdInfo.advantageMin}|${r.kdInfo.advantageMax}|${r.kdInfo.kdType}`;
+    // Merge normal/PC variants when they share the same KD move + KD properties.
+    const moveKey = `${r.kdMove.name}|${r.kdMove.cmd}`;
+    const key = `${moveKey}|${r.kdInfo.advantageMin}|${r.kdInfo.advantageMax}|${r.kdInfo.kdType}`;
     if (!groups.has(key)) {
       groups.set(key, {
         kdInfo: r.kdInfo,
@@ -195,9 +195,13 @@ export function renderResults(state, results) {
     }
     const g = groups.get(key);
     g.kdTypes.add(r.kdInfo.kdType);
-    if (!g.sources.has(srcKey)) {
-      g.sources.set(srcKey, { move: r.kdMove, hitType: r.kdInfo.hitType });
+    if (!g.sources.has(moveKey)) {
+      g.sources.set(moveKey, {
+        move: r.kdMove,
+        hitTypes: new Set(),
+      });
     }
+    g.sources.get(moveKey).hitTypes.add(r.kdInfo.hitType);
     g.rows.push(r);
   }
 
@@ -221,16 +225,10 @@ export function renderResults(state, results) {
   let visibleCount = 0;
 
   for (const { kdInfo, kdTypes, sources, rows } of sorted) {
-    const moveMap = new Map();
-    for (const { move, hitType } of sources.values()) {
-      const k = `${move.name}|${move.cmd}`;
-      if (!moveMap.has(k)) moveMap.set(k, { move, hitTypes: [] });
-      moveMap.get(k).hitTypes.push(hitType);
-    }
-
-    const srcHtml = [...moveMap.values()]
+    const srcHtml = [...sources.values()]
       .map(({ move, hitTypes }) => {
-        const tags = hitTypes
+        const tags = [...hitTypes]
+          .sort()
           .map(
             (ht) =>
               `<span class="${HIT_TYPE_CLASS[ht] || ""}">[${t(`hit_type_${ht}`) || ht}]</span>`,
