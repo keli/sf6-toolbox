@@ -96,6 +96,20 @@ def parse_first_int(text: str | None) -> int | None:
     return int(m.group(0)) if m else None
 
 
+def parse_strict_int(value: Any) -> int | None:
+    if isinstance(value, bool):
+        return None
+    if isinstance(value, int):
+        return value
+    if isinstance(value, float):
+        return int(value)
+    if isinstance(value, str):
+        s = normalize_spaces(value)
+        if re.fullmatch(r"-?\d+", s):
+            return int(s)
+    return None
+
+
 def normalize_spaces(text: str | None) -> str:
     if text is None:
         return ""
@@ -215,10 +229,22 @@ def normalize_adv_field(value: Any) -> dict[str, Any] | None:
 
 def normalize_character_moves(base_data: dict[str, Any]) -> None:
     for char_data in base_data.values():
-        for cat_moves in char_data.get("moves", {}).values():
+        for cat_name, cat_moves in char_data.get("moves", {}).items():
             for move in cat_moves.values():
                 if not isinstance(move, dict):
                     continue
+                # Manual/parry Drive Rush follow-up frame data for grounded normals.
+                if (
+                    cat_name == "normal"
+                    and move.get("airmove") is not True
+                    and move.get("atkLvl") in {"L", "M", "H"}
+                ):
+                    on_block = parse_strict_int(move.get("onBlock"))
+                    on_hit = parse_strict_int(move.get("onHit"))
+                    if on_block is not None:
+                        move["rawDRoB"] = on_block + 4
+                    if on_hit is not None:
+                        move["rawDRoH"] = on_hit + 4
                 move["normalized"] = {
                     "startup": normalize_numeric_field(move.get("startup")),
                     "active": normalize_numeric_field(move.get("active")),
