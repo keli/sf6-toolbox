@@ -53,6 +53,57 @@ function tryMeaty(
   }
 }
 
+function moveHasBombTag(move) {
+  return (
+    /\(bomb\)/i.test(String(move?.cmd || "")) ||
+    /\(bomb\)/i.test(String(move?.name || ""))
+  );
+}
+
+function moveIsSuperOrCA(move) {
+  const name = String(move?.name || "");
+  const cmd = String(move?.cmd || "");
+  return (
+    /super art|critical art|\(ca\)/i.test(name) || /236236|214214/.test(cmd)
+  );
+}
+
+const CHARACTER_FILTER_RULES = {
+  "M.Bison": {
+    consumeBombAfterBombKd: true,
+    consumeBombAfterSuperKd: true,
+    consumeBombAfterKdCmdPrefixes: ["46PP", "236KK"],
+  },
+};
+
+function detectCharacterRuleKey(moves, charName) {
+  const explicit = String(charName || "");
+  if (explicit && CHARACTER_FILTER_RULES[explicit]) return explicit;
+
+  // Fallback for stale cached UI code that does not pass charName yet.
+  const hasBisonMarkers = moves.some((m) =>
+    /psycho mine|psycho crusher \(bomb\)|backfist combo \(bomb\)/i.test(
+      String(m?.name || ""),
+    ),
+  );
+  return hasBisonMarkers ? "M.Bison" : "";
+}
+
+function shouldBlockBombFollowups(ruleKey, kdMove) {
+  const rules = CHARACTER_FILTER_RULES[String(ruleKey || "")];
+  if (!rules) return false;
+  if (rules.consumeBombAfterBombKd && moveHasBombTag(kdMove)) return true;
+  if (rules.consumeBombAfterSuperKd && moveIsSuperOrCA(kdMove)) return true;
+  const cmd = String(kdMove?.cmd || "");
+  if (
+    Array.isArray(rules.consumeBombAfterKdCmdPrefixes) &&
+    rules.consumeBombAfterKdCmdPrefixes.some((prefix) => cmd.startsWith(prefix))
+  ) {
+    return true;
+  }
+  return false;
+}
+
 export function calcMeatys(moves, opts) {
   const {
     kdMoveFilter,
@@ -62,6 +113,7 @@ export function calcMeatys(moves, opts) {
     firstAny,
     maxDelay,
   } = opts;
+  const ruleKey = detectCharacterRuleKey(moves, opts.charName);
 
   const meatyCandidates = moves.filter(
     (m) =>
@@ -112,6 +164,7 @@ export function calcMeatys(moves, opts) {
   for (const kdMove of moves) {
     if (kdMoveFilter && kdMove.cmd !== kdMoveFilter) continue;
     if (kdMove.name.includes("Drive Impact")) continue;
+    const blockBombFollowups = shouldBlockBombFollowups(ruleKey, kdMove);
 
     for (const kdInfo of kdMove.knockdowns) {
       if (hitTypeFilter !== "both" && kdInfo.hitType !== hitTypeFilter)
@@ -122,10 +175,12 @@ export function calcMeatys(moves, opts) {
       if (Kbase <= 0) continue;
 
       for (const first of firstPool) {
+        if (blockBombFollowups && moveHasBombTag(first)) continue;
         const K1 = Kbase - first.total;
         if (K1 <= 0) continue;
 
         for (const meaty of meatyCandidates) {
+          if (blockBombFollowups && moveHasBombTag(meaty)) continue;
           for (let d = 0; d <= maxDelay; d++) {
             tryMeaty(
               kdMove,
@@ -146,10 +201,12 @@ export function calcMeatys(moves, opts) {
 
         if (maxPrefix >= 2) {
           for (const second of prefixPool) {
+            if (blockBombFollowups && moveHasBombTag(second)) continue;
             const K2 = K1 - second.total;
             if (K2 <= 0) continue;
 
             for (const meaty of meatyCandidates) {
+              if (blockBombFollowups && moveHasBombTag(meaty)) continue;
               for (let d = 0; d <= maxDelay; d++) {
                 tryMeaty(
                   kdMove,
@@ -168,10 +225,12 @@ export function calcMeatys(moves, opts) {
             if (maxPrefix >= 3) {
               for (const third of prefixPool) {
                 if (second.cmd === "DR") continue;
+                if (blockBombFollowups && moveHasBombTag(third)) continue;
                 const K3 = K2 - third.total;
                 if (K3 <= 0) continue;
 
                 for (const meaty of meatyCandidates) {
+                  if (blockBombFollowups && moveHasBombTag(meaty)) continue;
                   for (let d = 0; d <= maxDelay; d++) {
                     tryMeaty(
                       kdMove,

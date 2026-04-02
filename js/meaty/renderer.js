@@ -192,7 +192,9 @@ export function renderResults(state, results) {
 
   const groups = new Map();
   for (const r of results) {
-    const key = `${r.kdInfo.advantageMin}|${r.kdInfo.advantageMax}`;
+    // Keep groups source-specific so rows never mix across different KD moves.
+    const srcKey = `${r.kdMove.name}|${r.kdMove.cmd}|${r.kdInfo.hitType}`;
+    const key = `${srcKey}|${r.kdInfo.advantageMin}|${r.kdInfo.advantageMax}|${r.kdInfo.kdType}`;
     if (!groups.has(key)) {
       groups.set(key, {
         kdInfo: r.kdInfo,
@@ -203,7 +205,6 @@ export function renderResults(state, results) {
     }
     const g = groups.get(key);
     g.kdTypes.add(r.kdInfo.kdType);
-    const srcKey = `${r.kdMove.name}|${r.kdMove.cmd}|${r.kdInfo.hitType}`;
     if (!g.sources.has(srcKey)) {
       g.sources.set(srcKey, { move: r.kdMove, hitType: r.kdInfo.hitType });
     }
@@ -223,7 +224,6 @@ export function renderResults(state, results) {
   const sorted = [...groups.values()].sort(
     (a, b) =>
       (a.rows.length > 10) - (b.rows.length > 10) ||
-      b.sources.size - a.sources.size ||
       b.kdInfo.advantage - a.kdInfo.advantage,
   );
 

@@ -75,6 +75,7 @@ export async function calculate() {
 
   const moves = extractMoves(charData);
   const opts = {
+    charName,
     kdMoveFilter: document.getElementById("kdMoveSelect").value || null,
     hitTypeFilter: document.getElementById("hitType").value,
     maxPrefix: parseInt(document.getElementById("maxPrefix").value),
