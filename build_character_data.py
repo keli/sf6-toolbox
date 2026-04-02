@@ -6,7 +6,6 @@ Fetch SF6 FAT data and build per-character FAT source files.
 from __future__ import annotations
 
 import argparse
-import datetime as dt
 import json
 import os
 import re
@@ -92,7 +91,6 @@ def write_character_sources(
     write_json_pretty_file(
         index_out,
         {
-            "generatedAt": dt.datetime.now(dt.UTC).isoformat(),
             "characters": index_rows,
         },
     )
