@@ -37,7 +37,7 @@ function escapeAttr(text) {
 function listStealableNormals(ob, normalButtons) {
   if (ob == null) return [];
   return normalButtons
-    .filter((m) => m.startup <= ob)
+    .filter((m) => m.startup - ob <= 4)
     .sort(
       (a, b) =>
         (b.dmg ?? -1) - (a.dmg ?? -1) ||
@@ -48,9 +48,8 @@ function listStealableNormals(ob, normalButtons) {
 
 function listBlockStealableNormals(ob, normalButtons) {
   if (ob == null || ob <= 0) return [];
-  // On block, plus frames let you challenge 4f mash with slower buttons.
   return normalButtons
-    .filter((m) => m.startup <= ob + 3)
+    .filter((m) => m.startup - ob <= 4)
     .sort(
       (a, b) =>
         (b.dmg ?? -1) - (a.dmg ?? -1) ||
@@ -66,7 +65,7 @@ function buildNormalButtons(charData) {
       !(
         m.moveType === "normal" &&
         !/^[789]/.test(m.cmd) &&
-        /^\d(LP|LK|MP|MK|HP|HK)$/.test(m.cmd) &&
+        /^\d(MP|MK|HP|HK)$/.test(m.cmd) &&
         m.startup != null
       )
     )
