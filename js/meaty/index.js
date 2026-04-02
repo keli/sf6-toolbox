@@ -15,7 +15,6 @@ const DEFAULT_OPTS = {
   kdMove: "",
   hitType: "both",
   maxPrefix: "2",
-  minAdv: "4",
   maxDelay: "0",
   safeOnly: true,
   cancelOnly: true,
@@ -29,7 +28,6 @@ function applyDefaultOptions() {
   document.getElementById("kdMoveSelect").value = DEFAULT_OPTS.kdMove;
   document.getElementById("hitType").value = DEFAULT_OPTS.hitType;
   document.getElementById("maxPrefix").value = DEFAULT_OPTS.maxPrefix;
-  document.getElementById("minAdv").value = DEFAULT_OPTS.minAdv;
   document.getElementById("maxDelay").value = DEFAULT_OPTS.maxDelay;
   document.getElementById("safeOnly").checked = DEFAULT_OPTS.safeOnly;
   document.getElementById("cancelOnly").checked = DEFAULT_OPTS.cancelOnly;
@@ -85,7 +83,6 @@ export async function calculate() {
     noSpKd: document.getElementById("noSpKd").checked,
     firstAny: document.getElementById("firstAny").checked,
     includeDrPrefix: document.getElementById("includeDrFirst").checked,
-    minAdv: parseInt(document.getElementById("minAdv").value) || -99,
     maxDelay: parseInt(document.getElementById("maxDelay").value) || 0,
   };
 

@@ -6,7 +6,6 @@ function tryMeaty(
   delay,
   meaty,
   results,
-  minAdv,
   nonLightMoves,
   opts,
 ) {
@@ -25,8 +24,6 @@ function tryMeaty(
     const totalBlock = meaty.onBlock != null ? meaty.onBlock + stolen : null;
 
     if (stolen === 0) return;
-    if (totalAdv != null && totalAdv < minAdv) return;
-
     const unlockedMoves =
       totalAdv != null && meaty.onHit != null
         ? nonLightMoves
@@ -63,7 +60,6 @@ export function calcMeatys(moves, opts) {
     maxPrefix,
     safeOnly,
     firstAny,
-    minAdv,
     maxDelay,
   } = opts;
 
@@ -137,7 +133,6 @@ export function calcMeatys(moves, opts) {
               d,
               meaty,
               results,
-              minAdv,
               nonLightMoves,
               opts,
             );
@@ -162,7 +157,6 @@ export function calcMeatys(moves, opts) {
                   d,
                   meaty,
                   results,
-                  minAdv,
                   nonLightMoves,
                   opts,
                 );
@@ -185,7 +179,6 @@ export function calcMeatys(moves, opts) {
                       d,
                       meaty,
                       results,
-                      minAdv,
                       nonLightMoves,
                       opts,
                     );
