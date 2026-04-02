@@ -1,150 +1,266 @@
 {
   "characters": [
     {
-      "fatFile": "A.K.I.fat.json",
-      "file": "A.K.I.json",
-      "name": "A.K.I."
+      "dir": "A.K.I",
+      "fatFile": "A.K.I/fat.json",
+      "file": "A.K.I/final.json",
+      "name": "A.K.I.",
+      "officialConflictsFile": "A.K.I/official.conflicts.csv",
+      "officialFrameFile": "A.K.I/official.json",
+      "overridesFile": "A.K.I/overrides.json"
     },
     {
-      "fatFile": "Akuma.fat.json",
-      "file": "Akuma.json",
-      "name": "Akuma"
+      "dir": "Akuma",
+      "fatFile": "Akuma/fat.json",
+      "file": "Akuma/final.json",
+      "name": "Akuma",
+      "officialConflictsFile": "Akuma/official.conflicts.csv",
+      "officialFrameFile": "Akuma/official.json",
+      "overridesFile": "Akuma/overrides.json"
     },
     {
-      "fatFile": "Alex.fat.json",
-      "file": "Alex.json",
-      "name": "Alex"
+      "dir": "Alex",
+      "fatFile": "Alex/fat.json",
+      "file": "Alex/final.json",
+      "name": "Alex",
+      "officialConflictsFile": "Alex/official.conflicts.csv",
+      "officialFrameFile": "Alex/official.json",
+      "overridesFile": "Alex/overrides.json"
     },
     {
-      "fatFile": "Blanka.fat.json",
-      "file": "Blanka.json",
-      "name": "Blanka"
+      "dir": "Blanka",
+      "fatFile": "Blanka/fat.json",
+      "file": "Blanka/final.json",
+      "name": "Blanka",
+      "officialConflictsFile": "Blanka/official.conflicts.csv",
+      "officialFrameFile": "Blanka/official.json",
+      "overridesFile": "Blanka/overrides.json"
     },
     {
-      "fatFile": "C.Viper.fat.json",
-      "file": "C.Viper.json",
-      "name": "C.Viper"
+      "dir": "C.Viper",
+      "fatFile": "C.Viper/fat.json",
+      "file": "C.Viper/final.json",
+      "name": "C.Viper",
+      "officialConflictsFile": "C.Viper/official.conflicts.csv",
+      "officialFrameFile": "C.Viper/official.json",
+      "overridesFile": "C.Viper/overrides.json"
     },
     {
-      "fatFile": "Cammy.fat.json",
-      "file": "Cammy.json",
-      "name": "Cammy"
+      "dir": "Cammy",
+      "fatFile": "Cammy/fat.json",
+      "file": "Cammy/final.json",
+      "name": "Cammy",
+      "officialConflictsFile": "Cammy/official.conflicts.csv",
+      "officialFrameFile": "Cammy/official.json",
+      "overridesFile": "Cammy/overrides.json"
     },
     {
-      "fatFile": "Chun-Li.fat.json",
-      "file": "Chun-Li.json",
-      "name": "Chun-Li"
+      "dir": "Chun-Li",
+      "fatFile": "Chun-Li/fat.json",
+      "file": "Chun-Li/final.json",
+      "name": "Chun-Li",
+      "officialConflictsFile": "Chun-Li/official.conflicts.csv",
+      "officialFrameFile": "Chun-Li/official.json",
+      "overridesFile": "Chun-Li/overrides.json"
     },
     {
-      "fatFile": "Dee Jay.fat.json",
-      "file": "Dee Jay.json",
-      "name": "Dee Jay"
+      "dir": "Dee Jay",
+      "fatFile": "Dee Jay/fat.json",
+      "file": "Dee Jay/final.json",
+      "name": "Dee Jay",
+      "officialConflictsFile": "Dee Jay/official.conflicts.csv",
+      "officialFrameFile": "Dee Jay/official.json",
+      "overridesFile": "Dee Jay/overrides.json"
     },
     {
-      "fatFile": "Dhalsim.fat.json",
-      "file": "Dhalsim.json",
-      "name": "Dhalsim"
+      "dir": "Dhalsim",
+      "fatFile": "Dhalsim/fat.json",
+      "file": "Dhalsim/final.json",
+      "name": "Dhalsim",
+      "officialConflictsFile": "Dhalsim/official.conflicts.csv",
+      "officialFrameFile": "Dhalsim/official.json",
+      "overridesFile": "Dhalsim/overrides.json"
     },
     {
-      "fatFile": "E.Honda.fat.json",
-      "file": "E.Honda.json",
-      "name": "E.Honda"
+      "dir": "E.Honda",
+      "fatFile": "E.Honda/fat.json",
+      "file": "E.Honda/final.json",
+      "name": "E.Honda",
+      "officialConflictsFile": "E.Honda/official.conflicts.csv",
+      "officialFrameFile": "E.Honda/official.json",
+      "overridesFile": "E.Honda/overrides.json"
     },
     {
-      "fatFile": "Ed.fat.json",
-      "file": "Ed.json",
-      "name": "Ed"
+      "dir": "Ed",
+      "fatFile": "Ed/fat.json",
+      "file": "Ed/final.json",
+      "name": "Ed",
+      "officialConflictsFile": "Ed/official.conflicts.csv",
+      "officialFrameFile": "Ed/official.json",
+      "overridesFile": "Ed/overrides.json"
     },
     {
-      "fatFile": "Elena.fat.json",
-      "file": "Elena.json",
-      "name": "Elena"
+      "dir": "Elena",
+      "fatFile": "Elena/fat.json",
+      "file": "Elena/final.json",
+      "name": "Elena",
+      "officialConflictsFile": "Elena/official.conflicts.csv",
+      "officialFrameFile": "Elena/official.json",
+      "overridesFile": "Elena/overrides.json"
     },
     {
-      "fatFile": "Guile.fat.json",
-      "file": "Guile.json",
-      "name": "Guile"
+      "dir": "Guile",
+      "fatFile": "Guile/fat.json",
+      "file": "Guile/final.json",
+      "name": "Guile",
+      "officialConflictsFile": "Guile/official.conflicts.csv",
+      "officialFrameFile": "Guile/official.json",
+      "overridesFile": "Guile/overrides.json"
     },
     {
-      "fatFile": "JP.fat.json",
-      "file": "JP.json",
-      "name": "JP"
+      "dir": "JP",
+      "fatFile": "JP/fat.json",
+      "file": "JP/final.json",
+      "name": "JP",
+      "officialConflictsFile": "JP/official.conflicts.csv",
+      "officialFrameFile": "JP/official.json",
+      "overridesFile": "JP/overrides.json"
     },
     {
-      "fatFile": "Jamie.fat.json",
-      "file": "Jamie.json",
-      "name": "Jamie"
+      "dir": "Jamie",
+      "fatFile": "Jamie/fat.json",
+      "file": "Jamie/final.json",
+      "name": "Jamie",
+      "officialConflictsFile": "Jamie/official.conflicts.csv",
+      "officialFrameFile": "Jamie/official.json",
+      "overridesFile": "Jamie/overrides.json"
     },
     {
-      "fatFile": "Juri.fat.json",
-      "file": "Juri.json",
-      "name": "Juri"
+      "dir": "Juri",
+      "fatFile": "Juri/fat.json",
+      "file": "Juri/final.json",
+      "name": "Juri",
+      "officialConflictsFile": "Juri/official.conflicts.csv",
+      "officialFrameFile": "Juri/official.json",
+      "overridesFile": "Juri/overrides.json"
     },
     {
-      "fatFile": "Ken.fat.json",
-      "file": "Ken.json",
-      "name": "Ken"
+      "dir": "Ken",
+      "fatFile": "Ken/fat.json",
+      "file": "Ken/final.json",
+      "name": "Ken",
+      "officialConflictsFile": "Ken/official.conflicts.csv",
+      "officialFrameFile": "Ken/official.json",
+      "overridesFile": "Ken/overrides.json"
     },
     {
-      "fatFile": "Kimberly.fat.json",
-      "file": "Kimberly.json",
-      "name": "Kimberly"
+      "dir": "Kimberly",
+      "fatFile": "Kimberly/fat.json",
+      "file": "Kimberly/final.json",
+      "name": "Kimberly",
+      "officialConflictsFile": "Kimberly/official.conflicts.csv",
+      "officialFrameFile": "Kimberly/official.json",
+      "overridesFile": "Kimberly/overrides.json"
     },
     {
-      "fatFile": "Lily.fat.json",
-      "file": "Lily.json",
-      "name": "Lily"
+      "dir": "Lily",
+      "fatFile": "Lily/fat.json",
+      "file": "Lily/final.json",
+      "name": "Lily",
+      "officialConflictsFile": "Lily/official.conflicts.csv",
+      "officialFrameFile": "Lily/official.json",
+      "overridesFile": "Lily/overrides.json"
     },
     {
-      "fatFile": "Luke.fat.json",
-      "file": "Luke.json",
-      "name": "Luke"
+      "dir": "Luke",
+      "fatFile": "Luke/fat.json",
+      "file": "Luke/final.json",
+      "name": "Luke",
+      "officialConflictsFile": "Luke/official.conflicts.csv",
+      "officialFrameFile": "Luke/official.json",
+      "overridesFile": "Luke/overrides.json"
     },
     {
-      "fatFile": "M.Bison.fat.json",
-      "file": "M.Bison.json",
-      "name": "M.Bison"
+      "dir": "M.Bison",
+      "fatFile": "M.Bison/fat.json",
+      "file": "M.Bison/final.json",
+      "name": "M.Bison",
+      "officialConflictsFile": "M.Bison/official.conflicts.csv",
+      "officialFrameFile": "M.Bison/official.json",
+      "overridesFile": "M.Bison/overrides.json"
     },
     {
-      "fatFile": "Mai.fat.json",
-      "file": "Mai.json",
-      "name": "Mai"
+      "dir": "Mai",
+      "fatFile": "Mai/fat.json",
+      "file": "Mai/final.json",
+      "name": "Mai",
+      "officialConflictsFile": "Mai/official.conflicts.csv",
+      "officialFrameFile": "Mai/official.json",
+      "overridesFile": "Mai/overrides.json"
     },
     {
-      "fatFile": "Manon.fat.json",
-      "file": "Manon.json",
-      "name": "Manon"
+      "dir": "Manon",
+      "fatFile": "Manon/fat.json",
+      "file": "Manon/final.json",
+      "name": "Manon",
+      "officialConflictsFile": "Manon/official.conflicts.csv",
+      "officialFrameFile": "Manon/official.json",
+      "overridesFile": "Manon/overrides.json"
     },
     {
-      "fatFile": "Marisa.fat.json",
-      "file": "Marisa.json",
-      "name": "Marisa"
+      "dir": "Marisa",
+      "fatFile": "Marisa/fat.json",
+      "file": "Marisa/final.json",
+      "name": "Marisa",
+      "officialConflictsFile": "Marisa/official.conflicts.csv",
+      "officialFrameFile": "Marisa/official.json",
+      "overridesFile": "Marisa/overrides.json"
     },
     {
-      "fatFile": "Rashid.fat.json",
-      "file": "Rashid.json",
-      "name": "Rashid"
+      "dir": "Rashid",
+      "fatFile": "Rashid/fat.json",
+      "file": "Rashid/final.json",
+      "name": "Rashid",
+      "officialConflictsFile": "Rashid/official.conflicts.csv",
+      "officialFrameFile": "Rashid/official.json",
+      "overridesFile": "Rashid/overrides.json"
     },
     {
-      "fatFile": "Ryu.fat.json",
-      "file": "Ryu.json",
-      "name": "Ryu"
+      "dir": "Ryu",
+      "fatFile": "Ryu/fat.json",
+      "file": "Ryu/final.json",
+      "name": "Ryu",
+      "officialConflictsFile": "Ryu/official.conflicts.csv",
+      "officialFrameFile": "Ryu/official.json",
+      "overridesFile": "Ryu/overrides.json"
     },
     {
-      "fatFile": "Sagat.fat.json",
-      "file": "Sagat.json",
-      "name": "Sagat"
+      "dir": "Sagat",
+      "fatFile": "Sagat/fat.json",
+      "file": "Sagat/final.json",
+      "name": "Sagat",
+      "officialConflictsFile": "Sagat/official.conflicts.csv",
+      "officialFrameFile": "Sagat/official.json",
+      "overridesFile": "Sagat/overrides.json"
     },
     {
-      "fatFile": "Terry.fat.json",
-      "file": "Terry.json",
-      "name": "Terry"
+      "dir": "Terry",
+      "fatFile": "Terry/fat.json",
+      "file": "Terry/final.json",
+      "name": "Terry",
+      "officialConflictsFile": "Terry/official.conflicts.csv",
+      "officialFrameFile": "Terry/official.json",
+      "overridesFile": "Terry/overrides.json"
     },
     {
-      "fatFile": "Zangief.fat.json",
-      "file": "Zangief.json",
-      "name": "Zangief"
+      "dir": "Zangief",
+      "fatFile": "Zangief/fat.json",
+      "file": "Zangief/final.json",
+      "name": "Zangief",
+      "officialConflictsFile": "Zangief/official.conflicts.csv",
+      "officialFrameFile": "Zangief/official.json",
+      "overridesFile": "Zangief/overrides.json"
     }
   ],
-  "generatedAt": "2026-04-02T10:53:06.332770+00:00"
+  "generatedAt": "2026-04-02T11:09:32.711368+00:00"
 }

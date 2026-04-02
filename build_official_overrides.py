@@ -96,7 +96,15 @@ def read_json(path: str) -> Any:
         return json.load(f)
 
 
+def row_path(row: dict[str, Any], key: str, fallback: str) -> str:
+    v = str(row.get(key, "")).strip()
+    return v or fallback
+
+
 def write_json(path: str, data: Any) -> None:
+    parent = os.path.dirname(path)
+    if parent:
+        os.makedirs(parent, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2, sort_keys=True)
 
@@ -559,10 +567,12 @@ def make_override_payload(
 
 def write_conflict_reports(
     conflict_rows_by_char: dict[str, list[dict[str, Any]]],
-    per_char_dir: str,
+    per_char_paths: dict[str, str],
     audit_out: str,
 ) -> None:
-    os.makedirs(per_char_dir, exist_ok=True)
+    parent = os.path.dirname(audit_out)
+    if parent:
+        os.makedirs(parent, exist_ok=True)
     fields = [
         "character",
         "category",
@@ -576,9 +586,12 @@ def write_conflict_reports(
     for char_name in sorted(conflict_rows_by_char.keys()):
         rows = conflict_rows_by_char.get(char_name, [])
         all_rows.extend(rows)
-        out_path = os.path.join(
-            per_char_dir, f"{char_filename(char_name)}.official.conflicts.csv"
-        )
+        out_path = per_char_paths.get(char_name)
+        if not out_path:
+            continue
+        out_parent = os.path.dirname(out_path)
+        if out_parent:
+            os.makedirs(out_parent, exist_ok=True)
         with open(out_path, "w", newline="", encoding="utf-8") as f:
             w = csv.DictWriter(f, fieldnames=fields)
             w.writeheader()
@@ -605,27 +618,33 @@ def main() -> int:
     ap.add_argument(
         "--data-dir",
         default="data",
-        help="Data directory for *.fat.json and output overrides (default: data)",
+        help=(
+            "Data directory for character files referenced by "
+            "characters.index.json (default: data)"
+        ),
     )
     ap.add_argument(
         "--raw-dir",
-        default="data/official-frame",
-        help="Directory to store parsed official frame raw files (default: data/official-frame)",
+        default="data",
+        help=(
+            "Base directory for parsed official frame raw files when index "
+            "does not define officialFrameFile (default: data)"
+        ),
     )
     ap.add_argument(
         "--conflicts-dir",
-        default="data/official-frame",
+        default="data",
         help=(
-            "Directory for per-character official-vs-fat conflict CSV files "
-            "(default: data/official-frame)"
+            "Base directory for per-character official-vs-fat conflict CSV files "
+            "when index does not define officialConflictsFile (default: data)"
         ),
     )
     ap.add_argument(
         "--audit-out",
-        default="data/official-frame/official_overrides.conflicts.csv",
+        default="data/official_overrides.conflicts.csv",
         help=(
             "Output CSV path for aggregated official-vs-fat conflicts "
-            "(default: data/official-frame/official_overrides.conflicts.csv)"
+            "(default: data/official_overrides.conflicts.csv)"
         ),
     )
     ap.add_argument(
@@ -688,8 +707,6 @@ def main() -> int:
         if unknown:
             raise ValueError(f"Unknown characters in --chars: {', '.join(unknown)}")
 
-    os.makedirs(args.raw_dir, exist_ok=True)
-
     char_page_html = fetch_text(args.character_page_url, timeout=args.timeout)
     slugs = extract_character_slugs(char_page_html)
     slug_to_char = build_slug_to_char_map(slugs, char_names)
@@ -710,6 +727,7 @@ def main() -> int:
         "fetched_web": 0,
     }
     conflict_rows_by_char: dict[str, list[dict[str, Any]]] = {}
+    conflict_paths: dict[str, str] = {}
 
     for slug in slugs:
         char_name = slug_to_char.get(slug)
@@ -722,14 +740,26 @@ def main() -> int:
         if not row:
             print(f"Skip {slug}: missing character index row for {char_name}")
             continue
-        fat_file = str(row.get("fatFile", "")).strip()
+        fname = char_filename(char_name)
+        fat_file = row_path(row, "fatFile", f"{fname}.fat.json")
+        overrides_file = row_path(row, "overridesFile", f"{fname}.overrides.json")
+        official_frame_file = row_path(
+            row,
+            "officialFrameFile",
+            os.path.join(char_filename(char_name), "official.json"),
+        )
+        official_conflicts_file = row_path(
+            row,
+            "officialConflictsFile",
+            os.path.join(char_filename(char_name), f"{fname}.official.conflicts.csv"),
+        )
         if not fat_file:
             print(f"Skip {char_name}: missing fatFile in character index")
             continue
 
-        raw_out = os.path.join(
-            args.raw_dir, f"{char_filename(char_name)}.official.frame.json"
-        )
+        raw_out = os.path.join(args.data_dir, official_frame_file)
+        if not str(row.get("officialFrameFile", "")).strip():
+            raw_out = os.path.join(args.raw_dir, os.path.basename(raw_out))
         frame_url = args.frame_url_template.format(slug=slug)
 
         parsed_rows: list[ParsedMove] | None = None
@@ -777,11 +807,16 @@ def main() -> int:
             char_fat=char_fat,
             allow_opaque_hitblock=args.allow_opaque_hitblock,
         )
-        out_path = os.path.join(
-            args.data_dir, f"{char_filename(char_name)}.overrides.json"
-        )
+        out_path = os.path.join(args.data_dir, overrides_file)
+        os.makedirs(os.path.dirname(out_path), exist_ok=True)
         write_json(out_path, overrides_payload)
         conflict_rows_by_char[char_name] = conflict_rows
+        per_char_conflicts_out = os.path.join(args.data_dir, official_conflicts_file)
+        if not str(row.get("officialConflictsFile", "")).strip():
+            per_char_conflicts_out = os.path.join(
+                args.conflicts_dir, os.path.basename(per_char_conflicts_out)
+            )
+        conflict_paths[char_name] = per_char_conflicts_out
 
         total_stats["characters_processed"] += 1
         total_stats["characters_written"] += 1
@@ -799,7 +834,7 @@ def main() -> int:
 
     write_conflict_reports(
         conflict_rows_by_char=conflict_rows_by_char,
-        per_char_dir=args.conflicts_dir,
+        per_char_paths=conflict_paths,
         audit_out=args.audit_out,
     )
     print("Done.")

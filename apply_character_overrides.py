@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Apply manually curated per-character overrides and generate frontend-ready
-JSON files (`data/<Character>.json`) from FAT or existing final source files.
+JSON files from FAT or existing final source files.
 See AI_REVIEW_GUIDE.md for the AI-facing review/apply workflow contract.
 """
 
@@ -83,6 +83,11 @@ def load_char_overrides(path: str, char_name: str) -> list[dict[str, Any]]:
     return entries
 
 
+def row_path(row: dict[str, Any], key: str, fallback: str) -> str:
+    v = str(row.get(key, "")).strip()
+    return v or fallback
+
+
 def apply_overrides_to_character(
     char_name: str,
     char_data: dict[str, Any],
@@ -150,8 +155,8 @@ def main() -> int:
         default="fat",
         help=(
             "Source dataset before applying overrides: "
-            "`fat` reads `<char>.fat.json`; "
-            "`final` reads existing `<char>.json` (default: fat)"
+            "`fat` reads index fatFile; "
+            "`final` reads index file (default: fat)"
         ),
     )
     ap.add_argument(
@@ -166,7 +171,7 @@ def main() -> int:
         "--copy-fat-only",
         action="store_true",
         help=(
-            "Generate final `<char>.json` by copying `<char>.fat.json` directly "
+            "Generate final data by copying index fatFile directly "
             "and skip all overrides."
         ),
     )
@@ -174,7 +179,7 @@ def main() -> int:
         "--use-overrides",
         action="store_true",
         help=(
-            "Apply `<char>.overrides.json` on top of base data. "
+            "Apply index overridesFile on top of base data. "
             "Default behavior skips overrides and copies FAT data."
         ),
     )
@@ -190,8 +195,10 @@ def main() -> int:
     total_changes = 0
     for row in rows:
         char_name = str(row.get("name", "")).strip()
-        fat_file = str(row.get("fatFile", "")).strip()
-        out_file = str(row.get("file", "")).strip() or f"{char_name}.json"
+        fname = char_filename(char_name)
+        fat_file = row_path(row, "fatFile", f"{fname}.fat.json")
+        out_file = row_path(row, "file", f"{fname}.json")
+        overrides_file = row_path(row, "overridesFile", f"{fname}.overrides.json")
         if not char_name or not fat_file:
             continue
 
@@ -204,7 +211,6 @@ def main() -> int:
             raise FileNotFoundError(f"Missing source file: {source_path}")
         char_data = read_json(source_path)
 
-        overrides_file = f"{char_filename(char_name)}.overrides.json"
         overrides_path = os.path.join(args.overrides_dir, overrides_file)
         entries = [] if use_fat_only else load_char_overrides(overrides_path, char_name)
         changed = (

@@ -67,15 +67,25 @@ def write_character_sources(
 
     for char_name in sorted(base_data.keys()):
         fname = char_filename(char_name)
-        fat_file = f"{fname}.fat.json"
+        char_dir = os.path.join(out_dir, fname)
+        os.makedirs(char_dir, exist_ok=True)
+        fat_file = os.path.join(fname, "fat.json")
+        final_file = os.path.join(fname, "final.json")
+        overrides_file = os.path.join(fname, "overrides.json")
+        official_frame_file = os.path.join(fname, "official.json")
+        official_conflicts_file = os.path.join(fname, "official.conflicts.csv")
 
         write_json_pretty_file(os.path.join(out_dir, fat_file), base_data[char_name])
 
         index_rows.append(
             {
                 "name": char_name,
-                "file": f"{fname}.json",
+                "dir": fname,
+                "file": final_file,
                 "fatFile": fat_file,
+                "overridesFile": overrides_file,
+                "officialFrameFile": official_frame_file,
+                "officialConflictsFile": official_conflicts_file,
             }
         )
 

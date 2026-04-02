@@ -119,10 +119,10 @@ python3 build_official_overrides.py
 
 说明：
 - 脚本会自动从 `https://www.streetfighter.com/6/character` 读取角色 slug（例如 `vega_mbison`、`gouki_akuma`）。
-- 默认优先复用 `data/official-frame/*.official.frame.json`，不会重复抓网页；只有缺失时才抓取。
+- 默认优先复用各角色目录下的 `official.json`，不会重复抓网页；只有缺失时才抓取。
 - 如需强制重新抓取每个角色页面，使用 `--refresh`。
 - 会覆盖现有的 `data/角色名.overrides.json`。
-- 会把官网解析后的原始行数据保存到 `data/official-frame/角色名.official.frame.json` 方便审计。
+- 会把官网解析后的原始行数据保存到 `data/角色名/official.json` 方便审计。
 - 会额外生成差异清单：`data/official-frame/角色名.official.conflicts.csv` 与汇总 `data/official-frame/official_overrides.conflicts.csv`。
 
 常用选项：
@@ -145,7 +145,7 @@ sf6-toolbox/
 │   ├── 角色名.json                  # 正式使用数据（apply 脚本生成）
 │   ├── 角色名.fat.json              # FAT 来源数据
 │   ├── official-frame/              # 官网抓取及对比产物
-│   │   ├── 角色名.official.frame.json
+│   │   ├── official.json
 │   │   ├── 角色名.official.conflicts.csv
 │   │   └── official_overrides.conflicts.csv
 │   └── 角色名.overrides.json        # 人工/AI 校对后的覆盖值
