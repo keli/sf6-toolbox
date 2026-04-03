@@ -156,6 +156,7 @@ export function extractMoves(charData) {
       const active = parseInt1(activeRaw);
       const recovery = parseInt1(norm.recovery ?? mv.recovery);
       if (startup == null || active == null || active <= 0) continue;
+      // Data `startup` is the frame index of the first hittable frame (U).
       let total = parseInt1(mv.total);
       if (total == null) total = startup + active + (recovery || 0) - 1;
 

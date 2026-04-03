@@ -9,55 +9,72 @@ function tryMeaty(
   nonLightMoves,
   opts,
 ) {
-  const S = meaty.startup;
+  const U = meaty.startup;
   const A = meaty.active;
+  const SAFE_CHALLENGE_STARTUP_FRAMES = 3;
   const isDrLastPrefix = prefix[prefix.length - 1]?.cmd === "DR";
   if (isDrLastPrefix && moveNeedsCharge(meaty)) return;
   const drNoSteal = isDrLastPrefix;
   const drBonus = drNoSteal && meaty.moveType === "normal" ? 4 : 0;
-  if (S - 1 <= K && K <= S + A - 2) {
-    const activeFrameHit = K - S + 2;
-    const stolen = activeFrameHit - 1;
-    let totalAdv = null;
-    if (!meaty.knockdowns.length && meaty.onHit != null) {
-      totalAdv = drNoSteal ? meaty.onHit + drBonus : meaty.onHit + stolen;
-    }
-    const totalBlock =
-      meaty.onBlock != null
-        ? drNoSteal
-          ? meaty.onBlock + drBonus
-          : meaty.onBlock + stolen
-        : null;
+  let activeFrameHit = null;
+  let stolen = 0;
 
-    if (stolen === 0 && !drNoSteal) return;
-    const unlockedMoves =
-      totalAdv != null && meaty.onHit != null
-        ? nonLightMoves
-            .filter((m) => meaty.onHit < m.startup && totalAdv >= m.startup)
-            .sort(
-              (a, b) =>
-                (b.dmg ?? -1) - (a.dmg ?? -1) ||
-                a.startup - b.startup ||
-                a.cmd.localeCompare(b.cmd),
-            )
-        : [];
-    const onHitFlipped = unlockedMoves.length > 0;
-
-    results.push({
-      kdMove,
-      kdInfo,
-      prefix,
-      meaty,
-      K,
-      delay,
-      activeFrameHit,
-      drNoSteal,
-      totalAdv,
-      totalBlock,
-      onHitFlipped,
-      unlockedMoves,
-    });
+  // Wake-up happens during our active frames => true meaty, can steal frames.
+  const K1 = K + 1;
+  if (U <= K1 && K1 <= U + A - 1) {
+    activeFrameHit = K1 - U + 1;
+    stolen = activeFrameHit - 1;
+  } else if (K1 < U) {
+    // Wake-up already happened before our first active frame.
+    // Keep only options that still hit before (or trade with) a 3f challenge.
+    const gapToFirstActive = U - K1;
+    if (gapToFirstActive > SAFE_CHALLENGE_STARTUP_FRAMES) return;
+    activeFrameHit = 1;
+    stolen = 0;
+  } else {
+    return;
   }
+
+  let totalAdv = null;
+  if (!meaty.knockdowns.length && meaty.onHit != null) {
+    totalAdv = drNoSteal ? meaty.onHit + drBonus : meaty.onHit + stolen;
+  }
+  const totalBlock =
+    meaty.onBlock != null
+      ? drNoSteal
+        ? meaty.onBlock + drBonus
+        : meaty.onBlock + stolen
+      : null;
+
+  const unlockedMoves =
+    totalAdv != null && meaty.onHit != null
+      ? nonLightMoves
+          .filter(
+            (m) => meaty.onHit + 1 < m.startup && totalAdv + 1 >= m.startup,
+          )
+          .sort(
+            (a, b) =>
+              (b.dmg ?? -1) - (a.dmg ?? -1) ||
+              a.startup - b.startup ||
+              a.cmd.localeCompare(b.cmd),
+          )
+      : [];
+  const onHitFlipped = unlockedMoves.length > 0;
+
+  results.push({
+    kdMove,
+    kdInfo,
+    prefix,
+    meaty,
+    K,
+    delay,
+    activeFrameHit,
+    drNoSteal,
+    totalAdv,
+    totalBlock,
+    onHitFlipped,
+    unlockedMoves,
+  });
 }
 
 function moveHasBombTag(move) {
@@ -206,7 +223,7 @@ export function calcMeatys(moves, opts) {
               kdMove,
               kdInfo,
               [first],
-              K1 + d,
+              K1 - d,
               d,
               meaty,
               results,
@@ -232,7 +249,7 @@ export function calcMeatys(moves, opts) {
                   kdMove,
                   kdInfo,
                   [first, second],
-                  K2 + d,
+                  K2 - d,
                   d,
                   meaty,
                   results,
@@ -256,7 +273,7 @@ export function calcMeatys(moves, opts) {
                       kdMove,
                       kdInfo,
                       [first, second, third],
-                      K3 + d,
+                      K3 - d,
                       d,
                       meaty,
                       results,

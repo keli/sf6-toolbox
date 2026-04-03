@@ -42,14 +42,18 @@ function escapeAttr(text) {
     .replaceAll("\n", "&#10;");
 }
 
+function startupFrameCount(move) {
+  return move.startup - 1;
+}
+
 function listStealableNormals(ob, normalButtons) {
   if (ob == null) return [];
   return normalButtons
-    .filter((m) => m.startup - ob <= 4)
+    .filter((m) => startupFrameCount(m) - ob <= 4)
     .sort(
       (a, b) =>
         (b.dmg ?? -1) - (a.dmg ?? -1) ||
-        a.startup - b.startup ||
+        startupFrameCount(a) - startupFrameCount(b) ||
         a.cmd.localeCompare(b.cmd),
     );
 }
@@ -57,11 +61,11 @@ function listStealableNormals(ob, normalButtons) {
 function listBlockStealableNormals(ob, normalButtons) {
   if (ob == null || ob <= 0) return [];
   return normalButtons
-    .filter((m) => m.startup - ob <= 4)
+    .filter((m) => startupFrameCount(m) - ob <= 4)
     .sort(
       (a, b) =>
         (b.dmg ?? -1) - (a.dmg ?? -1) ||
-        a.startup - b.startup ||
+        startupFrameCount(a) - startupFrameCount(b) ||
         a.cmd.localeCompare(b.cmd),
     );
 }
@@ -85,7 +89,11 @@ function buildNormalButtons(charData) {
       (m.dmg ?? -1) > (prev.dmg ?? -1) ||
       ((m.dmg ?? -1) === (prev.dmg ?? -1) && m.startup < prev.startup)
     ) {
-      byCmd.set(m.cmd, { cmd: m.cmd, startup: m.startup, dmg: m.dmg ?? null });
+      byCmd.set(m.cmd, {
+        cmd: m.cmd,
+        startup: m.startup,
+        dmg: m.dmg ?? null,
+      });
     }
   }
   return [...byCmd.values()];
@@ -95,6 +103,12 @@ function fmtBlock(ob) {
   if (ob == null) return '<span class="safe-zero">?</span>';
   const cls = ob > 0 ? "safe-plus" : ob < 0 ? "safe-minus" : "safe-zero";
   return `<span class="${cls}">${ob >= 0 ? "+" : ""}${ob}</span>`;
+}
+
+function fmtBaseAdv(base) {
+  if (base == null) return "";
+  const text = `${base >= 0 ? "+" : ""}${base}`;
+  return ` <span style="color:#888;font-size:0.9em">(${text})</span>`;
 }
 
 function fmtFollowupTag(adv, normalButtons, marker) {
@@ -280,7 +294,7 @@ export function renderResults(state, results) {
       const totalStr = r.meaty.knockdowns.length
         ? `<span class="kd-adv-cell">${t(r.kdInfo.kdType === "HKD" ? "hkd_label" : "kd_label")}</span>`
         : hitAdv != null
-          ? `<span class="total-adv">+${hitAdv}</span>${fmtHitFollowupTags(hitAdv, normalButtons)}`
+          ? `<span class="total-adv">+${hitAdv}</span>${fmtBaseAdv(r.meaty.onHit)}${fmtHitFollowupTags(hitAdv, normalButtons)}`
           : "?";
 
       const delayStr =
@@ -302,7 +316,7 @@ export function renderResults(state, results) {
         ? `<td><span class="safe-zero">-</span></td>`
         : `<td><span class="stolen">+${stolen}</span></td>`;
       html += `<td>${totalStr}</td>`;
-      html += `<td>${fmtBlock(blockAdv)}${fmtBlockFollowupTag(blockAdv, normalButtons)}</td>`;
+      html += `<td>${fmtBlock(blockAdv)}${fmtBaseAdv(r.meaty.onBlock)}${fmtBlockFollowupTag(blockAdv, normalButtons)}</td>`;
       html += "</tr>";
     }
 
