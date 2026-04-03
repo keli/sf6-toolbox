@@ -77,7 +77,7 @@ export const STRINGS = {
     status_loaded: (n) => `已加载 ${n} 个角色。`,
     status_failed: (msg) => `数据加载失败：${msg}`,
     status_calculating: "计算中…",
-    status_result: (char, n) => `${char}：找到 ${n} 个偷帧方案`,
+    status_result: (char, n) => `${char}：找到 ${n} 个压起身方案`,
     no_results: "当前过滤条件下未找到任何方案。",
     th_sequence: "连段",
     th_startup: "发生",

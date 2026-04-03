@@ -213,17 +213,18 @@ export function calcMeatys(moves, opts) {
 
       for (const first of firstPool) {
         if (blockBombFollowups && moveHasBombTag(first)) continue;
-        const K1 = Kbase - first.total;
-        if (K1 <= 0) continue;
+        const Krem1 = Kbase - first.total;
+        if (Krem1 <= 0) continue;
 
         for (const meaty of meatyCandidates) {
           if (blockBombFollowups && moveHasBombTag(meaty)) continue;
           for (let d = 0; d <= maxDelay; d++) {
+            if (Krem1 - d < 0) break;
             tryMeaty(
               kdMove,
               kdInfo,
               [first],
-              K1 - d,
+              Krem1 - d,
               d,
               meaty,
               results,
@@ -239,17 +240,18 @@ export function calcMeatys(moves, opts) {
         if (maxPrefix >= 2) {
           for (const second of prefixPool) {
             if (blockBombFollowups && moveHasBombTag(second)) continue;
-            const K2 = K1 - second.total;
-            if (K2 <= 0) continue;
+            const Krem2 = Krem1 - second.total;
+            if (Krem2 <= 0) continue;
 
             for (const meaty of meatyCandidates) {
               if (blockBombFollowups && moveHasBombTag(meaty)) continue;
               for (let d = 0; d <= maxDelay; d++) {
+                if (Krem2 - d < 0) break;
                 tryMeaty(
                   kdMove,
                   kdInfo,
                   [first, second],
-                  K2 - d,
+                  Krem2 - d,
                   d,
                   meaty,
                   results,
@@ -263,17 +265,18 @@ export function calcMeatys(moves, opts) {
               for (const third of prefixPool) {
                 if (second.cmd === "DR") continue;
                 if (blockBombFollowups && moveHasBombTag(third)) continue;
-                const K3 = K2 - third.total;
-                if (K3 <= 0) continue;
+                const Krem3 = Krem2 - third.total;
+                if (Krem3 <= 0) continue;
 
                 for (const meaty of meatyCandidates) {
                   if (blockBombFollowups && moveHasBombTag(meaty)) continue;
                   for (let d = 0; d <= maxDelay; d++) {
+                    if (Krem3 - d < 0) break;
                     tryMeaty(
                       kdMove,
                       kdInfo,
                       [first, second, third],
-                      K3 - d,
+                      Krem3 - d,
                       d,
                       meaty,
                       results,

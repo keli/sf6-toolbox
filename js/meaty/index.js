@@ -20,7 +20,7 @@ const DEFAULT_OPTS = {
   cancelOnly: true,
   noSpKd: true,
   firstAny: false,
-  includeDrFirst: true,
+  includeDrFirst: false,
   effectiveOnly: true,
 };
 
