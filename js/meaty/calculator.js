@@ -14,8 +14,7 @@ function tryMeaty(
   const SAFE_CHALLENGE_STARTUP_FRAMES = 3;
   const isDrLastPrefix = prefix[prefix.length - 1]?.cmd === "DR";
   if (isDrLastPrefix && moveNeedsCharge(meaty)) return;
-  const drNoSteal = isDrLastPrefix;
-  const drBonus = drNoSteal && meaty.moveType === "normal" ? 4 : 0;
+  const drBonus = isDrLastPrefix && meaty.moveType === "normal" ? 4 : 0;
   let activeFrameHit = null;
   let stolen = 0;
 
@@ -37,14 +36,10 @@ function tryMeaty(
 
   let totalAdv = null;
   if (!meaty.knockdowns.length && meaty.onHit != null) {
-    totalAdv = drNoSteal ? meaty.onHit + drBonus : meaty.onHit + stolen;
+    totalAdv = meaty.onHit + drBonus + stolen;
   }
   const totalBlock =
-    meaty.onBlock != null
-      ? drNoSteal
-        ? meaty.onBlock + drBonus
-        : meaty.onBlock + stolen
-      : null;
+    meaty.onBlock != null ? meaty.onBlock + drBonus + stolen : null;
 
   const unlockedMoves =
     totalAdv != null && meaty.onHit != null
@@ -69,7 +64,6 @@ function tryMeaty(
     K,
     delay,
     activeFrameHit,
-    drNoSteal,
     totalAdv,
     totalBlock,
     onHitFlipped,

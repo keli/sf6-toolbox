@@ -106,10 +106,25 @@ function fmtBlock(ob) {
   return `<span class="${cls}">${ob >= 0 ? "+" : ""}${ob}</span>`;
 }
 
-function fmtBaseAdv(base) {
-  if (base == null) return "";
+function fmtFromBase(base, rendered) {
+  if (base == null) return rendered;
   const text = `${base >= 0 ? "+" : ""}${base}`;
-  return ` <span style="color:#888;font-size:0.9em">(${text})</span>`;
+  return `<span style="color:#888;font-size:0.9em">${text} → </span>${rendered}`;
+}
+
+function withDrDisplayBaseBonus(base, row) {
+  if (base == null) return base;
+  const isDrLastPrefix = row.prefix[row.prefix.length - 1]?.cmd === "DR";
+  const drBonus = isDrLastPrefix && row.meaty.moveType === "normal" ? 4 : 0;
+  return base + drBonus;
+}
+
+function fmtHitAdvTriplet(adv) {
+  if (adv == null) return "?";
+  const h = `${adv >= 0 ? "+" : ""}${adv}`;
+  const c = `${adv + 2 >= 0 ? "+" : ""}${adv + 2}`;
+  const pc = `${adv + 4 >= 0 ? "+" : ""}${adv + 4}`;
+  return `${h}/${c}/${pc}`;
 }
 
 function fmtFollowupTag(adv, normalButtons, marker) {
@@ -303,7 +318,7 @@ export function renderResults(state, results) {
       const totalStr = r.meaty.knockdowns.length
         ? `<span class="kd-adv-cell">${t(r.kdInfo.kdType === "HKD" ? "hkd_label" : "kd_label")}</span>`
         : hitAdv != null
-          ? `<span class="total-adv">+${hitAdv}</span>${fmtBaseAdv(r.meaty.onHit)}${fmtHitFollowupTags(hitAdv, normalButtons)}`
+          ? `${fmtFromBase(withDrDisplayBaseBonus(r.meaty.onHit, r), `<span class="total-adv">${fmtHitAdvTriplet(hitAdv)}</span>`)}${fmtHitFollowupTags(hitAdv, normalButtons)}`
           : "?";
 
       const delayStr =
@@ -321,11 +336,9 @@ export function renderResults(state, results) {
       html += `<td>${r.meaty.startup}</td>`;
       html += `<td>${r.meaty.active}</td>`;
       html += `<td>${r.activeFrameHit}/${r.meaty.active}${canDelayStr}</td>`;
-      html += r.drNoSteal
-        ? `<td><span class="safe-zero">-</span></td>`
-        : `<td><span class="stolen">+${stolen}</span></td>`;
+      html += `<td><span class="stolen">+${stolen}</span></td>`;
       html += `<td>${totalStr}</td>`;
-      html += `<td>${fmtBlock(blockAdv)}${fmtBaseAdv(r.meaty.onBlock)}${fmtBlockFollowupTag(blockAdv, normalButtons, safeOnly)}</td>`;
+      html += `<td>${fmtFromBase(withDrDisplayBaseBonus(r.meaty.onBlock, r), fmtBlock(blockAdv))}${fmtBlockFollowupTag(blockAdv, normalButtons, safeOnly)}</td>`;
       html += "</tr>";
     }
 
