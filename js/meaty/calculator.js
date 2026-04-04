@@ -144,6 +144,8 @@ function getForcedBombBlockAdv(ruleKey, meaty) {
   if (String(ruleKey || "") !== "M.Bison") return null;
   if (!moveHasBombTag(meaty)) return null;
   const cmd = String(meaty?.cmd || "");
+  if (/^46PP/.test(cmd)) return 10;
+  if (/^214PP/.test(cmd)) return -3;
   if (/^214(?:LP|MP|HP)/.test(cmd)) return 9;
   if (/^46(?:LP|MP)/.test(cmd)) return 6;
   if (/^46HP/.test(cmd)) return 5;
