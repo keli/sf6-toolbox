@@ -205,6 +205,25 @@ export function calcMeatys(moves, opts) {
       const Kbase = kdInfo.advantage;
       if (Kbase <= 0) continue;
 
+      // No-prefix route: use the meaty button directly after wake-up.
+      for (const meaty of meatyCandidates) {
+        if (blockBombFollowups && moveHasBombTag(meaty)) continue;
+        for (let d = 0; d <= maxDelay; d++) {
+          if (Kbase - d < 0) break;
+          tryMeaty(
+            kdMove,
+            kdInfo,
+            [],
+            Kbase - d,
+            d,
+            meaty,
+            results,
+            nonLightMoves,
+            opts,
+          );
+        }
+      }
+
       for (const first of firstPool) {
         if (blockBombFollowups && moveHasBombTag(first)) continue;
         const Krem1 = Kbase - first.total;
