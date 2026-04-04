@@ -93,6 +93,7 @@ function buildNormalButtons(charData) {
         cmd: m.cmd,
         startup: m.startup,
         dmg: m.dmg ?? null,
+        onBlock: m.onBlock ?? null,
       });
     }
   }
@@ -127,9 +128,12 @@ function fmtHitFollowupTags(adv, normalButtons) {
   return `${h}${c}${pc}`;
 }
 
-function fmtBlockFollowupTag(ob, normalButtons) {
+function fmtBlockFollowupTag(ob, normalButtons, safeOnly) {
   if (ob == null || ob <= 0) return "";
-  const moves = listBlockStealableNormals(ob, normalButtons);
+  let moves = listBlockStealableNormals(ob, normalButtons);
+  if (safeOnly) {
+    moves = moves.filter((m) => m.onBlock == null || m.onBlock >= -3);
+  }
   if (!moves.length) return "";
   const labels = moves.map((m) => m.cmd).join("/");
   return ` <span title="${escapeAttr(labels)}" style="color:#f90;font-size:0.85em;cursor:default">B</span>`;
@@ -179,6 +183,7 @@ export function renderResults(state, results) {
   const charName = document.getElementById("charSelect").value;
 
   const effectiveOnly = document.getElementById("effectiveOnly").checked;
+  const safeOnly = document.getElementById("safeOnly").checked;
   const onBlockFlipped = (r) =>
     r.meaty.onBlock != null && r.meaty.onBlock <= 0 && rowOnBlockAdv(r) > 0;
   if (effectiveOnly)
@@ -316,7 +321,7 @@ export function renderResults(state, results) {
         ? `<td><span class="safe-zero">-</span></td>`
         : `<td><span class="stolen">+${stolen}</span></td>`;
       html += `<td>${totalStr}</td>`;
-      html += `<td>${fmtBlock(blockAdv)}${fmtBaseAdv(r.meaty.onBlock)}${fmtBlockFollowupTag(blockAdv, normalButtons)}</td>`;
+      html += `<td>${fmtBlock(blockAdv)}${fmtBaseAdv(r.meaty.onBlock)}${fmtBlockFollowupTag(blockAdv, normalButtons, safeOnly)}</td>`;
       html += "</tr>";
     }
 
