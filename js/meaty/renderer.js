@@ -181,6 +181,9 @@ export function renderResults(state, results) {
   const el = document.getElementById("meaty-results");
   const statusEl = document.getElementById("status");
   const charName = document.getElementById("charSelect").value;
+  const singleKdMoveSelected = Boolean(
+    document.getElementById("kdMoveSelect").value,
+  );
 
   const effectiveOnly = document.getElementById("effectiveOnly").checked;
   const safeOnly = document.getElementById("safeOnly").checked;
@@ -258,7 +261,8 @@ export function renderResults(state, results) {
       })
       .join('<span style="color:#555"> / </span>');
 
-    const collapsed = rows.length > 10 ? " collapsed" : "";
+    const collapsed =
+      !singleKdMoveSelected && rows.length > 10 ? " collapsed" : "";
     html += `<div class="kd-group${collapsed}">`;
     html += `<div class="kd-header">${srcHtml} `;
 
