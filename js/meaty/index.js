@@ -10,6 +10,7 @@ import {
 
 const state = createMeatyState();
 const LAST_CHAR_KEY = "meaty:lastChar";
+let autoCalcDebounceTimer = null;
 
 const DEFAULT_OPTS = {
   kdMove: "",
@@ -90,13 +91,10 @@ export async function calculate() {
   const statusEl = document.getElementById("status");
   statusEl.textContent = t("status_calculating");
   statusEl.dataset.state = "calculating";
-
-  setTimeout(() => {
-    const results = calcMeatys(moves, opts);
-    state.lastResults = { list: results, total: results.length };
-    statusEl.dataset.state = "result";
-    renderResults(state, results);
-  }, 10);
+  const results = calcMeatys(moves, opts);
+  state.lastResults = { list: results, total: results.length };
+  statusEl.dataset.state = "result";
+  renderResults(state, results);
 }
 
 export function refreshForLanguage() {
@@ -137,12 +135,19 @@ async function resetOptions() {
   await calculate();
 }
 
+function scheduleAutoCalculate() {
+  if (autoCalcDebounceTimer != null) {
+    clearTimeout(autoCalcDebounceTimer);
+  }
+  autoCalcDebounceTimer = setTimeout(() => {
+    autoCalcDebounceTimer = null;
+    void calculate();
+  }, 60);
+}
+
 export async function initMeaty() {
   document.getElementById("calcBtn").addEventListener("click", calculate);
   document.getElementById("resetBtn").addEventListener("click", resetOptions);
-  document.getElementById("effectiveOnly").addEventListener("change", () => {
-    if (state.lastResults) renderResults(state, state.lastResults.list);
-  });
   document.getElementById("charSelect").addEventListener("change", async () => {
     const charName = document.getElementById("charSelect").value;
     localStorage.setItem(LAST_CHAR_KEY, charName);
@@ -151,6 +156,28 @@ export async function initMeaty() {
     renderKdMoveSelect(state, charName);
     await calculate();
   });
+  const autoCalcOnChangeIds = [
+    "kdMoveSelect",
+    "hitType",
+    "maxPrefix",
+    "safeOnly",
+    "cancelOnly",
+    "noSpKd",
+    "firstAny",
+    "includeDrFirst",
+    "effectiveOnly",
+  ];
+  autoCalcOnChangeIds.forEach((id) => {
+    document
+      .getElementById(id)
+      .addEventListener("change", scheduleAutoCalculate);
+  });
+  document
+    .getElementById("maxDelay")
+    .addEventListener("input", scheduleAutoCalculate);
+  document
+    .getElementById("maxDelay")
+    .addEventListener("change", scheduleAutoCalculate);
 
   initResultToggle();
   await loadDataAndInitUi();
