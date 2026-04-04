@@ -169,7 +169,8 @@ export function extractMoves(charData) {
           : parseKDField(norm.onPC ?? mv.onPC, "pc")),
         ...parseKDField(mv.onCC, "cc"),
       ];
-      const cmd = normalizeBaseCmd(mv.numCmd || mv.plnCmd || moveKey);
+      const rawCmd = String(mv.numCmd || mv.plnCmd || moveKey).trim();
+      const cmd = normalizeBaseCmd(rawCmd);
       const atkLevel = mv.atkLvl == null ? "" : String(mv.atkLvl);
       const isThrowLike =
         atkLevel.toUpperCase() === "T" ||
@@ -182,6 +183,7 @@ export function extractMoves(charData) {
       moves.push({
         name: mv.moveName || moveKey,
         cmd,
+        displayCmd: rawCmd,
         startup,
         active,
         recovery: recovery || 0,

@@ -165,7 +165,7 @@ export function renderKdMoveSelect(state, charName) {
     `<option value="">${t("kd_move_all")}</option>` +
     kdMoves
       .map((m) => {
-        const label = `${tMove(m.name)} (${m.cmd})`;
+        const label = `${tMove(m.name)} (${m.displayCmd ?? m.cmd})`;
         return `<option value="${m.cmd}">${label}</option>`;
       })
       .join("");
@@ -249,7 +249,7 @@ export function renderResults(state, results) {
           )
           .join("");
         const moveName = tMove(move.name);
-        return `${moveName} <span style="color:#666">(${move.cmd})</span> ${tags}`;
+        return `${moveName} <span style="color:#666">(${move.displayCmd ?? move.cmd})</span> ${tags}`;
       })
       .join('<span style="color:#555"> / </span>');
 
