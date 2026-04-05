@@ -5,7 +5,6 @@ function tryMeaty(
   K,
   delay,
   meaty,
-  forcedBlockAdv,
   results,
   nonLightMoves,
   opts,
@@ -23,7 +22,9 @@ function tryMeaty(
   const K1 = K + 1;
   if (U <= K1 && K1 <= U + A - 1) {
     activeFrameHit = K1 - U + 1;
-    stolen = activeFrameHit - 1;
+    const rawStolen = activeFrameHit - 1;
+    // Non-normal meaty moves do not gain extra frame advantage from late active hits.
+    stolen = meaty.moveType === "normal" ? rawStolen : 0;
   } else if (K1 < U) {
     // Wake-up already happened before our first active frame.
     // Keep only options that still hit before (or trade with) a 3f challenge.
@@ -40,11 +41,7 @@ function tryMeaty(
     totalAdv = meaty.onHit + drBonus + stolen;
   }
   const totalBlock =
-    forcedBlockAdv != null
-      ? forcedBlockAdv
-      : meaty.onBlock != null
-        ? meaty.onBlock + drBonus + stolen
-        : null;
+    meaty.onBlock != null ? meaty.onBlock + drBonus + stolen : null;
 
   const unlockedMoves =
     totalAdv != null && meaty.onHit != null
@@ -69,6 +66,7 @@ function tryMeaty(
     K,
     delay,
     activeFrameHit,
+    stolen,
     totalAdv,
     totalBlock,
     onHitFlipped,
@@ -138,18 +136,6 @@ function shouldBlockBombFollowups(ruleKey, kdMove) {
     return true;
   }
   return false;
-}
-
-function getForcedBombBlockAdv(ruleKey, meaty) {
-  if (String(ruleKey || "") !== "M.Bison") return null;
-  if (!moveHasBombTag(meaty)) return null;
-  const cmd = String(meaty?.cmd || "");
-  if (/^46PP/.test(cmd)) return 10;
-  if (/^214PP/.test(cmd)) return -3;
-  if (/^214(?:LP|MP|HP)/.test(cmd)) return 9;
-  if (/^46(?:LP|MP)/.test(cmd)) return 6;
-  if (/^46HP/.test(cmd)) return 5;
-  return null;
 }
 
 export function calcMeatys(moves, opts) {
@@ -225,7 +211,6 @@ export function calcMeatys(moves, opts) {
       // No-prefix route: use the meaty button directly after wake-up.
       for (const meaty of meatyCandidates) {
         if (blockBombFollowups && moveHasBombTag(meaty)) continue;
-        const forcedBlockAdv = getForcedBombBlockAdv(ruleKey, meaty);
         for (let d = 0; d <= maxDelay; d++) {
           if (Kbase - d < 0) break;
           tryMeaty(
@@ -235,7 +220,6 @@ export function calcMeatys(moves, opts) {
             Kbase - d,
             d,
             meaty,
-            forcedBlockAdv,
             results,
             nonLightMoves,
             opts,
@@ -250,7 +234,6 @@ export function calcMeatys(moves, opts) {
 
         for (const meaty of meatyCandidates) {
           if (blockBombFollowups && moveHasBombTag(meaty)) continue;
-          const forcedBlockAdv = getForcedBombBlockAdv(ruleKey, meaty);
           for (let d = 0; d <= maxDelay; d++) {
             if (Krem1 - d < 0) break;
             tryMeaty(
@@ -260,7 +243,6 @@ export function calcMeatys(moves, opts) {
               Krem1 - d,
               d,
               meaty,
-              forcedBlockAdv,
               results,
               nonLightMoves,
               opts,
@@ -279,7 +261,6 @@ export function calcMeatys(moves, opts) {
 
             for (const meaty of meatyCandidates) {
               if (blockBombFollowups && moveHasBombTag(meaty)) continue;
-              const forcedBlockAdv = getForcedBombBlockAdv(ruleKey, meaty);
               for (let d = 0; d <= maxDelay; d++) {
                 if (Krem2 - d < 0) break;
                 tryMeaty(
@@ -289,7 +270,6 @@ export function calcMeatys(moves, opts) {
                   Krem2 - d,
                   d,
                   meaty,
-                  forcedBlockAdv,
                   results,
                   nonLightMoves,
                   opts,
@@ -306,7 +286,6 @@ export function calcMeatys(moves, opts) {
 
                 for (const meaty of meatyCandidates) {
                   if (blockBombFollowups && moveHasBombTag(meaty)) continue;
-                  const forcedBlockAdv = getForcedBombBlockAdv(ruleKey, meaty);
                   for (let d = 0; d <= maxDelay; d++) {
                     if (Krem3 - d < 0) break;
                     tryMeaty(
@@ -316,7 +295,6 @@ export function calcMeatys(moves, opts) {
                       Krem3 - d,
                       d,
                       meaty,
-                      forcedBlockAdv,
                       results,
                       nonLightMoves,
                       opts,

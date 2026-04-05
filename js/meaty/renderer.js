@@ -311,7 +311,8 @@ export function renderResults(state, results) {
 
     visibleCount += sortedRows.length;
     for (const r of sortedRows) {
-      const stolen = r.activeFrameHit - 1;
+      const stolen =
+        typeof r.stolen === "number" ? r.stolen : r.activeFrameHit - 1;
       const hitAdv = rowOnHitAdv(r);
       const blockAdv = rowOnBlockAdv(r);
 

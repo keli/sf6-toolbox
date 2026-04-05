@@ -12,6 +12,16 @@
       "category": "normal",
       "move": "Devil Reverse",
       "set": {
+        "onBlock": "2～8",
+        "startup": "16"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Devil Reverse (bomb)",
+      "set": {
+        "onBlock": "22～28",
+        "recovery": "10 land",
         "startup": "16"
       }
     },
@@ -19,20 +29,62 @@
       "category": "normal",
       "move": "Drive Parry",
       "set": {
+        "active": "12",
         "recovery": "33"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Hell Drive",
+      "set": {
+        "startup": "20"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Hell Drive",
+      "set": {
+        "startup": "18"
       }
     },
     {
       "category": "normal",
       "move": "HK Double Knee Press",
       "set": {
+        "onBlock": "-4",
+        "onHit": "3",
         "recovery": "20"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HP Backfist Combo (bomb)",
+      "set": {
+        "onBlock": "9",
+        "recovery": "26"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HP Psycho Crusher",
+      "set": {
+        "onBlock": "-23"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HP Psycho Crusher (bomb)",
+      "set": {
+        "active": "26",
+        "recovery": "24"
       }
     },
     {
       "category": "normal",
       "move": "Head Press",
       "set": {
+        "onBlock": "-39～-33",
+        "onHit": "-28～-23",
         "startup": "15"
       }
     },
@@ -41,6 +93,13 @@
       "move": "Hell Attack",
       "set": {
         "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Hover Kick",
+      "set": {
+        "onBlock": "-15"
       }
     },
     {
@@ -89,6 +148,8 @@
       "category": "normal",
       "move": "LK Double Knee Press",
       "set": {
+        "onBlock": "-5",
+        "onHit": "2",
         "recovery": "20"
       }
     },
@@ -101,8 +162,33 @@
     },
     {
       "category": "normal",
+      "move": "LP Backfist Combo (bomb)",
+      "set": {
+        "onBlock": "9",
+        "recovery": "25"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "LP Psycho Crusher",
+      "set": {
+        "onBlock": "-20"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "LP Psycho Crusher (bomb)",
+      "set": {
+        "active": "16",
+        "recovery": "24"
+      }
+    },
+    {
+      "category": "normal",
       "move": "MK Double Knee Press",
       "set": {
+        "onBlock": "-5",
+        "onHit": "3",
         "recovery": "20"
       }
     },
@@ -115,8 +201,41 @@
     },
     {
       "category": "normal",
+      "move": "MP Backfist Combo (bomb)",
+      "set": {
+        "onBlock": "9",
+        "recovery": "26"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MP Psycho Crusher",
+      "set": {
+        "onBlock": "-20"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MP Psycho Crusher (bomb)",
+      "set": {
+        "active": "16",
+        "recovery": "24"
+      }
+    },
+    {
+      "category": "normal",
       "move": "OD Devil Reverse",
       "set": {
+        "onBlock": "4",
+        "recovery": "10 land",
+        "startup": "21"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Devil Reverse (bomb)",
+      "set": {
+        "onBlock": "24",
         "recovery": "10 land",
         "startup": "21"
       }
@@ -125,7 +244,31 @@
       "category": "normal",
       "move": "OD Head Press",
       "set": {
+        "onBlock": "5～7",
         "startup": "15"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Psycho Crusher",
+      "set": {
+        "active": "16",
+        "onBlock": "-3"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Psycho Crusher (bomb)",
+      "set": {
+        "active": "16",
+        "recovery": "20"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Psycho Punisher",
+      "set": {
+        "startup": "24"
       }
     },
     {
@@ -139,14 +282,16 @@
       "category": "normal",
       "move": "Stand HP",
       "set": {
+        "onBlock": "1",
+        "onHit": "4",
         "recovery": "17"
       }
     }
   ],
-  "generatedAt": "2026-04-01T13:12:30.460938+00:00",
+  "generatedAt": "2026-04-05T01:09:27.716641+00:00",
   "notes": [
     "Auto-generated from official SF6 frame pages and FAT comparison.",
-    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+    "Review before apply; matching is name-first with cmd fallback."
   ],
   "source": "official-streetfighter-com-frame-vs-fat",
   "sourceUrl": "https://www.streetfighter.com/6/character/vega_mbison/frame"

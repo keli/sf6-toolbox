@@ -68,6 +68,41 @@ TOKEN_ALIASES = {
     "heavy": "h",
     "punch": "p",
     "kick": "k",
+    "attack": "",
+}
+
+M_BISON_EMBEDDED_TAG_RE = re.compile(
+    r"^\s*\[\s*when\s+psycho\s+mine\s+is\s+embedded\s*\]\s*",
+    flags=re.IGNORECASE,
+)
+
+CONTROLLER_KEY_TO_NUMPAD = {
+    "key-u": "8",
+    "key-ur": "9",
+    "key-uf": "9",
+    "key-r": "6",
+    "key-f": "6",
+    "key-dr": "3",
+    "key-df": "3",
+    "key-d": "2",
+    "key-dl": "1",
+    "key-db": "1",
+    "key-l": "4",
+    "key-b": "4",
+    "key-ul": "7",
+    "key-ub": "7",
+    "key-n": "5",
+}
+
+CONTROLLER_ICON_TO_BUTTON = {
+    "icon_punch_l": "LP",
+    "icon_punch_m": "MP",
+    "icon_punch_h": "HP",
+    "icon_punch": "P",
+    "icon_kick_l": "LK",
+    "icon_kick_m": "MK",
+    "icon_kick_h": "HK",
+    "icon_kick": "K",
 }
 
 
@@ -75,6 +110,7 @@ TOKEN_ALIASES = {
 class ParsedMove:
     category: str
     name: str
+    cmd: str | None
     startup: str | None
     active: str | None
     recovery: str | None
@@ -96,6 +132,11 @@ def read_json(path: str) -> Any:
         return json.load(f)
 
 
+def read_text_file(path: str) -> str:
+    with open(path, "r", encoding="utf-8") as f:
+        return f.read()
+
+
 def row_path(row: dict[str, Any], key: str, fallback: str) -> str:
     v = str(row.get(key, "")).strip()
     return v or fallback
@@ -109,9 +150,17 @@ def write_json(path: str, data: Any) -> None:
         json.dump(data, f, ensure_ascii=False, indent=2, sort_keys=True)
 
 
+def write_text_file(path: str, text: str) -> None:
+    parent = os.path.dirname(path)
+    if parent:
+        os.makedirs(parent, exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(text)
+
+
 def clean_html_text(fragment: str) -> str:
     s = fragment
-    s = re.sub(r"<br\\s*/?>", " ", s, flags=re.IGNORECASE)
+    s = re.sub(r"<br\s*/?>", " ", s, flags=re.IGNORECASE)
     s = re.sub(r"<!--.*?-->", "", s, flags=re.DOTALL)
     s = re.sub(r"<[^>]+>", " ", s)
     s = html.unescape(s)
@@ -139,8 +188,132 @@ def canonical_token(text: str) -> str:
     for p in parts:
         if not p:
             continue
-        out.append(TOKEN_ALIASES.get(p, p))
+        mapped = TOKEN_ALIASES.get(p, p)
+        if not mapped:
+            continue
+        out.append(mapped)
     return "".join(out)
+
+
+def strip_html_fragment(fragment: str) -> str:
+    s = re.sub(r"<br\\s*/?>", " ", fragment, flags=re.IGNORECASE)
+    s = re.sub(r"<[^>]+>", " ", s)
+    s = html.unescape(s)
+    return " ".join(s.split()).strip()
+
+
+def normalize_compact_cmd(cmd: str) -> str:
+    s = str(cmd or "").upper()
+    s = s.replace("\u2212", "-").replace("\u2013", "-").replace("\u2014", "-")
+    s = re.sub(r"\([^)]*\)", "", s)
+    s = re.sub(r"\s+", "", s)
+    s = s.replace("+", "")
+    return s
+
+
+def cmd_variants(cmd: str | None) -> set[str]:
+    if not cmd:
+        return set()
+    raw = str(cmd)
+    parts = re.split(r"\s*(?:/|\||\bor\b)\s*", raw, flags=re.IGNORECASE)
+    out: set[str] = set()
+    for part in parts:
+        n = normalize_compact_cmd(part)
+        if not n:
+            continue
+        out.add(n)
+        pre = n.split(">", 1)[0]
+        if pre:
+            out.add(pre)
+    return out
+
+
+def extract_text_button_hint(fragment: str) -> str | None:
+    txt = strip_html_fragment(fragment).upper()
+    for tk in ("LP", "MP", "HP", "LK", "MK", "HK", "PP", "KK", "P", "K"):
+        if re.search(rf"(?<![A-Z0-9]){tk}(?![A-Z0-9])", txt):
+            return tk
+    if re.search(r"(?<![A-Z0-9])OD(?![A-Z0-9])", txt):
+        return "PP"
+    return None
+
+
+def build_cmd_from_controller_icons(fragment: str) -> str | None:
+    icon_ids = re.findall(
+        r"/controller/(key-[a-z0-9_-]+|icon_[a-z0-9_]+)\.png",
+        fragment,
+        flags=re.IGNORECASE,
+    )
+    if not icon_ids:
+        return None
+    tokens: list[str] = []
+    for iid in icon_ids:
+        key = iid.lower()
+        if key == "key-plus":
+            tokens.append("+")
+            continue
+        if key in CONTROLLER_KEY_TO_NUMPAD:
+            tokens.append(CONTROLLER_KEY_TO_NUMPAD[key])
+            continue
+        if key in CONTROLLER_ICON_TO_BUTTON:
+            tokens.append(CONTROLLER_ICON_TO_BUTTON[key])
+            continue
+
+    if not tokens:
+        return None
+
+    out: list[str] = []
+    dir_buf = ""
+    for tk in tokens:
+        if tk in {"1", "2", "3", "4", "5", "6", "7", "8", "9"}:
+            dir_buf += tk
+            continue
+        if tk == "+":
+            continue
+        if dir_buf:
+            out.append(dir_buf)
+            dir_buf = ""
+        out.append(tk)
+    if dir_buf:
+        out.append(dir_buf)
+
+    if not out:
+        return None
+    cmd = "".join(out)
+    hint = extract_text_button_hint(fragment)
+    if hint and cmd.endswith("P") and hint in {"LP", "MP", "HP", "PP"}:
+        cmd = cmd[:-1] + hint
+    if hint and cmd.endswith("K") and hint in {"LK", "MK", "HK", "KK"}:
+        cmd = cmd[:-1] + hint
+    return cmd or None
+
+
+def is_modern_only_row(tr_attrs: str, tr_inner: str) -> bool:
+    raw = f"{tr_attrs} {tr_inner}".lower()
+    if "modern" not in raw:
+        return False
+    if "classic" in raw:
+        return False
+    return True
+
+
+def clean_official_name_for_matching(name: str) -> tuple[str, bool]:
+    is_embedded = bool(M_BISON_EMBEDDED_TAG_RE.search(name))
+    s = M_BISON_EMBEDDED_TAG_RE.sub("", name).strip()
+    s = re.sub(r"\s+Attack$", "", s, flags=re.IGNORECASE)
+    return s, is_embedded
+
+
+def official_name_candidates(name: str) -> list[str]:
+    base, embedded = clean_official_name_for_matching(name)
+    cands: list[str] = []
+    if embedded and base and "(bomb)" not in base.lower():
+        cands.append(f"{base} (bomb)")
+    if base:
+        cands.append(base)
+    if name not in cands:
+        cands.append(name)
+    return cands
 
 
 def split_strength(name: str) -> tuple[str, str]:
@@ -161,7 +334,7 @@ def compare_equal(a: Any, b: Any) -> bool:
     bn = normalize_value_text(b)
     if an == bn:
         return True
-    if re.fullmatch(r"[+-]?\\d+", an) and re.fullmatch(r"[+-]?\\d+", bn):
+    if re.fullmatch(r"[+-]?\d+", an) and re.fullmatch(r"[+-]?\d+", bn):
         return int(an) == int(bn)
     return False
 
@@ -173,18 +346,18 @@ def should_include_hitblock(value: str, allow_opaque: bool) -> bool:
         return True
     v = value.upper()
     # Default mode only includes values with concrete numeric signal.
-    return bool(re.search(r"[+-]?\\d", v))
+    return bool(re.search(r"[+-]?\d", v))
 
 
 def parse_simple_int(value: Any) -> int | None:
     s = normalize_value_text(value)
-    if re.fullmatch(r"-?\\d+", s):
+    if re.fullmatch(r"-?\d+", s):
         return int(s)
     return None
 
 
 def parse_active_segments(value: str) -> list[tuple[int, int]] | None:
-    ranges = re.findall(r"(\\d+)\\s*-\\s*(\\d+)", value)
+    ranges = re.findall(r"(\d+)\s*-\s*(\d+)", value)
     if not ranges:
         return None
     out: list[tuple[int, int]] = []
@@ -223,7 +396,7 @@ def active_segments_to_fat_expr(segments: list[tuple[int, int]]) -> str | None:
 
 
 def normalize_active_expr(value: str) -> str:
-    return re.sub(r"\\s+", "", value)
+    return re.sub(r"\s+", "", value)
 
 
 def compare_active_with_startup(
@@ -294,6 +467,8 @@ def parse_frame_rows(frame_html: str) -> list[ParsedMove]:
         if "frame_heading__" in tr_attrs:
             category = clean_html_text(tr_inner)
             continue
+        if is_modern_only_row(tr_attrs, tr_inner):
+            continue
 
         td_matches = list(
             re.finditer(r"<td([^>]*)>(.*?)</td>", tr_inner, flags=re.DOTALL)
@@ -302,6 +477,7 @@ def parse_frame_rows(frame_html: str) -> list[ParsedMove]:
             continue
 
         move_name = ""
+        move_cmd = None
         values: dict[str, str | None] = {
             "startup": None,
             "active": None,
@@ -323,6 +499,14 @@ def parse_frame_rows(frame_html: str) -> list[ParsedMove]:
                     flags=re.DOTALL,
                 )
                 move_name = clean_html_text(mm.group(1) if mm else td_inner)
+                # Prefer classic input block when both classic/modern coexist.
+                classic_blocks = re.findall(
+                    r'<[^>]*class="[^"]*classic[^"]*"[^>]*>(.*?)</[^>]+>',
+                    td_inner,
+                    flags=re.DOTALL | re.IGNORECASE,
+                )
+                cmd_src = " ".join(classic_blocks) if classic_blocks else td_inner
+                move_cmd = build_cmd_from_controller_icons(cmd_src)
                 continue
 
             field = None
@@ -345,6 +529,7 @@ def parse_frame_rows(frame_html: str) -> list[ParsedMove]:
             ParsedMove(
                 category=category or "Unknown",
                 name=move_name,
+                cmd=move_cmd,
                 startup=values["startup"],
                 active=values["active"],
                 recovery=values["recovery"],
@@ -353,34 +538,6 @@ def parse_frame_rows(frame_html: str) -> list[ParsedMove]:
             )
         )
     return rows
-
-
-def load_parsed_rows_from_raw(path: str) -> list[ParsedMove] | None:
-    if not os.path.exists(path):
-        return None
-    try:
-        payload = read_json(path)
-    except Exception:
-        return None
-    moves = payload.get("moves") if isinstance(payload, dict) else None
-    if not isinstance(moves, list):
-        return None
-    out: list[ParsedMove] = []
-    for row in moves:
-        if not isinstance(row, dict):
-            continue
-        out.append(
-            ParsedMove(
-                category=str(row.get("category", "")),
-                name=str(row.get("name", "")),
-                startup=row.get("startup"),
-                active=row.get("active"),
-                recovery=row.get("recovery"),
-                onHit=row.get("onHit"),
-                onBlock=row.get("onBlock"),
-            )
-        )
-    return out
 
 
 def build_slug_to_char_map(slugs: list[str], char_names: list[str]) -> dict[str, str]:
@@ -404,16 +561,22 @@ def build_slug_to_char_map(slugs: list[str], char_names: list[str]) -> dict[str,
 
 def build_fat_lookup(
     char_fat: dict[str, Any],
-) -> tuple[dict[str, tuple[str, str]], dict[str, list[tuple[str, str, str]]]]:
+) -> tuple[
+    dict[str, tuple[str, str]],
+    dict[str, list[tuple[str, str, str]]],
+    dict[str, list[tuple[str, str]]],
+]:
     # exact key -> (category, move_name)
     exact: dict[str, tuple[str, str]] = {}
     # base key -> list[(strength_group, category, move_name)]
     base: dict[str, list[tuple[str, str, str]]] = {}
+    # normalized cmd token -> [(category, move_name), ...]
+    cmd_lookup: dict[str, list[tuple[str, str]]] = {}
 
     for category, moves in char_fat.get("moves", {}).items():
         if not isinstance(moves, dict):
             continue
-        for move_name in moves.keys():
+        for move_name, move in moves.items():
             full_key = canonical_token(move_name)
             exact[full_key] = (category, move_name)
 
@@ -421,37 +584,51 @@ def build_fat_lookup(
             rest_key = canonical_token(rest)
             if rest_key:
                 base.setdefault(rest_key, []).append((sg, category, move_name))
+            if isinstance(move, dict):
+                for field in ("numCmd", "plnCmd"):
+                    for v in cmd_variants(str(move.get(field, ""))):
+                        cmd_lookup.setdefault(v, []).append((category, move_name))
 
-    return exact, base
+    return exact, base, cmd_lookup
 
 
 def match_fat_move(
-    official_move_name: str,
+    row: ParsedMove,
     exact: dict[str, tuple[str, str]],
     base: dict[str, list[tuple[str, str, str]]],
-) -> tuple[str, str] | None:
-    full_key = canonical_token(official_move_name)
-    if full_key in exact:
-        return exact[full_key]
+    cmd_lookup: dict[str, list[tuple[str, str]]],
+) -> tuple[str, str, str] | None:
+    for off_name in official_name_candidates(row.name):
+        full_key = canonical_token(off_name)
+        if full_key in exact:
+            cat, mv = exact[full_key]
+            return cat, mv, "name-exact"
 
-    off_sg, off_rest = split_strength(official_move_name)
-    rest_key = canonical_token(off_rest)
-    if not rest_key:
-        return None
-    cands = base.get(rest_key, [])
-    if not cands:
-        return None
+        off_sg, off_rest = split_strength(off_name)
+        rest_key = canonical_token(off_rest)
+        if not rest_key:
+            continue
+        cands = base.get(rest_key, [])
+        if not cands:
+            continue
 
-    if off_sg:
-        sg_cands = [c for c in cands if c[0] == off_sg]
-        if len(sg_cands) == 1:
-            _, cat, mv = sg_cands[0]
-            return cat, mv
+        if off_sg:
+            sg_cands = [c for c in cands if c[0] == off_sg]
+            if len(sg_cands) == 1:
+                _, cat, mv = sg_cands[0]
+                return cat, mv, "name-strength"
 
-    # No strength in official name or still ambiguous: only accept unique.
-    if len(cands) == 1:
-        _, cat, mv = cands[0]
-        return cat, mv
+        # No strength in official name or still ambiguous: only accept unique.
+        if len(cands) == 1:
+            _, cat, mv = cands[0]
+            return cat, mv, "name-unique"
+
+    for cv in cmd_variants(row.cmd):
+        cands = cmd_lookup.get(cv, [])
+        uniq = sorted(set(cands))
+        if len(uniq) == 1:
+            cat, mv = uniq[0]
+            return cat, mv, "cmd"
     return None
 
 
@@ -462,7 +639,7 @@ def make_override_payload(
     char_fat: dict[str, Any],
     allow_opaque_hitblock: bool,
 ) -> tuple[dict[str, Any], dict[str, int], list[dict[str, Any]]]:
-    exact, base = build_fat_lookup(char_fat)
+    exact, base, cmd_lookup = build_fat_lookup(char_fat)
 
     fat_moves = char_fat.get("moves", {})
     entries: list[dict[str, Any]] = []
@@ -470,24 +647,30 @@ def make_override_payload(
     stats = {
         "official_rows": len(frame_rows),
         "matched_rows": 0,
+        "matched_by_name": 0,
+        "matched_by_cmd": 0,
         "unmatched_rows": 0,
         "entries": 0,
         "changed_fields": 0,
     }
 
     for row in frame_rows:
-        matched = match_fat_move(row.name, exact, base)
+        matched = match_fat_move(row, exact, base, cmd_lookup)
         if not matched:
             stats["unmatched_rows"] += 1
             continue
 
-        category, move_name = matched
+        category, move_name, matched_by = matched
         fat_move = fat_moves.get(category, {}).get(move_name, {})
         if not isinstance(fat_move, dict):
             stats["unmatched_rows"] += 1
             continue
 
         stats["matched_rows"] += 1
+        if matched_by == "cmd":
+            stats["matched_by_cmd"] += 1
+        else:
+            stats["matched_by_name"] += 1
         change_set: dict[str, Any] = {}
 
         pairs = {
@@ -532,6 +715,9 @@ def make_override_payload(
                     "character": char_name,
                     "category": category,
                     "move": move_name,
+                    "official_name": row.name,
+                    "official_cmd": row.cmd or "",
+                    "matched_by": matched_by,
                     "field": field,
                     "fat_value": normalize_value_text(fat_v),
                     "official_value": out_value,
@@ -558,7 +744,7 @@ def make_override_payload(
         "generatedAt": dt.datetime.now(dt.UTC).isoformat(),
         "notes": [
             "Auto-generated from official SF6 frame pages and FAT comparison.",
-            "Review before apply; move matching is name-based and may miss/skip ambiguous rows.",
+            "Review before apply; matching is name-first with cmd fallback.",
         ],
         "entries": entries,
     }
@@ -577,6 +763,9 @@ def write_conflict_reports(
         "character",
         "category",
         "move",
+        "official_name",
+        "official_cmd",
+        "matched_by",
         "field",
         "fat_value",
         "official_value",
@@ -687,6 +876,14 @@ def main() -> int:
             "raw files already exist."
         ),
     )
+    ap.add_argument(
+        "--html-cache-dir",
+        default="data/.official_frame_html",
+        help=(
+            "Directory used to cache raw official frame HTML pages "
+            "(default: data/.official_frame_html)."
+        ),
+    )
     args = ap.parse_args()
 
     index_payload = read_json(args.char_index)
@@ -720,10 +917,12 @@ def main() -> int:
         "characters_written": 0,
         "official_rows": 0,
         "matched_rows": 0,
+        "matched_by_name": 0,
+        "matched_by_cmd": 0,
         "unmatched_rows": 0,
         "entries": 0,
         "changed_fields": 0,
-        "reused_raw": 0,
+        "reused_html_cache": 0,
         "fetched_web": 0,
     }
     conflict_rows_by_char: dict[str, list[dict[str, Any]]] = {}
@@ -761,14 +960,17 @@ def main() -> int:
         if not str(row.get("officialFrameFile", "")).strip():
             raw_out = os.path.join(args.raw_dir, os.path.basename(raw_out))
         frame_url = args.frame_url_template.format(slug=slug)
+        html_cache_path = os.path.join(args.html_cache_dir, f"{slug}.frame.html")
 
-        parsed_rows: list[ParsedMove] | None = None
-        if not args.refresh:
-            parsed_rows = load_parsed_rows_from_raw(raw_out)
-            if parsed_rows is not None:
-                total_stats["reused_raw"] += 1
+        frame_html: str | None = None
+        if not args.refresh and os.path.exists(html_cache_path):
+            try:
+                frame_html = read_text_file(html_cache_path)
+                total_stats["reused_html_cache"] += 1
+            except Exception:
+                frame_html = None
 
-        if parsed_rows is None:
+        if frame_html is None:
             try:
                 frame_html = fetch_text(
                     frame_url,
@@ -778,18 +980,19 @@ def main() -> int:
             except urllib.error.URLError as e:
                 print(f"Skip {char_name}: fetch failed: {e}")
                 continue
-
-            parsed_rows = parse_frame_rows(frame_html)
-            raw_payload = {
-                "character": char_name,
-                "slug": slug,
-                "url": frame_url,
-                "fetchedAt": dt.datetime.now(dt.UTC).isoformat(),
-                "moveCount": len(parsed_rows),
-                "moves": [m.__dict__ for m in parsed_rows],
-            }
-            write_json(raw_out, raw_payload)
+            write_text_file(html_cache_path, frame_html)
             total_stats["fetched_web"] += 1
+
+        parsed_rows = parse_frame_rows(frame_html)
+        raw_payload = {
+            "character": char_name,
+            "slug": slug,
+            "url": frame_url,
+            "fetchedAt": dt.datetime.now(dt.UTC).isoformat(),
+            "moveCount": len(parsed_rows),
+            "moves": [m.__dict__ for m in parsed_rows],
+        }
+        write_json(raw_out, raw_payload)
 
         fat_path = os.path.join(args.data_dir, fat_file)
         if not os.path.exists(fat_path):
@@ -822,14 +1025,18 @@ def main() -> int:
         total_stats["characters_written"] += 1
         total_stats["official_rows"] += st["official_rows"]
         total_stats["matched_rows"] += st["matched_rows"]
+        total_stats["matched_by_name"] += st["matched_by_name"]
+        total_stats["matched_by_cmd"] += st["matched_by_cmd"]
         total_stats["unmatched_rows"] += st["unmatched_rows"]
         total_stats["entries"] += st["entries"]
         total_stats["changed_fields"] += st["changed_fields"]
 
         print(
             f"{char_name}: rows={st['official_rows']}, matched={st['matched_rows']}, "
-            f"unmatched={st['unmatched_rows']}, entries={st['entries']}, "
-            f"changed_fields={st['changed_fields']}"
+            f"unmatched={st['unmatched_rows']}, by_name={st['matched_by_name']}, "
+            f"by_cmd={st['matched_by_cmd']}, entries={st['entries']}, "
+            f"changed_fields={st['changed_fields']}, "
+            f"match_rate={st['matched_rows'] / max(st['official_rows'], 1):.1%}"
         )
 
     write_conflict_reports(
@@ -841,6 +1048,7 @@ def main() -> int:
     for k, v in total_stats.items():
         print(f"  {k}: {v}")
     print(f"  raw_dir: {args.raw_dir}")
+    print(f"  html_cache_dir: {args.html_cache_dir}")
     print(f"  conflicts_dir: {args.conflicts_dir}")
     print(f"  audit_out: {args.audit_out}")
     return 0

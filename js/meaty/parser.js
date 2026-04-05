@@ -193,7 +193,7 @@ export function extractMoves(charData) {
         onHit: parseInt1(norm.onHit ?? mv.onHit),
         rawDRoB: parseInt1(mv.rawDRoB),
         rawDRoH: parseInt1(mv.rawDRoH),
-        moveType: catName,
+        moveType: String(mv.moveType || catName || "").toLowerCase(),
         isAttack: mv.atkLvl != null,
         isThrowLike,
         isDerived,
