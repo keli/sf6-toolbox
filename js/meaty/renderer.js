@@ -315,11 +315,26 @@ export function renderResults(state, results) {
         typeof r.stolen === "number" ? r.stolen : r.activeFrameHit - 1;
       const hitAdv = rowOnHitAdv(r);
       const blockAdv = rowOnBlockAdv(r);
+      const showDelta = stolen > 0;
+
+      const hitTriplet =
+        hitAdv != null
+          ? `<span class="total-adv">${fmtHitAdvTriplet(hitAdv)}</span>`
+          : "?";
+      const hitDisplay = showDelta
+        ? fmtFromBase(withDrDisplayBaseBonus(r.meaty.onHit, r), hitTriplet)
+        : hitTriplet;
+      const blockDisplay = showDelta
+        ? fmtFromBase(
+            withDrDisplayBaseBonus(r.meaty.onBlock, r),
+            fmtBlock(blockAdv),
+          )
+        : fmtBlock(blockAdv);
 
       const totalStr = r.meaty.knockdowns.length
         ? `<span class="kd-adv-cell">${t(r.kdInfo.kdType === "HKD" ? "hkd_label" : "kd_label")}</span>`
         : hitAdv != null
-          ? `${fmtFromBase(withDrDisplayBaseBonus(r.meaty.onHit, r), `<span class="total-adv">${fmtHitAdvTriplet(hitAdv)}</span>`)}${fmtHitFollowupTags(hitAdv, normalButtons)}`
+          ? `${hitDisplay}${fmtHitFollowupTags(hitAdv, normalButtons)}`
           : "?";
 
       const delayStr =
@@ -327,8 +342,9 @@ export function renderResults(state, results) {
           ? ` <span style="color:#f90;font-size:0.85em">~${r.delay}f</span>`
           : "";
       const canDelay = r.meaty.active - r.activeFrameHit;
+      const canShowDelayHint = r.meaty.moveType === "normal";
       const canDelayStr =
-        canDelay > 0
+        canShowDelayHint && canDelay > 0
           ? ` <span title="${t("tip_can_delay", canDelay)}" style="color:#888;font-size:0.85em;cursor:default">↓${canDelay}f</span>`
           : "";
 
@@ -339,7 +355,7 @@ export function renderResults(state, results) {
       html += `<td>${r.activeFrameHit}/${r.meaty.active}${canDelayStr}</td>`;
       html += `<td><span class="stolen">+${stolen}</span></td>`;
       html += `<td>${totalStr}</td>`;
-      html += `<td>${fmtFromBase(withDrDisplayBaseBonus(r.meaty.onBlock, r), fmtBlock(blockAdv))}${fmtBlockFollowupTag(blockAdv, normalButtons, safeOnly)}</td>`;
+      html += `<td>${blockDisplay}${fmtBlockFollowupTag(blockAdv, normalButtons, safeOnly)}</td>`;
       html += "</tr>";
     }
 
