@@ -132,7 +132,7 @@ function fmtFollowupTag(adv, normalButtons, marker) {
   const moves = listStealableNormals(adv, normalButtons);
   if (!moves.length) return "";
   const labels = moves.map((m) => m.cmd).join("/");
-  return ` <span title="${escapeAttr(labels)}" style="color:#f90;font-size:0.85em;cursor:default">${marker}</span>`;
+  return `<span title="${escapeAttr(labels)}" style="color:#f90;font-size:0.85em;cursor:default">${marker}</span>`;
 }
 
 function fmtHitFollowupTags(adv, normalButtons) {
@@ -140,7 +140,9 @@ function fmtHitFollowupTags(adv, normalButtons) {
   const h = fmtFollowupTag(adv, normalButtons, "H");
   const c = fmtFollowupTag(adv + 2, normalButtons, "C");
   const pc = fmtFollowupTag(adv + 4, normalButtons, "PC");
-  return `${h}${c}${pc}`;
+  const tags = [h, c, pc].filter(Boolean);
+  if (!tags.length) return "";
+  return ` ${tags.join('<span style="color:#999">/</span>')}`;
 }
 
 function fmtBlockFollowupTag(ob, normalButtons, safeOnly) {
