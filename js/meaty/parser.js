@@ -33,6 +33,25 @@ function normalizeBaseCmd(cmd) {
   return base.trim();
 }
 
+function escapeRegex(text) {
+  return String(text).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function buildWildcardCmdRegex(baseCmd) {
+  const cmd = String(baseCmd || "").trim();
+  if (!cmd) return null;
+  if (/KK$|PP$/.test(cmd)) return null;
+  if (cmd.endsWith("K")) {
+    const stem = cmd.slice(0, -1);
+    return new RegExp(`^${escapeRegex(stem)}(?:LK|MK|HK)$`);
+  }
+  if (cmd.endsWith("P")) {
+    const stem = cmd.slice(0, -1);
+    return new RegExp(`^${escapeRegex(stem)}(?:LP|MP|HP)$`);
+  }
+  return null;
+}
+
 function parseIntWorst(val) {
   if (val == null) return null;
   if (typeof val === "number") return val;
@@ -138,8 +157,42 @@ function buildMoveSignature(mv) {
   ].join("|");
 }
 
+function pickUniformNumber(values) {
+  const nums = values.filter((v) => typeof v === "number");
+  if (nums.length !== values.length || nums.length === 0) return null;
+  const first = nums[0];
+  return nums.every((v) => v === first) ? first : null;
+}
+
+function resolveFirstPhaseSource(entry, baseMoveMap) {
+  const baseCmd = String(entry.baseCmd || "").trim();
+  if (!baseCmd) return null;
+  const exact = baseMoveMap.get(baseCmd) || [];
+  const wildcardRegex = buildWildcardCmdRegex(baseCmd);
+  const wildcard =
+    exact.length || !wildcardRegex
+      ? []
+      : [...baseMoveMap.entries()]
+          .filter(([cmd]) => wildcardRegex.test(cmd))
+          .flatMap(([, rows]) => rows);
+  const candidates = exact.length ? exact : wildcard;
+  if (!candidates.length) return null;
+
+  return {
+    startup: pickUniformNumber(candidates.map((m) => m.startup)),
+    active: pickUniformNumber(candidates.map((m) => m.active)),
+    recovery: pickUniformNumber(candidates.map((m) => m.recovery)),
+    total: pickUniformNumber(candidates.map((m) => m.total)),
+    onHit: pickUniformNumber(candidates.map((m) => m.onHit)),
+    onBlock: pickUniformNumber(candidates.map((m) => m.onBlock)),
+    rawDRoB: pickUniformNumber(candidates.map((m) => m.rawDRoB)),
+    rawDRoH: pickUniformNumber(candidates.map((m) => m.rawDRoH)),
+    knockdowns: candidates[0].knockdowns || [],
+  };
+}
+
 export function extractMoves(charData) {
-  const moves = [];
+  const staged = [];
   for (const [catName, catMoves] of Object.entries(charData.moves || {})) {
     if (typeof catMoves !== "object") continue;
     for (const [moveKey, mv] of Object.entries(catMoves)) {
@@ -171,6 +224,7 @@ export function extractMoves(charData) {
       ];
       const rawCmd = String(mv.numCmd || mv.plnCmd || moveKey).trim();
       const cmd = normalizeBaseCmd(rawCmd);
+      const hasFollowChain = rawCmd.includes(">");
       const atkLevel = mv.atkLvl == null ? "" : String(mv.atkLvl);
       const isThrowLike =
         atkLevel.toUpperCase() === "T" ||
@@ -180,10 +234,12 @@ export function extractMoves(charData) {
         mv.followUp === true ||
         hasText(mv.fullStartup) ||
         hasText(mv.fullActive);
-      moves.push({
+      staged.push({
         name: mv.moveName || moveKey,
         cmd,
         displayCmd: rawCmd,
+        baseCmd: cmd,
+        hasFollowChain,
         startup,
         active,
         recovery: recovery || 0,
@@ -201,6 +257,38 @@ export function extractMoves(charData) {
         knockdowns,
       });
     }
+  }
+
+  const baseMoveMap = new Map();
+  for (const mv of staged) {
+    if (mv.isDerived || mv.hasFollowChain) continue;
+    if (!baseMoveMap.has(mv.cmd)) baseMoveMap.set(mv.cmd, []);
+    baseMoveMap.get(mv.cmd).push(mv);
+  }
+
+  const moves = [];
+  for (const mv of staged) {
+    if (mv.isDerived && mv.hasFollowChain) {
+      const src = resolveFirstPhaseSource(mv, baseMoveMap);
+      if (!src) continue;
+      if (src.startup == null || src.active == null || src.total == null) continue;
+      moves.push({
+        ...mv,
+        displayCmd: mv.baseCmd,
+        isDerived: false,
+        startup: src.startup,
+        active: src.active,
+        recovery: src.recovery ?? mv.recovery,
+        total: src.total,
+        onHit: src.onHit,
+        onBlock: src.onBlock,
+        rawDRoB: src.rawDRoB,
+        rawDRoH: src.rawDRoH,
+        knockdowns: src.knockdowns,
+      });
+      continue;
+    }
+    moves.push(mv);
   }
 
   const fDash = parseInt1(charData.stats?.fDash);
@@ -225,7 +313,14 @@ export function extractMoves(charData) {
   const uniq = new Map();
   for (const mv of moves) {
     const key = buildMoveSignature(mv);
-    if (!uniq.has(key)) uniq.set(key, mv);
+    if (!uniq.has(key)) {
+      uniq.set(key, mv);
+      continue;
+    }
+    const prev = uniq.get(key);
+    const prevCanonical = !prev.hasFollowChain && !prev.isDerived;
+    const currCanonical = !mv.hasFollowChain && !mv.isDerived;
+    if (!prevCanonical && currCanonical) uniq.set(key, mv);
   }
-  return [...uniq.values()];
+  return [...uniq.values()].map(({ baseCmd, hasFollowChain, ...mv }) => mv);
 }
