@@ -1,11 +1,12 @@
 {
   "character": "C.Viper",
-  "fetchedAt": "2026-04-01T13:11:48.153561+00:00",
+  "fetchedAt": "2026-04-06T10:00:28.873052+00:00",
   "moveCount": 69,
   "moves": [
     {
       "active": "4-6",
       "category": "Normal Moves",
+      "cmd": "LP",
       "name": "Standing Light Punch",
       "onBlock": "-2",
       "onHit": "4",
@@ -15,6 +16,7 @@
     {
       "active": "5-7",
       "category": "Normal Moves",
+      "cmd": "LK",
       "name": "Standing Light Kick",
       "onBlock": "-2",
       "onHit": "3",
@@ -24,6 +26,7 @@
     {
       "active": "8-11",
       "category": "Normal Moves",
+      "cmd": "MP",
       "name": "Standing Medium Punch",
       "onBlock": "1",
       "onHit": "6",
@@ -33,6 +36,7 @@
     {
       "active": "8-10",
       "category": "Normal Moves",
+      "cmd": "MK",
       "name": "Standing Medium Kick",
       "onBlock": "-3",
       "onHit": "4",
@@ -42,6 +46,7 @@
     {
       "active": "12-14",
       "category": "Normal Moves",
+      "cmd": "HP",
       "name": "Standing Heavy Punch",
       "onBlock": "-2",
       "onHit": "3",
@@ -51,6 +56,7 @@
     {
       "active": "10-13",
       "category": "Normal Moves",
+      "cmd": "HK",
       "name": "Standing Heavy Kick",
       "onBlock": "-3",
       "onHit": "4",
@@ -60,6 +66,7 @@
     {
       "active": "4-6",
       "category": "Normal Moves",
+      "cmd": "2LP",
       "name": "Crouching Light Punch",
       "onBlock": "-1",
       "onHit": "5",
@@ -69,6 +76,7 @@
     {
       "active": "5-6",
       "category": "Normal Moves",
+      "cmd": "2LK",
       "name": "Crouching Light Kick",
       "onBlock": "-1",
       "onHit": "4",
@@ -78,6 +86,7 @@
     {
       "active": "6-9",
       "category": "Normal Moves",
+      "cmd": "2MP",
       "name": "Crouching Medium Punch",
       "onBlock": "-2",
       "onHit": "5",
@@ -87,6 +96,7 @@
     {
       "active": "8-10",
       "category": "Normal Moves",
+      "cmd": "2MK",
       "name": "Crouching Medium Kick",
       "onBlock": "-1",
       "onHit": "5",
@@ -96,6 +106,7 @@
     {
       "active": "9-11",
       "category": "Normal Moves",
+      "cmd": "2HP",
       "name": "Crouching Heavy Punch",
       "onBlock": "-5",
       "onHit": "2",
@@ -105,6 +116,7 @@
     {
       "active": "10-12",
       "category": "Normal Moves",
+      "cmd": "2HK",
       "name": "Crouching Heavy Kick",
       "onBlock": "-11",
       "onHit": "D",
@@ -114,6 +126,7 @@
     {
       "active": "5-10",
       "category": "Normal Moves",
+      "cmd": "LP",
       "name": "Jumping Light Punch",
       "onBlock": null,
       "onHit": null,
@@ -123,6 +136,7 @@
     {
       "active": "5-11",
       "category": "Normal Moves",
+      "cmd": "LK",
       "name": "Jumping Light Kick",
       "onBlock": null,
       "onHit": null,
@@ -132,6 +146,7 @@
     {
       "active": "8-13",
       "category": "Normal Moves",
+      "cmd": "MP",
       "name": "Jumping Medium Punch",
       "onBlock": null,
       "onHit": null,
@@ -141,6 +156,7 @@
     {
       "active": "7-12",
       "category": "Normal Moves",
+      "cmd": "MK",
       "name": "Jumping Medium Kick",
       "onBlock": null,
       "onHit": null,
@@ -150,6 +166,7 @@
     {
       "active": "11-15",
       "category": "Normal Moves",
+      "cmd": "HP",
       "name": "Jumping Heavy Punch",
       "onBlock": null,
       "onHit": null,
@@ -159,6 +176,7 @@
     {
       "active": "8-14",
       "category": "Normal Moves",
+      "cmd": "HK",
       "name": "Jumping Heavy Kick",
       "onBlock": null,
       "onHit": null,
@@ -168,6 +186,7 @@
     {
       "active": "10-16",
       "category": "Normal Moves",
+      "cmd": "HK",
       "name": "Neutral Jumping Heavy Kick",
       "onBlock": null,
       "onHit": null,
@@ -177,6 +196,7 @@
     {
       "active": "22-24",
       "category": "Unique Attacks",
+      "cmd": "6MP",
       "name": "Viper Elbow",
       "onBlock": "-3",
       "onHit": "2",
@@ -186,6 +206,7 @@
     {
       "active": "11-31 11-13, 29-31",
       "category": "Unique Attacks",
+      "cmd": "6HK",
       "name": "Double Kick",
       "onBlock": "-2",
       "onHit": "4",
@@ -195,6 +216,7 @@
     {
       "active": null,
       "category": "Unique Attacks",
+      "cmd": "29",
       "name": "High Jump (Forward)",
       "onBlock": null,
       "onHit": null,
@@ -204,6 +226,7 @@
     {
       "active": null,
       "category": "Unique Attacks",
+      "cmd": "28",
       "name": "High Jump (Neutral)",
       "onBlock": null,
       "onHit": null,
@@ -213,6 +236,7 @@
     {
       "active": "17-20",
       "category": "Special Moves",
+      "cmd": "214LP",
       "name": "L Thunder Dash",
       "onBlock": "-4",
       "onHit": "1",
@@ -222,6 +246,7 @@
     {
       "active": "16-19",
       "category": "Special Moves",
+      "cmd": "214MP",
       "name": "M Thunder Dash",
       "onBlock": "-3",
       "onHit": "1",
@@ -231,6 +256,7 @@
     {
       "active": "7-16",
       "category": "Special Moves",
+      "cmd": "214HP",
       "name": "H Thunder Dash",
       "onBlock": "-24",
       "onHit": "D",
@@ -240,6 +266,7 @@
     {
       "active": "18-41 18-21, 38-41",
       "category": "Special Moves",
+      "cmd": "214PP",
       "name": "OD Thunder Dash",
       "onBlock": "-2",
       "onHit": "D",
@@ -249,6 +276,7 @@
     {
       "active": "15-17",
       "category": "Special Moves",
+      "cmd": "6PP",
       "name": "L Tracer Combination",
       "onBlock": "-15",
       "onHit": "D",
@@ -258,6 +286,7 @@
     {
       "active": "21-24",
       "category": "Special Moves",
+      "cmd": "6PP",
       "name": "M Tracer Combination",
       "onBlock": "-13",
       "onHit": "D",
@@ -267,6 +296,7 @@
     {
       "active": "17-20",
       "category": "Special Moves",
+      "cmd": "6PP",
       "name": "H Tracer Combination",
       "onBlock": "ー",
       "onHit": "D",
@@ -276,6 +306,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "K",
       "name": "[Thunder Dash]Feint",
       "onBlock": null,
       "onHit": null,
@@ -285,6 +316,7 @@
     {
       "active": "23-27",
       "category": "Special Moves",
+      "cmd": "236LK",
       "name": "L Burning Kick",
       "onBlock": "-2",
       "onHit": "D",
@@ -294,6 +326,7 @@
     {
       "active": "25-29",
       "category": "Special Moves",
+      "cmd": "236MK",
       "name": "M Burning Kick",
       "onBlock": "-2",
       "onHit": "D",
@@ -303,6 +336,7 @@
     {
       "active": "27-31",
       "category": "Special Moves",
+      "cmd": "236HK",
       "name": "H Burning Kick",
       "onBlock": "-2",
       "onHit": "D",
@@ -312,6 +346,7 @@
     {
       "active": "8-35 8-10, 32-35",
       "category": "Special Moves",
+      "cmd": "236KK",
       "name": "OD Burning Kick",
       "onBlock": "-4",
       "onHit": "D",
@@ -321,6 +356,7 @@
     {
       "active": "12-15",
       "category": "Special Moves",
+      "cmd": "PP",
       "name": "Knuckled Pursuit",
       "onBlock": "-15",
       "onHit": "D",
@@ -330,6 +366,7 @@
     {
       "active": "21-25",
       "category": "Special Moves",
+      "cmd": "KK",
       "name": "Double Burn",
       "onBlock": "2",
       "onHit": "D",
@@ -339,6 +376,7 @@
     {
       "active": "22-28",
       "category": "Special Moves",
+      "cmd": "236LK",
       "name": "L Aerial Burning Kick",
       "onBlock": "-3～2",
       "onHit": "D",
@@ -348,6 +386,7 @@
     {
       "active": "20-26",
       "category": "Special Moves",
+      "cmd": "236MK",
       "name": "M Aerial Burning Kick",
       "onBlock": "-3～3",
       "onHit": "D",
@@ -357,6 +396,7 @@
     {
       "active": "18-24",
       "category": "Special Moves",
+      "cmd": "236HK",
       "name": "H Aerial Burning Kick",
       "onBlock": "-4～1",
       "onHit": "D",
@@ -366,6 +406,7 @@
     {
       "active": "18-24",
       "category": "Special Moves",
+      "cmd": "236KK",
       "name": "OD Aerial Burning Kick",
       "onBlock": "1～7",
       "onHit": "D",
@@ -375,6 +416,7 @@
     {
       "active": "24-31",
       "category": "Special Moves",
+      "cmd": "623LP",
       "name": "L Seismic Hammer",
       "onBlock": "-10",
       "onHit": "D",
@@ -384,6 +426,7 @@
     {
       "active": "24-31",
       "category": "Special Moves",
+      "cmd": "623MP",
       "name": "M Seismic Hammer",
       "onBlock": "-10",
       "onHit": "D",
@@ -393,6 +436,7 @@
     {
       "active": "24-31",
       "category": "Special Moves",
+      "cmd": "623HP",
       "name": "H Seismic Hammer",
       "onBlock": "-10",
       "onHit": "D",
@@ -402,6 +446,7 @@
     {
       "active": "19-26",
       "category": "Special Moves",
+      "cmd": "623PP",
       "name": "OD Seismic Hammer",
       "onBlock": "-8",
       "onHit": "D",
@@ -411,6 +456,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "K",
       "name": "[Seismic Hammer]Feint",
       "onBlock": null,
       "onHit": null,
@@ -420,6 +466,7 @@
     {
       "active": "23-34 23-26, 31-34",
       "category": "Special Moves",
+      "cmd": "214K",
       "name": "Focus Force(Lv1)",
       "onBlock": "-16",
       "onHit": "D",
@@ -429,6 +476,7 @@
     {
       "active": "30-41 30-33, 38-41",
       "category": "Special Moves",
+      "cmd": "214K",
       "name": "Focus Force(Lv2)",
       "onBlock": "-16",
       "onHit": "D",
@@ -438,6 +486,7 @@
     {
       "active": "69-80 69-72, 77-80",
       "category": "Special Moves",
+      "cmd": "214K",
       "name": "Focus Force(Lv3)",
       "onBlock": "-10",
       "onHit": "D",
@@ -447,6 +496,7 @@
     {
       "active": "20-31 20-23, 28-31",
       "category": "Special Moves",
+      "cmd": "214KK",
       "name": "OD Focus Force(Lv1)",
       "onBlock": "-16",
       "onHit": "D",
@@ -456,6 +506,7 @@
     {
       "active": "30-41 30-33, 38-41",
       "category": "Special Moves",
+      "cmd": "214KK",
       "name": "OD Focus Force(Lv2)",
       "onBlock": "-16",
       "onHit": "D",
@@ -465,6 +516,7 @@
     {
       "active": "67-78 67-70, 75-78",
       "category": "Special Moves",
+      "cmd": "214KK",
       "name": "OD Focus Force(Lv3)",
       "onBlock": "-10",
       "onHit": "D",
@@ -474,6 +526,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "66",
       "name": "[Focus Force]Forward Dash",
       "onBlock": null,
       "onHit": null,
@@ -483,6 +536,7 @@
     {
       "active": "8-20 8-11, 15-20",
       "category": "Super Arts",
+      "cmd": "236236K",
       "name": "SA1 Limit Decoupler",
       "onBlock": "-34",
       "onHit": "D",
@@ -492,6 +546,7 @@
     {
       "active": "7-10",
       "category": "Super Arts",
+      "cmd": "214214P",
       "name": "SA2 Mission Complete",
       "onBlock": "-29",
       "onHit": "D",
@@ -501,6 +556,7 @@
     {
       "active": "10-13",
       "category": "Super Arts",
+      "cmd": "214214K",
       "name": "SA3 Hard Luck Rejector",
       "onBlock": "-38",
       "onHit": "D",
@@ -510,6 +566,7 @@
     {
       "active": "10-13",
       "category": "Super Arts",
+      "cmd": "214214K",
       "name": "CA Hard Luck Rejector",
       "onBlock": "-38",
       "onHit": "D",
@@ -519,6 +576,7 @@
     {
       "active": "5-7",
       "category": "Throws",
+      "cmd": "6LPLK",
       "name": "High Impulse",
       "onBlock": null,
       "onHit": "D",
@@ -528,6 +586,7 @@
     {
       "active": "5-7",
       "category": "Throws",
+      "cmd": "4LPLK",
       "name": "Thunder Cradle",
       "onBlock": null,
       "onHit": "D",
@@ -537,6 +596,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "66",
       "name": "Forward Dash",
       "onBlock": null,
       "onHit": null,
@@ -546,6 +606,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "44",
       "name": "Backward Dash",
       "onBlock": null,
       "onHit": null,
@@ -555,6 +616,7 @@
     {
       "active": "26-27",
       "category": "Common Moves",
+      "cmd": "HPHK",
       "name": "Drive Impact: Viper Cannon",
       "onBlock": "-3",
       "onHit": "D",
@@ -564,6 +626,7 @@
     {
       "active": "20-22",
       "category": "Common Moves",
+      "cmd": "6HPHK",
       "name": "Drive Reversal (while blocking): Counter Spark",
       "onBlock": "-6",
       "onHit": "D",
@@ -573,6 +636,7 @@
     {
       "active": "18-20",
       "category": "Common Moves",
+      "cmd": "6HPHK",
       "name": "Drive Reversal (while recovering): Counter Spark",
       "onBlock": "-6",
       "onHit": "D",
@@ -582,6 +646,7 @@
     {
       "active": "[*2] 1-12",
       "category": "Common Moves",
+      "cmd": "MPMK",
       "name": "Drive Parry",
       "onBlock": null,
       "onHit": null,
@@ -591,6 +656,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "MPMK",
       "name": "Perfect Parry (strike)",
       "onBlock": null,
       "onHit": null,
@@ -600,6 +666,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "MPMK",
       "name": "Perfect Parry (projectile)",
       "onBlock": null,
       "onHit": null,
@@ -609,6 +676,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "66",
       "name": "Parry Drive Rush",
       "onBlock": null,
       "onHit": null,
@@ -618,6 +686,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "66",
       "name": "Cancel Drive Rush",
       "onBlock": null,
       "onHit": null,

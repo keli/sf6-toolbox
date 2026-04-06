@@ -3,6 +3,13 @@
   "entries": [
     {
       "category": "normal",
+      "move": "Crouch HK",
+      "set": {
+        "onBlock": "-10"
+      }
+    },
+    {
+      "category": "normal",
       "move": "Crouch HP",
       "set": {
         "recovery": "*17"
@@ -12,7 +19,22 @@
       "category": "normal",
       "move": "Drive Parry",
       "set": {
+        "active": "12",
         "recovery": "33"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Raiden-ho",
+      "set": {
+        "startup": "20"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Raiden-ho",
+      "set": {
+        "startup": "18"
       }
     },
     {
@@ -34,6 +56,17 @@
       "category": "normal",
       "move": "HP Hundred Hand Slap",
       "set": {
+        "onHit": "2",
+        "recovery": "17",
+        "startup": "19"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HP Hundred Hand Slap",
+      "set": {
+        "onBlock": "-4",
+        "onHit": "4",
         "recovery": "17",
         "startup": "19"
       }
@@ -42,6 +75,7 @@
       "category": "normal",
       "move": "HP Sumo Headbutt",
       "set": {
+        "active": "23",
         "recovery": "20"
       }
     },
@@ -97,8 +131,24 @@
     },
     {
       "category": "normal",
+      "move": "LP Hundred Hand Slap",
+      "set": {
+        "onHit": "2"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "LP Hundred Hand Slap",
+      "set": {
+        "onBlock": "0",
+        "onHit": "4"
+      }
+    },
+    {
+      "category": "normal",
       "move": "LP Sumo Headbutt",
       "set": {
+        "active": "22",
         "recovery": "20"
       }
     },
@@ -114,6 +164,17 @@
       "category": "normal",
       "move": "MP Hundred Hand Slap",
       "set": {
+        "onHit": "2",
+        "recovery": "17",
+        "startup": "16"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MP Hundred Hand Slap",
+      "set": {
+        "onBlock": "-4",
+        "onHit": "4",
         "recovery": "17",
         "startup": "16"
       }
@@ -122,7 +183,16 @@
       "category": "normal",
       "move": "MP Sumo Headbutt",
       "set": {
+        "active": "24",
         "recovery": "20"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Neko Damashi",
+      "set": {
+        "onBlock": "-3",
+        "onHit": "3"
       }
     },
     {
@@ -130,6 +200,21 @@
       "move": "Neutral Jump HP",
       "set": {
         "recovery": "3 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Hundred Hand Slap",
+      "set": {
+        "onHit": "4"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Hundred Hand Slap",
+      "set": {
+        "onBlock": "1",
+        "onHit": "6"
       }
     },
     {
@@ -156,8 +241,17 @@
     },
     {
       "category": "normal",
+      "move": "Stand HK",
+      "set": {
+        "onBlock": "-5"
+      }
+    },
+    {
+      "category": "normal",
       "move": "Stand HP",
       "set": {
+        "onBlock": "-6",
+        "onHit": "1",
         "startup": "8"
       }
     },
@@ -177,10 +271,10 @@
       }
     }
   ],
-  "generatedAt": "2026-04-01T13:11:55.398877+00:00",
+  "generatedAt": "2026-04-06T10:00:37.737547+00:00",
   "notes": [
     "Auto-generated from official SF6 frame pages and FAT comparison.",
-    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+    "Review before apply; matching is name-first with cmd fallback."
   ],
   "source": "official-streetfighter-com-frame-vs-fat",
   "sourceUrl": "https://www.streetfighter.com/6/character/ehonda/frame"

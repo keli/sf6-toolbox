@@ -1,11 +1,12 @@
 {
   "character": "Ryu",
-  "fetchedAt": "2026-04-01T13:12:26.146387+00:00",
+  "fetchedAt": "2026-04-06T10:01:10.933559+00:00",
   "moveCount": 75,
   "moves": [
     {
       "active": "4-6",
       "category": "Normal Moves",
+      "cmd": "LP",
       "name": "Standing Light Punch",
       "onBlock": "-1",
       "onHit": "4",
@@ -15,6 +16,7 @@
     {
       "active": "5-7",
       "category": "Normal Moves",
+      "cmd": "LK",
       "name": "Standing Light Kick",
       "onBlock": "-4",
       "onHit": "2",
@@ -24,6 +26,7 @@
     {
       "active": "6-9",
       "category": "Normal Moves",
+      "cmd": "MP",
       "name": "Standing Medium Punch",
       "onBlock": "-1",
       "onHit": "7",
@@ -33,6 +36,7 @@
     {
       "active": "9-11",
       "category": "Normal Moves",
+      "cmd": "MK",
       "name": "Standing Medium Kick",
       "onBlock": "-4",
       "onHit": "4",
@@ -42,6 +46,7 @@
     {
       "active": "10-14",
       "category": "Normal Moves",
+      "cmd": "HP",
       "name": "Standing Heavy Punch",
       "onBlock": "-2",
       "onHit": "4",
@@ -51,6 +56,7 @@
     {
       "active": "12-15",
       "category": "Normal Moves",
+      "cmd": "HK",
       "name": "Standing Heavy Kick",
       "onBlock": "1",
       "onHit": "9",
@@ -60,6 +66,7 @@
     {
       "active": "4-5",
       "category": "Normal Moves",
+      "cmd": "2LP",
       "name": "Crouching Light Punch",
       "onBlock": "-1",
       "onHit": "4",
@@ -69,6 +76,7 @@
     {
       "active": "5-6",
       "category": "Normal Moves",
+      "cmd": "2LK",
       "name": "Crouching Light Kick",
       "onBlock": "-1",
       "onHit": "3",
@@ -78,6 +86,7 @@
     {
       "active": "6-9",
       "category": "Normal Moves",
+      "cmd": "2MP",
       "name": "Crouching Medium Punch",
       "onBlock": "0",
       "onHit": "5",
@@ -87,6 +96,7 @@
     {
       "active": "8-10",
       "category": "Normal Moves",
+      "cmd": "2MK",
       "name": "Crouching Medium Kick",
       "onBlock": "-6",
       "onHit": "1",
@@ -96,6 +106,7 @@
     {
       "active": "9-14",
       "category": "Normal Moves",
+      "cmd": "2HP",
       "name": "Crouching Heavy Punch",
       "onBlock": "-7",
       "onHit": "1",
@@ -105,6 +116,7 @@
     {
       "active": "9-11",
       "category": "Normal Moves",
+      "cmd": "2HK",
       "name": "Crouching Heavy Kick",
       "onBlock": "-12",
       "onHit": "D",
@@ -114,6 +126,7 @@
     {
       "active": "4-13",
       "category": "Normal Moves",
+      "cmd": "LP",
       "name": "Jumping Light Punch",
       "onBlock": null,
       "onHit": null,
@@ -123,6 +136,7 @@
     {
       "active": "6-15",
       "category": "Normal Moves",
+      "cmd": "LK",
       "name": "Jumping Light Kick",
       "onBlock": null,
       "onHit": null,
@@ -132,6 +146,7 @@
     {
       "active": "8-12",
       "category": "Normal Moves",
+      "cmd": "MP",
       "name": "Jumping Medium Punch",
       "onBlock": null,
       "onHit": null,
@@ -141,6 +156,7 @@
     {
       "active": "7-12",
       "category": "Normal Moves",
+      "cmd": "MK",
       "name": "Jumping Medium Kick",
       "onBlock": null,
       "onHit": null,
@@ -150,6 +166,7 @@
     {
       "active": "9-14",
       "category": "Normal Moves",
+      "cmd": "HP",
       "name": "Jumping Heavy Punch",
       "onBlock": null,
       "onHit": null,
@@ -159,6 +176,7 @@
     {
       "active": "10-17",
       "category": "Normal Moves",
+      "cmd": "HK",
       "name": "Jumping Heavy Kick",
       "onBlock": null,
       "onHit": null,
@@ -168,6 +186,7 @@
     {
       "active": "20-23",
       "category": "Unique Attacks",
+      "cmd": "6MP",
       "name": "Collarbone Breaker",
       "onBlock": "-3",
       "onHit": "3",
@@ -177,6 +196,7 @@
     {
       "active": "20-24",
       "category": "Unique Attacks",
+      "cmd": "6HP",
       "name": "Solar Plexus Strike",
       "onBlock": "3",
       "onHit": "6",
@@ -186,6 +206,7 @@
     {
       "active": "7-10",
       "category": "Unique Attacks",
+      "cmd": "4HP",
       "name": "Short Uppercut",
       "onBlock": "-13",
       "onHit": "1",
@@ -195,6 +216,7 @@
     {
       "active": "10-23 10-14, 20-23",
       "category": "Unique Attacks",
+      "cmd": "4HK",
       "name": "Axe Kick",
       "onBlock": "-4",
       "onHit": "0",
@@ -204,6 +226,7 @@
     {
       "active": "16-19",
       "category": "Unique Attacks",
+      "cmd": "6HK",
       "name": "Whirlwind Kick",
       "onBlock": "-4",
       "onHit": "2",
@@ -213,6 +236,7 @@
     {
       "active": "9-12",
       "category": "Unique Attacks",
+      "cmd": "HPHK",
       "name": "High Double Strike",
       "onBlock": "-8",
       "onHit": "D",
@@ -222,6 +246,7 @@
     {
       "active": "5-7",
       "category": "Unique Attacks",
+      "cmd": "MPLK",
       "name": "Fuwa Triple Strike(2)",
       "onBlock": "-4",
       "onHit": "1",
@@ -231,6 +256,7 @@
     {
       "active": "17-20",
       "category": "Unique Attacks",
+      "cmd": "MPLKHK",
       "name": "Fuwa Triple Strike(3)",
       "onBlock": "-8",
       "onHit": "D",
@@ -240,6 +266,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236LP",
       "name": "L Hadoken",
       "onBlock": "-5",
       "onHit": "2",
@@ -249,6 +276,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236MP",
       "name": "M Hadoken",
       "onBlock": "-7",
       "onHit": "0",
@@ -258,6 +286,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236HP",
       "name": "H Hadoken",
       "onBlock": "-9",
       "onHit": "-2",
@@ -267,6 +296,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236P",
       "name": "[Denjin Charge]Hadoken",
       "onBlock": "-1",
       "onHit": "D",
@@ -276,6 +306,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236PP",
       "name": "OD Hadoken",
       "onBlock": "-1",
       "onHit": "D",
@@ -285,6 +316,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236PP",
       "name": "[Denjin Charge]OD Hadoken",
       "onBlock": "2",
       "onHit": "D",
@@ -294,6 +326,7 @@
     {
       "active": "5-14",
       "category": "Special Moves",
+      "cmd": "623LP",
       "name": "L Shoryuken",
       "onBlock": "-23",
       "onHit": "D",
@@ -303,6 +336,7 @@
     {
       "active": "6-15",
       "category": "Special Moves",
+      "cmd": "623MP",
       "name": "M Shoryuken",
       "onBlock": "-32",
       "onHit": "D",
@@ -312,6 +346,7 @@
     {
       "active": "7-16",
       "category": "Special Moves",
+      "cmd": "623HP",
       "name": "H Shoryuken",
       "onBlock": "-36",
       "onHit": "D",
@@ -321,6 +356,7 @@
     {
       "active": "6-15 6-7,8-15",
       "category": "Special Moves",
+      "cmd": "623PP",
       "name": "OD Shoryuken",
       "onBlock": "-40",
       "onHit": "D",
@@ -330,6 +366,7 @@
     {
       "active": "12-14",
       "category": "Special Moves",
+      "cmd": "214LK",
       "name": "L Tatsumaki Senpu-kyaku",
       "onBlock": "-15",
       "onHit": "D",
@@ -339,6 +376,7 @@
     {
       "active": "14-30 14-15, 29-30",
       "category": "Special Moves",
+      "cmd": "214MK",
       "name": "M Tatsumaki Senpu-kyaku",
       "onBlock": "-13",
       "onHit": "D",
@@ -348,6 +386,7 @@
     {
       "active": "16-47 16-17, 31-32, 46-47",
       "category": "Special Moves",
+      "cmd": "214HK",
       "name": "H Tatsumaki Senpu-kyaku",
       "onBlock": "-13",
       "onHit": "D",
@@ -357,6 +396,7 @@
     {
       "active": "13-37 13-14, 19-20, 25-26, 30-31, 36-37",
       "category": "Special Moves",
+      "cmd": "214KK",
       "name": "OD Tatsumaki Senpu-kyaku",
       "onBlock": "-14",
       "onHit": "D",
@@ -366,6 +406,7 @@
     {
       "active": "11-27 11-12,18-19,26-27",
       "category": "Special Moves",
+      "cmd": "214K",
       "name": "Aerial Tatsumaki Senpu-kyaku",
       "onBlock": null,
       "onHit": "D",
@@ -375,6 +416,7 @@
     {
       "active": "11-28 11-12, 14-16, 18-20, 22-24, 27-28",
       "category": "Special Moves",
+      "cmd": "214KK",
       "name": "OD Aerial Tatsumaki Senpu-kyaku",
       "onBlock": null,
       "onHit": "D",
@@ -384,6 +426,7 @@
     {
       "active": "14-19",
       "category": "Special Moves",
+      "cmd": "236LK",
       "name": "L High Blade Kick",
       "onBlock": "-11",
       "onHit": "D",
@@ -393,6 +436,7 @@
     {
       "active": "18-26",
       "category": "Special Moves",
+      "cmd": "236MK",
       "name": "M High Blade Kick",
       "onBlock": "-8",
       "onHit": "D",
@@ -402,6 +446,7 @@
     {
       "active": "27-35",
       "category": "Special Moves",
+      "cmd": "236HK",
       "name": "H High Blade Kick",
       "onBlock": "-3",
       "onHit": "D",
@@ -411,6 +456,7 @@
     {
       "active": "17-21",
       "category": "Special Moves",
+      "cmd": "236KK",
       "name": "OD High Blade Kick",
       "onBlock": "-18",
       "onHit": "D",
@@ -420,6 +466,7 @@
     {
       "active": "12-17",
       "category": "Special Moves",
+      "cmd": "214LP",
       "name": "L Hashogeki",
       "onBlock": "-3",
       "onHit": "2",
@@ -429,6 +476,7 @@
     {
       "active": "19-24",
       "category": "Special Moves",
+      "cmd": "214MP",
       "name": "M Hashogeki",
       "onBlock": "-6",
       "onHit": "2",
@@ -438,6 +486,7 @@
     {
       "active": "30-34.35",
       "category": "Special Moves",
+      "cmd": "214HP",
       "name": "H Hashogeki",
       "onBlock": "2",
       "onHit": "D",
@@ -447,6 +496,7 @@
     {
       "active": "20-24.25",
       "category": "Special Moves",
+      "cmd": "214P",
       "name": "[Denjin Charge]Hashogeki",
       "onBlock": "3",
       "onHit": "D",
@@ -456,6 +506,7 @@
     {
       "active": "18-22",
       "category": "Special Moves",
+      "cmd": "214PP",
       "name": "OD Hashogeki",
       "onBlock": "3",
       "onHit": "3",
@@ -465,6 +516,7 @@
     {
       "active": "18-23",
       "category": "Special Moves",
+      "cmd": "214PP",
       "name": "[Denjin Charge]OD Hashogeki",
       "onBlock": "4",
       "onHit": "D",
@@ -474,6 +526,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "22P",
       "name": "Denjin Charge",
       "onBlock": null,
       "onHit": null,
@@ -483,6 +536,7 @@
     {
       "active": null,
       "category": "Super Arts",
+      "cmd": "236236P",
       "name": "SA1 Shinku Hadoken",
       "onBlock": "-24",
       "onHit": "D",
@@ -492,6 +546,7 @@
     {
       "active": null,
       "category": "Super Arts",
+      "cmd": "236236P",
       "name": "[Denjin Charge]SA1 Shinku Hadoken",
       "onBlock": "-24",
       "onHit": "D",
@@ -501,6 +556,7 @@
     {
       "active": "12-17",
       "category": "Super Arts",
+      "cmd": "214214P",
       "name": "SA2 Shin Hashogeki（Lv1）",
       "onBlock": "-20",
       "onHit": "D",
@@ -510,6 +566,7 @@
     {
       "active": "20-25",
       "category": "Super Arts",
+      "cmd": "214214P",
       "name": "SA2 Shin Hashogeki（Lv2）",
       "onBlock": "-20",
       "onHit": "D",
@@ -519,6 +576,7 @@
     {
       "active": "70-75",
       "category": "Super Arts",
+      "cmd": "214214P",
       "name": "SA2 Shin Hashogeki（Lv3）",
       "onBlock": "-20",
       "onHit": "D",
@@ -528,6 +586,7 @@
     {
       "active": "12-17",
       "category": "Super Arts",
+      "cmd": "214214P",
       "name": "[Denjin Charge]SA2 Shin Hashogeki（Lv1）",
       "onBlock": "-20",
       "onHit": "D",
@@ -537,6 +596,7 @@
     {
       "active": "20-25",
       "category": "Super Arts",
+      "cmd": "214214P",
       "name": "[Denjin Charge]SA2 Shin Hashogeki（Lv2）",
       "onBlock": "-20",
       "onHit": "D",
@@ -546,6 +606,7 @@
     {
       "active": "70-75",
       "category": "Super Arts",
+      "cmd": "214214P",
       "name": "[Denjin Charge]SA2 Shin Hashogeki（Lv3）",
       "onBlock": "-20",
       "onHit": "D",
@@ -555,6 +616,7 @@
     {
       "active": "5-16 5-6, 7-8, 9-10, 11-12, 13-14, 15-16",
       "category": "Super Arts",
+      "cmd": "236236K",
       "name": "SA3 Shin Shoryuken",
       "onBlock": "-52",
       "onHit": "D",
@@ -564,6 +626,7 @@
     {
       "active": "5-16 5-6, 7-8, 9-10, 11-12, 13-14, 15-16",
       "category": "Super Arts",
+      "cmd": "236236K",
       "name": "CA Shin Shoryuken",
       "onBlock": "-52",
       "onHit": "D",
@@ -573,6 +636,7 @@
     {
       "active": "5-7",
       "category": "Throws",
+      "cmd": "6LPLK",
       "name": "Shoulder Throw",
       "onBlock": null,
       "onHit": "D",
@@ -582,6 +646,7 @@
     {
       "active": "5-7",
       "category": "Throws",
+      "cmd": "4LPLK",
       "name": "Somersault Throw",
       "onBlock": null,
       "onHit": "D",
@@ -591,6 +656,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "66",
       "name": "Forward Dash",
       "onBlock": null,
       "onHit": null,
@@ -600,6 +666,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "44",
       "name": "Backward Dash",
       "onBlock": null,
       "onHit": null,
@@ -609,6 +676,7 @@
     {
       "active": "26-27",
       "category": "Common Moves",
+      "cmd": "HPHK",
       "name": "Drive Impact: Shingeki",
       "onBlock": "-3",
       "onHit": null,
@@ -618,6 +686,7 @@
     {
       "active": "20-22",
       "category": "Common Moves",
+      "cmd": "6HPHK",
       "name": "Drive Reversal (while blocking): Chest Strike",
       "onBlock": "-6",
       "onHit": "D",
@@ -627,6 +696,7 @@
     {
       "active": "18-20",
       "category": "Common Moves",
+      "cmd": "6HPHK",
       "name": "Drive Reversal (while recovering): Chest Strike",
       "onBlock": "-6",
       "onHit": "D",
@@ -636,6 +706,7 @@
     {
       "active": "[*2] 1-12",
       "category": "Common Moves",
+      "cmd": "MPMK",
       "name": "Drive Parry",
       "onBlock": null,
       "onHit": null,
@@ -645,6 +716,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "MPMK",
       "name": "Perfect Parry (strike)",
       "onBlock": null,
       "onHit": null,
@@ -654,6 +726,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "MPMK",
       "name": "Perfect Parry (projectile)",
       "onBlock": null,
       "onHit": null,
@@ -663,6 +736,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "66",
       "name": "Parry Drive Rush",
       "onBlock": null,
       "onHit": null,
@@ -672,6 +746,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "666MPMK",
       "name": "Cancel Drive Rush",
       "onBlock": null,
       "onHit": null,

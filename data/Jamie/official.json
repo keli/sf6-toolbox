@@ -1,11 +1,12 @@
 {
   "character": "Jamie",
-  "fetchedAt": "2026-04-01T13:12:05.573044+00:00",
+  "fetchedAt": "2026-04-06T10:00:47.016256+00:00",
   "moveCount": 103,
   "moves": [
     {
       "active": "5-6",
       "category": "Normal Moves",
+      "cmd": "LP",
       "name": "Standing Light Punch",
       "onBlock": "0",
       "onHit": "5",
@@ -15,6 +16,7 @@
     {
       "active": "5-6",
       "category": "Normal Moves",
+      "cmd": "LK",
       "name": "Standing Light Kick",
       "onBlock": "-1",
       "onHit": "3",
@@ -24,6 +26,7 @@
     {
       "active": "8-11",
       "category": "Normal Moves",
+      "cmd": "MP",
       "name": "Standing Medium Punch",
       "onBlock": "2",
       "onHit": "6",
@@ -33,6 +36,7 @@
     {
       "active": "9-11",
       "category": "Normal Moves",
+      "cmd": "MK",
       "name": "Standing Medium Kick",
       "onBlock": "-3",
       "onHit": "2",
@@ -42,6 +46,7 @@
     {
       "active": "5-14 5, 7, 12-14",
       "category": "Normal Moves",
+      "cmd": "HP",
       "name": "Standing Heavy Punch",
       "onBlock": "-3",
       "onHit": "1",
@@ -51,6 +56,7 @@
     {
       "active": "15-17",
       "category": "Normal Moves",
+      "cmd": "HK",
       "name": "Standing Heavy Kick",
       "onBlock": "-5",
       "onHit": "3",
@@ -60,6 +66,7 @@
     {
       "active": "4-5",
       "category": "Normal Moves",
+      "cmd": "2LP",
       "name": "Crouching Light Punch",
       "onBlock": "-1",
       "onHit": "5",
@@ -69,6 +76,7 @@
     {
       "active": "5-6",
       "category": "Normal Moves",
+      "cmd": "2LK",
       "name": "Crouching Light Kick",
       "onBlock": "-3",
       "onHit": "3",
@@ -78,6 +86,7 @@
     {
       "active": "6-8",
       "category": "Normal Moves",
+      "cmd": "2MP",
       "name": "Crouching Medium Punch",
       "onBlock": "-1",
       "onHit": "5",
@@ -87,6 +96,7 @@
     {
       "active": "7-9",
       "category": "Normal Moves",
+      "cmd": "2MK",
       "name": "Crouching Medium Kick",
       "onBlock": "-6",
       "onHit": "-1",
@@ -96,6 +106,7 @@
     {
       "active": "8-12",
       "category": "Normal Moves",
+      "cmd": "2HP",
       "name": "Crouching Heavy Punch",
       "onBlock": "-8",
       "onHit": "0",
@@ -105,6 +116,7 @@
     {
       "active": "9-15 9-10, 13-15",
       "category": "Normal Moves",
+      "cmd": "2HK",
       "name": "Crouching Heavy Kick",
       "onBlock": "-11",
       "onHit": "D",
@@ -114,6 +126,7 @@
     {
       "active": "5-13",
       "category": "Normal Moves",
+      "cmd": "LP",
       "name": "Jumping Light Punch",
       "onBlock": null,
       "onHit": null,
@@ -123,6 +136,7 @@
     {
       "active": "6-11",
       "category": "Normal Moves",
+      "cmd": "LK",
       "name": "Jumping Light Kick",
       "onBlock": null,
       "onHit": null,
@@ -132,6 +146,7 @@
     {
       "active": "7-10",
       "category": "Normal Moves",
+      "cmd": "MP",
       "name": "Jumping Medium Punch",
       "onBlock": null,
       "onHit": null,
@@ -141,6 +156,7 @@
     {
       "active": "7-12",
       "category": "Normal Moves",
+      "cmd": "MK",
       "name": "Jumping Medium Kick",
       "onBlock": null,
       "onHit": null,
@@ -150,6 +166,7 @@
     {
       "active": "10-15",
       "category": "Normal Moves",
+      "cmd": "HP",
       "name": "Jumping Heavy Punch",
       "onBlock": null,
       "onHit": null,
@@ -159,6 +176,7 @@
     {
       "active": "8-19 8-10, 16-19",
       "category": "Normal Moves",
+      "cmd": "HK",
       "name": "Jumping Heavy Kick",
       "onBlock": null,
       "onHit": null,
@@ -168,6 +186,7 @@
     {
       "active": "9-11",
       "category": "Unique Attacks",
+      "cmd": "2KK",
       "name": "Tensei Kick",
       "onBlock": "-8",
       "onHit": "D",
@@ -177,6 +196,7 @@
     {
       "active": "12-14",
       "category": "Unique Attacks",
+      "cmd": "2HKHK",
       "name": "Phantom Sway(2)",
       "onBlock": "-28",
       "onHit": "D",
@@ -186,6 +206,7 @@
     {
       "active": null,
       "category": "Unique Attacks",
+      "cmd": "2HKHKP",
       "name": "Phantom Sway(3)",
       "onBlock": null,
       "onHit": null,
@@ -195,6 +216,7 @@
     {
       "active": "22-24",
       "category": "Unique Attacks",
+      "cmd": "6MK",
       "name": "Falling Star Kick",
       "onBlock": "-3",
       "onHit": "1",
@@ -204,6 +226,7 @@
     {
       "active": "18-21",
       "category": "Unique Attacks",
+      "cmd": "4HP",
       "name": "Hermit's Elbow",
       "onBlock": "-3",
       "onHit": "1",
@@ -213,6 +236,7 @@
     {
       "active": "16-18",
       "category": "Unique Attacks",
+      "cmd": "6HK",
       "name": "Senei Kick",
       "onBlock": "-3",
       "onHit": "3",
@@ -222,6 +246,7 @@
     {
       "active": "5-7",
       "category": "Unique Attacks",
+      "cmd": "LP",
       "name": "Bitter Strikes(1)",
       "onBlock": "-3",
       "onHit": "2",
@@ -231,6 +256,7 @@
     {
       "active": "6-7",
       "category": "Unique Attacks",
+      "cmd": "LPLK",
       "name": "Bitter Strikes(2)",
       "onBlock": "-8",
       "onHit": "-3",
@@ -240,6 +266,7 @@
     {
       "active": "8-10",
       "category": "Unique Attacks",
+      "cmd": "LPLKMP",
       "name": "Bitter Strikes(3)",
       "onBlock": "-10",
       "onHit": "-1",
@@ -249,6 +276,7 @@
     {
       "active": "22-24",
       "category": "Unique Attacks",
+      "cmd": "6MK",
       "name": "Full Moon Kick(1)",
       "onBlock": "-3",
       "onHit": "1",
@@ -258,6 +286,7 @@
     {
       "active": "15-24 15-17, 23-24",
       "category": "Unique Attacks",
+      "cmd": "6MKMK",
       "name": "Full Moon Kick(2)",
       "onBlock": "-14",
       "onHit": "D",
@@ -267,6 +296,7 @@
     {
       "active": null,
       "category": "Unique Attacks",
+      "cmd": "6MKMKP",
       "name": "Full Moon Kick(3)",
       "onBlock": null,
       "onHit": null,
@@ -276,6 +306,7 @@
     {
       "active": "18-21",
       "category": "Unique Attacks",
+      "cmd": "4HP",
       "name": "Intoxicated Assault(1)",
       "onBlock": "-3",
       "onHit": "1",
@@ -285,6 +316,7 @@
     {
       "active": "21-24",
       "category": "Unique Attacks",
+      "cmd": "4HPHP",
       "name": "Intoxicated Assault(2)",
       "onBlock": "-11",
       "onHit": "1",
@@ -294,6 +326,7 @@
     {
       "active": "21-23",
       "category": "Unique Attacks",
+      "cmd": "4HPHPHK",
       "name": "Intoxicated Assault(3)",
       "onBlock": "-20",
       "onHit": "D",
@@ -303,6 +336,7 @@
     {
       "active": "16-19",
       "category": "Unique Attacks",
+      "cmd": "6HK",
       "name": "Ransui Haze(1)",
       "onBlock": "-3",
       "onHit": "3",
@@ -312,6 +346,7 @@
     {
       "active": null,
       "category": "Unique Attacks",
+      "cmd": "6HK4HK",
       "name": "Ransui Haze(2)",
       "onBlock": null,
       "onHit": null,
@@ -321,6 +356,7 @@
     {
       "active": "14-18",
       "category": "Unique Attacks",
+      "cmd": "6HK4HKP",
       "name": "Ransui Haze(3rd hit / immediate)",
       "onBlock": "-13",
       "onHit": "D",
@@ -330,6 +366,7 @@
     {
       "active": "4-28 4-5, 14-15, 27-28",
       "category": "Unique Attacks",
+      "cmd": "6HK4HKP",
       "name": "Ransui Haze(3rd hit / delayed)",
       "onBlock": "-9",
       "onHit": "D",
@@ -339,6 +376,7 @@
     {
       "active": null,
       "category": "Unique Attacks",
+      "cmd": "6HK4HKP",
       "name": "Ransui Haze(3rd hit / longest possible delay)",
       "onBlock": null,
       "onHit": null,
@@ -348,6 +386,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "22P",
       "name": "The Devil Inside",
       "onBlock": null,
       "onHit": null,
@@ -357,6 +396,7 @@
     {
       "active": "13-14",
       "category": "Special Moves",
+      "cmd": "236LP",
       "name": "L Freeflow Strikes(1)",
       "onBlock": "-6",
       "onHit": "-1",
@@ -366,6 +406,7 @@
     {
       "active": "13-26 13-14,24-26",
       "category": "Special Moves",
+      "cmd": "236LP",
       "name": "[Drink level 4]L Freeflow Strikes(1)",
       "onBlock": "-3",
       "onHit": "1",
@@ -375,6 +416,7 @@
     {
       "active": "16-17",
       "category": "Special Moves",
+      "cmd": "236MP",
       "name": "M Freeflow Strikes(1)",
       "onBlock": "-6",
       "onHit": "-1",
@@ -384,6 +426,7 @@
     {
       "active": "16-29 16-17,27-29",
       "category": "Special Moves",
+      "cmd": "236MP",
       "name": "[Drink level 4]M Freeflow Strikes(1)",
       "onBlock": "-3",
       "onHit": "1",
@@ -393,6 +436,7 @@
     {
       "active": "19-20",
       "category": "Special Moves",
+      "cmd": "236HP",
       "name": "H Freeflow Strikes(1)",
       "onBlock": "-6",
       "onHit": "-1",
@@ -402,6 +446,7 @@
     {
       "active": "19-32 19-20,30-32",
       "category": "Special Moves",
+      "cmd": "236HP",
       "name": "[Drink level 4]H Freeflow Strikes(1)",
       "onBlock": "-3",
       "onHit": "1",
@@ -411,6 +456,7 @@
     {
       "active": "13-14",
       "category": "Special Moves",
+      "cmd": "236PP",
       "name": "OD Freeflow Strikes(1)",
       "onBlock": "-3",
       "onHit": "1",
@@ -420,6 +466,7 @@
     {
       "active": "16-26 16-17,24-26",
       "category": "Special Moves",
+      "cmd": "236PP",
       "name": "[Drink level 4]OD Freeflow Strikes(1)",
       "onBlock": "-3",
       "onHit": "3",
@@ -429,6 +476,7 @@
     {
       "active": "13-14",
       "category": "Special Moves",
+      "cmd": "236LP6P",
       "name": "L Freeflow Strikes(2)",
       "onBlock": "-13",
       "onHit": "-3",
@@ -438,6 +486,7 @@
     {
       "active": "16-17",
       "category": "Special Moves",
+      "cmd": "236MP6P",
       "name": "M Freeflow Strikes(2)",
       "onBlock": "-11",
       "onHit": "-3",
@@ -447,6 +496,7 @@
     {
       "active": "19-20",
       "category": "Special Moves",
+      "cmd": "236HP6P",
       "name": "H Freeflow Strikes(2)",
       "onBlock": "-9",
       "onHit": "-3",
@@ -456,6 +506,7 @@
     {
       "active": "15-23 15-16, 22-23",
       "category": "Special Moves",
+      "cmd": "236P6P",
       "name": "[Drink level 4]Freeflow Strikes(2)",
       "onBlock": "-10",
       "onHit": "-2",
@@ -465,6 +516,7 @@
     {
       "active": "13-14",
       "category": "Special Moves",
+      "cmd": "236PP6P",
       "name": "OD Freeflow Strikes(2)",
       "onBlock": "-9",
       "onHit": "-3",
@@ -474,6 +526,7 @@
     {
       "active": "15-23 15-16, 22-23",
       "category": "Special Moves",
+      "cmd": "236PP6P",
       "name": "[Drink level 4]OD Freeflow Strikes(2)",
       "onBlock": "-10",
       "onHit": "-2",
@@ -483,6 +536,7 @@
     {
       "active": "13-14",
       "category": "Special Moves",
+      "cmd": "236LP6P6P",
       "name": "L Freeflow Strikes(3)",
       "onBlock": "-17",
       "onHit": "D",
@@ -492,6 +546,7 @@
     {
       "active": "16-17",
       "category": "Special Moves",
+      "cmd": "236MP6P6P",
       "name": "M Freeflow Strikes(3)",
       "onBlock": "-15",
       "onHit": "D",
@@ -501,6 +556,7 @@
     {
       "active": "19-20",
       "category": "Special Moves",
+      "cmd": "236HP6P6P",
       "name": "H Freeflow Strikes(3)",
       "onBlock": "-13",
       "onHit": "D",
@@ -510,6 +566,7 @@
     {
       "active": "16-40 16-17,22-23, 38-40",
       "category": "Special Moves",
+      "cmd": "236P6P6P",
       "name": "[Drink level 4]Freeflow Strikes(3)",
       "onBlock": "-14",
       "onHit": "D",
@@ -519,6 +576,7 @@
     {
       "active": "13-14",
       "category": "Special Moves",
+      "cmd": "236PP6P6P",
       "name": "OD Freeflow Strikes(3)",
       "onBlock": "-13",
       "onHit": "D",
@@ -528,6 +586,7 @@
     {
       "active": "16-40 16-17,22-23, 38-40",
       "category": "Special Moves",
+      "cmd": "236PP6P6P",
       "name": "[Drink level 4]OD Freeflow Strikes(3)",
       "onBlock": "-14",
       "onHit": "D",
@@ -537,6 +596,7 @@
     {
       "active": "14-15",
       "category": "Special Moves",
+      "cmd": "236LP6K",
       "name": "L Freeflow Kicks(2)",
       "onBlock": "-15",
       "onHit": "-7",
@@ -546,6 +606,7 @@
     {
       "active": "17-18",
       "category": "Special Moves",
+      "cmd": "236MP6K",
       "name": "M Freeflow Kicks(2)",
       "onBlock": "-15",
       "onHit": "-7",
@@ -555,6 +616,7 @@
     {
       "active": "20-21",
       "category": "Special Moves",
+      "cmd": "236HP6K",
       "name": "H Freeflow Kicks(2)",
       "onBlock": "-15",
       "onHit": "-7",
@@ -564,6 +626,7 @@
     {
       "active": "14-15",
       "category": "Special Moves",
+      "cmd": "236PP6K",
       "name": "OD Freeflow Kicks(2)",
       "onBlock": "-15",
       "onHit": "-7",
@@ -573,6 +636,7 @@
     {
       "active": "18-19",
       "category": "Special Moves",
+      "cmd": "236LP6K6K",
       "name": "L Freeflow Kicks(3)",
       "onBlock": "-49",
       "onHit": "D",
@@ -582,6 +646,7 @@
     {
       "active": "21-22",
       "category": "Special Moves",
+      "cmd": "236MP6K6K",
       "name": "M Freeflow Kicks(3)",
       "onBlock": "-49",
       "onHit": "D",
@@ -591,6 +656,7 @@
     {
       "active": "24-25",
       "category": "Special Moves",
+      "cmd": "236HP6K6K",
       "name": "H Freeflow Kicks(3)",
       "onBlock": "-49",
       "onHit": "D",
@@ -600,6 +666,7 @@
     {
       "active": "18-19",
       "category": "Special Moves",
+      "cmd": "236PP6K6K",
       "name": "OD Freeflow Kicks(3)",
       "onBlock": "-49",
       "onHit": "D",
@@ -609,6 +676,7 @@
     {
       "active": "17-25",
       "category": "Special Moves",
+      "cmd": "214LP",
       "name": "L Swagger Step",
       "onBlock": "-6",
       "onHit": "D",
@@ -618,6 +686,7 @@
     {
       "active": "20-28",
       "category": "Special Moves",
+      "cmd": "214MP",
       "name": "M Swagger Step",
       "onBlock": "-6",
       "onHit": "D",
@@ -627,6 +696,7 @@
     {
       "active": "25-33",
       "category": "Special Moves",
+      "cmd": "214HP",
       "name": "H Swagger Step",
       "onBlock": "-3",
       "onHit": "D",
@@ -636,6 +706,7 @@
     {
       "active": "20-28",
       "category": "Special Moves",
+      "cmd": "214PP",
       "name": "OD Swagger Step",
       "onBlock": "-1",
       "onHit": "D",
@@ -645,6 +716,7 @@
     {
       "active": "5-50 5-14, 41-50",
       "category": "Special Moves",
+      "cmd": "623LK",
       "name": "L Arrow Kick",
       "onBlock": "-45",
       "onHit": "D",
@@ -654,6 +726,7 @@
     {
       "active": "8-43 8-16, 39-43",
       "category": "Special Moves",
+      "cmd": "623MK",
       "name": "M Arrow Kick",
       "onBlock": "-43",
       "onHit": "D",
@@ -663,6 +736,7 @@
     {
       "active": "10-57 10-18, 41-45, 54-57",
       "category": "Special Moves",
+      "cmd": "623HK",
       "name": "H Arrow Kick",
       "onBlock": "-43",
       "onHit": "D",
@@ -672,6 +746,7 @@
     {
       "active": "6-51 6-12, 37-38, 50-51",
       "category": "Special Moves",
+      "cmd": "623KK",
       "name": "OD Arrow Kick",
       "onBlock": "-43",
       "onHit": "D",
@@ -681,6 +756,7 @@
     {
       "active": "11-until landing 11,14-until landing",
       "category": "Special Moves",
+      "cmd": "214LK",
       "name": "L Luminous Dive Kick",
       "onBlock": null,
       "onHit": "D",
@@ -690,6 +766,7 @@
     {
       "active": "11-until landing 11,14-until landing",
       "category": "Special Moves",
+      "cmd": "214MK",
       "name": "M Luminous Dive Kick",
       "onBlock": null,
       "onHit": "D",
@@ -699,6 +776,7 @@
     {
       "active": "11-until landing 11,14-until landing",
       "category": "Special Moves",
+      "cmd": "214HK",
       "name": "H Luminous Dive Kick",
       "onBlock": null,
       "onHit": "D",
@@ -708,6 +786,7 @@
     {
       "active": "11-until landing 11,14-until landing",
       "category": "Special Moves",
+      "cmd": "214KK",
       "name": "OD Luminous Dive Kick",
       "onBlock": null,
       "onHit": "D",
@@ -717,6 +796,7 @@
     {
       "active": "18-43 18-19, 22-24, 29-30, 42-43",
       "category": "Special Moves",
+      "cmd": "236LK",
       "name": "L Bakkai",
       "onBlock": "-12",
       "onHit": "D",
@@ -726,6 +806,7 @@
     {
       "active": "22-59 22-23, 25-26, 30-31, 37-38, 51-52, 58-59",
       "category": "Special Moves",
+      "cmd": "236MK",
       "name": "M Bakkai",
       "onBlock": "-16",
       "onHit": "D",
@@ -735,6 +816,7 @@
     {
       "active": "25-92 25-27, 34-35, 42-43, 50-51, 65-66, 74-75, 91-92",
       "category": "Special Moves",
+      "cmd": "236HK",
       "name": "H Bakkai",
       "onBlock": "-17",
       "onHit": "D",
@@ -744,6 +826,7 @@
     {
       "active": "18-100 18-23, 27-28, 37-38, 42-43, 51-52, 60-61, 74-75, 87-88, 93-94, 99-100",
       "category": "Special Moves",
+      "cmd": "236KK",
       "name": "OD Bakkai",
       "onBlock": "-43",
       "onHit": "D",
@@ -753,6 +836,7 @@
     {
       "active": "8-9",
       "category": "Special Moves",
+      "cmd": "63214K",
       "name": "Tenshin",
       "onBlock": null,
       "onHit": "8",
@@ -762,6 +846,7 @@
     {
       "active": "8-9",
       "category": "Special Moves",
+      "cmd": "63214KK",
       "name": "OD Tenshin",
       "onBlock": null,
       "onHit": "D",
@@ -771,6 +856,7 @@
     {
       "active": "19-21",
       "category": "Special Moves",
+      "cmd": "214P6P",
       "name": "Swagger Hermit Punch",
       "onBlock": "-23",
       "onHit": "D",
@@ -780,6 +866,7 @@
     {
       "active": "19-21",
       "category": "Special Moves",
+      "cmd": "214PP6P",
       "name": "OD Swagger Hermit Punch",
       "onBlock": "-23",
       "onHit": "D",
@@ -789,6 +876,7 @@
     {
       "active": "8-133 8-16, 23-27, 34-35, 43-44, 52-53, 60-61, 68-69, 75-76, 106-107, 117-118, 125-126, 132-133",
       "category": "Super Arts",
+      "cmd": "236236K",
       "name": "SA1 Breakin'",
       "onBlock": "-60*-93",
       "onHit": "D",
@@ -798,6 +886,7 @@
     {
       "active": null,
       "category": "Super Arts",
+      "cmd": "214214P",
       "name": "SA2 The Devil's Song",
       "onBlock": null,
       "onHit": null,
@@ -807,6 +896,7 @@
     {
       "active": "10-28 10-12, 26-28",
       "category": "Super Arts",
+      "cmd": "236236P",
       "name": "SA3 Getsuga Saiho",
       "onBlock": "-27",
       "onHit": "D",
@@ -816,6 +906,7 @@
     {
       "active": "10-28 10-12, 26-28",
       "category": "Super Arts",
+      "cmd": "236236P",
       "name": "CA Getsuga Saiho",
       "onBlock": "-27",
       "onHit": "D",
@@ -825,6 +916,7 @@
     {
       "active": "5-7",
       "category": "Throws",
+      "cmd": "6LPLK",
       "name": "Back Shaver",
       "onBlock": null,
       "onHit": "D",
@@ -834,6 +926,7 @@
     {
       "active": "5-7",
       "category": "Throws",
+      "cmd": "4LPLK",
       "name": "Wheel Punch",
       "onBlock": null,
       "onHit": "D",
@@ -843,6 +936,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "66",
       "name": "Forward Dash",
       "onBlock": null,
       "onHit": null,
@@ -852,6 +946,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "44",
       "name": "Backward Dash",
       "onBlock": null,
       "onHit": null,
@@ -861,6 +956,7 @@
     {
       "active": "26-27",
       "category": "Common Moves",
+      "cmd": "HPHK",
       "name": "Drive Impact: Vainglory Strike",
       "onBlock": "-3",
       "onHit": "D",
@@ -870,6 +966,7 @@
     {
       "active": "20-22",
       "category": "Common Moves",
+      "cmd": "6HPHK",
       "name": "Drive Reversal (while blocking): Leg Sweep",
       "onBlock": "-6",
       "onHit": "D",
@@ -879,6 +976,7 @@
     {
       "active": "18-20",
       "category": "Common Moves",
+      "cmd": "6HPHK",
       "name": "Drive Reversal (while recovering): Leg Sweep",
       "onBlock": "-6",
       "onHit": "D",
@@ -888,6 +986,7 @@
     {
       "active": "[*2] 1-12",
       "category": "Common Moves",
+      "cmd": "MPMK",
       "name": "Drive Parry",
       "onBlock": null,
       "onHit": null,
@@ -897,6 +996,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "MPMK",
       "name": "Perfect Parry (strike)",
       "onBlock": null,
       "onHit": null,
@@ -906,6 +1006,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "MPMK",
       "name": "Perfect Parry (projectile)",
       "onBlock": null,
       "onHit": null,
@@ -915,6 +1016,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "66",
       "name": "Parry Drive Rush",
       "onBlock": null,
       "onHit": null,
@@ -924,6 +1026,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "666MPMK",
       "name": "Cancel Drive Rush",
       "onBlock": null,
       "onHit": null,

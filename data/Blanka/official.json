@@ -1,11 +1,12 @@
 {
   "character": "Blanka",
-  "fetchedAt": "2026-04-01T13:11:43.668450+00:00",
+  "fetchedAt": "2026-04-06T10:00:21.356270+00:00",
   "moveCount": 91,
   "moves": [
     {
       "active": "5-7",
       "category": "Normal Moves",
+      "cmd": "LP",
       "name": "Standing Light Punch",
       "onBlock": "-3",
       "onHit": "3",
@@ -15,6 +16,7 @@
     {
       "active": "4-7",
       "category": "Normal Moves",
+      "cmd": "LK",
       "name": "Standing Light Kick",
       "onBlock": "-2",
       "onHit": "5",
@@ -24,6 +26,7 @@
     {
       "active": "10-12",
       "category": "Normal Moves",
+      "cmd": "MP",
       "name": "Standing Medium Punch",
       "onBlock": "-4",
       "onHit": "3",
@@ -33,6 +36,7 @@
     {
       "active": "8-10",
       "category": "Normal Moves",
+      "cmd": "MK",
       "name": "Standing Medium Kick",
       "onBlock": "-2",
       "onHit": "5",
@@ -42,6 +46,7 @@
     {
       "active": "10-16",
       "category": "Normal Moves",
+      "cmd": "HP",
       "name": "Standing Heavy Punch",
       "onBlock": "-3",
       "onHit": "3",
@@ -51,6 +56,7 @@
     {
       "active": "7-15",
       "category": "Normal Moves",
+      "cmd": "HK",
       "name": "Standing Heavy Kick",
       "onBlock": "-4",
       "onHit": "6",
@@ -60,6 +66,7 @@
     {
       "active": "6-8",
       "category": "Normal Moves",
+      "cmd": "2LP",
       "name": "Crouching Light Punch",
       "onBlock": "-2",
       "onHit": "5",
@@ -69,6 +76,7 @@
     {
       "active": "5-6",
       "category": "Normal Moves",
+      "cmd": "2LK",
       "name": "Crouching Light Kick",
       "onBlock": "-3",
       "onHit": "3",
@@ -78,6 +86,7 @@
     {
       "active": "9-13",
       "category": "Normal Moves",
+      "cmd": "2MP",
       "name": "Crouching Medium Punch",
       "onBlock": "-5",
       "onHit": "-1",
@@ -87,6 +96,7 @@
     {
       "active": "8-10",
       "category": "Normal Moves",
+      "cmd": "2MK",
       "name": "Crouching Medium Kick",
       "onBlock": "-5",
       "onHit": "5",
@@ -96,6 +106,7 @@
     {
       "active": "15-19",
       "category": "Normal Moves",
+      "cmd": "2HP",
       "name": "Crouching Heavy Punch",
       "onBlock": "-5",
       "onHit": "0",
@@ -105,6 +116,7 @@
     {
       "active": "11-14",
       "category": "Normal Moves",
+      "cmd": "2HK",
       "name": "Crouching Heavy Kick",
       "onBlock": "-12",
       "onHit": "D",
@@ -114,6 +126,7 @@
     {
       "active": "4-8",
       "category": "Normal Moves",
+      "cmd": "LP",
       "name": "Jumping Light Punch",
       "onBlock": null,
       "onHit": null,
@@ -123,6 +136,7 @@
     {
       "active": "5-10",
       "category": "Normal Moves",
+      "cmd": "LK",
       "name": "Jumping Light Kick",
       "onBlock": null,
       "onHit": null,
@@ -132,6 +146,7 @@
     {
       "active": "7-13",
       "category": "Normal Moves",
+      "cmd": "MP",
       "name": "Jumping Medium Punch",
       "onBlock": null,
       "onHit": null,
@@ -141,6 +156,7 @@
     {
       "active": "7-12",
       "category": "Normal Moves",
+      "cmd": "MK",
       "name": "Jumping Medium Kick",
       "onBlock": null,
       "onHit": null,
@@ -150,6 +166,7 @@
     {
       "active": "9",
       "category": "Normal Moves",
+      "cmd": "HP",
       "name": "Jumping Heavy Punch",
       "onBlock": null,
       "onHit": null,
@@ -159,6 +176,7 @@
     {
       "active": "11-16",
       "category": "Normal Moves",
+      "cmd": "HK",
       "name": "Jumping Heavy Kick",
       "onBlock": null,
       "onHit": null,
@@ -168,6 +186,7 @@
     {
       "active": "7-9",
       "category": "Normal Moves",
+      "cmd": "HP",
       "name": "Neutral Jumping Heavy Punch",
       "onBlock": null,
       "onHit": null,
@@ -177,6 +196,7 @@
     {
       "active": "20-22",
       "category": "Unique Attacks",
+      "cmd": "6MP",
       "name": "Rock Crusher",
       "onBlock": "-3",
       "onHit": "3",
@@ -186,6 +206,7 @@
     {
       "active": "9-20 9-11, 19-20",
       "category": "Unique Attacks",
+      "cmd": "6MK",
       "name": "Double Knee Bombs",
       "onBlock": "-2",
       "onHit": "6",
@@ -195,6 +216,7 @@
     {
       "active": "9-14",
       "category": "Unique Attacks",
+      "cmd": "4MK",
       "name": "Wild Edge",
       "onBlock": "2",
       "onHit": "8",
@@ -204,6 +226,7 @@
     {
       "active": "18-21",
       "category": "Unique Attacks",
+      "cmd": "6HP",
       "name": "Wild Nail",
       "onBlock": "-15",
       "onHit": "D",
@@ -213,6 +236,7 @@
     {
       "active": "14-23",
       "category": "Unique Attacks",
+      "cmd": "3HP",
       "name": "Amazon River Run",
       "onBlock": "-18",
       "onHit": "D",
@@ -222,6 +246,7 @@
     {
       "active": null,
       "category": "Unique Attacks",
+      "cmd": "2PP",
       "name": "Coward Crouch",
       "onBlock": null,
       "onHit": null,
@@ -231,6 +256,7 @@
     {
       "active": "8-14",
       "category": "Unique Attacks",
+      "cmd": "P",
       "name": "Wild Lift",
       "onBlock": "-21",
       "onHit": "D",
@@ -240,6 +266,7 @@
     {
       "active": null,
       "category": "Unique Attacks",
+      "cmd": "K",
       "name": "Raid Jump",
       "onBlock": null,
       "onHit": null,
@@ -249,6 +276,7 @@
     {
       "active": null,
       "category": "Unique Attacks",
+      "cmd": "6KKK",
       "name": "Surprise Forward Hop",
       "onBlock": null,
       "onHit": null,
@@ -258,6 +286,7 @@
     {
       "active": null,
       "category": "Unique Attacks",
+      "cmd": "4KKK",
       "name": "Surprise Back Hop",
       "onBlock": null,
       "onHit": null,
@@ -267,6 +296,7 @@
     {
       "active": "10-21 10-11,15-16,20-21",
       "category": "Special Moves",
+      "cmd": "214P",
       "name": "Electric Thunder",
       "onBlock": "-3",
       "onHit": "D",
@@ -276,6 +306,7 @@
     {
       "active": "10-21 10-11,15-16,20-21",
       "category": "Special Moves",
+      "cmd": "214P",
       "name": "[Lightning Beast] Electric Thunder",
       "onBlock": "-3",
       "onHit": "D",
@@ -285,6 +316,7 @@
     {
       "active": "10-21 10-11,15-16,20-21",
       "category": "Special Moves",
+      "cmd": "214PP",
       "name": "OD Electric Thunder",
       "onBlock": "4",
       "onHit": "D",
@@ -294,6 +326,7 @@
     {
       "active": "10-21 10-11,15-16,20-21",
       "category": "Special Moves",
+      "cmd": "214PP",
       "name": "[Lightning Beast]OD Electric Thunder",
       "onBlock": "4",
       "onHit": "D",
@@ -303,6 +336,7 @@
     {
       "active": "10-20",
       "category": "Special Moves",
+      "cmd": "6LP",
       "name": "L Rolling Attack",
       "onBlock": "-23",
       "onHit": "D",
@@ -312,6 +346,7 @@
     {
       "active": "10-20",
       "category": "Special Moves",
+      "cmd": "6LP",
       "name": "[Lightning Beast] L Rolling Attack",
       "onBlock": "-21",
       "onHit": "D",
@@ -321,6 +356,7 @@
     {
       "active": "12-30",
       "category": "Special Moves",
+      "cmd": "6MP",
       "name": "M Rolling Attack",
       "onBlock": "-23",
       "onHit": "D",
@@ -330,6 +366,7 @@
     {
       "active": "12-30",
       "category": "Special Moves",
+      "cmd": "6MP",
       "name": "[Lightning Beast] M Rolling Attack",
       "onBlock": "-21",
       "onHit": "D",
@@ -339,6 +376,7 @@
     {
       "active": "22-41",
       "category": "Special Moves",
+      "cmd": "6HP",
       "name": "H Rolling Attack",
       "onBlock": "-15",
       "onHit": "D",
@@ -348,6 +386,7 @@
     {
       "active": "22-41",
       "category": "Special Moves",
+      "cmd": "6HP",
       "name": "[Lightning Beast] H Rolling Attack",
       "onBlock": "-21",
       "onHit": "D",
@@ -357,6 +396,7 @@
     {
       "active": "18-39",
       "category": "Special Moves",
+      "cmd": "6PP",
       "name": "OD Rolling Attack",
       "onBlock": "-7",
       "onHit": "D",
@@ -366,6 +406,7 @@
     {
       "active": "18-39",
       "category": "Special Moves",
+      "cmd": "6PP",
       "name": "[Lightning Beast] OD Rolling Attack",
       "onBlock": "-7",
       "onHit": "D",
@@ -375,6 +416,7 @@
     {
       "active": "8-27",
       "category": "Special Moves",
+      "cmd": "8LK",
       "name": "L Vertical Rolling Attack",
       "onBlock": "-27",
       "onHit": "D",
@@ -384,6 +426,7 @@
     {
       "active": "8-27",
       "category": "Special Moves",
+      "cmd": "8LK",
       "name": "[Lightning Beast] L Vertical Rolling Attack",
       "onBlock": "-27",
       "onHit": "D",
@@ -393,6 +436,7 @@
     {
       "active": "8-27",
       "category": "Special Moves",
+      "cmd": "8MK",
       "name": "M Vertical Rolling Attack",
       "onBlock": "-27",
       "onHit": "D",
@@ -402,6 +446,7 @@
     {
       "active": "8-27",
       "category": "Special Moves",
+      "cmd": "8MK",
       "name": "[Lightning Beast] M Vertical Rolling Attack",
       "onBlock": "-27",
       "onHit": "D",
@@ -411,6 +456,7 @@
     {
       "active": "8-27",
       "category": "Special Moves",
+      "cmd": "8HK",
       "name": "H Vertical Rolling Attack",
       "onBlock": "-27",
       "onHit": "D",
@@ -420,6 +466,7 @@
     {
       "active": "8-27",
       "category": "Special Moves",
+      "cmd": "8HK",
       "name": "[Lightning Beast] H Vertical Rolling Attack",
       "onBlock": "-27",
       "onHit": "D",
@@ -429,6 +476,7 @@
     {
       "active": "7-22 7-14,17-22",
       "category": "Special Moves",
+      "cmd": "8KK",
       "name": "OD Vertical Rolling Attack",
       "onBlock": "-40",
       "onHit": "D",
@@ -438,6 +486,7 @@
     {
       "active": "7-22 7-14,17-22",
       "category": "Special Moves",
+      "cmd": "8KK",
       "name": "[Lightning Beast] OD Vertical Rolling Attack",
       "onBlock": "-40",
       "onHit": "D",
@@ -447,6 +496,7 @@
     {
       "active": "41-until landing",
       "category": "Special Moves",
+      "cmd": "63214LK",
       "name": "L Backstep Rolling Attack",
       "onBlock": "3",
       "onHit": "9",
@@ -456,6 +506,7 @@
     {
       "active": "41-until landing",
       "category": "Special Moves",
+      "cmd": "63214LK",
       "name": "[Lightning Beast] L Backstep Rolling Attack",
       "onBlock": "3",
       "onHit": "9",
@@ -465,6 +516,7 @@
     {
       "active": "41-until landing",
       "category": "Special Moves",
+      "cmd": "63214MK",
       "name": "M Backstep Rolling Attack",
       "onBlock": "2",
       "onHit": "8",
@@ -474,6 +526,7 @@
     {
       "active": "41-until landing",
       "category": "Special Moves",
+      "cmd": "63214MK",
       "name": "[Lightning Beast] M Backstep Rolling Attack",
       "onBlock": "2",
       "onHit": "8",
@@ -483,6 +536,7 @@
     {
       "active": "41-until landing",
       "category": "Special Moves",
+      "cmd": "63214HK",
       "name": "H Backstep Rolling Attack",
       "onBlock": "4",
       "onHit": "8",
@@ -492,6 +546,7 @@
     {
       "active": "41-until landing",
       "category": "Special Moves",
+      "cmd": "63214HK",
       "name": "[Lightning Beast] H Backstep Rolling Attack",
       "onBlock": "4",
       "onHit": "8",
@@ -501,6 +556,7 @@
     {
       "active": "8-66 8-12,41-61,63-66",
       "category": "Special Moves",
+      "cmd": "63214KK",
       "name": "OD Backstep Rolling Attack",
       "onBlock": "6",
       "onHit": "10",
@@ -510,6 +566,7 @@
     {
       "active": "8-66 8-12,41-61,63-66",
       "category": "Special Moves",
+      "cmd": "63214KK",
       "name": "[Lightning Beast] OD Backstep Rolling Attack",
       "onBlock": "6",
       "onHit": "10",
@@ -519,6 +576,7 @@
     {
       "active": "13-until landing",
       "category": "Special Moves",
+      "cmd": "6LP",
       "name": "L Aerial Rolling Attack",
       "onBlock": null,
       "onHit": "D",
@@ -528,6 +586,7 @@
     {
       "active": "13-until landing",
       "category": "Special Moves",
+      "cmd": "6LP",
       "name": "[Lightning Beast] L Aerial Rolling Attack",
       "onBlock": null,
       "onHit": "D",
@@ -537,6 +596,7 @@
     {
       "active": "13-until landing",
       "category": "Special Moves",
+      "cmd": "6MP",
       "name": "M Aerial Rolling Attack",
       "onBlock": null,
       "onHit": "D",
@@ -546,6 +606,7 @@
     {
       "active": "13-until landing",
       "category": "Special Moves",
+      "cmd": "6MP",
       "name": "[Lightning Beast] M Aerial Rolling Attack",
       "onBlock": null,
       "onHit": "D",
@@ -555,6 +616,7 @@
     {
       "active": "13-until landing",
       "category": "Special Moves",
+      "cmd": "6HP",
       "name": "H Aerial Rolling Attack",
       "onBlock": null,
       "onHit": "D",
@@ -564,6 +626,7 @@
     {
       "active": "13-until landing",
       "category": "Special Moves",
+      "cmd": "6HP",
       "name": "[Lightning Beast] H Aerial Rolling Attack",
       "onBlock": null,
       "onHit": "D",
@@ -573,6 +636,7 @@
     {
       "active": "13-until landing",
       "category": "Special Moves",
+      "cmd": "6PP",
       "name": "OD Aerial Rolling Attack",
       "onBlock": null,
       "onHit": "D",
@@ -582,6 +646,7 @@
     {
       "active": "13-until landing",
       "category": "Special Moves",
+      "cmd": "6PP",
       "name": "[Lightning Beast] OD Aerial Rolling Attack",
       "onBlock": null,
       "onHit": "D",
@@ -591,6 +656,7 @@
     {
       "active": "34-36",
       "category": "Special Moves",
+      "cmd": "236LK",
       "name": "L Wild Hunt",
       "onBlock": null,
       "onHit": "D",
@@ -600,6 +666,7 @@
     {
       "active": "39-41",
       "category": "Special Moves",
+      "cmd": "236MK",
       "name": "M Wild Hunt",
       "onBlock": null,
       "onHit": "D",
@@ -609,6 +676,7 @@
     {
       "active": "43-45",
       "category": "Special Moves",
+      "cmd": "236HK",
       "name": "H Wild Hunt",
       "onBlock": null,
       "onHit": "D",
@@ -618,6 +686,7 @@
     {
       "active": "32-34",
       "category": "Special Moves",
+      "cmd": "236KK",
       "name": "OD Wild Hunt",
       "onBlock": null,
       "onHit": "D",
@@ -627,6 +696,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "22P",
       "name": "Blanka-chan Bomb",
       "onBlock": null,
       "onHit": null,
@@ -636,6 +706,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": null,
       "name": "Blanka-chan Bomb (Activated)",
       "onBlock": null,
       "onHit": "D",
@@ -645,6 +716,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": null,
       "name": "OD Blanka-chan Bomb (Activated)",
       "onBlock": null,
       "onHit": "D",
@@ -654,6 +726,7 @@
     {
       "active": "3-27",
       "category": "Special Moves",
+      "cmd": "P",
       "name": "Rolling Cannon",
       "onBlock": null,
       "onHit": "D",
@@ -663,6 +736,7 @@
     {
       "active": "8-16",
       "category": "Super Arts",
+      "cmd": "236236P",
       "name": "SA1 Shout of Earth",
       "onBlock": "-29",
       "onHit": "D",
@@ -672,6 +746,7 @@
     {
       "active": "8-16",
       "category": "Super Arts",
+      "cmd": "236236P",
       "name": "[Lightning Beast] SA1 Shout of Earth",
       "onBlock": "-29",
       "onHit": "D",
@@ -681,6 +756,7 @@
     {
       "active": null,
       "category": "Super Arts",
+      "cmd": "214214P",
       "name": "SA2 Lightning Beast",
       "onBlock": null,
       "onHit": null,
@@ -690,6 +766,7 @@
     {
       "active": "10-12",
       "category": "Super Arts",
+      "cmd": "236236K",
       "name": "SA3 Ground Shave Cannonball",
       "onBlock": "-46",
       "onHit": "D",
@@ -699,6 +776,7 @@
     {
       "active": "10-12",
       "category": "Super Arts",
+      "cmd": "236236K",
       "name": "CA Ground Shave Cannonball",
       "onBlock": "-46",
       "onHit": "D",
@@ -708,6 +786,7 @@
     {
       "active": "5-7",
       "category": "Throws",
+      "cmd": "6LPLK",
       "name": "Wild Fang",
       "onBlock": null,
       "onHit": "D",
@@ -717,6 +796,7 @@
     {
       "active": "5-7",
       "category": "Throws",
+      "cmd": "4LPLK",
       "name": "Jungle Flip",
       "onBlock": null,
       "onHit": "D",
@@ -726,6 +806,7 @@
     {
       "active": "5-7",
       "category": "Throws",
+      "cmd": "LPLK",
       "name": "Wild Bites",
       "onBlock": null,
       "onHit": "D",
@@ -735,6 +816,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "66",
       "name": "Forward Dash",
       "onBlock": null,
       "onHit": null,
@@ -744,6 +826,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "44",
       "name": "Backward Dash",
       "onBlock": null,
       "onHit": null,
@@ -753,6 +836,7 @@
     {
       "active": "26-27",
       "category": "Common Moves",
+      "cmd": "HPHK",
       "name": "Drive Impact: Wild Scratch",
       "onBlock": "-3",
       "onHit": "D",
@@ -762,6 +846,7 @@
     {
       "active": "20-22",
       "category": "Common Moves",
+      "cmd": "6HPHK",
       "name": "Drive Reversal (while blocking): Quick Rolling Attack",
       "onBlock": "-6",
       "onHit": "D",
@@ -771,6 +856,7 @@
     {
       "active": "18-20",
       "category": "Common Moves",
+      "cmd": "6HPHK",
       "name": "Drive Reversal (while recovering): Quick Rolling Attack",
       "onBlock": "-6",
       "onHit": "D",
@@ -780,6 +866,7 @@
     {
       "active": "[*2] 1-12",
       "category": "Common Moves",
+      "cmd": "MPMK",
       "name": "Drive Parry",
       "onBlock": null,
       "onHit": null,
@@ -789,6 +876,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "MPMK",
       "name": "Perfect Parry (strike)",
       "onBlock": null,
       "onHit": null,
@@ -798,6 +886,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "MPMK",
       "name": "Perfect Parry (projectile)",
       "onBlock": null,
       "onHit": null,
@@ -807,6 +896,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "66",
       "name": "Parry Drive Rush",
       "onBlock": null,
       "onHit": null,
@@ -816,6 +906,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "666MPMK",
       "name": "Cancel Drive Rush",
       "onBlock": null,
       "onHit": null,

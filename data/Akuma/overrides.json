@@ -3,6 +3,14 @@
   "entries": [
     {
       "category": "normal",
+      "move": "Aerial Tatsumaki Zanku-kyaku",
+      "set": {
+        "recovery": "10 land",
+        "startup": "5"
+      }
+    },
+    {
+      "category": "normal",
       "move": "Crouch HK",
       "set": {
         "recovery": "23"
@@ -19,7 +27,37 @@
       "category": "normal",
       "move": "Drive Parry",
       "set": {
+        "active": "12",
         "recovery": "33"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Souha Double Palm",
+      "set": {
+        "startup": "20"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Souha Double Palm",
+      "set": {
+        "startup": "18"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Empyrean's End",
+      "set": {
+        "startup": "9"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Goshoha",
+      "set": {
+        "recovery": "50",
+        "startup": "8"
       }
     },
     {
@@ -31,8 +69,34 @@
     },
     {
       "category": "normal",
+      "move": "HP Gou Hadoken",
+      "set": {
+        "onBlock": "2",
+        "startup": "31"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HP Gou Hadoken",
+      "set": {
+        "onBlock": "5",
+        "startup": "56"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HP Gou Hadoken",
+      "set": {
+        "recovery": "9 land",
+        "startup": "13"
+      }
+    },
+    {
+      "category": "normal",
       "move": "HP Gou Shoryuken",
       "set": {
+        "active": "11",
+        "onBlock": "-36",
         "recovery": "35+15 land"
       }
     },
@@ -82,6 +146,8 @@
       "category": "normal",
       "move": "Kikoku Combination 1",
       "set": {
+        "onBlock": "-3",
+        "onHit": "4",
         "recovery": "20",
         "startup": "13"
       }
@@ -90,6 +156,7 @@
       "category": "normal",
       "move": "Kikoku Combination 2",
       "set": {
+        "onBlock": "-10",
         "recovery": "21",
         "startup": "10"
       }
@@ -99,6 +166,30 @@
       "move": "LK Tatsumaki Zanku-kyaku",
       "set": {
         "recovery": "21"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "LP Gou Hadoken",
+      "set": {
+        "onBlock": "2",
+        "startup": "31"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "LP Gou Hadoken",
+      "set": {
+        "onBlock": "5",
+        "startup": "56"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "LP Gou Hadoken",
+      "set": {
+        "recovery": "9 land",
+        "startup": "13"
       }
     },
     {
@@ -117,8 +208,33 @@
     },
     {
       "category": "normal",
+      "move": "MP Gou Hadoken",
+      "set": {
+        "onBlock": "2",
+        "startup": "31"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MP Gou Hadoken",
+      "set": {
+        "onBlock": "5",
+        "startup": "56"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MP Gou Hadoken",
+      "set": {
+        "recovery": "9 land",
+        "startup": "13"
+      }
+    },
+    {
+      "category": "normal",
       "move": "MP Gou Shoryuken",
       "set": {
+        "active": "10",
         "recovery": "30+12 land"
       }
     },
@@ -133,6 +249,8 @@
       "category": "normal",
       "move": "OD Gou Shoryuken",
       "set": {
+        "active": "11",
+        "onBlock": "-39",
         "recovery": "37+15 land"
       }
     },
@@ -162,6 +280,7 @@
       "category": "normal",
       "move": "Stand HK",
       "set": {
+        "onBlock": "3",
         "recovery": "15"
       }
     },
@@ -180,10 +299,10 @@
       }
     }
   ],
-  "generatedAt": "2026-04-01T13:11:59.104981+00:00",
+  "generatedAt": "2026-04-06T10:00:41.950494+00:00",
   "notes": [
     "Auto-generated from official SF6 frame pages and FAT comparison.",
-    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+    "Review before apply; matching is name-first with cmd fallback."
   ],
   "source": "official-streetfighter-com-frame-vs-fat",
   "sourceUrl": "https://www.streetfighter.com/6/character/gouki_akuma/frame"

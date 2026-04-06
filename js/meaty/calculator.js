@@ -12,8 +12,10 @@ function tryMeaty(
   const U = meaty.startup;
   const A = meaty.active;
   const SAFE_CHALLENGE_STARTUP_FRAMES = 3;
-  const isDrLastPrefix = prefix[prefix.length - 1]?.cmd === "DR";
-  if (isDrLastPrefix && moveNeedsCharge(meaty)) return;
+  const lastPrefixCmd = prefix[prefix.length - 1]?.cmd;
+  const isDashLastPrefix = lastPrefixCmd === "DR" || lastPrefixCmd === "66";
+  const isDrLastPrefix = lastPrefixCmd === "DR";
+  if (isDashLastPrefix && moveNeedsCharge(meaty)) return;
   const drBonus = isDrLastPrefix && meaty.moveType === "normal" ? 4 : 0;
   let activeFrameHit = null;
   let stolen = 0;

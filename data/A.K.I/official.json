@@ -1,11 +1,12 @@
 {
   "character": "A.K.I.",
-  "fetchedAt": "2026-04-01T13:11:38.630619+00:00",
+  "fetchedAt": "2026-04-06T10:00:16.466953+00:00",
   "moveCount": 64,
   "moves": [
     {
       "active": "5-6",
       "category": "Normal Moves",
+      "cmd": "LP",
       "name": "Standing Light Punch",
       "onBlock": "-1",
       "onHit": "4",
@@ -15,6 +16,7 @@
     {
       "active": "4-6",
       "category": "Normal Moves",
+      "cmd": "LK",
       "name": "Standing Light Kick",
       "onBlock": "-3",
       "onHit": "3",
@@ -24,6 +26,7 @@
     {
       "active": "6-10",
       "category": "Normal Moves",
+      "cmd": "MP",
       "name": "Standing Medium Punch",
       "onBlock": "-3",
       "onHit": "3",
@@ -33,6 +36,7 @@
     {
       "active": "8-10",
       "category": "Normal Moves",
+      "cmd": "MK",
       "name": "Standing Medium Kick",
       "onBlock": "-2",
       "onHit": "6",
@@ -42,6 +46,7 @@
     {
       "active": "12-14",
       "category": "Normal Moves",
+      "cmd": "HP",
       "name": "Standing Heavy Punch",
       "onBlock": "-4",
       "onHit": "1",
@@ -51,6 +56,7 @@
     {
       "active": "9-12",
       "category": "Normal Moves",
+      "cmd": "HK",
       "name": "Standing Heavy Kick",
       "onBlock": "-3",
       "onHit": "4",
@@ -60,6 +66,7 @@
     {
       "active": "4-5",
       "category": "Normal Moves",
+      "cmd": "2LP",
       "name": "Crouching Light Punch",
       "onBlock": "-1",
       "onHit": "4",
@@ -69,6 +76,7 @@
     {
       "active": "5-7",
       "category": "Normal Moves",
+      "cmd": "2LK",
       "name": "Crouching Light Kick",
       "onBlock": "-2",
       "onHit": "3",
@@ -78,6 +86,7 @@
     {
       "active": "7-9",
       "category": "Normal Moves",
+      "cmd": "2MP",
       "name": "Crouching Medium Punch",
       "onBlock": "-3",
       "onHit": "1",
@@ -87,6 +96,7 @@
     {
       "active": "7-9",
       "category": "Normal Moves",
+      "cmd": "2MK",
       "name": "Crouching Medium Kick",
       "onBlock": "1",
       "onHit": "5",
@@ -96,6 +106,7 @@
     {
       "active": "10-12",
       "category": "Normal Moves",
+      "cmd": "2HP",
       "name": "Crouching Heavy Punch",
       "onBlock": "-8",
       "onHit": "D",
@@ -105,6 +116,7 @@
     {
       "active": "10-15",
       "category": "Normal Moves",
+      "cmd": "2HK",
       "name": "Crouching Heavy Kick",
       "onBlock": "-3",
       "onHit": "0",
@@ -114,6 +126,7 @@
     {
       "active": "5-13",
       "category": "Normal Moves",
+      "cmd": "LP",
       "name": "Jumping Light Punch",
       "onBlock": null,
       "onHit": null,
@@ -123,6 +136,7 @@
     {
       "active": "5-10",
       "category": "Normal Moves",
+      "cmd": "LK",
       "name": "Jumping Light Kick",
       "onBlock": null,
       "onHit": null,
@@ -132,6 +146,7 @@
     {
       "active": "7-10",
       "category": "Normal Moves",
+      "cmd": "MP",
       "name": "Jumping Medium Punch",
       "onBlock": null,
       "onHit": null,
@@ -141,6 +156,7 @@
     {
       "active": "7-12",
       "category": "Normal Moves",
+      "cmd": "MK",
       "name": "Jumping Medium Kick",
       "onBlock": null,
       "onHit": null,
@@ -150,6 +166,7 @@
     {
       "active": "11-16",
       "category": "Normal Moves",
+      "cmd": "HP",
       "name": "Jumping Heavy Punch",
       "onBlock": null,
       "onHit": null,
@@ -159,6 +176,7 @@
     {
       "active": "8-15",
       "category": "Normal Moves",
+      "cmd": "HK",
       "name": "Jumping Heavy Kick",
       "onBlock": null,
       "onHit": null,
@@ -168,6 +186,7 @@
     {
       "active": "24-26",
       "category": "Unique Attacks",
+      "cmd": "3MP",
       "name": "Pu Lao",
       "onBlock": "-3",
       "onHit": "3",
@@ -177,6 +196,7 @@
     {
       "active": "16-18",
       "category": "Unique Attacks",
+      "cmd": "6HP",
       "name": "Chi Wen",
       "onBlock": "-4",
       "onHit": "3",
@@ -186,6 +206,7 @@
     {
       "active": "14-24 14-16, 22-24",
       "category": "Unique Attacks",
+      "cmd": "6HK",
       "name": "Qiu Niu",
       "onBlock": "2",
       "onHit": "4",
@@ -195,6 +216,7 @@
     {
       "active": "9-13",
       "category": "Unique Attacks",
+      "cmd": "2HP",
       "name": "Gong Fu",
       "onBlock": null,
       "onHit": null,
@@ -204,6 +226,7 @@
     {
       "active": "8-9",
       "category": "Unique Attacks",
+      "cmd": "LPLP",
       "name": "Hun Dun(2)",
       "onBlock": "-3",
       "onHit": "1",
@@ -213,6 +236,7 @@
     {
       "active": "14-16",
       "category": "Unique Attacks",
+      "cmd": "HPHP",
       "name": "Qiong Qi (2)",
       "onBlock": "-15",
       "onHit": "D",
@@ -222,6 +246,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "214LP",
       "name": "Nightshade Pulse",
       "onBlock": "-10",
       "onHit": "-5",
@@ -231,6 +256,7 @@
     {
       "active": "13-14",
       "category": "Special Moves",
+      "cmd": "6P",
       "name": "Nightshade Chaser",
       "onBlock": "-16",
       "onHit": "-4",
@@ -240,6 +266,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "214PP",
       "name": "OD Nightshade Pulse",
       "onBlock": "1",
       "onHit": "D",
@@ -249,6 +276,7 @@
     {
       "active": "13-17",
       "category": "Special Moves",
+      "cmd": "6PP",
       "name": "OD Nightshade Chaser",
       "onBlock": "-13",
       "onHit": "D",
@@ -258,6 +286,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": null,
       "name": "Nightshade Chaser (Burst)",
       "onBlock": null,
       "onHit": "D",
@@ -267,6 +296,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": null,
       "name": "OD Nightshade Chaser (Burst)",
       "onBlock": null,
       "onHit": "D",
@@ -276,6 +306,7 @@
     {
       "active": "*",
       "category": "Special Moves",
+      "cmd": "214MP",
       "name": "Orchid Spring",
       "onBlock": null,
       "onHit": null,
@@ -285,6 +316,7 @@
     {
       "active": "13-38 13-15, 30-38",
       "category": "Special Moves",
+      "cmd": "214HP",
       "name": "Toxic Wreath",
       "onBlock": "-4",
       "onHit": "D",
@@ -294,6 +326,7 @@
     {
       "active": "14-16",
       "category": "Special Moves",
+      "cmd": "236LP",
       "name": "L Serpent Lash",
       "onBlock": "-8",
       "onHit": "1",
@@ -303,6 +336,7 @@
     {
       "active": "14-22",
       "category": "Special Moves",
+      "cmd": "236MP",
       "name": "M Serpent Lash",
       "onBlock": "-12",
       "onHit": "D",
@@ -312,6 +346,7 @@
     {
       "active": "11-16",
       "category": "Special Moves",
+      "cmd": "236HP",
       "name": "H Serpent Lash",
       "onBlock": "-20",
       "onHit": "D",
@@ -321,6 +356,7 @@
     {
       "active": "21-25",
       "category": "Special Moves",
+      "cmd": "236PP",
       "name": "OD Serpent Lash",
       "onBlock": "-14",
       "onHit": "4",
@@ -330,6 +366,7 @@
     {
       "active": "24-45 24-25, 31-32, 37-38, 44-45",
       "category": "Special Moves",
+      "cmd": "214LK",
       "name": "L Cruel Fate",
       "onBlock": "-3",
       "onHit": "1",
@@ -339,6 +376,7 @@
     {
       "active": "28-49 28-29, 35-36, 41-42, 48-49",
       "category": "Special Moves",
+      "cmd": "214MK",
       "name": "M Cruel Fate",
       "onBlock": "-3",
       "onHit": "3",
@@ -348,6 +386,7 @@
     {
       "active": "33-54 33-34, 40-41, 46-47, 53-54",
       "category": "Special Moves",
+      "cmd": "214HK",
       "name": "H Cruel Fate",
       "onBlock": "-3",
       "onHit": "4",
@@ -357,6 +396,7 @@
     {
       "active": "28-49 28-30, 35-36, 41-42, 48-49",
       "category": "Special Moves",
+      "cmd": "214KK",
       "name": "OD Cruel Fate",
       "onBlock": "2",
       "onHit": "D",
@@ -366,6 +406,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236LK",
       "name": "L Snake Step",
       "onBlock": null,
       "onHit": null,
@@ -375,6 +416,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236MK",
       "name": "M Snake Step",
       "onBlock": null,
       "onHit": null,
@@ -384,6 +426,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236HK",
       "name": "H Snake Step",
       "onBlock": null,
       "onHit": null,
@@ -393,6 +436,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236KK",
       "name": "OD Snake Step",
       "onBlock": null,
       "onHit": null,
@@ -402,6 +446,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "2PP",
       "name": "Sinister Slide",
       "onBlock": null,
       "onHit": null,
@@ -411,6 +456,7 @@
     {
       "active": "19-33",
       "category": "Special Moves",
+      "cmd": "P",
       "name": "Venomous Fang",
       "onBlock": "-25",
       "onHit": "D",
@@ -420,6 +466,7 @@
     {
       "active": "11-25 11-13, 23-25",
       "category": "Special Moves",
+      "cmd": "K",
       "name": "Heel Strike",
       "onBlock": "-3",
       "onHit": "4",
@@ -429,6 +476,7 @@
     {
       "active": "23-25",
       "category": "Special Moves",
+      "cmd": "LPLK",
       "name": "Entrapment",
       "onBlock": null,
       "onHit": "D",
@@ -438,6 +486,7 @@
     {
       "active": "10-12",
       "category": "Super Arts",
+      "cmd": "236236K",
       "name": "SA1 Deadly Implication",
       "onBlock": "-46",
       "onHit": "D",
@@ -447,6 +496,7 @@
     {
       "active": "*",
       "category": "Super Arts",
+      "cmd": "214214P",
       "name": "SA2 Tainted Talons",
       "onBlock": "-19",
       "onHit": "D",
@@ -456,6 +506,7 @@
     {
       "active": "10-12",
       "category": "Super Arts",
+      "cmd": "236236P",
       "name": "SA3 Claws of Ya Zi",
       "onBlock": "-36",
       "onHit": "D",
@@ -465,6 +516,7 @@
     {
       "active": "10-12",
       "category": "Super Arts",
+      "cmd": "236236P",
       "name": "CA Claws of Ya Zi",
       "onBlock": "-36",
       "onHit": "D",
@@ -474,6 +526,7 @@
     {
       "active": "5-7",
       "category": "Throws",
+      "cmd": "6LPLK",
       "name": "Whisper",
       "onBlock": null,
       "onHit": null,
@@ -483,6 +536,7 @@
     {
       "active": "5-7",
       "category": "Throws",
+      "cmd": "4LPLK",
       "name": "Gluttony",
       "onBlock": null,
       "onHit": null,
@@ -492,6 +546,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "66",
       "name": "Forward Dash",
       "onBlock": null,
       "onHit": null,
@@ -501,6 +556,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "44",
       "name": "Backward Dash",
       "onBlock": null,
       "onHit": null,
@@ -510,6 +566,7 @@
     {
       "active": "26-27",
       "category": "Common Moves",
+      "cmd": "HPHK",
       "name": "Drive Impact: Zao Chi",
       "onBlock": "-3",
       "onHit": "D",
@@ -519,6 +576,7 @@
     {
       "active": "20-22",
       "category": "Common Moves",
+      "cmd": "6HPHK",
       "name": "Drive Reversal (while blocking): Feng Shi",
       "onBlock": "-6",
       "onHit": "D",
@@ -528,6 +586,7 @@
     {
       "active": "18-20",
       "category": "Common Moves",
+      "cmd": "6HPHK",
       "name": "Drive Reversal (while recovering): Feng Shi",
       "onBlock": "-6",
       "onHit": "D",
@@ -537,6 +596,7 @@
     {
       "active": "[*2] 1-12",
       "category": "Common Moves",
+      "cmd": "MPMK",
       "name": "Drive Parry",
       "onBlock": null,
       "onHit": null,
@@ -546,6 +606,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "MPMK",
       "name": "Perfect Parry (strike)",
       "onBlock": null,
       "onHit": null,
@@ -555,6 +616,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "MPMK",
       "name": "Perfect Parry (projectile)",
       "onBlock": null,
       "onHit": null,
@@ -564,6 +626,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "66",
       "name": "Parry Drive Rush",
       "onBlock": null,
       "onHit": null,
@@ -573,6 +636,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "666MPMK",
       "name": "Cancel Drive Rush",
       "onBlock": null,
       "onHit": null,

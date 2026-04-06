@@ -3,9 +3,33 @@
   "entries": [
     {
       "category": "normal",
+      "move": "Air Tatsumaki Senpukyaku",
+      "set": {
+        "onBlock": "-9",
+        "onHit": "3",
+        "recovery": "20",
+        "startup": "13"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Air Tatsumaki Senpukyaku",
+      "set": {
+        "recovery": "14 land"
+      }
+    },
+    {
+      "category": "normal",
       "move": "Crouch HK",
       "set": {
         "recovery": "*24"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Crouch HP",
+      "set": {
+        "onBlock": "-7"
       }
     },
     {
@@ -19,7 +43,22 @@
       "category": "normal",
       "move": "Drive Parry",
       "set": {
+        "active": "12",
         "recovery": "33"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Lightning Crack",
+      "set": {
+        "startup": "20"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Lightning Crack",
+      "set": {
+        "startup": "18"
       }
     },
     {
@@ -33,6 +72,8 @@
       "category": "normal",
       "move": "HK Dragonlash Kick",
       "set": {
+        "onBlock": "1",
+        "onHit": "3",
         "recovery": "21",
         "startup": "28"
       }
@@ -41,6 +82,7 @@
       "category": "normal",
       "move": "HK Tatsumaki Senpukyaku",
       "set": {
+        "onBlock": "-12",
         "recovery": "31"
       }
     },
@@ -48,6 +90,7 @@
       "category": "normal",
       "move": "HP Shoryuken",
       "set": {
+        "onBlock": "-36",
         "recovery": "35+15 land"
       }
     },
@@ -119,6 +162,8 @@
       "category": "normal",
       "move": "MK Dragonlash Kick",
       "set": {
+        "onBlock": "-8",
+        "onHit": "3",
         "recovery": "25",
         "startup": "23"
       }
@@ -148,6 +193,8 @@
       "category": "normal",
       "move": "OD Dragonlash Kick",
       "set": {
+        "onBlock": "-9",
+        "onHit": "1",
         "recovery": "24",
         "startup": "9"
       }
@@ -156,6 +203,7 @@
       "category": "normal",
       "move": "OD Senka Snap Kick",
       "set": {
+        "active": "6",
         "recovery": "18"
       }
     },
@@ -191,15 +239,16 @@
       "category": "normal",
       "move": "Triple Flash Kicks 2",
       "set": {
+        "onBlock": "-12",
         "recovery": "27",
         "startup": "11"
       }
     }
   ],
-  "generatedAt": "2026-04-01T13:12:13.050949+00:00",
+  "generatedAt": "2026-04-06T10:00:53.347447+00:00",
   "notes": [
     "Auto-generated from official SF6 frame pages and FAT comparison.",
-    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+    "Review before apply; matching is name-first with cmd fallback."
   ],
   "source": "official-streetfighter-com-frame-vs-fat",
   "sourceUrl": "https://www.streetfighter.com/6/character/ken/frame"

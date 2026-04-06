@@ -5,6 +5,9 @@
       "category": "normal",
       "move": "Cannon Strike",
       "set": {
+        "active": "11",
+        "onBlock": "-6～5",
+        "onHit": "0～11",
         "recovery": "12 land"
       }
     },
@@ -12,6 +15,9 @@
       "category": "normal",
       "move": "Cannon Strike",
       "set": {
+        "active": "11",
+        "onBlock": "-6～3",
+        "onHit": "0～9",
         "recovery": "12 land"
       }
     },
@@ -26,7 +32,22 @@
       "category": "normal",
       "move": "Drive Parry",
       "set": {
+        "active": "12",
         "recovery": "33"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Countersnipe",
+      "set": {
+        "startup": "20"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Countersnipe",
+      "set": {
+        "startup": "18"
       }
     },
     {
@@ -34,6 +55,13 @@
       "move": "HK Cannon Spike",
       "set": {
         "recovery": "28+16 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HK Spiral Arrow",
+      "set": {
+        "onBlock": "-12"
       }
     },
     {
@@ -87,6 +115,13 @@
     },
     {
       "category": "normal",
+      "move": "LK Spiral Arrow",
+      "set": {
+        "onBlock": "-12"
+      }
+    },
+    {
+      "category": "normal",
       "move": "Leg Scissors Choke",
       "set": {
         "recovery": "3 land"
@@ -94,9 +129,23 @@
     },
     {
       "category": "normal",
+      "move": "Lift Combination",
+      "set": {
+        "onBlock": "-12"
+      }
+    },
+    {
+      "category": "normal",
       "move": "MK Cannon Spike",
       "set": {
         "recovery": "25+16 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MK Spiral Arrow",
+      "set": {
+        "onBlock": "-14"
       }
     },
     {
@@ -110,6 +159,9 @@
       "category": "normal",
       "move": "OD Cannon Strike",
       "set": {
+        "active": "10",
+        "onBlock": "-3～7",
+        "onHit": "0～11",
         "recovery": "12 land"
       }
     },
@@ -117,6 +169,9 @@
       "category": "normal",
       "move": "OD Cannon Strike",
       "set": {
+        "active": "10",
+        "onBlock": "-3～5",
+        "onHit": "1～9",
         "recovery": "12 land"
       }
     },
@@ -129,16 +184,24 @@
     },
     {
       "category": "normal",
+      "move": "Spin Drive Smasher",
+      "set": {
+        "active": "16",
+        "onBlock": "-24"
+      }
+    },
+    {
+      "category": "normal",
       "move": "Stand HK",
       "set": {
         "recovery": "21"
       }
     }
   ],
-  "generatedAt": "2026-04-01T13:11:45.111051+00:00",
+  "generatedAt": "2026-04-06T10:00:23.449578+00:00",
   "notes": [
     "Auto-generated from official SF6 frame pages and FAT comparison.",
-    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+    "Review before apply; matching is name-first with cmd fallback."
   ],
   "source": "official-streetfighter-com-frame-vs-fat",
   "sourceUrl": "https://www.streetfighter.com/6/character/cammy/frame"

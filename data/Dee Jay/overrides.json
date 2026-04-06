@@ -3,8 +3,16 @@
   "entries": [
     {
       "category": "normal",
+      "move": "Crouch HK",
+      "set": {
+        "onBlock": "-11"
+      }
+    },
+    {
+      "category": "normal",
       "move": "Crouch MP",
       "set": {
+        "onHit": "5",
         "recovery": "*14"
       }
     },
@@ -12,6 +20,8 @@
       "category": "normal",
       "move": "Dee Jay Special 2",
       "set": {
+        "onBlock": "-11",
+        "onHit": "-2",
         "recovery": "24",
         "startup": "11"
       }
@@ -20,13 +30,30 @@
       "category": "normal",
       "move": "Drive Parry",
       "set": {
+        "active": "12",
         "recovery": "33"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Leg Scratch",
+      "set": {
+        "startup": "20"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Leg Scratch",
+      "set": {
+        "startup": "18"
       }
     },
     {
       "category": "normal",
       "move": "Funky Dance 2",
       "set": {
+        "onBlock": "-2",
+        "onHit": "2",
         "recovery": "17",
         "startup": "12"
       }
@@ -43,6 +70,13 @@
       "move": "HP Air Slasher",
       "set": {
         "startup": "17"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Headliner Sunrise Festival",
+      "set": {
+        "onHit": "6"
       }
     },
     {
@@ -103,9 +137,23 @@
     },
     {
       "category": "normal",
+      "move": "MK Double Rolling Sobat",
+      "set": {
+        "onBlock": "-6"
+      }
+    },
+    {
+      "category": "normal",
       "move": "MK Jackknife Maximum",
       "set": {
         "recovery": "22+10 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Marvelous Sunrise Festival",
+      "set": {
+        "onHit": "6"
       }
     },
     {
@@ -131,6 +179,13 @@
     },
     {
       "category": "normal",
+      "move": "OD Machine Gun Upper",
+      "set": {
+        "startup": "26"
+      }
+    },
+    {
+      "category": "normal",
       "move": "Party in the Air",
       "set": {
         "recovery": "3 land"
@@ -145,8 +200,108 @@
     },
     {
       "category": "normal",
+      "move": "Stand HK",
+      "set": {
+        "onBlock": "-10",
+        "recovery": "25",
+        "startup": "15"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Stand HK",
+      "set": {
+        "onBlock": "-8",
+        "recovery": "21",
+        "startup": "11"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Stand HK",
+      "set": {
+        "onBlock": "-97",
+        "recovery": "112",
+        "startup": "33"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Stand HK",
+      "set": {
+        "onBlock": "-97",
+        "recovery": "112",
+        "startup": "33"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Stand HP",
+      "set": {
+        "onBlock": "-4",
+        "onHit": "3"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Stand HP",
+      "set": {
+        "onBlock": "-66",
+        "recovery": "84",
+        "startup": "11"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Stand HP",
+      "set": {
+        "onBlock": "-66",
+        "recovery": "84",
+        "startup": "11"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Stand LK",
+      "set": {
+        "onBlock": "-3",
+        "recovery": "*22",
+        "startup": "12"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Stand LK",
+      "set": {
+        "onHit": "6",
+        "recovery": "*19",
+        "startup": "9"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Stand MK",
+      "set": {
+        "onBlock": "1",
+        "startup": "25"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Stand MK",
+      "set": {
+        "onBlock": "-2",
+        "onHit": "7",
+        "recovery": "17",
+        "startup": "19"
+      }
+    },
+    {
+      "category": "normal",
       "move": "Sunrise Heel",
       "set": {
+        "onBlock": "1",
+        "onHit": "5",
         "startup": "19"
       }
     },
@@ -154,15 +309,17 @@
       "category": "normal",
       "move": "Threebeat Combo 2",
       "set": {
+        "onBlock": "-3",
+        "onHit": "2",
         "recovery": "20",
         "startup": "9"
       }
     }
   ],
-  "generatedAt": "2026-04-01T13:11:49.694614+00:00",
+  "generatedAt": "2026-04-06T10:00:31.465091+00:00",
   "notes": [
     "Auto-generated from official SF6 frame pages and FAT comparison.",
-    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+    "Review before apply; matching is name-first with cmd fallback."
   ],
   "source": "official-streetfighter-com-frame-vs-fat",
   "sourceUrl": "https://www.streetfighter.com/6/character/deejay/frame"

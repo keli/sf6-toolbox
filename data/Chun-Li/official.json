@@ -1,11 +1,12 @@
 {
   "character": "Chun-Li",
-  "fetchedAt": "2026-04-01T13:11:46.729422+00:00",
+  "fetchedAt": "2026-04-06T10:00:26.046417+00:00",
   "moveCount": 78,
   "moves": [
     {
       "active": "4-6",
       "category": "Normal Moves",
+      "cmd": "LP",
       "name": "Standing Light Punch",
       "onBlock": "-3",
       "onHit": "5",
@@ -15,6 +16,7 @@
     {
       "active": "5-7",
       "category": "Normal Moves",
+      "cmd": "LK",
       "name": "Standing Light Kick",
       "onBlock": "-2",
       "onHit": "2",
@@ -24,6 +26,7 @@
     {
       "active": "5-8",
       "category": "Normal Moves",
+      "cmd": "MP",
       "name": "Standing Medium Punch",
       "onBlock": "1",
       "onHit": "6",
@@ -33,6 +36,7 @@
     {
       "active": "7-10",
       "category": "Normal Moves",
+      "cmd": "MK",
       "name": "Standing Medium Kick",
       "onBlock": "-2",
       "onHit": "4",
@@ -42,6 +46,7 @@
     {
       "active": "13-15",
       "category": "Normal Moves",
+      "cmd": "HP",
       "name": "Standing Heavy Punch",
       "onBlock": "-3",
       "onHit": "2",
@@ -51,6 +56,7 @@
     {
       "active": "14-16",
       "category": "Normal Moves",
+      "cmd": "HK",
       "name": "Standing Heavy Kick",
       "onBlock": "0",
       "onHit": "4",
@@ -60,6 +66,7 @@
     {
       "active": "4-6",
       "category": "Normal Moves",
+      "cmd": "2LP",
       "name": "Crouching Light Punch",
       "onBlock": "-2",
       "onHit": "4",
@@ -69,6 +76,7 @@
     {
       "active": "4-5",
       "category": "Normal Moves",
+      "cmd": "2LK",
       "name": "Crouching Light Kick",
       "onBlock": "-2",
       "onHit": "0",
@@ -78,6 +86,7 @@
     {
       "active": "6-9",
       "category": "Normal Moves",
+      "cmd": "2MP",
       "name": "Crouching Medium Punch",
       "onBlock": "-2",
       "onHit": "4",
@@ -87,6 +96,7 @@
     {
       "active": "7-9",
       "category": "Normal Moves",
+      "cmd": "2MK",
       "name": "Crouching Medium Kick",
       "onBlock": "-6",
       "onHit": "-2",
@@ -96,6 +106,7 @@
     {
       "active": "11-23 11-13, 19-23",
       "category": "Normal Moves",
+      "cmd": "2HP",
       "name": "Crouching Heavy Punch",
       "onBlock": "-3",
       "onHit": "1",
@@ -105,6 +116,7 @@
     {
       "active": "9-14",
       "category": "Normal Moves",
+      "cmd": "2HK",
       "name": "Crouching Heavy Kick",
       "onBlock": "-9",
       "onHit": "D",
@@ -114,6 +126,7 @@
     {
       "active": "4-13",
       "category": "Normal Moves",
+      "cmd": "LP",
       "name": "Jumping Light Punch",
       "onBlock": null,
       "onHit": null,
@@ -123,6 +136,7 @@
     {
       "active": "4-11",
       "category": "Normal Moves",
+      "cmd": "LK",
       "name": "Jumping Light Kick",
       "onBlock": null,
       "onHit": null,
@@ -132,6 +146,7 @@
     {
       "active": "7-21 7-10, 17-21",
       "category": "Normal Moves",
+      "cmd": "MP",
       "name": "Jumping Medium Punch",
       "onBlock": null,
       "onHit": null,
@@ -141,6 +156,7 @@
     {
       "active": "6-10",
       "category": "Normal Moves",
+      "cmd": "MK",
       "name": "Jumping Medium Kick",
       "onBlock": null,
       "onHit": null,
@@ -150,6 +166,7 @@
     {
       "active": "9-14",
       "category": "Normal Moves",
+      "cmd": "HP",
       "name": "Jumping Heavy Punch",
       "onBlock": null,
       "onHit": null,
@@ -159,6 +176,7 @@
     {
       "active": "8-14",
       "category": "Normal Moves",
+      "cmd": "HK",
       "name": "Jumping Heavy Kick",
       "onBlock": null,
       "onHit": null,
@@ -168,6 +186,7 @@
     {
       "active": "8-12",
       "category": "Normal Moves",
+      "cmd": "HK",
       "name": "Neutral Jumping Heavy Kick",
       "onBlock": null,
       "onHit": null,
@@ -177,6 +196,7 @@
     {
       "active": "7-9",
       "category": "Unique Attacks",
+      "cmd": "46MP",
       "name": "Swift Thrust",
       "onBlock": "-3",
       "onHit": "2",
@@ -186,6 +206,7 @@
     {
       "active": "8-13",
       "category": "Unique Attacks",
+      "cmd": "4HP",
       "name": "Hakkei",
       "onBlock": "-1",
       "onHit": "5",
@@ -195,6 +216,7 @@
     {
       "active": "21-23",
       "category": "Unique Attacks",
+      "cmd": "3HP",
       "name": "Water Lotus Fist",
       "onBlock": "-3",
       "onHit": "2",
@@ -204,6 +226,7 @@
     {
       "active": "16-17",
       "category": "Unique Attacks",
+      "cmd": "6HK",
       "name": "Yokusen Kick",
       "onBlock": "-4",
       "onHit": "-1",
@@ -213,6 +236,7 @@
     {
       "active": "37-38",
       "category": "Unique Attacks",
+      "cmd": "3HK",
       "name": "Falling Crane",
       "onBlock": "3",
       "onHit": "7",
@@ -222,6 +246,7 @@
     {
       "active": "3-13",
       "category": "Unique Attacks",
+      "cmd": "2MK",
       "name": "Yoso Kick(1)",
       "onBlock": null,
       "onHit": null,
@@ -231,6 +256,7 @@
     {
       "active": "6-16",
       "category": "Unique Attacks",
+      "cmd": "2MK2MK",
       "name": "Yoso Kick(2)",
       "onBlock": null,
       "onHit": null,
@@ -240,6 +266,7 @@
     {
       "active": "6-16",
       "category": "Unique Attacks",
+      "cmd": "2MK2MK2MK",
       "name": "Yoso Kick(3)",
       "onBlock": null,
       "onHit": null,
@@ -249,6 +276,7 @@
     {
       "active": "6-9",
       "category": "Unique Attacks",
+      "cmd": "HPHP",
       "name": "Soaring Eagle Punches",
       "onBlock": null,
       "onHit": null,
@@ -258,6 +286,7 @@
     {
       "active": null,
       "category": "Unique Attacks",
+      "cmd": "214P",
       "name": "Serenity Stream",
       "onBlock": null,
       "onHit": null,
@@ -267,6 +296,7 @@
     {
       "active": "5-9",
       "category": "Unique Attacks",
+      "cmd": "LP",
       "name": "Orchid Palm",
       "onBlock": "*-4",
       "onHit": "※-3",
@@ -276,6 +306,7 @@
     {
       "active": "6-17",
       "category": "Unique Attacks",
+      "cmd": "MP",
       "name": "Snake Strike",
       "onBlock": "*-15",
       "onHit": "D",
@@ -285,6 +316,7 @@
     {
       "active": "23-32 23-24, 31-32",
       "category": "Unique Attacks",
+      "cmd": "HP",
       "name": "Lotus Fist",
       "onBlock": "-3",
       "onHit": "2",
@@ -294,6 +326,7 @@
     {
       "active": "8-12",
       "category": "Unique Attacks",
+      "cmd": "LK",
       "name": "Forward Strike",
       "onBlock": "*-5",
       "onHit": "※-1",
@@ -303,6 +336,7 @@
     {
       "active": "10-14",
       "category": "Unique Attacks",
+      "cmd": "MK",
       "name": "Senpu Kick",
       "onBlock": "*-10",
       "onHit": "※-4",
@@ -312,6 +346,7 @@
     {
       "active": "8-12",
       "category": "Unique Attacks",
+      "cmd": "HK",
       "name": "Tenku Kick",
       "onBlock": "-9",
       "onHit": "D",
@@ -321,6 +356,7 @@
     {
       "active": "15-104",
       "category": "Special Moves",
+      "cmd": "6LP",
       "name": "L Kikoken",
       "onBlock": "-7",
       "onHit": "-3",
@@ -330,6 +366,7 @@
     {
       "active": "12-66",
       "category": "Special Moves",
+      "cmd": "6MP",
       "name": "M Kikoken",
       "onBlock": "-7",
       "onHit": "-3",
@@ -339,6 +376,7 @@
     {
       "active": "11-35",
       "category": "Special Moves",
+      "cmd": "6HP",
       "name": "H Kikoken",
       "onBlock": "-6",
       "onHit": "-2",
@@ -348,6 +386,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "6PP",
       "name": "OD Kikoken",
       "onBlock": "0",
       "onHit": "5",
@@ -357,6 +396,7 @@
     {
       "active": "5-20 5-6, 12-13, 19-20",
       "category": "Special Moves",
+      "cmd": "236LK",
       "name": "L Hundred Lightning Kicks",
       "onBlock": "-8",
       "onHit": "3",
@@ -366,6 +406,7 @@
     {
       "active": "12-32 12-13, 18-19, 24-25, 31-32",
       "category": "Special Moves",
+      "cmd": "236MK",
       "name": "M Hundred Lightning Kicks",
       "onBlock": "-8",
       "onHit": "3",
@@ -375,6 +416,7 @@
     {
       "active": "23-47 23-24, 28-29, 32-33, 38-39, 46-47",
       "category": "Special Moves",
+      "cmd": "236HK",
       "name": "H Hundred Lightning Kicks",
       "onBlock": "-3",
       "onHit": "D",
@@ -384,6 +426,7 @@
     {
       "active": "8-33 8-9, 14-15, 20-21, 26-27, 32-33",
       "category": "Special Moves",
+      "cmd": "236KK",
       "name": "OD Hundred Lightning Kicks",
       "onBlock": "-3",
       "onHit": "3",
@@ -393,6 +436,7 @@
     {
       "active": "11- 46 11-12, 18-19, 24-25, 31-32, 46",
       "category": "Special Moves",
+      "cmd": "KK",
       "name": "Lightning Kick Barrage",
       "onBlock": "-13",
       "onHit": "D",
@@ -402,6 +446,7 @@
     {
       "active": "8-21 8-9, 14-15, 20-21",
       "category": "Special Moves",
+      "cmd": "236LK",
       "name": "L Aerial Hundred Lightning Kicks",
       "onBlock": null,
       "onHit": null,
@@ -411,6 +456,7 @@
     {
       "active": "10-30 10-11, 16-17, 22-23, 29-30",
       "category": "Special Moves",
+      "cmd": "236MK",
       "name": "M Aerial Hundred Lightning Kicks",
       "onBlock": null,
       "onHit": null,
@@ -420,6 +466,7 @@
     {
       "active": "12-35 12-13, 18-19, 23-24, 29-30, 34-35",
       "category": "Special Moves",
+      "cmd": "236HK",
       "name": "H Aerial Hundred Lightning Kicks",
       "onBlock": null,
       "onHit": null,
@@ -429,6 +476,7 @@
     {
       "active": "6-31 6-7, 12-13, 16-17, 21-22, 25-26, 30-31",
       "category": "Special Moves",
+      "cmd": "236KK",
       "name": "OD Aerial Hundred Lightning Kicks",
       "onBlock": null,
       "onHit": null,
@@ -438,6 +486,7 @@
     {
       "active": "9-26 9-10, 17-18, 25-26",
       "category": "Special Moves",
+      "cmd": "8LK",
       "name": "L Spinning Bird Kick",
       "onBlock": "-18",
       "onHit": "D",
@@ -447,6 +496,7 @@
     {
       "active": "16-48 16-17, 24-25, 32-33, 41-42, 47-48",
       "category": "Special Moves",
+      "cmd": "8MK",
       "name": "M Spinning Bird Kick",
       "onBlock": "-17",
       "onHit": "D",
@@ -456,6 +506,7 @@
     {
       "active": "20-64 20-21, 26-27, 36-37, 44-45, 51-52, 58-59, 63-64",
       "category": "Special Moves",
+      "cmd": "8HK",
       "name": "H Spinning Bird Kick",
       "onBlock": "-18",
       "onHit": "D",
@@ -465,6 +516,7 @@
     {
       "active": "16-55 16-17, 22-23, 28-29, 35-36, 41-42, 48-49, 54-55",
       "category": "Special Moves",
+      "cmd": "8KK",
       "name": "OD Spinning Bird Kick",
       "onBlock": "-12",
       "onHit": "D",
@@ -474,6 +526,7 @@
     {
       "active": "23-25",
       "category": "Special Moves",
+      "cmd": "214LK",
       "name": "L Hazanshu",
       "onBlock": "-5",
       "onHit": "D",
@@ -483,6 +536,7 @@
     {
       "active": "27-29",
       "category": "Special Moves",
+      "cmd": "214MK",
       "name": "M Hazanshu",
       "onBlock": "-3",
       "onHit": "2",
@@ -492,6 +546,7 @@
     {
       "active": "32-34",
       "category": "Special Moves",
+      "cmd": "214HK",
       "name": "H Hazanshu",
       "onBlock": "-1",
       "onHit": "6",
@@ -501,6 +556,7 @@
     {
       "active": "26-28",
       "category": "Special Moves",
+      "cmd": "214KK",
       "name": "OD Hazanshu",
       "onBlock": "-5",
       "onHit": "D",
@@ -510,6 +566,7 @@
     {
       "active": "5-18 5-7, 17-18",
       "category": "Special Moves",
+      "cmd": "22LK",
       "name": "L Tensho Kicks",
       "onBlock": "-37",
       "onHit": "D",
@@ -519,6 +576,7 @@
     {
       "active": "7-20 7-9, 19-20",
       "category": "Special Moves",
+      "cmd": "22MK",
       "name": "M Tensho Kicks",
       "onBlock": "-41",
       "onHit": "D",
@@ -528,6 +586,7 @@
     {
       "active": "9-43 9-11, 19-20, 29-30, 42-43",
       "category": "Special Moves",
+      "cmd": "22HK",
       "name": "H Tensho Kicks",
       "onBlock": "-57",
       "onHit": "D",
@@ -537,6 +596,7 @@
     {
       "active": "6-66 6-8, 14-16,42-44,49-51,55-57,64-66",
       "category": "Special Moves",
+      "cmd": "22KK",
       "name": "OD Tensho Kicks",
       "onBlock": "-40",
       "onHit": "D",
@@ -546,6 +606,7 @@
     {
       "active": "7-76",
       "category": "Super Arts",
+      "cmd": "236236P",
       "name": "SA1 Kikosho",
       "onBlock": "-22",
       "onHit": "D",
@@ -555,6 +616,7 @@
     {
       "active": "7-56",
       "category": "Super Arts",
+      "cmd": "236236P",
       "name": "SA1 Aerial Kikosho",
       "onBlock": null,
       "onHit": "D",
@@ -564,6 +626,7 @@
     {
       "active": "11-96 11-12,14-15,17-18,20-21,24-25,27-28,30-31,33-34,46-47,50-51,54-55,58-59,62-63,66-67,69-70,94-96",
       "category": "Super Arts",
+      "cmd": "236236K",
       "name": "SA2 Hoyoku-sen",
       "onBlock": "-35",
       "onHit": "D",
@@ -573,6 +636,7 @@
     {
       "active": "8-42 8-9, 34,42",
       "category": "Super Arts",
+      "cmd": "214214K",
       "name": "SA3 Soten Ranka",
       "onBlock": "-24",
       "onHit": "D",
@@ -582,6 +646,7 @@
     {
       "active": "8-42 8-9, 34,42",
       "category": "Super Arts",
+      "cmd": "214214K",
       "name": "CA Soten Ranka",
       "onBlock": "-24",
       "onHit": "D",
@@ -591,6 +656,7 @@
     {
       "active": "5-7",
       "category": "Throws",
+      "cmd": "6LPLK",
       "name": "Koshuto",
       "onBlock": null,
       "onHit": "D",
@@ -600,6 +666,7 @@
     {
       "active": "5-7",
       "category": "Throws",
+      "cmd": "4LPLK",
       "name": "Taiji Fan",
       "onBlock": null,
       "onHit": "D",
@@ -609,6 +676,7 @@
     {
       "active": "5-7",
       "category": "Throws",
+      "cmd": "LPLK",
       "name": "Ryuseiraku",
       "onBlock": null,
       "onHit": "D",
@@ -618,6 +686,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "66",
       "name": "Forward Dash",
       "onBlock": null,
       "onHit": null,
@@ -627,6 +696,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "44",
       "name": "Backward Dash",
       "onBlock": null,
       "onHit": null,
@@ -636,6 +706,7 @@
     {
       "active": "26-27",
       "category": "Common Moves",
+      "cmd": "HPHK",
       "name": "Drive Impact: Hosen Kick",
       "onBlock": "-3",
       "onHit": "D",
@@ -645,6 +716,7 @@
     {
       "active": "20-35 20-22, 33-35",
       "category": "Common Moves",
+      "cmd": "6HPHK",
       "name": "Drive Reversal (while blocking): Hoyoku Kick",
       "onBlock": "-6",
       "onHit": "D",
@@ -654,6 +726,7 @@
     {
       "active": "18-33 18-20, 31-33",
       "category": "Common Moves",
+      "cmd": "6HPHK",
       "name": "Drive Reversal (while recovering): Hoyoku Kick",
       "onBlock": "-6",
       "onHit": "D",
@@ -663,6 +736,7 @@
     {
       "active": "[*2] 1-12",
       "category": "Common Moves",
+      "cmd": "MPMK",
       "name": "Drive Parry",
       "onBlock": null,
       "onHit": null,
@@ -672,6 +746,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "MPMK",
       "name": "Perfect Parry (strike)",
       "onBlock": null,
       "onHit": null,
@@ -681,6 +756,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "MPMK",
       "name": "Perfect Parry (projectile)",
       "onBlock": null,
       "onHit": null,
@@ -690,6 +766,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "66",
       "name": "Parry Drive Rush",
       "onBlock": null,
       "onHit": null,
@@ -699,6 +776,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "666MPMK",
       "name": "Cancel Drive Rush",
       "onBlock": null,
       "onHit": null,

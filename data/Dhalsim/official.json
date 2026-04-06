@@ -1,11 +1,12 @@
 {
   "character": "Dhalsim",
-  "fetchedAt": "2026-04-01T13:11:51.145424+00:00",
+  "fetchedAt": "2026-04-06T10:00:33.344847+00:00",
   "moveCount": 89,
   "moves": [
     {
       "active": "4-6",
       "category": "Normal Moves",
+      "cmd": "LP",
       "name": "Standing Light Punch",
       "onBlock": "-1",
       "onHit": "4",
@@ -15,6 +16,7 @@
     {
       "active": "9-12",
       "category": "Normal Moves",
+      "cmd": "LK",
       "name": "Standing Light Kick",
       "onBlock": "-6",
       "onHit": "2",
@@ -24,6 +26,7 @@
     {
       "active": "14-16",
       "category": "Normal Moves",
+      "cmd": "MP",
       "name": "Standing Medium Punch",
       "onBlock": "-5",
       "onHit": "0",
@@ -33,6 +36,7 @@
     {
       "active": "12-14",
       "category": "Normal Moves",
+      "cmd": "MK",
       "name": "Standing Medium Kick",
       "onBlock": "-6",
       "onHit": "-2",
@@ -42,6 +46,7 @@
     {
       "active": "16-19",
       "category": "Normal Moves",
+      "cmd": "HP",
       "name": "Standing Heavy Punch",
       "onBlock": "-11",
       "onHit": "-6",
@@ -51,6 +56,7 @@
     {
       "active": "17-19",
       "category": "Normal Moves",
+      "cmd": "HK",
       "name": "Standing Heavy Kick",
       "onBlock": "-6",
       "onHit": "3",
@@ -60,6 +66,7 @@
     {
       "active": "5-7",
       "category": "Normal Moves",
+      "cmd": "2LP",
       "name": "Crouching Light Punch",
       "onBlock": "-1",
       "onHit": "4",
@@ -69,6 +76,7 @@
     {
       "active": "4-10",
       "category": "Normal Moves",
+      "cmd": "2LK",
       "name": "Crouching Light Kick",
       "onBlock": "-10",
       "onHit": "-5",
@@ -78,6 +86,7 @@
     {
       "active": "12-14",
       "category": "Normal Moves",
+      "cmd": "2MP",
       "name": "Crouching Medium Punch",
       "onBlock": "-4",
       "onHit": "0",
@@ -87,6 +96,7 @@
     {
       "active": "10-22",
       "category": "Normal Moves",
+      "cmd": "2MK",
       "name": "Crouching Medium Kick",
       "onBlock": "-10",
       "onHit": "-3",
@@ -96,6 +106,7 @@
     {
       "active": "19-22",
       "category": "Normal Moves",
+      "cmd": "2HP",
       "name": "Crouching Heavy Punch",
       "onBlock": "-8",
       "onHit": "3",
@@ -105,6 +116,7 @@
     {
       "active": "12-27",
       "category": "Normal Moves",
+      "cmd": "2HK",
       "name": "Crouching Heavy Kick",
       "onBlock": "-16",
       "onHit": "D",
@@ -114,6 +126,7 @@
     {
       "active": "4-7",
       "category": "Normal Moves",
+      "cmd": "LP",
       "name": "Jumping Light Punch",
       "onBlock": null,
       "onHit": null,
@@ -123,6 +136,7 @@
     {
       "active": "6-9",
       "category": "Normal Moves",
+      "cmd": "LK",
       "name": "Jumping Light Kick",
       "onBlock": null,
       "onHit": null,
@@ -132,6 +146,7 @@
     {
       "active": "9-14",
       "category": "Normal Moves",
+      "cmd": "MP",
       "name": "Jumping Medium Punch",
       "onBlock": null,
       "onHit": null,
@@ -141,6 +156,7 @@
     {
       "active": "11-16",
       "category": "Normal Moves",
+      "cmd": "MK",
       "name": "Jumping Medium Kick",
       "onBlock": null,
       "onHit": null,
@@ -150,6 +166,7 @@
     {
       "active": "13-16",
       "category": "Normal Moves",
+      "cmd": "HP",
       "name": "Jumping Heavy Punch",
       "onBlock": null,
       "onHit": null,
@@ -159,6 +176,7 @@
     {
       "active": "10-19",
       "category": "Normal Moves",
+      "cmd": "HK",
       "name": "Jumping Heavy Kick",
       "onBlock": null,
       "onHit": null,
@@ -168,6 +186,7 @@
     {
       "active": "8-13",
       "category": "Unique Attacks",
+      "cmd": "4MP",
       "name": "Yoga Uppercut",
       "onBlock": "-3",
       "onHit": "2",
@@ -177,6 +196,7 @@
     {
       "active": "14-20",
       "category": "Unique Attacks",
+      "cmd": "4HP",
       "name": "Yoga Lance",
       "onBlock": "-16",
       "onHit": "-9",
@@ -186,6 +206,7 @@
     {
       "active": "10-13",
       "category": "Unique Attacks",
+      "cmd": "1HP",
       "name": "Nirvana Punch",
       "onBlock": "-3",
       "onHit": "3",
@@ -195,6 +216,7 @@
     {
       "active": "5-7",
       "category": "Unique Attacks",
+      "cmd": "1LK",
       "name": "Agile Kick",
       "onBlock": "-3",
       "onHit": "1",
@@ -204,6 +226,7 @@
     {
       "active": "7-10",
       "category": "Unique Attacks",
+      "cmd": "4MK",
       "name": "Divine Kick",
       "onBlock": "0",
       "onHit": "3",
@@ -213,6 +236,7 @@
     {
       "active": "8-10",
       "category": "Unique Attacks",
+      "cmd": "1MK",
       "name": "Thrust Kick",
       "onBlock": "-7",
       "onHit": "-3",
@@ -222,6 +246,7 @@
     {
       "active": "14-19",
       "category": "Unique Attacks",
+      "cmd": "4HK",
       "name": "Yoga Mountain",
       "onBlock": "-9",
       "onHit": "0",
@@ -231,6 +256,7 @@
     {
       "active": "9-11",
       "category": "Unique Attacks",
+      "cmd": "1HK",
       "name": "Karma Kick",
       "onBlock": "-7",
       "onHit": "D",
@@ -240,6 +266,7 @@
     {
       "active": "10-until landing",
       "category": "Unique Attacks",
+      "cmd": "2LP",
       "name": "Yoga Mummy",
       "onBlock": null,
       "onHit": null,
@@ -249,6 +276,7 @@
     {
       "active": "9-until landing",
       "category": "Unique Attacks",
+      "cmd": "2LK",
       "name": "L Drill Kick",
       "onBlock": null,
       "onHit": null,
@@ -258,6 +286,7 @@
     {
       "active": "9-until landing",
       "category": "Unique Attacks",
+      "cmd": "2MK",
       "name": "M Drill Kick",
       "onBlock": null,
       "onHit": null,
@@ -267,6 +296,7 @@
     {
       "active": "9-until landing",
       "category": "Unique Attacks",
+      "cmd": "2HK",
       "name": "H Drill Kick",
       "onBlock": null,
       "onHit": null,
@@ -276,6 +306,7 @@
     {
       "active": "12-27",
       "category": "Unique Attacks",
+      "cmd": "2HK",
       "name": "Long Sliding Kick",
       "onBlock": "-16",
       "onHit": "D",
@@ -285,6 +316,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236LP",
       "name": "L Yoga Fire",
       "onBlock": "-6",
       "onHit": "-2",
@@ -294,6 +326,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236LP",
       "name": "L Yoga Fire(Charged)",
       "onBlock": "-1",
       "onHit": "D",
@@ -303,6 +336,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236MP",
       "name": "M Yoga Fire",
       "onBlock": "-6",
       "onHit": "-2",
@@ -312,6 +346,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236MP",
       "name": "M Yoga Fire(Charged)",
       "onBlock": "-1",
       "onHit": "D",
@@ -321,6 +356,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236HP",
       "name": "H Yoga Fire",
       "onBlock": "-6",
       "onHit": "-2",
@@ -330,6 +366,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236HP",
       "name": "H Yoga Fire(Charged)",
       "onBlock": "-1",
       "onHit": "D",
@@ -339,6 +376,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236LPMP",
       "name": "OD L Yoga Fire",
       "onBlock": "-3",
       "onHit": "D",
@@ -348,6 +386,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236LPHP",
       "name": "OD M Yoga Fire",
       "onBlock": "-3",
       "onHit": "D",
@@ -357,6 +396,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236MPHP",
       "name": "OD H Yoga Fire",
       "onBlock": "-3",
       "onHit": "D",
@@ -366,6 +406,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236LK",
       "name": "L Yoga Arch",
       "onBlock": "-1",
       "onHit": "1",
@@ -375,6 +416,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236MK",
       "name": "M Yoga Arch",
       "onBlock": "-1",
       "onHit": "1",
@@ -384,6 +426,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236HK",
       "name": "H Yoga Arch",
       "onBlock": "-1",
       "onHit": "1",
@@ -393,6 +436,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236LKMK",
       "name": "OD L Yoga Arch",
       "onBlock": "-3",
       "onHit": "1",
@@ -402,6 +446,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236LKHK",
       "name": "OD M Yoga Arch",
       "onBlock": "-3",
       "onHit": "1",
@@ -411,6 +456,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "236MKHK",
       "name": "OD H Yoga Arch",
       "onBlock": "-3",
       "onHit": "1",
@@ -420,6 +466,7 @@
     {
       "active": "16-30",
       "category": "Special Moves",
+      "cmd": "63214LP",
       "name": "L Yoga Flame",
       "onBlock": "-4",
       "onHit": "D",
@@ -429,6 +476,7 @@
     {
       "active": "19-34",
       "category": "Special Moves",
+      "cmd": "63214MP",
       "name": "M Yoga Flame",
       "onBlock": "-4",
       "onHit": "D",
@@ -438,6 +486,7 @@
     {
       "active": "26-42",
       "category": "Special Moves",
+      "cmd": "63214HP",
       "name": "H Yoga Flame",
       "onBlock": "-4",
       "onHit": "D",
@@ -447,6 +496,7 @@
     {
       "active": "18-42",
       "category": "Special Moves",
+      "cmd": "63214PP",
       "name": "OD Yoga Flame",
       "onBlock": "-11",
       "onHit": "D",
@@ -456,6 +506,7 @@
     {
       "active": "12-21",
       "category": "Special Moves",
+      "cmd": "63214LK",
       "name": "L Yoga Blast",
       "onBlock": "-6",
       "onHit": "D",
@@ -465,6 +516,7 @@
     {
       "active": "15-24",
       "category": "Special Moves",
+      "cmd": "63214MK",
       "name": "M Yoga Blast",
       "onBlock": "-3",
       "onHit": "D",
@@ -474,6 +526,7 @@
     {
       "active": "17-26",
       "category": "Special Moves",
+      "cmd": "63214HK",
       "name": "H Yoga Blast",
       "onBlock": "-3",
       "onHit": "D",
@@ -483,6 +536,7 @@
     {
       "active": "12-21",
       "category": "Special Moves",
+      "cmd": "63214KK",
       "name": "OD Yoga Blast",
       "onBlock": "0",
       "onHit": "D",
@@ -492,6 +546,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "63214LP",
       "name": "L Yoga Comet",
       "onBlock": null,
       "onHit": null,
@@ -501,6 +556,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "63214MP",
       "name": "M Yoga Comet",
       "onBlock": null,
       "onHit": null,
@@ -510,6 +566,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "63214HP",
       "name": "H Yoga Comet",
       "onBlock": null,
       "onHit": null,
@@ -519,6 +576,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "63214PP",
       "name": "OD Yoga Comet",
       "onBlock": null,
       "onHit": null,
@@ -528,6 +586,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "2KK",
       "name": "Yoga Float(immediately)",
       "onBlock": null,
       "onHit": null,
@@ -537,6 +596,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "3KK",
       "name": "Yoga Float(Forward)",
       "onBlock": null,
       "onHit": null,
@@ -546,6 +606,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "2KK",
       "name": "Aerial Yoga Float",
       "onBlock": null,
       "onHit": null,
@@ -555,6 +616,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "6PPP",
       "name": "P Yoga Teleport (Forward)",
       "onBlock": null,
       "onHit": null,
@@ -564,6 +626,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "6KKK",
       "name": "K Yoga Teleport (Forward)",
       "onBlock": null,
       "onHit": null,
@@ -573,6 +636,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "6PPP",
       "name": "P Aerial Yoga Teleport (Forward)",
       "onBlock": null,
       "onHit": null,
@@ -582,6 +646,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "6KKK",
       "name": "K Aerial Yoga Teleport (Forward)",
       "onBlock": null,
       "onHit": null,
@@ -591,6 +656,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "4PPP4KKK",
       "name": "Yoga Teleport (Backward)",
       "onBlock": null,
       "onHit": null,
@@ -600,6 +666,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "4PPP",
       "name": "P Aerial Yoga Teleport (Backward)",
       "onBlock": null,
       "onHit": null,
@@ -609,6 +676,7 @@
     {
       "active": null,
       "category": "Special Moves",
+      "cmd": "4KKK",
       "name": "K Aerial Yoga Teleport (Backward)",
       "onBlock": null,
       "onHit": null,
@@ -618,6 +686,7 @@
     {
       "active": "10-93",
       "category": "Super Arts",
+      "cmd": "236236LP",
       "name": "SA1 L Yoga Inferno",
       "onBlock": "-10",
       "onHit": "D",
@@ -627,6 +696,7 @@
     {
       "active": "10-93",
       "category": "Super Arts",
+      "cmd": "236236MP",
       "name": "SA1 M Yoga Inferno",
       "onBlock": "-10",
       "onHit": "D",
@@ -636,6 +706,7 @@
     {
       "active": "10-93",
       "category": "Super Arts",
+      "cmd": "236236HP",
       "name": "SA1 H Yoga Inferno",
       "onBlock": "-22",
       "onHit": "D",
@@ -645,6 +716,7 @@
     {
       "active": null,
       "category": "Super Arts",
+      "cmd": "214214K",
       "name": "SA2 Yoga Sunburst(Lv1)",
       "onBlock": null,
       "onHit": null,
@@ -654,6 +726,7 @@
     {
       "active": null,
       "category": "Super Arts",
+      "cmd": "214214K",
       "name": "SA2 Yoga Sunburst(Lv2)",
       "onBlock": null,
       "onHit": null,
@@ -663,6 +736,7 @@
     {
       "active": null,
       "category": "Super Arts",
+      "cmd": "214214K",
       "name": "SA2 Yoga Sunburst(Lv3)",
       "onBlock": null,
       "onHit": null,
@@ -672,6 +746,7 @@
     {
       "active": "10-14",
       "category": "Super Arts",
+      "cmd": "236236K",
       "name": "SA3 Merciless Yoga",
       "onBlock": "-62",
       "onHit": "D",
@@ -681,6 +756,7 @@
     {
       "active": "10-14",
       "category": "Super Arts",
+      "cmd": "236236K",
       "name": "CA Merciless Yoga",
       "onBlock": "-62",
       "onHit": "D",
@@ -690,6 +766,7 @@
     {
       "active": "5-7",
       "category": "Throws",
+      "cmd": "6LPLK",
       "name": "Yoga Smash",
       "onBlock": null,
       "onHit": "D",
@@ -699,6 +776,7 @@
     {
       "active": "5-7",
       "category": "Throws",
+      "cmd": "4LPLK",
       "name": "Yoga Throw",
       "onBlock": null,
       "onHit": "D",
@@ -708,6 +786,7 @@
     {
       "active": "5-7",
       "category": "Throws",
+      "cmd": "2LPLK",
       "name": "Yoga Splash",
       "onBlock": null,
       "onHit": "D",
@@ -717,6 +796,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "66",
       "name": "Forward Dash",
       "onBlock": null,
       "onHit": null,
@@ -726,6 +806,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "44",
       "name": "Backward Dash",
       "onBlock": null,
       "onHit": null,
@@ -735,6 +816,7 @@
     {
       "active": "26-27",
       "category": "Common Moves",
+      "cmd": "HPHK",
       "name": "Drive Impact: Yoga Rise",
       "onBlock": "-3",
       "onHit": "D",
@@ -744,6 +826,7 @@
     {
       "active": "20-31 20-22, 29-31",
       "category": "Common Moves",
+      "cmd": "6HPHK",
       "name": "Drive Reversal (while blocking): Yoga Illusion",
       "onBlock": "-6",
       "onHit": "D",
@@ -753,6 +836,7 @@
     {
       "active": "18-29 18-20, 27-29",
       "category": "Common Moves",
+      "cmd": "6HPHK",
       "name": "Drive Reversal (while recovering): Yoga Illusion",
       "onBlock": "-6",
       "onHit": "D",
@@ -762,6 +846,7 @@
     {
       "active": "[*2] 1-12",
       "category": "Common Moves",
+      "cmd": "MPMK",
       "name": "Drive Parry",
       "onBlock": null,
       "onHit": null,
@@ -771,6 +856,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "MPMK",
       "name": "Perfect Parry (strike)",
       "onBlock": null,
       "onHit": null,
@@ -780,6 +866,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "MPMK",
       "name": "Perfect Parry (projectile)",
       "onBlock": null,
       "onHit": null,
@@ -789,6 +876,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "66",
       "name": "Parry Drive Rush",
       "onBlock": null,
       "onHit": null,
@@ -798,6 +886,7 @@
     {
       "active": null,
       "category": "Common Moves",
+      "cmd": "666MPMK",
       "name": "Cancel Drive Rush",
       "onBlock": null,
       "onHit": null,

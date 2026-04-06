@@ -3,8 +3,17 @@
   "entries": [
     {
       "category": "normal",
+      "move": "Buster Wolf",
+      "set": {
+        "recovery": "60"
+      }
+    },
+    {
+      "category": "normal",
       "move": "Crouch HP",
       "set": {
+        "active": "6",
+        "onBlock": "-4",
         "recovery": "22"
       }
     },
@@ -19,7 +28,22 @@
       "category": "normal",
       "move": "Drive Parry",
       "set": {
+        "active": "12",
         "recovery": "33"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Back Knuckle",
+      "set": {
+        "startup": "20"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Back Knuckle",
+      "set": {
+        "startup": "18"
       }
     },
     {
@@ -32,9 +56,32 @@
     },
     {
       "category": "normal",
+      "move": "HK Power Charge",
+      "set": {
+        "onBlock": "-16"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HP Burning Knuckle",
+      "set": {
+        "onBlock": "-8"
+      }
+    },
+    {
+      "category": "normal",
       "move": "HP Rising Tackle",
       "set": {
+        "active": "20",
+        "onBlock": "-36",
         "recovery": "27+15 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Hammer Punch",
+      "set": {
+        "onBlock": "-3"
       }
     },
     {
@@ -69,6 +116,7 @@
       "category": "normal",
       "move": "Jump MK",
       "set": {
+        "active": "4",
         "recovery": "3 land"
       }
     },
@@ -76,6 +124,7 @@
       "category": "normal",
       "move": "Jump MP",
       "set": {
+        "active": "6",
         "recovery": "3 land"
       }
     },
@@ -89,8 +138,17 @@
     },
     {
       "category": "normal",
+      "move": "LK Power Charge",
+      "set": {
+        "onBlock": "-9",
+        "onHit": "3"
+      }
+    },
+    {
+      "category": "normal",
       "move": "LP Rising Tackle",
       "set": {
+        "onBlock": "-25",
         "recovery": "21+12 land"
       }
     },
@@ -104,9 +162,31 @@
     },
     {
       "category": "normal",
+      "move": "MK Power Charge",
+      "set": {
+        "onBlock": "-11"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MP Burning Knuckle",
+      "set": {
+        "onBlock": "-6"
+      }
+    },
+    {
+      "category": "normal",
       "move": "MP Rising Tackle",
       "set": {
+        "active": "10",
         "recovery": "28+12 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "OD Burning Knuckle",
+      "set": {
+        "onBlock": "-8"
       }
     },
     {
@@ -119,8 +199,16 @@
     },
     {
       "category": "normal",
+      "move": "OD Power Charge",
+      "set": {
+        "onBlock": "-14"
+      }
+    },
+    {
+      "category": "normal",
       "move": "OD Rising Tackle",
       "set": {
+        "active": "15",
         "recovery": "34+15 land"
       }
     },
@@ -135,14 +223,15 @@
       "category": "normal",
       "move": "Stand HP",
       "set": {
+        "active": "4",
         "recovery": "18"
       }
     }
   ],
-  "generatedAt": "2026-04-01T13:12:28.962905+00:00",
+  "generatedAt": "2026-04-06T10:01:15.777986+00:00",
   "notes": [
     "Auto-generated from official SF6 frame pages and FAT comparison.",
-    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+    "Review before apply; matching is name-first with cmd fallback."
   ],
   "source": "official-streetfighter-com-frame-vs-fat",
   "sourceUrl": "https://www.streetfighter.com/6/character/terry/frame"

@@ -1065,15 +1065,14 @@
             "uncertain": false
           },
           "recovery": {
-            "first": 16,
+            "first": 20,
             "max": 20,
-            "min": 16,
+            "min": 20,
             "numbers": [
-              16,
               20
             ],
-            "raw": "16(20)",
-            "text": "16(20)",
+            "raw": "20",
+            "text": "20",
             "uncertain": false
           },
           "startup": {
@@ -1097,7 +1096,7 @@
         "range": 1.582,
         "rawDRoB": 2,
         "rawDRoH": 5,
-        "recovery": "16(20)",
+        "recovery": "20",
         "startup": 8,
         "total": "25(29)",
         "xx": [
@@ -1178,15 +1177,14 @@
             "uncertain": false
           },
           "recovery": {
-            "first": 3,
-            "max": 29,
-            "min": 3,
+            "first": 32,
+            "max": 32,
+            "min": 32,
             "numbers": [
-              3,
-              29
+              32
             ],
-            "raw": "3+29",
-            "text": "3+29",
+            "raw": "32",
+            "text": "32",
             "uncertain": false
           },
           "startup": {
@@ -1206,7 +1204,7 @@
         "onPC": "HKD +20",
         "plnCmd": "d+PP > d+LP+LK",
         "range": 2.689,
-        "recovery": "3+29",
+        "recovery": "32",
         "startup": 21,
         "total": 55
       },
@@ -1342,7 +1340,7 @@
       },
       "Drive Parry": {
         "DGain": "-5000*250~",
-        "active": "12(2)",
+        "active": "12",
         "cmnName": "Drive Parry",
         "dmgScaling": "50% Multiplier (Perfect)",
         "extraInfo": [
@@ -1383,13 +1381,12 @@
           "active": {
             "first": 12,
             "max": 12,
-            "min": 2,
+            "min": 12,
             "numbers": [
-              12,
-              2
+              12
             ],
-            "raw": "12(2)",
-            "text": "12(2)",
+            "raw": "12",
+            "text": "12",
             "uncertain": false
           },
           "onBlock": null,
@@ -1398,14 +1395,13 @@
           "recovery": {
             "first": 33,
             "max": 33,
-            "min": 1,
+            "min": 33,
             "numbers": [
-              33,
-              1
+              33
             ],
-            "raw": "33(1)notes",
-            "text": "33(1)notes",
-            "uncertain": true
+            "raw": "33",
+            "text": "33",
+            "uncertain": false
           },
           "startup": {
             "first": 1,
@@ -1421,7 +1417,7 @@
         },
         "numCmd": "MPMK",
         "plnCmd": "MP+MK",
-        "recovery": "33(1)notes",
+        "recovery": "33",
         "startup": 1,
         "total": "45(3)"
       },
@@ -1529,15 +1525,14 @@
             "uncertain": false
           },
           "startup": {
-            "first": 20,
-            "max": 20,
+            "first": 18,
+            "max": 18,
             "min": 18,
             "numbers": [
-              20,
               18
             ],
-            "raw": "20(18)",
-            "text": "20(18)",
+            "raw": "18",
+            "text": "18",
             "uncertain": false
           }
         },
@@ -1549,7 +1544,7 @@
         "plnCmd": "f+HP+HK",
         "range": "?",
         "recovery": 26,
-        "startup": "20(18)",
+        "startup": "18",
         "total": "48(46)"
       },
       "Drive Rush": {
@@ -1657,32 +1652,32 @@
             "uncertain": false
           },
           "onBlock": {
-            "first": -14,
+            "first": -12,
             "kd": [],
             "max": -1,
-            "min": -14,
+            "min": -12,
             "numbers": [
-              -14,
+              -12,
               -1
             ],
-            "raw": "-14~-1",
+            "raw": "-12～-1",
             "tags": [],
-            "text": "-14~-1",
-            "uncertain": true
+            "text": "-12～-1",
+            "uncertain": false
           },
           "onHit": {
-            "first": 0,
+            "first": 2,
             "kd": [],
             "max": 13,
-            "min": 0,
+            "min": 2,
             "numbers": [
-              0,
+              2,
               13
             ],
-            "raw": "0~13",
+            "raw": "2～13",
             "tags": [],
-            "text": "0~13",
-            "uncertain": true
+            "text": "2～13",
+            "uncertain": false
           },
           "onPC": {
             "first": 4,
@@ -1699,15 +1694,14 @@
             "uncertain": true
           },
           "recovery": {
-            "first": 20,
-            "max": 35,
-            "min": 20,
+            "first": 36,
+            "max": 36,
+            "min": 36,
             "numbers": [
-              20,
-              35
+              36
             ],
-            "raw": "20(35) land",
-            "text": "20(35) land",
+            "raw": "36 land",
+            "text": "36 land",
             "uncertain": false
           },
           "startup": {
@@ -1723,12 +1717,12 @@
           }
         },
         "numCmd": "9 > 2HP",
-        "onBlock": "-14~-1",
-        "onHit": "0~13",
+        "onBlock": "-12～-1",
+        "onHit": "2～13",
         "onPC": "4~17",
         "onPP": "-47(-34)",
         "plnCmd": "uf > d+HP",
-        "recovery": "20(35) land",
+        "recovery": "36 land",
         "startup": 21
       },
       "Guillotine Hammer": {
@@ -1919,15 +1913,14 @@
             "uncertain": false
           },
           "recovery": {
-            "first": 21,
-            "max": 28,
-            "min": 21,
+            "first": 49,
+            "max": 49,
+            "min": 49,
             "numbers": [
-              21,
-              28
+              49
             ],
-            "raw": "21+28",
-            "text": "21+28",
+            "raw": "49",
+            "text": "49",
             "uncertain": false
           },
           "startup": {
@@ -1949,7 +1942,7 @@
         "onPP": -55,
         "plnCmd": "f,d,df+HK",
         "range": "1.478 (1st hit)",
-        "recovery": "21+28",
+        "recovery": "49",
         "startup": 14,
         "total": 70
       },
@@ -2002,9 +1995,9 @@
             "numbers": [
               5
             ],
-            "raw": "5 (Back Turn)",
+            "raw": "5",
             "tags": [],
-            "text": "5 (Back Turn)",
+            "text": "5",
             "uncertain": false
           },
           "onPC": {
@@ -2045,7 +2038,7 @@
         },
         "numCmd": "236HP",
         "onBlock": 2,
-        "onHit": "5 (Back Turn)",
+        "onHit": "5",
         "onPC": "9 (Back Turn)",
         "onPP": -21,
         "plnCmd": "qcf+HP",
@@ -2194,15 +2187,14 @@
           "onBlock": {
             "first": 3,
             "kd": [],
-            "max": 5,
+            "max": 3,
             "min": 3,
             "numbers": [
-              3,
-              5
+              3
             ],
-            "raw": "3(5)",
+            "raw": "3",
             "tags": [],
-            "text": "3(5)",
+            "text": "3",
             "uncertain": false
           },
           "onHit": {
@@ -2244,25 +2236,24 @@
           },
           "startup": {
             "first": 12,
-            "max": 21,
+            "max": 12,
             "min": 12,
             "numbers": [
-              12,
-              21
+              12
             ],
-            "raw": "12(21)",
-            "text": "12(21)",
+            "raw": "12",
+            "text": "12",
             "uncertain": false
           }
         },
         "numCmd": "2PP > 5HP",
-        "onBlock": "3(5)",
+        "onBlock": "3",
         "onHit": 6,
         "onPC": "10 (Back Turn)",
         "onPP": -20,
         "plnCmd": "d+PP > HP",
         "recovery": 19,
-        "startup": "12(21)",
+        "startup": "12",
         "total": "33(42)"
       },
       "Hyper Takedown": {
@@ -2546,7 +2537,17 @@
             "text": "15~19",
             "uncertain": true
           },
-          "recovery": null,
+          "recovery": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": "3 land",
+            "text": "3 land",
+            "uncertain": false
+          },
           "startup": {
             "first": 10,
             "max": 10,
@@ -2566,6 +2567,7 @@
         "onPP": "-6(-2)",
         "plnCmd": "u+HK",
         "range": 1.2,
+        "recovery": "3 land",
         "startup": 10
       },
       "Jump HP": {
@@ -2653,7 +2655,17 @@
             "text": "12~19 (KD)",
             "uncertain": true
           },
-          "recovery": null,
+          "recovery": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": "3 land",
+            "text": "3 land",
+            "uncertain": false
+          },
           "startup": {
             "first": 9,
             "max": 9,
@@ -2673,6 +2685,7 @@
         "onPP": "-9(-2)",
         "plnCmd": "u+HP",
         "range": "0.72~1.07",
+        "recovery": "3 land",
         "startup": 9
       },
       "Jump LK": {
@@ -2746,7 +2759,17 @@
             "text": "9~15",
             "uncertain": true
           },
-          "recovery": null,
+          "recovery": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": "3 land",
+            "text": "3 land",
+            "uncertain": false
+          },
           "startup": {
             "first": 6,
             "max": 6,
@@ -2766,6 +2789,7 @@
         "onPP": "-8(-2)",
         "plnCmd": "u+LK",
         "range": 0.59,
+        "recovery": "3 land",
         "startup": 6
       },
       "Jump LP": {
@@ -2836,7 +2860,17 @@
             "text": "11~15",
             "uncertain": true
           },
-          "recovery": null,
+          "recovery": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": "3 land",
+            "text": "3 land",
+            "uncertain": false
+          },
           "startup": {
             "first": 5,
             "max": 5,
@@ -2856,6 +2890,7 @@
         "onPP": "-6(-2)",
         "plnCmd": "u+LP",
         "range": 1.09,
+        "recovery": "3 land",
         "startup": 5
       },
       "Jump MK": {
@@ -2926,7 +2961,17 @@
             "text": "15~18",
             "uncertain": true
           },
-          "recovery": null,
+          "recovery": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": "3 land",
+            "text": "3 land",
+            "uncertain": false
+          },
           "startup": {
             "first": 8,
             "max": 8,
@@ -2946,6 +2991,7 @@
         "onPP": "-5(-2)",
         "plnCmd": "u+MK",
         "range": "0.93~1.33",
+        "recovery": "3 land",
         "startup": 8
       },
       "Jump MP": {
@@ -3040,7 +3086,17 @@
             "text": "13~15 (KD)",
             "uncertain": true
           },
-          "recovery": null,
+          "recovery": {
+            "first": 3,
+            "max": 3,
+            "min": 3,
+            "numbers": [
+              3
+            ],
+            "raw": "3 land",
+            "text": "3 land",
+            "uncertain": false
+          },
           "startup": {
             "first": 7,
             "max": 7,
@@ -3060,6 +3116,7 @@
         "onPP": "-4(-2)",
         "plnCmd": "u+MP",
         "range": 1.09,
+        "recovery": "3 land",
         "startup": 7
       },
       "LK Aerial Knee Smash": {
@@ -3133,15 +3190,14 @@
             "uncertain": false
           },
           "recovery": {
-            "first": 19,
-            "max": 24,
-            "min": 19,
+            "first": 43,
+            "max": 43,
+            "min": 43,
             "numbers": [
-              19,
-              24
+              43
             ],
-            "raw": "19+24",
-            "text": "19+24",
+            "raw": "43",
+            "text": "43",
             "uncertain": false
           },
           "startup": {
@@ -3161,7 +3217,7 @@
         "onPC": "KD +29",
         "plnCmd": "f,d,df+LK",
         "range": "1.105 (1st hit)",
-        "recovery": "19+24",
+        "recovery": "43",
         "startup": 6,
         "total": 56
       },
@@ -3521,15 +3577,14 @@
             "uncertain": false
           },
           "recovery": {
-            "first": 18,
-            "max": 24,
-            "min": 18,
+            "first": 42,
+            "max": 42,
+            "min": 42,
             "numbers": [
-              18,
-              24
+              42
             ],
-            "raw": "18+24",
-            "text": "18+24",
+            "raw": "42",
+            "text": "42",
             "uncertain": false
           },
           "startup": {
@@ -3549,7 +3604,7 @@
         "onPC": "KD +29",
         "plnCmd": "f,d,df+MK",
         "range": "?",
-        "recovery": "18+24",
+        "recovery": "42",
         "startup": 8,
         "total": 58
       },
@@ -3853,15 +3908,14 @@
             "uncertain": false
           },
           "recovery": {
-            "first": 21,
-            "max": 32,
-            "min": 21,
+            "first": 53,
+            "max": 53,
+            "min": 53,
             "numbers": [
-              21,
-              32
+              53
             ],
-            "raw": "21+32",
-            "text": "21+32",
+            "raw": "53",
+            "text": "53",
             "uncertain": false
           },
           "startup": {
@@ -3883,13 +3937,13 @@
         "onPP": -59,
         "plnCmd": "f,d,df+KK",
         "range": "1.478 (1st hit)",
-        "recovery": "21+32",
+        "recovery": "53",
         "startup": 10,
         "total": 70
       },
       "OD Flash Chop": {
         "StanceOH": "KD +37",
-        "active": "2*2",
+        "active": "4",
         "atkLvl": "H",
         "cmnName": "OD Flash Chop",
         "dmg": "1300 (800*500)",
@@ -3905,15 +3959,14 @@
         "moveType": "special",
         "normalized": {
           "active": {
-            "first": 2,
-            "max": 2,
-            "min": 2,
+            "first": 4,
+            "max": 4,
+            "min": 4,
             "numbers": [
-              2,
-              2
+              4
             ],
-            "raw": "2*2",
-            "text": "2*2",
+            "raw": "4",
+            "text": "4",
             "uncertain": false
           },
           "onBlock": {
@@ -4905,7 +4958,19 @@
             "text": "5",
             "uncertain": false
           },
-          "onBlock": null,
+          "onBlock": {
+            "first": -38,
+            "kd": [],
+            "max": -38,
+            "min": -38,
+            "numbers": [
+              -38
+            ],
+            "raw": "-38",
+            "tags": [],
+            "text": "-38",
+            "uncertain": false
+          },
           "onHit": {
             "first": 30,
             "kd": [
@@ -4970,6 +5035,7 @@
           }
         },
         "numCmd": "236236K",
+        "onBlock": "-38",
         "onHit": "KD +30",
         "onPC": "KD +30",
         "onPP": -58,
@@ -4979,7 +5045,7 @@
         "total": 68
       },
       "Shoulder Launcher": {
-        "active": "2*5",
+        "active": "7",
         "atkLvl": "H",
         "cmnName": "Stance > Shoulder",
         "dmg": "800 (400*400)",
@@ -5003,15 +5069,14 @@
         "movesList": "Prowler Stance",
         "normalized": {
           "active": {
-            "first": 2,
-            "max": 5,
-            "min": 2,
+            "first": 7,
+            "max": 7,
+            "min": 7,
             "numbers": [
-              2,
-              5
+              7
             ],
-            "raw": "2*5",
-            "text": "2*5",
+            "raw": "7",
+            "text": "7",
             "uncertain": false
           },
           "onBlock": {
@@ -5191,16 +5256,14 @@
             "uncertain": false
           },
           "startup": {
-            "first": 12,
+            "first": 18,
             "max": 18,
-            "min": 12,
+            "min": 18,
             "numbers": [
-              12,
-              15,
               18
             ],
-            "raw": "12/15/18",
-            "text": "12/15/18",
+            "raw": "18",
+            "text": "18",
             "uncertain": false
           }
         },
@@ -5211,7 +5274,7 @@
         "onPP": "-20(-17)",
         "plnCmd": "d+PP > f+P",
         "recovery": 18,
-        "startup": "12/15/18",
+        "startup": "18",
         "total": "33/36/39"
       },
       "Sledgecross Hammer": {
@@ -5245,7 +5308,19 @@
             "text": "4",
             "uncertain": false
           },
-          "onBlock": null,
+          "onBlock": {
+            "first": -29,
+            "kd": [],
+            "max": -29,
+            "min": -29,
+            "numbers": [
+              -29
+            ],
+            "raw": "-29",
+            "tags": [],
+            "text": "-29",
+            "uncertain": false
+          },
           "onHit": {
             "first": 19,
             "kd": [
@@ -5314,6 +5389,7 @@
           }
         },
         "numCmd": "214214P",
+        "onBlock": "-29",
         "onHit": "HKD +19 \n(Air: Wall Splat)",
         "onPC": "HKD +19 \n(Air: Wall Splat)",
         "onPP": -52,
@@ -6164,15 +6240,14 @@
             "uncertain": false
           },
           "recovery": {
-            "first": 15,
+            "first": 17,
             "max": 17,
-            "min": 15,
+            "min": 17,
             "numbers": [
-              15,
               17
             ],
-            "raw": "15(17)",
-            "text": "15(17)",
+            "raw": "17",
+            "text": "17",
             "uncertain": false
           },
           "startup": {
@@ -6196,7 +6271,7 @@
         "range": 1.3,
         "rawDRoB": 4,
         "rawDRoH": 7,
-        "recovery": "15(17)",
+        "recovery": "17",
         "startup": 7,
         "total": "25(27)",
         "xx": [
@@ -6290,14 +6365,14 @@
             "uncertain": false
           },
           "recovery": {
-            "first": 30,
-            "max": 30,
-            "min": 30,
+            "first": 43,
+            "max": 43,
+            "min": 43,
             "numbers": [
-              30
+              43
             ],
-            "raw": 30,
-            "text": "30",
+            "raw": "43",
+            "text": "43",
             "uncertain": false
           },
           "startup": {
@@ -6318,7 +6393,7 @@
         "onPC": "HKD +18",
         "onPP": -56,
         "plnCmd": "d+PP > HK",
-        "recovery": 30,
+        "recovery": "43",
         "startup": 11,
         "total": 43,
         "xx": [
@@ -6412,14 +6487,14 @@
             "uncertain": false
           },
           "recovery": {
-            "first": 33,
-            "max": 33,
-            "min": 33,
+            "first": 46,
+            "max": 46,
+            "min": 46,
             "numbers": [
-              33
+              46
             ],
-            "raw": 33,
-            "text": "33",
+            "raw": "46",
+            "text": "46",
             "uncertain": false
           },
           "startup": {
@@ -6440,7 +6515,7 @@
         "onPC": "HKD +18",
         "onPP": -59,
         "plnCmd": "d+PP > HK > HK",
-        "recovery": 33,
+        "recovery": "46",
         "startup": 11,
         "total": 46
       },

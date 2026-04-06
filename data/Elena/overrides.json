@@ -12,13 +12,29 @@
       "category": "normal",
       "move": "Drive Parry",
       "set": {
+        "active": "12",
         "recovery": "33"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Boar Charge",
+      "set": {
+        "startup": "20"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Drive Reversal: Boar Charge",
+      "set": {
+        "startup": "18"
       }
     },
     {
       "category": "normal",
       "move": "HK Rhino Horn",
       "set": {
+        "onBlock": "-9",
         "recovery": "20"
       }
     },
@@ -26,7 +42,15 @@
       "category": "normal",
       "move": "HK Scratch Wheel",
       "set": {
+        "active": "6",
         "recovery": "34+14 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "HK Spin Scythe",
+      "set": {
+        "onBlock": "-10"
       }
     },
     {
@@ -75,6 +99,7 @@
       "category": "normal",
       "move": "LK Rhino Horn",
       "set": {
+        "onBlock": "-9",
         "recovery": "19"
       }
     },
@@ -87,8 +112,16 @@
     },
     {
       "category": "normal",
+      "move": "LK Spin Scythe",
+      "set": {
+        "onBlock": "-12"
+      }
+    },
+    {
+      "category": "normal",
       "move": "MK Rhino Horn",
       "set": {
+        "onBlock": "-9",
         "recovery": "20"
       }
     },
@@ -96,13 +129,29 @@
       "category": "normal",
       "move": "MK Scratch Wheel",
       "set": {
+        "active": "6",
         "recovery": "30+14 land"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "MK Spin Scythe",
+      "set": {
+        "onBlock": "-14"
+      }
+    },
+    {
+      "category": "normal",
+      "move": "Meteor Volley",
+      "set": {
+        "recovery": "55"
       }
     },
     {
       "category": "normal",
       "move": "OD Rhino Horn",
       "set": {
+        "onBlock": "-9",
         "recovery": "19"
       }
     },
@@ -131,6 +180,7 @@
       "category": "normal",
       "move": "Slide",
       "set": {
+        "onBlock": "-10",
         "recovery": "22"
       }
     },
@@ -147,12 +197,20 @@
       "set": {
         "recovery": "13"
       }
+    },
+    {
+      "category": "normal",
+      "move": "Stand MP",
+      "set": {
+        "onBlock": "-3",
+        "onHit": "3"
+      }
     }
   ],
-  "generatedAt": "2026-04-01T13:11:57.629138+00:00",
+  "generatedAt": "2026-04-06T10:00:39.763957+00:00",
   "notes": [
     "Auto-generated from official SF6 frame pages and FAT comparison.",
-    "Review before apply; move matching is name-based and may miss/skip ambiguous rows."
+    "Review before apply; matching is name-first with cmd fallback."
   ],
   "source": "official-streetfighter-com-frame-vs-fat",
   "sourceUrl": "https://www.streetfighter.com/6/character/elena/frame"
