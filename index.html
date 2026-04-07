@@ -462,7 +462,7 @@
 
         <nav class="tab-bar">
             <button class="tab active" data-tab="meaty" data-i18n="tab_meaty">
-                Meaty Calculator
+                Frame Kill Calculator
             </button>
             <button class="tab" data-tab="elo" data-i18n="tab_elo">
                 ELO Win Rate
@@ -481,25 +481,25 @@
                     </select>
                 </div>
                 <div class="control-group">
-                    <label data-i18n="lbl_kd_move">Knockdown move</label>
+                    <label data-i18n="lbl_kd_move">Knockdown Move</label>
                     <select id="kdMoveSelect"></select>
                 </div>
                 <div class="control-group">
-                    <label data-i18n="lbl_hit_type">Hit type</label>
+                    <label data-i18n="lbl_hit_type">Hit Type</label>
                     <select id="hitType">
                         <option value="both" selected data-i18n="hit_all">
                             All
                         </option>
                         <option value="normal" data-i18n="hit_normal">
-                            Normal hit
+                            Normal Hit
                         </option>
                         <option value="pc" data-i18n="hit_pc">
-                            Punish counter (PC)
+                            Punish Counter (PC)
                         </option>
                     </select>
                 </div>
                 <div class="control-group">
-                    <label data-i18n="lbl_max_prefix">Max prefix moves</label>
+                    <label data-i18n="lbl_max_prefix">Max Prefix Moves</label>
                     <select id="maxPrefix">
                         <option value="1">1</option>
                         <option value="2" selected>2</option>
@@ -507,7 +507,7 @@
                     </select>
                 </div>
                 <div class="control-group">
-                    <label data-i18n="lbl_max_delay">Max delay (frames)</label>
+                    <label data-i18n="lbl_max_delay">Max Delay Frames</label>
                     <input
                         type="number"
                         id="maxDelay"
@@ -522,25 +522,25 @@
                         <label
                             ><input type="checkbox" id="safeOnly" checked />
                             <span data-i18n="chk_safe_only"
-                                >Safe only (on block ≥ −3)</span
+                                >Safe Only (On Block ≥ −3)</span
                             ></label
                         >
                         <label
                             ><input type="checkbox" id="cancelOnly" checked />
                             <span data-i18n="chk_cancel_only"
-                                >Cancelable only</span
+                                >Cancelable Moves Only</span
                             ></label
                         >
                         <label
                             ><input type="checkbox" id="noSpKd" checked />
                             <span data-i18n="chk_no_sp_kd"
-                                >Exclude cancelable KD sources</span
+                                >Exclude Cancelable Knockdown Sources</span
                             ></label
                         >
                         <label
                             ><input type="checkbox" id="firstAny" />
                             <span data-i18n="chk_first_any"
-                                >Allow normals as prefix</span
+                                >Allow Normals as Prefix</span
                             ></label
                         >
                         <label
@@ -550,7 +550,7 @@
                                 checked
                             />
                             <span data-i18n="chk_include_dr_first"
-                                >Allow DR as prefix</span
+                                >Allow Drive Rush as Prefix</span
                             ></label
                         >
                         <label
@@ -560,7 +560,7 @@
                                 checked
                             />
                             <span data-i18n="chk_effective_only"
-                                >Effective meaty only</span
+                                >Effective Frame-Kill Only</span
                             ></label
                         >
                     </div>
@@ -569,7 +569,7 @@
                     Calculate
                 </button>
                 <button id="resetBtn" type="button" data-i18n="btn_reset">
-                    Reset filters
+                    Reset Filters
                 </button>
             </div>
 
@@ -588,7 +588,7 @@
         <div id="tab-elo" class="tab-panel">
             <div class="elo-content">
                 <p class="elo-subtitle" data-i18n="elo_subtitle">
-                    Win probability calculator based on ELO ratings
+                    Win Probability Calculator Based on ELO Ratings
                 </p>
 
                 <div class="elo-player-section">
@@ -632,7 +632,7 @@
 
                 <div class="elo-input-group">
                     <label for="matchType" data-i18n="lbl_match_format"
-                        >Match format (Best of)</label
+                        >Match Format (Best Of)</label
                     >
                     <input
                         type="number"
@@ -656,7 +656,7 @@
                             class="elo-result-header"
                             data-i18n="elo_round_winrate"
                         >
-                            Win rate per round
+                            Win Rate Per Round
                         </div>
                         <div class="elo-result-row">
                             <div class="elo-result-item player-a">
@@ -695,7 +695,7 @@
                             class="elo-result-header"
                             data-i18n="elo_set_winrate"
                         >
-                            Win rate per set (SF6 BO3)
+                            Win Rate Per Set (SF6 BO3)
                         </div>
                         <div class="elo-result-row">
                             <div class="elo-result-item player-a">
@@ -729,7 +729,7 @@
                             id="matchHeader"
                             data-i18n="elo_match_winrate"
                         >
-                            Match win rate (BO3)
+                            Match Win Rate (BO3)
                         </div>
                         <div class="elo-result-row">
                             <div class="elo-result-item player-a">
